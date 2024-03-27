@@ -64,7 +64,8 @@
     "pub:site": "npm run site && node site/scripts/pushToOSS.js",
     "prepare": "husky install",
     "version": "node ./scripts/generate-version",
-    "sort-api": "node antd-tools/cli/run.js sort-api-table"
+    "sort-api": "node antd-tools/cli/run.js sort-api-table",
+    "dsl-tinyengine": "tsc -p antd-tools/generator-types/tsconfig.json && node antd-tools/dsl/tiny-engine-materials.js"
   },
   "browserslist": [
     "> 0.5%",
