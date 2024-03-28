@@ -14,10 +14,19 @@
   "dev_mode": "proCode",
   "npm": {
     "package": "ant-design-vue",
-    "version": "2.4.2",
-    "script": "https://unpkg.com/browse/ant-design-vue@4.1.2/dist/antd.esm.min.js",
-    "css": "https://unpkg.com/browse/ant-design-vue@4.1.2/dist/reset.css",
-    "dependencies": null,
+    "version": "4.1.2",
+    "script": "/assets/lib/ant-design-vue@4.1.2/dist/antd.esm.min.js",
+    "css": "/assets/lib/ant-design-vue@4.1.2/dist/reset.css",
+    "dependencies": [
+      "https://unpkg.com/dayjs/dayjs.min.js",
+      "https://unpkg.com/dayjs/plugin/customParseFormat.js",
+      "https://unpkg.com/dayjs/plugin/weekday.js",
+      "https://unpkg.com/dayjs/plugin/localeData.js",
+      "https://unpkg.com/dayjs/plugin/weekOfYear.js",
+      "https://unpkg.com/dayjs/plugin/weekYear.js",
+      "https://unpkg.com/dayjs/plugin/advancedFormat.js",
+      "https://unpkg.com/dayjs/plugin/quarterOfYear.js"
+    ],
     "exportName": "Notification"
   },
   "group": "component",
@@ -73,7 +82,7 @@
             "cols": 12,
             "labelPosition": "top",
             "type": "string",
-            "defaultValue": "`24px`",
+            "defaultValue": "24px",
             "widget": {
               "component": "MetaInput",
               "props": {}
@@ -199,7 +208,7 @@
               }
             },
             "description": {
-              "zh_CN": "弹出位置，可选 `top` `topLeft` `topRight` `bottom` `bottomLeft` `bottomRight`"
+              "zh_CN": "弹出位置，可选 top topLeft topRight bottom bottomLeft bottomRight"
             },
             "required": false,
             "readOnly": false,
@@ -207,7 +216,7 @@
             "cols": 12,
             "labelPosition": "top",
             "type": "string",
-            "defaultValue": "`topRight`",
+            "defaultValue": "topRight",
             "widget": {
               "component": "MetaInput",
               "props": {}
@@ -254,7 +263,7 @@
             "cols": 12,
             "labelPosition": "top",
             "type": "string",
-            "defaultValue": "`24px`",
+            "defaultValue": "24px",
             "widget": {
               "component": "MetaInput",
               "props": {}
@@ -314,5 +323,15 @@
     "events": {},
     "slots": {}
   },
-  "snippets": [{}]
+  "snippets": [
+    {
+      "name": {
+        "zh_CN": "通知提醒框"
+      },
+      "icon": "notification",
+      "screenshot": "",
+      "snippetName": "ANotification",
+      "schema": {}
+    }
+  ]
 }

@@ -1,4 +1,16 @@
 {
+  "affix/offsetBottom": {
+    "type": "number",
+    "description": "Offset from the bottom of the viewport (in pixels), Default: -"
+  },
+  "affix/offsetTop": {
+    "type": "number",
+    "description": "Offset from the top of the viewport (in pixels), Default: 0"
+  },
+  "affix/target": {
+    "type": "() => HTMLElement",
+    "description": "Specifies the scrollable area DOM node, Default: () => window"
+  },
   "alert/action": {
     "type": "slot",
     "description": "The action of Alert, Default: -"
@@ -43,17 +55,77 @@
     "type": "string",
     "description": "Type of Alert styles, options: `success`, `info`, `warning`, `error`, Default: `info`,in `banner` mode default is `warning`"
   },
-  "affix/offsetBottom": {
-    "type": "number",
-    "description": "Offset from the bottom of the viewport (in pixels), Default: -"
+  "anchor/affix": {
+    "type": "boolean",
+    "description": "Fixed mode of Anchor, Default: true"
   },
-  "affix/offsetTop": {
+  "anchor/bounds": {
     "type": "number",
-    "description": "Offset from the top of the viewport (in pixels), Default: 0"
+    "description": "Bounding distance of anchor area, Default: 5(px)"
   },
-  "affix/target": {
+  "anchor/getContainer": {
     "type": "() => HTMLElement",
-    "description": "Specifies the scrollable area DOM node, Default: () => window"
+    "description": "Scrolling container, Default: () => window"
+  },
+  "anchor/getCurrentAnchor": {
+    "type": "(activeLink: string) => string",
+    "description": "Customize the anchor highlight, Default: -"
+  },
+  "anchor/offsetBottom": {
+    "type": "number",
+    "description": "Pixels to offset from bottom when calculating position of scroll, Default: -"
+  },
+  "anchor/offsetTop": {
+    "type": "number",
+    "description": "Pixels to offset from top when calculating position of scroll, Default: 0"
+  },
+  "anchor/showInkInFixed": {
+    "type": "boolean",
+    "description": "Whether show ink-square when `：affix=\"false\"`, Default: false"
+  },
+  "anchor/targetOffset": {
+    "type": "number",
+    "description": "Anchor scroll offset, default as `offsetTop`, [example](#components-anchor-demo-targetoffset), Default: `offsetTop`"
+  },
+  "anchor/wrapperClass": {
+    "type": "string",
+    "description": "The class name of the container, Default: -"
+  },
+  "anchor/wrapperStyle": {
+    "type": "object",
+    "description": "The style of the container, Default: -"
+  },
+  "anchor/items": {
+    "type": "{ key, href, title, target, children }[] [see](#anchoritem)",
+    "description": "Data configuration option content, support nesting through children, Default: -"
+  },
+  "anchor/direction": {
+    "type": "`vertical` | `horizontal`",
+    "description": "Set Anchor direction, Default: `vertical`"
+  },
+  "anchor/customTitle": {
+    "type": "v-slot=\"AnchorItem\"",
+    "description": "custom option title by slot, Default: -"
+  },
+  "anchor-item/key": {
+    "type": "string | number",
+    "description": "The unique identifier of the Anchor Link, Default: -"
+  },
+  "anchor-item/href": {
+    "type": "string",
+    "description": "The target of hyperlink, Default: "
+  },
+  "anchor-item/target": {
+    "type": "string",
+    "description": "Specifies where to display the linked URL, Default: "
+  },
+  "anchor-item/title": {
+    "type": "VueNode | (item: AnchorItem) => VueNode",
+    "description": "The content of hyperlink, Default: "
+  },
+  "anchor-item/children": {
+    "type": "[AnchorItem](#anchoritem)[]",
+    "description": "Nested Anchor Link, `Attention: This attribute does not support horizontal orientation`, Default: -"
   },
   "app/message": {
     "type": "[MessageConfig](/components/message/#messageconfig)",
@@ -138,78 +210,6 @@
   "auto-complete/v-model:value": {
     "type": "string|string[]|{ key: string, label: string|vNodes }|Array&lt;{ key: string, label: string|vNodes }>",
     "description": "selected option, Default: -"
-  },
-  "anchor/affix": {
-    "type": "boolean",
-    "description": "Fixed mode of Anchor, Default: true"
-  },
-  "anchor/bounds": {
-    "type": "number",
-    "description": "Bounding distance of anchor area, Default: 5(px)"
-  },
-  "anchor/getContainer": {
-    "type": "() => HTMLElement",
-    "description": "Scrolling container, Default: () => window"
-  },
-  "anchor/getCurrentAnchor": {
-    "type": "(activeLink: string) => string",
-    "description": "Customize the anchor highlight, Default: -"
-  },
-  "anchor/offsetBottom": {
-    "type": "number",
-    "description": "Pixels to offset from bottom when calculating position of scroll, Default: -"
-  },
-  "anchor/offsetTop": {
-    "type": "number",
-    "description": "Pixels to offset from top when calculating position of scroll, Default: 0"
-  },
-  "anchor/showInkInFixed": {
-    "type": "boolean",
-    "description": "Whether show ink-square when `：affix=\"false\"`, Default: false"
-  },
-  "anchor/targetOffset": {
-    "type": "number",
-    "description": "Anchor scroll offset, default as `offsetTop`, [example](#components-anchor-demo-targetoffset), Default: `offsetTop`"
-  },
-  "anchor/wrapperClass": {
-    "type": "string",
-    "description": "The class name of the container, Default: -"
-  },
-  "anchor/wrapperStyle": {
-    "type": "object",
-    "description": "The style of the container, Default: -"
-  },
-  "anchor/items": {
-    "type": "{ key, href, title, target, children }[] [see](#anchoritem)",
-    "description": "Data configuration option content, support nesting through children, Default: -"
-  },
-  "anchor/direction": {
-    "type": "`vertical` | `horizontal`",
-    "description": "Set Anchor direction, Default: `vertical`"
-  },
-  "anchor/customTitle": {
-    "type": "v-slot=\"AnchorItem\"",
-    "description": "custom option title by slot, Default: -"
-  },
-  "anchor-item/key": {
-    "type": "string | number",
-    "description": "The unique identifier of the Anchor Link, Default: -"
-  },
-  "anchor-item/href": {
-    "type": "string",
-    "description": "The target of hyperlink, Default: "
-  },
-  "anchor-item/target": {
-    "type": "string",
-    "description": "Specifies where to display the linked URL, Default: "
-  },
-  "anchor-item/title": {
-    "type": "VueNode | (item: AnchorItem) => VueNode",
-    "description": "The content of hyperlink, Default: "
-  },
-  "anchor-item/children": {
-    "type": "[AnchorItem](#anchoritem)[]",
-    "description": "Nested Anchor Link, `Attention: This attribute does not support horizontal orientation`, Default: -"
   },
   "avatar/alt": {
     "type": "string",
@@ -1647,6 +1647,66 @@
     "type": "slot",
     "description": "custom up down, Default: `<DownOutlined />`"
   },
+  "layout/class": {
+    "type": "string",
+    "description": "container className, Default: -"
+  },
+  "layout/hasSider": {
+    "type": "boolean",
+    "description": "whether contain Sider in children, don't have to assign it normally. Useful in ssr avoid style flickering, Default: -"
+  },
+  "layout/style": {
+    "type": "object|string",
+    "description": "to customize the styles, Default: -"
+  },
+  "layout-sider/breakpoint": {
+    "type": "`xs` | `sm` | `md` | `lg` | `xl` | `xxl`",
+    "description": "[breakpoints](/components/grid#api) of the responsive layout, Default: -"
+  },
+  "layout-sider/class": {
+    "type": "string",
+    "description": "container className, Default: -"
+  },
+  "layout-sider/collapsed(v-model)": {
+    "type": "boolean",
+    "description": "to set the current status, Default: -"
+  },
+  "layout-sider/collapsedWidth": {
+    "type": "number",
+    "description": "width of the collapsed sidebar, by setting to `0` a special trigger will appear, Default: 80"
+  },
+  "layout-sider/collapsible": {
+    "type": "boolean",
+    "description": "whether can be collapsed, Default: false"
+  },
+  "layout-sider/defaultCollapsed": {
+    "type": "boolean",
+    "description": "to set the initial status, Default: false"
+  },
+  "layout-sider/reverseArrow": {
+    "type": "boolean",
+    "description": "reverse direction of arrow, for a sider that expands from the right, Default: false"
+  },
+  "layout-sider/style": {
+    "type": "object|string",
+    "description": "to customize the styles, Default: -"
+  },
+  "layout-sider/theme": {
+    "type": "`light` | `dark`",
+    "description": "color theme of the sidebar, Default: `dark`"
+  },
+  "layout-sider/trigger": {
+    "type": "string|slot",
+    "description": "specify the customized trigger, set to null to hide the trigger, Default: -"
+  },
+  "layout-sider/width": {
+    "type": "number|string",
+    "description": "width of the sidebar, Default: 200"
+  },
+  "layout-sider/zeroWidthTriggerStyle": {
+    "type": "object",
+    "description": "to customize the styles of the special trigger that appears when `collapsedWidth` is 0, Default: -"
+  },
   "list/bordered": {
     "type": "boolean",
     "description": "Toggles rendering of the border around the list, Default: false"
@@ -1758,66 +1818,6 @@
   "list-item-meta/title": {
     "type": "string|slot",
     "description": "The title of list item, Default: -"
-  },
-  "layout/class": {
-    "type": "string",
-    "description": "container className, Default: -"
-  },
-  "layout/hasSider": {
-    "type": "boolean",
-    "description": "whether contain Sider in children, don't have to assign it normally. Useful in ssr avoid style flickering, Default: -"
-  },
-  "layout/style": {
-    "type": "object|string",
-    "description": "to customize the styles, Default: -"
-  },
-  "layout-sider/breakpoint": {
-    "type": "`xs` | `sm` | `md` | `lg` | `xl` | `xxl`",
-    "description": "[breakpoints](/components/grid#api) of the responsive layout, Default: -"
-  },
-  "layout-sider/class": {
-    "type": "string",
-    "description": "container className, Default: -"
-  },
-  "layout-sider/collapsed(v-model)": {
-    "type": "boolean",
-    "description": "to set the current status, Default: -"
-  },
-  "layout-sider/collapsedWidth": {
-    "type": "number",
-    "description": "width of the collapsed sidebar, by setting to `0` a special trigger will appear, Default: 80"
-  },
-  "layout-sider/collapsible": {
-    "type": "boolean",
-    "description": "whether can be collapsed, Default: false"
-  },
-  "layout-sider/defaultCollapsed": {
-    "type": "boolean",
-    "description": "to set the initial status, Default: false"
-  },
-  "layout-sider/reverseArrow": {
-    "type": "boolean",
-    "description": "reverse direction of arrow, for a sider that expands from the right, Default: false"
-  },
-  "layout-sider/style": {
-    "type": "object|string",
-    "description": "to customize the styles, Default: -"
-  },
-  "layout-sider/theme": {
-    "type": "`light` | `dark`",
-    "description": "color theme of the sidebar, Default: `dark`"
-  },
-  "layout-sider/trigger": {
-    "type": "string|slot",
-    "description": "specify the customized trigger, set to null to hide the trigger, Default: -"
-  },
-  "layout-sider/width": {
-    "type": "number|string",
-    "description": "width of the sidebar, Default: 200"
-  },
-  "layout-sider/zeroWidthTriggerStyle": {
-    "type": "object",
-    "description": "to customize the styles of the special trigger that appears when `collapsedWidth` is 0, Default: -"
   },
   "menu/forceSubMenuRender": {
     "type": "boolean",

@@ -14,10 +14,19 @@
   "dev_mode": "proCode",
   "npm": {
     "package": "ant-design-vue",
-    "version": "2.4.2",
-    "script": "https://unpkg.com/browse/ant-design-vue@4.1.2/dist/antd.esm.min.js",
-    "css": "https://unpkg.com/browse/ant-design-vue@4.1.2/dist/reset.css",
-    "dependencies": null,
+    "version": "4.1.2",
+    "script": "/assets/lib/ant-design-vue@4.1.2/dist/antd.esm.min.js",
+    "css": "/assets/lib/ant-design-vue@4.1.2/dist/reset.css",
+    "dependencies": [
+      "https://unpkg.com/dayjs/dayjs.min.js",
+      "https://unpkg.com/dayjs/plugin/customParseFormat.js",
+      "https://unpkg.com/dayjs/plugin/weekday.js",
+      "https://unpkg.com/dayjs/plugin/localeData.js",
+      "https://unpkg.com/dayjs/plugin/weekOfYear.js",
+      "https://unpkg.com/dayjs/plugin/weekYear.js",
+      "https://unpkg.com/dayjs/plugin/advancedFormat.js",
+      "https://unpkg.com/dayjs/plugin/quarterOfYear.js"
+    ],
     "exportName": "DatePicker"
   },
   "group": "component",
@@ -323,7 +332,7 @@
             "cols": 12,
             "labelPosition": "top",
             "type": "string",
-            "defaultValue": "`date`",
+            "defaultValue": "date",
             "widget": {
               "component": "MetaSelect",
               "props": {
@@ -383,7 +392,7 @@
               }
             },
             "description": {
-              "zh_CN": "输入框大小，`large` 高度为 40px，`small` 为 24px，默认是 32px"
+              "zh_CN": "输入框大小，large 高度为 40px，small 为 24px，默认是 32px"
             },
             "required": false,
             "readOnly": false,
@@ -498,7 +507,7 @@
           "zh_CN": "superNextIcon"
         },
         "description": {
-          "zh_CN": "自定义 `<<` 切换图标"
+          "zh_CN": "自定义 << 切换图标"
         }
       },
       "superPrevIcon": {
@@ -506,10 +515,20 @@
           "zh_CN": "superPrevIcon"
         },
         "description": {
-          "zh_CN": "自定义 `>>` 切换图标"
+          "zh_CN": "自定义 >> 切换图标"
         }
       }
     }
   },
-  "snippets": [{}]
+  "snippets": [
+    {
+      "name": {
+        "zh_CN": "日期选择框"
+      },
+      "icon": "date-picker",
+      "screenshot": "",
+      "snippetName": "ADatePicker",
+      "schema": {}
+    }
+  ]
 }

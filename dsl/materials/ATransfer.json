@@ -14,10 +14,19 @@
   "dev_mode": "proCode",
   "npm": {
     "package": "ant-design-vue",
-    "version": "2.4.2",
-    "script": "https://unpkg.com/browse/ant-design-vue@4.1.2/dist/antd.esm.min.js",
-    "css": "https://unpkg.com/browse/ant-design-vue@4.1.2/dist/reset.css",
-    "dependencies": null,
+    "version": "4.1.2",
+    "script": "/assets/lib/ant-design-vue@4.1.2/dist/antd.esm.min.js",
+    "css": "/assets/lib/ant-design-vue@4.1.2/dist/reset.css",
+    "dependencies": [
+      "https://unpkg.com/dayjs/dayjs.min.js",
+      "https://unpkg.com/dayjs/plugin/customParseFormat.js",
+      "https://unpkg.com/dayjs/plugin/weekday.js",
+      "https://unpkg.com/dayjs/plugin/localeData.js",
+      "https://unpkg.com/dayjs/plugin/weekOfYear.js",
+      "https://unpkg.com/dayjs/plugin/weekYear.js",
+      "https://unpkg.com/dayjs/plugin/advancedFormat.js",
+      "https://unpkg.com/dayjs/plugin/quarterOfYear.js"
+    ],
     "exportName": "Transfer"
   },
   "group": "component",
@@ -182,7 +191,7 @@
               }
             },
             "description": {
-              "zh_CN": "每行数据渲染函数，该函数的入参为 `dataSource` 中的项，返回值为 element。或者返回一个普通对象，其中 `label` 字段为 element，`value` 字段为 title"
+              "zh_CN": "每行数据渲染函数，该函数的入参为 dataSource 中的项，返回值为 element。或者返回一个普通对象，其中 label 字段为 element，value 字段为 title"
             },
             "required": false,
             "readOnly": false,
@@ -426,10 +435,20 @@
           "zh_CN": "render"
         },
         "description": {
-          "zh_CN": "每行数据渲染函数，该函数的入参为 `dataSource` 中的项，返回值为 element。或者返回一个普通对象，其中 `label` 字段为 element，`value` 字段为 title"
+          "zh_CN": "每行数据渲染函数，该函数的入参为 dataSource 中的项，返回值为 element。或者返回一个普通对象，其中 label 字段为 element，value 字段为 title"
         }
       }
     }
   },
-  "snippets": [{}]
+  "snippets": [
+    {
+      "name": {
+        "zh_CN": "穿梭框"
+      },
+      "icon": "transfer",
+      "screenshot": "",
+      "snippetName": "ATransfer",
+      "schema": {}
+    }
+  ]
 }

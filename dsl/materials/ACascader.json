@@ -14,10 +14,19 @@
   "dev_mode": "proCode",
   "npm": {
     "package": "ant-design-vue",
-    "version": "2.4.2",
-    "script": "https://unpkg.com/browse/ant-design-vue@4.1.2/dist/antd.esm.min.js",
-    "css": "https://unpkg.com/browse/ant-design-vue@4.1.2/dist/reset.css",
-    "dependencies": null,
+    "version": "4.1.2",
+    "script": "/assets/lib/ant-design-vue@4.1.2/dist/antd.esm.min.js",
+    "css": "/assets/lib/ant-design-vue@4.1.2/dist/reset.css",
+    "dependencies": [
+      "https://unpkg.com/dayjs/dayjs.min.js",
+      "https://unpkg.com/dayjs/plugin/customParseFormat.js",
+      "https://unpkg.com/dayjs/plugin/weekday.js",
+      "https://unpkg.com/dayjs/plugin/localeData.js",
+      "https://unpkg.com/dayjs/plugin/weekOfYear.js",
+      "https://unpkg.com/dayjs/plugin/weekYear.js",
+      "https://unpkg.com/dayjs/plugin/advancedFormat.js",
+      "https://unpkg.com/dayjs/plugin/quarterOfYear.js"
+    ],
     "exportName": "Cascader"
   },
   "group": "component",
@@ -236,7 +245,7 @@
               }
             },
             "description": {
-              "zh_CN": "自定义 options 中 `label` `value` `children` 的字段"
+              "zh_CN": "自定义 options 中 label value children 的字段"
             },
             "required": false,
             "readOnly": false,
@@ -414,7 +423,7 @@
             "cols": 12,
             "labelPosition": "top",
             "type": "string",
-            "defaultValue": "`bottomLeft`",
+            "defaultValue": "bottomLeft",
             "widget": {
               "component": "MetaSelect",
               "props": {
@@ -448,7 +457,7 @@
               }
             },
             "description": {
-              "zh_CN": "设置搜索的值，需要与 `showSearch` 配合使用"
+              "zh_CN": "设置搜索的值，需要与 showSearch 配合使用"
             },
             "required": false,
             "readOnly": false,
@@ -501,7 +510,7 @@
             "cols": 12,
             "labelPosition": "top",
             "type": "string",
-            "defaultValue": "`default`",
+            "defaultValue": "default",
             "widget": {
               "component": "MetaSelect",
               "props": {
@@ -726,5 +735,52 @@
       }
     }
   },
-  "snippets": [{}]
+  "snippets": [
+    {
+      "name": {
+        "zh_CN": "级联选择"
+      },
+      "icon": "cascader",
+      "screenshot": "",
+      "snippetName": "ACascader",
+      "schema": {
+        "props": {
+          "options": [
+            {
+              "value": "zhejiang",
+              "label": "Zhejiang",
+              "children": [
+                {
+                  "value": "hangzhou",
+                  "label": "Hangzhou",
+                  "children": [
+                    {
+                      "value": "xihu",
+                      "label": "West Lake"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "value": "jiangsu",
+              "label": "Jiangsu",
+              "children": [
+                {
+                  "value": "nanjing",
+                  "label": "Nanjing",
+                  "children": [
+                    {
+                      "value": "zhonghuamen",
+                      "label": "Zhong Hua Men"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      }
+    }
+  ]
 }

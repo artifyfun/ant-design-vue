@@ -6,7 +6,7 @@
   },
   "component": "ATour",
   "icon": "tour",
-  "description": "用于分步引导用户了解产品功能的气泡组件。自 `4.0.0` 版本开始提供该组件。",
+  "description": "用于分步引导用户了解产品功能的气泡组件。自 4.0.0 版本开始提供该组件。",
   "doc_url": "",
   "screenshot": "https://mdn.alipayobjects.com/huamei_7uahnr/afts/img/A*nF6hQpM0XtEAAAAAAAAAAAAADrJ8AQ/original",
   "tags": "",
@@ -14,10 +14,19 @@
   "dev_mode": "proCode",
   "npm": {
     "package": "ant-design-vue",
-    "version": "2.4.2",
-    "script": "https://unpkg.com/browse/ant-design-vue@4.1.2/dist/antd.esm.min.js",
-    "css": "https://unpkg.com/browse/ant-design-vue@4.1.2/dist/reset.css",
-    "dependencies": null,
+    "version": "4.1.2",
+    "script": "/assets/lib/ant-design-vue@4.1.2/dist/antd.esm.min.js",
+    "css": "/assets/lib/ant-design-vue@4.1.2/dist/reset.css",
+    "dependencies": [
+      "https://unpkg.com/dayjs/dayjs.min.js",
+      "https://unpkg.com/dayjs/plugin/customParseFormat.js",
+      "https://unpkg.com/dayjs/plugin/weekday.js",
+      "https://unpkg.com/dayjs/plugin/localeData.js",
+      "https://unpkg.com/dayjs/plugin/weekOfYear.js",
+      "https://unpkg.com/dayjs/plugin/weekYear.js",
+      "https://unpkg.com/dayjs/plugin/advancedFormat.js",
+      "https://unpkg.com/dayjs/plugin/quarterOfYear.js"
+    ],
     "exportName": "Tour"
   },
   "group": "component",
@@ -73,7 +82,7 @@
             "cols": 12,
             "labelPosition": "top",
             "type": "string",
-            "defaultValue": "`true`",
+            "defaultValue": "true",
             "widget": {
               "component": "MetaInput",
               "props": {}
@@ -96,7 +105,7 @@
             "cols": 12,
             "labelPosition": "top",
             "type": "string",
-            "defaultValue": "`true`",
+            "defaultValue": "true",
             "widget": {
               "component": "MetaInput",
               "props": {}
@@ -163,7 +172,7 @@
             "cols": 12,
             "labelPosition": "top",
             "type": "string",
-            "defaultValue": "`true`",
+            "defaultValue": "true",
             "widget": {
               "component": "MetaSelect",
               "props": {
@@ -197,7 +206,7 @@
             "cols": 12,
             "labelPosition": "top",
             "type": "string",
-            "defaultValue": "`1001`",
+            "defaultValue": "1001",
             "widget": {
               "component": "MetaInput",
               "props": {}
@@ -265,5 +274,15 @@
       }
     }
   },
-  "snippets": [{}]
+  "snippets": [
+    {
+      "name": {
+        "zh_CN": "漫游式引导"
+      },
+      "icon": "tour",
+      "screenshot": "",
+      "snippetName": "ATour",
+      "schema": {}
+    }
+  ]
 }

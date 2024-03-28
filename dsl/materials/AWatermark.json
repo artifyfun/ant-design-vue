@@ -14,10 +14,19 @@
   "dev_mode": "proCode",
   "npm": {
     "package": "ant-design-vue",
-    "version": "2.4.2",
-    "script": "https://unpkg.com/browse/ant-design-vue@4.1.2/dist/antd.esm.min.js",
-    "css": "https://unpkg.com/browse/ant-design-vue@4.1.2/dist/reset.css",
-    "dependencies": null,
+    "version": "4.1.2",
+    "script": "/assets/lib/ant-design-vue@4.1.2/dist/antd.esm.min.js",
+    "css": "/assets/lib/ant-design-vue@4.1.2/dist/reset.css",
+    "dependencies": [
+      "https://unpkg.com/dayjs/dayjs.min.js",
+      "https://unpkg.com/dayjs/plugin/customParseFormat.js",
+      "https://unpkg.com/dayjs/plugin/weekday.js",
+      "https://unpkg.com/dayjs/plugin/localeData.js",
+      "https://unpkg.com/dayjs/plugin/weekOfYear.js",
+      "https://unpkg.com/dayjs/plugin/weekYear.js",
+      "https://unpkg.com/dayjs/plugin/advancedFormat.js",
+      "https://unpkg.com/dayjs/plugin/quarterOfYear.js"
+    ],
     "exportName": "Watermark"
   },
   "group": "component",
@@ -65,7 +74,7 @@
               }
             },
             "description": {
-              "zh_CN": "水印的宽度，`content` 的默认值为自身的宽度"
+              "zh_CN": "水印的宽度，content 的默认值为自身的宽度"
             },
             "required": false,
             "readOnly": false,
@@ -88,7 +97,7 @@
               }
             },
             "description": {
-              "zh_CN": "水印的高度，`content` 的默认值为自身的高度"
+              "zh_CN": "水印的高度，content 的默认值为自身的高度"
             },
             "required": false,
             "readOnly": false,
@@ -111,7 +120,7 @@
               }
             },
             "description": {
-              "zh_CN": "水印绘制时，旋转的角度，单位 `°`"
+              "zh_CN": "水印绘制时，旋转的角度，单位 °"
             },
             "required": false,
             "readOnly": false,
@@ -202,5 +211,15 @@
     "events": {},
     "slots": {}
   },
-  "snippets": [{}]
+  "snippets": [
+    {
+      "name": {
+        "zh_CN": "水印"
+      },
+      "icon": "watermark",
+      "screenshot": "",
+      "snippetName": "AWatermark",
+      "schema": {}
+    }
+  ]
 }

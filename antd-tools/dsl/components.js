@@ -1,9 +1,14 @@
 const glob = require('glob');
 const fs = require('fs');
 
-const ignoreFiles = [];
-
 function getComponents(type = 'zh-CN') {
+  const ignoreFiles = [
+    `**/flex/index.${type}.md*`,
+    `**/grid/index.${type}.md*`,
+    `**/layout/index.${type}.md*`,
+    `**/space/index.${type}.md*`,
+    `**/app/index.${type}.md*`,
+  ];
   // get components all zh-CN md files
   const mdFiles = glob.sync(`components/**/index.${type}.md*`, {
     ignore: ignoreFiles,

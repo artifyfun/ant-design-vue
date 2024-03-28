@@ -14,10 +14,19 @@
   "dev_mode": "proCode",
   "npm": {
     "package": "ant-design-vue",
-    "version": "2.4.2",
-    "script": "https://unpkg.com/browse/ant-design-vue@4.1.2/dist/antd.esm.min.js",
-    "css": "https://unpkg.com/browse/ant-design-vue@4.1.2/dist/reset.css",
-    "dependencies": null,
+    "version": "4.1.2",
+    "script": "/assets/lib/ant-design-vue@4.1.2/dist/antd.esm.min.js",
+    "css": "/assets/lib/ant-design-vue@4.1.2/dist/reset.css",
+    "dependencies": [
+      "https://unpkg.com/dayjs/dayjs.min.js",
+      "https://unpkg.com/dayjs/plugin/customParseFormat.js",
+      "https://unpkg.com/dayjs/plugin/weekday.js",
+      "https://unpkg.com/dayjs/plugin/localeData.js",
+      "https://unpkg.com/dayjs/plugin/weekOfYear.js",
+      "https://unpkg.com/dayjs/plugin/weekYear.js",
+      "https://unpkg.com/dayjs/plugin/advancedFormat.js",
+      "https://unpkg.com/dayjs/plugin/quarterOfYear.js"
+    ],
     "exportName": "Upload"
   },
   "group": "component",
@@ -246,7 +255,7 @@
               }
             },
             "description": {
-              "zh_CN": "上传列表的内建样式，支持三种基本样式 `text`, `picture` 和 `picture-card`"
+              "zh_CN": "上传列表的内建样式，支持三种基本样式 text, picture 和 picture-card"
             },
             "required": false,
             "readOnly": false,
@@ -254,7 +263,7 @@
             "cols": 12,
             "labelPosition": "top",
             "type": "string",
-            "defaultValue": "`text`",
+            "defaultValue": "text",
             "widget": {
               "component": "MetaInput",
               "props": {}
@@ -299,7 +308,7 @@
             "cols": 12,
             "labelPosition": "top",
             "type": "string",
-            "defaultValue": "`post`",
+            "defaultValue": "post",
             "widget": {
               "component": "MetaInput",
               "props": {}
@@ -314,7 +323,7 @@
               }
             },
             "description": {
-              "zh_CN": "是否支持多选文件，`ie10+` 支持。开启后按住 ctrl 可选择多个文件。"
+              "zh_CN": "是否支持多选文件，ie10+ 支持。开启后按住 ctrl 可选择多个文件。"
             },
             "required": false,
             "readOnly": false,
@@ -345,7 +354,7 @@
             "cols": 12,
             "labelPosition": "top",
             "type": "string",
-            "defaultValue": "`file`",
+            "defaultValue": "file",
             "widget": {
               "component": "MetaInput",
               "props": {}
@@ -579,5 +588,29 @@
       }
     }
   },
-  "snippets": [{}]
+  "snippets": [
+    {
+      "name": {
+        "zh_CN": "上传"
+      },
+      "icon": "upload",
+      "screenshot": "",
+      "snippetName": "AUpload",
+      "schema": {
+        "children": [
+          {
+            "componentName": "AButton",
+            "children": [
+              {
+                "componentName": "Text",
+                "props": {
+                  "text": "上传文件"
+                }
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
 }

@@ -6,7 +6,7 @@
   },
   "component": "AFloatButton",
   "icon": "float-button",
-  "description": "悬浮按钮。自 `4.0.0` 版本开始提供该组件。",
+  "description": "悬浮按钮。自 4.0.0 版本开始提供该组件。",
   "doc_url": "",
   "screenshot": "https://mdn.alipayobjects.com/huamei_7uahnr/afts/img/A*a0hwTY_rOSUAAAAAAAAAAAAADrJ8AQ/original",
   "tags": "",
@@ -14,10 +14,19 @@
   "dev_mode": "proCode",
   "npm": {
     "package": "ant-design-vue",
-    "version": "2.4.2",
-    "script": "https://unpkg.com/browse/ant-design-vue@4.1.2/dist/antd.esm.min.js",
-    "css": "https://unpkg.com/browse/ant-design-vue@4.1.2/dist/reset.css",
-    "dependencies": null,
+    "version": "4.1.2",
+    "script": "/assets/lib/ant-design-vue@4.1.2/dist/antd.esm.min.js",
+    "css": "/assets/lib/ant-design-vue@4.1.2/dist/reset.css",
+    "dependencies": [
+      "https://unpkg.com/dayjs/dayjs.min.js",
+      "https://unpkg.com/dayjs/plugin/customParseFormat.js",
+      "https://unpkg.com/dayjs/plugin/weekday.js",
+      "https://unpkg.com/dayjs/plugin/localeData.js",
+      "https://unpkg.com/dayjs/plugin/weekOfYear.js",
+      "https://unpkg.com/dayjs/plugin/weekYear.js",
+      "https://unpkg.com/dayjs/plugin/advancedFormat.js",
+      "https://unpkg.com/dayjs/plugin/quarterOfYear.js"
+    ],
     "exportName": "FloatButton"
   },
   "group": "component",
@@ -140,7 +149,7 @@
             "cols": 12,
             "labelPosition": "top",
             "type": "string",
-            "defaultValue": "`default`",
+            "defaultValue": "default",
             "widget": {
               "component": "MetaSelect",
               "props": {
@@ -174,7 +183,7 @@
             "cols": 12,
             "labelPosition": "top",
             "type": "string",
-            "defaultValue": "`circle`",
+            "defaultValue": "circle",
             "widget": {
               "component": "MetaSelect",
               "props": {
@@ -248,7 +257,7 @@
           "zh_CN": "onClick"
         },
         "description": {
-          "zh_CN": "Set the handler to handle `click` event"
+          "zh_CN": "Set the handler to handle click event"
         },
         "type": "event",
         "functionInfo": {
@@ -285,5 +294,15 @@
       }
     }
   },
-  "snippets": [{}]
+  "snippets": [
+    {
+      "name": {
+        "zh_CN": "悬浮按钮"
+      },
+      "icon": "float-button",
+      "screenshot": "",
+      "snippetName": "AFloatButton",
+      "schema": {}
+    }
+  ]
 }

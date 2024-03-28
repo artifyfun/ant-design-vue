@@ -14,10 +14,19 @@
   "dev_mode": "proCode",
   "npm": {
     "package": "ant-design-vue",
-    "version": "2.4.2",
-    "script": "https://unpkg.com/browse/ant-design-vue@4.1.2/dist/antd.esm.min.js",
-    "css": "https://unpkg.com/browse/ant-design-vue@4.1.2/dist/reset.css",
-    "dependencies": null,
+    "version": "4.1.2",
+    "script": "/assets/lib/ant-design-vue@4.1.2/dist/antd.esm.min.js",
+    "css": "/assets/lib/ant-design-vue@4.1.2/dist/reset.css",
+    "dependencies": [
+      "https://unpkg.com/dayjs/dayjs.min.js",
+      "https://unpkg.com/dayjs/plugin/customParseFormat.js",
+      "https://unpkg.com/dayjs/plugin/weekday.js",
+      "https://unpkg.com/dayjs/plugin/localeData.js",
+      "https://unpkg.com/dayjs/plugin/weekOfYear.js",
+      "https://unpkg.com/dayjs/plugin/weekYear.js",
+      "https://unpkg.com/dayjs/plugin/advancedFormat.js",
+      "https://unpkg.com/dayjs/plugin/quarterOfYear.js"
+    ],
     "exportName": "Button"
   },
   "group": "component",
@@ -179,7 +188,7 @@
               }
             },
             "description": {
-              "zh_CN": "设置 `button` 原生的 `type` 值，可选值请参考 [HTML 标准](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/button#attr-type)"
+              "zh_CN": "设置 button 原生的 type 值，可选值请参考 [HTML 标准](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/button#attr-type)"
             },
             "required": false,
             "readOnly": false,
@@ -187,7 +196,7 @@
             "cols": 12,
             "labelPosition": "top",
             "type": "string",
-            "defaultValue": "`button`",
+            "defaultValue": "button",
             "widget": {
               "component": "MetaInput",
               "props": {}
@@ -233,7 +242,7 @@
             "cols": 12,
             "labelPosition": "top",
             "type": "string",
-            "defaultValue": "`default`",
+            "defaultValue": "default",
             "widget": {
               "component": "MetaSelect",
               "props": {
@@ -271,7 +280,7 @@
             "cols": 12,
             "labelPosition": "top",
             "type": "string",
-            "defaultValue": "`middle`",
+            "defaultValue": "middle",
             "widget": {
               "component": "MetaSelect",
               "props": {
@@ -331,7 +340,7 @@
             "cols": 12,
             "labelPosition": "top",
             "type": "string",
-            "defaultValue": "`default`",
+            "defaultValue": "default",
             "widget": {
               "component": "MetaSelect",
               "props": {
@@ -377,7 +386,7 @@
           "zh_CN": "onClick"
         },
         "description": {
-          "zh_CN": "set the handler to handle `click` event"
+          "zh_CN": "set the handler to handle click event"
         },
         "type": "event",
         "functionInfo": {
@@ -398,5 +407,24 @@
       }
     }
   },
-  "snippets": [{}]
+  "snippets": [
+    {
+      "name": {
+        "zh_CN": "按钮"
+      },
+      "icon": "button",
+      "screenshot": "",
+      "snippetName": "AButton",
+      "schema": {
+        "children": [
+          {
+            "componentName": "Text",
+            "props": {
+              "text": "按钮文本"
+            }
+          }
+        ]
+      }
+    }
+  ]
 }

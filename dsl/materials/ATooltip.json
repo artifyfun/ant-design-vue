@@ -14,10 +14,19 @@
   "dev_mode": "proCode",
   "npm": {
     "package": "ant-design-vue",
-    "version": "2.4.2",
-    "script": "https://unpkg.com/browse/ant-design-vue@4.1.2/dist/antd.esm.min.js",
-    "css": "https://unpkg.com/browse/ant-design-vue@4.1.2/dist/reset.css",
-    "dependencies": null,
+    "version": "4.1.2",
+    "script": "/assets/lib/ant-design-vue@4.1.2/dist/antd.esm.min.js",
+    "css": "/assets/lib/ant-design-vue@4.1.2/dist/reset.css",
+    "dependencies": [
+      "https://unpkg.com/dayjs/dayjs.min.js",
+      "https://unpkg.com/dayjs/plugin/customParseFormat.js",
+      "https://unpkg.com/dayjs/plugin/weekday.js",
+      "https://unpkg.com/dayjs/plugin/localeData.js",
+      "https://unpkg.com/dayjs/plugin/weekOfYear.js",
+      "https://unpkg.com/dayjs/plugin/weekYear.js",
+      "https://unpkg.com/dayjs/plugin/advancedFormat.js",
+      "https://unpkg.com/dayjs/plugin/quarterOfYear.js"
+    ],
     "exportName": "Tooltip"
   },
   "group": "component",
@@ -329,7 +338,7 @@
               }
             },
             "description": {
-              "zh_CN": "气泡框位置，可选 `top` `left` `right` `bottom` `topLeft` `topRight` `bottomLeft` `bottomRight` `leftTop` `leftBottom` `rightTop` `rightBottom`"
+              "zh_CN": "气泡框位置，可选 top left right bottom topLeft topRight bottomLeft bottomRight leftTop leftBottom rightTop rightBottom"
             },
             "required": false,
             "readOnly": false,
@@ -337,7 +346,7 @@
             "cols": 12,
             "labelPosition": "top",
             "type": "string",
-            "defaultValue": "`top`",
+            "defaultValue": "top",
             "widget": {
               "component": "MetaInput",
               "props": {}
@@ -352,7 +361,7 @@
               }
             },
             "description": {
-              "zh_CN": "触发行为，可选 `hover/focus/click/contextmenu`"
+              "zh_CN": "触发行为，可选 hover/focus/click/contextmenu"
             },
             "required": false,
             "readOnly": false,
@@ -360,7 +369,7 @@
             "cols": 12,
             "labelPosition": "top",
             "type": "string",
-            "defaultValue": "`hover`",
+            "defaultValue": "hover",
             "widget": {
               "component": "MetaSelect",
               "props": {
@@ -394,7 +403,7 @@
               }
             },
             "description": {
-              "zh_CN": "用于手动控制浮层显隐, 小于 4.0.0 使用 `visible`"
+              "zh_CN": "用于手动控制浮层显隐, 小于 4.0.0 使用 visible"
             },
             "required": false,
             "readOnly": false,
@@ -442,5 +451,15 @@
       }
     }
   },
-  "snippets": [{}]
+  "snippets": [
+    {
+      "name": {
+        "zh_CN": "文字提示"
+      },
+      "icon": "tooltip",
+      "screenshot": "",
+      "snippetName": "ATooltip",
+      "schema": {}
+    }
+  ]
 }

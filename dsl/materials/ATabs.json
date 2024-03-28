@@ -14,10 +14,19 @@
   "dev_mode": "proCode",
   "npm": {
     "package": "ant-design-vue",
-    "version": "2.4.2",
-    "script": "https://unpkg.com/browse/ant-design-vue@4.1.2/dist/antd.esm.min.js",
-    "css": "https://unpkg.com/browse/ant-design-vue@4.1.2/dist/reset.css",
-    "dependencies": null,
+    "version": "4.1.2",
+    "script": "/assets/lib/ant-design-vue@4.1.2/dist/antd.esm.min.js",
+    "css": "/assets/lib/ant-design-vue@4.1.2/dist/reset.css",
+    "dependencies": [
+      "https://unpkg.com/dayjs/dayjs.min.js",
+      "https://unpkg.com/dayjs/plugin/customParseFormat.js",
+      "https://unpkg.com/dayjs/plugin/weekday.js",
+      "https://unpkg.com/dayjs/plugin/localeData.js",
+      "https://unpkg.com/dayjs/plugin/weekOfYear.js",
+      "https://unpkg.com/dayjs/plugin/weekYear.js",
+      "https://unpkg.com/dayjs/plugin/advancedFormat.js",
+      "https://unpkg.com/dayjs/plugin/quarterOfYear.js"
+    ],
     "exportName": "Tabs"
   },
   "group": "component",
@@ -87,7 +96,7 @@
               }
             },
             "description": {
-              "zh_CN": "是否使用动画切换 Tabs，在 tabPosition=`\"top\"` | `\"bottom\"` 时有效"
+              "zh_CN": "是否使用动画切换 Tabs，在 tabPosition=top | bottom 时有效"
             },
             "required": false,
             "readOnly": false,
@@ -133,7 +142,7 @@
               }
             },
             "description": {
-              "zh_CN": "是否隐藏加号图标，在 `type=\"editable-card\"` 时有效"
+              "zh_CN": "是否隐藏加号图标，在 type=editable-card 时有效"
             },
             "required": false,
             "readOnly": false,
@@ -156,7 +165,7 @@
               }
             },
             "description": {
-              "zh_CN": "大小，提供 `large` `middle` 和 `small` 三种大小"
+              "zh_CN": "大小，提供 large middle 和 small 三种大小"
             },
             "required": false,
             "readOnly": false,
@@ -164,7 +173,7 @@
             "cols": 12,
             "labelPosition": "top",
             "type": "string",
-            "defaultValue": "`middle`",
+            "defaultValue": "middle",
             "widget": {
               "component": "MetaSelect",
               "props": {
@@ -216,7 +225,7 @@
               }
             },
             "description": {
-              "zh_CN": "页签位置，可选值有 `top` `right` `bottom` `left`"
+              "zh_CN": "页签位置，可选值有 top right bottom left"
             },
             "required": false,
             "readOnly": false,
@@ -224,7 +233,7 @@
             "cols": 12,
             "labelPosition": "top",
             "type": "string",
-            "defaultValue": "`top`",
+            "defaultValue": "top",
             "widget": {
               "component": "MetaSelect",
               "props": {
@@ -258,7 +267,7 @@
               }
             },
             "description": {
-              "zh_CN": "页签的基本样式，可选 `line`、`card` `editable-card` 类型"
+              "zh_CN": "页签的基本样式，可选 line、card editable-card 类型"
             },
             "required": false,
             "readOnly": false,
@@ -266,7 +275,7 @@
             "cols": 12,
             "labelPosition": "top",
             "type": "string",
-            "defaultValue": "`line`",
+            "defaultValue": "line",
             "widget": {
               "component": "MetaInput",
               "props": {}
@@ -370,5 +379,15 @@
     "events": {},
     "slots": {}
   },
-  "snippets": [{}]
+  "snippets": [
+    {
+      "name": {
+        "zh_CN": "标签页"
+      },
+      "icon": "tabs",
+      "screenshot": "",
+      "snippetName": "ATabs",
+      "schema": {}
+    }
+  ]
 }

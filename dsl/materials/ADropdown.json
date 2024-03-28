@@ -14,10 +14,19 @@
   "dev_mode": "proCode",
   "npm": {
     "package": "ant-design-vue",
-    "version": "2.4.2",
-    "script": "https://unpkg.com/browse/ant-design-vue@4.1.2/dist/antd.esm.min.js",
-    "css": "https://unpkg.com/browse/ant-design-vue@4.1.2/dist/reset.css",
-    "dependencies": null,
+    "version": "4.1.2",
+    "script": "/assets/lib/ant-design-vue@4.1.2/dist/antd.esm.min.js",
+    "css": "/assets/lib/ant-design-vue@4.1.2/dist/reset.css",
+    "dependencies": [
+      "https://unpkg.com/dayjs/dayjs.min.js",
+      "https://unpkg.com/dayjs/plugin/customParseFormat.js",
+      "https://unpkg.com/dayjs/plugin/weekday.js",
+      "https://unpkg.com/dayjs/plugin/localeData.js",
+      "https://unpkg.com/dayjs/plugin/weekOfYear.js",
+      "https://unpkg.com/dayjs/plugin/weekYear.js",
+      "https://unpkg.com/dayjs/plugin/advancedFormat.js",
+      "https://unpkg.com/dayjs/plugin/quarterOfYear.js"
+    ],
     "exportName": "Dropdown"
   },
   "group": "component",
@@ -165,7 +174,7 @@
             "cols": 12,
             "labelPosition": "top",
             "type": "function",
-            "defaultValue": "`() => document.body`",
+            "defaultValue": "() => document.body",
             "widget": {
               "component": "MetaCodeEditor",
               "props": {}
@@ -234,7 +243,7 @@
             "cols": 12,
             "labelPosition": "top",
             "type": "string",
-            "defaultValue": "`bottomLeft`",
+            "defaultValue": "bottomLeft",
             "widget": {
               "component": "MetaInput",
               "props": {}
@@ -275,7 +284,7 @@
           "zh_CN": "onOpenChange"
         },
         "description": {
-          "zh_CN": "a callback function takes an argument: `open`, is executed when the open state is changed. Not trigger when hidden by click item"
+          "zh_CN": "a callback function takes an argument: open, is executed when the open state is changed. Not trigger when hidden by click item"
         },
         "type": "event",
         "functionInfo": {
@@ -287,5 +296,64 @@
     },
     "slots": {}
   },
-  "snippets": [{}]
+  "snippets": [
+    {
+      "name": {
+        "zh_CN": "下拉菜单"
+      },
+      "icon": "dropdown",
+      "screenshot": "",
+      "snippetName": "ADropdown",
+      "schema": {
+        "children": [
+          {
+            "componentName": "AButton",
+            "children": [
+              {
+                "componentName": "Text",
+                "props": {
+                  "text": "下拉菜单"
+                }
+              }
+            ]
+          },
+          {
+            "componentName": "Template",
+            "props": {
+              "slot": "overlay"
+            },
+            "children": [
+              {
+                "componentName": "AMenu",
+                "children": [
+                  {
+                    "componentName": "AMenuItem",
+                    "children": [
+                      {
+                        "componentName": "Text",
+                        "props": {
+                          "text": "选项一"
+                        }
+                      }
+                    ]
+                  },
+                  {
+                    "componentName": "AMenuItem",
+                    "children": [
+                      {
+                        "componentName": "Text",
+                        "props": {
+                          "text": "选项二"
+                        }
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
 }

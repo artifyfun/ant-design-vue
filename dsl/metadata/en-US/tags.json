@@ -1,4 +1,7 @@
 {
+  "affix": {
+    "attributes": ["offsetBottom", "offsetTop", "target"]
+  },
   "alert": {
     "attributes": [
       "action",
@@ -14,8 +17,25 @@
       "type"
     ]
   },
-  "affix": {
-    "attributes": ["offsetBottom", "offsetTop", "target"]
+  "anchor": {
+    "attributes": [
+      "affix",
+      "bounds",
+      "getContainer",
+      "getCurrentAnchor",
+      "offsetBottom",
+      "offsetTop",
+      "showInkInFixed",
+      "targetOffset",
+      "wrapperClass",
+      "wrapperStyle",
+      "items",
+      "direction",
+      "customTitle"
+    ]
+  },
+  "anchor-item": {
+    "attributes": ["key", "href", "target", "title", "children"]
   },
   "app": {
     "attributes": ["message", "notification"]
@@ -42,26 +62,6 @@
       "status",
       "v-model:value"
     ]
-  },
-  "anchor": {
-    "attributes": [
-      "affix",
-      "bounds",
-      "getContainer",
-      "getCurrentAnchor",
-      "offsetBottom",
-      "offsetTop",
-      "showInkInFixed",
-      "targetOffset",
-      "wrapperClass",
-      "wrapperStyle",
-      "items",
-      "direction",
-      "customTitle"
-    ]
-  },
-  "anchor-item": {
-    "attributes": ["key", "href", "target", "title", "children"]
   },
   "avatar": {
     "attributes": [
@@ -503,6 +503,25 @@
       "downIcon"
     ]
   },
+  "layout": {
+    "attributes": ["class", "hasSider", "style"]
+  },
+  "layout-sider": {
+    "attributes": [
+      "breakpoint",
+      "class",
+      "collapsed(v-model)",
+      "collapsedWidth",
+      "collapsible",
+      "defaultCollapsed",
+      "reverseArrow",
+      "style",
+      "theme",
+      "trigger",
+      "width",
+      "zeroWidthTriggerStyle"
+    ]
+  },
   "list": {
     "attributes": [
       "bordered",
@@ -535,25 +554,6 @@
   },
   "list-item-meta": {
     "attributes": ["avatar", "description", "title"]
-  },
-  "layout": {
-    "attributes": ["class", "hasSider", "style"]
-  },
-  "layout-sider": {
-    "attributes": [
-      "breakpoint",
-      "class",
-      "collapsed(v-model)",
-      "collapsedWidth",
-      "collapsible",
-      "defaultCollapsed",
-      "reverseArrow",
-      "style",
-      "theme",
-      "trigger",
-      "width",
-      "zeroWidthTriggerStyle"
-    ]
   },
   "mentions": {
     "attributes": []

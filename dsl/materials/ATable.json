@@ -14,10 +14,19 @@
   "dev_mode": "proCode",
   "npm": {
     "package": "ant-design-vue",
-    "version": "2.4.2",
-    "script": "https://unpkg.com/browse/ant-design-vue@4.1.2/dist/antd.esm.min.js",
-    "css": "https://unpkg.com/browse/ant-design-vue@4.1.2/dist/reset.css",
-    "dependencies": null,
+    "version": "4.1.2",
+    "script": "/assets/lib/ant-design-vue@4.1.2/dist/antd.esm.min.js",
+    "css": "/assets/lib/ant-design-vue@4.1.2/dist/reset.css",
+    "dependencies": [
+      "https://unpkg.com/dayjs/dayjs.min.js",
+      "https://unpkg.com/dayjs/plugin/customParseFormat.js",
+      "https://unpkg.com/dayjs/plugin/weekday.js",
+      "https://unpkg.com/dayjs/plugin/localeData.js",
+      "https://unpkg.com/dayjs/plugin/weekOfYear.js",
+      "https://unpkg.com/dayjs/plugin/weekYear.js",
+      "https://unpkg.com/dayjs/plugin/advancedFormat.js",
+      "https://unpkg.com/dayjs/plugin/quarterOfYear.js"
+    ],
     "exportName": "Table"
   },
   "group": "component",
@@ -96,7 +105,7 @@
             "cols": 12,
             "labelPosition": "top",
             "type": "string",
-            "defaultValue": "`children`",
+            "defaultValue": "children",
             "widget": {
               "component": "MetaInput",
               "props": {}
@@ -296,7 +305,7 @@
               }
             },
             "description": {
-              "zh_CN": "控制展开图标是否固定，可选 true `left` `right`"
+              "zh_CN": "控制展开图标是否固定，可选 true left right"
             },
             "required": false,
             "readOnly": false,
@@ -511,7 +520,7 @@
             "cols": 12,
             "labelPosition": "top",
             "type": "string",
-            "defaultValue": "`key`",
+            "defaultValue": "key",
             "widget": {
               "component": "MetaInput",
               "props": {}
@@ -652,7 +661,7 @@
             "cols": 12,
             "labelPosition": "top",
             "type": "string",
-            "defaultValue": "`large`",
+            "defaultValue": "large",
             "widget": {
               "component": "MetaSelect",
               "props": {
@@ -682,7 +691,7 @@
               }
             },
             "description": {
-              "zh_CN": "支持的排序方式，取值为 `ascend` `descend`"
+              "zh_CN": "支持的排序方式，取值为 ascend descend"
             },
             "required": false,
             "readOnly": false,
@@ -786,7 +795,7 @@
           "zh_CN": "customFilterDropdown"
         },
         "description": {
-          "zh_CN": "自定义筛选菜单，需要配合 `column.customFilterDropdown` 使用"
+          "zh_CN": "自定义筛选菜单，需要配合 column.customFilterDropdown 使用"
         }
       },
       "customFilterIcon": {
@@ -863,5 +872,15 @@
       }
     }
   },
-  "snippets": [{}]
+  "snippets": [
+    {
+      "name": {
+        "zh_CN": "表格"
+      },
+      "icon": "table",
+      "screenshot": "",
+      "snippetName": "ATable",
+      "schema": {}
+    }
+  ]
 }

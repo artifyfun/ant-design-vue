@@ -11,6 +11,8 @@ const { outputFileSync, readFileSync } = require('fs-extra');
 
 const tagPrefix = '';
 
+const CDN = '/assets/lib';
+
 function parseAndWriteByType(type = 'zh-CN') {
   const reg = new RegExp(`${type}.md`);
   return parseAndWrite({
@@ -72,7 +74,9 @@ function getPropertiesContent(attributes) {
             : undefined;
         }
         if (['number'].includes(type)) {
-          return typeof attr.default === 'string' ? Number(attr.default) : attr.default;
+          return attr.default && typeof attr.default === 'string'
+            ? Number(attr.default)
+            : attr.default;
         }
         if (['object'].includes(type)) {
           try {
@@ -81,7 +85,9 @@ function getPropertiesContent(attributes) {
             return undefined;
           }
         }
-        return attr.default;
+        return attr.default && typeof attr.default === 'string'
+          ? attr.default.replaceAll('`', '').trim()
+          : attr.default;
       })();
 
       const widget = (() => {
@@ -135,6 +141,7 @@ function getPropertiesContent(attributes) {
           };
         }
       })();
+
       return {
         property: attr.name.replace('(v-model)', '').trim(),
         label: {
@@ -143,7 +150,7 @@ function getPropertiesContent(attributes) {
           },
         },
         description: {
-          zh_CN: attr.description,
+          zh_CN: formatDescription(attr.description),
         },
         required: false,
         readOnly: false,
@@ -170,7 +177,7 @@ function getEvents(events) {
             zh_CN: name,
           },
           description: {
-            zh_CN: event.description,
+            zh_CN: formatDescription(event.description),
           },
           type: 'event',
           functionInfo: {
@@ -194,12 +201,382 @@ function getSlots(slots) {
             zh_CN: slot.name,
           },
           description: {
-            zh_CN: slot.description,
+            zh_CN: formatDescription(slot.description),
           },
         },
       ];
     }),
   );
+}
+
+function getSnippets(component) {
+  const schemaMap = {
+    Button: {
+      children: [
+        {
+          componentName: 'Text',
+          props: {
+            text: '按钮文本',
+          },
+        },
+      ],
+    },
+    Breadcrumb: {
+      children: [
+        {
+          componentName: 'ABreadcrumbItem',
+          props: {
+            text: '一级',
+          },
+        },
+        {
+          componentName: 'ABreadcrumbItem',
+          props: {
+            text: '二级',
+          },
+        },
+      ],
+    },
+    Dropdown: {
+      children: [
+        {
+          componentName: 'AButton',
+          children: [
+            {
+              componentName: 'Text',
+              props: {
+                text: '下拉菜单',
+              },
+            },
+          ],
+        },
+        {
+          componentName: 'Template',
+          props: {
+            slot: 'overlay',
+          },
+          children: [
+            {
+              componentName: 'AMenu',
+              children: [
+                {
+                  componentName: 'AMenuItem',
+                  children: [
+                    {
+                      componentName: 'Text',
+                      props: {
+                        text: '选项一',
+                      },
+                    },
+                  ],
+                },
+                {
+                  componentName: 'AMenuItem',
+                  children: [
+                    {
+                      componentName: 'Text',
+                      props: {
+                        text: '选项二',
+                      },
+                    },
+                  ],
+                },
+              ],
+            },
+          ],
+        },
+      ],
+    },
+    Menu: {
+      props: {
+        items: [
+          {
+            key: 'mail',
+            label: 'Navigation One',
+            title: 'Navigation One',
+          },
+          {
+            key: 'app',
+            label: 'Navigation Two',
+            title: 'Navigation Two',
+          },
+        ],
+      },
+    },
+    Steps: {
+      props: {
+        items: [
+          {
+            title: 'Finished',
+            description: 'This is a description.',
+          },
+          {
+            title: 'In Progress',
+            description: 'This is a description.',
+            subTitle: 'Left 00:00:08',
+          },
+          {
+            title: 'Waiting',
+            description: 'This is a description.',
+          },
+        ],
+      },
+    },
+    Cascader: {
+      props: {
+        options: [
+          {
+            value: 'zhejiang',
+            label: 'Zhejiang',
+            children: [
+              {
+                value: 'hangzhou',
+                label: 'Hangzhou',
+                children: [
+                  {
+                    value: 'xihu',
+                    label: 'West Lake',
+                  },
+                ],
+              },
+            ],
+          },
+          {
+            value: 'jiangsu',
+            label: 'Jiangsu',
+            children: [
+              {
+                value: 'nanjing',
+                label: 'Nanjing',
+                children: [
+                  {
+                    value: 'zhonghuamen',
+                    label: 'Zhong Hua Men',
+                  },
+                ],
+              },
+            ],
+          },
+        ],
+      },
+    },
+    Checkbox: {
+      children: [
+        {
+          componentName: 'Text',
+          props: {
+            text: 'Checkbox',
+          },
+        },
+      ],
+    },
+    Form: {
+      children: [
+        {
+          componentName: 'AFormItem',
+          children: [
+            {
+              componentName: 'AInput',
+            },
+          ],
+        },
+      ],
+    },
+    Radio: {
+      children: [
+        {
+          componentName: 'Text',
+          props: {
+            text: 'Radio',
+          },
+        },
+      ],
+    },
+    Select: {
+      children: [
+        {
+          componentName: 'ASelectOption',
+          children: [
+            {
+              componentName: 'Text',
+              props: {
+                text: '选项一',
+              },
+            },
+          ],
+        },
+        {
+          componentName: 'ASelectOption',
+          children: [
+            {
+              componentName: 'Text',
+              props: {
+                text: '选项二',
+              },
+            },
+          ],
+        },
+      ],
+    },
+    TreeSelect: {
+      props: {
+        'tree-data': [
+          {
+            label: 'root 1',
+            value: 'root 1',
+            children: [
+              {
+                label: 'parent 1',
+                value: 'parent 1',
+                children: [
+                  {
+                    label: 'parent 1-0',
+                    value: 'parent 1-0',
+                    children: [
+                      {
+                        label: 'my leaf',
+                        value: 'leaf1',
+                      },
+                      {
+                        label: 'your leaf',
+                        value: 'leaf2',
+                      },
+                    ],
+                  },
+                  {
+                    label: 'parent 1-1',
+                    value: 'parent 1-1',
+                  },
+                ],
+              },
+              {
+                label: 'parent 2',
+                value: 'parent 2',
+              },
+            ],
+          },
+        ],
+      },
+    },
+    Upload: {
+      children: [
+        {
+          componentName: 'AButton',
+          children: [
+            {
+              componentName: 'Text',
+              props: {
+                text: '上传文件',
+              },
+            },
+          ],
+        },
+      ],
+    },
+    Avatar: {
+      children: [
+        {
+          componentName: 'Text',
+          props: {
+            text: 'U',
+          },
+        },
+      ],
+    },
+    Badge: {
+      props: {
+        count: '5',
+      },
+      children: [
+        {
+          componentName: 'Avatar',
+          children: [
+            {
+              componentName: 'Text',
+              props: {
+                text: 'U',
+              },
+            },
+          ],
+        },
+      ],
+    },
+    Card: {
+      children: [
+        {
+          componentName: 'Template',
+          props: {
+            slot: 'extra',
+          },
+          children: [
+            {
+              componentName: 'a',
+              children: [
+                {
+                  componentName: 'Text',
+                  props: {
+                    text: 'more',
+                  },
+                },
+              ],
+            },
+          ],
+        },
+        {
+          componentName: 'Text',
+          props: {
+            text: 'Card Content',
+          },
+        },
+      ],
+    },
+    Carousel: {
+      children: [
+        {
+          componentName: 'div',
+          children: [
+            {
+              componentName: 'Text',
+              props: {
+                text: '1',
+              },
+            },
+          ],
+        },
+        {
+          componentName: 'div',
+          children: [
+            {
+              componentName: 'Text',
+              props: {
+                text: '2',
+              },
+            },
+          ],
+        },
+      ],
+    },
+  };
+
+  return [
+    {
+      name: {
+        zh_CN: component.subtitle,
+      },
+      icon: component.icon || toKebabCase(component.title),
+      screenshot: '',
+      snippetName: `A${component.title}`,
+      schema: schemaMap[component.title] || {},
+    },
+  ];
+}
+
+function formatDescription(description) {
+  return description
+    .replaceAll('"', '')
+    .replaceAll("'", '')
+    .replaceAll('`', '')
+    .replaceAll('\\', '');
 }
 
 async function generateMaterials(type = 'zh-CN') {
@@ -227,7 +604,7 @@ async function generateMaterials(type = 'zh-CN') {
         },
         component: `A${component.title}`,
         icon: component.icon || toKebabCase(component.title),
-        description: component.description,
+        description: formatDescription(component.description),
         doc_url: '',
         screenshot: component.coverDark,
         tags: '',
@@ -235,10 +612,19 @@ async function generateMaterials(type = 'zh-CN') {
         dev_mode: 'proCode',
         npm: {
           package: pkg.name,
-          version: '2.4.2',
-          script: `https://unpkg.com/browse/${pkg.name}@${pkg.version}/dist/antd.esm.min.js`,
-          css: `https://unpkg.com/browse/${pkg.name}@${pkg.version}/dist/reset.css`,
-          dependencies: null,
+          version: webTypes.version,
+          script: `${CDN}/${pkg.name}@${pkg.version}/dist/antd.esm.min.js`,
+          css: `${CDN}/${pkg.name}@${pkg.version}/dist/reset.css`,
+          dependencies: [
+            'https://unpkg.com/dayjs/dayjs.min.js',
+            'https://unpkg.com/dayjs/plugin/customParseFormat.js',
+            'https://unpkg.com/dayjs/plugin/weekday.js',
+            'https://unpkg.com/dayjs/plugin/localeData.js',
+            'https://unpkg.com/dayjs/plugin/weekOfYear.js',
+            'https://unpkg.com/dayjs/plugin/weekYear.js',
+            'https://unpkg.com/dayjs/plugin/advancedFormat.js',
+            'https://unpkg.com/dayjs/plugin/quarterOfYear.js',
+          ],
           exportName: component.title,
         },
         group: 'component',
@@ -290,7 +676,7 @@ async function generateMaterials(type = 'zh-CN') {
           events: getEvents(tag.events),
           slots: getSlots(tag.slots),
         },
-        snippets: [{}],
+        snippets: getSnippets(component),
       };
     })
     .filter(Boolean);
@@ -320,7 +706,7 @@ async function generateMaterials(type = 'zh-CN') {
           name: {
             zh_CN: component.subtitle,
           },
-          description: component.description,
+          description: formatDescription(component.description),
           category: component.type,
           schema: {
             properties: [
@@ -339,7 +725,9 @@ async function generateMaterials(type = 'zh-CN') {
                   return {
                     ...item,
                     label: cnContent.label,
-                    description: cnContent.description,
+                    description: {
+                      zh_CN: formatDescription(cnContent.description.zh_CN),
+                    },
                   };
                 }),
                 description: {
@@ -373,7 +761,9 @@ async function generateMaterials(type = 'zh-CN') {
                   {
                     ...event,
                     label: cnEvent.label,
-                    description: cnEvent.description,
+                    description: {
+                      zh_CN: formatDescription(cnEvent.description.zh_CN),
+                    },
                   },
                 ];
               }),
@@ -401,13 +791,22 @@ async function generateMaterials(type = 'zh-CN') {
                   {
                     ...slot,
                     label: cnSlot.label,
-                    description: cnSlot.description,
+                    description: {
+                      zh_CN: formatDescription(cnSlot.description.zh_CN),
+                    },
                   },
                 ];
               }),
             ),
           },
-          snippets: [{}],
+          snippets: [
+            {
+              ...material.snippets[0],
+              name: {
+                zh_CN: component.subtitle,
+              },
+            },
+          ],
         };
       })
       .filter(Boolean);

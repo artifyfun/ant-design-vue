@@ -14,10 +14,19 @@
   "dev_mode": "proCode",
   "npm": {
     "package": "ant-design-vue",
-    "version": "2.4.2",
-    "script": "https://unpkg.com/browse/ant-design-vue@4.1.2/dist/antd.esm.min.js",
-    "css": "https://unpkg.com/browse/ant-design-vue@4.1.2/dist/reset.css",
-    "dependencies": null,
+    "version": "4.1.2",
+    "script": "/assets/lib/ant-design-vue@4.1.2/dist/antd.esm.min.js",
+    "css": "/assets/lib/ant-design-vue@4.1.2/dist/reset.css",
+    "dependencies": [
+      "https://unpkg.com/dayjs/dayjs.min.js",
+      "https://unpkg.com/dayjs/plugin/customParseFormat.js",
+      "https://unpkg.com/dayjs/plugin/weekday.js",
+      "https://unpkg.com/dayjs/plugin/localeData.js",
+      "https://unpkg.com/dayjs/plugin/weekOfYear.js",
+      "https://unpkg.com/dayjs/plugin/weekYear.js",
+      "https://unpkg.com/dayjs/plugin/advancedFormat.js",
+      "https://unpkg.com/dayjs/plugin/quarterOfYear.js"
+    ],
     "exportName": "Pagination"
   },
   "group": "component",
@@ -292,7 +301,7 @@
               }
             },
             "description": {
-              "zh_CN": "是否展示 `pageSize` 切换器，当 `total` 大于 50 时默认为 true"
+              "zh_CN": "是否展示 pageSize 切换器，当 total 大于 50 时默认为 true"
             },
             "required": false,
             "readOnly": false,
@@ -314,7 +323,7 @@
               }
             },
             "description": {
-              "zh_CN": "Show page item's title"
+              "zh_CN": "Show page items title"
             },
             "required": false,
             "readOnly": false,
@@ -431,7 +440,7 @@
           "zh_CN": "onChange"
         },
         "description": {
-          "zh_CN": "Called when the page number or `pageSize` is changed, and it takes the resulting page number and pageSize as its arguments"
+          "zh_CN": "Called when the page number or pageSize is changed, and it takes the resulting page number and pageSize as its arguments"
         },
         "type": "event",
         "functionInfo": {
@@ -445,7 +454,7 @@
           "zh_CN": "onShowSizeChange"
         },
         "description": {
-          "zh_CN": "a callback function, executed when `pageSize` is changed"
+          "zh_CN": "a callback function, executed when pageSize is changed"
         },
         "type": "event",
         "functionInfo": {
@@ -466,5 +475,15 @@
       }
     }
   },
-  "snippets": [{}]
+  "snippets": [
+    {
+      "name": {
+        "zh_CN": "分页"
+      },
+      "icon": "pagination",
+      "screenshot": "",
+      "snippetName": "APagination",
+      "schema": {}
+    }
+  ]
 }

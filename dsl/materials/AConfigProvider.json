@@ -14,10 +14,19 @@
   "dev_mode": "proCode",
   "npm": {
     "package": "ant-design-vue",
-    "version": "2.4.2",
-    "script": "https://unpkg.com/browse/ant-design-vue@4.1.2/dist/antd.esm.min.js",
-    "css": "https://unpkg.com/browse/ant-design-vue@4.1.2/dist/reset.css",
-    "dependencies": null,
+    "version": "4.1.2",
+    "script": "/assets/lib/ant-design-vue@4.1.2/dist/antd.esm.min.js",
+    "css": "/assets/lib/ant-design-vue@4.1.2/dist/reset.css",
+    "dependencies": [
+      "https://unpkg.com/dayjs/dayjs.min.js",
+      "https://unpkg.com/dayjs/plugin/customParseFormat.js",
+      "https://unpkg.com/dayjs/plugin/weekday.js",
+      "https://unpkg.com/dayjs/plugin/localeData.js",
+      "https://unpkg.com/dayjs/plugin/weekOfYear.js",
+      "https://unpkg.com/dayjs/plugin/weekYear.js",
+      "https://unpkg.com/dayjs/plugin/advancedFormat.js",
+      "https://unpkg.com/dayjs/plugin/quarterOfYear.js"
+    ],
     "exportName": "ConfigProvider"
   },
   "group": "component",
@@ -65,7 +74,7 @@
               }
             },
             "description": {
-              "zh_CN": "设置为 `false` 时，移除按钮中 2 个汉字之间的空格"
+              "zh_CN": "设置为 false 时，移除按钮中 2 个汉字之间的空格"
             },
             "required": false,
             "readOnly": false,
@@ -133,7 +142,7 @@
             "cols": 12,
             "labelPosition": "top",
             "type": "string",
-            "defaultValue": "`ltr`",
+            "defaultValue": "ltr",
             "widget": {
               "component": "MetaSelect",
               "props": {
@@ -159,7 +168,7 @@
               }
             },
             "description": {
-              "zh_CN": "下拉菜单和选择器同宽。默认将设置 `min-width`，当值小于选择框宽度时会被忽略。`false` 时会关闭虚拟滚动"
+              "zh_CN": "下拉菜单和选择器同宽。默认将设置 min-width，当值小于选择框宽度时会被忽略。false 时会关闭虚拟滚动"
             },
             "required": false,
             "readOnly": false,
@@ -189,7 +198,7 @@
             "cols": 12,
             "labelPosition": "top",
             "type": "function",
-            "defaultValue": "`() => document.body`",
+            "defaultValue": "() => document.body",
             "widget": {
               "component": "MetaCodeEditor",
               "props": {}
@@ -228,7 +237,7 @@
               }
             },
             "description": {
-              "zh_CN": "设置统一样式前缀。注意：需要配合 `less` 变量 `@ant-prefix` 使用"
+              "zh_CN": "设置统一样式前缀。注意：需要配合 less 变量 @ant-prefix 使用"
             },
             "required": false,
             "readOnly": false,
@@ -273,7 +282,7 @@
               }
             },
             "description": {
-              "zh_CN": "设置 `false` 时关闭虚拟滚动"
+              "zh_CN": "设置 false 时关闭虚拟滚动"
             },
             "required": false,
             "readOnly": false,
@@ -306,5 +315,15 @@
       }
     }
   },
-  "snippets": [{}]
+  "snippets": [
+    {
+      "name": {
+        "zh_CN": "全局化配置"
+      },
+      "icon": "config-provider",
+      "screenshot": "",
+      "snippetName": "AConfigProvider",
+      "schema": {}
+    }
+  ]
 }

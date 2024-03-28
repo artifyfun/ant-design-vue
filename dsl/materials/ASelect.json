@@ -14,10 +14,19 @@
   "dev_mode": "proCode",
   "npm": {
     "package": "ant-design-vue",
-    "version": "2.4.2",
-    "script": "https://unpkg.com/browse/ant-design-vue@4.1.2/dist/antd.esm.min.js",
-    "css": "https://unpkg.com/browse/ant-design-vue@4.1.2/dist/reset.css",
-    "dependencies": null,
+    "version": "4.1.2",
+    "script": "/assets/lib/ant-design-vue@4.1.2/dist/antd.esm.min.js",
+    "css": "/assets/lib/ant-design-vue@4.1.2/dist/reset.css",
+    "dependencies": [
+      "https://unpkg.com/dayjs/dayjs.min.js",
+      "https://unpkg.com/dayjs/plugin/customParseFormat.js",
+      "https://unpkg.com/dayjs/plugin/weekday.js",
+      "https://unpkg.com/dayjs/plugin/localeData.js",
+      "https://unpkg.com/dayjs/plugin/weekOfYear.js",
+      "https://unpkg.com/dayjs/plugin/weekYear.js",
+      "https://unpkg.com/dayjs/plugin/advancedFormat.js",
+      "https://unpkg.com/dayjs/plugin/quarterOfYear.js"
+    ],
     "exportName": "Select"
   },
   "group": "component",
@@ -88,7 +97,7 @@
               }
             },
             "description": {
-              "zh_CN": "是否在选中项后清空搜索框，只在 `mode` 为 `multiple` 或 `tags` 时有效。"
+              "zh_CN": "是否在选中项后清空搜索框，只在 mode 为 multiple 或 tags 时有效。"
             },
             "required": false,
             "readOnly": false,
@@ -247,7 +256,7 @@
               }
             },
             "description": {
-              "zh_CN": "下拉菜单和选择器同宽。默认将设置 `min-width`，当值小于选择框宽度时会被忽略。false 时会关闭虚拟滚动"
+              "zh_CN": "下拉菜单和选择器同宽。默认将设置 min-width，当值小于选择框宽度时会被忽略。false 时会关闭虚拟滚动"
             },
             "required": false,
             "readOnly": false,
@@ -342,7 +351,7 @@
               }
             },
             "description": {
-              "zh_CN": "是否根据输入项进行筛选。当其为一个函数时，会接收 `inputValue` `option` 两个参数，当 `option` 符合筛选条件时，应返回 `true`，反之则返回 `false`。"
+              "zh_CN": "是否根据输入项进行筛选。当其为一个函数时，会接收 inputValue option 两个参数，当 option 符合筛选条件时，应返回 true，反之则返回 false。"
             },
             "required": false,
             "readOnly": false,
@@ -410,7 +419,7 @@
               }
             },
             "description": {
-              "zh_CN": "是否把每个选项的 label 包装到 value 中，会把 Select 的 value 类型从 `string` 变为 `{key: string, label: vNodes, originLabel: any}` 的格式, originLabel（3.1） 保持原始类型，如果通过 a-select-option children 构造的节点，该值是是个函数（即 a-select-option 的默认插槽）"
+              "zh_CN": "是否把每个选项的 label 包装到 value 中，会把 Select 的 value 类型从 string 变为 {key: string, label: vNodes, originLabel: any} 的格式, originLabel（3.1） 保持原始类型，如果通过 a-select-option children 构造的节点，该值是是个函数（即 a-select-option 的默认插槽）"
             },
             "required": false,
             "readOnly": false,
@@ -564,7 +573,7 @@
             "cols": 12,
             "labelPosition": "top",
             "type": "string",
-            "defaultValue": "`Not Found`",
+            "defaultValue": "Not Found",
             "widget": {
               "component": "MetaSelect",
               "props": {
@@ -635,7 +644,7 @@
               }
             },
             "description": {
-              "zh_CN": "回填到选择框的 Option 的属性值，默认是 Option 的子元素。比如在子元素需要高亮效果时，此值可以设为 `value`。"
+              "zh_CN": "回填到选择框的 Option 的属性值，默认是 Option 的子元素。比如在子元素需要高亮效果时，此值可以设为 value。"
             },
             "required": false,
             "readOnly": false,
@@ -643,7 +652,7 @@
             "cols": 12,
             "labelPosition": "top",
             "type": "string",
-            "defaultValue": "`children` | `label`(when use options)",
+            "defaultValue": "children | label(when use options)",
             "widget": {
               "component": "MetaInput",
               "props": {}
@@ -759,7 +768,7 @@
               }
             },
             "description": {
-              "zh_CN": "选择框大小，可选 `large` `small`"
+              "zh_CN": "选择框大小，可选 large small"
             },
             "required": false,
             "readOnly": false,
@@ -815,7 +824,7 @@
               }
             },
             "description": {
-              "zh_CN": "自动分词的分隔符，仅在 `mode=\"tags\"` 时生效"
+              "zh_CN": "自动分词的分隔符，仅在 mode=tags 时生效"
             },
             "required": false,
             "readOnly": false,
@@ -916,7 +925,7 @@
           "zh_CN": "onDeselect"
         },
         "description": {
-          "zh_CN": "Called when a option is deselected, the params are option's value (or key) . only called for multiple or tags, effective in multiple or tags mode only."
+          "zh_CN": "Called when a option is deselected, the params are options value (or key) . only called for multiple or tags, effective in multiple or tags mode only."
         },
         "type": "event",
         "functionInfo": {
@@ -1028,7 +1037,7 @@
           "zh_CN": "onSelect"
         },
         "description": {
-          "zh_CN": "Called when a option is selected, the params are option's value (or key) and option instance."
+          "zh_CN": "Called when a option is selected, the params are options value (or key) and option instance."
         },
         "type": "event",
         "functionInfo": {
@@ -1116,10 +1125,45 @@
           "zh_CN": "tagRender"
         },
         "description": {
-          "zh_CN": "自定义 tag 内容 render，仅在 `mode` 为 `multiple` 或 `tags` 时生效"
+          "zh_CN": "自定义 tag 内容 render，仅在 mode 为 multiple 或 tags 时生效"
         }
       }
     }
   },
-  "snippets": [{}]
+  "snippets": [
+    {
+      "name": {
+        "zh_CN": "选择器"
+      },
+      "icon": "select",
+      "screenshot": "",
+      "snippetName": "ASelect",
+      "schema": {
+        "children": [
+          {
+            "componentName": "ASelectOption",
+            "children": [
+              {
+                "componentName": "Text",
+                "props": {
+                  "text": "选项一"
+                }
+              }
+            ]
+          },
+          {
+            "componentName": "ASelectOption",
+            "children": [
+              {
+                "componentName": "Text",
+                "props": {
+                  "text": "选项二"
+                }
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
 }

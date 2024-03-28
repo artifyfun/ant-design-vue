@@ -14,10 +14,19 @@
   "dev_mode": "proCode",
   "npm": {
     "package": "ant-design-vue",
-    "version": "2.4.2",
-    "script": "https://unpkg.com/browse/ant-design-vue@4.1.2/dist/antd.esm.min.js",
-    "css": "https://unpkg.com/browse/ant-design-vue@4.1.2/dist/reset.css",
-    "dependencies": null,
+    "version": "4.1.2",
+    "script": "/assets/lib/ant-design-vue@4.1.2/dist/antd.esm.min.js",
+    "css": "/assets/lib/ant-design-vue@4.1.2/dist/reset.css",
+    "dependencies": [
+      "https://unpkg.com/dayjs/dayjs.min.js",
+      "https://unpkg.com/dayjs/plugin/customParseFormat.js",
+      "https://unpkg.com/dayjs/plugin/weekday.js",
+      "https://unpkg.com/dayjs/plugin/localeData.js",
+      "https://unpkg.com/dayjs/plugin/weekOfYear.js",
+      "https://unpkg.com/dayjs/plugin/weekYear.js",
+      "https://unpkg.com/dayjs/plugin/advancedFormat.js",
+      "https://unpkg.com/dayjs/plugin/quarterOfYear.js"
+    ],
     "exportName": "Descriptions"
   },
   "group": "component",
@@ -88,7 +97,7 @@
               }
             },
             "description": {
-              "zh_CN": "配置 `Descriptions.Item` 的 `colon` 的默认值"
+              "zh_CN": "配置 Descriptions.Item 的 colon 的默认值"
             },
             "required": false,
             "readOnly": false,
@@ -111,7 +120,7 @@
               }
             },
             "description": {
-              "zh_CN": "一行的 `DescriptionItems` 数量，可以写成像素值或支持响应式的对象写法 `{ xs: 8, sm: 16, md: 24}`"
+              "zh_CN": "一行的 DescriptionItems 数量，可以写成像素值或支持响应式的对象写法 { xs: 8, sm: 16, md: 24}"
             },
             "required": false,
             "readOnly": false,
@@ -179,7 +188,7 @@
             "cols": 12,
             "labelPosition": "top",
             "type": "string",
-            "defaultValue": "`horizontal`",
+            "defaultValue": "horizontal",
             "widget": {
               "component": "MetaSelect",
               "props": {
@@ -205,7 +214,7 @@
               }
             },
             "description": {
-              "zh_CN": "设置列表的大小。可以设置为 `middle` 、`small`, 或不填（只有设置 `bordered={true}` 生效）"
+              "zh_CN": "设置列表的大小。可以设置为 middle 、small, 或不填（只有设置 bordered={true} 生效）"
             },
             "required": false,
             "readOnly": false,
@@ -213,7 +222,7 @@
             "cols": 12,
             "labelPosition": "top",
             "type": "string",
-            "defaultValue": "`default`",
+            "defaultValue": "default",
             "widget": {
               "component": "MetaSelect",
               "props": {
@@ -298,5 +307,15 @@
       }
     }
   },
-  "snippets": [{}]
+  "snippets": [
+    {
+      "name": {
+        "zh_CN": "描述列表"
+      },
+      "icon": "descriptions",
+      "screenshot": "",
+      "snippetName": "ADescriptions",
+      "schema": {}
+    }
+  ]
 }

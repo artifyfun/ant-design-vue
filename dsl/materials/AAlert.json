@@ -14,10 +14,19 @@
   "dev_mode": "proCode",
   "npm": {
     "package": "ant-design-vue",
-    "version": "2.4.2",
-    "script": "https://unpkg.com/browse/ant-design-vue@4.1.2/dist/antd.esm.min.js",
-    "css": "https://unpkg.com/browse/ant-design-vue@4.1.2/dist/reset.css",
-    "dependencies": null,
+    "version": "4.1.2",
+    "script": "/assets/lib/ant-design-vue@4.1.2/dist/antd.esm.min.js",
+    "css": "/assets/lib/ant-design-vue@4.1.2/dist/reset.css",
+    "dependencies": [
+      "https://unpkg.com/dayjs/dayjs.min.js",
+      "https://unpkg.com/dayjs/plugin/customParseFormat.js",
+      "https://unpkg.com/dayjs/plugin/weekday.js",
+      "https://unpkg.com/dayjs/plugin/localeData.js",
+      "https://unpkg.com/dayjs/plugin/weekOfYear.js",
+      "https://unpkg.com/dayjs/plugin/weekYear.js",
+      "https://unpkg.com/dayjs/plugin/advancedFormat.js",
+      "https://unpkg.com/dayjs/plugin/quarterOfYear.js"
+    ],
     "exportName": "Alert"
   },
   "group": "component",
@@ -232,7 +241,7 @@
               }
             },
             "description": {
-              "zh_CN": "指定警告提示的样式，有四种选择 `success`、`info`、`warning`、`error`"
+              "zh_CN": "指定警告提示的样式，有四种选择 success、info、warning、error"
             },
             "required": false,
             "readOnly": false,
@@ -240,7 +249,7 @@
             "cols": 12,
             "labelPosition": "top",
             "type": "string",
-            "defaultValue": "`info`,in `banner` mode default is `warning`",
+            "defaultValue": "info,in banner mode default is warning",
             "widget": {
               "component": "MetaInput",
               "props": {}
@@ -307,7 +316,7 @@
           "zh_CN": "icon"
         },
         "description": {
-          "zh_CN": "自定义图标，`showIcon` 为 `true` 时有效"
+          "zh_CN": "自定义图标，showIcon 为 true 时有效"
         }
       },
       "message": {
@@ -320,5 +329,15 @@
       }
     }
   },
-  "snippets": [{}]
+  "snippets": [
+    {
+      "name": {
+        "zh_CN": "警告提示"
+      },
+      "icon": "alert",
+      "screenshot": "",
+      "snippetName": "AAlert",
+      "schema": {}
+    }
+  ]
 }

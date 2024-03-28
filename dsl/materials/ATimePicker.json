@@ -14,10 +14,19 @@
   "dev_mode": "proCode",
   "npm": {
     "package": "ant-design-vue",
-    "version": "2.4.2",
-    "script": "https://unpkg.com/browse/ant-design-vue@4.1.2/dist/antd.esm.min.js",
-    "css": "https://unpkg.com/browse/ant-design-vue@4.1.2/dist/reset.css",
-    "dependencies": null,
+    "version": "4.1.2",
+    "script": "/assets/lib/ant-design-vue@4.1.2/dist/antd.esm.min.js",
+    "css": "/assets/lib/ant-design-vue@4.1.2/dist/reset.css",
+    "dependencies": [
+      "https://unpkg.com/dayjs/dayjs.min.js",
+      "https://unpkg.com/dayjs/plugin/customParseFormat.js",
+      "https://unpkg.com/dayjs/plugin/weekday.js",
+      "https://unpkg.com/dayjs/plugin/localeData.js",
+      "https://unpkg.com/dayjs/plugin/weekOfYear.js",
+      "https://unpkg.com/dayjs/plugin/weekYear.js",
+      "https://unpkg.com/dayjs/plugin/advancedFormat.js",
+      "https://unpkg.com/dayjs/plugin/quarterOfYear.js"
+    ],
     "exportName": "TimePicker"
   },
   "group": "component",
@@ -188,7 +197,7 @@
             "cols": 12,
             "labelPosition": "top",
             "type": "string",
-            "defaultValue": "`HH:mm:ss`",
+            "defaultValue": "HH:mm:ss",
             "widget": {
               "component": "MetaInput",
               "props": {}
@@ -348,7 +357,7 @@
             "cols": 12,
             "labelPosition": "top",
             "type": "string",
-            "defaultValue": "`Select a time`",
+            "defaultValue": "Select a time",
             "widget": {
               "component": "MetaInput",
               "props": {}
@@ -430,7 +439,7 @@
               }
             },
             "description": {
-              "zh_CN": "使用 12 小时制，为 true 时 `format` 默认为 `h:mm:ss a`"
+              "zh_CN": "使用 12 小时制，为 true 时 format 默认为 h:mm:ss a"
             },
             "required": false,
             "readOnly": false,
@@ -508,5 +517,15 @@
       }
     }
   },
-  "snippets": [{}]
+  "snippets": [
+    {
+      "name": {
+        "zh_CN": "时间选择框"
+      },
+      "icon": "time-picker",
+      "screenshot": "",
+      "snippetName": "ATimePicker",
+      "schema": {}
+    }
+  ]
 }

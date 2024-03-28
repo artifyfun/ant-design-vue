@@ -14,10 +14,19 @@
   "dev_mode": "proCode",
   "npm": {
     "package": "ant-design-vue",
-    "version": "2.4.2",
-    "script": "https://unpkg.com/browse/ant-design-vue@4.1.2/dist/antd.esm.min.js",
-    "css": "https://unpkg.com/browse/ant-design-vue@4.1.2/dist/reset.css",
-    "dependencies": null,
+    "version": "4.1.2",
+    "script": "/assets/lib/ant-design-vue@4.1.2/dist/antd.esm.min.js",
+    "css": "/assets/lib/ant-design-vue@4.1.2/dist/reset.css",
+    "dependencies": [
+      "https://unpkg.com/dayjs/dayjs.min.js",
+      "https://unpkg.com/dayjs/plugin/customParseFormat.js",
+      "https://unpkg.com/dayjs/plugin/weekday.js",
+      "https://unpkg.com/dayjs/plugin/localeData.js",
+      "https://unpkg.com/dayjs/plugin/weekOfYear.js",
+      "https://unpkg.com/dayjs/plugin/weekYear.js",
+      "https://unpkg.com/dayjs/plugin/advancedFormat.js",
+      "https://unpkg.com/dayjs/plugin/quarterOfYear.js"
+    ],
     "exportName": "Tree"
   },
   "group": "component",
@@ -134,7 +143,7 @@
               }
             },
             "description": {
-              "zh_CN": "（受控）选中复选框的树节点（注意：父子节点有关联，如果传入父节点 key，则子节点自动选中；相应当子节点 key 都传入，父节点也自动选中。当设置`checkable`和`checkStrictly`，它是一个有`checked`和`halfChecked`属性的对象，并且父子节点的选中与否不再关联"
+              "zh_CN": "（受控）选中复选框的树节点（注意：父子节点有关联，如果传入父节点 key，则子节点自动选中；相应当子节点 key 都传入，父节点也自动选中。当设置checkable和checkStrictly，它是一个有checked和halfChecked属性的对象，并且父子节点的选中与否不再关联"
             },
             "required": false,
             "readOnly": false,
@@ -181,7 +190,7 @@
               }
             },
             "description": {
-              "zh_CN": "默认展开所有树节点, 如果是异步数据，需要在数据返回后再实例化，建议用 v-if=\"data.length\"；当有 expandedKeys 时，defaultExpandAll 将失效"
+              "zh_CN": "默认展开所有树节点, 如果是异步数据，需要在数据返回后再实例化，建议用 v-if=data.length；当有 expandedKeys 时，defaultExpandAll 将失效"
             },
             "required": false,
             "readOnly": false,
@@ -341,7 +350,7 @@
               }
             },
             "description": {
-              "zh_CN": "（受控）已经加载的节点，需要配合 `loadData` 使用"
+              "zh_CN": "（受控）已经加载的节点，需要配合 loadData 使用"
             },
             "required": false,
             "readOnly": false,
@@ -522,5 +531,15 @@
       }
     }
   },
-  "snippets": [{}]
+  "snippets": [
+    {
+      "name": {
+        "zh_CN": "树形控件"
+      },
+      "icon": "tree",
+      "screenshot": "",
+      "snippetName": "ATree",
+      "schema": {}
+    }
+  ]
 }

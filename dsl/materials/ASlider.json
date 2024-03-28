@@ -14,10 +14,19 @@
   "dev_mode": "proCode",
   "npm": {
     "package": "ant-design-vue",
-    "version": "2.4.2",
-    "script": "https://unpkg.com/browse/ant-design-vue@4.1.2/dist/antd.esm.min.js",
-    "css": "https://unpkg.com/browse/ant-design-vue@4.1.2/dist/reset.css",
-    "dependencies": null,
+    "version": "4.1.2",
+    "script": "/assets/lib/ant-design-vue@4.1.2/dist/antd.esm.min.js",
+    "css": "/assets/lib/ant-design-vue@4.1.2/dist/reset.css",
+    "dependencies": [
+      "https://unpkg.com/dayjs/dayjs.min.js",
+      "https://unpkg.com/dayjs/plugin/customParseFormat.js",
+      "https://unpkg.com/dayjs/plugin/weekday.js",
+      "https://unpkg.com/dayjs/plugin/localeData.js",
+      "https://unpkg.com/dayjs/plugin/weekOfYear.js",
+      "https://unpkg.com/dayjs/plugin/weekYear.js",
+      "https://unpkg.com/dayjs/plugin/advancedFormat.js",
+      "https://unpkg.com/dayjs/plugin/quarterOfYear.js"
+    ],
     "exportName": "Slider"
   },
   "group": "component",
@@ -88,7 +97,7 @@
               }
             },
             "description": {
-              "zh_CN": "值为 `true` 时，滑块为禁用状态"
+              "zh_CN": "值为 true 时，滑块为禁用状态"
             },
             "required": false,
             "readOnly": false,
@@ -134,7 +143,7 @@
               }
             },
             "description": {
-              "zh_CN": "`marks` 不为空对象时有效，值为 true 时表示值为包含关系，false 表示并列"
+              "zh_CN": "marks 不为空对象时有效，值为 true 时表示值为包含关系，false 表示并列"
             },
             "required": false,
             "readOnly": false,
@@ -157,7 +166,7 @@
               }
             },
             "description": {
-              "zh_CN": "刻度标记，key 的类型必须为 `number` 且取值在闭区间 \\[min, max] 内，每个标签可以单独设置样式"
+              "zh_CN": "刻度标记，key 的类型必须为 number 且取值在闭区间 [min, max] 内，每个标签可以单独设置样式"
             },
             "required": false,
             "readOnly": false,
@@ -273,7 +282,7 @@
               }
             },
             "description": {
-              "zh_CN": "步长，取值必须大于 0，并且可被 (max - min) 整除。当 `marks` 不为空对象时，可以设置 `step` 为 `null`，此时 Slider 的可选值仅有 marks 标出来的部分。"
+              "zh_CN": "步长，取值必须大于 0，并且可被 (max - min) 整除。当 marks 不为空对象时，可以设置 step 为 null，此时 Slider 的可选值仅有 marks 标出来的部分。"
             },
             "required": false,
             "readOnly": false,
@@ -296,7 +305,7 @@
               }
             },
             "description": {
-              "zh_CN": "设置当前取值。当 `range` 为 `false` 时，使用 `number`，否则用 `[number, number]`"
+              "zh_CN": "设置当前取值。当 range 为 false 时，使用 number，否则用 [number, number]"
             },
             "required": false,
             "readOnly": false,
@@ -304,7 +313,7 @@
             "cols": 12,
             "labelPosition": "top",
             "type": "number",
-            "defaultValue": 0,
+            "defaultValue": "",
             "widget": {
               "component": "MetaNumber",
               "props": {}
@@ -319,7 +328,7 @@
               }
             },
             "description": {
-              "zh_CN": "值为 `true` 时，Slider 为垂直方向"
+              "zh_CN": "值为 true 时，Slider 为垂直方向"
             },
             "required": false,
             "readOnly": false,
@@ -342,7 +351,7 @@
               }
             },
             "description": {
-              "zh_CN": "Slider 会把当前值传给 `tipFormatter`，并在 Tooltip 中显示 `tipFormatter` 的返回值，若为 null，则隐藏 Tooltip。"
+              "zh_CN": "Slider 会把当前值传给 tipFormatter，并在 Tooltip 中显示 tipFormatter 的返回值，若为 null，则隐藏 Tooltip。"
             },
             "required": false,
             "readOnly": false,
@@ -365,7 +374,7 @@
               }
             },
             "description": {
-              "zh_CN": "设置 Tooltip 展示位置。参考 [`Tooltip`](/components/tooltip/)。"
+              "zh_CN": "设置 Tooltip 展示位置。参考 [Tooltip](/components/tooltip/)。"
             },
             "required": false,
             "readOnly": false,
@@ -388,7 +397,7 @@
               }
             },
             "description": {
-              "zh_CN": "值为`true`时，Tooltip 将会始终显示；否则始终不显示，哪怕在拖拽及移入时。"
+              "zh_CN": "值为true时，Tooltip 将会始终显示；否则始终不显示，哪怕在拖拽及移入时。"
             },
             "required": false,
             "readOnly": false,
@@ -437,7 +446,7 @@
           "zh_CN": "onChange"
         },
         "description": {
-          "zh_CN": "Callback function that is fired when the user changes the slider's value."
+          "zh_CN": "Callback function that is fired when the user changes the sliders value."
         },
         "type": "event",
         "functionInfo": {
@@ -451,7 +460,7 @@
           "zh_CN": "onAfterChange"
         },
         "description": {
-          "zh_CN": "Fire when `mouseup` is fired."
+          "zh_CN": "Fire when mouseup is fired."
         },
         "type": "event",
         "functionInfo": {
@@ -472,5 +481,15 @@
       }
     }
   },
-  "snippets": [{}]
+  "snippets": [
+    {
+      "name": {
+        "zh_CN": "滑动输入条"
+      },
+      "icon": "slider",
+      "screenshot": "",
+      "snippetName": "ASlider",
+      "schema": {}
+    }
+  ]
 }

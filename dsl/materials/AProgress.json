@@ -14,10 +14,19 @@
   "dev_mode": "proCode",
   "npm": {
     "package": "ant-design-vue",
-    "version": "2.4.2",
-    "script": "https://unpkg.com/browse/ant-design-vue@4.1.2/dist/antd.esm.min.js",
-    "css": "https://unpkg.com/browse/ant-design-vue@4.1.2/dist/reset.css",
-    "dependencies": null,
+    "version": "4.1.2",
+    "script": "/assets/lib/ant-design-vue@4.1.2/dist/antd.esm.min.js",
+    "css": "/assets/lib/ant-design-vue@4.1.2/dist/reset.css",
+    "dependencies": [
+      "https://unpkg.com/dayjs/dayjs.min.js",
+      "https://unpkg.com/dayjs/plugin/customParseFormat.js",
+      "https://unpkg.com/dayjs/plugin/weekday.js",
+      "https://unpkg.com/dayjs/plugin/localeData.js",
+      "https://unpkg.com/dayjs/plugin/weekOfYear.js",
+      "https://unpkg.com/dayjs/plugin/weekYear.js",
+      "https://unpkg.com/dayjs/plugin/advancedFormat.js",
+      "https://unpkg.com/dayjs/plugin/quarterOfYear.js"
+    ],
     "exportName": "Progress"
   },
   "group": "component",
@@ -73,7 +82,7 @@
             "cols": 12,
             "labelPosition": "top",
             "type": "function",
-            "defaultValue": "(percent) => percent + `%`",
+            "defaultValue": "(percent) => percent + %",
             "widget": {
               "component": "MetaCodeEditor",
               "props": {}
@@ -134,7 +143,7 @@
               }
             },
             "description": {
-              "zh_CN": "状态，可选：`success` `exception` `normal` `active`(仅限 line)"
+              "zh_CN": "状态，可选：success exception normal active(仅限 line)"
             },
             "required": false,
             "readOnly": false,
@@ -186,7 +195,7 @@
             "cols": 12,
             "labelPosition": "top",
             "type": "string",
-            "defaultValue": "`round`",
+            "defaultValue": "round",
             "widget": {
               "component": "MetaInput",
               "props": {}
@@ -245,7 +254,7 @@
               }
             },
             "description": {
-              "zh_CN": "类型，可选 `line` `circle` `dashboard`"
+              "zh_CN": "类型，可选 line circle dashboard"
             },
             "required": false,
             "readOnly": false,
@@ -253,7 +262,7 @@
             "cols": 12,
             "labelPosition": "top",
             "type": "string",
-            "defaultValue": "`line`",
+            "defaultValue": "line",
             "widget": {
               "component": "MetaInput",
               "props": {}
@@ -292,5 +301,15 @@
     "events": {},
     "slots": {}
   },
-  "snippets": [{}]
+  "snippets": [
+    {
+      "name": {
+        "zh_CN": "进度条"
+      },
+      "icon": "progress",
+      "screenshot": "",
+      "snippetName": "AProgress",
+      "schema": {}
+    }
+  ]
 }

@@ -14,10 +14,19 @@
   "dev_mode": "proCode",
   "npm": {
     "package": "ant-design-vue",
-    "version": "2.4.2",
-    "script": "https://unpkg.com/browse/ant-design-vue@4.1.2/dist/antd.esm.min.js",
-    "css": "https://unpkg.com/browse/ant-design-vue@4.1.2/dist/reset.css",
-    "dependencies": null,
+    "version": "4.1.2",
+    "script": "/assets/lib/ant-design-vue@4.1.2/dist/antd.esm.min.js",
+    "css": "/assets/lib/ant-design-vue@4.1.2/dist/reset.css",
+    "dependencies": [
+      "https://unpkg.com/dayjs/dayjs.min.js",
+      "https://unpkg.com/dayjs/plugin/customParseFormat.js",
+      "https://unpkg.com/dayjs/plugin/weekday.js",
+      "https://unpkg.com/dayjs/plugin/localeData.js",
+      "https://unpkg.com/dayjs/plugin/weekOfYear.js",
+      "https://unpkg.com/dayjs/plugin/weekYear.js",
+      "https://unpkg.com/dayjs/plugin/advancedFormat.js",
+      "https://unpkg.com/dayjs/plugin/quarterOfYear.js"
+    ],
     "exportName": "Carousel"
   },
   "group": "component",
@@ -88,7 +97,7 @@
               }
             },
             "description": {
-              "zh_CN": "面板指示点位置，可选 `top` `bottom` `left` `right`"
+              "zh_CN": "面板指示点位置，可选 top bottom left right"
             },
             "required": false,
             "readOnly": false,
@@ -96,7 +105,7 @@
             "cols": 12,
             "labelPosition": "top",
             "type": "string",
-            "defaultValue": "`bottom`",
+            "defaultValue": "bottom",
             "widget": {
               "component": "MetaInput",
               "props": {}
@@ -142,7 +151,7 @@
             "cols": 12,
             "labelPosition": "top",
             "type": "string",
-            "defaultValue": "`slick-dots`",
+            "defaultValue": "slick-dots",
             "widget": {
               "component": "MetaInput",
               "props": {}
@@ -165,7 +174,7 @@
             "cols": 12,
             "labelPosition": "top",
             "type": "string",
-            "defaultValue": "`linear`",
+            "defaultValue": "linear",
             "widget": {
               "component": "MetaInput",
               "props": {}
@@ -188,7 +197,7 @@
             "cols": 12,
             "labelPosition": "top",
             "type": "string",
-            "defaultValue": "`scrollx`",
+            "defaultValue": "scrollx",
             "widget": {
               "component": "MetaSelect",
               "props": {
@@ -259,5 +268,40 @@
     "events": {},
     "slots": {}
   },
-  "snippets": [{}]
+  "snippets": [
+    {
+      "name": {
+        "zh_CN": "走马灯"
+      },
+      "icon": "carousel",
+      "screenshot": "",
+      "snippetName": "ACarousel",
+      "schema": {
+        "children": [
+          {
+            "componentName": "div",
+            "children": [
+              {
+                "componentName": "Text",
+                "props": {
+                  "text": "1"
+                }
+              }
+            ]
+          },
+          {
+            "componentName": "div",
+            "children": [
+              {
+                "componentName": "Text",
+                "props": {
+                  "text": "2"
+                }
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
 }

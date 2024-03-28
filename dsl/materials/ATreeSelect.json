@@ -14,10 +14,19 @@
   "dev_mode": "proCode",
   "npm": {
     "package": "ant-design-vue",
-    "version": "2.4.2",
-    "script": "https://unpkg.com/browse/ant-design-vue@4.1.2/dist/antd.esm.min.js",
-    "css": "https://unpkg.com/browse/ant-design-vue@4.1.2/dist/reset.css",
-    "dependencies": null,
+    "version": "4.1.2",
+    "script": "/assets/lib/ant-design-vue@4.1.2/dist/antd.esm.min.js",
+    "css": "/assets/lib/ant-design-vue@4.1.2/dist/reset.css",
+    "dependencies": [
+      "https://unpkg.com/dayjs/dayjs.min.js",
+      "https://unpkg.com/dayjs/plugin/customParseFormat.js",
+      "https://unpkg.com/dayjs/plugin/weekday.js",
+      "https://unpkg.com/dayjs/plugin/localeData.js",
+      "https://unpkg.com/dayjs/plugin/weekOfYear.js",
+      "https://unpkg.com/dayjs/plugin/weekYear.js",
+      "https://unpkg.com/dayjs/plugin/advancedFormat.js",
+      "https://unpkg.com/dayjs/plugin/quarterOfYear.js"
+    ],
     "exportName": "TreeSelect"
   },
   "group": "component",
@@ -65,5 +74,54 @@
     "events": {},
     "slots": {}
   },
-  "snippets": [{}]
+  "snippets": [
+    {
+      "name": {
+        "zh_CN": "树选择"
+      },
+      "icon": "tree-select",
+      "screenshot": "",
+      "snippetName": "ATreeSelect",
+      "schema": {
+        "props": {
+          "tree-data": [
+            {
+              "label": "root 1",
+              "value": "root 1",
+              "children": [
+                {
+                  "label": "parent 1",
+                  "value": "parent 1",
+                  "children": [
+                    {
+                      "label": "parent 1-0",
+                      "value": "parent 1-0",
+                      "children": [
+                        {
+                          "label": "my leaf",
+                          "value": "leaf1"
+                        },
+                        {
+                          "label": "your leaf",
+                          "value": "leaf2"
+                        }
+                      ]
+                    },
+                    {
+                      "label": "parent 1-1",
+                      "value": "parent 1-1"
+                    }
+                  ]
+                },
+                {
+                  "label": "parent 2",
+                  "value": "parent 2"
+                }
+              ]
+            }
+          ]
+        }
+      }
+    }
+  ]
 }

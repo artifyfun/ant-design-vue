@@ -14,10 +14,19 @@
   "dev_mode": "proCode",
   "npm": {
     "package": "ant-design-vue",
-    "version": "2.4.2",
-    "script": "https://unpkg.com/browse/ant-design-vue@4.1.2/dist/antd.esm.min.js",
-    "css": "https://unpkg.com/browse/ant-design-vue@4.1.2/dist/reset.css",
-    "dependencies": null,
+    "version": "4.1.2",
+    "script": "/assets/lib/ant-design-vue@4.1.2/dist/antd.esm.min.js",
+    "css": "/assets/lib/ant-design-vue@4.1.2/dist/reset.css",
+    "dependencies": [
+      "https://unpkg.com/dayjs/dayjs.min.js",
+      "https://unpkg.com/dayjs/plugin/customParseFormat.js",
+      "https://unpkg.com/dayjs/plugin/weekday.js",
+      "https://unpkg.com/dayjs/plugin/localeData.js",
+      "https://unpkg.com/dayjs/plugin/weekOfYear.js",
+      "https://unpkg.com/dayjs/plugin/weekYear.js",
+      "https://unpkg.com/dayjs/plugin/advancedFormat.js",
+      "https://unpkg.com/dayjs/plugin/quarterOfYear.js"
+    ],
     "exportName": "Input"
   },
   "group": "component",
@@ -255,7 +264,7 @@
             "cols": 12,
             "labelPosition": "top",
             "type": "number",
-            "defaultValue": 0,
+            "defaultValue": "",
             "widget": {
               "component": "MetaNumber",
               "props": {}
@@ -360,7 +369,7 @@
               }
             },
             "description": {
-              "zh_CN": "控件大小。注：标准表单内的输入框大小限制为 `middle`。可选 `large` `middle` `small`"
+              "zh_CN": "控件大小。注：标准表单内的输入框大小限制为 middle。可选 large middle small"
             },
             "required": false,
             "readOnly": false,
@@ -416,7 +425,7 @@
               }
             },
             "description": {
-              "zh_CN": "声明 input 类型，同原生 input 标签的 type 属性，见：[MDN](https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/input#属性)(请直接使用 `<a-textarea />` 代替 `type=\"textarea\"`)。"
+              "zh_CN": "声明 input 类型，同原生 input 标签的 type 属性，见：[MDN](https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/input#属性)(请直接使用 <a-textarea /> 代替 type=textarea)。"
             },
             "required": false,
             "readOnly": false,
@@ -424,7 +433,7 @@
             "cols": 12,
             "labelPosition": "top",
             "type": "string",
-            "defaultValue": "`text`",
+            "defaultValue": "text",
             "widget": {
               "component": "MetaInput",
               "props": {}
@@ -550,5 +559,15 @@
       }
     }
   },
-  "snippets": [{}]
+  "snippets": [
+    {
+      "name": {
+        "zh_CN": "输入框"
+      },
+      "icon": "input",
+      "screenshot": "",
+      "snippetName": "AInput",
+      "schema": {}
+    }
+  ]
 }
