@@ -286,24 +286,6 @@
             "device": []
           },
           {
-            "property": "tabList",
-            "label": {
-              "text": {
-                "zh_CN": "tabList"
-              }
-            },
-            "description": {
-              "zh_CN": "页签标题列表, 可以通过 customTab(v3.0) 插槽自定义 tab"
-            },
-            "required": false,
-            "readOnly": false,
-            "disabled": false,
-            "cols": 12,
-            "labelPosition": "top",
-            "type": "array&lt;{key: string, tab: any}>",
-            "device": []
-          },
-          {
             "property": "title",
             "label": {
               "text": {
@@ -356,25 +338,6 @@
               "component": "MetaInput",
               "props": {}
             },
-            "device": []
-          },
-          {
-            "property": "customTab",
-            "label": {
-              "text": {
-                "zh_CN": "customTab"
-              }
-            },
-            "description": {
-              "zh_CN": "自定义 tabList tab 标签"
-            },
-            "required": false,
-            "readOnly": false,
-            "disabled": false,
-            "cols": 12,
-            "labelPosition": "top",
-            "type": "{ item: tablist[number] }",
-            "defaultValue": "",
             "device": []
           }
         ],

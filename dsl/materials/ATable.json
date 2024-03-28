@@ -496,24 +496,6 @@
             "device": []
           },
           {
-            "property": "rowExpandable",
-            "label": {
-              "text": {
-                "zh_CN": "rowExpandable"
-              }
-            },
-            "description": {
-              "zh_CN": "设置是否允许行展开"
-            },
-            "required": false,
-            "readOnly": false,
-            "disabled": false,
-            "cols": 12,
-            "labelPosition": "top",
-            "type": "(record) => boolean",
-            "device": []
-          },
-          {
             "property": "rowKey",
             "label": {
               "text": {

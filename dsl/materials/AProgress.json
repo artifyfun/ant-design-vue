@@ -194,24 +194,6 @@
             "device": []
           },
           {
-            "property": "success",
-            "label": {
-              "text": {
-                "zh_CN": "success"
-              }
-            },
-            "description": {
-              "zh_CN": "成功进度条相关配置"
-            },
-            "required": false,
-            "readOnly": false,
-            "disabled": false,
-            "cols": 12,
-            "labelPosition": "top",
-            "type": "{ percent: number, strokecolor: string }",
-            "device": []
-          },
-          {
             "property": "title",
             "label": {
               "text": {

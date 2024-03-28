@@ -1,4 +1,48 @@
 {
+  "alert/action": {
+    "type": "slot",
+    "description": "The action of Alert, Default: -"
+  },
+  "alert/afterClose": {
+    "type": "() => void",
+    "description": "Called when close animation is finished, Default: -"
+  },
+  "alert/banner": {
+    "type": "boolean",
+    "description": "Whether to show as banner, Default: false"
+  },
+  "alert/closable": {
+    "type": "boolean",
+    "description": "Whether Alert can be closed, Default: "
+  },
+  "alert/closeIcon": {
+    "type": "slot",
+    "description": "Custom close icon, Default: `<CloseOutlined />`"
+  },
+  "alert/closeText": {
+    "type": "string|slot",
+    "description": "Close text to show, Default: -"
+  },
+  "alert/description": {
+    "type": "string|slot",
+    "description": "Additional content of Alert, Default: -"
+  },
+  "alert/icon": {
+    "type": "vnode | slot",
+    "description": "Custom icon, effective when `showIcon` is `true`, Default: -"
+  },
+  "alert/message": {
+    "type": "string|slot",
+    "description": "Content of Alert, Default: -"
+  },
+  "alert/showIcon": {
+    "type": "boolean",
+    "description": "Whether to show icon, Default: false,in `banner` mode default is true"
+  },
+  "alert/type": {
+    "type": "string",
+    "description": "Type of Alert styles, options: `success`, `info`, `warning`, `error`, Default: `info`,in `banner` mode default is `warning`"
+  },
   "affix/offsetBottom": {
     "type": "number",
     "description": "Offset from the bottom of the viewport (in pixels), Default: -"
@@ -10,6 +54,78 @@
   "affix/target": {
     "type": "() => HTMLElement",
     "description": "Specifies the scrollable area DOM node, Default: () => window"
+  },
+  "anchor/affix": {
+    "type": "boolean",
+    "description": "Fixed mode of Anchor, Default: true"
+  },
+  "anchor/bounds": {
+    "type": "number",
+    "description": "Bounding distance of anchor area, Default: 5(px)"
+  },
+  "anchor/getContainer": {
+    "type": "() => HTMLElement",
+    "description": "Scrolling container, Default: () => window"
+  },
+  "anchor/getCurrentAnchor": {
+    "type": "(activeLink: string) => string",
+    "description": "Customize the anchor highlight, Default: -"
+  },
+  "anchor/offsetBottom": {
+    "type": "number",
+    "description": "Pixels to offset from bottom when calculating position of scroll, Default: -"
+  },
+  "anchor/offsetTop": {
+    "type": "number",
+    "description": "Pixels to offset from top when calculating position of scroll, Default: 0"
+  },
+  "anchor/showInkInFixed": {
+    "type": "boolean",
+    "description": "Whether show ink-square when `：affix=\"false\"`, Default: false"
+  },
+  "anchor/targetOffset": {
+    "type": "number",
+    "description": "Anchor scroll offset, default as `offsetTop`, [example](#components-anchor-demo-targetoffset), Default: `offsetTop`"
+  },
+  "anchor/wrapperClass": {
+    "type": "string",
+    "description": "The class name of the container, Default: -"
+  },
+  "anchor/wrapperStyle": {
+    "type": "object",
+    "description": "The style of the container, Default: -"
+  },
+  "anchor/items": {
+    "type": "{ key, href, title, target, children }[] [see](#anchoritem)",
+    "description": "Data configuration option content, support nesting through children, Default: -"
+  },
+  "anchor/direction": {
+    "type": "`vertical` | `horizontal`",
+    "description": "Set Anchor direction, Default: `vertical`"
+  },
+  "anchor/customTitle": {
+    "type": "v-slot=\"AnchorItem\"",
+    "description": "custom option title by slot, Default: -"
+  },
+  "anchor-item/key": {
+    "type": "string | number",
+    "description": "The unique identifier of the Anchor Link, Default: -"
+  },
+  "anchor-item/href": {
+    "type": "string",
+    "description": "The target of hyperlink, Default: "
+  },
+  "anchor-item/target": {
+    "type": "string",
+    "description": "Specifies where to display the linked URL, Default: "
+  },
+  "anchor-item/title": {
+    "type": "VueNode | (item: AnchorItem) => VueNode",
+    "description": "The content of hyperlink, Default: "
+  },
+  "anchor-item/children": {
+    "type": "[AnchorItem](#anchoritem)[]",
+    "description": "Nested Anchor Link, `Attention: This attribute does not support horizontal orientation`, Default: -"
   },
   "auto-complete/allowClear": {
     "type": "boolean",
@@ -94,122 +210,6 @@
   "app/notification": {
     "type": "[NotificationConfig](/components/notification/#notificationconfig)",
     "description": "Global config for Notification, Default: -"
-  },
-  "alert/action": {
-    "type": "slot",
-    "description": "The action of Alert, Default: -"
-  },
-  "alert/afterClose": {
-    "type": "() => void",
-    "description": "Called when close animation is finished, Default: -"
-  },
-  "alert/banner": {
-    "type": "boolean",
-    "description": "Whether to show as banner, Default: false"
-  },
-  "alert/closable": {
-    "type": "boolean",
-    "description": "Whether Alert can be closed, Default: "
-  },
-  "alert/closeIcon": {
-    "type": "slot",
-    "description": "Custom close icon, Default: `<CloseOutlined />`"
-  },
-  "alert/closeText": {
-    "type": "string|slot",
-    "description": "Close text to show, Default: -"
-  },
-  "alert/description": {
-    "type": "string|slot",
-    "description": "Additional content of Alert, Default: -"
-  },
-  "alert/icon": {
-    "type": "vnode | slot",
-    "description": "Custom icon, effective when `showIcon` is `true`, Default: -"
-  },
-  "alert/message": {
-    "type": "string|slot",
-    "description": "Content of Alert, Default: -"
-  },
-  "alert/showIcon": {
-    "type": "boolean",
-    "description": "Whether to show icon, Default: false,in `banner` mode default is true"
-  },
-  "alert/type": {
-    "type": "string",
-    "description": "Type of Alert styles, options: `success`, `info`, `warning`, `error`, Default: `info`,in `banner` mode default is `warning`"
-  },
-  "anchor/affix": {
-    "type": "boolean",
-    "description": "Fixed mode of Anchor, Default: true"
-  },
-  "anchor/bounds": {
-    "type": "number",
-    "description": "Bounding distance of anchor area, Default: 5(px)"
-  },
-  "anchor/getContainer": {
-    "type": "() => HTMLElement",
-    "description": "Scrolling container, Default: () => window"
-  },
-  "anchor/getCurrentAnchor": {
-    "type": "(activeLink: string) => string",
-    "description": "Customize the anchor highlight, Default: -"
-  },
-  "anchor/offsetBottom": {
-    "type": "number",
-    "description": "Pixels to offset from bottom when calculating position of scroll, Default: -"
-  },
-  "anchor/offsetTop": {
-    "type": "number",
-    "description": "Pixels to offset from top when calculating position of scroll, Default: 0"
-  },
-  "anchor/showInkInFixed": {
-    "type": "boolean",
-    "description": "Whether show ink-square when `：affix=\"false\"`, Default: false"
-  },
-  "anchor/targetOffset": {
-    "type": "number",
-    "description": "Anchor scroll offset, default as `offsetTop`, [example](#components-anchor-demo-targetoffset), Default: `offsetTop`"
-  },
-  "anchor/wrapperClass": {
-    "type": "string",
-    "description": "The class name of the container, Default: -"
-  },
-  "anchor/wrapperStyle": {
-    "type": "object",
-    "description": "The style of the container, Default: -"
-  },
-  "anchor/items": {
-    "type": "{ key, href, title, target, children }[] [see](#anchoritem)",
-    "description": "Data configuration option content, support nesting through children, Default: -"
-  },
-  "anchor/direction": {
-    "type": "`vertical` | `horizontal`",
-    "description": "Set Anchor direction, Default: `vertical`"
-  },
-  "anchor/customTitle": {
-    "type": "v-slot=\"AnchorItem\"",
-    "description": "custom option title by slot, Default: -"
-  },
-  "anchor-item/key": {
-    "type": "string | number",
-    "description": "The unique identifier of the Anchor Link, Default: -"
-  },
-  "anchor-item/href": {
-    "type": "string",
-    "description": "The target of hyperlink, Default: "
-  },
-  "anchor-item/target": {
-    "type": "string",
-    "description": "Specifies where to display the linked URL, Default: "
-  },
-  "anchor-item/title": {
-    "type": "VueNode | (item: AnchorItem) => VueNode",
-    "description": "The content of hyperlink, Default: "
-  },
-  "anchor-item/children": {
-    "type": "[AnchorItem](#anchoritem)[]",
-    "description": "Nested Anchor Link, `Attention: This attribute does not support horizontal orientation`, Default: -"
   },
   "avatar/alt": {
     "type": "string",
@@ -1087,6 +1087,18 @@
     "type": "Number",
     "description": "The `z-index` of the Drawer, Default: 1000"
   },
+  "empty/description": {
+    "type": "string | v-slot",
+    "description": "Customize description, Default: -"
+  },
+  "empty/image": {
+    "type": "string | v-slot",
+    "description": "Customize image. Will tread as image url when string provided, Default: false"
+  },
+  "empty/imageStyle": {
+    "type": "CSSProperties",
+    "description": "style of image, Default: -"
+  },
   "dropdown/align": {
     "type": "Object",
     "description": "this value will be merged into placement's config, please refer to the settings [dom-align](https://github.com/yiminghe/dom-align), Default: -"
@@ -1166,18 +1178,6 @@
   "dropdown-button/open(v-model)": {
     "type": "boolean",
     "description": "whether the dropdown menu is open, Default: -"
-  },
-  "empty/description": {
-    "type": "string | v-slot",
-    "description": "Customize description, Default: -"
-  },
-  "empty/image": {
-    "type": "string | v-slot",
-    "description": "Customize image. Will tread as image url when string provided, Default: false"
-  },
-  "empty/imageStyle": {
-    "type": "CSSProperties",
-    "description": "style of image, Default: -"
   },
   "flex/vertical": {
     "type": "boolean",

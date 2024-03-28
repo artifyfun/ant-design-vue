@@ -104,24 +104,6 @@
             "device": []
           },
           {
-            "property": "getCurrentAnchor",
-            "label": {
-              "text": {
-                "zh_CN": "getCurrentAnchor"
-              }
-            },
-            "description": {
-              "zh_CN": "自定义高亮的锚点"
-            },
-            "required": false,
-            "readOnly": false,
-            "disabled": false,
-            "cols": 12,
-            "labelPosition": "top",
-            "type": "(activelink: string) => string",
-            "device": []
-          },
-          {
             "property": "offsetBottom",
             "label": {
               "text": {

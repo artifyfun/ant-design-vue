@@ -303,7 +303,7 @@
               }
             },
             "description": {
-              "zh_CN": "各项 key 的取值，可以是字符串或一个函数"
+              "zh_CN": "Item's unique key, could be a string or function that returns a string"
             },
             "required": false,
             "readOnly": false,
@@ -339,24 +339,6 @@
               "component": "MetaSwitch",
               "props": {}
             },
-            "device": []
-          },
-          {
-            "property": "column",
-            "label": {
-              "text": {
-                "zh_CN": "column"
-              }
-            },
-            "description": {
-              "zh_CN": "列数"
-            },
-            "required": false,
-            "readOnly": false,
-            "disabled": false,
-            "cols": 12,
-            "labelPosition": "top",
-            "type": "number oneof [ 1, 2, 3, 4, 6, 8, 12, 24]",
             "device": []
           },
           {

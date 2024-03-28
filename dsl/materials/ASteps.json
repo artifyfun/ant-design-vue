@@ -172,25 +172,6 @@
             "device": []
           },
           {
-            "property": "progressDot",
-            "label": {
-              "text": {
-                "zh_CN": "progressDot"
-              }
-            },
-            "description": {
-              "zh_CN": "点状步骤条，可以设置为一个 作用域插槽,labelPlacement 将强制为`vertical`"
-            },
-            "required": false,
-            "readOnly": false,
-            "disabled": false,
-            "cols": 12,
-            "labelPosition": "top",
-            "type": "boolean or v-slot:progressdot=\"{index, status, title, description, prefixcls, icondot}\"",
-            "defaultValue": "false",
-            "device": []
-          },
-          {
             "property": "responsive",
             "label": {
               "text": {

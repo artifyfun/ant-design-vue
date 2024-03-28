@@ -102,24 +102,6 @@
             "device": []
           },
           {
-            "property": "beforeUpload",
-            "label": {
-              "text": {
-                "zh_CN": "beforeUpload"
-              }
-            },
-            "description": {
-              "zh_CN": "上传文件之前的钩子，参数为上传的文件，若返回 `false` 则停止上传。支持返回一个 Promise 对象，Promise 对象 reject 时则停止上传，resolve 时开始上传（ resolve 传入 `File` 或 `Blob` 对象则上传 resolve 传入对象）。"
-            },
-            "required": false,
-            "readOnly": false,
-            "disabled": false,
-            "cols": 12,
-            "labelPosition": "top",
-            "type": "(file, filelist) => `boolean`",
-            "device": []
-          },
-          {
             "property": "customRequest",
             "label": {
               "text": {
@@ -211,24 +193,6 @@
             "device": []
           },
           {
-            "property": "fileList",
-            "label": {
-              "text": {
-                "zh_CN": "fileList"
-              }
-            },
-            "description": {
-              "zh_CN": "已经上传的文件列表（受控）"
-            },
-            "required": false,
-            "readOnly": false,
-            "disabled": false,
-            "cols": 12,
-            "labelPosition": "top",
-            "type": "object[]",
-            "device": []
-          },
-          {
             "property": "headers",
             "label": {
               "text": {
@@ -250,24 +214,6 @@
                 "language": "json"
               }
             },
-            "device": []
-          },
-          {
-            "property": "isImageUrl",
-            "label": {
-              "text": {
-                "zh_CN": "isImageUrl"
-              }
-            },
-            "description": {
-              "zh_CN": "自定义缩略图是否使用 &lt;img /> 标签进行显示"
-            },
-            "required": false,
-            "readOnly": false,
-            "disabled": false,
-            "cols": 12,
-            "labelPosition": "top",
-            "type": "(file: uploadfile) => boolean",
             "device": []
           },
           {

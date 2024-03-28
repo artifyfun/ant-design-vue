@@ -147,24 +147,6 @@
             "device": []
           },
           {
-            "property": "loadError",
-            "label": {
-              "text": {
-                "zh_CN": "loadError"
-              }
-            },
-            "description": {
-              "zh_CN": "图片加载失败的事件，返回 false 会关闭组件默认的 fallback 行为"
-            },
-            "required": false,
-            "readOnly": false,
-            "disabled": false,
-            "cols": 12,
-            "labelPosition": "top",
-            "type": "() => boolean",
-            "device": []
-          },
-          {
             "property": "shape",
             "label": {
               "text": {

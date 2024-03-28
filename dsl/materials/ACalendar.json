@@ -58,24 +58,6 @@
         },
         "content": [
           {
-            "property": "disabledDate",
-            "label": {
-              "text": {
-                "zh_CN": "disabledDate"
-              }
-            },
-            "description": {
-              "zh_CN": "不可选择的日期"
-            },
-            "required": false,
-            "readOnly": false,
-            "disabled": false,
-            "cols": 12,
-            "labelPosition": "top",
-            "type": "(currentdate: dayjs) => boolean",
-            "device": []
-          },
-          {
             "property": "fullscreen",
             "label": {
               "text": {
@@ -96,24 +78,6 @@
               "component": "MetaSwitch",
               "props": {}
             },
-            "device": []
-          },
-          {
-            "property": "headerRender",
-            "label": {
-              "text": {
-                "zh_CN": "headerRender"
-              }
-            },
-            "description": {
-              "zh_CN": "自定义头部内容"
-            },
-            "required": false,
-            "readOnly": false,
-            "disabled": false,
-            "cols": 12,
-            "labelPosition": "top",
-            "type": "v-slot:headerrender=\"{value: dayjs, type: string, onchange: f(), ontypechange: f()}\"",
             "device": []
           },
           {
@@ -172,24 +136,6 @@
                 ]
               }
             },
-            "device": []
-          },
-          {
-            "property": "valueFormat",
-            "label": {
-              "text": {
-                "zh_CN": "valueFormat"
-              }
-            },
-            "description": {
-              "zh_CN": "可选，绑定值的格式，对 value、defaultValue 起作用。不指定则绑定值为 dayjs 对象"
-            },
-            "required": false,
-            "readOnly": false,
-            "disabled": false,
-            "cols": 12,
-            "labelPosition": "top",
-            "type": "string, [date formats](https://day.js.org/docs/en/display/format)",
             "device": []
           }
         ],

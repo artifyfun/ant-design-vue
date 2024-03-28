@@ -118,24 +118,6 @@
             "device": []
           },
           {
-            "property": "csp",
-            "label": {
-              "text": {
-                "zh_CN": "csp"
-              }
-            },
-            "description": {
-              "zh_CN": "设置 [Content Security Policy](https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP) 配置"
-            },
-            "required": false,
-            "readOnly": false,
-            "disabled": false,
-            "cols": 12,
-            "labelPosition": "top",
-            "type": "{ nonce: string }",
-            "device": []
-          },
-          {
             "property": "direction",
             "label": {
               "text": {
@@ -192,24 +174,6 @@
             "device": []
           },
           {
-            "property": "form",
-            "label": {
-              "text": {
-                "zh_CN": "form"
-              }
-            },
-            "description": {
-              "zh_CN": "设置 Form 组件的通用属性"
-            },
-            "required": false,
-            "readOnly": false,
-            "disabled": false,
-            "cols": 12,
-            "labelPosition": "top",
-            "type": "{ validatemessages?: [validatemessages](/components/form/#validatemessages), requiredmark?: boolean",
-            "device": []
-          },
-          {
             "property": "getPopupContainer",
             "label": {
               "text": {
@@ -230,24 +194,6 @@
               "component": "MetaCodeEditor",
               "props": {}
             },
-            "device": []
-          },
-          {
-            "property": "input",
-            "label": {
-              "text": {
-                "zh_CN": "input"
-              }
-            },
-            "description": {
-              "zh_CN": "设置 Input 组件的通用属性"
-            },
-            "required": false,
-            "readOnly": false,
-            "disabled": false,
-            "cols": 12,
-            "labelPosition": "top",
-            "type": "{ autocomplete?: string }",
             "device": []
           },
           {
@@ -272,25 +218,6 @@
                 "language": "json"
               }
             },
-            "device": []
-          },
-          {
-            "property": "pageHeader",
-            "label": {
-              "text": {
-                "zh_CN": "pageHeader"
-              }
-            },
-            "description": {
-              "zh_CN": "统一设置 pageHeader 的 ghost，参考 [pageHeader](<(/components/page-header)>)"
-            },
-            "required": false,
-            "readOnly": false,
-            "disabled": false,
-            "cols": 12,
-            "labelPosition": "top",
-            "type": "{ ghost:boolean }",
-            "defaultValue": "'true'",
             "device": []
           },
           {
@@ -359,24 +286,6 @@
               "component": "MetaSwitch",
               "props": {}
             },
-            "device": []
-          },
-          {
-            "property": "wave",
-            "label": {
-              "text": {
-                "zh_CN": "wave"
-              }
-            },
-            "description": {
-              "zh_CN": "设置水波纹特效"
-            },
-            "required": false,
-            "readOnly": false,
-            "disabled": false,
-            "cols": 12,
-            "labelPosition": "top",
-            "type": "{ disabled?: boolean }",
             "device": []
           }
         ],

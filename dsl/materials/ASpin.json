@@ -58,24 +58,6 @@
         },
         "content": [
           {
-            "property": "delay",
-            "label": {
-              "text": {
-                "zh_CN": "delay"
-              }
-            },
-            "description": {
-              "zh_CN": "延迟显示加载效果的时间（防止闪烁）"
-            },
-            "required": false,
-            "readOnly": false,
-            "disabled": false,
-            "cols": 12,
-            "labelPosition": "top",
-            "type": "number (milliseconds)",
-            "device": []
-          },
-          {
             "property": "size",
             "label": {
               "text": {

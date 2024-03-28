@@ -58,24 +58,6 @@
         },
         "content": [
           {
-            "property": "allowDrop",
-            "label": {
-              "text": {
-                "zh_CN": "allowDrop"
-              }
-            },
-            "description": {
-              "zh_CN": "是否允许拖拽时放置在该节点"
-            },
-            "required": false,
-            "readOnly": false,
-            "disabled": false,
-            "cols": 12,
-            "labelPosition": "top",
-            "type": "({ dropnode, dropposition }) => boolean",
-            "device": []
-          },
-          {
             "property": "autoExpandParent",
             "label": {
               "text": {

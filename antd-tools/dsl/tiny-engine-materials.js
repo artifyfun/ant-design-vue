@@ -54,7 +54,7 @@ function getPropertiesContent(attributes) {
         type = 'function';
       }
 
-      if (!allowedTypes.some(item => type.includes(item))) {
+      if (!allowedTypes.some(item => item === type)) {
         return null;
       }
 

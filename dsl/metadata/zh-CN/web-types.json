@@ -7,6 +7,65 @@
     "html": {
       "tags": [
         {
+          "name": "app",
+          "slots": [],
+          "events": [],
+          "attributes": [
+            {
+              "name": "message",
+              "default": "-",
+              "description": "App 内 Message 的全局配置",
+              "value": {
+                "type": "[MessageConfig](/components/message-cn/#messageconfig)",
+                "kind": "expression"
+              }
+            },
+            {
+              "name": "notification",
+              "default": "-",
+              "description": "App 内 Notification 的全局配置",
+              "value": {
+                "type": "[NotificationConfig](/components/notification-cn/#notificationconfig)",
+                "kind": "expression"
+              }
+            }
+          ]
+        },
+        {
+          "name": "affix",
+          "slots": [],
+          "events": [],
+          "attributes": [
+            {
+              "name": "offsetBottom",
+              "default": "",
+              "description": "距离窗口底部达到指定偏移量后触发",
+              "value": {
+                "type": "number",
+                "kind": "expression"
+              }
+            },
+            {
+              "name": "offsetTop",
+              "default": "0",
+              "description": "距离窗口顶部达到指定偏移量后触发",
+              "value": {
+                "type": "number",
+                "kind": "expression"
+              }
+            },
+            {
+              "name": "target",
+              "default": "() => window",
+              "description": "设置 `Affix` 需要监听其滚动事件的元素，值为一个返回对应 DOM 元素的函数",
+              "value": {
+                "type": "() => HTMLElement",
+                "kind": "expression"
+              }
+            }
+          ]
+        },
+        {
           "name": "anchor",
           "slots": [
             {
@@ -182,31 +241,6 @@
               "description": "嵌套的 Anchor Link，`注意：水平方向该属性不支持`",
               "value": {
                 "type": "[AnchorItem](#anchoritem)[]",
-                "kind": "expression"
-              }
-            }
-          ]
-        },
-        {
-          "name": "app",
-          "slots": [],
-          "events": [],
-          "attributes": [
-            {
-              "name": "message",
-              "default": "-",
-              "description": "App 内 Message 的全局配置",
-              "value": {
-                "type": "[MessageConfig](/components/message-cn/#messageconfig)",
-                "kind": "expression"
-              }
-            },
-            {
-              "name": "notification",
-              "default": "-",
-              "description": "App 内 Notification 的全局配置",
-              "value": {
-                "type": "[NotificationConfig](/components/notification-cn/#notificationconfig)",
                 "kind": "expression"
               }
             }
@@ -533,40 +567,6 @@
               "description": "指定当前选中的条目",
               "value": {
                 "type": "string|string[]|{ key: string, label: string|vNodes }|Array&lt;{ key: string, label: string|vNodes }>",
-                "kind": "expression"
-              }
-            }
-          ]
-        },
-        {
-          "name": "affix",
-          "slots": [],
-          "events": [],
-          "attributes": [
-            {
-              "name": "offsetBottom",
-              "default": "",
-              "description": "距离窗口底部达到指定偏移量后触发",
-              "value": {
-                "type": "number",
-                "kind": "expression"
-              }
-            },
-            {
-              "name": "offsetTop",
-              "default": "0",
-              "description": "距离窗口顶部达到指定偏移量后触发",
-              "value": {
-                "type": "number",
-                "kind": "expression"
-              }
-            },
-            {
-              "name": "target",
-              "default": "() => window",
-              "description": "设置 `Affix` 需要监听其滚动事件的元素，值为一个返回对应 DOM 元素的函数",
-              "value": {
-                "type": "() => HTMLElement",
                 "kind": "expression"
               }
             }
@@ -1086,6 +1086,231 @@
               "description": "获取焦点",
               "value": {
                 "type": "",
+                "kind": "expression"
+              }
+            }
+          ]
+        },
+        {
+          "name": "card",
+          "slots": [
+            {
+              "name": "extra",
+              "description": "卡片右上角的操作区域"
+            },
+            {
+              "name": "title",
+              "description": "卡片标题"
+            }
+          ],
+          "events": [],
+          "attributes": [
+            {
+              "name": "activeTabKey",
+              "default": "-",
+              "description": "当前激活页签的 key",
+              "value": {
+                "type": "string",
+                "kind": "expression"
+              }
+            },
+            {
+              "name": "bodyStyle",
+              "default": "-",
+              "description": "内容区域自定义样式",
+              "value": {
+                "type": "object",
+                "kind": "expression"
+              }
+            },
+            {
+              "name": "bordered",
+              "default": "true",
+              "description": "是否有边框",
+              "value": {
+                "type": "boolean",
+                "kind": "expression"
+              }
+            },
+            {
+              "name": "defaultActiveTabKey",
+              "default": "第一个页签",
+              "description": "初始化选中页签的 key，如果没有设置 activeTabKey",
+              "value": {
+                "type": "string",
+                "kind": "expression"
+              }
+            },
+            {
+              "name": "extra",
+              "default": "-",
+              "description": "卡片右上角的操作区域",
+              "value": {
+                "type": "string|slot",
+                "kind": "expression"
+              }
+            },
+            {
+              "name": "headStyle",
+              "default": "-",
+              "description": "自定义标题区域样式",
+              "value": {
+                "type": "object",
+                "kind": "expression"
+              }
+            },
+            {
+              "name": "hoverable",
+              "default": "false",
+              "description": "鼠标移过时可浮起",
+              "value": {
+                "type": "boolean",
+                "kind": "expression"
+              }
+            },
+            {
+              "name": "loading",
+              "default": "false",
+              "description": "当卡片内容还在加载中时，可以用 loading 展示一个占位",
+              "value": {
+                "type": "boolean",
+                "kind": "expression"
+              }
+            },
+            {
+              "name": "size",
+              "default": "`default`",
+              "description": "card 的尺寸",
+              "value": {
+                "type": "`default` | `small`",
+                "kind": "expression"
+              }
+            },
+            {
+              "name": "tabList",
+              "default": "-",
+              "description": "页签标题列表, 可以通过 customTab(v3.0) 插槽自定义 tab",
+              "value": {
+                "type": "Array&lt;{key: string, tab: any}>",
+                "kind": "expression"
+              }
+            },
+            {
+              "name": "title",
+              "default": "-",
+              "description": "卡片标题",
+              "value": {
+                "type": "string|slot",
+                "kind": "expression"
+              }
+            },
+            {
+              "name": "type",
+              "default": "-",
+              "description": "卡片类型，可设置为 `inner` 或 不设置",
+              "value": {
+                "type": "string",
+                "kind": "expression"
+              }
+            },
+            {
+              "name": "actions",
+              "default": "",
+              "description": "卡片操作组，位置在卡片底部",
+              "value": {
+                "type": "-",
+                "kind": "expression"
+              }
+            },
+            {
+              "name": "cover",
+              "default": "",
+              "description": "卡片封面",
+              "value": {
+                "type": "-",
+                "kind": "expression"
+              }
+            },
+            {
+              "name": "customTab",
+              "default": "",
+              "description": "自定义 tabList tab 标签",
+              "value": {
+                "type": "{ item: tabList[number] }",
+                "kind": "expression"
+              }
+            },
+            {
+              "name": "extra",
+              "default": "",
+              "description": "卡片右上角的操作区域",
+              "value": {
+                "type": "-",
+                "kind": "expression"
+              }
+            },
+            {
+              "name": "tabBarExtraContent",
+              "default": "",
+              "description": "tab bar 上额外的元素",
+              "value": {
+                "type": "-",
+                "kind": "expression"
+              }
+            },
+            {
+              "name": "title",
+              "default": "",
+              "description": "卡片标题",
+              "value": {
+                "type": "-",
+                "kind": "expression"
+              }
+            }
+          ]
+        },
+        {
+          "name": "card-meta",
+          "slots": [
+            {
+              "name": "avatar",
+              "description": "头像/图标"
+            },
+            {
+              "name": "description",
+              "description": "描述内容"
+            },
+            {
+              "name": "title",
+              "description": "标题内容"
+            }
+          ],
+          "events": [],
+          "attributes": [
+            {
+              "name": "avatar",
+              "default": "-",
+              "description": "头像/图标",
+              "value": {
+                "type": "slot",
+                "kind": "expression"
+              }
+            },
+            {
+              "name": "description",
+              "default": "-",
+              "description": "描述内容",
+              "value": {
+                "type": "string|slot",
+                "kind": "expression"
+              }
+            },
+            {
+              "name": "title",
+              "default": "-",
+              "description": "标题内容",
+              "value": {
+                "type": "string|slot",
                 "kind": "expression"
               }
             }
@@ -1631,231 +1856,6 @@
           ]
         },
         {
-          "name": "card",
-          "slots": [
-            {
-              "name": "extra",
-              "description": "卡片右上角的操作区域"
-            },
-            {
-              "name": "title",
-              "description": "卡片标题"
-            }
-          ],
-          "events": [],
-          "attributes": [
-            {
-              "name": "activeTabKey",
-              "default": "-",
-              "description": "当前激活页签的 key",
-              "value": {
-                "type": "string",
-                "kind": "expression"
-              }
-            },
-            {
-              "name": "bodyStyle",
-              "default": "-",
-              "description": "内容区域自定义样式",
-              "value": {
-                "type": "object",
-                "kind": "expression"
-              }
-            },
-            {
-              "name": "bordered",
-              "default": "true",
-              "description": "是否有边框",
-              "value": {
-                "type": "boolean",
-                "kind": "expression"
-              }
-            },
-            {
-              "name": "defaultActiveTabKey",
-              "default": "第一个页签",
-              "description": "初始化选中页签的 key，如果没有设置 activeTabKey",
-              "value": {
-                "type": "string",
-                "kind": "expression"
-              }
-            },
-            {
-              "name": "extra",
-              "default": "-",
-              "description": "卡片右上角的操作区域",
-              "value": {
-                "type": "string|slot",
-                "kind": "expression"
-              }
-            },
-            {
-              "name": "headStyle",
-              "default": "-",
-              "description": "自定义标题区域样式",
-              "value": {
-                "type": "object",
-                "kind": "expression"
-              }
-            },
-            {
-              "name": "hoverable",
-              "default": "false",
-              "description": "鼠标移过时可浮起",
-              "value": {
-                "type": "boolean",
-                "kind": "expression"
-              }
-            },
-            {
-              "name": "loading",
-              "default": "false",
-              "description": "当卡片内容还在加载中时，可以用 loading 展示一个占位",
-              "value": {
-                "type": "boolean",
-                "kind": "expression"
-              }
-            },
-            {
-              "name": "size",
-              "default": "`default`",
-              "description": "card 的尺寸",
-              "value": {
-                "type": "`default` | `small`",
-                "kind": "expression"
-              }
-            },
-            {
-              "name": "tabList",
-              "default": "-",
-              "description": "页签标题列表, 可以通过 customTab(v3.0) 插槽自定义 tab",
-              "value": {
-                "type": "Array&lt;{key: string, tab: any}>",
-                "kind": "expression"
-              }
-            },
-            {
-              "name": "title",
-              "default": "-",
-              "description": "卡片标题",
-              "value": {
-                "type": "string|slot",
-                "kind": "expression"
-              }
-            },
-            {
-              "name": "type",
-              "default": "-",
-              "description": "卡片类型，可设置为 `inner` 或 不设置",
-              "value": {
-                "type": "string",
-                "kind": "expression"
-              }
-            },
-            {
-              "name": "actions",
-              "default": "",
-              "description": "卡片操作组，位置在卡片底部",
-              "value": {
-                "type": "-",
-                "kind": "expression"
-              }
-            },
-            {
-              "name": "cover",
-              "default": "",
-              "description": "卡片封面",
-              "value": {
-                "type": "-",
-                "kind": "expression"
-              }
-            },
-            {
-              "name": "customTab",
-              "default": "",
-              "description": "自定义 tabList tab 标签",
-              "value": {
-                "type": "{ item: tabList[number] }",
-                "kind": "expression"
-              }
-            },
-            {
-              "name": "extra",
-              "default": "",
-              "description": "卡片右上角的操作区域",
-              "value": {
-                "type": "-",
-                "kind": "expression"
-              }
-            },
-            {
-              "name": "tabBarExtraContent",
-              "default": "",
-              "description": "tab bar 上额外的元素",
-              "value": {
-                "type": "-",
-                "kind": "expression"
-              }
-            },
-            {
-              "name": "title",
-              "default": "",
-              "description": "卡片标题",
-              "value": {
-                "type": "-",
-                "kind": "expression"
-              }
-            }
-          ]
-        },
-        {
-          "name": "card-meta",
-          "slots": [
-            {
-              "name": "avatar",
-              "description": "头像/图标"
-            },
-            {
-              "name": "description",
-              "description": "描述内容"
-            },
-            {
-              "name": "title",
-              "description": "标题内容"
-            }
-          ],
-          "events": [],
-          "attributes": [
-            {
-              "name": "avatar",
-              "default": "-",
-              "description": "头像/图标",
-              "value": {
-                "type": "slot",
-                "kind": "expression"
-              }
-            },
-            {
-              "name": "description",
-              "default": "-",
-              "description": "描述内容",
-              "value": {
-                "type": "string|slot",
-                "kind": "expression"
-              }
-            },
-            {
-              "name": "title",
-              "default": "-",
-              "description": "标题内容",
-              "value": {
-                "type": "string|slot",
-                "kind": "expression"
-              }
-            }
-          ]
-        },
-        {
           "name": "checkbox",
           "slots": [],
           "events": [],
@@ -2346,276 +2346,6 @@
               "description": "设置水波纹特效",
               "value": {
                 "type": "{ disabled?: boolean }",
-                "kind": "expression"
-              }
-            }
-          ]
-        },
-        {
-          "name": "date-picker",
-          "slots": [
-            {
-              "name": "dateRender",
-              "description": "自定义日期单元格的内容"
-            },
-            {
-              "name": "nextIcon",
-              "description": "自定义下一个图标"
-            },
-            {
-              "name": "prevIcon",
-              "description": "自定义上一个图标"
-            },
-            {
-              "name": "presets",
-              "description": "预设时间范围快捷选择"
-            },
-            {
-              "name": "suffixIcon",
-              "description": "自定义的选择框后缀图标"
-            },
-            {
-              "name": "superNextIcon",
-              "description": "自定义 `<<` 切换图标"
-            },
-            {
-              "name": "superPrevIcon",
-              "description": "自定义 `>>` 切换图标"
-            }
-          ],
-          "events": [],
-          "attributes": [
-            {
-              "name": "allowClear",
-              "default": "true",
-              "description": "是否显示清除按钮",
-              "value": {
-                "type": "boolean",
-                "kind": "expression"
-              }
-            },
-            {
-              "name": "autofocus",
-              "default": "false",
-              "description": "自动获取焦点",
-              "value": {
-                "type": "boolean",
-                "kind": "expression"
-              }
-            },
-            {
-              "name": "bordered",
-              "default": "true",
-              "description": "是否有边框",
-              "value": {
-                "type": "boolean",
-                "kind": "expression"
-              }
-            },
-            {
-              "name": "dateRender",
-              "default": "-",
-              "description": "自定义日期单元格的内容",
-              "value": {
-                "type": "v-slot:dateRender=\"{current, today}\"",
-                "kind": "expression"
-              }
-            },
-            {
-              "name": "disabled",
-              "default": "false",
-              "description": "禁用",
-              "value": {
-                "type": "boolean",
-                "kind": "expression"
-              }
-            },
-            {
-              "name": "disabledDate",
-              "default": "-",
-              "description": "不可选择的日期",
-              "value": {
-                "type": "(currentDate: dayjs) => boolean",
-                "kind": "expression"
-              }
-            },
-            {
-              "name": "format",
-              "default": "`YYYY-MM-DD`",
-              "description": "设置日期格式，为数组时支持多格式匹配，展示以第一个为准。配置参考 [dayjs](https://day.js.org/docs/zh-CN/display/format)，支持[自定义格式](#components-date-picker-demo-format)",
-              "value": {
-                "type": "[formatType](#formattype)",
-                "kind": "expression"
-              }
-            },
-            {
-              "name": "dropdownClassName",
-              "default": "-",
-              "description": "额外的弹出日历 className",
-              "value": {
-                "type": "string",
-                "kind": "expression"
-              }
-            },
-            {
-              "name": "getPopupContainer",
-              "default": "-",
-              "description": "定义浮层的容器，默认为 body 上新建 div",
-              "value": {
-                "type": "function(trigger)",
-                "kind": "expression"
-              }
-            },
-            {
-              "name": "inputReadOnly",
-              "default": "false",
-              "description": "设置输入框为只读（避免在移动设备上打开虚拟键盘）",
-              "value": {
-                "type": "boolean",
-                "kind": "expression"
-              }
-            },
-            {
-              "name": "locale",
-              "default": "[默认配置](https://github.com/vueComponent/ant-design-vue/blob/main/components/date-picker/locale/example.json)",
-              "description": "国际化配置",
-              "value": {
-                "type": "object",
-                "kind": "expression"
-              }
-            },
-            {
-              "name": "mode",
-              "default": "-",
-              "description": "日期面板的状态",
-              "value": {
-                "type": "`time` | `date` | `month` | `year` | `decade`",
-                "kind": "expression"
-              }
-            },
-            {
-              "name": "nextIcon",
-              "default": "-",
-              "description": "自定义下一个图标",
-              "value": {
-                "type": "slot",
-                "kind": "expression"
-              }
-            },
-            {
-              "name": "open",
-              "default": "-",
-              "description": "控制弹层是否展开",
-              "value": {
-                "type": "boolean",
-                "kind": "expression"
-              }
-            },
-            {
-              "name": "picker",
-              "default": "`date`",
-              "description": "设置选择器类型",
-              "value": {
-                "type": "`date` | `week` | `month` | `quarter` | `year`",
-                "kind": "expression"
-              }
-            },
-            {
-              "name": "placeholder",
-              "default": "-",
-              "description": "输入框提示文字",
-              "value": {
-                "type": "string | [string, string]",
-                "kind": "expression"
-              }
-            },
-            {
-              "name": "placement",
-              "default": "bottomLeft",
-              "description": "选择框弹出的位置",
-              "value": {
-                "type": "`bottomLeft` `bottomRight` `topLeft` `topRight`",
-                "kind": "expression"
-              }
-            },
-            {
-              "name": "popupStyle",
-              "default": "{}",
-              "description": "额外的弹出日历样式",
-              "value": {
-                "type": "CSSProperties",
-                "kind": "expression"
-              }
-            },
-            {
-              "name": "prevIcon",
-              "default": "-",
-              "description": "自定义上一个图标",
-              "value": {
-                "type": "slot",
-                "kind": "expression"
-              }
-            },
-            {
-              "name": "presets",
-              "default": "-",
-              "description": "预设时间范围快捷选择",
-              "value": {
-                "type": "{ label: slot, value: [dayjs](https://day.js.org/) }[]",
-                "kind": "expression"
-              }
-            },
-            {
-              "name": "size",
-              "default": "-",
-              "description": "输入框大小，`large` 高度为 40px，`small` 为 24px，默认是 32px",
-              "value": {
-                "type": "`large` | `middle` | `small`",
-                "kind": "expression"
-              }
-            },
-            {
-              "name": "status",
-              "default": "-",
-              "description": "设置校验状态",
-              "value": {
-                "type": "'error' | 'warning'",
-                "kind": "expression"
-              }
-            },
-            {
-              "name": "suffixIcon",
-              "default": "-",
-              "description": "自定义的选择框后缀图标",
-              "value": {
-                "type": "v-slot:suffixIcon",
-                "kind": "expression"
-              }
-            },
-            {
-              "name": "superNextIcon",
-              "default": "-",
-              "description": "自定义 `<<` 切换图标",
-              "value": {
-                "type": "slot",
-                "kind": "expression"
-              }
-            },
-            {
-              "name": "superPrevIcon",
-              "default": "-",
-              "description": "自定义 `>>` 切换图标",
-              "value": {
-                "type": "slot",
-                "kind": "expression"
-              }
-            },
-            {
-              "name": "valueFormat",
-              "default": "-",
-              "description": "可选，绑定值的格式，对 value、defaultValue、defaultPickerValue 起作用。不指定则绑定值为 dayjs 对象",
-              "value": {
-                "type": "string，[具体格式](https://day.js.org/docs/zh-CN/display/format)",
                 "kind": "expression"
               }
             }
@@ -3376,6 +3106,276 @@
           ]
         },
         {
+          "name": "date-picker",
+          "slots": [
+            {
+              "name": "dateRender",
+              "description": "自定义日期单元格的内容"
+            },
+            {
+              "name": "nextIcon",
+              "description": "自定义下一个图标"
+            },
+            {
+              "name": "prevIcon",
+              "description": "自定义上一个图标"
+            },
+            {
+              "name": "presets",
+              "description": "预设时间范围快捷选择"
+            },
+            {
+              "name": "suffixIcon",
+              "description": "自定义的选择框后缀图标"
+            },
+            {
+              "name": "superNextIcon",
+              "description": "自定义 `<<` 切换图标"
+            },
+            {
+              "name": "superPrevIcon",
+              "description": "自定义 `>>` 切换图标"
+            }
+          ],
+          "events": [],
+          "attributes": [
+            {
+              "name": "allowClear",
+              "default": "true",
+              "description": "是否显示清除按钮",
+              "value": {
+                "type": "boolean",
+                "kind": "expression"
+              }
+            },
+            {
+              "name": "autofocus",
+              "default": "false",
+              "description": "自动获取焦点",
+              "value": {
+                "type": "boolean",
+                "kind": "expression"
+              }
+            },
+            {
+              "name": "bordered",
+              "default": "true",
+              "description": "是否有边框",
+              "value": {
+                "type": "boolean",
+                "kind": "expression"
+              }
+            },
+            {
+              "name": "dateRender",
+              "default": "-",
+              "description": "自定义日期单元格的内容",
+              "value": {
+                "type": "v-slot:dateRender=\"{current, today}\"",
+                "kind": "expression"
+              }
+            },
+            {
+              "name": "disabled",
+              "default": "false",
+              "description": "禁用",
+              "value": {
+                "type": "boolean",
+                "kind": "expression"
+              }
+            },
+            {
+              "name": "disabledDate",
+              "default": "-",
+              "description": "不可选择的日期",
+              "value": {
+                "type": "(currentDate: dayjs) => boolean",
+                "kind": "expression"
+              }
+            },
+            {
+              "name": "format",
+              "default": "`YYYY-MM-DD`",
+              "description": "设置日期格式，为数组时支持多格式匹配，展示以第一个为准。配置参考 [dayjs](https://day.js.org/docs/zh-CN/display/format)，支持[自定义格式](#components-date-picker-demo-format)",
+              "value": {
+                "type": "[formatType](#formattype)",
+                "kind": "expression"
+              }
+            },
+            {
+              "name": "dropdownClassName",
+              "default": "-",
+              "description": "额外的弹出日历 className",
+              "value": {
+                "type": "string",
+                "kind": "expression"
+              }
+            },
+            {
+              "name": "getPopupContainer",
+              "default": "-",
+              "description": "定义浮层的容器，默认为 body 上新建 div",
+              "value": {
+                "type": "function(trigger)",
+                "kind": "expression"
+              }
+            },
+            {
+              "name": "inputReadOnly",
+              "default": "false",
+              "description": "设置输入框为只读（避免在移动设备上打开虚拟键盘）",
+              "value": {
+                "type": "boolean",
+                "kind": "expression"
+              }
+            },
+            {
+              "name": "locale",
+              "default": "[默认配置](https://github.com/vueComponent/ant-design-vue/blob/main/components/date-picker/locale/example.json)",
+              "description": "国际化配置",
+              "value": {
+                "type": "object",
+                "kind": "expression"
+              }
+            },
+            {
+              "name": "mode",
+              "default": "-",
+              "description": "日期面板的状态",
+              "value": {
+                "type": "`time` | `date` | `month` | `year` | `decade`",
+                "kind": "expression"
+              }
+            },
+            {
+              "name": "nextIcon",
+              "default": "-",
+              "description": "自定义下一个图标",
+              "value": {
+                "type": "slot",
+                "kind": "expression"
+              }
+            },
+            {
+              "name": "open",
+              "default": "-",
+              "description": "控制弹层是否展开",
+              "value": {
+                "type": "boolean",
+                "kind": "expression"
+              }
+            },
+            {
+              "name": "picker",
+              "default": "`date`",
+              "description": "设置选择器类型",
+              "value": {
+                "type": "`date` | `week` | `month` | `quarter` | `year`",
+                "kind": "expression"
+              }
+            },
+            {
+              "name": "placeholder",
+              "default": "-",
+              "description": "输入框提示文字",
+              "value": {
+                "type": "string | [string, string]",
+                "kind": "expression"
+              }
+            },
+            {
+              "name": "placement",
+              "default": "bottomLeft",
+              "description": "选择框弹出的位置",
+              "value": {
+                "type": "`bottomLeft` `bottomRight` `topLeft` `topRight`",
+                "kind": "expression"
+              }
+            },
+            {
+              "name": "popupStyle",
+              "default": "{}",
+              "description": "额外的弹出日历样式",
+              "value": {
+                "type": "CSSProperties",
+                "kind": "expression"
+              }
+            },
+            {
+              "name": "prevIcon",
+              "default": "-",
+              "description": "自定义上一个图标",
+              "value": {
+                "type": "slot",
+                "kind": "expression"
+              }
+            },
+            {
+              "name": "presets",
+              "default": "-",
+              "description": "预设时间范围快捷选择",
+              "value": {
+                "type": "{ label: slot, value: [dayjs](https://day.js.org/) }[]",
+                "kind": "expression"
+              }
+            },
+            {
+              "name": "size",
+              "default": "-",
+              "description": "输入框大小，`large` 高度为 40px，`small` 为 24px，默认是 32px",
+              "value": {
+                "type": "`large` | `middle` | `small`",
+                "kind": "expression"
+              }
+            },
+            {
+              "name": "status",
+              "default": "-",
+              "description": "设置校验状态",
+              "value": {
+                "type": "'error' | 'warning'",
+                "kind": "expression"
+              }
+            },
+            {
+              "name": "suffixIcon",
+              "default": "-",
+              "description": "自定义的选择框后缀图标",
+              "value": {
+                "type": "v-slot:suffixIcon",
+                "kind": "expression"
+              }
+            },
+            {
+              "name": "superNextIcon",
+              "default": "-",
+              "description": "自定义 `<<` 切换图标",
+              "value": {
+                "type": "slot",
+                "kind": "expression"
+              }
+            },
+            {
+              "name": "superPrevIcon",
+              "default": "-",
+              "description": "自定义 `>>` 切换图标",
+              "value": {
+                "type": "slot",
+                "kind": "expression"
+              }
+            },
+            {
+              "name": "valueFormat",
+              "default": "-",
+              "description": "可选，绑定值的格式，对 value、defaultValue、defaultPickerValue 起作用。不指定则绑定值为 dayjs 对象",
+              "value": {
+                "type": "string，[具体格式](https://day.js.org/docs/zh-CN/display/format)",
+                "kind": "expression"
+              }
+            }
+          ]
+        },
+        {
           "name": "float-button",
           "slots": [
             {
@@ -3482,10 +3482,323 @@
           ]
         },
         {
-          "name": "grid",
+          "name": "form",
           "slots": [],
           "events": [],
-          "attributes": []
+          "attributes": [
+            {
+              "name": "colon",
+              "default": "true",
+              "description": "配置 Form.Item 的 colon 的默认值 (只有在属性 layout 为 horizontal 时有效)",
+              "value": {
+                "type": "boolean",
+                "kind": "expression"
+              }
+            },
+            {
+              "name": "disabled",
+              "default": "false",
+              "description": "设置表单组件禁用，仅对 antdv 组件有效",
+              "value": {
+                "type": "boolean",
+                "kind": "expression"
+              }
+            },
+            {
+              "name": "hideRequiredMark",
+              "default": "false",
+              "description": "隐藏所有表单项的必选标记",
+              "value": {
+                "type": "Boolean",
+                "kind": "expression"
+              }
+            },
+            {
+              "name": "labelAlign",
+              "default": "'right'",
+              "description": "label 标签的文本对齐方式",
+              "value": {
+                "type": "'left' | 'right'",
+                "kind": "expression"
+              }
+            },
+            {
+              "name": "labelCol",
+              "default": "",
+              "description": "label 标签布局，同 `<Col>` 组件，设置 `span` `offset` 值，如 `{span: 3, offset: 12}` 或 `sm: {span: 3, offset: 12}`",
+              "value": {
+                "type": "[object](/components/grid-cn/#col)",
+                "kind": "expression"
+              }
+            },
+            {
+              "name": "labelWrap",
+              "default": "false",
+              "description": "label 标签的文本换行方式",
+              "value": {
+                "type": "boolean",
+                "kind": "expression"
+              }
+            },
+            {
+              "name": "layout",
+              "default": "'horizontal'",
+              "description": "表单布局",
+              "value": {
+                "type": "'horizontal'|'vertical'|'inline'",
+                "kind": "expression"
+              }
+            },
+            {
+              "name": "model",
+              "default": "",
+              "description": "表单数据对象",
+              "value": {
+                "type": "object",
+                "kind": "expression"
+              }
+            },
+            {
+              "name": "name",
+              "default": "-",
+              "description": "表单名称，会作为表单字段 `id` 前缀使用",
+              "value": {
+                "type": "string",
+                "kind": "expression"
+              }
+            },
+            {
+              "name": "noStyle",
+              "default": "false",
+              "description": "为 `true` 时不带样式，作为纯字段控件使用",
+              "value": {
+                "type": "boolean",
+                "kind": "expression"
+              }
+            },
+            {
+              "name": "rules",
+              "default": "",
+              "description": "表单验证规则",
+              "value": {
+                "type": "object",
+                "kind": "expression"
+              }
+            },
+            {
+              "name": "scrollToFirstError",
+              "default": "false",
+              "description": "提交失败自动滚动到第一个错误字段",
+              "value": {
+                "type": "boolean | [options](https://github.com/stipsan/scroll-into-view-if-needed/#options)",
+                "kind": "expression"
+              }
+            },
+            {
+              "name": "validateOnRuleChange",
+              "default": "true",
+              "description": "是否在 rules 属性改变后立即触发一次验证",
+              "value": {
+                "type": "boolean",
+                "kind": "expression"
+              }
+            },
+            {
+              "name": "validateTrigger",
+              "default": "`change`",
+              "description": "统一设置字段校验规则",
+              "value": {
+                "type": "string | string[]",
+                "kind": "expression"
+              }
+            },
+            {
+              "name": "wrapperCol",
+              "default": "",
+              "description": "需要为输入控件设置布局样式时，使用该属性，用法同 labelCol",
+              "value": {
+                "type": "[object](/components/grid-cn/#col)",
+                "kind": "expression"
+              }
+            }
+          ]
+        },
+        {
+          "name": "form-item",
+          "slots": [
+            {
+              "name": "extra",
+              "description": "额外的提示信息，和 help 类似，当需要错误信息和提示文案同时出现时，可以使用这个。"
+            },
+            {
+              "name": "help",
+              "description": "提示信息，如不设置，则会根据校验规则自动生成"
+            },
+            {
+              "name": "label",
+              "description": "label 标签的文本"
+            },
+            {
+              "name": "tooltip",
+              "description": "配置提示信息"
+            }
+          ],
+          "events": [],
+          "attributes": [
+            {
+              "name": "autoLink",
+              "default": "true",
+              "description": "是否自动关联表单域，对于大部分情况都可以使用自动关联，如果不满足自动关联的条件，可以手动关联，参见下方注意事项",
+              "value": {
+                "type": "boolean",
+                "kind": "expression"
+              }
+            },
+            {
+              "name": "colon",
+              "default": "true",
+              "description": "配合 label 属性使用，表示是否显示 label 后面的冒号",
+              "value": {
+                "type": "boolean",
+                "kind": "expression"
+              }
+            },
+            {
+              "name": "extra",
+              "default": "",
+              "description": "额外的提示信息，和 help 类似，当需要错误信息和提示文案同时出现时，可以使用这个。",
+              "value": {
+                "type": "string|slot",
+                "kind": "expression"
+              }
+            },
+            {
+              "name": "hasFeedback",
+              "default": "false",
+              "description": "配合 validateStatus 属性使用，展示校验状态图标，建议只配合 Input 组件使用",
+              "value": {
+                "type": "boolean",
+                "kind": "expression"
+              }
+            },
+            {
+              "name": "help",
+              "default": "",
+              "description": "提示信息，如不设置，则会根据校验规则自动生成",
+              "value": {
+                "type": "string|slot",
+                "kind": "expression"
+              }
+            },
+            {
+              "name": "htmlFor",
+              "default": "",
+              "description": "设置子元素 label `htmlFor` 属性",
+              "value": {
+                "type": "string",
+                "kind": "expression"
+              }
+            },
+            {
+              "name": "label",
+              "default": "",
+              "description": "label 标签的文本",
+              "value": {
+                "type": "string|slot",
+                "kind": "expression"
+              }
+            },
+            {
+              "name": "labelAlign",
+              "default": "'right'",
+              "description": "标签文本对齐方式",
+              "value": {
+                "type": "'left' | 'right'",
+                "kind": "expression"
+              }
+            },
+            {
+              "name": "labelCol",
+              "default": "",
+              "description": "label 标签布局，同 `<Col>` 组件，设置 `span` `offset` 值，如 `{span: 3, offset: 12}` 或 `sm: {span: 3, offset: 12}`",
+              "value": {
+                "type": "[object](/components/grid-cn/#col)",
+                "kind": "expression"
+              }
+            },
+            {
+              "name": "name",
+              "default": "",
+              "description": "表单域 model 字段，在使用 validate、resetFields 方法的情况下，该属性是必填的",
+              "value": {
+                "type": "[NamePath](#namepath)",
+                "kind": "expression"
+              }
+            },
+            {
+              "name": "required",
+              "default": "false",
+              "description": "是否必填，如不设置，则会根据校验规则自动生成",
+              "value": {
+                "type": "boolean",
+                "kind": "expression"
+              }
+            },
+            {
+              "name": "rules",
+              "default": "",
+              "description": "表单验证规则",
+              "value": {
+                "type": "object | array",
+                "kind": "expression"
+              }
+            },
+            {
+              "name": "tooltip",
+              "default": "",
+              "description": "配置提示信息",
+              "value": {
+                "type": "string | slot",
+                "kind": "expression"
+              }
+            },
+            {
+              "name": "validateFirst",
+              "default": "false",
+              "description": "当某一规则校验不通过时，是否停止剩下的规则的校验。",
+              "value": {
+                "type": "boolean",
+                "kind": "expression"
+              }
+            },
+            {
+              "name": "validateStatus",
+              "default": "",
+              "description": "校验状态，如不设置，则会根据校验规则自动生成，可选：'success' 'warning' 'error' 'validating'",
+              "value": {
+                "type": "string",
+                "kind": "expression"
+              }
+            },
+            {
+              "name": "validateTrigger",
+              "default": "`change`",
+              "description": "设置字段校验的时机",
+              "value": {
+                "type": "string | string[]",
+                "kind": "expression"
+              }
+            },
+            {
+              "name": "wrapperCol",
+              "default": "",
+              "description": "需要为输入控件设置布局样式时，使用该属性，用法同 labelCol",
+              "value": {
+                "type": "[object](/components/grid-cn/#col)",
+                "kind": "expression"
+              }
+            }
+          ]
         },
         {
           "name": "icon",
@@ -3915,6 +4228,12 @@
               }
             }
           ]
+        },
+        {
+          "name": "grid",
+          "slots": [],
+          "events": [],
+          "attributes": []
         },
         {
           "name": "input-number",
@@ -4599,325 +4918,6 @@
               "description": "列表元素的标题",
               "value": {
                 "type": "string|slot",
-                "kind": "expression"
-              }
-            }
-          ]
-        },
-        {
-          "name": "form",
-          "slots": [],
-          "events": [],
-          "attributes": [
-            {
-              "name": "colon",
-              "default": "true",
-              "description": "配置 Form.Item 的 colon 的默认值 (只有在属性 layout 为 horizontal 时有效)",
-              "value": {
-                "type": "boolean",
-                "kind": "expression"
-              }
-            },
-            {
-              "name": "disabled",
-              "default": "false",
-              "description": "设置表单组件禁用，仅对 antdv 组件有效",
-              "value": {
-                "type": "boolean",
-                "kind": "expression"
-              }
-            },
-            {
-              "name": "hideRequiredMark",
-              "default": "false",
-              "description": "隐藏所有表单项的必选标记",
-              "value": {
-                "type": "Boolean",
-                "kind": "expression"
-              }
-            },
-            {
-              "name": "labelAlign",
-              "default": "'right'",
-              "description": "label 标签的文本对齐方式",
-              "value": {
-                "type": "'left' | 'right'",
-                "kind": "expression"
-              }
-            },
-            {
-              "name": "labelCol",
-              "default": "",
-              "description": "label 标签布局，同 `<Col>` 组件，设置 `span` `offset` 值，如 `{span: 3, offset: 12}` 或 `sm: {span: 3, offset: 12}`",
-              "value": {
-                "type": "[object](/components/grid-cn/#col)",
-                "kind": "expression"
-              }
-            },
-            {
-              "name": "labelWrap",
-              "default": "false",
-              "description": "label 标签的文本换行方式",
-              "value": {
-                "type": "boolean",
-                "kind": "expression"
-              }
-            },
-            {
-              "name": "layout",
-              "default": "'horizontal'",
-              "description": "表单布局",
-              "value": {
-                "type": "'horizontal'|'vertical'|'inline'",
-                "kind": "expression"
-              }
-            },
-            {
-              "name": "model",
-              "default": "",
-              "description": "表单数据对象",
-              "value": {
-                "type": "object",
-                "kind": "expression"
-              }
-            },
-            {
-              "name": "name",
-              "default": "-",
-              "description": "表单名称，会作为表单字段 `id` 前缀使用",
-              "value": {
-                "type": "string",
-                "kind": "expression"
-              }
-            },
-            {
-              "name": "noStyle",
-              "default": "false",
-              "description": "为 `true` 时不带样式，作为纯字段控件使用",
-              "value": {
-                "type": "boolean",
-                "kind": "expression"
-              }
-            },
-            {
-              "name": "rules",
-              "default": "",
-              "description": "表单验证规则",
-              "value": {
-                "type": "object",
-                "kind": "expression"
-              }
-            },
-            {
-              "name": "scrollToFirstError",
-              "default": "false",
-              "description": "提交失败自动滚动到第一个错误字段",
-              "value": {
-                "type": "boolean | [options](https://github.com/stipsan/scroll-into-view-if-needed/#options)",
-                "kind": "expression"
-              }
-            },
-            {
-              "name": "validateOnRuleChange",
-              "default": "true",
-              "description": "是否在 rules 属性改变后立即触发一次验证",
-              "value": {
-                "type": "boolean",
-                "kind": "expression"
-              }
-            },
-            {
-              "name": "validateTrigger",
-              "default": "`change`",
-              "description": "统一设置字段校验规则",
-              "value": {
-                "type": "string | string[]",
-                "kind": "expression"
-              }
-            },
-            {
-              "name": "wrapperCol",
-              "default": "",
-              "description": "需要为输入控件设置布局样式时，使用该属性，用法同 labelCol",
-              "value": {
-                "type": "[object](/components/grid-cn/#col)",
-                "kind": "expression"
-              }
-            }
-          ]
-        },
-        {
-          "name": "form-item",
-          "slots": [
-            {
-              "name": "extra",
-              "description": "额外的提示信息，和 help 类似，当需要错误信息和提示文案同时出现时，可以使用这个。"
-            },
-            {
-              "name": "help",
-              "description": "提示信息，如不设置，则会根据校验规则自动生成"
-            },
-            {
-              "name": "label",
-              "description": "label 标签的文本"
-            },
-            {
-              "name": "tooltip",
-              "description": "配置提示信息"
-            }
-          ],
-          "events": [],
-          "attributes": [
-            {
-              "name": "autoLink",
-              "default": "true",
-              "description": "是否自动关联表单域，对于大部分情况都可以使用自动关联，如果不满足自动关联的条件，可以手动关联，参见下方注意事项",
-              "value": {
-                "type": "boolean",
-                "kind": "expression"
-              }
-            },
-            {
-              "name": "colon",
-              "default": "true",
-              "description": "配合 label 属性使用，表示是否显示 label 后面的冒号",
-              "value": {
-                "type": "boolean",
-                "kind": "expression"
-              }
-            },
-            {
-              "name": "extra",
-              "default": "",
-              "description": "额外的提示信息，和 help 类似，当需要错误信息和提示文案同时出现时，可以使用这个。",
-              "value": {
-                "type": "string|slot",
-                "kind": "expression"
-              }
-            },
-            {
-              "name": "hasFeedback",
-              "default": "false",
-              "description": "配合 validateStatus 属性使用，展示校验状态图标，建议只配合 Input 组件使用",
-              "value": {
-                "type": "boolean",
-                "kind": "expression"
-              }
-            },
-            {
-              "name": "help",
-              "default": "",
-              "description": "提示信息，如不设置，则会根据校验规则自动生成",
-              "value": {
-                "type": "string|slot",
-                "kind": "expression"
-              }
-            },
-            {
-              "name": "htmlFor",
-              "default": "",
-              "description": "设置子元素 label `htmlFor` 属性",
-              "value": {
-                "type": "string",
-                "kind": "expression"
-              }
-            },
-            {
-              "name": "label",
-              "default": "",
-              "description": "label 标签的文本",
-              "value": {
-                "type": "string|slot",
-                "kind": "expression"
-              }
-            },
-            {
-              "name": "labelAlign",
-              "default": "'right'",
-              "description": "标签文本对齐方式",
-              "value": {
-                "type": "'left' | 'right'",
-                "kind": "expression"
-              }
-            },
-            {
-              "name": "labelCol",
-              "default": "",
-              "description": "label 标签布局，同 `<Col>` 组件，设置 `span` `offset` 值，如 `{span: 3, offset: 12}` 或 `sm: {span: 3, offset: 12}`",
-              "value": {
-                "type": "[object](/components/grid-cn/#col)",
-                "kind": "expression"
-              }
-            },
-            {
-              "name": "name",
-              "default": "",
-              "description": "表单域 model 字段，在使用 validate、resetFields 方法的情况下，该属性是必填的",
-              "value": {
-                "type": "[NamePath](#namepath)",
-                "kind": "expression"
-              }
-            },
-            {
-              "name": "required",
-              "default": "false",
-              "description": "是否必填，如不设置，则会根据校验规则自动生成",
-              "value": {
-                "type": "boolean",
-                "kind": "expression"
-              }
-            },
-            {
-              "name": "rules",
-              "default": "",
-              "description": "表单验证规则",
-              "value": {
-                "type": "object | array",
-                "kind": "expression"
-              }
-            },
-            {
-              "name": "tooltip",
-              "default": "",
-              "description": "配置提示信息",
-              "value": {
-                "type": "string | slot",
-                "kind": "expression"
-              }
-            },
-            {
-              "name": "validateFirst",
-              "default": "false",
-              "description": "当某一规则校验不通过时，是否停止剩下的规则的校验。",
-              "value": {
-                "type": "boolean",
-                "kind": "expression"
-              }
-            },
-            {
-              "name": "validateStatus",
-              "default": "",
-              "description": "校验状态，如不设置，则会根据校验规则自动生成，可选：'success' 'warning' 'error' 'validating'",
-              "value": {
-                "type": "string",
-                "kind": "expression"
-              }
-            },
-            {
-              "name": "validateTrigger",
-              "default": "`change`",
-              "description": "设置字段校验的时机",
-              "value": {
-                "type": "string | string[]",
-                "kind": "expression"
-              }
-            },
-            {
-              "name": "wrapperCol",
-              "default": "",
-              "description": "需要为输入控件设置布局样式时，使用该属性，用法同 labelCol",
-              "value": {
-                "type": "[object](/components/grid-cn/#col)",
                 "kind": "expression"
               }
             }
@@ -5620,148 +5620,6 @@
           ]
         },
         {
-          "name": "notification",
-          "slots": [],
-          "events": [],
-          "attributes": [
-            {
-              "name": "bottom",
-              "default": "`24px`",
-              "description": "消息从底部弹出时，距离底部的位置，单位像素。",
-              "value": {
-                "type": "string",
-                "kind": "expression"
-              }
-            },
-            {
-              "name": "btn",
-              "default": "-",
-              "description": "自定义关闭按钮",
-              "value": {
-                "type": "VNode | () => VNode",
-                "kind": "expression"
-              }
-            },
-            {
-              "name": "class",
-              "default": "-",
-              "description": "自定义 CSS class",
-              "value": {
-                "type": "string",
-                "kind": "expression"
-              }
-            },
-            {
-              "name": "closeIcon",
-              "default": "-",
-              "description": "自定义关闭图标",
-              "value": {
-                "type": "VNode | () => VNode",
-                "kind": "expression"
-              }
-            },
-            {
-              "name": "description",
-              "default": "-",
-              "description": "通知提醒内容，必选",
-              "value": {
-                "type": "string | VNode | () => VNode",
-                "kind": "expression"
-              }
-            },
-            {
-              "name": "duration",
-              "default": "4.5",
-              "description": "默认 4.5 秒后自动关闭，配置为 null 则不自动关闭",
-              "value": {
-                "type": "number",
-                "kind": "expression"
-              }
-            },
-            {
-              "name": "getContainer",
-              "default": "() => document.body",
-              "description": "配置渲染节点的输出位置",
-              "value": {
-                "type": "() => HTMLNode",
-                "kind": "expression"
-              }
-            },
-            {
-              "name": "icon",
-              "default": "-",
-              "description": "自定义图标",
-              "value": {
-                "type": "VNode | () => VNode",
-                "kind": "expression"
-              }
-            },
-            {
-              "name": "key",
-              "default": "-",
-              "description": "当前通知唯一标志",
-              "value": {
-                "type": "string",
-                "kind": "expression"
-              }
-            },
-            {
-              "name": "message",
-              "default": "-",
-              "description": "通知提醒标题，必选",
-              "value": {
-                "type": "string | VNode | () => VNode",
-                "kind": "expression"
-              }
-            },
-            {
-              "name": "placement",
-              "default": "`topRight`",
-              "description": "弹出位置，可选 `top` `topLeft` `topRight` `bottom` `bottomLeft` `bottomRight`",
-              "value": {
-                "type": "string",
-                "kind": "expression"
-              }
-            },
-            {
-              "name": "style",
-              "default": "-",
-              "description": "自定义内联样式",
-              "value": {
-                "type": "Object | string",
-                "kind": "expression"
-              }
-            },
-            {
-              "name": "top",
-              "default": "`24px`",
-              "description": "消息从顶部弹出时，距离顶部的位置，单位像素。",
-              "value": {
-                "type": "string",
-                "kind": "expression"
-              }
-            },
-            {
-              "name": "onClick",
-              "default": "-",
-              "description": "点击通知时触发的回调函数",
-              "value": {
-                "type": "Function",
-                "kind": "expression"
-              }
-            },
-            {
-              "name": "onClose",
-              "default": "-",
-              "description": "点击默认关闭按钮时触发的回调函数",
-              "value": {
-                "type": "Function",
-                "kind": "expression"
-              }
-            }
-          ]
-        },
-        {
           "name": "message",
           "slots": [],
           "events": [],
@@ -6040,6 +5898,148 @@
           ]
         },
         {
+          "name": "notification",
+          "slots": [],
+          "events": [],
+          "attributes": [
+            {
+              "name": "bottom",
+              "default": "`24px`",
+              "description": "消息从底部弹出时，距离底部的位置，单位像素。",
+              "value": {
+                "type": "string",
+                "kind": "expression"
+              }
+            },
+            {
+              "name": "btn",
+              "default": "-",
+              "description": "自定义关闭按钮",
+              "value": {
+                "type": "VNode | () => VNode",
+                "kind": "expression"
+              }
+            },
+            {
+              "name": "class",
+              "default": "-",
+              "description": "自定义 CSS class",
+              "value": {
+                "type": "string",
+                "kind": "expression"
+              }
+            },
+            {
+              "name": "closeIcon",
+              "default": "-",
+              "description": "自定义关闭图标",
+              "value": {
+                "type": "VNode | () => VNode",
+                "kind": "expression"
+              }
+            },
+            {
+              "name": "description",
+              "default": "-",
+              "description": "通知提醒内容，必选",
+              "value": {
+                "type": "string | VNode | () => VNode",
+                "kind": "expression"
+              }
+            },
+            {
+              "name": "duration",
+              "default": "4.5",
+              "description": "默认 4.5 秒后自动关闭，配置为 null 则不自动关闭",
+              "value": {
+                "type": "number",
+                "kind": "expression"
+              }
+            },
+            {
+              "name": "getContainer",
+              "default": "() => document.body",
+              "description": "配置渲染节点的输出位置",
+              "value": {
+                "type": "() => HTMLNode",
+                "kind": "expression"
+              }
+            },
+            {
+              "name": "icon",
+              "default": "-",
+              "description": "自定义图标",
+              "value": {
+                "type": "VNode | () => VNode",
+                "kind": "expression"
+              }
+            },
+            {
+              "name": "key",
+              "default": "-",
+              "description": "当前通知唯一标志",
+              "value": {
+                "type": "string",
+                "kind": "expression"
+              }
+            },
+            {
+              "name": "message",
+              "default": "-",
+              "description": "通知提醒标题，必选",
+              "value": {
+                "type": "string | VNode | () => VNode",
+                "kind": "expression"
+              }
+            },
+            {
+              "name": "placement",
+              "default": "`topRight`",
+              "description": "弹出位置，可选 `top` `topLeft` `topRight` `bottom` `bottomLeft` `bottomRight`",
+              "value": {
+                "type": "string",
+                "kind": "expression"
+              }
+            },
+            {
+              "name": "style",
+              "default": "-",
+              "description": "自定义内联样式",
+              "value": {
+                "type": "Object | string",
+                "kind": "expression"
+              }
+            },
+            {
+              "name": "top",
+              "default": "`24px`",
+              "description": "消息从顶部弹出时，距离顶部的位置，单位像素。",
+              "value": {
+                "type": "string",
+                "kind": "expression"
+              }
+            },
+            {
+              "name": "onClick",
+              "default": "-",
+              "description": "点击通知时触发的回调函数",
+              "value": {
+                "type": "Function",
+                "kind": "expression"
+              }
+            },
+            {
+              "name": "onClose",
+              "default": "-",
+              "description": "点击默认关闭按钮时触发的回调函数",
+              "value": {
+                "type": "Function",
+                "kind": "expression"
+              }
+            }
+          ]
+        },
+        {
           "name": "page-header",
           "slots": [
             {
@@ -6143,6 +6143,153 @@
               "description": "自定义标题文字",
               "value": {
                 "type": "string|slot",
+                "kind": "expression"
+              }
+            }
+          ]
+        },
+        {
+          "name": "pagination",
+          "slots": [
+            {
+              "name": "itemRender",
+              "description": "用于自定义页码的结构，可用于优化 SEO"
+            }
+          ],
+          "events": [],
+          "attributes": [
+            {
+              "name": "current(v-model)",
+              "default": "-",
+              "description": "当前页数",
+              "value": {
+                "type": "number",
+                "kind": "expression"
+              }
+            },
+            {
+              "name": "defaultPageSize",
+              "default": "10",
+              "description": "默认的每页条数",
+              "value": {
+                "type": "number",
+                "kind": "expression"
+              }
+            },
+            {
+              "name": "disabled",
+              "default": "-",
+              "description": "禁用分页",
+              "value": {
+                "type": "boolean",
+                "kind": "expression"
+              }
+            },
+            {
+              "name": "hideOnSinglePage",
+              "default": "false",
+              "description": "只有一页时是否隐藏分页器",
+              "value": {
+                "type": "boolean",
+                "kind": "expression"
+              }
+            },
+            {
+              "name": "itemRender",
+              "default": "-",
+              "description": "用于自定义页码的结构，可用于优化 SEO",
+              "value": {
+                "type": "({page, type: 'page' | 'prev' | 'next', originalElement}) => vNode | v-slot",
+                "kind": "expression"
+              }
+            },
+            {
+              "name": "pageSize(v-model)",
+              "default": "-",
+              "description": "每页条数",
+              "value": {
+                "type": "number",
+                "kind": "expression"
+              }
+            },
+            {
+              "name": "pageSizeOptions",
+              "default": "\\['10', '20', '50', '100']",
+              "description": "指定每页可以显示多少条",
+              "value": {
+                "type": "string[] | number[]",
+                "kind": "expression"
+              }
+            },
+            {
+              "name": "responsive",
+              "default": "-",
+              "description": "当 size 未指定时，根据屏幕宽度自动调整尺寸",
+              "value": {
+                "type": "boolean",
+                "kind": "expression"
+              }
+            },
+            {
+              "name": "showLessItems",
+              "default": "false",
+              "description": "是否显示较少页面内容",
+              "value": {
+                "type": "boolean",
+                "kind": "expression"
+              }
+            },
+            {
+              "name": "showQuickJumper",
+              "default": "false",
+              "description": "是否可以快速跳转至某页",
+              "value": {
+                "type": "boolean",
+                "kind": "expression"
+              }
+            },
+            {
+              "name": "showSizeChanger",
+              "default": "-",
+              "description": "是否展示 `pageSize` 切换器，当 `total` 大于 50 时默认为 true",
+              "value": {
+                "type": "boolean",
+                "kind": "expression"
+              }
+            },
+            {
+              "name": "showTotal",
+              "default": "-",
+              "description": "用于显示数据总量和当前数据顺序",
+              "value": {
+                "type": "Function(total, range)",
+                "kind": "expression"
+              }
+            },
+            {
+              "name": "simple",
+              "default": "-",
+              "description": "当添加该属性时，显示为简单分页",
+              "value": {
+                "type": "boolean",
+                "kind": "expression"
+              }
+            },
+            {
+              "name": "size",
+              "default": "\"\"",
+              "description": "当为「small」时，是小尺寸分页",
+              "value": {
+                "type": "string",
+                "kind": "expression"
+              }
+            },
+            {
+              "name": "total",
+              "default": "0",
+              "description": "数据总数",
+              "value": {
+                "type": "number",
                 "kind": "expression"
               }
             }
@@ -6326,153 +6473,6 @@
               "description": "卡片标题",
               "value": {
                 "type": "string|slot|VNode",
-                "kind": "expression"
-              }
-            }
-          ]
-        },
-        {
-          "name": "pagination",
-          "slots": [
-            {
-              "name": "itemRender",
-              "description": "用于自定义页码的结构，可用于优化 SEO"
-            }
-          ],
-          "events": [],
-          "attributes": [
-            {
-              "name": "current(v-model)",
-              "default": "-",
-              "description": "当前页数",
-              "value": {
-                "type": "number",
-                "kind": "expression"
-              }
-            },
-            {
-              "name": "defaultPageSize",
-              "default": "10",
-              "description": "默认的每页条数",
-              "value": {
-                "type": "number",
-                "kind": "expression"
-              }
-            },
-            {
-              "name": "disabled",
-              "default": "-",
-              "description": "禁用分页",
-              "value": {
-                "type": "boolean",
-                "kind": "expression"
-              }
-            },
-            {
-              "name": "hideOnSinglePage",
-              "default": "false",
-              "description": "只有一页时是否隐藏分页器",
-              "value": {
-                "type": "boolean",
-                "kind": "expression"
-              }
-            },
-            {
-              "name": "itemRender",
-              "default": "-",
-              "description": "用于自定义页码的结构，可用于优化 SEO",
-              "value": {
-                "type": "({page, type: 'page' | 'prev' | 'next', originalElement}) => vNode | v-slot",
-                "kind": "expression"
-              }
-            },
-            {
-              "name": "pageSize(v-model)",
-              "default": "-",
-              "description": "每页条数",
-              "value": {
-                "type": "number",
-                "kind": "expression"
-              }
-            },
-            {
-              "name": "pageSizeOptions",
-              "default": "\\['10', '20', '50', '100']",
-              "description": "指定每页可以显示多少条",
-              "value": {
-                "type": "string[] | number[]",
-                "kind": "expression"
-              }
-            },
-            {
-              "name": "responsive",
-              "default": "-",
-              "description": "当 size 未指定时，根据屏幕宽度自动调整尺寸",
-              "value": {
-                "type": "boolean",
-                "kind": "expression"
-              }
-            },
-            {
-              "name": "showLessItems",
-              "default": "false",
-              "description": "是否显示较少页面内容",
-              "value": {
-                "type": "boolean",
-                "kind": "expression"
-              }
-            },
-            {
-              "name": "showQuickJumper",
-              "default": "false",
-              "description": "是否可以快速跳转至某页",
-              "value": {
-                "type": "boolean",
-                "kind": "expression"
-              }
-            },
-            {
-              "name": "showSizeChanger",
-              "default": "-",
-              "description": "是否展示 `pageSize` 切换器，当 `total` 大于 50 时默认为 true",
-              "value": {
-                "type": "boolean",
-                "kind": "expression"
-              }
-            },
-            {
-              "name": "showTotal",
-              "default": "-",
-              "description": "用于显示数据总量和当前数据顺序",
-              "value": {
-                "type": "Function(total, range)",
-                "kind": "expression"
-              }
-            },
-            {
-              "name": "simple",
-              "default": "-",
-              "description": "当添加该属性时，显示为简单分页",
-              "value": {
-                "type": "boolean",
-                "kind": "expression"
-              }
-            },
-            {
-              "name": "size",
-              "default": "\"\"",
-              "description": "当为「small」时，是小尺寸分页",
-              "value": {
-                "type": "string",
-                "kind": "expression"
-              }
-            },
-            {
-              "name": "total",
-              "default": "0",
-              "description": "数据总数",
-              "value": {
-                "type": "number",
                 "kind": "expression"
               }
             }
@@ -6720,90 +6720,6 @@
           ]
         },
         {
-          "name": "rate",
-          "slots": [
-            {
-              "name": "character",
-              "description": "自定义字符"
-            }
-          ],
-          "events": [],
-          "attributes": [
-            {
-              "name": "allowClear",
-              "default": "true",
-              "description": "是否允许再次点击后清除",
-              "value": {
-                "type": "boolean",
-                "kind": "expression"
-              }
-            },
-            {
-              "name": "allowHalf",
-              "default": "false",
-              "description": "是否允许半选",
-              "value": {
-                "type": "boolean",
-                "kind": "expression"
-              }
-            },
-            {
-              "name": "autofocus",
-              "default": "false",
-              "description": "自动获取焦点",
-              "value": {
-                "type": "boolean",
-                "kind": "expression"
-              }
-            },
-            {
-              "name": "character",
-              "default": "`<StarOutlined />`",
-              "description": "自定义字符",
-              "value": {
-                "type": "string | slot",
-                "kind": "expression"
-              }
-            },
-            {
-              "name": "count",
-              "default": "5",
-              "description": "star 总数",
-              "value": {
-                "type": "number",
-                "kind": "expression"
-              }
-            },
-            {
-              "name": "disabled",
-              "default": "false",
-              "description": "只读，无法进行交互",
-              "value": {
-                "type": "boolean",
-                "kind": "expression"
-              }
-            },
-            {
-              "name": "tooltips",
-              "default": "-",
-              "description": "自定义每项的提示信息",
-              "value": {
-                "type": "string[]",
-                "kind": "expression"
-              }
-            },
-            {
-              "name": "value(v-model)",
-              "default": "-",
-              "description": "当前数，受控值",
-              "value": {
-                "type": "number",
-                "kind": "expression"
-              }
-            }
-          ]
-        },
-        {
           "name": "progress",
           "slots": [],
           "events": [],
@@ -7039,6 +6955,276 @@
               "description": "使用插槽自定义 label",
               "value": {
                 "type": "v-slot:label=\"SegmentedBaseOption\"",
+                "kind": "expression"
+              }
+            }
+          ]
+        },
+        {
+          "name": "skeleton",
+          "slots": [],
+          "events": [],
+          "attributes": [
+            {
+              "name": "active",
+              "default": "false",
+              "description": "是否展示动画效果",
+              "value": {
+                "type": "boolean",
+                "kind": "expression"
+              }
+            },
+            {
+              "name": "avatar",
+              "default": "false",
+              "description": "是否显示头像占位图",
+              "value": {
+                "type": "boolean | [SkeletonAvatarProps](#skeletonavatarprops)",
+                "kind": "expression"
+              }
+            },
+            {
+              "name": "loading",
+              "default": "-",
+              "description": "为 `true` 时，显示占位图。反之则直接展示子组件",
+              "value": {
+                "type": "boolean",
+                "kind": "expression"
+              }
+            },
+            {
+              "name": "paragraph",
+              "default": "true",
+              "description": "是否显示段落占位图",
+              "value": {
+                "type": "boolean | [SkeletonParagraphProps](#skeletonparagraphprops)",
+                "kind": "expression"
+              }
+            },
+            {
+              "name": "title",
+              "default": "true",
+              "description": "是否显示标题占位图",
+              "value": {
+                "type": "boolean | [SkeletonTitleProps](#skeletontitleprops)",
+                "kind": "expression"
+              }
+            }
+          ]
+        },
+        {
+          "name": "skeleton-avatar-props",
+          "slots": [],
+          "events": [],
+          "attributes": [
+            {
+              "name": "shape",
+              "default": "-",
+              "description": "指定头像的形状",
+              "value": {
+                "type": "`circle` | `square`",
+                "kind": "expression"
+              }
+            },
+            {
+              "name": "size",
+              "default": "-",
+              "description": "设置头像占位图的大小",
+              "value": {
+                "type": "number | `large` | `small` | `default`",
+                "kind": "expression"
+              }
+            }
+          ]
+        },
+        {
+          "name": "skeleton-title-props",
+          "slots": [],
+          "events": [],
+          "attributes": [
+            {
+              "name": "width",
+              "default": "-",
+              "description": "设置标题占位图的宽度",
+              "value": {
+                "type": "number | string",
+                "kind": "expression"
+              }
+            }
+          ]
+        },
+        {
+          "name": "skeleton-paragraph-props",
+          "slots": [],
+          "events": [],
+          "attributes": [
+            {
+              "name": "rows",
+              "default": "-",
+              "description": "设置段落占位图的行数",
+              "value": {
+                "type": "number",
+                "kind": "expression"
+              }
+            },
+            {
+              "name": "width",
+              "default": "-",
+              "description": "设置段落占位图的宽度，若为数组时则为对应的每行宽度，反之则是最后一行的宽度",
+              "value": {
+                "type": "number | string | Array&lt;number | string>",
+                "kind": "expression"
+              }
+            }
+          ]
+        },
+        {
+          "name": "skeleton-button-props",
+          "slots": [],
+          "events": [],
+          "attributes": [
+            {
+              "name": "active",
+              "default": "false",
+              "description": "是否展示动画效果",
+              "value": {
+                "type": "boolean",
+                "kind": "expression"
+              }
+            },
+            {
+              "name": "block",
+              "default": "false",
+              "description": "将按钮宽度调整为其父宽度的选项",
+              "value": {
+                "type": "boolean",
+                "kind": "expression"
+              }
+            },
+            {
+              "name": "shape",
+              "default": "-",
+              "description": "指定按钮的形状",
+              "value": {
+                "type": "`circle` | `round` | `default`",
+                "kind": "expression"
+              }
+            },
+            {
+              "name": "size",
+              "default": "-",
+              "description": "设置按钮的大小",
+              "value": {
+                "type": "`large` | `small` | `default`",
+                "kind": "expression"
+              }
+            }
+          ]
+        },
+        {
+          "name": "skeleton-input-props",
+          "slots": [],
+          "events": [],
+          "attributes": [
+            {
+              "name": "active",
+              "default": "false",
+              "description": "是否展示动画效果",
+              "value": {
+                "type": "boolean",
+                "kind": "expression"
+              }
+            },
+            {
+              "name": "size",
+              "default": "-",
+              "description": "设置输入框的大小",
+              "value": {
+                "type": "`large` | `small` | `default`",
+                "kind": "expression"
+              }
+            }
+          ]
+        },
+        {
+          "name": "rate",
+          "slots": [
+            {
+              "name": "character",
+              "description": "自定义字符"
+            }
+          ],
+          "events": [],
+          "attributes": [
+            {
+              "name": "allowClear",
+              "default": "true",
+              "description": "是否允许再次点击后清除",
+              "value": {
+                "type": "boolean",
+                "kind": "expression"
+              }
+            },
+            {
+              "name": "allowHalf",
+              "default": "false",
+              "description": "是否允许半选",
+              "value": {
+                "type": "boolean",
+                "kind": "expression"
+              }
+            },
+            {
+              "name": "autofocus",
+              "default": "false",
+              "description": "自动获取焦点",
+              "value": {
+                "type": "boolean",
+                "kind": "expression"
+              }
+            },
+            {
+              "name": "character",
+              "default": "`<StarOutlined />`",
+              "description": "自定义字符",
+              "value": {
+                "type": "string | slot",
+                "kind": "expression"
+              }
+            },
+            {
+              "name": "count",
+              "default": "5",
+              "description": "star 总数",
+              "value": {
+                "type": "number",
+                "kind": "expression"
+              }
+            },
+            {
+              "name": "disabled",
+              "default": "false",
+              "description": "只读，无法进行交互",
+              "value": {
+                "type": "boolean",
+                "kind": "expression"
+              }
+            },
+            {
+              "name": "tooltips",
+              "default": "-",
+              "description": "自定义每项的提示信息",
+              "value": {
+                "type": "string[]",
+                "kind": "expression"
+              }
+            },
+            {
+              "name": "value(v-model)",
+              "default": "-",
+              "description": "当前数，受控值",
+              "value": {
+                "type": "number",
                 "kind": "expression"
               }
             }
@@ -7505,171 +7691,6 @@
           ]
         },
         {
-          "name": "slider",
-          "slots": [
-            {
-              "name": "mark",
-              "description": "自定义刻度标记"
-            }
-          ],
-          "events": [],
-          "attributes": [
-            {
-              "name": "autofocus",
-              "default": "false",
-              "description": "自动获取焦点",
-              "value": {
-                "type": "boolean",
-                "kind": "expression"
-              }
-            },
-            {
-              "name": "disabled",
-              "default": "false",
-              "description": "值为 `true` 时，滑块为禁用状态",
-              "value": {
-                "type": "boolean",
-                "kind": "expression"
-              }
-            },
-            {
-              "name": "dots",
-              "default": "false",
-              "description": "是否只能拖拽到刻度上",
-              "value": {
-                "type": "boolean",
-                "kind": "expression"
-              }
-            },
-            {
-              "name": "included",
-              "default": "true",
-              "description": "`marks` 不为空对象时有效，值为 true 时表示值为包含关系，false 表示并列",
-              "value": {
-                "type": "boolean",
-                "kind": "expression"
-              }
-            },
-            {
-              "name": "mark",
-              "default": "{ point: number, label: any }",
-              "description": "自定义刻度标记",
-              "value": {
-                "type": "v-slot:mark",
-                "kind": "expression"
-              }
-            },
-            {
-              "name": "marks",
-              "default": "{ number: string|VNode } or { number: { style: object, label: string|VNode } } or { number: () => VNode }",
-              "description": "刻度标记，key 的类型必须为 `number` 且取值在闭区间 \\[min, max] 内，每个标签可以单独设置样式",
-              "value": {
-                "type": "object",
-                "kind": "expression"
-              }
-            },
-            {
-              "name": "max",
-              "default": "100",
-              "description": "最大值",
-              "value": {
-                "type": "number",
-                "kind": "expression"
-              }
-            },
-            {
-              "name": "min",
-              "default": "0",
-              "description": "最小值",
-              "value": {
-                "type": "number",
-                "kind": "expression"
-              }
-            },
-            {
-              "name": "range",
-              "default": "false",
-              "description": "双滑块模式",
-              "value": {
-                "type": "boolean",
-                "kind": "expression"
-              }
-            },
-            {
-              "name": "reverse",
-              "default": "false",
-              "description": "反向坐标轴",
-              "value": {
-                "type": "boolean",
-                "kind": "expression"
-              }
-            },
-            {
-              "name": "step",
-              "default": "1",
-              "description": "步长，取值必须大于 0，并且可被 (max - min) 整除。当 `marks` 不为空对象时，可以设置 `step` 为 `null`，此时 Slider 的可选值仅有 marks 标出来的部分。",
-              "value": {
-                "type": "number|null",
-                "kind": "expression"
-              }
-            },
-            {
-              "name": "value(v-model)",
-              "default": "",
-              "description": "设置当前取值。当 `range` 为 `false` 时，使用 `number`，否则用 `[number, number]`",
-              "value": {
-                "type": "number|number[]",
-                "kind": "expression"
-              }
-            },
-            {
-              "name": "vertical",
-              "default": "false",
-              "description": "值为 `true` 时，Slider 为垂直方向",
-              "value": {
-                "type": "Boolean",
-                "kind": "expression"
-              }
-            },
-            {
-              "name": "tipFormatter",
-              "default": "IDENTITY",
-              "description": "Slider 会把当前值传给 `tipFormatter`，并在 Tooltip 中显示 `tipFormatter` 的返回值，若为 null，则隐藏 Tooltip。",
-              "value": {
-                "type": "Function|null",
-                "kind": "expression"
-              }
-            },
-            {
-              "name": "tooltipPlacement",
-              "default": "",
-              "description": "设置 Tooltip 展示位置。参考 [`Tooltip`](/components/tooltip/)。",
-              "value": {
-                "type": "string",
-                "kind": "expression"
-              }
-            },
-            {
-              "name": "tooltipOpen",
-              "default": "",
-              "description": "值为`true`时，Tooltip 将会始终显示；否则始终不显示，哪怕在拖拽及移入时。",
-              "value": {
-                "type": "Boolean",
-                "kind": "expression"
-              }
-            },
-            {
-              "name": "getTooltipPopupContainer",
-              "default": "() => document.body",
-              "description": "Tooltip 渲染父节点，默认渲染到 body 上。",
-              "value": {
-                "type": "Function",
-                "kind": "expression"
-              }
-            }
-          ]
-        },
-        {
           "name": "space",
           "slots": [
             {
@@ -7755,76 +7776,6 @@
               "description": "子组件大小",
               "value": {
                 "type": "`large` | `middle` | `small`",
-                "kind": "expression"
-              }
-            }
-          ]
-        },
-        {
-          "name": "spin",
-          "slots": [
-            {
-              "name": "indicator",
-              "description": "加载指示符"
-            },
-            {
-              "name": "tip",
-              "description": "当作为包裹元素时，可以自定义描述文案"
-            }
-          ],
-          "events": [],
-          "attributes": [
-            {
-              "name": "delay",
-              "default": "-",
-              "description": "延迟显示加载效果的时间（防止闪烁）",
-              "value": {
-                "type": "number (毫秒)",
-                "kind": "expression"
-              }
-            },
-            {
-              "name": "indicator",
-              "default": "-",
-              "description": "加载指示符",
-              "value": {
-                "type": "vNode | slot",
-                "kind": "expression"
-              }
-            },
-            {
-              "name": "size",
-              "default": "`default`",
-              "description": "组件大小，可选值为 `small` `default` `large`",
-              "value": {
-                "type": "string",
-                "kind": "expression"
-              }
-            },
-            {
-              "name": "spinning",
-              "default": "true",
-              "description": "是否为加载中状态",
-              "value": {
-                "type": "boolean",
-                "kind": "expression"
-              }
-            },
-            {
-              "name": "tip",
-              "default": "-",
-              "description": "当作为包裹元素时，可以自定义描述文案",
-              "value": {
-                "type": "string | slot",
-                "kind": "expression"
-              }
-            },
-            {
-              "name": "wrapperClassName",
-              "default": "-",
-              "description": "包装器的类属性",
-              "value": {
-                "type": "string",
                 "kind": "expression"
               }
             }
@@ -8018,186 +7969,235 @@
           ]
         },
         {
-          "name": "skeleton",
-          "slots": [],
+          "name": "slider",
+          "slots": [
+            {
+              "name": "mark",
+              "description": "自定义刻度标记"
+            }
+          ],
           "events": [],
           "attributes": [
             {
-              "name": "active",
+              "name": "autofocus",
               "default": "false",
-              "description": "是否展示动画效果",
+              "description": "自动获取焦点",
               "value": {
                 "type": "boolean",
                 "kind": "expression"
               }
             },
             {
-              "name": "avatar",
+              "name": "disabled",
               "default": "false",
-              "description": "是否显示头像占位图",
-              "value": {
-                "type": "boolean | [SkeletonAvatarProps](#skeletonavatarprops)",
-                "kind": "expression"
-              }
-            },
-            {
-              "name": "loading",
-              "default": "-",
-              "description": "为 `true` 时，显示占位图。反之则直接展示子组件",
+              "description": "值为 `true` 时，滑块为禁用状态",
               "value": {
                 "type": "boolean",
                 "kind": "expression"
               }
             },
             {
-              "name": "paragraph",
-              "default": "true",
-              "description": "是否显示段落占位图",
+              "name": "dots",
+              "default": "false",
+              "description": "是否只能拖拽到刻度上",
               "value": {
-                "type": "boolean | [SkeletonParagraphProps](#skeletonparagraphprops)",
+                "type": "boolean",
                 "kind": "expression"
               }
             },
             {
-              "name": "title",
+              "name": "included",
               "default": "true",
-              "description": "是否显示标题占位图",
+              "description": "`marks` 不为空对象时有效，值为 true 时表示值为包含关系，false 表示并列",
               "value": {
-                "type": "boolean | [SkeletonTitleProps](#skeletontitleprops)",
-                "kind": "expression"
-              }
-            }
-          ]
-        },
-        {
-          "name": "skeleton-avatar-props",
-          "slots": [],
-          "events": [],
-          "attributes": [
-            {
-              "name": "shape",
-              "default": "-",
-              "description": "指定头像的形状",
-              "value": {
-                "type": "`circle` | `square`",
+                "type": "boolean",
                 "kind": "expression"
               }
             },
             {
-              "name": "size",
-              "default": "-",
-              "description": "设置头像占位图的大小",
+              "name": "mark",
+              "default": "{ point: number, label: any }",
+              "description": "自定义刻度标记",
               "value": {
-                "type": "number | `large` | `small` | `default`",
+                "type": "v-slot:mark",
                 "kind": "expression"
               }
-            }
-          ]
-        },
-        {
-          "name": "skeleton-title-props",
-          "slots": [],
-          "events": [],
-          "attributes": [
+            },
             {
-              "name": "width",
-              "default": "-",
-              "description": "设置标题占位图的宽度",
+              "name": "marks",
+              "default": "{ number: string|VNode } or { number: { style: object, label: string|VNode } } or { number: () => VNode }",
+              "description": "刻度标记，key 的类型必须为 `number` 且取值在闭区间 \\[min, max] 内，每个标签可以单独设置样式",
               "value": {
-                "type": "number | string",
+                "type": "object",
                 "kind": "expression"
               }
-            }
-          ]
-        },
-        {
-          "name": "skeleton-paragraph-props",
-          "slots": [],
-          "events": [],
-          "attributes": [
+            },
             {
-              "name": "rows",
-              "default": "-",
-              "description": "设置段落占位图的行数",
+              "name": "max",
+              "default": "100",
+              "description": "最大值",
               "value": {
                 "type": "number",
                 "kind": "expression"
               }
             },
             {
-              "name": "width",
-              "default": "-",
-              "description": "设置段落占位图的宽度，若为数组时则为对应的每行宽度，反之则是最后一行的宽度",
+              "name": "min",
+              "default": "0",
+              "description": "最小值",
               "value": {
-                "type": "number | string | Array&lt;number | string>",
+                "type": "number",
+                "kind": "expression"
+              }
+            },
+            {
+              "name": "range",
+              "default": "false",
+              "description": "双滑块模式",
+              "value": {
+                "type": "boolean",
+                "kind": "expression"
+              }
+            },
+            {
+              "name": "reverse",
+              "default": "false",
+              "description": "反向坐标轴",
+              "value": {
+                "type": "boolean",
+                "kind": "expression"
+              }
+            },
+            {
+              "name": "step",
+              "default": "1",
+              "description": "步长，取值必须大于 0，并且可被 (max - min) 整除。当 `marks` 不为空对象时，可以设置 `step` 为 `null`，此时 Slider 的可选值仅有 marks 标出来的部分。",
+              "value": {
+                "type": "number|null",
+                "kind": "expression"
+              }
+            },
+            {
+              "name": "value(v-model)",
+              "default": "",
+              "description": "设置当前取值。当 `range` 为 `false` 时，使用 `number`，否则用 `[number, number]`",
+              "value": {
+                "type": "number|number[]",
+                "kind": "expression"
+              }
+            },
+            {
+              "name": "vertical",
+              "default": "false",
+              "description": "值为 `true` 时，Slider 为垂直方向",
+              "value": {
+                "type": "Boolean",
+                "kind": "expression"
+              }
+            },
+            {
+              "name": "tipFormatter",
+              "default": "IDENTITY",
+              "description": "Slider 会把当前值传给 `tipFormatter`，并在 Tooltip 中显示 `tipFormatter` 的返回值，若为 null，则隐藏 Tooltip。",
+              "value": {
+                "type": "Function|null",
+                "kind": "expression"
+              }
+            },
+            {
+              "name": "tooltipPlacement",
+              "default": "",
+              "description": "设置 Tooltip 展示位置。参考 [`Tooltip`](/components/tooltip/)。",
+              "value": {
+                "type": "string",
+                "kind": "expression"
+              }
+            },
+            {
+              "name": "tooltipOpen",
+              "default": "",
+              "description": "值为`true`时，Tooltip 将会始终显示；否则始终不显示，哪怕在拖拽及移入时。",
+              "value": {
+                "type": "Boolean",
+                "kind": "expression"
+              }
+            },
+            {
+              "name": "getTooltipPopupContainer",
+              "default": "() => document.body",
+              "description": "Tooltip 渲染父节点，默认渲染到 body 上。",
+              "value": {
+                "type": "Function",
                 "kind": "expression"
               }
             }
           ]
         },
         {
-          "name": "skeleton-button-props",
-          "slots": [],
-          "events": [],
-          "attributes": [
+          "name": "spin",
+          "slots": [
             {
-              "name": "active",
-              "default": "false",
-              "description": "是否展示动画效果",
-              "value": {
-                "type": "boolean",
-                "kind": "expression"
-              }
+              "name": "indicator",
+              "description": "加载指示符"
             },
             {
-              "name": "block",
-              "default": "false",
-              "description": "将按钮宽度调整为其父宽度的选项",
-              "value": {
-                "type": "boolean",
-                "kind": "expression"
-              }
-            },
-            {
-              "name": "shape",
-              "default": "-",
-              "description": "指定按钮的形状",
-              "value": {
-                "type": "`circle` | `round` | `default`",
-                "kind": "expression"
-              }
-            },
-            {
-              "name": "size",
-              "default": "-",
-              "description": "设置按钮的大小",
-              "value": {
-                "type": "`large` | `small` | `default`",
-                "kind": "expression"
-              }
+              "name": "tip",
+              "description": "当作为包裹元素时，可以自定义描述文案"
             }
-          ]
-        },
-        {
-          "name": "skeleton-input-props",
-          "slots": [],
+          ],
           "events": [],
           "attributes": [
             {
-              "name": "active",
-              "default": "false",
-              "description": "是否展示动画效果",
+              "name": "delay",
+              "default": "-",
+              "description": "延迟显示加载效果的时间（防止闪烁）",
+              "value": {
+                "type": "number (毫秒)",
+                "kind": "expression"
+              }
+            },
+            {
+              "name": "indicator",
+              "default": "-",
+              "description": "加载指示符",
+              "value": {
+                "type": "vNode | slot",
+                "kind": "expression"
+              }
+            },
+            {
+              "name": "size",
+              "default": "`default`",
+              "description": "组件大小，可选值为 `small` `default` `large`",
+              "value": {
+                "type": "string",
+                "kind": "expression"
+              }
+            },
+            {
+              "name": "spinning",
+              "default": "true",
+              "description": "是否为加载中状态",
               "value": {
                 "type": "boolean",
                 "kind": "expression"
               }
             },
             {
-              "name": "size",
+              "name": "tip",
               "default": "-",
-              "description": "设置输入框的大小",
+              "description": "当作为包裹元素时，可以自定义描述文案",
               "value": {
-                "type": "`large` | `small` | `default`",
+                "type": "string | slot",
+                "kind": "expression"
+              }
+            },
+            {
+              "name": "wrapperClassName",
+              "default": "-",
+              "description": "包装器的类属性",
+              "value": {
+                "type": "string",
                 "kind": "expression"
               }
             }
@@ -8920,83 +8920,6 @@
           ]
         },
         {
-          "name": "tag",
-          "slots": [
-            {
-              "name": "closeIcon",
-              "description": "自定义关闭按钮"
-            },
-            {
-              "name": "icon",
-              "description": "设置图标"
-            }
-          ],
-          "events": [],
-          "attributes": [
-            {
-              "name": "closable",
-              "default": "false",
-              "description": "标签是否可以关闭",
-              "value": {
-                "type": "boolean",
-                "kind": "expression"
-              }
-            },
-            {
-              "name": "closeIcon",
-              "default": "-",
-              "description": "自定义关闭按钮",
-              "value": {
-                "type": "VNode | slot",
-                "kind": "expression"
-              }
-            },
-            {
-              "name": "color",
-              "default": "-",
-              "description": "标签色",
-              "value": {
-                "type": "string",
-                "kind": "expression"
-              }
-            },
-            {
-              "name": "icon",
-              "default": "-",
-              "description": "设置图标",
-              "value": {
-                "type": "VNode | slot",
-                "kind": "expression"
-              }
-            },
-            {
-              "name": "bordered",
-              "default": "`true`",
-              "description": "是否有边框",
-              "value": {
-                "type": "boolean",
-                "kind": "expression"
-              }
-            }
-          ]
-        },
-        {
-          "name": "tag-checkable-tag",
-          "slots": [],
-          "events": [],
-          "attributes": [
-            {
-              "name": "checked(v-model)",
-              "default": "false",
-              "description": "设置标签的选中状态",
-              "value": {
-                "type": "boolean",
-                "kind": "expression"
-              }
-            }
-          ]
-        },
-        {
           "name": "tabs",
           "slots": [],
           "events": [],
@@ -9220,110 +9143,6 @@
               "description": "选项卡头显示文字",
               "value": {
                 "type": "-",
-                "kind": "expression"
-              }
-            }
-          ]
-        },
-        {
-          "name": "timeline",
-          "slots": [
-            {
-              "name": "pending",
-              "description": "指定最后一个幽灵节点是否存在或内容"
-            },
-            {
-              "name": "pendingDot",
-              "description": "当最后一个幽灵节点存在時，指定其时间图点"
-            }
-          ],
-          "events": [],
-          "attributes": [
-            {
-              "name": "mode",
-              "default": "",
-              "description": "通过设置 `mode` 可以改变时间轴和内容的相对位置",
-              "value": {
-                "type": "`left` | `alternate` | `right`",
-                "kind": "expression"
-              }
-            },
-            {
-              "name": "pending",
-              "default": "false",
-              "description": "指定最后一个幽灵节点是否存在或内容",
-              "value": {
-                "type": "boolean|string|slot",
-                "kind": "expression"
-              }
-            },
-            {
-              "name": "pendingDot",
-              "default": "`<LoadingOutlined />`",
-              "description": "当最后一个幽灵节点存在時，指定其时间图点",
-              "value": {
-                "type": "string|slot",
-                "kind": "expression"
-              }
-            },
-            {
-              "name": "reverse",
-              "default": "false",
-              "description": "节点排序",
-              "value": {
-                "type": "boolean",
-                "kind": "expression"
-              }
-            }
-          ]
-        },
-        {
-          "name": "timeline-item",
-          "slots": [
-            {
-              "name": "dot",
-              "description": "自定义时间轴点"
-            },
-            {
-              "name": "label",
-              "description": "设置标签"
-            }
-          ],
-          "events": [],
-          "attributes": [
-            {
-              "name": "color",
-              "default": "blue",
-              "description": "指定圆圈颜色 `blue, red, green`，或自定义的色值",
-              "value": {
-                "type": "string",
-                "kind": "expression"
-              }
-            },
-            {
-              "name": "dot",
-              "default": "-",
-              "description": "自定义时间轴点",
-              "value": {
-                "type": "string|slot",
-                "kind": "expression"
-              }
-            },
-            {
-              "name": "label",
-              "default": "-",
-              "description": "设置标签",
-              "value": {
-                "type": "string | slot",
-                "kind": "expression"
-              }
-            },
-            {
-              "name": "position",
-              "default": "-",
-              "description": "自定义节点位置",
-              "value": {
-                "type": "`left` | `right`",
                 "kind": "expression"
               }
             }
@@ -9578,6 +9397,334 @@
               "description": "可选，绑定值的格式，对 value、defaultValue 起作用。不指定则绑定值为 dayjs 对象",
               "value": {
                 "type": "string，[具体格式](https://day.js.org/docs/zh-CN/display/format)",
+                "kind": "expression"
+              }
+            }
+          ]
+        },
+        {
+          "name": "tag",
+          "slots": [
+            {
+              "name": "closeIcon",
+              "description": "自定义关闭按钮"
+            },
+            {
+              "name": "icon",
+              "description": "设置图标"
+            }
+          ],
+          "events": [],
+          "attributes": [
+            {
+              "name": "closable",
+              "default": "false",
+              "description": "标签是否可以关闭",
+              "value": {
+                "type": "boolean",
+                "kind": "expression"
+              }
+            },
+            {
+              "name": "closeIcon",
+              "default": "-",
+              "description": "自定义关闭按钮",
+              "value": {
+                "type": "VNode | slot",
+                "kind": "expression"
+              }
+            },
+            {
+              "name": "color",
+              "default": "-",
+              "description": "标签色",
+              "value": {
+                "type": "string",
+                "kind": "expression"
+              }
+            },
+            {
+              "name": "icon",
+              "default": "-",
+              "description": "设置图标",
+              "value": {
+                "type": "VNode | slot",
+                "kind": "expression"
+              }
+            },
+            {
+              "name": "bordered",
+              "default": "`true`",
+              "description": "是否有边框",
+              "value": {
+                "type": "boolean",
+                "kind": "expression"
+              }
+            }
+          ]
+        },
+        {
+          "name": "tag-checkable-tag",
+          "slots": [],
+          "events": [],
+          "attributes": [
+            {
+              "name": "checked(v-model)",
+              "default": "false",
+              "description": "设置标签的选中状态",
+              "value": {
+                "type": "boolean",
+                "kind": "expression"
+              }
+            }
+          ]
+        },
+        {
+          "name": "timeline",
+          "slots": [
+            {
+              "name": "pending",
+              "description": "指定最后一个幽灵节点是否存在或内容"
+            },
+            {
+              "name": "pendingDot",
+              "description": "当最后一个幽灵节点存在時，指定其时间图点"
+            }
+          ],
+          "events": [],
+          "attributes": [
+            {
+              "name": "mode",
+              "default": "",
+              "description": "通过设置 `mode` 可以改变时间轴和内容的相对位置",
+              "value": {
+                "type": "`left` | `alternate` | `right`",
+                "kind": "expression"
+              }
+            },
+            {
+              "name": "pending",
+              "default": "false",
+              "description": "指定最后一个幽灵节点是否存在或内容",
+              "value": {
+                "type": "boolean|string|slot",
+                "kind": "expression"
+              }
+            },
+            {
+              "name": "pendingDot",
+              "default": "`<LoadingOutlined />`",
+              "description": "当最后一个幽灵节点存在時，指定其时间图点",
+              "value": {
+                "type": "string|slot",
+                "kind": "expression"
+              }
+            },
+            {
+              "name": "reverse",
+              "default": "false",
+              "description": "节点排序",
+              "value": {
+                "type": "boolean",
+                "kind": "expression"
+              }
+            }
+          ]
+        },
+        {
+          "name": "timeline-item",
+          "slots": [
+            {
+              "name": "dot",
+              "description": "自定义时间轴点"
+            },
+            {
+              "name": "label",
+              "description": "设置标签"
+            }
+          ],
+          "events": [],
+          "attributes": [
+            {
+              "name": "color",
+              "default": "blue",
+              "description": "指定圆圈颜色 `blue, red, green`，或自定义的色值",
+              "value": {
+                "type": "string",
+                "kind": "expression"
+              }
+            },
+            {
+              "name": "dot",
+              "default": "-",
+              "description": "自定义时间轴点",
+              "value": {
+                "type": "string|slot",
+                "kind": "expression"
+              }
+            },
+            {
+              "name": "label",
+              "default": "-",
+              "description": "设置标签",
+              "value": {
+                "type": "string | slot",
+                "kind": "expression"
+              }
+            },
+            {
+              "name": "position",
+              "default": "-",
+              "description": "自定义节点位置",
+              "value": {
+                "type": "`left` | `right`",
+                "kind": "expression"
+              }
+            }
+          ]
+        },
+        {
+          "name": "tooltip",
+          "slots": [
+            {
+              "name": "title",
+              "description": "提示文字"
+            }
+          ],
+          "events": [],
+          "attributes": [
+            {
+              "name": "title",
+              "default": "无",
+              "description": "提示文字",
+              "value": {
+                "type": "string|slot",
+                "kind": "expression"
+              }
+            },
+            {
+              "name": "align",
+              "default": "无",
+              "description": "该值将合并到 placement 的配置中，设置参考 [dom-align](https://github.com/yiminghe/dom-align)",
+              "value": {
+                "type": "Object",
+                "kind": "expression"
+              }
+            },
+            {
+              "name": "arrowPointAtCenter",
+              "default": "`false`",
+              "description": "箭头是否指向目标元素中心",
+              "value": {
+                "type": "boolean",
+                "kind": "expression"
+              }
+            },
+            {
+              "name": "autoAdjustOverflow",
+              "default": "`true`",
+              "description": "气泡被遮挡时自动调整位置",
+              "value": {
+                "type": "boolean",
+                "kind": "expression"
+              }
+            },
+            {
+              "name": "color",
+              "default": "无",
+              "description": "背景颜色",
+              "value": {
+                "type": "string",
+                "kind": "expression"
+              }
+            },
+            {
+              "name": "destroyTooltipOnHide",
+              "default": "false",
+              "description": "隐藏后是否销毁 tooltip",
+              "value": {
+                "type": "boolean",
+                "kind": "expression"
+              }
+            },
+            {
+              "name": "getPopupContainer",
+              "default": "() => document.body",
+              "description": "浮层渲染父节点，默认渲染到 body 上",
+              "value": {
+                "type": "(triggerNode: HTMLElement) => HTMLElement",
+                "kind": "expression"
+              }
+            },
+            {
+              "name": "mouseEnterDelay",
+              "default": "0.1",
+              "description": "鼠标移入后延时多少才显示 Tooltip，单位：秒",
+              "value": {
+                "type": "number",
+                "kind": "expression"
+              }
+            },
+            {
+              "name": "mouseLeaveDelay",
+              "default": "0.1",
+              "description": "鼠标移出后延时多少才隐藏 Tooltip，单位：秒",
+              "value": {
+                "type": "number",
+                "kind": "expression"
+              }
+            },
+            {
+              "name": "overlayClassName",
+              "default": "无",
+              "description": "卡片类名",
+              "value": {
+                "type": "string",
+                "kind": "expression"
+              }
+            },
+            {
+              "name": "overlayStyle",
+              "default": "无",
+              "description": "卡片样式",
+              "value": {
+                "type": "object",
+                "kind": "expression"
+              }
+            },
+            {
+              "name": "overlayInnerStyle",
+              "default": "无",
+              "description": "卡片内容区域样式",
+              "value": {
+                "type": "object",
+                "kind": "expression"
+              }
+            },
+            {
+              "name": "placement",
+              "default": "top",
+              "description": "气泡框位置，可选 `top` `left` `right` `bottom` `topLeft` `topRight` `bottomLeft` `bottomRight` `leftTop` `leftBottom` `rightTop` `rightBottom`",
+              "value": {
+                "type": "string",
+                "kind": "expression"
+              }
+            },
+            {
+              "name": "trigger",
+              "default": "hover",
+              "description": "触发行为，可选 `hover/focus/click/contextmenu`",
+              "value": {
+                "type": "string",
+                "kind": "expression"
+              }
+            },
+            {
+              "name": "open(v-model)",
+              "default": "false",
+              "description": "用于手动控制浮层显隐, 小于 4.0.0 使用 `visible`",
+              "value": {
+                "type": "boolean",
                 "kind": "expression"
               }
             }
@@ -9979,6 +10126,12 @@
           ]
         },
         {
+          "name": "tree-select",
+          "slots": [],
+          "events": [],
+          "attributes": []
+        },
+        {
           "name": "tree",
           "slots": [
             {
@@ -10337,6 +10490,338 @@
           ]
         },
         {
+          "name": "upload",
+          "slots": [
+            {
+              "name": "downloadIcon",
+              "description": "自定义下载 icon"
+            },
+            {
+              "name": "iconRender",
+              "description": "自定义显示 icon"
+            },
+            {
+              "name": "itemRender",
+              "description": "自定义上传列表项"
+            },
+            {
+              "name": "previewIcon",
+              "description": "自定义预览 icon"
+            },
+            {
+              "name": "removeIcon",
+              "description": "自定义删除 icon"
+            }
+          ],
+          "events": [],
+          "attributes": [
+            {
+              "name": "accept",
+              "default": "无",
+              "description": "接受上传的文件类型, 详见 [input accept Attribute](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/file#accept)",
+              "value": {
+                "type": "string",
+                "kind": "expression"
+              }
+            },
+            {
+              "name": "action",
+              "default": "无",
+              "description": "上传的地址",
+              "value": {
+                "type": "string|(file) => `Promise`",
+                "kind": "expression"
+              }
+            },
+            {
+              "name": "beforeUpload",
+              "default": "无",
+              "description": "上传文件之前的钩子，参数为上传的文件，若返回 `false` 则停止上传。支持返回一个 Promise 对象，Promise 对象 reject 时则停止上传，resolve 时开始上传（ resolve 传入 `File` 或 `Blob` 对象则上传 resolve 传入对象）。",
+              "value": {
+                "type": "(file, fileList) => `boolean` | `Promise`",
+                "kind": "expression"
+              }
+            },
+            {
+              "name": "customRequest",
+              "default": "无",
+              "description": "通过覆盖默认的上传行为，可以自定义自己的上传实现",
+              "value": {
+                "type": "function",
+                "kind": "expression"
+              }
+            },
+            {
+              "name": "data",
+              "default": "无",
+              "description": "上传所需参数或返回上传参数的方法",
+              "value": {
+                "type": "object|(file) => object",
+                "kind": "expression"
+              }
+            },
+            {
+              "name": "directory",
+              "default": "false",
+              "description": "支持上传文件夹（[caniuse](https://caniuse.com/#feat=input-file-directory)）",
+              "value": {
+                "type": "boolean",
+                "kind": "expression"
+              }
+            },
+            {
+              "name": "disabled",
+              "default": "-",
+              "description": "是否禁用",
+              "value": {
+                "type": "boolean",
+                "kind": "expression"
+              }
+            },
+            {
+              "name": "downloadIcon",
+              "default": "-",
+              "description": "自定义下载 icon",
+              "value": {
+                "type": "v-slot:iconRender=\"{file: UploadFile}\"",
+                "kind": "expression"
+              }
+            },
+            {
+              "name": "fileList",
+              "default": "无",
+              "description": "已经上传的文件列表（受控）",
+              "value": {
+                "type": "object[]",
+                "kind": "expression"
+              }
+            },
+            {
+              "name": "headers",
+              "default": "无",
+              "description": "设置上传的请求头部，IE10 以上有效",
+              "value": {
+                "type": "object",
+                "kind": "expression"
+              }
+            },
+            {
+              "name": "iconRender",
+              "default": "-",
+              "description": "自定义显示 icon",
+              "value": {
+                "type": "v-slot:iconRender=\"{file: UploadFile, listType?: UploadListType}\"",
+                "kind": "expression"
+              }
+            },
+            {
+              "name": "isImageUrl",
+              "default": "-",
+              "description": "自定义缩略图是否使用 &lt;img /> 标签进行显示",
+              "value": {
+                "type": "(file: UploadFile) => boolean",
+                "kind": "expression"
+              }
+            },
+            {
+              "name": "itemRender",
+              "default": "-",
+              "description": "自定义上传列表项",
+              "value": {
+                "type": "v-slot:itemRender=\"{originNode: VNode, file: UploadFile, fileList: object[], actions: { download: function, preview: function, remove: function }\"",
+                "kind": "expression"
+              }
+            },
+            {
+              "name": "listType",
+              "default": "`text`",
+              "description": "上传列表的内建样式，支持三种基本样式 `text`, `picture` 和 `picture-card`",
+              "value": {
+                "type": "string",
+                "kind": "expression"
+              }
+            },
+            {
+              "name": "maxCount",
+              "default": "-",
+              "description": "限制上传数量。当为 1 时，始终用最新上传的文件代替当前文件",
+              "value": {
+                "type": "number",
+                "kind": "expression"
+              }
+            },
+            {
+              "name": "method",
+              "default": "`post`",
+              "description": "上传请求的 http method",
+              "value": {
+                "type": "string",
+                "kind": "expression"
+              }
+            },
+            {
+              "name": "multiple",
+              "default": "false",
+              "description": "是否支持多选文件，`ie10+` 支持。开启后按住 ctrl 可选择多个文件。",
+              "value": {
+                "type": "boolean",
+                "kind": "expression"
+              }
+            },
+            {
+              "name": "name",
+              "default": "`file`",
+              "description": "发到后台的文件参数名",
+              "value": {
+                "type": "string",
+                "kind": "expression"
+              }
+            },
+            {
+              "name": "openFileDialogOnClick",
+              "default": "true",
+              "description": "点击打开文件对话框",
+              "value": {
+                "type": "boolean",
+                "kind": "expression"
+              }
+            },
+            {
+              "name": "previewFile",
+              "default": "无",
+              "description": "自定义文件预览逻辑",
+              "value": {
+                "type": "(file: File | Blob) => Promise&lt;dataURL: string>",
+                "kind": "expression"
+              }
+            },
+            {
+              "name": "previewIcon",
+              "default": "-",
+              "description": "自定义预览 icon",
+              "value": {
+                "type": "v-slot:iconRender=\"{file: UploadFile}\"",
+                "kind": "expression"
+              }
+            },
+            {
+              "name": "progress",
+              "default": "{ strokeWidth: 2, showInfo: false }",
+              "description": "自定义进度条样式",
+              "value": {
+                "type": "[ProgressProps](/components/progress/#api)（仅支持 `type=\"line\"`）",
+                "kind": "expression"
+              }
+            },
+            {
+              "name": "removeIcon",
+              "default": "-",
+              "description": "自定义删除 icon",
+              "value": {
+                "type": "v-slot:iconRender=\"{file: UploadFile}\"",
+                "kind": "expression"
+              }
+            },
+            {
+              "name": "showUploadList",
+              "default": "true",
+              "description": "是否展示 uploadList, 可设为一个对象，用于单独设定 showPreviewIcon, showRemoveIcon 和 showDownloadIcon",
+              "value": {
+                "type": "boolean | { showPreviewIcon?: boolean, showRemoveIcon?: boolean, showDownloadIcon?: boolean }",
+                "kind": "expression"
+              }
+            },
+            {
+              "name": "supportServerRender",
+              "default": "false",
+              "description": "服务端渲染时需要打开这个",
+              "value": {
+                "type": "boolean",
+                "kind": "expression"
+              }
+            },
+            {
+              "name": "withCredentials",
+              "default": "false",
+              "description": "上传请求时是否携带 cookie",
+              "value": {
+                "type": "boolean",
+                "kind": "expression"
+              }
+            }
+          ]
+        },
+        {
+          "name": "upload-file",
+          "slots": [],
+          "events": [],
+          "attributes": [
+            {
+              "name": "crossOrigin",
+              "default": "-",
+              "description": "CORS 属性设置",
+              "value": {
+                "type": "`'anonymous'` | `'use-credentials'` | `''`",
+                "kind": "expression"
+              }
+            },
+            {
+              "name": "name",
+              "default": "-",
+              "description": "文件名",
+              "value": {
+                "type": "string",
+                "kind": "expression"
+              }
+            },
+            {
+              "name": "percent",
+              "default": "-",
+              "description": "上传进度",
+              "value": {
+                "type": "number",
+                "kind": "expression"
+              }
+            },
+            {
+              "name": "status",
+              "default": "-",
+              "description": "上传状态，不同状态展示颜色也会有所不同",
+              "value": {
+                "type": "`error` | `success` | `done` | `uploading` | `removed`",
+                "kind": "expression"
+              }
+            },
+            {
+              "name": "thumbUrl",
+              "default": "-",
+              "description": "缩略图地址",
+              "value": {
+                "type": "string",
+                "kind": "expression"
+              }
+            },
+            {
+              "name": "uid",
+              "default": "-",
+              "description": "唯一标识符，不设置时会自动生成",
+              "value": {
+                "type": "string",
+                "kind": "expression"
+              }
+            },
+            {
+              "name": "url",
+              "default": "-",
+              "description": "下载地址",
+              "value": {
+                "type": "string",
+                "kind": "expression"
+              }
+            }
+          ]
+        },
+        {
           "name": "typography",
           "slots": [],
           "events": [],
@@ -10664,491 +11149,6 @@
               "description": "添加下划线样式",
               "value": {
                 "type": "boolean",
-                "kind": "expression"
-              }
-            }
-          ]
-        },
-        {
-          "name": "tooltip",
-          "slots": [
-            {
-              "name": "title",
-              "description": "提示文字"
-            }
-          ],
-          "events": [],
-          "attributes": [
-            {
-              "name": "title",
-              "default": "无",
-              "description": "提示文字",
-              "value": {
-                "type": "string|slot",
-                "kind": "expression"
-              }
-            },
-            {
-              "name": "align",
-              "default": "无",
-              "description": "该值将合并到 placement 的配置中，设置参考 [dom-align](https://github.com/yiminghe/dom-align)",
-              "value": {
-                "type": "Object",
-                "kind": "expression"
-              }
-            },
-            {
-              "name": "arrowPointAtCenter",
-              "default": "`false`",
-              "description": "箭头是否指向目标元素中心",
-              "value": {
-                "type": "boolean",
-                "kind": "expression"
-              }
-            },
-            {
-              "name": "autoAdjustOverflow",
-              "default": "`true`",
-              "description": "气泡被遮挡时自动调整位置",
-              "value": {
-                "type": "boolean",
-                "kind": "expression"
-              }
-            },
-            {
-              "name": "color",
-              "default": "无",
-              "description": "背景颜色",
-              "value": {
-                "type": "string",
-                "kind": "expression"
-              }
-            },
-            {
-              "name": "destroyTooltipOnHide",
-              "default": "false",
-              "description": "隐藏后是否销毁 tooltip",
-              "value": {
-                "type": "boolean",
-                "kind": "expression"
-              }
-            },
-            {
-              "name": "getPopupContainer",
-              "default": "() => document.body",
-              "description": "浮层渲染父节点，默认渲染到 body 上",
-              "value": {
-                "type": "(triggerNode: HTMLElement) => HTMLElement",
-                "kind": "expression"
-              }
-            },
-            {
-              "name": "mouseEnterDelay",
-              "default": "0.1",
-              "description": "鼠标移入后延时多少才显示 Tooltip，单位：秒",
-              "value": {
-                "type": "number",
-                "kind": "expression"
-              }
-            },
-            {
-              "name": "mouseLeaveDelay",
-              "default": "0.1",
-              "description": "鼠标移出后延时多少才隐藏 Tooltip，单位：秒",
-              "value": {
-                "type": "number",
-                "kind": "expression"
-              }
-            },
-            {
-              "name": "overlayClassName",
-              "default": "无",
-              "description": "卡片类名",
-              "value": {
-                "type": "string",
-                "kind": "expression"
-              }
-            },
-            {
-              "name": "overlayStyle",
-              "default": "无",
-              "description": "卡片样式",
-              "value": {
-                "type": "object",
-                "kind": "expression"
-              }
-            },
-            {
-              "name": "overlayInnerStyle",
-              "default": "无",
-              "description": "卡片内容区域样式",
-              "value": {
-                "type": "object",
-                "kind": "expression"
-              }
-            },
-            {
-              "name": "placement",
-              "default": "top",
-              "description": "气泡框位置，可选 `top` `left` `right` `bottom` `topLeft` `topRight` `bottomLeft` `bottomRight` `leftTop` `leftBottom` `rightTop` `rightBottom`",
-              "value": {
-                "type": "string",
-                "kind": "expression"
-              }
-            },
-            {
-              "name": "trigger",
-              "default": "hover",
-              "description": "触发行为，可选 `hover/focus/click/contextmenu`",
-              "value": {
-                "type": "string",
-                "kind": "expression"
-              }
-            },
-            {
-              "name": "open(v-model)",
-              "default": "false",
-              "description": "用于手动控制浮层显隐, 小于 4.0.0 使用 `visible`",
-              "value": {
-                "type": "boolean",
-                "kind": "expression"
-              }
-            }
-          ]
-        },
-        {
-          "name": "tree-select",
-          "slots": [],
-          "events": [],
-          "attributes": []
-        },
-        {
-          "name": "upload",
-          "slots": [
-            {
-              "name": "downloadIcon",
-              "description": "自定义下载 icon"
-            },
-            {
-              "name": "iconRender",
-              "description": "自定义显示 icon"
-            },
-            {
-              "name": "itemRender",
-              "description": "自定义上传列表项"
-            },
-            {
-              "name": "previewIcon",
-              "description": "自定义预览 icon"
-            },
-            {
-              "name": "removeIcon",
-              "description": "自定义删除 icon"
-            }
-          ],
-          "events": [],
-          "attributes": [
-            {
-              "name": "accept",
-              "default": "无",
-              "description": "接受上传的文件类型, 详见 [input accept Attribute](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/file#accept)",
-              "value": {
-                "type": "string",
-                "kind": "expression"
-              }
-            },
-            {
-              "name": "action",
-              "default": "无",
-              "description": "上传的地址",
-              "value": {
-                "type": "string|(file) => `Promise`",
-                "kind": "expression"
-              }
-            },
-            {
-              "name": "beforeUpload",
-              "default": "无",
-              "description": "上传文件之前的钩子，参数为上传的文件，若返回 `false` 则停止上传。支持返回一个 Promise 对象，Promise 对象 reject 时则停止上传，resolve 时开始上传（ resolve 传入 `File` 或 `Blob` 对象则上传 resolve 传入对象）。",
-              "value": {
-                "type": "(file, fileList) => `boolean` | `Promise`",
-                "kind": "expression"
-              }
-            },
-            {
-              "name": "customRequest",
-              "default": "无",
-              "description": "通过覆盖默认的上传行为，可以自定义自己的上传实现",
-              "value": {
-                "type": "function",
-                "kind": "expression"
-              }
-            },
-            {
-              "name": "data",
-              "default": "无",
-              "description": "上传所需参数或返回上传参数的方法",
-              "value": {
-                "type": "object|(file) => object",
-                "kind": "expression"
-              }
-            },
-            {
-              "name": "directory",
-              "default": "false",
-              "description": "支持上传文件夹（[caniuse](https://caniuse.com/#feat=input-file-directory)）",
-              "value": {
-                "type": "boolean",
-                "kind": "expression"
-              }
-            },
-            {
-              "name": "disabled",
-              "default": "-",
-              "description": "是否禁用",
-              "value": {
-                "type": "boolean",
-                "kind": "expression"
-              }
-            },
-            {
-              "name": "downloadIcon",
-              "default": "-",
-              "description": "自定义下载 icon",
-              "value": {
-                "type": "v-slot:iconRender=\"{file: UploadFile}\"",
-                "kind": "expression"
-              }
-            },
-            {
-              "name": "fileList",
-              "default": "无",
-              "description": "已经上传的文件列表（受控）",
-              "value": {
-                "type": "object[]",
-                "kind": "expression"
-              }
-            },
-            {
-              "name": "headers",
-              "default": "无",
-              "description": "设置上传的请求头部，IE10 以上有效",
-              "value": {
-                "type": "object",
-                "kind": "expression"
-              }
-            },
-            {
-              "name": "iconRender",
-              "default": "-",
-              "description": "自定义显示 icon",
-              "value": {
-                "type": "v-slot:iconRender=\"{file: UploadFile, listType?: UploadListType}\"",
-                "kind": "expression"
-              }
-            },
-            {
-              "name": "isImageUrl",
-              "default": "-",
-              "description": "自定义缩略图是否使用 &lt;img /> 标签进行显示",
-              "value": {
-                "type": "(file: UploadFile) => boolean",
-                "kind": "expression"
-              }
-            },
-            {
-              "name": "itemRender",
-              "default": "-",
-              "description": "自定义上传列表项",
-              "value": {
-                "type": "v-slot:itemRender=\"{originNode: VNode, file: UploadFile, fileList: object[], actions: { download: function, preview: function, remove: function }\"",
-                "kind": "expression"
-              }
-            },
-            {
-              "name": "listType",
-              "default": "`text`",
-              "description": "上传列表的内建样式，支持三种基本样式 `text`, `picture` 和 `picture-card`",
-              "value": {
-                "type": "string",
-                "kind": "expression"
-              }
-            },
-            {
-              "name": "maxCount",
-              "default": "-",
-              "description": "限制上传数量。当为 1 时，始终用最新上传的文件代替当前文件",
-              "value": {
-                "type": "number",
-                "kind": "expression"
-              }
-            },
-            {
-              "name": "method",
-              "default": "`post`",
-              "description": "上传请求的 http method",
-              "value": {
-                "type": "string",
-                "kind": "expression"
-              }
-            },
-            {
-              "name": "multiple",
-              "default": "false",
-              "description": "是否支持多选文件，`ie10+` 支持。开启后按住 ctrl 可选择多个文件。",
-              "value": {
-                "type": "boolean",
-                "kind": "expression"
-              }
-            },
-            {
-              "name": "name",
-              "default": "`file`",
-              "description": "发到后台的文件参数名",
-              "value": {
-                "type": "string",
-                "kind": "expression"
-              }
-            },
-            {
-              "name": "openFileDialogOnClick",
-              "default": "true",
-              "description": "点击打开文件对话框",
-              "value": {
-                "type": "boolean",
-                "kind": "expression"
-              }
-            },
-            {
-              "name": "previewFile",
-              "default": "无",
-              "description": "自定义文件预览逻辑",
-              "value": {
-                "type": "(file: File | Blob) => Promise&lt;dataURL: string>",
-                "kind": "expression"
-              }
-            },
-            {
-              "name": "previewIcon",
-              "default": "-",
-              "description": "自定义预览 icon",
-              "value": {
-                "type": "v-slot:iconRender=\"{file: UploadFile}\"",
-                "kind": "expression"
-              }
-            },
-            {
-              "name": "progress",
-              "default": "{ strokeWidth: 2, showInfo: false }",
-              "description": "自定义进度条样式",
-              "value": {
-                "type": "[ProgressProps](/components/progress/#api)（仅支持 `type=\"line\"`）",
-                "kind": "expression"
-              }
-            },
-            {
-              "name": "removeIcon",
-              "default": "-",
-              "description": "自定义删除 icon",
-              "value": {
-                "type": "v-slot:iconRender=\"{file: UploadFile}\"",
-                "kind": "expression"
-              }
-            },
-            {
-              "name": "showUploadList",
-              "default": "true",
-              "description": "是否展示 uploadList, 可设为一个对象，用于单独设定 showPreviewIcon, showRemoveIcon 和 showDownloadIcon",
-              "value": {
-                "type": "boolean | { showPreviewIcon?: boolean, showRemoveIcon?: boolean, showDownloadIcon?: boolean }",
-                "kind": "expression"
-              }
-            },
-            {
-              "name": "supportServerRender",
-              "default": "false",
-              "description": "服务端渲染时需要打开这个",
-              "value": {
-                "type": "boolean",
-                "kind": "expression"
-              }
-            },
-            {
-              "name": "withCredentials",
-              "default": "false",
-              "description": "上传请求时是否携带 cookie",
-              "value": {
-                "type": "boolean",
-                "kind": "expression"
-              }
-            }
-          ]
-        },
-        {
-          "name": "upload-file",
-          "slots": [],
-          "events": [],
-          "attributes": [
-            {
-              "name": "crossOrigin",
-              "default": "-",
-              "description": "CORS 属性设置",
-              "value": {
-                "type": "`'anonymous'` | `'use-credentials'` | `''`",
-                "kind": "expression"
-              }
-            },
-            {
-              "name": "name",
-              "default": "-",
-              "description": "文件名",
-              "value": {
-                "type": "string",
-                "kind": "expression"
-              }
-            },
-            {
-              "name": "percent",
-              "default": "-",
-              "description": "上传进度",
-              "value": {
-                "type": "number",
-                "kind": "expression"
-              }
-            },
-            {
-              "name": "status",
-              "default": "-",
-              "description": "上传状态，不同状态展示颜色也会有所不同",
-              "value": {
-                "type": "`error` | `success` | `done` | `uploading` | `removed`",
-                "kind": "expression"
-              }
-            },
-            {
-              "name": "thumbUrl",
-              "default": "-",
-              "description": "缩略图地址",
-              "value": {
-                "type": "string",
-                "kind": "expression"
-              }
-            },
-            {
-              "name": "uid",
-              "default": "-",
-              "description": "唯一标识符，不设置时会自动生成",
-              "value": {
-                "type": "string",
-                "kind": "expression"
-              }
-            },
-            {
-              "name": "url",
-              "default": "-",
-              "description": "下载地址",
-              "value": {
-                "type": "string",
                 "kind": "expression"
               }
             }

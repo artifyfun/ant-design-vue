@@ -1,6 +1,41 @@
 {
+  "alert": {
+    "attributes": [
+      "action",
+      "afterClose",
+      "banner",
+      "closable",
+      "closeIcon",
+      "closeText",
+      "description",
+      "icon",
+      "message",
+      "showIcon",
+      "type"
+    ]
+  },
   "affix": {
     "attributes": ["offsetBottom", "offsetTop", "target"]
+  },
+  "anchor": {
+    "attributes": [
+      "affix",
+      "bounds",
+      "getContainer",
+      "getCurrentAnchor",
+      "offsetBottom",
+      "offsetTop",
+      "showInkInFixed",
+      "targetOffset",
+      "wrapperClass",
+      "wrapperStyle",
+      "items",
+      "direction",
+      "customTitle"
+    ]
+  },
+  "anchor-item": {
+    "attributes": ["key", "href", "target", "title", "children"]
   },
   "auto-complete": {
     "attributes": [
@@ -27,41 +62,6 @@
   },
   "app": {
     "attributes": ["message", "notification"]
-  },
-  "alert": {
-    "attributes": [
-      "action",
-      "afterClose",
-      "banner",
-      "closable",
-      "closeIcon",
-      "closeText",
-      "description",
-      "icon",
-      "message",
-      "showIcon",
-      "type"
-    ]
-  },
-  "anchor": {
-    "attributes": [
-      "affix",
-      "bounds",
-      "getContainer",
-      "getCurrentAnchor",
-      "offsetBottom",
-      "offsetTop",
-      "showInkInFixed",
-      "targetOffset",
-      "wrapperClass",
-      "wrapperStyle",
-      "items",
-      "direction",
-      "customTitle"
-    ]
-  },
-  "anchor-item": {
-    "attributes": ["key", "href", "target", "title", "children"]
   },
   "avatar": {
     "attributes": [
@@ -333,6 +333,9 @@
       "zIndex"
     ]
   },
+  "empty": {
+    "attributes": ["description", "image", "imageStyle"]
+  },
   "dropdown": {
     "attributes": [
       "align",
@@ -360,9 +363,6 @@
       "type",
       "open(v-model)"
     ]
-  },
-  "empty": {
-    "attributes": ["description", "image", "imageStyle"]
   },
   "flex": {
     "attributes": ["vertical", "wrap", "justify", "align", "flex", "gap", "component"]

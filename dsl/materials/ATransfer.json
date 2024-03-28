@@ -58,25 +58,6 @@
         },
         "content": [
           {
-            "property": "dataSource",
-            "label": {
-              "text": {
-                "zh_CN": "dataSource"
-              }
-            },
-            "description": {
-              "zh_CN": "数据源，其中的数据将会被渲染到左边一栏中，`targetKeys` 中指定的除外。"
-            },
-            "required": false,
-            "readOnly": false,
-            "disabled": false,
-            "cols": 12,
-            "labelPosition": "top",
-            "type": "[{key: string.isrequired,title: string.isrequired,description: string,disabled: bool}]",
-            "defaultValue": "\\[]",
-            "device": []
-          },
-          {
             "property": "disabled",
             "label": {
               "text": {
@@ -97,25 +78,6 @@
               "component": "MetaSwitch",
               "props": {}
             },
-            "device": []
-          },
-          {
-            "property": "filterOption",
-            "label": {
-              "text": {
-                "zh_CN": "filterOption"
-              }
-            },
-            "description": {
-              "zh_CN": "接收 `inputValue` `option` 两个参数，当 `option` 符合筛选条件时，应返回 `true`，反之则返回 `false`。"
-            },
-            "required": false,
-            "readOnly": false,
-            "disabled": false,
-            "cols": 12,
-            "labelPosition": "top",
-            "type": "(inputvalue, option): boolean",
-            "defaultValue": "",
             "device": []
           },
           {

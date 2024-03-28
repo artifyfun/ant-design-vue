@@ -239,25 +239,6 @@
               }
             },
             "device": []
-          },
-          {
-            "property": "value",
-            "label": {
-              "text": {
-                "zh_CN": "value"
-              }
-            },
-            "description": {
-              "zh_CN": "与 CheckboxGroup 组合使用时的值"
-            },
-            "required": false,
-            "readOnly": false,
-            "disabled": false,
-            "cols": 12,
-            "labelPosition": "top",
-            "type": "(boolean",
-            "defaultValue": "\\[]",
-            "device": []
           }
         ],
         "description": {

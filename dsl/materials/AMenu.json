@@ -187,25 +187,6 @@
             "device": []
           },
           {
-            "property": "openKeys",
-            "label": {
-              "text": {
-                "zh_CN": "openKeys(v-model)"
-              }
-            },
-            "description": {
-              "zh_CN": "当前展开的 SubMenu 菜单项 key 数组"
-            },
-            "required": false,
-            "readOnly": false,
-            "disabled": false,
-            "cols": 12,
-            "labelPosition": "top",
-            "type": "(string",
-            "defaultValue": "",
-            "device": []
-          },
-          {
             "property": "selectable",
             "label": {
               "text": {
@@ -226,25 +207,6 @@
               "component": "MetaSwitch",
               "props": {}
             },
-            "device": []
-          },
-          {
-            "property": "selectedKeys",
-            "label": {
-              "text": {
-                "zh_CN": "selectedKeys(v-model)"
-              }
-            },
-            "description": {
-              "zh_CN": "当前选中的菜单项 key 数组"
-            },
-            "required": false,
-            "readOnly": false,
-            "disabled": false,
-            "cols": 12,
-            "labelPosition": "top",
-            "type": "(string",
-            "defaultValue": "",
             "device": []
           },
           {

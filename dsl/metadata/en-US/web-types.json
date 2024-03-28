@@ -7,6 +7,142 @@
     "html": {
       "tags": [
         {
+          "name": "alert",
+          "slots": [
+            {
+              "name": "action",
+              "description": "The action of Alert"
+            },
+            {
+              "name": "closeIcon",
+              "description": "Custom close icon"
+            },
+            {
+              "name": "closeText",
+              "description": "Close text to show"
+            },
+            {
+              "name": "description",
+              "description": "Additional content of Alert"
+            },
+            {
+              "name": "icon",
+              "description": "Custom icon, effective when `showIcon` is `true`"
+            },
+            {
+              "name": "message",
+              "description": "Content of Alert"
+            }
+          ],
+          "events": [
+            {
+              "name": "close",
+              "description": "Callback when Alert is closed"
+            }
+          ],
+          "attributes": [
+            {
+              "name": "action",
+              "default": "-",
+              "description": "The action of Alert",
+              "value": {
+                "type": "slot",
+                "kind": "expression"
+              }
+            },
+            {
+              "name": "afterClose",
+              "default": "-",
+              "description": "Called when close animation is finished",
+              "value": {
+                "type": "() => void",
+                "kind": "expression"
+              }
+            },
+            {
+              "name": "banner",
+              "default": "false",
+              "description": "Whether to show as banner",
+              "value": {
+                "type": "boolean",
+                "kind": "expression"
+              }
+            },
+            {
+              "name": "closable",
+              "default": "",
+              "description": "Whether Alert can be closed",
+              "value": {
+                "type": "boolean",
+                "kind": "expression"
+              }
+            },
+            {
+              "name": "closeIcon",
+              "default": "`<CloseOutlined />`",
+              "description": "Custom close icon",
+              "value": {
+                "type": "slot",
+                "kind": "expression"
+              }
+            },
+            {
+              "name": "closeText",
+              "default": "-",
+              "description": "Close text to show",
+              "value": {
+                "type": "string|slot",
+                "kind": "expression"
+              }
+            },
+            {
+              "name": "description",
+              "default": "-",
+              "description": "Additional content of Alert",
+              "value": {
+                "type": "string|slot",
+                "kind": "expression"
+              }
+            },
+            {
+              "name": "icon",
+              "default": "-",
+              "description": "Custom icon, effective when `showIcon` is `true`",
+              "value": {
+                "type": "vnode | slot",
+                "kind": "expression"
+              }
+            },
+            {
+              "name": "message",
+              "default": "-",
+              "description": "Content of Alert",
+              "value": {
+                "type": "string|slot",
+                "kind": "expression"
+              }
+            },
+            {
+              "name": "showIcon",
+              "default": "false,in `banner` mode default is true",
+              "description": "Whether to show icon",
+              "value": {
+                "type": "boolean",
+                "kind": "expression"
+              }
+            },
+            {
+              "name": "type",
+              "default": "`info`,in `banner` mode default is `warning`",
+              "description": "Type of Alert styles, options: `success`, `info`, `warning`, `error`",
+              "value": {
+                "type": "string",
+                "kind": "expression"
+              }
+            }
+          ]
+        },
+        {
           "name": "affix",
           "slots": [],
           "events": [
@@ -40,6 +176,187 @@
               "description": "Specifies the scrollable area DOM node",
               "value": {
                 "type": "() => HTMLElement",
+                "kind": "expression"
+              }
+            }
+          ]
+        },
+        {
+          "name": "anchor",
+          "slots": [
+            {
+              "name": "customTitle",
+              "description": "custom option title by slot"
+            }
+          ],
+          "events": [],
+          "attributes": [
+            {
+              "name": "affix",
+              "default": "true",
+              "description": "Fixed mode of Anchor",
+              "value": {
+                "type": "boolean",
+                "kind": "expression"
+              }
+            },
+            {
+              "name": "bounds",
+              "default": "5(px)",
+              "description": "Bounding distance of anchor area",
+              "value": {
+                "type": "number",
+                "kind": "expression"
+              }
+            },
+            {
+              "name": "getContainer",
+              "default": "() => window",
+              "description": "Scrolling container",
+              "value": {
+                "type": "() => HTMLElement",
+                "kind": "expression"
+              }
+            },
+            {
+              "name": "getCurrentAnchor",
+              "default": "-",
+              "description": "Customize the anchor highlight",
+              "value": {
+                "type": "(activeLink: string) => string",
+                "kind": "expression"
+              }
+            },
+            {
+              "name": "offsetBottom",
+              "default": "-",
+              "description": "Pixels to offset from bottom when calculating position of scroll",
+              "value": {
+                "type": "number",
+                "kind": "expression"
+              }
+            },
+            {
+              "name": "offsetTop",
+              "default": "0",
+              "description": "Pixels to offset from top when calculating position of scroll",
+              "value": {
+                "type": "number",
+                "kind": "expression"
+              }
+            },
+            {
+              "name": "showInkInFixed",
+              "default": "false",
+              "description": "Whether show ink-square when `：affix=\"false\"`",
+              "value": {
+                "type": "boolean",
+                "kind": "expression"
+              }
+            },
+            {
+              "name": "targetOffset",
+              "default": "`offsetTop`",
+              "description": "Anchor scroll offset, default as `offsetTop`, [example](#components-anchor-demo-targetoffset)",
+              "value": {
+                "type": "number",
+                "kind": "expression"
+              }
+            },
+            {
+              "name": "wrapperClass",
+              "default": "-",
+              "description": "The class name of the container",
+              "value": {
+                "type": "string",
+                "kind": "expression"
+              }
+            },
+            {
+              "name": "wrapperStyle",
+              "default": "-",
+              "description": "The style of the container",
+              "value": {
+                "type": "object",
+                "kind": "expression"
+              }
+            },
+            {
+              "name": "items",
+              "default": "-",
+              "description": "Data configuration option content, support nesting through children",
+              "value": {
+                "type": "{ key, href, title, target, children }[] [see](#anchoritem)",
+                "kind": "expression"
+              }
+            },
+            {
+              "name": "direction",
+              "default": "`vertical`",
+              "description": "Set Anchor direction",
+              "value": {
+                "type": "`vertical` | `horizontal`",
+                "kind": "expression"
+              }
+            },
+            {
+              "name": "customTitle",
+              "default": "-",
+              "description": "custom option title by slot",
+              "value": {
+                "type": "v-slot=\"AnchorItem\"",
+                "kind": "expression"
+              }
+            }
+          ]
+        },
+        {
+          "name": "anchor-item",
+          "slots": [],
+          "events": [],
+          "attributes": [
+            {
+              "name": "key",
+              "default": "-",
+              "description": "The unique identifier of the Anchor Link",
+              "value": {
+                "type": "string | number",
+                "kind": "expression"
+              }
+            },
+            {
+              "name": "href",
+              "default": "",
+              "description": "The target of hyperlink",
+              "value": {
+                "type": "string",
+                "kind": "expression"
+              }
+            },
+            {
+              "name": "target",
+              "default": "",
+              "description": "Specifies where to display the linked URL",
+              "value": {
+                "type": "string",
+                "kind": "expression"
+              }
+            },
+            {
+              "name": "title",
+              "default": "",
+              "description": "The content of hyperlink",
+              "value": {
+                "type": "VueNode | (item: AnchorItem) => VueNode",
+                "kind": "expression"
+              }
+            },
+            {
+              "name": "children",
+              "default": "-",
+              "description": "Nested Anchor Link, `Attention: This attribute does not support horizontal orientation`",
+              "value": {
+                "type": "[AnchorItem](#anchoritem)[]",
                 "kind": "expression"
               }
             }
@@ -285,323 +602,6 @@
               "description": "Global config for Notification",
               "value": {
                 "type": "[NotificationConfig](/components/notification/#notificationconfig)",
-                "kind": "expression"
-              }
-            }
-          ]
-        },
-        {
-          "name": "alert",
-          "slots": [
-            {
-              "name": "action",
-              "description": "The action of Alert"
-            },
-            {
-              "name": "closeIcon",
-              "description": "Custom close icon"
-            },
-            {
-              "name": "closeText",
-              "description": "Close text to show"
-            },
-            {
-              "name": "description",
-              "description": "Additional content of Alert"
-            },
-            {
-              "name": "icon",
-              "description": "Custom icon, effective when `showIcon` is `true`"
-            },
-            {
-              "name": "message",
-              "description": "Content of Alert"
-            }
-          ],
-          "events": [
-            {
-              "name": "close",
-              "description": "Callback when Alert is closed"
-            }
-          ],
-          "attributes": [
-            {
-              "name": "action",
-              "default": "-",
-              "description": "The action of Alert",
-              "value": {
-                "type": "slot",
-                "kind": "expression"
-              }
-            },
-            {
-              "name": "afterClose",
-              "default": "-",
-              "description": "Called when close animation is finished",
-              "value": {
-                "type": "() => void",
-                "kind": "expression"
-              }
-            },
-            {
-              "name": "banner",
-              "default": "false",
-              "description": "Whether to show as banner",
-              "value": {
-                "type": "boolean",
-                "kind": "expression"
-              }
-            },
-            {
-              "name": "closable",
-              "default": "",
-              "description": "Whether Alert can be closed",
-              "value": {
-                "type": "boolean",
-                "kind": "expression"
-              }
-            },
-            {
-              "name": "closeIcon",
-              "default": "`<CloseOutlined />`",
-              "description": "Custom close icon",
-              "value": {
-                "type": "slot",
-                "kind": "expression"
-              }
-            },
-            {
-              "name": "closeText",
-              "default": "-",
-              "description": "Close text to show",
-              "value": {
-                "type": "string|slot",
-                "kind": "expression"
-              }
-            },
-            {
-              "name": "description",
-              "default": "-",
-              "description": "Additional content of Alert",
-              "value": {
-                "type": "string|slot",
-                "kind": "expression"
-              }
-            },
-            {
-              "name": "icon",
-              "default": "-",
-              "description": "Custom icon, effective when `showIcon` is `true`",
-              "value": {
-                "type": "vnode | slot",
-                "kind": "expression"
-              }
-            },
-            {
-              "name": "message",
-              "default": "-",
-              "description": "Content of Alert",
-              "value": {
-                "type": "string|slot",
-                "kind": "expression"
-              }
-            },
-            {
-              "name": "showIcon",
-              "default": "false,in `banner` mode default is true",
-              "description": "Whether to show icon",
-              "value": {
-                "type": "boolean",
-                "kind": "expression"
-              }
-            },
-            {
-              "name": "type",
-              "default": "`info`,in `banner` mode default is `warning`",
-              "description": "Type of Alert styles, options: `success`, `info`, `warning`, `error`",
-              "value": {
-                "type": "string",
-                "kind": "expression"
-              }
-            }
-          ]
-        },
-        {
-          "name": "anchor",
-          "slots": [
-            {
-              "name": "customTitle",
-              "description": "custom option title by slot"
-            }
-          ],
-          "events": [],
-          "attributes": [
-            {
-              "name": "affix",
-              "default": "true",
-              "description": "Fixed mode of Anchor",
-              "value": {
-                "type": "boolean",
-                "kind": "expression"
-              }
-            },
-            {
-              "name": "bounds",
-              "default": "5(px)",
-              "description": "Bounding distance of anchor area",
-              "value": {
-                "type": "number",
-                "kind": "expression"
-              }
-            },
-            {
-              "name": "getContainer",
-              "default": "() => window",
-              "description": "Scrolling container",
-              "value": {
-                "type": "() => HTMLElement",
-                "kind": "expression"
-              }
-            },
-            {
-              "name": "getCurrentAnchor",
-              "default": "-",
-              "description": "Customize the anchor highlight",
-              "value": {
-                "type": "(activeLink: string) => string",
-                "kind": "expression"
-              }
-            },
-            {
-              "name": "offsetBottom",
-              "default": "-",
-              "description": "Pixels to offset from bottom when calculating position of scroll",
-              "value": {
-                "type": "number",
-                "kind": "expression"
-              }
-            },
-            {
-              "name": "offsetTop",
-              "default": "0",
-              "description": "Pixels to offset from top when calculating position of scroll",
-              "value": {
-                "type": "number",
-                "kind": "expression"
-              }
-            },
-            {
-              "name": "showInkInFixed",
-              "default": "false",
-              "description": "Whether show ink-square when `：affix=\"false\"`",
-              "value": {
-                "type": "boolean",
-                "kind": "expression"
-              }
-            },
-            {
-              "name": "targetOffset",
-              "default": "`offsetTop`",
-              "description": "Anchor scroll offset, default as `offsetTop`, [example](#components-anchor-demo-targetoffset)",
-              "value": {
-                "type": "number",
-                "kind": "expression"
-              }
-            },
-            {
-              "name": "wrapperClass",
-              "default": "-",
-              "description": "The class name of the container",
-              "value": {
-                "type": "string",
-                "kind": "expression"
-              }
-            },
-            {
-              "name": "wrapperStyle",
-              "default": "-",
-              "description": "The style of the container",
-              "value": {
-                "type": "object",
-                "kind": "expression"
-              }
-            },
-            {
-              "name": "items",
-              "default": "-",
-              "description": "Data configuration option content, support nesting through children",
-              "value": {
-                "type": "{ key, href, title, target, children }[] [see](#anchoritem)",
-                "kind": "expression"
-              }
-            },
-            {
-              "name": "direction",
-              "default": "`vertical`",
-              "description": "Set Anchor direction",
-              "value": {
-                "type": "`vertical` | `horizontal`",
-                "kind": "expression"
-              }
-            },
-            {
-              "name": "customTitle",
-              "default": "-",
-              "description": "custom option title by slot",
-              "value": {
-                "type": "v-slot=\"AnchorItem\"",
-                "kind": "expression"
-              }
-            }
-          ]
-        },
-        {
-          "name": "anchor-item",
-          "slots": [],
-          "events": [],
-          "attributes": [
-            {
-              "name": "key",
-              "default": "-",
-              "description": "The unique identifier of the Anchor Link",
-              "value": {
-                "type": "string | number",
-                "kind": "expression"
-              }
-            },
-            {
-              "name": "href",
-              "default": "",
-              "description": "The target of hyperlink",
-              "value": {
-                "type": "string",
-                "kind": "expression"
-              }
-            },
-            {
-              "name": "target",
-              "default": "",
-              "description": "Specifies where to display the linked URL",
-              "value": {
-                "type": "string",
-                "kind": "expression"
-              }
-            },
-            {
-              "name": "title",
-              "default": "",
-              "description": "The content of hyperlink",
-              "value": {
-                "type": "VueNode | (item: AnchorItem) => VueNode",
-                "kind": "expression"
-              }
-            },
-            {
-              "name": "children",
-              "default": "-",
-              "description": "Nested Anchor Link, `Attention: This attribute does not support horizontal orientation`",
-              "value": {
-                "type": "[AnchorItem](#anchoritem)[]",
                 "kind": "expression"
               }
             }
@@ -2984,6 +2984,49 @@
           ]
         },
         {
+          "name": "empty",
+          "slots": [
+            {
+              "name": "description",
+              "description": "Customize description"
+            },
+            {
+              "name": "image",
+              "description": "Customize image. Will tread as image url when string provided"
+            }
+          ],
+          "events": [],
+          "attributes": [
+            {
+              "name": "description",
+              "default": "-",
+              "description": "Customize description",
+              "value": {
+                "type": "string | v-slot",
+                "kind": "expression"
+              }
+            },
+            {
+              "name": "image",
+              "default": "false",
+              "description": "Customize image. Will tread as image url when string provided",
+              "value": {
+                "type": "string | v-slot",
+                "kind": "expression"
+              }
+            },
+            {
+              "name": "imageStyle",
+              "default": "-",
+              "description": "style of image",
+              "value": {
+                "type": "CSSProperties",
+                "kind": "expression"
+              }
+            }
+          ]
+        },
+        {
           "name": "dropdown",
           "slots": [],
           "events": [
@@ -3191,49 +3234,6 @@
               "description": "whether the dropdown menu is open",
               "value": {
                 "type": "boolean",
-                "kind": "expression"
-              }
-            }
-          ]
-        },
-        {
-          "name": "empty",
-          "slots": [
-            {
-              "name": "description",
-              "description": "Customize description"
-            },
-            {
-              "name": "image",
-              "description": "Customize image. Will tread as image url when string provided"
-            }
-          ],
-          "events": [],
-          "attributes": [
-            {
-              "name": "description",
-              "default": "-",
-              "description": "Customize description",
-              "value": {
-                "type": "string | v-slot",
-                "kind": "expression"
-              }
-            },
-            {
-              "name": "image",
-              "default": "false",
-              "description": "Customize image. Will tread as image url when string provided",
-              "value": {
-                "type": "string | v-slot",
-                "kind": "expression"
-              }
-            },
-            {
-              "name": "imageStyle",
-              "default": "-",
-              "description": "style of image",
-              "value": {
-                "type": "CSSProperties",
                 "kind": "expression"
               }
             }

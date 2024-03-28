@@ -358,24 +358,6 @@
             "device": []
           },
           {
-            "property": "filterSort",
-            "label": {
-              "text": {
-                "zh_CN": "filterSort"
-              }
-            },
-            "description": {
-              "zh_CN": "搜索时对筛选结果项的排序函数, 类似[Array.sort](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/sort)里的 compareFunction"
-            },
-            "required": false,
-            "readOnly": false,
-            "disabled": false,
-            "cols": 12,
-            "labelPosition": "top",
-            "type": "(optiona: option, optionb: option) => number",
-            "device": []
-          },
-          {
             "property": "firstActiveValue",
             "label": {
               "text": {

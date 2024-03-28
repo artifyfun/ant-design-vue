@@ -444,24 +444,6 @@
               "props": {}
             },
             "device": []
-          },
-          {
-            "property": "valueFormat",
-            "label": {
-              "text": {
-                "zh_CN": "valueFormat"
-              }
-            },
-            "description": {
-              "zh_CN": "可选，绑定值的格式，对 value、defaultValue 起作用。不指定则绑定值为 dayjs 对象"
-            },
-            "required": false,
-            "readOnly": false,
-            "disabled": false,
-            "cols": 12,
-            "labelPosition": "top",
-            "type": "string, [date formats](https://day.js.org/docs/en/display/format)",
-            "device": []
           }
         ],
         "description": {
