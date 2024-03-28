@@ -1,0 +1,318 @@
+{
+  "id": 1,
+  "version": "4.1.2",
+  "name": {
+    "zh_CN": "通知提醒框"
+  },
+  "component": "ANotification",
+  "icon": "notification",
+  "description": "全局展示通知提醒信息。",
+  "doc_url": "",
+  "screenshot": "https://mdn.alipayobjects.com/huamei_7uahnr/afts/img/A*9hTIToR-3YYAAAAAAAAAAAAADrJ8AQ/original",
+  "tags": "",
+  "keywords": "",
+  "dev_mode": "proCode",
+  "npm": {
+    "package": "ant-design-vue",
+    "version": "2.4.2",
+    "script": "https://unpkg.com/browse/ant-design-vue@4.1.2/dist/antd.esm.min.js",
+    "css": "https://unpkg.com/browse/ant-design-vue@4.1.2/dist/reset.css",
+    "dependencies": null,
+    "exportName": "Notification"
+  },
+  "group": "component",
+  "category": "反馈",
+  "configure": {
+    "loop": true,
+    "condition": true,
+    "styles": true,
+    "isContainer": false,
+    "isModal": false,
+    "isPopper": false,
+    "nestingRule": {
+      "childWhitelist": "",
+      "parentWhitelist": "",
+      "descendantBlacklist": "",
+      "ancestorWhitelist": ""
+    },
+    "isNullNode": false,
+    "isLayout": false,
+    "rootSelector": "",
+    "shortcuts": {
+      "properties": []
+    },
+    "contextMenu": {
+      "actions": ["copy", "remove", "insert", "updateAttr", "bindEevent", "createBlock"],
+      "disable": []
+    },
+    "invalidity": [""],
+    "clickCapture": true,
+    "framework": "Vue"
+  },
+  "schema": {
+    "properties": [
+      {
+        "name": "0",
+        "label": {
+          "zh_CN": "基础属性"
+        },
+        "content": [
+          {
+            "property": "bottom",
+            "label": {
+              "text": {
+                "zh_CN": "bottom"
+              }
+            },
+            "description": {
+              "zh_CN": "消息从底部弹出时，距离底部的位置，单位像素。"
+            },
+            "required": false,
+            "readOnly": false,
+            "disabled": false,
+            "cols": 12,
+            "labelPosition": "top",
+            "type": "string",
+            "defaultValue": "`24px`",
+            "widget": {
+              "component": "MetaInput",
+              "props": {}
+            },
+            "device": []
+          },
+          {
+            "property": "class",
+            "label": {
+              "text": {
+                "zh_CN": "class"
+              }
+            },
+            "description": {
+              "zh_CN": "自定义 CSS class"
+            },
+            "required": false,
+            "readOnly": false,
+            "disabled": false,
+            "cols": 12,
+            "labelPosition": "top",
+            "type": "string",
+            "widget": {
+              "component": "MetaInput",
+              "props": {}
+            },
+            "device": []
+          },
+          {
+            "property": "description",
+            "label": {
+              "text": {
+                "zh_CN": "description"
+              }
+            },
+            "description": {
+              "zh_CN": "通知提醒内容，必选"
+            },
+            "required": false,
+            "readOnly": false,
+            "disabled": false,
+            "cols": 12,
+            "labelPosition": "top",
+            "type": "string",
+            "widget": {
+              "component": "MetaInput",
+              "props": {}
+            },
+            "device": []
+          },
+          {
+            "property": "duration",
+            "label": {
+              "text": {
+                "zh_CN": "duration"
+              }
+            },
+            "description": {
+              "zh_CN": "默认 4.5 秒后自动关闭，配置为 null 则不自动关闭"
+            },
+            "required": false,
+            "readOnly": false,
+            "disabled": false,
+            "cols": 12,
+            "labelPosition": "top",
+            "type": "number",
+            "defaultValue": 4.5,
+            "widget": {
+              "component": "MetaNumber",
+              "props": {}
+            },
+            "device": []
+          },
+          {
+            "property": "key",
+            "label": {
+              "text": {
+                "zh_CN": "key"
+              }
+            },
+            "description": {
+              "zh_CN": "当前通知唯一标志"
+            },
+            "required": false,
+            "readOnly": false,
+            "disabled": false,
+            "cols": 12,
+            "labelPosition": "top",
+            "type": "string",
+            "widget": {
+              "component": "MetaInput",
+              "props": {}
+            },
+            "device": []
+          },
+          {
+            "property": "message",
+            "label": {
+              "text": {
+                "zh_CN": "message"
+              }
+            },
+            "description": {
+              "zh_CN": "通知提醒标题，必选"
+            },
+            "required": false,
+            "readOnly": false,
+            "disabled": false,
+            "cols": 12,
+            "labelPosition": "top",
+            "type": "string",
+            "widget": {
+              "component": "MetaInput",
+              "props": {}
+            },
+            "device": []
+          },
+          {
+            "property": "placement",
+            "label": {
+              "text": {
+                "zh_CN": "placement"
+              }
+            },
+            "description": {
+              "zh_CN": "弹出位置，可选 `top` `topLeft` `topRight` `bottom` `bottomLeft` `bottomRight`"
+            },
+            "required": false,
+            "readOnly": false,
+            "disabled": false,
+            "cols": 12,
+            "labelPosition": "top",
+            "type": "string",
+            "defaultValue": "`topRight`",
+            "widget": {
+              "component": "MetaInput",
+              "props": {}
+            },
+            "device": []
+          },
+          {
+            "property": "style",
+            "label": {
+              "text": {
+                "zh_CN": "style"
+              }
+            },
+            "description": {
+              "zh_CN": "自定义内联样式"
+            },
+            "required": false,
+            "readOnly": false,
+            "disabled": false,
+            "cols": 12,
+            "labelPosition": "top",
+            "type": "object",
+            "widget": {
+              "component": "MetaCodeEditor",
+              "props": {
+                "language": "json"
+              }
+            },
+            "device": []
+          },
+          {
+            "property": "top",
+            "label": {
+              "text": {
+                "zh_CN": "top"
+              }
+            },
+            "description": {
+              "zh_CN": "消息从顶部弹出时，距离顶部的位置，单位像素。"
+            },
+            "required": false,
+            "readOnly": false,
+            "disabled": false,
+            "cols": 12,
+            "labelPosition": "top",
+            "type": "string",
+            "defaultValue": "`24px`",
+            "widget": {
+              "component": "MetaInput",
+              "props": {}
+            },
+            "device": []
+          },
+          {
+            "property": "onClick",
+            "label": {
+              "text": {
+                "zh_CN": "onClick"
+              }
+            },
+            "description": {
+              "zh_CN": "点击通知时触发的回调函数"
+            },
+            "required": false,
+            "readOnly": false,
+            "disabled": false,
+            "cols": 12,
+            "labelPosition": "top",
+            "type": "function",
+            "widget": {
+              "component": "MetaCodeEditor",
+              "props": {}
+            },
+            "device": []
+          },
+          {
+            "property": "onClose",
+            "label": {
+              "text": {
+                "zh_CN": "onClose"
+              }
+            },
+            "description": {
+              "zh_CN": "点击默认关闭按钮时触发的回调函数"
+            },
+            "required": false,
+            "readOnly": false,
+            "disabled": false,
+            "cols": 12,
+            "labelPosition": "top",
+            "type": "function",
+            "widget": {
+              "component": "MetaCodeEditor",
+              "props": {}
+            },
+            "device": []
+          }
+        ],
+        "description": {
+          "zh_CN": ""
+        }
+      }
+    ],
+    "events": {},
+    "slots": {}
+  },
+  "snippets": [{}]
+}

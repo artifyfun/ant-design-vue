@@ -1,0 +1,206 @@
+{
+  "id": 1,
+  "version": "4.1.2",
+  "name": {
+    "zh_CN": "加载中"
+  },
+  "component": "ASpin",
+  "icon": "spin",
+  "description": "用于页面和区块的加载中状态。",
+  "doc_url": "",
+  "screenshot": "https://mdn.alipayobjects.com/huamei_7uahnr/afts/img/A*i43_ToFrL8YAAAAAAAAAAAAADrJ8AQ/original",
+  "tags": "",
+  "keywords": "",
+  "dev_mode": "proCode",
+  "npm": {
+    "package": "ant-design-vue",
+    "version": "2.4.2",
+    "script": "https://unpkg.com/browse/ant-design-vue@4.1.2/dist/antd.esm.min.js",
+    "css": "https://unpkg.com/browse/ant-design-vue@4.1.2/dist/reset.css",
+    "dependencies": null,
+    "exportName": "Spin"
+  },
+  "group": "component",
+  "category": "反馈",
+  "configure": {
+    "loop": true,
+    "condition": true,
+    "styles": true,
+    "isContainer": false,
+    "isModal": false,
+    "isPopper": false,
+    "nestingRule": {
+      "childWhitelist": "",
+      "parentWhitelist": "",
+      "descendantBlacklist": "",
+      "ancestorWhitelist": ""
+    },
+    "isNullNode": false,
+    "isLayout": false,
+    "rootSelector": "",
+    "shortcuts": {
+      "properties": []
+    },
+    "contextMenu": {
+      "actions": ["copy", "remove", "insert", "updateAttr", "bindEevent", "createBlock"],
+      "disable": []
+    },
+    "invalidity": [""],
+    "clickCapture": true,
+    "framework": "Vue"
+  },
+  "schema": {
+    "properties": [
+      {
+        "name": "0",
+        "label": {
+          "zh_CN": "基础属性"
+        },
+        "content": [
+          {
+            "property": "delay",
+            "label": {
+              "text": {
+                "zh_CN": "delay"
+              }
+            },
+            "description": {
+              "zh_CN": "延迟显示加载效果的时间（防止闪烁）"
+            },
+            "required": false,
+            "readOnly": false,
+            "disabled": false,
+            "cols": 12,
+            "labelPosition": "top",
+            "type": "number (milliseconds)",
+            "device": []
+          },
+          {
+            "property": "size",
+            "label": {
+              "text": {
+                "zh_CN": "size"
+              }
+            },
+            "description": {
+              "zh_CN": "组件大小，可选值为 `small` `default` `large`"
+            },
+            "required": false,
+            "readOnly": false,
+            "disabled": false,
+            "cols": 12,
+            "labelPosition": "top",
+            "type": "string",
+            "defaultValue": "`default`",
+            "widget": {
+              "component": "MetaInput",
+              "props": {}
+            },
+            "device": []
+          },
+          {
+            "property": "spinning",
+            "label": {
+              "text": {
+                "zh_CN": "spinning"
+              }
+            },
+            "description": {
+              "zh_CN": "是否为加载中状态"
+            },
+            "required": false,
+            "readOnly": false,
+            "disabled": false,
+            "cols": 12,
+            "labelPosition": "top",
+            "type": "boolean",
+            "defaultValue": true,
+            "widget": {
+              "component": "MetaSwitch",
+              "props": {}
+            },
+            "device": []
+          },
+          {
+            "property": "tip",
+            "label": {
+              "text": {
+                "zh_CN": "tip"
+              }
+            },
+            "description": {
+              "zh_CN": "当作为包裹元素时，可以自定义描述文案"
+            },
+            "required": false,
+            "readOnly": false,
+            "disabled": false,
+            "cols": 12,
+            "labelPosition": "top",
+            "type": "string",
+            "widget": {
+              "component": "MetaSelect",
+              "props": {
+                "options": [
+                  {
+                    "label": "string",
+                    "value": "string"
+                  },
+                  {
+                    "label": "slot",
+                    "value": "slot"
+                  }
+                ]
+              }
+            },
+            "device": []
+          },
+          {
+            "property": "wrapperClassName",
+            "label": {
+              "text": {
+                "zh_CN": "wrapperClassName"
+              }
+            },
+            "description": {
+              "zh_CN": "包装器的类属性"
+            },
+            "required": false,
+            "readOnly": false,
+            "disabled": false,
+            "cols": 12,
+            "labelPosition": "top",
+            "type": "string",
+            "widget": {
+              "component": "MetaInput",
+              "props": {}
+            },
+            "device": []
+          }
+        ],
+        "description": {
+          "zh_CN": ""
+        }
+      }
+    ],
+    "events": {},
+    "slots": {
+      "indicator": {
+        "label": {
+          "zh_CN": "indicator"
+        },
+        "description": {
+          "zh_CN": "加载指示符"
+        }
+      },
+      "tip": {
+        "label": {
+          "zh_CN": "tip"
+        },
+        "description": {
+          "zh_CN": "当作为包裹元素时，可以自定义描述文案"
+        }
+      }
+    }
+  },
+  "snippets": [{}]
+}

@@ -1,0 +1,612 @@
+{
+  "id": 1,
+  "version": "4.1.2",
+  "name": {
+    "zh_CN": "列表"
+  },
+  "component": "AList",
+  "icon": "list",
+  "description": "通用列表。",
+  "doc_url": "",
+  "screenshot": "https://mdn.alipayobjects.com/huamei_7uahnr/afts/img/A*tBzwQ7raKX8AAAAAAAAAAAAADrJ8AQ/original",
+  "tags": "",
+  "keywords": "",
+  "dev_mode": "proCode",
+  "npm": {
+    "package": "ant-design-vue",
+    "version": "2.4.2",
+    "script": "https://unpkg.com/browse/ant-design-vue@4.1.2/dist/antd.esm.min.js",
+    "css": "https://unpkg.com/browse/ant-design-vue@4.1.2/dist/reset.css",
+    "dependencies": null,
+    "exportName": "List"
+  },
+  "group": "component",
+  "category": "数据展示",
+  "configure": {
+    "loop": true,
+    "condition": true,
+    "styles": true,
+    "isContainer": false,
+    "isModal": false,
+    "isPopper": false,
+    "nestingRule": {
+      "childWhitelist": "",
+      "parentWhitelist": "",
+      "descendantBlacklist": "",
+      "ancestorWhitelist": ""
+    },
+    "isNullNode": false,
+    "isLayout": false,
+    "rootSelector": "",
+    "shortcuts": {
+      "properties": []
+    },
+    "contextMenu": {
+      "actions": ["copy", "remove", "insert", "updateAttr", "bindEevent", "createBlock"],
+      "disable": []
+    },
+    "invalidity": [""],
+    "clickCapture": true,
+    "framework": "Vue"
+  },
+  "schema": {
+    "properties": [
+      {
+        "name": "0",
+        "label": {
+          "zh_CN": "基础属性"
+        },
+        "content": [
+          {
+            "property": "bordered",
+            "label": {
+              "text": {
+                "zh_CN": "bordered"
+              }
+            },
+            "description": {
+              "zh_CN": "是否展示边框"
+            },
+            "required": false,
+            "readOnly": false,
+            "disabled": false,
+            "cols": 12,
+            "labelPosition": "top",
+            "type": "boolean",
+            "defaultValue": false,
+            "widget": {
+              "component": "MetaSwitch",
+              "props": {}
+            },
+            "device": []
+          },
+          {
+            "property": "footer",
+            "label": {
+              "text": {
+                "zh_CN": "footer"
+              }
+            },
+            "description": {
+              "zh_CN": "列表底部"
+            },
+            "required": false,
+            "readOnly": false,
+            "disabled": false,
+            "cols": 12,
+            "labelPosition": "top",
+            "type": "string",
+            "widget": {
+              "component": "MetaSelect",
+              "props": {
+                "options": [
+                  {
+                    "label": "string",
+                    "value": "string"
+                  },
+                  {
+                    "label": "slot",
+                    "value": "slot"
+                  }
+                ]
+              }
+            },
+            "device": []
+          },
+          {
+            "property": "grid",
+            "label": {
+              "text": {
+                "zh_CN": "grid"
+              }
+            },
+            "description": {
+              "zh_CN": "列表栅格配置"
+            },
+            "required": false,
+            "readOnly": false,
+            "disabled": false,
+            "cols": 12,
+            "labelPosition": "top",
+            "type": "object",
+            "widget": {
+              "component": "MetaCodeEditor",
+              "props": {
+                "language": "json"
+              }
+            },
+            "device": []
+          },
+          {
+            "property": "header",
+            "label": {
+              "text": {
+                "zh_CN": "header"
+              }
+            },
+            "description": {
+              "zh_CN": "列表头部"
+            },
+            "required": false,
+            "readOnly": false,
+            "disabled": false,
+            "cols": 12,
+            "labelPosition": "top",
+            "type": "string",
+            "widget": {
+              "component": "MetaSelect",
+              "props": {
+                "options": [
+                  {
+                    "label": "string",
+                    "value": "string"
+                  },
+                  {
+                    "label": "slot",
+                    "value": "slot"
+                  }
+                ]
+              }
+            },
+            "device": []
+          },
+          {
+            "property": "itemLayout",
+            "label": {
+              "text": {
+                "zh_CN": "itemLayout"
+              }
+            },
+            "description": {
+              "zh_CN": "设置 `List.Item` 布局, 设置成 `vertical` 则竖直样式显示, 默认横排"
+            },
+            "required": false,
+            "readOnly": false,
+            "disabled": false,
+            "cols": 12,
+            "labelPosition": "top",
+            "type": "string",
+            "widget": {
+              "component": "MetaInput",
+              "props": {}
+            },
+            "device": []
+          },
+          {
+            "property": "loading",
+            "label": {
+              "text": {
+                "zh_CN": "loading"
+              }
+            },
+            "description": {
+              "zh_CN": "当卡片内容还在加载中时，可以用 `loading` 展示一个占位"
+            },
+            "required": false,
+            "readOnly": false,
+            "disabled": false,
+            "cols": 12,
+            "labelPosition": "top",
+            "type": "boolean",
+            "defaultValue": false,
+            "widget": {
+              "component": "MetaSwitch",
+              "props": {}
+            },
+            "device": []
+          },
+          {
+            "property": "loadMore",
+            "label": {
+              "text": {
+                "zh_CN": "loadMore"
+              }
+            },
+            "description": {
+              "zh_CN": "加载更多"
+            },
+            "required": false,
+            "readOnly": false,
+            "disabled": false,
+            "cols": 12,
+            "labelPosition": "top",
+            "type": "string",
+            "widget": {
+              "component": "MetaSelect",
+              "props": {
+                "options": [
+                  {
+                    "label": "string",
+                    "value": "string"
+                  },
+                  {
+                    "label": "slot",
+                    "value": "slot"
+                  }
+                ]
+              }
+            },
+            "device": []
+          },
+          {
+            "property": "locale",
+            "label": {
+              "text": {
+                "zh_CN": "locale"
+              }
+            },
+            "description": {
+              "zh_CN": "默认文案设置，目前包括空数据文案"
+            },
+            "required": false,
+            "readOnly": false,
+            "disabled": false,
+            "cols": 12,
+            "labelPosition": "top",
+            "type": "object",
+            "widget": {
+              "component": "MetaCodeEditor",
+              "props": {
+                "language": "json"
+              }
+            },
+            "device": []
+          },
+          {
+            "property": "pagination",
+            "label": {
+              "text": {
+                "zh_CN": "pagination"
+              }
+            },
+            "description": {
+              "zh_CN": "对应的 `pagination` [配置](https://www.antdv.com/components/pagination-cn/#api), 设置 `false` 不显示"
+            },
+            "required": false,
+            "readOnly": false,
+            "disabled": false,
+            "cols": 12,
+            "labelPosition": "top",
+            "type": "boolean",
+            "defaultValue": false,
+            "widget": {
+              "component": "MetaSwitch",
+              "props": {}
+            },
+            "device": []
+          },
+          {
+            "property": "rowKey",
+            "label": {
+              "text": {
+                "zh_CN": "rowKey"
+              }
+            },
+            "description": {
+              "zh_CN": "各项 key 的取值，可以是字符串或一个函数"
+            },
+            "required": false,
+            "readOnly": false,
+            "disabled": false,
+            "cols": 12,
+            "labelPosition": "top",
+            "type": "string",
+            "defaultValue": "`key`",
+            "widget": {
+              "component": "MetaInput",
+              "props": {}
+            },
+            "device": []
+          },
+          {
+            "property": "split",
+            "label": {
+              "text": {
+                "zh_CN": "split"
+              }
+            },
+            "description": {
+              "zh_CN": "是否展示分割线"
+            },
+            "required": false,
+            "readOnly": false,
+            "disabled": false,
+            "cols": 12,
+            "labelPosition": "top",
+            "type": "boolean",
+            "defaultValue": true,
+            "widget": {
+              "component": "MetaSwitch",
+              "props": {}
+            },
+            "device": []
+          },
+          {
+            "property": "column",
+            "label": {
+              "text": {
+                "zh_CN": "column"
+              }
+            },
+            "description": {
+              "zh_CN": "列数"
+            },
+            "required": false,
+            "readOnly": false,
+            "disabled": false,
+            "cols": 12,
+            "labelPosition": "top",
+            "type": "number oneof [ 1, 2, 3, 4, 6, 8, 12, 24]",
+            "device": []
+          },
+          {
+            "property": "gutter",
+            "label": {
+              "text": {
+                "zh_CN": "gutter"
+              }
+            },
+            "description": {
+              "zh_CN": "栅格间隔"
+            },
+            "required": false,
+            "readOnly": false,
+            "disabled": false,
+            "cols": 12,
+            "labelPosition": "top",
+            "type": "number",
+            "defaultValue": 0,
+            "widget": {
+              "component": "MetaNumber",
+              "props": {}
+            },
+            "device": []
+          },
+          {
+            "property": "size",
+            "label": {
+              "text": {
+                "zh_CN": "size"
+              }
+            },
+            "description": {
+              "zh_CN": "list 的尺寸"
+            },
+            "required": false,
+            "readOnly": false,
+            "disabled": false,
+            "cols": 12,
+            "labelPosition": "top",
+            "type": "string",
+            "defaultValue": "`default`",
+            "widget": {
+              "component": "MetaSelect",
+              "props": {
+                "options": [
+                  {
+                    "label": "default",
+                    "value": "default"
+                  },
+                  {
+                    "label": "middle",
+                    "value": "middle"
+                  },
+                  {
+                    "label": "small",
+                    "value": "small"
+                  }
+                ]
+              }
+            },
+            "device": []
+          },
+          {
+            "property": "xxxl",
+            "label": {
+              "text": {
+                "zh_CN": "xxxl"
+              }
+            },
+            "description": {
+              "zh_CN": "`≥2000px` 展示的列数"
+            },
+            "required": false,
+            "readOnly": false,
+            "disabled": false,
+            "cols": 12,
+            "labelPosition": "top",
+            "type": "number",
+            "widget": {
+              "component": "MetaNumber",
+              "props": {}
+            },
+            "device": []
+          },
+          {
+            "property": "xs",
+            "label": {
+              "text": {
+                "zh_CN": "xs"
+              }
+            },
+            "description": {
+              "zh_CN": "`<576px` 展示的列数"
+            },
+            "required": false,
+            "readOnly": false,
+            "disabled": false,
+            "cols": 12,
+            "labelPosition": "top",
+            "type": "number",
+            "widget": {
+              "component": "MetaNumber",
+              "props": {}
+            },
+            "device": []
+          },
+          {
+            "property": "sm",
+            "label": {
+              "text": {
+                "zh_CN": "sm"
+              }
+            },
+            "description": {
+              "zh_CN": "`≥576px` 展示的列数"
+            },
+            "required": false,
+            "readOnly": false,
+            "disabled": false,
+            "cols": 12,
+            "labelPosition": "top",
+            "type": "number",
+            "widget": {
+              "component": "MetaNumber",
+              "props": {}
+            },
+            "device": []
+          },
+          {
+            "property": "md",
+            "label": {
+              "text": {
+                "zh_CN": "md"
+              }
+            },
+            "description": {
+              "zh_CN": "`≥768px` 展示的列数"
+            },
+            "required": false,
+            "readOnly": false,
+            "disabled": false,
+            "cols": 12,
+            "labelPosition": "top",
+            "type": "number",
+            "widget": {
+              "component": "MetaNumber",
+              "props": {}
+            },
+            "device": []
+          },
+          {
+            "property": "lg",
+            "label": {
+              "text": {
+                "zh_CN": "lg"
+              }
+            },
+            "description": {
+              "zh_CN": "`≥992px` 展示的列数"
+            },
+            "required": false,
+            "readOnly": false,
+            "disabled": false,
+            "cols": 12,
+            "labelPosition": "top",
+            "type": "number",
+            "widget": {
+              "component": "MetaNumber",
+              "props": {}
+            },
+            "device": []
+          },
+          {
+            "property": "xl",
+            "label": {
+              "text": {
+                "zh_CN": "xl"
+              }
+            },
+            "description": {
+              "zh_CN": "`≥1200px` 展示的列数"
+            },
+            "required": false,
+            "readOnly": false,
+            "disabled": false,
+            "cols": 12,
+            "labelPosition": "top",
+            "type": "number",
+            "widget": {
+              "component": "MetaNumber",
+              "props": {}
+            },
+            "device": []
+          },
+          {
+            "property": "xxl",
+            "label": {
+              "text": {
+                "zh_CN": "xxl"
+              }
+            },
+            "description": {
+              "zh_CN": "`≥1600px` 展示的列数"
+            },
+            "required": false,
+            "readOnly": false,
+            "disabled": false,
+            "cols": 12,
+            "labelPosition": "top",
+            "type": "number",
+            "widget": {
+              "component": "MetaNumber",
+              "props": {}
+            },
+            "device": []
+          }
+        ],
+        "description": {
+          "zh_CN": ""
+        }
+      }
+    ],
+    "events": {},
+    "slots": {
+      "footer": {
+        "label": {
+          "zh_CN": "footer"
+        },
+        "description": {
+          "zh_CN": "列表底部"
+        }
+      },
+      "header": {
+        "label": {
+          "zh_CN": "header"
+        },
+        "description": {
+          "zh_CN": "列表头部"
+        }
+      },
+      "loadMore": {
+        "label": {
+          "zh_CN": "loadMore"
+        },
+        "description": {
+          "zh_CN": "加载更多"
+        }
+      }
+    }
+  },
+  "snippets": [{}]
+}

@@ -1,0 +1,530 @@
+{
+  "id": 1,
+  "version": "4.1.2",
+  "name": {
+    "zh_CN": "时间选择框"
+  },
+  "component": "ATimePicker",
+  "icon": "time-picker",
+  "description": "输入或选择时间的控件。",
+  "doc_url": "",
+  "screenshot": "https://mdn.alipayobjects.com/huamei_7uahnr/afts/img/A*1hDmQJIDFJQAAAAAAAAAAAAADrJ8AQ/original",
+  "tags": "",
+  "keywords": "",
+  "dev_mode": "proCode",
+  "npm": {
+    "package": "ant-design-vue",
+    "version": "2.4.2",
+    "script": "https://unpkg.com/browse/ant-design-vue@4.1.2/dist/antd.esm.min.js",
+    "css": "https://unpkg.com/browse/ant-design-vue@4.1.2/dist/reset.css",
+    "dependencies": null,
+    "exportName": "TimePicker"
+  },
+  "group": "component",
+  "category": "数据录入",
+  "configure": {
+    "loop": true,
+    "condition": true,
+    "styles": true,
+    "isContainer": false,
+    "isModal": false,
+    "isPopper": false,
+    "nestingRule": {
+      "childWhitelist": "",
+      "parentWhitelist": "",
+      "descendantBlacklist": "",
+      "ancestorWhitelist": ""
+    },
+    "isNullNode": false,
+    "isLayout": false,
+    "rootSelector": "",
+    "shortcuts": {
+      "properties": []
+    },
+    "contextMenu": {
+      "actions": ["copy", "remove", "insert", "updateAttr", "bindEevent", "createBlock"],
+      "disable": []
+    },
+    "invalidity": [""],
+    "clickCapture": true,
+    "framework": "Vue"
+  },
+  "schema": {
+    "properties": [
+      {
+        "name": "0",
+        "label": {
+          "zh_CN": "基础属性"
+        },
+        "content": [
+          {
+            "property": "allowClear",
+            "label": {
+              "text": {
+                "zh_CN": "allowClear"
+              }
+            },
+            "description": {
+              "zh_CN": "是否展示清除按钮"
+            },
+            "required": false,
+            "readOnly": false,
+            "disabled": false,
+            "cols": 12,
+            "labelPosition": "top",
+            "type": "boolean",
+            "defaultValue": true,
+            "widget": {
+              "component": "MetaSwitch",
+              "props": {}
+            },
+            "device": []
+          },
+          {
+            "property": "autofocus",
+            "label": {
+              "text": {
+                "zh_CN": "autofocus"
+              }
+            },
+            "description": {
+              "zh_CN": "自动获取焦点"
+            },
+            "required": false,
+            "readOnly": false,
+            "disabled": false,
+            "cols": 12,
+            "labelPosition": "top",
+            "type": "boolean",
+            "defaultValue": false,
+            "widget": {
+              "component": "MetaSwitch",
+              "props": {}
+            },
+            "device": []
+          },
+          {
+            "property": "bordered",
+            "label": {
+              "text": {
+                "zh_CN": "bordered"
+              }
+            },
+            "description": {
+              "zh_CN": "是否有边框"
+            },
+            "required": false,
+            "readOnly": false,
+            "disabled": false,
+            "cols": 12,
+            "labelPosition": "top",
+            "type": "boolean",
+            "defaultValue": true,
+            "widget": {
+              "component": "MetaSwitch",
+              "props": {}
+            },
+            "device": []
+          },
+          {
+            "property": "clearText",
+            "label": {
+              "text": {
+                "zh_CN": "clearText"
+              }
+            },
+            "description": {
+              "zh_CN": "清除按钮的提示文案"
+            },
+            "required": false,
+            "readOnly": false,
+            "disabled": false,
+            "cols": 12,
+            "labelPosition": "top",
+            "type": "string",
+            "defaultValue": "clear",
+            "widget": {
+              "component": "MetaInput",
+              "props": {}
+            },
+            "device": []
+          },
+          {
+            "property": "disabled",
+            "label": {
+              "text": {
+                "zh_CN": "disabled"
+              }
+            },
+            "description": {
+              "zh_CN": "禁用全部操作"
+            },
+            "required": false,
+            "readOnly": false,
+            "disabled": false,
+            "cols": 12,
+            "labelPosition": "top",
+            "type": "boolean",
+            "defaultValue": false,
+            "widget": {
+              "component": "MetaSwitch",
+              "props": {}
+            },
+            "device": []
+          },
+          {
+            "property": "format",
+            "label": {
+              "text": {
+                "zh_CN": "format"
+              }
+            },
+            "description": {
+              "zh_CN": "展示的时间格式"
+            },
+            "required": false,
+            "readOnly": false,
+            "disabled": false,
+            "cols": 12,
+            "labelPosition": "top",
+            "type": "string",
+            "defaultValue": "`HH:mm:ss`",
+            "widget": {
+              "component": "MetaInput",
+              "props": {}
+            },
+            "device": []
+          },
+          {
+            "property": "getPopupContainer",
+            "label": {
+              "text": {
+                "zh_CN": "getPopupContainer"
+              }
+            },
+            "description": {
+              "zh_CN": "定义浮层的容器，默认为 body 上新建 div"
+            },
+            "required": false,
+            "readOnly": false,
+            "disabled": false,
+            "cols": 12,
+            "labelPosition": "top",
+            "type": "function",
+            "widget": {
+              "component": "MetaCodeEditor",
+              "props": {}
+            },
+            "device": []
+          },
+          {
+            "property": "hideDisabledOptions",
+            "label": {
+              "text": {
+                "zh_CN": "hideDisabledOptions"
+              }
+            },
+            "description": {
+              "zh_CN": "隐藏禁止选择的选项"
+            },
+            "required": false,
+            "readOnly": false,
+            "disabled": false,
+            "cols": 12,
+            "labelPosition": "top",
+            "type": "boolean",
+            "defaultValue": false,
+            "widget": {
+              "component": "MetaSwitch",
+              "props": {}
+            },
+            "device": []
+          },
+          {
+            "property": "hourStep",
+            "label": {
+              "text": {
+                "zh_CN": "hourStep"
+              }
+            },
+            "description": {
+              "zh_CN": "小时选项间隔"
+            },
+            "required": false,
+            "readOnly": false,
+            "disabled": false,
+            "cols": 12,
+            "labelPosition": "top",
+            "type": "number",
+            "defaultValue": 1,
+            "widget": {
+              "component": "MetaNumber",
+              "props": {}
+            },
+            "device": []
+          },
+          {
+            "property": "inputReadOnly",
+            "label": {
+              "text": {
+                "zh_CN": "inputReadOnly"
+              }
+            },
+            "description": {
+              "zh_CN": "设置输入框为只读（避免在移动设备上打开虚拟键盘）"
+            },
+            "required": false,
+            "readOnly": false,
+            "disabled": false,
+            "cols": 12,
+            "labelPosition": "top",
+            "type": "boolean",
+            "defaultValue": false,
+            "widget": {
+              "component": "MetaSwitch",
+              "props": {}
+            },
+            "device": []
+          },
+          {
+            "property": "minuteStep",
+            "label": {
+              "text": {
+                "zh_CN": "minuteStep"
+              }
+            },
+            "description": {
+              "zh_CN": "分钟选项间隔"
+            },
+            "required": false,
+            "readOnly": false,
+            "disabled": false,
+            "cols": 12,
+            "labelPosition": "top",
+            "type": "number",
+            "defaultValue": 1,
+            "widget": {
+              "component": "MetaNumber",
+              "props": {}
+            },
+            "device": []
+          },
+          {
+            "property": "open",
+            "label": {
+              "text": {
+                "zh_CN": "open(v-model)"
+              }
+            },
+            "description": {
+              "zh_CN": "面板是否打开"
+            },
+            "required": false,
+            "readOnly": false,
+            "disabled": false,
+            "cols": 12,
+            "labelPosition": "top",
+            "type": "boolean",
+            "defaultValue": false,
+            "widget": {
+              "component": "MetaSwitch",
+              "props": {}
+            },
+            "device": []
+          },
+          {
+            "property": "placeholder",
+            "label": {
+              "text": {
+                "zh_CN": "placeholder"
+              }
+            },
+            "description": {
+              "zh_CN": "没有值的时候显示的内容"
+            },
+            "required": false,
+            "readOnly": false,
+            "disabled": false,
+            "cols": 12,
+            "labelPosition": "top",
+            "type": "string",
+            "defaultValue": "`Select a time`",
+            "widget": {
+              "component": "MetaInput",
+              "props": {}
+            },
+            "device": []
+          },
+          {
+            "property": "popupClassName",
+            "label": {
+              "text": {
+                "zh_CN": "popupClassName"
+              }
+            },
+            "description": {
+              "zh_CN": "弹出层类名"
+            },
+            "required": false,
+            "readOnly": false,
+            "disabled": false,
+            "cols": 12,
+            "labelPosition": "top",
+            "type": "string",
+            "widget": {
+              "component": "MetaInput",
+              "props": {}
+            },
+            "device": []
+          },
+          {
+            "property": "secondStep",
+            "label": {
+              "text": {
+                "zh_CN": "secondStep"
+              }
+            },
+            "description": {
+              "zh_CN": "秒选项间隔"
+            },
+            "required": false,
+            "readOnly": false,
+            "disabled": false,
+            "cols": 12,
+            "labelPosition": "top",
+            "type": "number",
+            "defaultValue": 1,
+            "widget": {
+              "component": "MetaNumber",
+              "props": {}
+            },
+            "device": []
+          },
+          {
+            "property": "showNow",
+            "label": {
+              "text": {
+                "zh_CN": "showNow"
+              }
+            },
+            "description": {
+              "zh_CN": "面板是否显示“此刻”按钮"
+            },
+            "required": false,
+            "readOnly": false,
+            "disabled": false,
+            "cols": 12,
+            "labelPosition": "top",
+            "type": "boolean",
+            "widget": {
+              "component": "MetaSwitch",
+              "props": {}
+            },
+            "device": []
+          },
+          {
+            "property": "use12Hours",
+            "label": {
+              "text": {
+                "zh_CN": "use12Hours"
+              }
+            },
+            "description": {
+              "zh_CN": "使用 12 小时制，为 true 时 `format` 默认为 `h:mm:ss a`"
+            },
+            "required": false,
+            "readOnly": false,
+            "disabled": false,
+            "cols": 12,
+            "labelPosition": "top",
+            "type": "boolean",
+            "defaultValue": false,
+            "widget": {
+              "component": "MetaSwitch",
+              "props": {}
+            },
+            "device": []
+          },
+          {
+            "property": "valueFormat",
+            "label": {
+              "text": {
+                "zh_CN": "valueFormat"
+              }
+            },
+            "description": {
+              "zh_CN": "可选，绑定值的格式，对 value、defaultValue 起作用。不指定则绑定值为 dayjs 对象"
+            },
+            "required": false,
+            "readOnly": false,
+            "disabled": false,
+            "cols": 12,
+            "labelPosition": "top",
+            "type": "string, [date formats](https://day.js.org/docs/en/display/format)",
+            "device": []
+          }
+        ],
+        "description": {
+          "zh_CN": ""
+        }
+      }
+    ],
+    "events": {
+      "onChange": {
+        "label": {
+          "zh_CN": "change"
+        },
+        "description": {
+          "zh_CN": "a callback function, can be executed when the selected time is changing"
+        },
+        "type": "event",
+        "functionInfo": {
+          "params": [],
+          "returns": {}
+        },
+        "defaultValue": ""
+      },
+      "onOpenChange": {
+        "label": {
+          "zh_CN": "openChange"
+        },
+        "description": {
+          "zh_CN": "a callback function which will be called while panel opening/closing"
+        },
+        "type": "event",
+        "functionInfo": {
+          "params": [],
+          "returns": {}
+        },
+        "defaultValue": ""
+      }
+    },
+    "slots": {
+      "clearIcon": {
+        "label": {
+          "zh_CN": "clearIcon"
+        },
+        "description": {
+          "zh_CN": "自定义的清除图标"
+        }
+      },
+      "renderExtraFooter": {
+        "label": {
+          "zh_CN": "renderExtraFooter"
+        },
+        "description": {
+          "zh_CN": "选择框底部显示自定义的内容"
+        }
+      },
+      "suffixIcon": {
+        "label": {
+          "zh_CN": "suffixIcon"
+        },
+        "description": {
+          "zh_CN": "自定义的选择框后缀图标"
+        }
+      }
+    }
+  },
+  "snippets": [{}]
+}

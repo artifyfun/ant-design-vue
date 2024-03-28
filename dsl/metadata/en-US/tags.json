@@ -2,6 +2,32 @@
   "affix": {
     "attributes": ["offsetBottom", "offsetTop", "target"]
   },
+  "auto-complete": {
+    "attributes": [
+      "allowClear",
+      "autofocus",
+      "backfill",
+      "bordered",
+      "clearIcon",
+      "default (for customize input element)",
+      "defaultActiveFirstOption",
+      "defaultOpen",
+      "disabled",
+      "popupClassName",
+      "dropdownMatchSelectWidth",
+      "dropdownMenuStyle",
+      "filterOption",
+      "open",
+      "option",
+      "options",
+      "placeholder",
+      "status",
+      "v-model:value"
+    ]
+  },
+  "app": {
+    "attributes": ["message", "notification"]
+  },
   "alert": {
     "attributes": [
       "action",
@@ -37,32 +63,6 @@
   "anchor-item": {
     "attributes": ["key", "href", "target", "title", "children"]
   },
-  "app": {
-    "attributes": ["message", "notification"]
-  },
-  "auto-complete": {
-    "attributes": [
-      "allowClear",
-      "autofocus",
-      "backfill",
-      "bordered",
-      "clearIcon",
-      "default (自定义输入框)",
-      "defaultActiveFirstOption",
-      "defaultOpen",
-      "disabled",
-      "popupClassName",
-      "dropdownMatchSelectWidth",
-      "dropdownMenuStyle",
-      "filterOption",
-      "open",
-      "option",
-      "options",
-      "placeholder",
-      "status",
-      "v-model:value"
-    ]
-  },
   "avatar": {
     "attributes": [
       "alt",
@@ -87,23 +87,6 @@
       "shape"
     ]
   },
-  "badge": {
-    "attributes": [
-      "color",
-      "count",
-      "dot",
-      "numberStyle",
-      "offset",
-      "overflowCount",
-      "showZero",
-      "status",
-      "text",
-      "title"
-    ]
-  },
-  "badge-ribbon": {
-    "attributes": ["color", "placement", "text"]
-  },
   "breadcrumb": {
     "attributes": ["itemRender", "params", "routes", "separator"]
   },
@@ -126,9 +109,7 @@
       "shape",
       "size",
       "target",
-      "type",
-      "blur()",
-      "focus()"
+      "type"
     ]
   },
   "calendar": {
@@ -191,7 +172,6 @@
       "bordered",
       "clearIcon",
       "changeOnSelect",
-      "defaultValue",
       "disabled",
       "displayRender",
       "popupClassName",
@@ -209,13 +189,13 @@
       "options",
       "placeholder",
       "placement",
-      "showCheckedStrategy",
       "removeIcon",
       "searchValue",
       "showSearch",
-      "status",
       "size",
+      "status",
       "suffixIcon",
+      "showCheckedStrategy",
       "tagRender",
       "value(v-model)"
     ]
@@ -248,7 +228,7 @@
     ]
   },
   "collapse-panel": {
-    "attributes": ["collapsible", "extra", "forceRender", "header", "key", "showArrow"]
+    "attributes": ["collapsible", "disabled", "extra", "forceRender", "header", "key", "showArrow"]
   },
   "comment": {
     "attributes": ["actions", "author", "avatar", "content", "datetime"]
@@ -294,8 +274,8 @@
       "placeholder",
       "placement",
       "popupStyle",
-      "prevIcon",
       "presets",
+      "prevIcon",
       "size",
       "status",
       "suffixIcon",
@@ -344,6 +324,7 @@
       "push",
       "rootClassName",
       "rootStyle",
+      "style",
       "size",
       "style",
       "title",
@@ -377,9 +358,7 @@
       "size",
       "trigger",
       "type",
-      "open(v-model)",
-      "click",
-      "openChange"
+      "open(v-model)"
     ]
   },
   "empty": {
@@ -389,17 +368,7 @@
     "attributes": ["vertical", "wrap", "justify", "align", "flex", "gap", "component"]
   },
   "float-button": {
-    "attributes": [
-      "icon",
-      "description",
-      "tooltip",
-      "type",
-      "shape",
-      "onClick",
-      "href",
-      "target",
-      "badge"
-    ]
+    "attributes": ["icon", "description", "tooltip", "type", "shape", "href", "target", "badge"]
   },
   "form": {
     "attributes": [
@@ -447,8 +416,23 @@
   "icon": {
     "attributes": []
   },
-  "自定义": {
-    "attributes": ["component", "rotate", "spin", "style"]
+  "common": {
+    "attributes": ["rotate", "spin", "style", "twoToneColor"]
+  },
+  "custom": {
+    "attributes": [
+      "component",
+      "rotate",
+      "spin",
+      "style",
+      "extraCommonProps",
+      "scriptUrl",
+      "class",
+      "fill",
+      "height",
+      "style",
+      "width"
+    ]
   },
   "image": {
     "attributes": [
@@ -514,9 +498,9 @@
       "status",
       "step",
       "stringMode",
+      "value(v-model)",
       "upIcon",
-      "downIcon",
-      "value(v-model)"
+      "downIcon"
     ]
   },
   "layout": {
@@ -552,10 +536,10 @@
       "pagination",
       "renderItem",
       "rowKey",
-      "size",
       "split",
       "column",
       "gutter",
+      "size",
       "xxxl",
       "xs",
       "sm",
@@ -572,23 +556,7 @@
     "attributes": ["avatar", "description", "title"]
   },
   "mentions": {
-    "attributes": [
-      "autofocus",
-      "defaultValue",
-      "filterOption",
-      "getPopupContainer",
-      "notFoundContent",
-      "placement",
-      "prefix",
-      "split",
-      "status",
-      "validateSearch",
-      "value(v-model)",
-      "options",
-      "option",
-      "blur()",
-      "focus()"
-    ]
+    "attributes": []
   },
   "menu": {
     "attributes": [
@@ -602,6 +570,7 @@
       "overflowedIndicator",
       "selectable",
       "selectedKeys(v-model)",
+      "style",
       "subMenuCloseDelay",
       "subMenuOpenDelay",
       "theme",
@@ -613,7 +582,7 @@
     ]
   },
   "menu-item": {
-    "attributes": ["disabled", "icon", "key", "title"]
+    "attributes": ["disabled", "key", "title"]
   },
   "menu-item-type": {
     "attributes": ["danger", "disabled", "icon", "key", "label", "title"]
@@ -627,8 +596,8 @@
       "label",
       "popupClassName",
       "popupOffset",
-      "onTitleClick",
-      "theme"
+      "theme",
+      "onTitleClick"
     ]
   },
   "menu-item-group-type": {
@@ -641,18 +610,15 @@
     "attributes": [
       "disabled",
       "expandIcon",
-      "icon",
       "key",
       "popupClassName",
       "popupOffset",
-      "title"
+      "title",
+      "titleClick"
     ]
   },
-  "sub-menu": {
-    "attributes": ["titleClick"]
-  },
   "menu-item-group": {
-    "attributes": ["title"]
+    "attributes": ["children", "title"]
   },
   "menu-divider": {
     "attributes": ["dashed"]
@@ -674,7 +640,6 @@
       "footer",
       "forceRender",
       "getContainer",
-      "keyboard",
       "mask",
       "maskClosable",
       "maskStyle",
@@ -723,6 +688,7 @@
   "pagination": {
     "attributes": [
       "current(v-model)",
+      "defaultCurrent",
       "defaultPageSize",
       "disabled",
       "hideOnSinglePage",
@@ -733,6 +699,7 @@
       "showLessItems",
       "showQuickJumper",
       "showSizeChanger",
+      "showTitle",
       "showTotal",
       "simple",
       "size",
@@ -753,7 +720,7 @@
       "showCancel",
       "title",
       "description",
-      "open (v-model)"
+      "visible (v-model)"
     ]
   },
   "popover": {
@@ -846,6 +813,7 @@
       "getPopupContainer",
       "labelInValue",
       "listHeight",
+      "loading",
       "maxTagCount",
       "maxTagPlaceholder",
       "maxTagTextLength",
@@ -897,6 +865,7 @@
       "autofocus",
       "disabled",
       "dots",
+      "handleStyle",
       "included",
       "mark",
       "marks",
@@ -905,6 +874,7 @@
       "range",
       "reverse",
       "step",
+      "trackStyle",
       "value(v-model)",
       "vertical",
       "tipFormatter",
@@ -940,7 +910,7 @@
   },
   "steps": {
     "attributes": [
-      "current (v-model)",
+      "current(v-model)",
       "direction",
       "initial",
       "labelPlacement",
@@ -1019,7 +989,6 @@
     "attributes": [
       "activeKey(v-model)",
       "animated",
-      "centered",
       "destroyInactiveTabPane",
       "hideAdd",
       "size",
@@ -1034,18 +1003,19 @@
       "rightExtra",
       "change",
       "edit",
-      "tabClick",
-      "tabScroll"
+      "nextClick",
+      "prevClick",
+      "tabClick"
     ]
   },
   "tabs-tab-pane": {
     "attributes": ["forceRender", "key", "tab", "closeIcon", "tab"]
   },
   "tag": {
-    "attributes": ["closable", "closeIcon", "color", "icon", "bordered"]
+    "attributes": ["closable", "closeIcon", "color", "icon", "bordered", "close"]
   },
   "tag-checkable-tag": {
-    "attributes": ["checked(v-model)"]
+    "attributes": ["checked(v-model)", "change"]
   },
   "time-picker": {
     "attributes": [
@@ -1070,7 +1040,6 @@
       "renderExtraFooter",
       "secondStep",
       "showNow",
-      "status",
       "suffixIcon",
       "use12Hours",
       "value(v-model)",

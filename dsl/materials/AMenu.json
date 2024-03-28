@@ -1,0 +1,495 @@
+{
+  "id": 1,
+  "version": "4.1.2",
+  "name": {
+    "zh_CN": "导航菜单"
+  },
+  "component": "AMenu",
+  "icon": "menu",
+  "description": "为页面和功能提供导航的菜单列表。",
+  "doc_url": "",
+  "screenshot": "https://mdn.alipayobjects.com/huamei_7uahnr/afts/img/A*Vn4XSqJFAxcAAAAAAAAAAAAADrJ8AQ/original",
+  "tags": "",
+  "keywords": "",
+  "dev_mode": "proCode",
+  "npm": {
+    "package": "ant-design-vue",
+    "version": "2.4.2",
+    "script": "https://unpkg.com/browse/ant-design-vue@4.1.2/dist/antd.esm.min.js",
+    "css": "https://unpkg.com/browse/ant-design-vue@4.1.2/dist/reset.css",
+    "dependencies": null,
+    "exportName": "Menu"
+  },
+  "group": "component",
+  "category": "导航",
+  "configure": {
+    "loop": true,
+    "condition": true,
+    "styles": true,
+    "isContainer": false,
+    "isModal": false,
+    "isPopper": false,
+    "nestingRule": {
+      "childWhitelist": "",
+      "parentWhitelist": "",
+      "descendantBlacklist": "",
+      "ancestorWhitelist": ""
+    },
+    "isNullNode": false,
+    "isLayout": false,
+    "rootSelector": "",
+    "shortcuts": {
+      "properties": []
+    },
+    "contextMenu": {
+      "actions": ["copy", "remove", "insert", "updateAttr", "bindEevent", "createBlock"],
+      "disable": []
+    },
+    "invalidity": [""],
+    "clickCapture": true,
+    "framework": "Vue"
+  },
+  "schema": {
+    "properties": [
+      {
+        "name": "0",
+        "label": {
+          "zh_CN": "基础属性"
+        },
+        "content": [
+          {
+            "property": "forceSubMenuRender",
+            "label": {
+              "text": {
+                "zh_CN": "forceSubMenuRender"
+              }
+            },
+            "description": {
+              "zh_CN": "在子菜单展示之前就渲染进 DOM"
+            },
+            "required": false,
+            "readOnly": false,
+            "disabled": false,
+            "cols": 12,
+            "labelPosition": "top",
+            "type": "boolean",
+            "defaultValue": false,
+            "widget": {
+              "component": "MetaSwitch",
+              "props": {}
+            },
+            "device": []
+          },
+          {
+            "property": "inlineCollapsed",
+            "label": {
+              "text": {
+                "zh_CN": "inlineCollapsed"
+              }
+            },
+            "description": {
+              "zh_CN": "inline 时菜单是否收起状态"
+            },
+            "required": false,
+            "readOnly": false,
+            "disabled": false,
+            "cols": 12,
+            "labelPosition": "top",
+            "type": "boolean",
+            "widget": {
+              "component": "MetaSwitch",
+              "props": {}
+            },
+            "device": []
+          },
+          {
+            "property": "inlineIndent",
+            "label": {
+              "text": {
+                "zh_CN": "inlineIndent"
+              }
+            },
+            "description": {
+              "zh_CN": "inline 模式的菜单缩进宽度"
+            },
+            "required": false,
+            "readOnly": false,
+            "disabled": false,
+            "cols": 12,
+            "labelPosition": "top",
+            "type": "number",
+            "defaultValue": 24,
+            "widget": {
+              "component": "MetaNumber",
+              "props": {}
+            },
+            "device": []
+          },
+          {
+            "property": "mode",
+            "label": {
+              "text": {
+                "zh_CN": "mode"
+              }
+            },
+            "description": {
+              "zh_CN": "菜单类型，现在支持垂直、水平、和内嵌模式三种"
+            },
+            "required": false,
+            "readOnly": false,
+            "disabled": false,
+            "cols": 12,
+            "labelPosition": "top",
+            "type": "string",
+            "defaultValue": "`vertical`",
+            "widget": {
+              "component": "MetaSelect",
+              "props": {
+                "options": [
+                  {
+                    "label": "vertical",
+                    "value": "vertical"
+                  },
+                  {
+                    "label": "horizontal",
+                    "value": "horizontal"
+                  },
+                  {
+                    "label": "inline",
+                    "value": "inline"
+                  }
+                ]
+              }
+            },
+            "device": []
+          },
+          {
+            "property": "multiple",
+            "label": {
+              "text": {
+                "zh_CN": "multiple"
+              }
+            },
+            "description": {
+              "zh_CN": "是否允许多选"
+            },
+            "required": false,
+            "readOnly": false,
+            "disabled": false,
+            "cols": 12,
+            "labelPosition": "top",
+            "type": "boolean",
+            "defaultValue": false,
+            "widget": {
+              "component": "MetaSwitch",
+              "props": {}
+            },
+            "device": []
+          },
+          {
+            "property": "openKeys",
+            "label": {
+              "text": {
+                "zh_CN": "openKeys(v-model)"
+              }
+            },
+            "description": {
+              "zh_CN": "当前展开的 SubMenu 菜单项 key 数组"
+            },
+            "required": false,
+            "readOnly": false,
+            "disabled": false,
+            "cols": 12,
+            "labelPosition": "top",
+            "type": "(string",
+            "defaultValue": "",
+            "device": []
+          },
+          {
+            "property": "selectable",
+            "label": {
+              "text": {
+                "zh_CN": "selectable"
+              }
+            },
+            "description": {
+              "zh_CN": "是否允许选中"
+            },
+            "required": false,
+            "readOnly": false,
+            "disabled": false,
+            "cols": 12,
+            "labelPosition": "top",
+            "type": "boolean",
+            "defaultValue": true,
+            "widget": {
+              "component": "MetaSwitch",
+              "props": {}
+            },
+            "device": []
+          },
+          {
+            "property": "selectedKeys",
+            "label": {
+              "text": {
+                "zh_CN": "selectedKeys(v-model)"
+              }
+            },
+            "description": {
+              "zh_CN": "当前选中的菜单项 key 数组"
+            },
+            "required": false,
+            "readOnly": false,
+            "disabled": false,
+            "cols": 12,
+            "labelPosition": "top",
+            "type": "(string",
+            "defaultValue": "",
+            "device": []
+          },
+          {
+            "property": "style",
+            "label": {
+              "text": {
+                "zh_CN": "style"
+              }
+            },
+            "description": {
+              "zh_CN": "style of the root node"
+            },
+            "required": false,
+            "readOnly": false,
+            "disabled": false,
+            "cols": 12,
+            "labelPosition": "top",
+            "type": "object",
+            "widget": {
+              "component": "MetaCodeEditor",
+              "props": {
+                "language": "json"
+              }
+            },
+            "device": []
+          },
+          {
+            "property": "subMenuCloseDelay",
+            "label": {
+              "text": {
+                "zh_CN": "subMenuCloseDelay"
+              }
+            },
+            "description": {
+              "zh_CN": "用户鼠标离开子菜单后关闭延时，单位：秒"
+            },
+            "required": false,
+            "readOnly": false,
+            "disabled": false,
+            "cols": 12,
+            "labelPosition": "top",
+            "type": "number",
+            "defaultValue": 0.1,
+            "widget": {
+              "component": "MetaNumber",
+              "props": {}
+            },
+            "device": []
+          },
+          {
+            "property": "subMenuOpenDelay",
+            "label": {
+              "text": {
+                "zh_CN": "subMenuOpenDelay"
+              }
+            },
+            "description": {
+              "zh_CN": "用户鼠标进入子菜单后开启延时，单位：秒"
+            },
+            "required": false,
+            "readOnly": false,
+            "disabled": false,
+            "cols": 12,
+            "labelPosition": "top",
+            "type": "number",
+            "defaultValue": 0,
+            "widget": {
+              "component": "MetaNumber",
+              "props": {}
+            },
+            "device": []
+          },
+          {
+            "property": "theme",
+            "label": {
+              "text": {
+                "zh_CN": "theme"
+              }
+            },
+            "description": {
+              "zh_CN": "主题颜色"
+            },
+            "required": false,
+            "readOnly": false,
+            "disabled": false,
+            "cols": 12,
+            "labelPosition": "top",
+            "type": "string",
+            "defaultValue": "`light`",
+            "widget": {
+              "component": "MetaSelect",
+              "props": {
+                "options": [
+                  {
+                    "label": "light",
+                    "value": "light"
+                  },
+                  {
+                    "label": "dark",
+                    "value": "dark"
+                  }
+                ]
+              }
+            },
+            "device": []
+          },
+          {
+            "property": "triggerSubMenuAction",
+            "label": {
+              "text": {
+                "zh_CN": "triggerSubMenuAction"
+              }
+            },
+            "description": {
+              "zh_CN": "修改 Menu 子菜单的触发方式"
+            },
+            "required": false,
+            "readOnly": false,
+            "disabled": false,
+            "cols": 12,
+            "labelPosition": "top",
+            "type": "string",
+            "defaultValue": "`hover`",
+            "widget": {
+              "component": "MetaSelect",
+              "props": {
+                "options": [
+                  {
+                    "label": "click",
+                    "value": "click"
+                  },
+                  {
+                    "label": "hover",
+                    "value": "hover"
+                  }
+                ]
+              }
+            },
+            "device": []
+          },
+          {
+            "property": "click",
+            "label": {
+              "text": {
+                "zh_CN": "click"
+              }
+            },
+            "description": {
+              "zh_CN": "点击 MenuItem 调用此函数"
+            },
+            "required": false,
+            "readOnly": false,
+            "disabled": false,
+            "cols": 12,
+            "labelPosition": "top",
+            "type": "function",
+            "widget": {
+              "component": "MetaCodeEditor",
+              "props": {}
+            },
+            "device": []
+          },
+          {
+            "property": "deselect",
+            "label": {
+              "text": {
+                "zh_CN": "deselect"
+              }
+            },
+            "description": {
+              "zh_CN": "取消选中时调用，仅在 multiple 生效"
+            },
+            "required": false,
+            "readOnly": false,
+            "disabled": false,
+            "cols": 12,
+            "labelPosition": "top",
+            "type": "function",
+            "widget": {
+              "component": "MetaCodeEditor",
+              "props": {}
+            },
+            "device": []
+          },
+          {
+            "property": "openChange",
+            "label": {
+              "text": {
+                "zh_CN": "openChange"
+              }
+            },
+            "description": {
+              "zh_CN": "SubMenu 展开/关闭的回调"
+            },
+            "required": false,
+            "readOnly": false,
+            "disabled": false,
+            "cols": 12,
+            "labelPosition": "top",
+            "type": "function",
+            "widget": {
+              "component": "MetaCodeEditor",
+              "props": {}
+            },
+            "device": []
+          },
+          {
+            "property": "select",
+            "label": {
+              "text": {
+                "zh_CN": "select"
+              }
+            },
+            "description": {
+              "zh_CN": "被选中时调用"
+            },
+            "required": false,
+            "readOnly": false,
+            "disabled": false,
+            "cols": 12,
+            "labelPosition": "top",
+            "type": "function",
+            "widget": {
+              "component": "MetaCodeEditor",
+              "props": {}
+            },
+            "device": []
+          }
+        ],
+        "description": {
+          "zh_CN": ""
+        }
+      }
+    ],
+    "events": {},
+    "slots": {
+      "overflowedIndicator": {
+        "label": {
+          "zh_CN": "overflowedIndicator"
+        },
+        "description": {
+          "zh_CN": "用于自定义 Menu 水平空间不足时的省略收缩的图标"
+        }
+      }
+    }
+  },
+  "snippets": [{}]
+}

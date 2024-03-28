@@ -1,0 +1,395 @@
+{
+  "id": 1,
+  "version": "4.1.2",
+  "name": {
+    "zh_CN": "气泡确认框"
+  },
+  "component": "APopconfirm",
+  "icon": "popconfirm",
+  "description": "点击元素，弹出气泡式的确认框。",
+  "doc_url": "",
+  "screenshot": "https://mdn.alipayobjects.com/huamei_7uahnr/afts/img/A*HrFtQ6jJJFQAAAAAAAAAAAAADrJ8AQ/original",
+  "tags": "",
+  "keywords": "",
+  "dev_mode": "proCode",
+  "npm": {
+    "package": "ant-design-vue",
+    "version": "2.4.2",
+    "script": "https://unpkg.com/browse/ant-design-vue@4.1.2/dist/antd.esm.min.js",
+    "css": "https://unpkg.com/browse/ant-design-vue@4.1.2/dist/reset.css",
+    "dependencies": null,
+    "exportName": "Popconfirm"
+  },
+  "group": "component",
+  "category": "反馈",
+  "configure": {
+    "loop": true,
+    "condition": true,
+    "styles": true,
+    "isContainer": false,
+    "isModal": false,
+    "isPopper": false,
+    "nestingRule": {
+      "childWhitelist": "",
+      "parentWhitelist": "",
+      "descendantBlacklist": "",
+      "ancestorWhitelist": ""
+    },
+    "isNullNode": false,
+    "isLayout": false,
+    "rootSelector": "",
+    "shortcuts": {
+      "properties": []
+    },
+    "contextMenu": {
+      "actions": ["copy", "remove", "insert", "updateAttr", "bindEevent", "createBlock"],
+      "disable": []
+    },
+    "invalidity": [""],
+    "clickCapture": true,
+    "framework": "Vue"
+  },
+  "schema": {
+    "properties": [
+      {
+        "name": "0",
+        "label": {
+          "zh_CN": "基础属性"
+        },
+        "content": [
+          {
+            "property": "cancelText",
+            "label": {
+              "text": {
+                "zh_CN": "cancelText"
+              }
+            },
+            "description": {
+              "zh_CN": "取消按钮文字"
+            },
+            "required": false,
+            "readOnly": false,
+            "disabled": false,
+            "cols": 12,
+            "labelPosition": "top",
+            "type": "string",
+            "defaultValue": "`Cancel`",
+            "widget": {
+              "component": "MetaSelect",
+              "props": {
+                "options": [
+                  {
+                    "label": "string",
+                    "value": "string"
+                  },
+                  {
+                    "label": "slot",
+                    "value": "slot"
+                  }
+                ]
+              }
+            },
+            "device": []
+          },
+          {
+            "property": "disabled",
+            "label": {
+              "text": {
+                "zh_CN": "disabled"
+              }
+            },
+            "description": {
+              "zh_CN": "点击 Popconfirm 子元素是否弹出气泡确认框"
+            },
+            "required": false,
+            "readOnly": false,
+            "disabled": false,
+            "cols": 12,
+            "labelPosition": "top",
+            "type": "boolean",
+            "defaultValue": false,
+            "widget": {
+              "component": "MetaSwitch",
+              "props": {}
+            },
+            "device": []
+          },
+          {
+            "property": "okText",
+            "label": {
+              "text": {
+                "zh_CN": "okText"
+              }
+            },
+            "description": {
+              "zh_CN": "确认按钮文字"
+            },
+            "required": false,
+            "readOnly": false,
+            "disabled": false,
+            "cols": 12,
+            "labelPosition": "top",
+            "type": "string",
+            "defaultValue": "`Confirm`",
+            "widget": {
+              "component": "MetaSelect",
+              "props": {
+                "options": [
+                  {
+                    "label": "string",
+                    "value": "string"
+                  },
+                  {
+                    "label": "slot",
+                    "value": "slot"
+                  }
+                ]
+              }
+            },
+            "device": []
+          },
+          {
+            "property": "okType",
+            "label": {
+              "text": {
+                "zh_CN": "okType"
+              }
+            },
+            "description": {
+              "zh_CN": "确认按钮类型"
+            },
+            "required": false,
+            "readOnly": false,
+            "disabled": false,
+            "cols": 12,
+            "labelPosition": "top",
+            "type": "string",
+            "defaultValue": "`primary`",
+            "widget": {
+              "component": "MetaInput",
+              "props": {}
+            },
+            "device": []
+          },
+          {
+            "property": "showCancel",
+            "label": {
+              "text": {
+                "zh_CN": "showCancel"
+              }
+            },
+            "description": {
+              "zh_CN": "是否显示取消按钮"
+            },
+            "required": false,
+            "readOnly": false,
+            "disabled": false,
+            "cols": 12,
+            "labelPosition": "top",
+            "type": "boolean",
+            "defaultValue": true,
+            "widget": {
+              "component": "MetaSwitch",
+              "props": {}
+            },
+            "device": []
+          },
+          {
+            "property": "title",
+            "label": {
+              "text": {
+                "zh_CN": "title"
+              }
+            },
+            "description": {
+              "zh_CN": "确认框的描述"
+            },
+            "required": false,
+            "readOnly": false,
+            "disabled": false,
+            "cols": 12,
+            "labelPosition": "top",
+            "type": "string",
+            "widget": {
+              "component": "MetaSelect",
+              "props": {
+                "options": [
+                  {
+                    "label": "string",
+                    "value": "string"
+                  },
+                  {
+                    "label": "slot",
+                    "value": "slot"
+                  }
+                ]
+              }
+            },
+            "device": []
+          },
+          {
+            "property": "description",
+            "label": {
+              "text": {
+                "zh_CN": "description"
+              }
+            },
+            "description": {
+              "zh_CN": "确认内容的详细描述"
+            },
+            "required": false,
+            "readOnly": false,
+            "disabled": false,
+            "cols": 12,
+            "labelPosition": "top",
+            "type": "string",
+            "widget": {
+              "component": "MetaSelect",
+              "props": {
+                "options": [
+                  {
+                    "label": "string",
+                    "value": "string"
+                  },
+                  {
+                    "label": "slot",
+                    "value": "slot"
+                  }
+                ]
+              }
+            },
+            "device": []
+          },
+          {
+            "property": "visible",
+            "label": {
+              "text": {
+                "zh_CN": "visible (v-model)"
+              }
+            },
+            "description": {
+              "zh_CN": "hide or show"
+            },
+            "required": false,
+            "readOnly": false,
+            "disabled": false,
+            "cols": 12,
+            "labelPosition": "top",
+            "type": "boolean",
+            "widget": {
+              "component": "MetaSwitch",
+              "props": {}
+            },
+            "device": []
+          }
+        ],
+        "description": {
+          "zh_CN": ""
+        }
+      }
+    ],
+    "events": {
+      "onCancel": {
+        "label": {
+          "zh_CN": "cancel"
+        },
+        "description": {
+          "zh_CN": "callback of cancel"
+        },
+        "type": "event",
+        "functionInfo": {
+          "params": [],
+          "returns": {}
+        },
+        "defaultValue": ""
+      },
+      "onConfirm": {
+        "label": {
+          "zh_CN": "confirm"
+        },
+        "description": {
+          "zh_CN": "callback of confirmation"
+        },
+        "type": "event",
+        "functionInfo": {
+          "params": [],
+          "returns": {}
+        },
+        "defaultValue": ""
+      },
+      "onOpenChange": {
+        "label": {
+          "zh_CN": "openChange"
+        },
+        "description": {
+          "zh_CN": "Callback executed when visibility of the tooltip card is changed"
+        },
+        "type": "event",
+        "functionInfo": {
+          "params": [],
+          "returns": {}
+        },
+        "defaultValue": ""
+      }
+    },
+    "slots": {
+      "cancelButton": {
+        "label": {
+          "zh_CN": "cancelButton"
+        },
+        "description": {
+          "zh_CN": "完全自定义取消按钮"
+        }
+      },
+      "cancelText": {
+        "label": {
+          "zh_CN": "cancelText"
+        },
+        "description": {
+          "zh_CN": "取消按钮文字"
+        }
+      },
+      "icon": {
+        "label": {
+          "zh_CN": "icon"
+        },
+        "description": {
+          "zh_CN": "customize icon of confirmation"
+        }
+      },
+      "okButton": {
+        "label": {
+          "zh_CN": "okButton"
+        },
+        "description": {
+          "zh_CN": "完全自定义确认按钮"
+        }
+      },
+      "okText": {
+        "label": {
+          "zh_CN": "okText"
+        },
+        "description": {
+          "zh_CN": "确认按钮文字"
+        }
+      },
+      "title": {
+        "label": {
+          "zh_CN": "title"
+        },
+        "description": {
+          "zh_CN": "确认框的描述"
+        }
+      },
+      "description": {
+        "label": {
+          "zh_CN": "description"
+        },
+        "description": {
+          "zh_CN": "确认内容的详细描述"
+        }
+      }
+    }
+  },
+  "snippets": [{}]
+}

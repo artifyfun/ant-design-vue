@@ -1,0 +1,314 @@
+{
+  "id": 1,
+  "version": "4.1.2",
+  "name": {
+    "zh_CN": "锚点"
+  },
+  "component": "AAnchor",
+  "icon": "anchor",
+  "description": "用于跳转到页面指定位置。",
+  "doc_url": "",
+  "screenshot": "https://mdn.alipayobjects.com/huamei_7uahnr/afts/img/A*JGb3RIzyOCkAAAAAAAAAAAAADrJ8AQ/original",
+  "tags": "",
+  "keywords": "",
+  "dev_mode": "proCode",
+  "npm": {
+    "package": "ant-design-vue",
+    "version": "2.4.2",
+    "script": "https://unpkg.com/browse/ant-design-vue@4.1.2/dist/antd.esm.min.js",
+    "css": "https://unpkg.com/browse/ant-design-vue@4.1.2/dist/reset.css",
+    "dependencies": null,
+    "exportName": "Anchor"
+  },
+  "group": "component",
+  "category": "导航",
+  "configure": {
+    "loop": true,
+    "condition": true,
+    "styles": true,
+    "isContainer": false,
+    "isModal": false,
+    "isPopper": false,
+    "nestingRule": {
+      "childWhitelist": "",
+      "parentWhitelist": "",
+      "descendantBlacklist": "",
+      "ancestorWhitelist": ""
+    },
+    "isNullNode": false,
+    "isLayout": false,
+    "rootSelector": "",
+    "shortcuts": {
+      "properties": []
+    },
+    "contextMenu": {
+      "actions": ["copy", "remove", "insert", "updateAttr", "bindEevent", "createBlock"],
+      "disable": []
+    },
+    "invalidity": [""],
+    "clickCapture": true,
+    "framework": "Vue"
+  },
+  "schema": {
+    "properties": [
+      {
+        "name": "0",
+        "label": {
+          "zh_CN": "基础属性"
+        },
+        "content": [
+          {
+            "property": "affix",
+            "label": {
+              "text": {
+                "zh_CN": "affix"
+              }
+            },
+            "description": {
+              "zh_CN": "固定模式"
+            },
+            "required": false,
+            "readOnly": false,
+            "disabled": false,
+            "cols": 12,
+            "labelPosition": "top",
+            "type": "boolean",
+            "defaultValue": true,
+            "widget": {
+              "component": "MetaSwitch",
+              "props": {}
+            },
+            "device": []
+          },
+          {
+            "property": "bounds",
+            "label": {
+              "text": {
+                "zh_CN": "bounds"
+              }
+            },
+            "description": {
+              "zh_CN": "锚点区域边界"
+            },
+            "required": false,
+            "readOnly": false,
+            "disabled": false,
+            "cols": 12,
+            "labelPosition": "top",
+            "type": "number",
+            "defaultValue": null,
+            "widget": {
+              "component": "MetaNumber",
+              "props": {}
+            },
+            "device": []
+          },
+          {
+            "property": "getCurrentAnchor",
+            "label": {
+              "text": {
+                "zh_CN": "getCurrentAnchor"
+              }
+            },
+            "description": {
+              "zh_CN": "自定义高亮的锚点"
+            },
+            "required": false,
+            "readOnly": false,
+            "disabled": false,
+            "cols": 12,
+            "labelPosition": "top",
+            "type": "(activelink: string) => string",
+            "device": []
+          },
+          {
+            "property": "offsetBottom",
+            "label": {
+              "text": {
+                "zh_CN": "offsetBottom"
+              }
+            },
+            "description": {
+              "zh_CN": "距离窗口底部达到指定偏移量后触发"
+            },
+            "required": false,
+            "readOnly": false,
+            "disabled": false,
+            "cols": 12,
+            "labelPosition": "top",
+            "type": "number",
+            "widget": {
+              "component": "MetaNumber",
+              "props": {}
+            },
+            "device": []
+          },
+          {
+            "property": "offsetTop",
+            "label": {
+              "text": {
+                "zh_CN": "offsetTop"
+              }
+            },
+            "description": {
+              "zh_CN": "距离窗口顶部达到指定偏移量后触发"
+            },
+            "required": false,
+            "readOnly": false,
+            "disabled": false,
+            "cols": 12,
+            "labelPosition": "top",
+            "type": "number",
+            "defaultValue": 0,
+            "widget": {
+              "component": "MetaNumber",
+              "props": {}
+            },
+            "device": []
+          },
+          {
+            "property": "showInkInFixed",
+            "label": {
+              "text": {
+                "zh_CN": "showInkInFixed"
+              }
+            },
+            "description": {
+              "zh_CN": "`:affix=\"false\"` 时是否显示小方块"
+            },
+            "required": false,
+            "readOnly": false,
+            "disabled": false,
+            "cols": 12,
+            "labelPosition": "top",
+            "type": "boolean",
+            "defaultValue": false,
+            "widget": {
+              "component": "MetaSwitch",
+              "props": {}
+            },
+            "device": []
+          },
+          {
+            "property": "targetOffset",
+            "label": {
+              "text": {
+                "zh_CN": "targetOffset"
+              }
+            },
+            "description": {
+              "zh_CN": "锚点滚动偏移量，默认与 offsetTop 相同，[例子](#components-anchor-demo-targetoffset)"
+            },
+            "required": false,
+            "readOnly": false,
+            "disabled": false,
+            "cols": 12,
+            "labelPosition": "top",
+            "type": "number",
+            "defaultValue": null,
+            "widget": {
+              "component": "MetaNumber",
+              "props": {}
+            },
+            "device": []
+          },
+          {
+            "property": "wrapperClass",
+            "label": {
+              "text": {
+                "zh_CN": "wrapperClass"
+              }
+            },
+            "description": {
+              "zh_CN": "容器的类名"
+            },
+            "required": false,
+            "readOnly": false,
+            "disabled": false,
+            "cols": 12,
+            "labelPosition": "top",
+            "type": "string",
+            "widget": {
+              "component": "MetaInput",
+              "props": {}
+            },
+            "device": []
+          },
+          {
+            "property": "wrapperStyle",
+            "label": {
+              "text": {
+                "zh_CN": "wrapperStyle"
+              }
+            },
+            "description": {
+              "zh_CN": "容器样式"
+            },
+            "required": false,
+            "readOnly": false,
+            "disabled": false,
+            "cols": 12,
+            "labelPosition": "top",
+            "type": "object",
+            "widget": {
+              "component": "MetaCodeEditor",
+              "props": {
+                "language": "json"
+              }
+            },
+            "device": []
+          },
+          {
+            "property": "direction",
+            "label": {
+              "text": {
+                "zh_CN": "direction"
+              }
+            },
+            "description": {
+              "zh_CN": "设置导航方向"
+            },
+            "required": false,
+            "readOnly": false,
+            "disabled": false,
+            "cols": 12,
+            "labelPosition": "top",
+            "type": "string",
+            "defaultValue": "`vertical`",
+            "widget": {
+              "component": "MetaSelect",
+              "props": {
+                "options": [
+                  {
+                    "label": "vertical",
+                    "value": "vertical"
+                  },
+                  {
+                    "label": "horizontal",
+                    "value": "horizontal"
+                  }
+                ]
+              }
+            },
+            "device": []
+          }
+        ],
+        "description": {
+          "zh_CN": ""
+        }
+      }
+    ],
+    "events": {},
+    "slots": {
+      "customTitle": {
+        "label": {
+          "zh_CN": "customTitle"
+        },
+        "description": {
+          "zh_CN": "使用插槽自定义选项 title"
+        }
+      }
+    }
+  },
+  "snippets": [{}]
+}

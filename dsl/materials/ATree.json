@@ -1,0 +1,544 @@
+{
+  "id": 1,
+  "version": "4.1.2",
+  "name": {
+    "zh_CN": "树形控件"
+  },
+  "component": "ATree",
+  "icon": "tree",
+  "description": "多层次的结构列表。",
+  "doc_url": "",
+  "screenshot": "https://mdn.alipayobjects.com/huamei_7uahnr/afts/img/A*1GeUQJPTGUYAAAAAAAAAAAAADrJ8AQ/original",
+  "tags": "",
+  "keywords": "",
+  "dev_mode": "proCode",
+  "npm": {
+    "package": "ant-design-vue",
+    "version": "2.4.2",
+    "script": "https://unpkg.com/browse/ant-design-vue@4.1.2/dist/antd.esm.min.js",
+    "css": "https://unpkg.com/browse/ant-design-vue@4.1.2/dist/reset.css",
+    "dependencies": null,
+    "exportName": "Tree"
+  },
+  "group": "component",
+  "category": "数据展示",
+  "configure": {
+    "loop": true,
+    "condition": true,
+    "styles": true,
+    "isContainer": false,
+    "isModal": false,
+    "isPopper": false,
+    "nestingRule": {
+      "childWhitelist": "",
+      "parentWhitelist": "",
+      "descendantBlacklist": "",
+      "ancestorWhitelist": ""
+    },
+    "isNullNode": false,
+    "isLayout": false,
+    "rootSelector": "",
+    "shortcuts": {
+      "properties": []
+    },
+    "contextMenu": {
+      "actions": ["copy", "remove", "insert", "updateAttr", "bindEevent", "createBlock"],
+      "disable": []
+    },
+    "invalidity": [""],
+    "clickCapture": true,
+    "framework": "Vue"
+  },
+  "schema": {
+    "properties": [
+      {
+        "name": "0",
+        "label": {
+          "zh_CN": "基础属性"
+        },
+        "content": [
+          {
+            "property": "allowDrop",
+            "label": {
+              "text": {
+                "zh_CN": "allowDrop"
+              }
+            },
+            "description": {
+              "zh_CN": "是否允许拖拽时放置在该节点"
+            },
+            "required": false,
+            "readOnly": false,
+            "disabled": false,
+            "cols": 12,
+            "labelPosition": "top",
+            "type": "({ dropnode, dropposition }) => boolean",
+            "device": []
+          },
+          {
+            "property": "autoExpandParent",
+            "label": {
+              "text": {
+                "zh_CN": "autoExpandParent"
+              }
+            },
+            "description": {
+              "zh_CN": "是否自动展开父节点"
+            },
+            "required": false,
+            "readOnly": false,
+            "disabled": false,
+            "cols": 12,
+            "labelPosition": "top",
+            "type": "boolean",
+            "defaultValue": false,
+            "widget": {
+              "component": "MetaSwitch",
+              "props": {}
+            },
+            "device": []
+          },
+          {
+            "property": "blockNode",
+            "label": {
+              "text": {
+                "zh_CN": "blockNode"
+              }
+            },
+            "description": {
+              "zh_CN": "是否节点占据一行"
+            },
+            "required": false,
+            "readOnly": false,
+            "disabled": false,
+            "cols": 12,
+            "labelPosition": "top",
+            "type": "boolean",
+            "defaultValue": false,
+            "widget": {
+              "component": "MetaSwitch",
+              "props": {}
+            },
+            "device": []
+          },
+          {
+            "property": "checkable",
+            "label": {
+              "text": {
+                "zh_CN": "checkable"
+              }
+            },
+            "description": {
+              "zh_CN": "节点前添加 Checkbox 复选框"
+            },
+            "required": false,
+            "readOnly": false,
+            "disabled": false,
+            "cols": 12,
+            "labelPosition": "top",
+            "type": "boolean",
+            "defaultValue": false,
+            "widget": {
+              "component": "MetaSwitch",
+              "props": {}
+            },
+            "device": []
+          },
+          {
+            "property": "checkedKeys",
+            "label": {
+              "text": {
+                "zh_CN": "checkedKeys(v-model)"
+              }
+            },
+            "description": {
+              "zh_CN": "（受控）选中复选框的树节点（注意：父子节点有关联，如果传入父节点 key，则子节点自动选中；相应当子节点 key 都传入，父节点也自动选中。当设置`checkable`和`checkStrictly`，它是一个有`checked`和`halfChecked`属性的对象，并且父子节点的选中与否不再关联"
+            },
+            "required": false,
+            "readOnly": false,
+            "disabled": false,
+            "cols": 12,
+            "labelPosition": "top",
+            "type": "object",
+            "widget": {
+              "component": "MetaCodeEditor",
+              "props": {
+                "language": "json"
+              }
+            },
+            "device": []
+          },
+          {
+            "property": "checkStrictly",
+            "label": {
+              "text": {
+                "zh_CN": "checkStrictly"
+              }
+            },
+            "description": {
+              "zh_CN": "checkable 状态下节点选择完全受控（父子节点选中状态不再关联）"
+            },
+            "required": false,
+            "readOnly": false,
+            "disabled": false,
+            "cols": 12,
+            "labelPosition": "top",
+            "type": "boolean",
+            "defaultValue": false,
+            "widget": {
+              "component": "MetaSwitch",
+              "props": {}
+            },
+            "device": []
+          },
+          {
+            "property": "defaultExpandAll",
+            "label": {
+              "text": {
+                "zh_CN": "defaultExpandAll"
+              }
+            },
+            "description": {
+              "zh_CN": "默认展开所有树节点, 如果是异步数据，需要在数据返回后再实例化，建议用 v-if=\"data.length\"；当有 expandedKeys 时，defaultExpandAll 将失效"
+            },
+            "required": false,
+            "readOnly": false,
+            "disabled": false,
+            "cols": 12,
+            "labelPosition": "top",
+            "type": "boolean",
+            "defaultValue": false,
+            "widget": {
+              "component": "MetaSwitch",
+              "props": {}
+            },
+            "device": []
+          },
+          {
+            "property": "draggable",
+            "label": {
+              "text": {
+                "zh_CN": "draggable"
+              }
+            },
+            "description": {
+              "zh_CN": "设置节点可拖拽"
+            },
+            "required": false,
+            "readOnly": false,
+            "disabled": false,
+            "cols": 12,
+            "labelPosition": "top",
+            "type": "boolean",
+            "defaultValue": false,
+            "widget": {
+              "component": "MetaSwitch",
+              "props": {}
+            },
+            "device": []
+          },
+          {
+            "property": "expandedKeys",
+            "label": {
+              "text": {
+                "zh_CN": "expandedKeys(v-model)"
+              }
+            },
+            "description": {
+              "zh_CN": "（受控）展开指定的树节点"
+            },
+            "required": false,
+            "readOnly": false,
+            "disabled": false,
+            "cols": 12,
+            "labelPosition": "top",
+            "type": "object",
+            "widget": {
+              "component": "MetaCodeEditor",
+              "props": {
+                "language": "json"
+              }
+            },
+            "device": []
+          },
+          {
+            "property": "fieldNames",
+            "label": {
+              "text": {
+                "zh_CN": "fieldNames"
+              }
+            },
+            "description": {
+              "zh_CN": "替换 treeNode 中 title,key,children 字段为 treeData 中对应的字段"
+            },
+            "required": false,
+            "readOnly": false,
+            "disabled": false,
+            "cols": 12,
+            "labelPosition": "top",
+            "type": "object",
+            "widget": {
+              "component": "MetaCodeEditor",
+              "props": {
+                "language": "json"
+              }
+            },
+            "device": []
+          },
+          {
+            "property": "filterTreeNode",
+            "label": {
+              "text": {
+                "zh_CN": "filterTreeNode"
+              }
+            },
+            "description": {
+              "zh_CN": "按需筛选树节点（高亮），返回 true"
+            },
+            "required": false,
+            "readOnly": false,
+            "disabled": false,
+            "cols": 12,
+            "labelPosition": "top",
+            "type": "function",
+            "widget": {
+              "component": "MetaCodeEditor",
+              "props": {}
+            },
+            "device": []
+          },
+          {
+            "property": "height",
+            "label": {
+              "text": {
+                "zh_CN": "height"
+              }
+            },
+            "description": {
+              "zh_CN": "设置虚拟滚动容器高度，设置后内部节点不再支持横向滚动"
+            },
+            "required": false,
+            "readOnly": false,
+            "disabled": false,
+            "cols": 12,
+            "labelPosition": "top",
+            "type": "number",
+            "widget": {
+              "component": "MetaNumber",
+              "props": {}
+            },
+            "device": []
+          },
+          {
+            "property": "loadData",
+            "label": {
+              "text": {
+                "zh_CN": "loadData"
+              }
+            },
+            "description": {
+              "zh_CN": "异步加载数据"
+            },
+            "required": false,
+            "readOnly": false,
+            "disabled": false,
+            "cols": 12,
+            "labelPosition": "top",
+            "type": "function",
+            "widget": {
+              "component": "MetaCodeEditor",
+              "props": {}
+            },
+            "device": []
+          },
+          {
+            "property": "loadedKeys",
+            "label": {
+              "text": {
+                "zh_CN": "loadedKeys"
+              }
+            },
+            "description": {
+              "zh_CN": "（受控）已经加载的节点，需要配合 `loadData` 使用"
+            },
+            "required": false,
+            "readOnly": false,
+            "disabled": false,
+            "cols": 12,
+            "labelPosition": "top",
+            "type": "object",
+            "widget": {
+              "component": "MetaCodeEditor",
+              "props": {
+                "language": "json"
+              }
+            },
+            "device": []
+          },
+          {
+            "property": "multiple",
+            "label": {
+              "text": {
+                "zh_CN": "multiple"
+              }
+            },
+            "description": {
+              "zh_CN": "支持点选多个节点（节点本身）"
+            },
+            "required": false,
+            "readOnly": false,
+            "disabled": false,
+            "cols": 12,
+            "labelPosition": "top",
+            "type": "boolean",
+            "defaultValue": false,
+            "widget": {
+              "component": "MetaSwitch",
+              "props": {}
+            },
+            "device": []
+          },
+          {
+            "property": "selectable",
+            "label": {
+              "text": {
+                "zh_CN": "selectable"
+              }
+            },
+            "description": {
+              "zh_CN": "是否可选中"
+            },
+            "required": false,
+            "readOnly": false,
+            "disabled": false,
+            "cols": 12,
+            "labelPosition": "top",
+            "type": "boolean",
+            "defaultValue": true,
+            "widget": {
+              "component": "MetaSwitch",
+              "props": {}
+            },
+            "device": []
+          },
+          {
+            "property": "selectedKeys",
+            "label": {
+              "text": {
+                "zh_CN": "selectedKeys(v-model)"
+              }
+            },
+            "description": {
+              "zh_CN": "（受控）设置选中的树节点"
+            },
+            "required": false,
+            "readOnly": false,
+            "disabled": false,
+            "cols": 12,
+            "labelPosition": "top",
+            "type": "object",
+            "widget": {
+              "component": "MetaCodeEditor",
+              "props": {
+                "language": "json"
+              }
+            },
+            "device": []
+          },
+          {
+            "property": "showIcon",
+            "label": {
+              "text": {
+                "zh_CN": "showIcon"
+              }
+            },
+            "description": {
+              "zh_CN": "是否展示 TreeNode title 前的图标，没有默认样式，如设置为 true，需要自行定义图标相关样式"
+            },
+            "required": false,
+            "readOnly": false,
+            "disabled": false,
+            "cols": 12,
+            "labelPosition": "top",
+            "type": "boolean",
+            "defaultValue": false,
+            "widget": {
+              "component": "MetaSwitch",
+              "props": {}
+            },
+            "device": []
+          },
+          {
+            "property": "showLine",
+            "label": {
+              "text": {
+                "zh_CN": "showLine"
+              }
+            },
+            "description": {
+              "zh_CN": "是否展示连接线"
+            },
+            "required": false,
+            "readOnly": false,
+            "disabled": false,
+            "cols": 12,
+            "labelPosition": "top",
+            "type": "boolean",
+            "defaultValue": false,
+            "widget": {
+              "component": "MetaSwitch",
+              "props": {}
+            },
+            "device": []
+          },
+          {
+            "property": "virtual",
+            "label": {
+              "text": {
+                "zh_CN": "virtual"
+              }
+            },
+            "description": {
+              "zh_CN": "设置 false 时关闭虚拟滚动"
+            },
+            "required": false,
+            "readOnly": false,
+            "disabled": false,
+            "cols": 12,
+            "labelPosition": "top",
+            "type": "boolean",
+            "defaultValue": true,
+            "widget": {
+              "component": "MetaSwitch",
+              "props": {}
+            },
+            "device": []
+          }
+        ],
+        "description": {
+          "zh_CN": ""
+        }
+      }
+    ],
+    "events": {},
+    "slots": {
+      "switcherIcon": {
+        "label": {
+          "zh_CN": "switcherIcon"
+        },
+        "description": {
+          "zh_CN": "自定义树节点的展开/折叠图标"
+        }
+      },
+      "title": {
+        "label": {
+          "zh_CN": "title"
+        },
+        "description": {
+          "zh_CN": "自定义标题"
+        }
+      }
+    }
+  },
+  "snippets": [{}]
+}

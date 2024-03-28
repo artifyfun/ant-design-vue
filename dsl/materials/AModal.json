@@ -1,0 +1,633 @@
+{
+  "id": 1,
+  "version": "4.1.2",
+  "name": {
+    "zh_CN": "对话框"
+  },
+  "component": "AModal",
+  "icon": "modal",
+  "description": "模态对话框。",
+  "doc_url": "",
+  "screenshot": "https://mdn.alipayobjects.com/huamei_7uahnr/afts/img/A*fBrgSJBmavgAAAAAAAAAAAAADrJ8AQ/original",
+  "tags": "",
+  "keywords": "",
+  "dev_mode": "proCode",
+  "npm": {
+    "package": "ant-design-vue",
+    "version": "2.4.2",
+    "script": "https://unpkg.com/browse/ant-design-vue@4.1.2/dist/antd.esm.min.js",
+    "css": "https://unpkg.com/browse/ant-design-vue@4.1.2/dist/reset.css",
+    "dependencies": null,
+    "exportName": "Modal"
+  },
+  "group": "component",
+  "category": "反馈",
+  "configure": {
+    "loop": true,
+    "condition": true,
+    "styles": true,
+    "isContainer": false,
+    "isModal": false,
+    "isPopper": false,
+    "nestingRule": {
+      "childWhitelist": "",
+      "parentWhitelist": "",
+      "descendantBlacklist": "",
+      "ancestorWhitelist": ""
+    },
+    "isNullNode": false,
+    "isLayout": false,
+    "rootSelector": "",
+    "shortcuts": {
+      "properties": []
+    },
+    "contextMenu": {
+      "actions": ["copy", "remove", "insert", "updateAttr", "bindEevent", "createBlock"],
+      "disable": []
+    },
+    "invalidity": [""],
+    "clickCapture": true,
+    "framework": "Vue"
+  },
+  "schema": {
+    "properties": [
+      {
+        "name": "0",
+        "label": {
+          "zh_CN": "基础属性"
+        },
+        "content": [
+          {
+            "property": "afterClose",
+            "label": {
+              "text": {
+                "zh_CN": "afterClose"
+              }
+            },
+            "description": {
+              "zh_CN": "Modal 完全关闭后的回调"
+            },
+            "required": false,
+            "readOnly": false,
+            "disabled": false,
+            "cols": 12,
+            "labelPosition": "top",
+            "type": "function",
+            "widget": {
+              "component": "MetaCodeEditor",
+              "props": {}
+            },
+            "device": []
+          },
+          {
+            "property": "bodyStyle",
+            "label": {
+              "text": {
+                "zh_CN": "bodyStyle"
+              }
+            },
+            "description": {
+              "zh_CN": "Modal body 样式"
+            },
+            "required": false,
+            "readOnly": false,
+            "disabled": false,
+            "cols": 12,
+            "labelPosition": "top",
+            "type": "object",
+            "defaultValue": {},
+            "widget": {
+              "component": "MetaCodeEditor",
+              "props": {
+                "language": "json"
+              }
+            },
+            "device": []
+          },
+          {
+            "property": "cancelText",
+            "label": {
+              "text": {
+                "zh_CN": "cancelText"
+              }
+            },
+            "description": {
+              "zh_CN": "取消按钮文字"
+            },
+            "required": false,
+            "readOnly": false,
+            "disabled": false,
+            "cols": 12,
+            "labelPosition": "top",
+            "type": "string",
+            "defaultValue": "`Cancel`",
+            "widget": {
+              "component": "MetaSelect",
+              "props": {
+                "options": [
+                  {
+                    "label": "string",
+                    "value": "string"
+                  },
+                  {
+                    "label": "slot",
+                    "value": "slot"
+                  }
+                ]
+              }
+            },
+            "device": []
+          },
+          {
+            "property": "centered",
+            "label": {
+              "text": {
+                "zh_CN": "centered"
+              }
+            },
+            "description": {
+              "zh_CN": "垂直居中展示 Modal"
+            },
+            "required": false,
+            "readOnly": false,
+            "disabled": false,
+            "cols": 12,
+            "labelPosition": "top",
+            "type": "boolean",
+            "defaultValue": false,
+            "widget": {
+              "component": "MetaSwitch",
+              "props": {}
+            },
+            "device": []
+          },
+          {
+            "property": "closable",
+            "label": {
+              "text": {
+                "zh_CN": "closable"
+              }
+            },
+            "description": {
+              "zh_CN": "是否显示右上角的关闭按钮"
+            },
+            "required": false,
+            "readOnly": false,
+            "disabled": false,
+            "cols": 12,
+            "labelPosition": "top",
+            "type": "boolean",
+            "defaultValue": true,
+            "widget": {
+              "component": "MetaSwitch",
+              "props": {}
+            },
+            "device": []
+          },
+          {
+            "property": "confirmLoading",
+            "label": {
+              "text": {
+                "zh_CN": "confirmLoading"
+              }
+            },
+            "description": {
+              "zh_CN": "确定按钮 loading"
+            },
+            "required": false,
+            "readOnly": false,
+            "disabled": false,
+            "cols": 12,
+            "labelPosition": "top",
+            "type": "boolean",
+            "defaultValue": false,
+            "widget": {
+              "component": "MetaSwitch",
+              "props": {}
+            },
+            "device": []
+          },
+          {
+            "property": "destroyOnClose",
+            "label": {
+              "text": {
+                "zh_CN": "destroyOnClose"
+              }
+            },
+            "description": {
+              "zh_CN": "关闭时销毁 Modal 里的子元素"
+            },
+            "required": false,
+            "readOnly": false,
+            "disabled": false,
+            "cols": 12,
+            "labelPosition": "top",
+            "type": "boolean",
+            "defaultValue": false,
+            "widget": {
+              "component": "MetaSwitch",
+              "props": {}
+            },
+            "device": []
+          },
+          {
+            "property": "footer",
+            "label": {
+              "text": {
+                "zh_CN": "footer"
+              }
+            },
+            "description": {
+              "zh_CN": "底部内容，当不需要默认底部按钮时，可以设为 `:footer=\"null\"`"
+            },
+            "required": false,
+            "readOnly": false,
+            "disabled": false,
+            "cols": 12,
+            "labelPosition": "top",
+            "type": "string",
+            "defaultValue": "OK and Cancel buttons",
+            "widget": {
+              "component": "MetaSelect",
+              "props": {
+                "options": [
+                  {
+                    "label": "string",
+                    "value": "string"
+                  },
+                  {
+                    "label": "slot",
+                    "value": "slot"
+                  }
+                ]
+              }
+            },
+            "device": []
+          },
+          {
+            "property": "forceRender",
+            "label": {
+              "text": {
+                "zh_CN": "forceRender"
+              }
+            },
+            "description": {
+              "zh_CN": "强制渲染 Modal"
+            },
+            "required": false,
+            "readOnly": false,
+            "disabled": false,
+            "cols": 12,
+            "labelPosition": "top",
+            "type": "boolean",
+            "defaultValue": false,
+            "widget": {
+              "component": "MetaSwitch",
+              "props": {}
+            },
+            "device": []
+          },
+          {
+            "property": "mask",
+            "label": {
+              "text": {
+                "zh_CN": "mask"
+              }
+            },
+            "description": {
+              "zh_CN": "是否展示遮罩"
+            },
+            "required": false,
+            "readOnly": false,
+            "disabled": false,
+            "cols": 12,
+            "labelPosition": "top",
+            "type": "boolean",
+            "defaultValue": true,
+            "widget": {
+              "component": "MetaSwitch",
+              "props": {}
+            },
+            "device": []
+          },
+          {
+            "property": "maskClosable",
+            "label": {
+              "text": {
+                "zh_CN": "maskClosable"
+              }
+            },
+            "description": {
+              "zh_CN": "点击蒙层是否允许关闭"
+            },
+            "required": false,
+            "readOnly": false,
+            "disabled": false,
+            "cols": 12,
+            "labelPosition": "top",
+            "type": "boolean",
+            "defaultValue": true,
+            "widget": {
+              "component": "MetaSwitch",
+              "props": {}
+            },
+            "device": []
+          },
+          {
+            "property": "maskStyle",
+            "label": {
+              "text": {
+                "zh_CN": "maskStyle"
+              }
+            },
+            "description": {
+              "zh_CN": "遮罩样式"
+            },
+            "required": false,
+            "readOnly": false,
+            "disabled": false,
+            "cols": 12,
+            "labelPosition": "top",
+            "type": "object",
+            "defaultValue": {},
+            "widget": {
+              "component": "MetaCodeEditor",
+              "props": {
+                "language": "json"
+              }
+            },
+            "device": []
+          },
+          {
+            "property": "okText",
+            "label": {
+              "text": {
+                "zh_CN": "okText"
+              }
+            },
+            "description": {
+              "zh_CN": "确认按钮文字"
+            },
+            "required": false,
+            "readOnly": false,
+            "disabled": false,
+            "cols": 12,
+            "labelPosition": "top",
+            "type": "string",
+            "defaultValue": "`OK`",
+            "widget": {
+              "component": "MetaSelect",
+              "props": {
+                "options": [
+                  {
+                    "label": "string",
+                    "value": "string"
+                  },
+                  {
+                    "label": "slot",
+                    "value": "slot"
+                  }
+                ]
+              }
+            },
+            "device": []
+          },
+          {
+            "property": "okType",
+            "label": {
+              "text": {
+                "zh_CN": "okType"
+              }
+            },
+            "description": {
+              "zh_CN": "确认按钮类型"
+            },
+            "required": false,
+            "readOnly": false,
+            "disabled": false,
+            "cols": 12,
+            "labelPosition": "top",
+            "type": "string",
+            "defaultValue": "`primary`",
+            "widget": {
+              "component": "MetaInput",
+              "props": {}
+            },
+            "device": []
+          },
+          {
+            "property": "title",
+            "label": {
+              "text": {
+                "zh_CN": "title"
+              }
+            },
+            "description": {
+              "zh_CN": "标题"
+            },
+            "required": false,
+            "readOnly": false,
+            "disabled": false,
+            "cols": 12,
+            "labelPosition": "top",
+            "type": "string",
+            "widget": {
+              "component": "MetaSelect",
+              "props": {
+                "options": [
+                  {
+                    "label": "string",
+                    "value": "string"
+                  },
+                  {
+                    "label": "slot",
+                    "value": "slot"
+                  }
+                ]
+              }
+            },
+            "device": []
+          },
+          {
+            "property": "open",
+            "label": {
+              "text": {
+                "zh_CN": "open(v-model)"
+              }
+            },
+            "description": {
+              "zh_CN": "对话框是否可见"
+            },
+            "required": false,
+            "readOnly": false,
+            "disabled": false,
+            "cols": 12,
+            "labelPosition": "top",
+            "type": "boolean",
+            "defaultValue": false,
+            "widget": {
+              "component": "MetaSwitch",
+              "props": {}
+            },
+            "device": []
+          },
+          {
+            "property": "width",
+            "label": {
+              "text": {
+                "zh_CN": "width"
+              }
+            },
+            "description": {
+              "zh_CN": "宽度"
+            },
+            "required": false,
+            "readOnly": false,
+            "disabled": false,
+            "cols": 12,
+            "labelPosition": "top",
+            "type": "string",
+            "defaultValue": "520",
+            "widget": {
+              "component": "MetaSelect",
+              "props": {
+                "options": [
+                  {
+                    "label": "string",
+                    "value": "string"
+                  },
+                  {
+                    "label": "number",
+                    "value": "number"
+                  }
+                ]
+              }
+            },
+            "device": []
+          },
+          {
+            "property": "wrapClassName",
+            "label": {
+              "text": {
+                "zh_CN": "wrapClassName"
+              }
+            },
+            "description": {
+              "zh_CN": "对话框外层容器的类名"
+            },
+            "required": false,
+            "readOnly": false,
+            "disabled": false,
+            "cols": 12,
+            "labelPosition": "top",
+            "type": "string",
+            "widget": {
+              "component": "MetaInput",
+              "props": {}
+            },
+            "device": []
+          },
+          {
+            "property": "zIndex",
+            "label": {
+              "text": {
+                "zh_CN": "zIndex"
+              }
+            },
+            "description": {
+              "zh_CN": "设置 Modal 的 `z-index`"
+            },
+            "required": false,
+            "readOnly": false,
+            "disabled": false,
+            "cols": 12,
+            "labelPosition": "top",
+            "type": "number",
+            "defaultValue": 1000,
+            "widget": {
+              "component": "MetaNumber",
+              "props": {}
+            },
+            "device": []
+          }
+        ],
+        "description": {
+          "zh_CN": ""
+        }
+      }
+    ],
+    "events": {
+      "onCancel": {
+        "label": {
+          "zh_CN": "cancel"
+        },
+        "description": {
+          "zh_CN": "Specify a function that will be called when a user clicks mask, close button on top right or Cancel button"
+        },
+        "type": "event",
+        "functionInfo": {
+          "params": [],
+          "returns": {}
+        },
+        "defaultValue": ""
+      },
+      "onOk": {
+        "label": {
+          "zh_CN": "ok"
+        },
+        "description": {
+          "zh_CN": "Specify a function that will be called when a user clicks the OK button"
+        },
+        "type": "event",
+        "functionInfo": {
+          "params": [],
+          "returns": {}
+        },
+        "defaultValue": ""
+      }
+    },
+    "slots": {
+      "cancelText": {
+        "label": {
+          "zh_CN": "cancelText"
+        },
+        "description": {
+          "zh_CN": "取消按钮文字"
+        }
+      },
+      "closeIcon": {
+        "label": {
+          "zh_CN": "closeIcon"
+        },
+        "description": {
+          "zh_CN": "自定义关闭图标"
+        }
+      },
+      "footer": {
+        "label": {
+          "zh_CN": "footer"
+        },
+        "description": {
+          "zh_CN": "底部内容，当不需要默认底部按钮时，可以设为 `:footer=\"null\"`"
+        }
+      },
+      "okText": {
+        "label": {
+          "zh_CN": "okText"
+        },
+        "description": {
+          "zh_CN": "确认按钮文字"
+        }
+      },
+      "title": {
+        "label": {
+          "zh_CN": "title"
+        },
+        "description": {
+          "zh_CN": "标题"
+        }
+      }
+    }
+  },
+  "snippets": [{}]
+}

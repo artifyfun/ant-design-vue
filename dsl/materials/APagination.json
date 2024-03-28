@@ -1,0 +1,470 @@
+{
+  "id": 1,
+  "version": "4.1.2",
+  "name": {
+    "zh_CN": "分页"
+  },
+  "component": "APagination",
+  "icon": "pagination",
+  "description": "采用分页的形式分隔长列表，每次只加载一个页面。",
+  "doc_url": "",
+  "screenshot": "https://mdn.alipayobjects.com/huamei_7uahnr/afts/img/A*WM86SrBC8TsAAAAAAAAAAAAADrJ8AQ/original",
+  "tags": "",
+  "keywords": "",
+  "dev_mode": "proCode",
+  "npm": {
+    "package": "ant-design-vue",
+    "version": "2.4.2",
+    "script": "https://unpkg.com/browse/ant-design-vue@4.1.2/dist/antd.esm.min.js",
+    "css": "https://unpkg.com/browse/ant-design-vue@4.1.2/dist/reset.css",
+    "dependencies": null,
+    "exportName": "Pagination"
+  },
+  "group": "component",
+  "category": "导航",
+  "configure": {
+    "loop": true,
+    "condition": true,
+    "styles": true,
+    "isContainer": false,
+    "isModal": false,
+    "isPopper": false,
+    "nestingRule": {
+      "childWhitelist": "",
+      "parentWhitelist": "",
+      "descendantBlacklist": "",
+      "ancestorWhitelist": ""
+    },
+    "isNullNode": false,
+    "isLayout": false,
+    "rootSelector": "",
+    "shortcuts": {
+      "properties": []
+    },
+    "contextMenu": {
+      "actions": ["copy", "remove", "insert", "updateAttr", "bindEevent", "createBlock"],
+      "disable": []
+    },
+    "invalidity": [""],
+    "clickCapture": true,
+    "framework": "Vue"
+  },
+  "schema": {
+    "properties": [
+      {
+        "name": "0",
+        "label": {
+          "zh_CN": "基础属性"
+        },
+        "content": [
+          {
+            "property": "current",
+            "label": {
+              "text": {
+                "zh_CN": "current(v-model)"
+              }
+            },
+            "description": {
+              "zh_CN": "当前页数"
+            },
+            "required": false,
+            "readOnly": false,
+            "disabled": false,
+            "cols": 12,
+            "labelPosition": "top",
+            "type": "number",
+            "widget": {
+              "component": "MetaNumber",
+              "props": {}
+            },
+            "device": []
+          },
+          {
+            "property": "defaultCurrent",
+            "label": {
+              "text": {
+                "zh_CN": "defaultCurrent"
+              }
+            },
+            "description": {
+              "zh_CN": "default initial page number"
+            },
+            "required": false,
+            "readOnly": false,
+            "disabled": false,
+            "cols": 12,
+            "labelPosition": "top",
+            "type": "number",
+            "defaultValue": 1,
+            "widget": {
+              "component": "MetaNumber",
+              "props": {}
+            },
+            "device": []
+          },
+          {
+            "property": "defaultPageSize",
+            "label": {
+              "text": {
+                "zh_CN": "defaultPageSize"
+              }
+            },
+            "description": {
+              "zh_CN": "默认的每页条数"
+            },
+            "required": false,
+            "readOnly": false,
+            "disabled": false,
+            "cols": 12,
+            "labelPosition": "top",
+            "type": "number",
+            "defaultValue": 10,
+            "widget": {
+              "component": "MetaNumber",
+              "props": {}
+            },
+            "device": []
+          },
+          {
+            "property": "disabled",
+            "label": {
+              "text": {
+                "zh_CN": "disabled"
+              }
+            },
+            "description": {
+              "zh_CN": "禁用分页"
+            },
+            "required": false,
+            "readOnly": false,
+            "disabled": false,
+            "cols": 12,
+            "labelPosition": "top",
+            "type": "boolean",
+            "widget": {
+              "component": "MetaSwitch",
+              "props": {}
+            },
+            "device": []
+          },
+          {
+            "property": "hideOnSinglePage",
+            "label": {
+              "text": {
+                "zh_CN": "hideOnSinglePage"
+              }
+            },
+            "description": {
+              "zh_CN": "只有一页时是否隐藏分页器"
+            },
+            "required": false,
+            "readOnly": false,
+            "disabled": false,
+            "cols": 12,
+            "labelPosition": "top",
+            "type": "boolean",
+            "defaultValue": false,
+            "widget": {
+              "component": "MetaSwitch",
+              "props": {}
+            },
+            "device": []
+          },
+          {
+            "property": "pageSize",
+            "label": {
+              "text": {
+                "zh_CN": "pageSize(v-model)"
+              }
+            },
+            "description": {
+              "zh_CN": "每页条数"
+            },
+            "required": false,
+            "readOnly": false,
+            "disabled": false,
+            "cols": 12,
+            "labelPosition": "top",
+            "type": "number",
+            "widget": {
+              "component": "MetaNumber",
+              "props": {}
+            },
+            "device": []
+          },
+          {
+            "property": "pageSizeOptions",
+            "label": {
+              "text": {
+                "zh_CN": "pageSizeOptions"
+              }
+            },
+            "description": {
+              "zh_CN": "指定每页可以显示多少条"
+            },
+            "required": false,
+            "readOnly": false,
+            "disabled": false,
+            "cols": 12,
+            "labelPosition": "top",
+            "type": "object",
+            "widget": {
+              "component": "MetaCodeEditor",
+              "props": {
+                "language": "json"
+              }
+            },
+            "device": []
+          },
+          {
+            "property": "responsive",
+            "label": {
+              "text": {
+                "zh_CN": "responsive"
+              }
+            },
+            "description": {
+              "zh_CN": "当 size 未指定时，根据屏幕宽度自动调整尺寸"
+            },
+            "required": false,
+            "readOnly": false,
+            "disabled": false,
+            "cols": 12,
+            "labelPosition": "top",
+            "type": "boolean",
+            "widget": {
+              "component": "MetaSwitch",
+              "props": {}
+            },
+            "device": []
+          },
+          {
+            "property": "showLessItems",
+            "label": {
+              "text": {
+                "zh_CN": "showLessItems"
+              }
+            },
+            "description": {
+              "zh_CN": "是否显示较少页面内容"
+            },
+            "required": false,
+            "readOnly": false,
+            "disabled": false,
+            "cols": 12,
+            "labelPosition": "top",
+            "type": "boolean",
+            "defaultValue": false,
+            "widget": {
+              "component": "MetaSwitch",
+              "props": {}
+            },
+            "device": []
+          },
+          {
+            "property": "showQuickJumper",
+            "label": {
+              "text": {
+                "zh_CN": "showQuickJumper"
+              }
+            },
+            "description": {
+              "zh_CN": "是否可以快速跳转至某页"
+            },
+            "required": false,
+            "readOnly": false,
+            "disabled": false,
+            "cols": 12,
+            "labelPosition": "top",
+            "type": "boolean",
+            "defaultValue": false,
+            "widget": {
+              "component": "MetaSwitch",
+              "props": {}
+            },
+            "device": []
+          },
+          {
+            "property": "showSizeChanger",
+            "label": {
+              "text": {
+                "zh_CN": "showSizeChanger"
+              }
+            },
+            "description": {
+              "zh_CN": "是否展示 `pageSize` 切换器，当 `total` 大于 50 时默认为 true"
+            },
+            "required": false,
+            "readOnly": false,
+            "disabled": false,
+            "cols": 12,
+            "labelPosition": "top",
+            "type": "boolean",
+            "widget": {
+              "component": "MetaSwitch",
+              "props": {}
+            },
+            "device": []
+          },
+          {
+            "property": "showTitle",
+            "label": {
+              "text": {
+                "zh_CN": "showTitle"
+              }
+            },
+            "description": {
+              "zh_CN": "Show page item's title"
+            },
+            "required": false,
+            "readOnly": false,
+            "disabled": false,
+            "cols": 12,
+            "labelPosition": "top",
+            "type": "boolean",
+            "defaultValue": true,
+            "widget": {
+              "component": "MetaSwitch",
+              "props": {}
+            },
+            "device": []
+          },
+          {
+            "property": "showTotal",
+            "label": {
+              "text": {
+                "zh_CN": "showTotal"
+              }
+            },
+            "description": {
+              "zh_CN": "用于显示数据总量和当前数据顺序"
+            },
+            "required": false,
+            "readOnly": false,
+            "disabled": false,
+            "cols": 12,
+            "labelPosition": "top",
+            "type": "function",
+            "widget": {
+              "component": "MetaCodeEditor",
+              "props": {}
+            },
+            "device": []
+          },
+          {
+            "property": "simple",
+            "label": {
+              "text": {
+                "zh_CN": "simple"
+              }
+            },
+            "description": {
+              "zh_CN": "当添加该属性时，显示为简单分页"
+            },
+            "required": false,
+            "readOnly": false,
+            "disabled": false,
+            "cols": 12,
+            "labelPosition": "top",
+            "type": "boolean",
+            "widget": {
+              "component": "MetaSwitch",
+              "props": {}
+            },
+            "device": []
+          },
+          {
+            "property": "size",
+            "label": {
+              "text": {
+                "zh_CN": "size"
+              }
+            },
+            "description": {
+              "zh_CN": "当为「small」时，是小尺寸分页"
+            },
+            "required": false,
+            "readOnly": false,
+            "disabled": false,
+            "cols": 12,
+            "labelPosition": "top",
+            "type": "string",
+            "defaultValue": "\"\"",
+            "widget": {
+              "component": "MetaInput",
+              "props": {}
+            },
+            "device": []
+          },
+          {
+            "property": "total",
+            "label": {
+              "text": {
+                "zh_CN": "total"
+              }
+            },
+            "description": {
+              "zh_CN": "数据总数"
+            },
+            "required": false,
+            "readOnly": false,
+            "disabled": false,
+            "cols": 12,
+            "labelPosition": "top",
+            "type": "number",
+            "defaultValue": 0,
+            "widget": {
+              "component": "MetaNumber",
+              "props": {}
+            },
+            "device": []
+          }
+        ],
+        "description": {
+          "zh_CN": ""
+        }
+      }
+    ],
+    "events": {
+      "onChange": {
+        "label": {
+          "zh_CN": "change"
+        },
+        "description": {
+          "zh_CN": "Called when the page number or `pageSize` is changed, and it takes the resulting page number and pageSize as its arguments"
+        },
+        "type": "event",
+        "functionInfo": {
+          "params": [],
+          "returns": {}
+        },
+        "defaultValue": ""
+      },
+      "onShowSizeChange": {
+        "label": {
+          "zh_CN": "showSizeChange"
+        },
+        "description": {
+          "zh_CN": "a callback function, executed when `pageSize` is changed"
+        },
+        "type": "event",
+        "functionInfo": {
+          "params": [],
+          "returns": {}
+        },
+        "defaultValue": ""
+      }
+    },
+    "slots": {
+      "itemRender": {
+        "label": {
+          "zh_CN": "itemRender"
+        },
+        "description": {
+          "zh_CN": "用于自定义页码的结构，可用于优化 SEO"
+        }
+      }
+    }
+  },
+  "snippets": [{}]
+}

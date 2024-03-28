@@ -1,0 +1,401 @@
+{
+  "id": 1,
+  "version": "4.1.2",
+  "name": {
+    "zh_CN": "全局化配置"
+  },
+  "component": "AConfigProvider",
+  "icon": "config-provider",
+  "description": "为组件提供统一的全局化配置。",
+  "doc_url": "",
+  "screenshot": "https://mdn.alipayobjects.com/huamei_7uahnr/afts/img/A*YC4ERpGAddoAAAAAAAAAAAAADrJ8AQ/original",
+  "tags": "",
+  "keywords": "",
+  "dev_mode": "proCode",
+  "npm": {
+    "package": "ant-design-vue",
+    "version": "2.4.2",
+    "script": "https://unpkg.com/browse/ant-design-vue@4.1.2/dist/antd.esm.min.js",
+    "css": "https://unpkg.com/browse/ant-design-vue@4.1.2/dist/reset.css",
+    "dependencies": null,
+    "exportName": "ConfigProvider"
+  },
+  "group": "component",
+  "category": "其他",
+  "configure": {
+    "loop": true,
+    "condition": true,
+    "styles": true,
+    "isContainer": false,
+    "isModal": false,
+    "isPopper": false,
+    "nestingRule": {
+      "childWhitelist": "",
+      "parentWhitelist": "",
+      "descendantBlacklist": "",
+      "ancestorWhitelist": ""
+    },
+    "isNullNode": false,
+    "isLayout": false,
+    "rootSelector": "",
+    "shortcuts": {
+      "properties": []
+    },
+    "contextMenu": {
+      "actions": ["copy", "remove", "insert", "updateAttr", "bindEevent", "createBlock"],
+      "disable": []
+    },
+    "invalidity": [""],
+    "clickCapture": true,
+    "framework": "Vue"
+  },
+  "schema": {
+    "properties": [
+      {
+        "name": "0",
+        "label": {
+          "zh_CN": "基础属性"
+        },
+        "content": [
+          {
+            "property": "autoInsertSpaceInButton",
+            "label": {
+              "text": {
+                "zh_CN": "autoInsertSpaceInButton"
+              }
+            },
+            "description": {
+              "zh_CN": "设置为 `false` 时，移除按钮中 2 个汉字之间的空格"
+            },
+            "required": false,
+            "readOnly": false,
+            "disabled": false,
+            "cols": 12,
+            "labelPosition": "top",
+            "type": "boolean",
+            "defaultValue": true,
+            "widget": {
+              "component": "MetaSwitch",
+              "props": {}
+            },
+            "device": []
+          },
+          {
+            "property": "componentSize",
+            "label": {
+              "text": {
+                "zh_CN": "componentSize"
+              }
+            },
+            "description": {
+              "zh_CN": "设置 antd 组件大小"
+            },
+            "required": false,
+            "readOnly": false,
+            "disabled": false,
+            "cols": 12,
+            "labelPosition": "top",
+            "type": "string",
+            "widget": {
+              "component": "MetaSelect",
+              "props": {
+                "options": [
+                  {
+                    "label": "small",
+                    "value": "small"
+                  },
+                  {
+                    "label": "middle",
+                    "value": "middle"
+                  },
+                  {
+                    "label": "large",
+                    "value": "large"
+                  }
+                ]
+              }
+            },
+            "device": []
+          },
+          {
+            "property": "csp",
+            "label": {
+              "text": {
+                "zh_CN": "csp"
+              }
+            },
+            "description": {
+              "zh_CN": "设置 [Content Security Policy](https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP) 配置"
+            },
+            "required": false,
+            "readOnly": false,
+            "disabled": false,
+            "cols": 12,
+            "labelPosition": "top",
+            "type": "{ nonce: string }",
+            "device": []
+          },
+          {
+            "property": "direction",
+            "label": {
+              "text": {
+                "zh_CN": "direction"
+              }
+            },
+            "description": {
+              "zh_CN": "设置文本展示方向。 [示例](#components-config-provider-demo-direction)"
+            },
+            "required": false,
+            "readOnly": false,
+            "disabled": false,
+            "cols": 12,
+            "labelPosition": "top",
+            "type": "string",
+            "defaultValue": "`ltr`",
+            "widget": {
+              "component": "MetaSelect",
+              "props": {
+                "options": [
+                  {
+                    "label": "ltr",
+                    "value": "ltr"
+                  },
+                  {
+                    "label": "rtl",
+                    "value": "rtl"
+                  }
+                ]
+              }
+            },
+            "device": []
+          },
+          {
+            "property": "dropdownMatchSelectWidth",
+            "label": {
+              "text": {
+                "zh_CN": "dropdownMatchSelectWidth"
+              }
+            },
+            "description": {
+              "zh_CN": "下拉菜单和选择器同宽。默认将设置 `min-width`，当值小于选择框宽度时会被忽略。`false` 时会关闭虚拟滚动"
+            },
+            "required": false,
+            "readOnly": false,
+            "disabled": false,
+            "cols": 12,
+            "labelPosition": "top",
+            "type": "boolean",
+            "widget": {
+              "component": "MetaSwitch",
+              "props": {}
+            },
+            "device": []
+          },
+          {
+            "property": "form",
+            "label": {
+              "text": {
+                "zh_CN": "form"
+              }
+            },
+            "description": {
+              "zh_CN": "设置 Form 组件的通用属性"
+            },
+            "required": false,
+            "readOnly": false,
+            "disabled": false,
+            "cols": 12,
+            "labelPosition": "top",
+            "type": "{ validatemessages?: [validatemessages](/components/form/#validatemessages), requiredmark?: boolean",
+            "device": []
+          },
+          {
+            "property": "getPopupContainer",
+            "label": {
+              "text": {
+                "zh_CN": "getPopupContainer"
+              }
+            },
+            "description": {
+              "zh_CN": "弹出框（Select, Tooltip, Menu 等等）渲染父节点，默认渲染到 body 上。"
+            },
+            "required": false,
+            "readOnly": false,
+            "disabled": false,
+            "cols": 12,
+            "labelPosition": "top",
+            "type": "function",
+            "defaultValue": "`() => document.body`",
+            "widget": {
+              "component": "MetaCodeEditor",
+              "props": {}
+            },
+            "device": []
+          },
+          {
+            "property": "input",
+            "label": {
+              "text": {
+                "zh_CN": "input"
+              }
+            },
+            "description": {
+              "zh_CN": "设置 Input 组件的通用属性"
+            },
+            "required": false,
+            "readOnly": false,
+            "disabled": false,
+            "cols": 12,
+            "labelPosition": "top",
+            "type": "{ autocomplete?: string }",
+            "device": []
+          },
+          {
+            "property": "locale",
+            "label": {
+              "text": {
+                "zh_CN": "locale"
+              }
+            },
+            "description": {
+              "zh_CN": "语言包配置，语言包可到 [ant-design-vue/es/locale](http://unpkg.com/ant-design-vue/es/locale/) 目录下寻找"
+            },
+            "required": false,
+            "readOnly": false,
+            "disabled": false,
+            "cols": 12,
+            "labelPosition": "top",
+            "type": "object",
+            "widget": {
+              "component": "MetaCodeEditor",
+              "props": {
+                "language": "json"
+              }
+            },
+            "device": []
+          },
+          {
+            "property": "pageHeader",
+            "label": {
+              "text": {
+                "zh_CN": "pageHeader"
+              }
+            },
+            "description": {
+              "zh_CN": "统一设置 pageHeader 的 ghost，参考 [pageHeader](<(/components/page-header)>)"
+            },
+            "required": false,
+            "readOnly": false,
+            "disabled": false,
+            "cols": 12,
+            "labelPosition": "top",
+            "type": "{ ghost:boolean }",
+            "defaultValue": "'true'",
+            "device": []
+          },
+          {
+            "property": "prefixCls",
+            "label": {
+              "text": {
+                "zh_CN": "prefixCls"
+              }
+            },
+            "description": {
+              "zh_CN": "设置统一样式前缀。注意：需要配合 `less` 变量 `@ant-prefix` 使用"
+            },
+            "required": false,
+            "readOnly": false,
+            "disabled": false,
+            "cols": 12,
+            "labelPosition": "top",
+            "type": "string",
+            "defaultValue": "ant",
+            "widget": {
+              "component": "MetaInput",
+              "props": {}
+            },
+            "device": []
+          },
+          {
+            "property": "transformCellText",
+            "label": {
+              "text": {
+                "zh_CN": "transformCellText"
+              }
+            },
+            "description": {
+              "zh_CN": "Table 数据渲染前可以再次改变，一般用户空数据的默认配置"
+            },
+            "required": false,
+            "readOnly": false,
+            "disabled": false,
+            "cols": 12,
+            "labelPosition": "top",
+            "type": "function",
+            "widget": {
+              "component": "MetaCodeEditor",
+              "props": {}
+            },
+            "device": []
+          },
+          {
+            "property": "virtual",
+            "label": {
+              "text": {
+                "zh_CN": "virtual"
+              }
+            },
+            "description": {
+              "zh_CN": "设置 `false` 时关闭虚拟滚动"
+            },
+            "required": false,
+            "readOnly": false,
+            "disabled": false,
+            "cols": 12,
+            "labelPosition": "top",
+            "type": "boolean",
+            "defaultValue": true,
+            "widget": {
+              "component": "MetaSwitch",
+              "props": {}
+            },
+            "device": []
+          },
+          {
+            "property": "wave",
+            "label": {
+              "text": {
+                "zh_CN": "wave"
+              }
+            },
+            "description": {
+              "zh_CN": "设置水波纹特效"
+            },
+            "required": false,
+            "readOnly": false,
+            "disabled": false,
+            "cols": 12,
+            "labelPosition": "top",
+            "type": "{ disabled?: boolean }",
+            "device": []
+          }
+        ],
+        "description": {
+          "zh_CN": ""
+        }
+      }
+    ],
+    "events": {},
+    "slots": {
+      "renderEmpty": {
+        "label": {
+          "zh_CN": "renderEmpty"
+        },
+        "description": {
+          "zh_CN": "自定义组件空状态。参考 [空状态](/components/empty/)"
+        }
+      }
+    }
+  },
+  "snippets": [{}]
+}

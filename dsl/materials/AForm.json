@@ -1,0 +1,434 @@
+{
+  "id": 1,
+  "version": "4.1.2",
+  "name": {
+    "zh_CN": "表单"
+  },
+  "component": "AForm",
+  "icon": "form",
+  "description": "高性能表单控件，自带数据域管理。包含数据录入、校验以及对应样式。",
+  "doc_url": "",
+  "screenshot": "https://mdn.alipayobjects.com/huamei_7uahnr/afts/img/A*ylFATY6w-ygAAAAAAAAAAAAADrJ8AQ/original",
+  "tags": "",
+  "keywords": "",
+  "dev_mode": "proCode",
+  "npm": {
+    "package": "ant-design-vue",
+    "version": "2.4.2",
+    "script": "https://unpkg.com/browse/ant-design-vue@4.1.2/dist/antd.esm.min.js",
+    "css": "https://unpkg.com/browse/ant-design-vue@4.1.2/dist/reset.css",
+    "dependencies": null,
+    "exportName": "Form"
+  },
+  "group": "component",
+  "category": "数据录入",
+  "configure": {
+    "loop": true,
+    "condition": true,
+    "styles": true,
+    "isContainer": false,
+    "isModal": false,
+    "isPopper": false,
+    "nestingRule": {
+      "childWhitelist": "",
+      "parentWhitelist": "",
+      "descendantBlacklist": "",
+      "ancestorWhitelist": ""
+    },
+    "isNullNode": false,
+    "isLayout": false,
+    "rootSelector": "",
+    "shortcuts": {
+      "properties": []
+    },
+    "contextMenu": {
+      "actions": ["copy", "remove", "insert", "updateAttr", "bindEevent", "createBlock"],
+      "disable": []
+    },
+    "invalidity": [""],
+    "clickCapture": true,
+    "framework": "Vue"
+  },
+  "schema": {
+    "properties": [
+      {
+        "name": "0",
+        "label": {
+          "zh_CN": "基础属性"
+        },
+        "content": [
+          {
+            "property": "colon",
+            "label": {
+              "text": {
+                "zh_CN": "colon"
+              }
+            },
+            "description": {
+              "zh_CN": "配置 Form.Item 的 colon 的默认值 (只有在属性 layout 为 horizontal 时有效)"
+            },
+            "required": false,
+            "readOnly": false,
+            "disabled": false,
+            "cols": 12,
+            "labelPosition": "top",
+            "type": "boolean",
+            "defaultValue": true,
+            "widget": {
+              "component": "MetaSwitch",
+              "props": {}
+            },
+            "device": []
+          },
+          {
+            "property": "disabled",
+            "label": {
+              "text": {
+                "zh_CN": "disabled"
+              }
+            },
+            "description": {
+              "zh_CN": "设置表单组件禁用，仅对 antdv 组件有效"
+            },
+            "required": false,
+            "readOnly": false,
+            "disabled": false,
+            "cols": 12,
+            "labelPosition": "top",
+            "type": "boolean",
+            "defaultValue": false,
+            "widget": {
+              "component": "MetaSwitch",
+              "props": {}
+            },
+            "device": []
+          },
+          {
+            "property": "hideRequiredMark",
+            "label": {
+              "text": {
+                "zh_CN": "hideRequiredMark"
+              }
+            },
+            "description": {
+              "zh_CN": "隐藏所有表单项的必选标记"
+            },
+            "required": false,
+            "readOnly": false,
+            "disabled": false,
+            "cols": 12,
+            "labelPosition": "top",
+            "type": "boolean",
+            "defaultValue": false,
+            "widget": {
+              "component": "MetaSwitch",
+              "props": {}
+            },
+            "device": []
+          },
+          {
+            "property": "labelAlign",
+            "label": {
+              "text": {
+                "zh_CN": "labelAlign"
+              }
+            },
+            "description": {
+              "zh_CN": "label 标签的文本对齐方式"
+            },
+            "required": false,
+            "readOnly": false,
+            "disabled": false,
+            "cols": 12,
+            "labelPosition": "top",
+            "type": "string",
+            "defaultValue": "'right'",
+            "widget": {
+              "component": "MetaSelect",
+              "props": {
+                "options": [
+                  {
+                    "label": "left",
+                    "value": "left"
+                  },
+                  {
+                    "label": "right",
+                    "value": "right"
+                  }
+                ]
+              }
+            },
+            "device": []
+          },
+          {
+            "property": "labelCol",
+            "label": {
+              "text": {
+                "zh_CN": "labelCol"
+              }
+            },
+            "description": {
+              "zh_CN": "label 标签布局，同 `<Col>` 组件，设置 `span` `offset` 值，如 `{span: 3, offset: 12}` 或 `sm: {span: 3, offset: 12}`"
+            },
+            "required": false,
+            "readOnly": false,
+            "disabled": false,
+            "cols": 12,
+            "labelPosition": "top",
+            "type": "[object](/components/grid/#col)",
+            "defaultValue": "",
+            "device": []
+          },
+          {
+            "property": "labelWrap",
+            "label": {
+              "text": {
+                "zh_CN": "labelWrap"
+              }
+            },
+            "description": {
+              "zh_CN": "label 标签的文本换行方式"
+            },
+            "required": false,
+            "readOnly": false,
+            "disabled": false,
+            "cols": 12,
+            "labelPosition": "top",
+            "type": "boolean",
+            "defaultValue": false,
+            "widget": {
+              "component": "MetaSwitch",
+              "props": {}
+            },
+            "device": []
+          },
+          {
+            "property": "layout",
+            "label": {
+              "text": {
+                "zh_CN": "layout"
+              }
+            },
+            "description": {
+              "zh_CN": "表单布局"
+            },
+            "required": false,
+            "readOnly": false,
+            "disabled": false,
+            "cols": 12,
+            "labelPosition": "top",
+            "type": "string",
+            "defaultValue": "'horizontal'",
+            "widget": {
+              "component": "MetaSelect",
+              "props": {
+                "options": [
+                  {
+                    "label": "horizontal",
+                    "value": "horizontal"
+                  },
+                  {
+                    "label": "vertical",
+                    "value": "vertical"
+                  },
+                  {
+                    "label": "inline",
+                    "value": "inline"
+                  }
+                ]
+              }
+            },
+            "device": []
+          },
+          {
+            "property": "model",
+            "label": {
+              "text": {
+                "zh_CN": "model"
+              }
+            },
+            "description": {
+              "zh_CN": "表单数据对象"
+            },
+            "required": false,
+            "readOnly": false,
+            "disabled": false,
+            "cols": 12,
+            "labelPosition": "top",
+            "type": "object",
+            "widget": {
+              "component": "MetaCodeEditor",
+              "props": {
+                "language": "json"
+              }
+            },
+            "device": []
+          },
+          {
+            "property": "name",
+            "label": {
+              "text": {
+                "zh_CN": "name"
+              }
+            },
+            "description": {
+              "zh_CN": "表单名称，会作为表单字段 `id` 前缀使用"
+            },
+            "required": false,
+            "readOnly": false,
+            "disabled": false,
+            "cols": 12,
+            "labelPosition": "top",
+            "type": "string",
+            "widget": {
+              "component": "MetaInput",
+              "props": {}
+            },
+            "device": []
+          },
+          {
+            "property": "noStyle",
+            "label": {
+              "text": {
+                "zh_CN": "noStyle"
+              }
+            },
+            "description": {
+              "zh_CN": "为 `true` 时不带样式，作为纯字段控件使用"
+            },
+            "required": false,
+            "readOnly": false,
+            "disabled": false,
+            "cols": 12,
+            "labelPosition": "top",
+            "type": "boolean",
+            "defaultValue": false,
+            "widget": {
+              "component": "MetaSwitch",
+              "props": {}
+            },
+            "device": []
+          },
+          {
+            "property": "rules",
+            "label": {
+              "text": {
+                "zh_CN": "rules"
+              }
+            },
+            "description": {
+              "zh_CN": "表单验证规则"
+            },
+            "required": false,
+            "readOnly": false,
+            "disabled": false,
+            "cols": 12,
+            "labelPosition": "top",
+            "type": "object",
+            "widget": {
+              "component": "MetaCodeEditor",
+              "props": {
+                "language": "json"
+              }
+            },
+            "device": []
+          },
+          {
+            "property": "scrollToFirstError",
+            "label": {
+              "text": {
+                "zh_CN": "scrollToFirstError"
+              }
+            },
+            "description": {
+              "zh_CN": "提交失败自动滚动到第一个错误字段"
+            },
+            "required": false,
+            "readOnly": false,
+            "disabled": false,
+            "cols": 12,
+            "labelPosition": "top",
+            "type": "boolean",
+            "defaultValue": false,
+            "widget": {
+              "component": "MetaSwitch",
+              "props": {}
+            },
+            "device": []
+          },
+          {
+            "property": "validateOnRuleChange",
+            "label": {
+              "text": {
+                "zh_CN": "validateOnRuleChange"
+              }
+            },
+            "description": {
+              "zh_CN": "是否在 rules 属性改变后立即触发一次验证"
+            },
+            "required": false,
+            "readOnly": false,
+            "disabled": false,
+            "cols": 12,
+            "labelPosition": "top",
+            "type": "boolean",
+            "defaultValue": true,
+            "widget": {
+              "component": "MetaSwitch",
+              "props": {}
+            },
+            "device": []
+          },
+          {
+            "property": "validateTrigger",
+            "label": {
+              "text": {
+                "zh_CN": "validateTrigger"
+              }
+            },
+            "description": {
+              "zh_CN": "统一设置字段校验规则"
+            },
+            "required": false,
+            "readOnly": false,
+            "disabled": false,
+            "cols": 12,
+            "labelPosition": "top",
+            "type": "string",
+            "defaultValue": "`change`",
+            "widget": {
+              "component": "MetaInput",
+              "props": {}
+            },
+            "device": []
+          },
+          {
+            "property": "wrapperCol",
+            "label": {
+              "text": {
+                "zh_CN": "wrapperCol"
+              }
+            },
+            "description": {
+              "zh_CN": "需要为输入控件设置布局样式时，使用该属性，用法同 labelCol"
+            },
+            "required": false,
+            "readOnly": false,
+            "disabled": false,
+            "cols": 12,
+            "labelPosition": "top",
+            "type": "[object](/components/grid/#col)",
+            "defaultValue": "",
+            "device": []
+          }
+        ],
+        "description": {
+          "zh_CN": ""
+        }
+      }
+    ],
+    "events": {},
+    "slots": {}
+  },
+  "snippets": [{}]
+}

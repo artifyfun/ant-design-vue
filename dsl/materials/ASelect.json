@@ -1,0 +1,1143 @@
+{
+  "id": 1,
+  "version": "4.1.2",
+  "name": {
+    "zh_CN": "选择器"
+  },
+  "component": "ASelect",
+  "icon": "select",
+  "description": "下拉选择器。",
+  "doc_url": "",
+  "screenshot": "https://mdn.alipayobjects.com/huamei_7uahnr/afts/img/A*5oPiTqPxGAUAAAAAAAAAAAAADrJ8AQ/original",
+  "tags": "",
+  "keywords": "",
+  "dev_mode": "proCode",
+  "npm": {
+    "package": "ant-design-vue",
+    "version": "2.4.2",
+    "script": "https://unpkg.com/browse/ant-design-vue@4.1.2/dist/antd.esm.min.js",
+    "css": "https://unpkg.com/browse/ant-design-vue@4.1.2/dist/reset.css",
+    "dependencies": null,
+    "exportName": "Select"
+  },
+  "group": "component",
+  "category": "数据录入",
+  "configure": {
+    "loop": true,
+    "condition": true,
+    "styles": true,
+    "isContainer": false,
+    "isModal": false,
+    "isPopper": false,
+    "nestingRule": {
+      "childWhitelist": "",
+      "parentWhitelist": "",
+      "descendantBlacklist": "",
+      "ancestorWhitelist": ""
+    },
+    "isNullNode": false,
+    "isLayout": false,
+    "rootSelector": "",
+    "shortcuts": {
+      "properties": []
+    },
+    "contextMenu": {
+      "actions": ["copy", "remove", "insert", "updateAttr", "bindEevent", "createBlock"],
+      "disable": []
+    },
+    "invalidity": [""],
+    "clickCapture": true,
+    "framework": "Vue"
+  },
+  "schema": {
+    "properties": [
+      {
+        "name": "0",
+        "label": {
+          "zh_CN": "基础属性"
+        },
+        "content": [
+          {
+            "property": "allowClear",
+            "label": {
+              "text": {
+                "zh_CN": "allowClear"
+              }
+            },
+            "description": {
+              "zh_CN": "支持清除"
+            },
+            "required": false,
+            "readOnly": false,
+            "disabled": false,
+            "cols": 12,
+            "labelPosition": "top",
+            "type": "boolean",
+            "defaultValue": false,
+            "widget": {
+              "component": "MetaSwitch",
+              "props": {}
+            },
+            "device": []
+          },
+          {
+            "property": "autoClearSearchValue",
+            "label": {
+              "text": {
+                "zh_CN": "autoClearSearchValue"
+              }
+            },
+            "description": {
+              "zh_CN": "是否在选中项后清空搜索框，只在 `mode` 为 `multiple` 或 `tags` 时有效。"
+            },
+            "required": false,
+            "readOnly": false,
+            "disabled": false,
+            "cols": 12,
+            "labelPosition": "top",
+            "type": "boolean",
+            "defaultValue": true,
+            "widget": {
+              "component": "MetaSwitch",
+              "props": {}
+            },
+            "device": []
+          },
+          {
+            "property": "autofocus",
+            "label": {
+              "text": {
+                "zh_CN": "autofocus"
+              }
+            },
+            "description": {
+              "zh_CN": "默认获取焦点"
+            },
+            "required": false,
+            "readOnly": false,
+            "disabled": false,
+            "cols": 12,
+            "labelPosition": "top",
+            "type": "boolean",
+            "defaultValue": false,
+            "widget": {
+              "component": "MetaSwitch",
+              "props": {}
+            },
+            "device": []
+          },
+          {
+            "property": "bordered",
+            "label": {
+              "text": {
+                "zh_CN": "bordered"
+              }
+            },
+            "description": {
+              "zh_CN": "是否有边框"
+            },
+            "required": false,
+            "readOnly": false,
+            "disabled": false,
+            "cols": 12,
+            "labelPosition": "top",
+            "type": "boolean",
+            "defaultValue": true,
+            "widget": {
+              "component": "MetaSwitch",
+              "props": {}
+            },
+            "device": []
+          },
+          {
+            "property": "defaultActiveFirstOption",
+            "label": {
+              "text": {
+                "zh_CN": "defaultActiveFirstOption"
+              }
+            },
+            "description": {
+              "zh_CN": "是否默认高亮第一个选项。"
+            },
+            "required": false,
+            "readOnly": false,
+            "disabled": false,
+            "cols": 12,
+            "labelPosition": "top",
+            "type": "boolean",
+            "defaultValue": true,
+            "widget": {
+              "component": "MetaSwitch",
+              "props": {}
+            },
+            "device": []
+          },
+          {
+            "property": "defaultOpen",
+            "label": {
+              "text": {
+                "zh_CN": "defaultOpen"
+              }
+            },
+            "description": {
+              "zh_CN": "是否默认展开下拉菜单"
+            },
+            "required": false,
+            "readOnly": false,
+            "disabled": false,
+            "cols": 12,
+            "labelPosition": "top",
+            "type": "boolean",
+            "widget": {
+              "component": "MetaSwitch",
+              "props": {}
+            },
+            "device": []
+          },
+          {
+            "property": "disabled",
+            "label": {
+              "text": {
+                "zh_CN": "disabled"
+              }
+            },
+            "description": {
+              "zh_CN": "是否禁用"
+            },
+            "required": false,
+            "readOnly": false,
+            "disabled": false,
+            "cols": 12,
+            "labelPosition": "top",
+            "type": "boolean",
+            "defaultValue": false,
+            "widget": {
+              "component": "MetaSwitch",
+              "props": {}
+            },
+            "device": []
+          },
+          {
+            "property": "popupClassName",
+            "label": {
+              "text": {
+                "zh_CN": "popupClassName"
+              }
+            },
+            "description": {
+              "zh_CN": "下拉菜单的 className 属性"
+            },
+            "required": false,
+            "readOnly": false,
+            "disabled": false,
+            "cols": 12,
+            "labelPosition": "top",
+            "type": "string",
+            "widget": {
+              "component": "MetaInput",
+              "props": {}
+            },
+            "device": []
+          },
+          {
+            "property": "dropdownMatchSelectWidth",
+            "label": {
+              "text": {
+                "zh_CN": "dropdownMatchSelectWidth"
+              }
+            },
+            "description": {
+              "zh_CN": "下拉菜单和选择器同宽。默认将设置 `min-width`，当值小于选择框宽度时会被忽略。false 时会关闭虚拟滚动"
+            },
+            "required": false,
+            "readOnly": false,
+            "disabled": false,
+            "cols": 12,
+            "labelPosition": "top",
+            "type": "boolean",
+            "defaultValue": true,
+            "widget": {
+              "component": "MetaSwitch",
+              "props": {}
+            },
+            "device": []
+          },
+          {
+            "property": "dropdownMenuStyle",
+            "label": {
+              "text": {
+                "zh_CN": "dropdownMenuStyle"
+              }
+            },
+            "description": {
+              "zh_CN": "dropdown 菜单自定义样式"
+            },
+            "required": false,
+            "readOnly": false,
+            "disabled": false,
+            "cols": 12,
+            "labelPosition": "top",
+            "type": "object",
+            "widget": {
+              "component": "MetaCodeEditor",
+              "props": {
+                "language": "json"
+              }
+            },
+            "device": []
+          },
+          {
+            "property": "dropdownStyle",
+            "label": {
+              "text": {
+                "zh_CN": "dropdownStyle"
+              }
+            },
+            "description": {
+              "zh_CN": "下拉菜单的 style 属性"
+            },
+            "required": false,
+            "readOnly": false,
+            "disabled": false,
+            "cols": 12,
+            "labelPosition": "top",
+            "type": "object",
+            "widget": {
+              "component": "MetaCodeEditor",
+              "props": {
+                "language": "json"
+              }
+            },
+            "device": []
+          },
+          {
+            "property": "fieldNames",
+            "label": {
+              "text": {
+                "zh_CN": "fieldNames"
+              }
+            },
+            "description": {
+              "zh_CN": "自定义节点 label、value、options 的字段"
+            },
+            "required": false,
+            "readOnly": false,
+            "disabled": false,
+            "cols": 12,
+            "labelPosition": "top",
+            "type": "object",
+            "widget": {
+              "component": "MetaCodeEditor",
+              "props": {
+                "language": "json"
+              }
+            },
+            "device": []
+          },
+          {
+            "property": "filterOption",
+            "label": {
+              "text": {
+                "zh_CN": "filterOption"
+              }
+            },
+            "description": {
+              "zh_CN": "是否根据输入项进行筛选。当其为一个函数时，会接收 `inputValue` `option` 两个参数，当 `option` 符合筛选条件时，应返回 `true`，反之则返回 `false`。"
+            },
+            "required": false,
+            "readOnly": false,
+            "disabled": false,
+            "cols": 12,
+            "labelPosition": "top",
+            "type": "string",
+            "defaultValue": "true",
+            "widget": {
+              "component": "MetaInput",
+              "props": {}
+            },
+            "device": []
+          },
+          {
+            "property": "filterSort",
+            "label": {
+              "text": {
+                "zh_CN": "filterSort"
+              }
+            },
+            "description": {
+              "zh_CN": "搜索时对筛选结果项的排序函数, 类似[Array.sort](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/sort)里的 compareFunction"
+            },
+            "required": false,
+            "readOnly": false,
+            "disabled": false,
+            "cols": 12,
+            "labelPosition": "top",
+            "type": "(optiona: option, optionb: option) => number",
+            "device": []
+          },
+          {
+            "property": "firstActiveValue",
+            "label": {
+              "text": {
+                "zh_CN": "firstActiveValue"
+              }
+            },
+            "description": {
+              "zh_CN": "默认高亮的选项"
+            },
+            "required": false,
+            "readOnly": false,
+            "disabled": false,
+            "cols": 12,
+            "labelPosition": "top",
+            "type": "string",
+            "widget": {
+              "component": "MetaInput",
+              "props": {}
+            },
+            "device": []
+          },
+          {
+            "property": "getPopupContainer",
+            "label": {
+              "text": {
+                "zh_CN": "getPopupContainer"
+              }
+            },
+            "description": {
+              "zh_CN": "菜单渲染父节点。默认渲染到 body 上，如果你遇到菜单滚动定位问题，试试修改为滚动的区域，并相对其定位。"
+            },
+            "required": false,
+            "readOnly": false,
+            "disabled": false,
+            "cols": 12,
+            "labelPosition": "top",
+            "type": "function",
+            "defaultValue": "() => document.body",
+            "widget": {
+              "component": "MetaCodeEditor",
+              "props": {}
+            },
+            "device": []
+          },
+          {
+            "property": "labelInValue",
+            "label": {
+              "text": {
+                "zh_CN": "labelInValue"
+              }
+            },
+            "description": {
+              "zh_CN": "是否把每个选项的 label 包装到 value 中，会把 Select 的 value 类型从 `string` 变为 `{key: string, label: vNodes, originLabel: any}` 的格式, originLabel（3.1） 保持原始类型，如果通过 a-select-option children 构造的节点，该值是是个函数（即 a-select-option 的默认插槽）"
+            },
+            "required": false,
+            "readOnly": false,
+            "disabled": false,
+            "cols": 12,
+            "labelPosition": "top",
+            "type": "boolean",
+            "defaultValue": false,
+            "widget": {
+              "component": "MetaSwitch",
+              "props": {}
+            },
+            "device": []
+          },
+          {
+            "property": "listHeight",
+            "label": {
+              "text": {
+                "zh_CN": "listHeight"
+              }
+            },
+            "description": {
+              "zh_CN": "设置弹窗滚动高度"
+            },
+            "required": false,
+            "readOnly": false,
+            "disabled": false,
+            "cols": 12,
+            "labelPosition": "top",
+            "type": "number",
+            "defaultValue": 256,
+            "widget": {
+              "component": "MetaNumber",
+              "props": {}
+            },
+            "device": []
+          },
+          {
+            "property": "loading",
+            "label": {
+              "text": {
+                "zh_CN": "loading"
+              }
+            },
+            "description": {
+              "zh_CN": "indicate loading state"
+            },
+            "required": false,
+            "readOnly": false,
+            "disabled": false,
+            "cols": 12,
+            "labelPosition": "top",
+            "type": "boolean",
+            "defaultValue": false,
+            "widget": {
+              "component": "MetaSwitch",
+              "props": {}
+            },
+            "device": []
+          },
+          {
+            "property": "maxTagCount",
+            "label": {
+              "text": {
+                "zh_CN": "maxTagCount"
+              }
+            },
+            "description": {
+              "zh_CN": "最多显示多少个 tag"
+            },
+            "required": false,
+            "readOnly": false,
+            "disabled": false,
+            "cols": 12,
+            "labelPosition": "top",
+            "type": "number",
+            "widget": {
+              "component": "MetaNumber",
+              "props": {}
+            },
+            "device": []
+          },
+          {
+            "property": "maxTagTextLength",
+            "label": {
+              "text": {
+                "zh_CN": "maxTagTextLength"
+              }
+            },
+            "description": {
+              "zh_CN": "最大显示的 tag 文本长度"
+            },
+            "required": false,
+            "readOnly": false,
+            "disabled": false,
+            "cols": 12,
+            "labelPosition": "top",
+            "type": "number",
+            "widget": {
+              "component": "MetaNumber",
+              "props": {}
+            },
+            "device": []
+          },
+          {
+            "property": "mode",
+            "label": {
+              "text": {
+                "zh_CN": "mode"
+              }
+            },
+            "description": {
+              "zh_CN": "设置 Select 的模式为多选或标签"
+            },
+            "required": false,
+            "readOnly": false,
+            "disabled": false,
+            "cols": 12,
+            "labelPosition": "top",
+            "type": "string",
+            "widget": {
+              "component": "MetaSelect",
+              "props": {
+                "options": [
+                  {
+                    "label": "multiple",
+                    "value": "multiple"
+                  },
+                  {
+                    "label": "tags",
+                    "value": "tags"
+                  }
+                ]
+              }
+            },
+            "device": []
+          },
+          {
+            "property": "notFoundContent",
+            "label": {
+              "text": {
+                "zh_CN": "notFoundContent"
+              }
+            },
+            "description": {
+              "zh_CN": "当下拉列表为空时显示的内容"
+            },
+            "required": false,
+            "readOnly": false,
+            "disabled": false,
+            "cols": 12,
+            "labelPosition": "top",
+            "type": "string",
+            "defaultValue": "`Not Found`",
+            "widget": {
+              "component": "MetaSelect",
+              "props": {
+                "options": [
+                  {
+                    "label": "string",
+                    "value": "string"
+                  },
+                  {
+                    "label": "slot",
+                    "value": "slot"
+                  }
+                ]
+              }
+            },
+            "device": []
+          },
+          {
+            "property": "open",
+            "label": {
+              "text": {
+                "zh_CN": "open"
+              }
+            },
+            "description": {
+              "zh_CN": "是否展开下拉菜单"
+            },
+            "required": false,
+            "readOnly": false,
+            "disabled": false,
+            "cols": 12,
+            "labelPosition": "top",
+            "type": "boolean",
+            "widget": {
+              "component": "MetaSwitch",
+              "props": {}
+            },
+            "device": []
+          },
+          {
+            "property": "optionFilterProp",
+            "label": {
+              "text": {
+                "zh_CN": "optionFilterProp"
+              }
+            },
+            "description": {
+              "zh_CN": "搜索时过滤对应的 option 属性，不支持 children"
+            },
+            "required": false,
+            "readOnly": false,
+            "disabled": false,
+            "cols": 12,
+            "labelPosition": "top",
+            "type": "string",
+            "defaultValue": "value",
+            "widget": {
+              "component": "MetaInput",
+              "props": {}
+            },
+            "device": []
+          },
+          {
+            "property": "optionLabelProp",
+            "label": {
+              "text": {
+                "zh_CN": "optionLabelProp"
+              }
+            },
+            "description": {
+              "zh_CN": "回填到选择框的 Option 的属性值，默认是 Option 的子元素。比如在子元素需要高亮效果时，此值可以设为 `value`。"
+            },
+            "required": false,
+            "readOnly": false,
+            "disabled": false,
+            "cols": 12,
+            "labelPosition": "top",
+            "type": "string",
+            "defaultValue": "`children` | `label`(when use options)",
+            "widget": {
+              "component": "MetaInput",
+              "props": {}
+            },
+            "device": []
+          },
+          {
+            "property": "placeholder",
+            "label": {
+              "text": {
+                "zh_CN": "placeholder"
+              }
+            },
+            "description": {
+              "zh_CN": "选择框默认文字"
+            },
+            "required": false,
+            "readOnly": false,
+            "disabled": false,
+            "cols": 12,
+            "labelPosition": "top",
+            "type": "string",
+            "widget": {
+              "component": "MetaSelect",
+              "props": {
+                "options": [
+                  {
+                    "label": "string",
+                    "value": "string"
+                  },
+                  {
+                    "label": "slot",
+                    "value": "slot"
+                  }
+                ]
+              }
+            },
+            "device": []
+          },
+          {
+            "property": "searchValue",
+            "label": {
+              "text": {
+                "zh_CN": "searchValue"
+              }
+            },
+            "description": {
+              "zh_CN": "控制搜索文本"
+            },
+            "required": false,
+            "readOnly": false,
+            "disabled": false,
+            "cols": 12,
+            "labelPosition": "top",
+            "type": "string",
+            "widget": {
+              "component": "MetaInput",
+              "props": {}
+            },
+            "device": []
+          },
+          {
+            "property": "showArrow",
+            "label": {
+              "text": {
+                "zh_CN": "showArrow"
+              }
+            },
+            "description": {
+              "zh_CN": "是否显示下拉小箭头"
+            },
+            "required": false,
+            "readOnly": false,
+            "disabled": false,
+            "cols": 12,
+            "labelPosition": "top",
+            "type": "boolean",
+            "defaultValue": true,
+            "widget": {
+              "component": "MetaSwitch",
+              "props": {}
+            },
+            "device": []
+          },
+          {
+            "property": "showSearch",
+            "label": {
+              "text": {
+                "zh_CN": "showSearch"
+              }
+            },
+            "description": {
+              "zh_CN": "配置是否可搜索"
+            },
+            "required": false,
+            "readOnly": false,
+            "disabled": false,
+            "cols": 12,
+            "labelPosition": "top",
+            "type": "boolean",
+            "defaultValue": true,
+            "widget": {
+              "component": "MetaSwitch",
+              "props": {}
+            },
+            "device": []
+          },
+          {
+            "property": "size",
+            "label": {
+              "text": {
+                "zh_CN": "size"
+              }
+            },
+            "description": {
+              "zh_CN": "选择框大小，可选 `large` `small`"
+            },
+            "required": false,
+            "readOnly": false,
+            "disabled": false,
+            "cols": 12,
+            "labelPosition": "top",
+            "type": "string",
+            "defaultValue": "default",
+            "widget": {
+              "component": "MetaInput",
+              "props": {}
+            },
+            "device": []
+          },
+          {
+            "property": "status",
+            "label": {
+              "text": {
+                "zh_CN": "status"
+              }
+            },
+            "description": {
+              "zh_CN": "设置校验状态"
+            },
+            "required": false,
+            "readOnly": false,
+            "disabled": false,
+            "cols": 12,
+            "labelPosition": "top",
+            "type": "string",
+            "widget": {
+              "component": "MetaSelect",
+              "props": {
+                "options": [
+                  {
+                    "label": "error",
+                    "value": "error"
+                  },
+                  {
+                    "label": "warning",
+                    "value": "warning"
+                  }
+                ]
+              }
+            },
+            "device": []
+          },
+          {
+            "property": "tokenSeparators",
+            "label": {
+              "text": {
+                "zh_CN": "tokenSeparators"
+              }
+            },
+            "description": {
+              "zh_CN": "自动分词的分隔符，仅在 `mode=\"tags\"` 时生效"
+            },
+            "required": false,
+            "readOnly": false,
+            "disabled": false,
+            "cols": 12,
+            "labelPosition": "top",
+            "type": "object",
+            "widget": {
+              "component": "MetaCodeEditor",
+              "props": {
+                "language": "json"
+              }
+            },
+            "device": []
+          },
+          {
+            "property": "value",
+            "label": {
+              "text": {
+                "zh_CN": "value(v-model)"
+              }
+            },
+            "description": {
+              "zh_CN": "指定当前选中的条目"
+            },
+            "required": false,
+            "readOnly": false,
+            "disabled": false,
+            "cols": 12,
+            "labelPosition": "top",
+            "type": "string",
+            "widget": {
+              "component": "MetaInput",
+              "props": {}
+            },
+            "device": []
+          },
+          {
+            "property": "virtual",
+            "label": {
+              "text": {
+                "zh_CN": "virtual"
+              }
+            },
+            "description": {
+              "zh_CN": "设置 false 时关闭虚拟滚动"
+            },
+            "required": false,
+            "readOnly": false,
+            "disabled": false,
+            "cols": 12,
+            "labelPosition": "top",
+            "type": "boolean",
+            "defaultValue": true,
+            "widget": {
+              "component": "MetaSwitch",
+              "props": {}
+            },
+            "device": []
+          }
+        ],
+        "description": {
+          "zh_CN": ""
+        }
+      }
+    ],
+    "events": {
+      "onBlur": {
+        "label": {
+          "zh_CN": "blur"
+        },
+        "description": {
+          "zh_CN": "Called when blur"
+        },
+        "type": "event",
+        "functionInfo": {
+          "params": [],
+          "returns": {}
+        },
+        "defaultValue": ""
+      },
+      "onChange": {
+        "label": {
+          "zh_CN": "change"
+        },
+        "description": {
+          "zh_CN": "Called when select an option or input value change, or value of input is changed in combobox mode"
+        },
+        "type": "event",
+        "functionInfo": {
+          "params": [],
+          "returns": {}
+        },
+        "defaultValue": ""
+      },
+      "onDeselect": {
+        "label": {
+          "zh_CN": "deselect"
+        },
+        "description": {
+          "zh_CN": "Called when a option is deselected, the params are option's value (or key) . only called for multiple or tags, effective in multiple or tags mode only."
+        },
+        "type": "event",
+        "functionInfo": {
+          "params": [],
+          "returns": {}
+        },
+        "defaultValue": ""
+      },
+      "onDropdownVisibleChange": {
+        "label": {
+          "zh_CN": "dropdownVisibleChange"
+        },
+        "description": {
+          "zh_CN": "Call when dropdown open"
+        },
+        "type": "event",
+        "functionInfo": {
+          "params": [],
+          "returns": {}
+        },
+        "defaultValue": ""
+      },
+      "onFocus": {
+        "label": {
+          "zh_CN": "focus"
+        },
+        "description": {
+          "zh_CN": "Called when focus"
+        },
+        "type": "event",
+        "functionInfo": {
+          "params": [],
+          "returns": {}
+        },
+        "defaultValue": ""
+      },
+      "onInputKeyDown": {
+        "label": {
+          "zh_CN": "inputKeyDown"
+        },
+        "description": {
+          "zh_CN": "Called when key pressed"
+        },
+        "type": "event",
+        "functionInfo": {
+          "params": [],
+          "returns": {}
+        },
+        "defaultValue": ""
+      },
+      "onMouseenter": {
+        "label": {
+          "zh_CN": "mouseenter"
+        },
+        "description": {
+          "zh_CN": "Called when mouse enter"
+        },
+        "type": "event",
+        "functionInfo": {
+          "params": [],
+          "returns": {}
+        },
+        "defaultValue": ""
+      },
+      "onMouseleave": {
+        "label": {
+          "zh_CN": "mouseleave"
+        },
+        "description": {
+          "zh_CN": "Called when mouse leave"
+        },
+        "type": "event",
+        "functionInfo": {
+          "params": [],
+          "returns": {}
+        },
+        "defaultValue": ""
+      },
+      "onPopupScroll": {
+        "label": {
+          "zh_CN": "popupScroll"
+        },
+        "description": {
+          "zh_CN": "Called when dropdown scrolls"
+        },
+        "type": "event",
+        "functionInfo": {
+          "params": [],
+          "returns": {}
+        },
+        "defaultValue": ""
+      },
+      "onSearch": {
+        "label": {
+          "zh_CN": "search"
+        },
+        "description": {
+          "zh_CN": "Callback function that is fired when input changed."
+        },
+        "type": "event",
+        "functionInfo": {
+          "params": [],
+          "returns": {}
+        },
+        "defaultValue": ""
+      },
+      "onSelect": {
+        "label": {
+          "zh_CN": "select"
+        },
+        "description": {
+          "zh_CN": "Called when a option is selected, the params are option's value (or key) and option instance."
+        },
+        "type": "event",
+        "functionInfo": {
+          "params": [],
+          "returns": {}
+        },
+        "defaultValue": ""
+      }
+    },
+    "slots": {
+      "clearIcon": {
+        "label": {
+          "zh_CN": "clearIcon"
+        },
+        "description": {
+          "zh_CN": "自定义的多选框清空图标"
+        }
+      },
+      "dropdownRender": {
+        "label": {
+          "zh_CN": "dropdownRender"
+        },
+        "description": {
+          "zh_CN": "自定义下拉框内容"
+        }
+      },
+      "maxTagPlaceholder": {
+        "label": {
+          "zh_CN": "maxTagPlaceholder"
+        },
+        "description": {
+          "zh_CN": "隐藏 tag 时显示的内容"
+        }
+      },
+      "menuItemSelectedIcon": {
+        "label": {
+          "zh_CN": "menuItemSelectedIcon"
+        },
+        "description": {
+          "zh_CN": "自定义当前选中的条目图标"
+        }
+      },
+      "notFoundContent": {
+        "label": {
+          "zh_CN": "notFoundContent"
+        },
+        "description": {
+          "zh_CN": "当下拉列表为空时显示的内容"
+        }
+      },
+      "option": {
+        "label": {
+          "zh_CN": "option"
+        },
+        "description": {
+          "zh_CN": "通过 option 插槽，自定义节点"
+        }
+      },
+      "placeholder": {
+        "label": {
+          "zh_CN": "placeholder"
+        },
+        "description": {
+          "zh_CN": "选择框默认文字"
+        }
+      },
+      "removeIcon": {
+        "label": {
+          "zh_CN": "removeIcon"
+        },
+        "description": {
+          "zh_CN": "自定义的多选框清除图标"
+        }
+      },
+      "suffixIcon": {
+        "label": {
+          "zh_CN": "suffixIcon"
+        },
+        "description": {
+          "zh_CN": "自定义的选择框后缀图标"
+        }
+      },
+      "tagRender": {
+        "label": {
+          "zh_CN": "tagRender"
+        },
+        "description": {
+          "zh_CN": "自定义 tag 内容 render，仅在 `mode` 为 `multiple` 或 `tags` 时生效"
+        }
+      }
+    }
+  },
+  "snippets": [{}]
+}

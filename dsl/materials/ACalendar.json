@@ -1,0 +1,289 @@
+{
+  "id": 1,
+  "version": "4.1.2",
+  "name": {
+    "zh_CN": "日历"
+  },
+  "component": "ACalendar",
+  "icon": "calendar",
+  "description": "按照日历形式展示数据的容器。",
+  "doc_url": "",
+  "screenshot": "https://mdn.alipayobjects.com/huamei_7uahnr/afts/img/A*-p-wQLik200AAAAAAAAAAAAADrJ8AQ/original",
+  "tags": "",
+  "keywords": "",
+  "dev_mode": "proCode",
+  "npm": {
+    "package": "ant-design-vue",
+    "version": "2.4.2",
+    "script": "https://unpkg.com/browse/ant-design-vue@4.1.2/dist/antd.esm.min.js",
+    "css": "https://unpkg.com/browse/ant-design-vue@4.1.2/dist/reset.css",
+    "dependencies": null,
+    "exportName": "Calendar"
+  },
+  "group": "component",
+  "category": "数据展示",
+  "configure": {
+    "loop": true,
+    "condition": true,
+    "styles": true,
+    "isContainer": false,
+    "isModal": false,
+    "isPopper": false,
+    "nestingRule": {
+      "childWhitelist": "",
+      "parentWhitelist": "",
+      "descendantBlacklist": "",
+      "ancestorWhitelist": ""
+    },
+    "isNullNode": false,
+    "isLayout": false,
+    "rootSelector": "",
+    "shortcuts": {
+      "properties": []
+    },
+    "contextMenu": {
+      "actions": ["copy", "remove", "insert", "updateAttr", "bindEevent", "createBlock"],
+      "disable": []
+    },
+    "invalidity": [""],
+    "clickCapture": true,
+    "framework": "Vue"
+  },
+  "schema": {
+    "properties": [
+      {
+        "name": "0",
+        "label": {
+          "zh_CN": "基础属性"
+        },
+        "content": [
+          {
+            "property": "disabledDate",
+            "label": {
+              "text": {
+                "zh_CN": "disabledDate"
+              }
+            },
+            "description": {
+              "zh_CN": "不可选择的日期"
+            },
+            "required": false,
+            "readOnly": false,
+            "disabled": false,
+            "cols": 12,
+            "labelPosition": "top",
+            "type": "(currentdate: dayjs) => boolean",
+            "device": []
+          },
+          {
+            "property": "fullscreen",
+            "label": {
+              "text": {
+                "zh_CN": "fullscreen"
+              }
+            },
+            "description": {
+              "zh_CN": "是否全屏显示"
+            },
+            "required": false,
+            "readOnly": false,
+            "disabled": false,
+            "cols": 12,
+            "labelPosition": "top",
+            "type": "boolean",
+            "defaultValue": true,
+            "widget": {
+              "component": "MetaSwitch",
+              "props": {}
+            },
+            "device": []
+          },
+          {
+            "property": "headerRender",
+            "label": {
+              "text": {
+                "zh_CN": "headerRender"
+              }
+            },
+            "description": {
+              "zh_CN": "自定义头部内容"
+            },
+            "required": false,
+            "readOnly": false,
+            "disabled": false,
+            "cols": 12,
+            "labelPosition": "top",
+            "type": "v-slot:headerrender=\"{value: dayjs, type: string, onchange: f(), ontypechange: f()}\"",
+            "device": []
+          },
+          {
+            "property": "locale",
+            "label": {
+              "text": {
+                "zh_CN": "locale"
+              }
+            },
+            "description": {
+              "zh_CN": "国际化配置"
+            },
+            "required": false,
+            "readOnly": false,
+            "disabled": false,
+            "cols": 12,
+            "labelPosition": "top",
+            "type": "object",
+            "widget": {
+              "component": "MetaCodeEditor",
+              "props": {
+                "language": "json"
+              }
+            },
+            "device": []
+          },
+          {
+            "property": "mode",
+            "label": {
+              "text": {
+                "zh_CN": "mode"
+              }
+            },
+            "description": {
+              "zh_CN": "初始模式，`month/year`"
+            },
+            "required": false,
+            "readOnly": false,
+            "disabled": false,
+            "cols": 12,
+            "labelPosition": "top",
+            "type": "string",
+            "defaultValue": "`month`",
+            "widget": {
+              "component": "MetaSelect",
+              "props": {
+                "options": [
+                  {
+                    "label": "month",
+                    "value": "month"
+                  },
+                  {
+                    "label": "year",
+                    "value": "year"
+                  }
+                ]
+              }
+            },
+            "device": []
+          },
+          {
+            "property": "valueFormat",
+            "label": {
+              "text": {
+                "zh_CN": "valueFormat"
+              }
+            },
+            "description": {
+              "zh_CN": "可选，绑定值的格式，对 value、defaultValue 起作用。不指定则绑定值为 dayjs 对象"
+            },
+            "required": false,
+            "readOnly": false,
+            "disabled": false,
+            "cols": 12,
+            "labelPosition": "top",
+            "type": "string, [date formats](https://day.js.org/docs/en/display/format)",
+            "device": []
+          }
+        ],
+        "description": {
+          "zh_CN": ""
+        }
+      }
+    ],
+    "events": {
+      "onChange": {
+        "label": {
+          "zh_CN": "change"
+        },
+        "description": {
+          "zh_CN": "Callback for when value change"
+        },
+        "type": "event",
+        "functionInfo": {
+          "params": [],
+          "returns": {}
+        },
+        "defaultValue": ""
+      },
+      "onPanelChange": {
+        "label": {
+          "zh_CN": "panelChange"
+        },
+        "description": {
+          "zh_CN": "Callback for when panel changes"
+        },
+        "type": "event",
+        "functionInfo": {
+          "params": [],
+          "returns": {}
+        },
+        "defaultValue": ""
+      },
+      "onSelect": {
+        "label": {
+          "zh_CN": "select"
+        },
+        "description": {
+          "zh_CN": "Callback for when a date is selected, include source info"
+        },
+        "type": "event",
+        "functionInfo": {
+          "params": [],
+          "returns": {}
+        },
+        "defaultValue": ""
+      }
+    },
+    "slots": {
+      "dateCellRender": {
+        "label": {
+          "zh_CN": "dateCellRender"
+        },
+        "description": {
+          "zh_CN": "作用域插槽，用来自定义渲染日期单元格，返回内容会被追加到单元格,"
+        }
+      },
+      "dateFullCellRender": {
+        "label": {
+          "zh_CN": "dateFullCellRender"
+        },
+        "description": {
+          "zh_CN": "作用域插槽，自定义渲染日期单元格，返回内容覆盖单元格"
+        }
+      },
+      "headerRender": {
+        "label": {
+          "zh_CN": "headerRender"
+        },
+        "description": {
+          "zh_CN": "自定义头部内容"
+        }
+      },
+      "monthCellRender": {
+        "label": {
+          "zh_CN": "monthCellRender"
+        },
+        "description": {
+          "zh_CN": "作用域插槽，自定义渲染月单元格，返回内容会被追加到单元格"
+        }
+      },
+      "monthFullCellRender": {
+        "label": {
+          "zh_CN": "monthFullCellRender"
+        },
+        "description": {
+          "zh_CN": "作用域插槽，自定义渲染月单元格，返回内容覆盖单元格"
+        }
+      }
+    }
+  },
+  "snippets": [{}]
+}

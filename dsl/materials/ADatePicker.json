@@ -1,0 +1,551 @@
+{
+  "id": 1,
+  "version": "4.1.2",
+  "name": {
+    "zh_CN": "日期选择框"
+  },
+  "component": "ADatePicker",
+  "icon": "date-picker",
+  "description": "输入或选择日期的控件。",
+  "doc_url": "",
+  "screenshot": "https://mdn.alipayobjects.com/huamei_7uahnr/afts/img/A*3OpRQKcygo8AAAAAAAAAAAAADrJ8AQ/original",
+  "tags": "",
+  "keywords": "",
+  "dev_mode": "proCode",
+  "npm": {
+    "package": "ant-design-vue",
+    "version": "2.4.2",
+    "script": "https://unpkg.com/browse/ant-design-vue@4.1.2/dist/antd.esm.min.js",
+    "css": "https://unpkg.com/browse/ant-design-vue@4.1.2/dist/reset.css",
+    "dependencies": null,
+    "exportName": "DatePicker"
+  },
+  "group": "component",
+  "category": "数据录入",
+  "configure": {
+    "loop": true,
+    "condition": true,
+    "styles": true,
+    "isContainer": false,
+    "isModal": false,
+    "isPopper": false,
+    "nestingRule": {
+      "childWhitelist": "",
+      "parentWhitelist": "",
+      "descendantBlacklist": "",
+      "ancestorWhitelist": ""
+    },
+    "isNullNode": false,
+    "isLayout": false,
+    "rootSelector": "",
+    "shortcuts": {
+      "properties": []
+    },
+    "contextMenu": {
+      "actions": ["copy", "remove", "insert", "updateAttr", "bindEevent", "createBlock"],
+      "disable": []
+    },
+    "invalidity": [""],
+    "clickCapture": true,
+    "framework": "Vue"
+  },
+  "schema": {
+    "properties": [
+      {
+        "name": "0",
+        "label": {
+          "zh_CN": "基础属性"
+        },
+        "content": [
+          {
+            "property": "allowClear",
+            "label": {
+              "text": {
+                "zh_CN": "allowClear"
+              }
+            },
+            "description": {
+              "zh_CN": "是否显示清除按钮"
+            },
+            "required": false,
+            "readOnly": false,
+            "disabled": false,
+            "cols": 12,
+            "labelPosition": "top",
+            "type": "boolean",
+            "defaultValue": true,
+            "widget": {
+              "component": "MetaSwitch",
+              "props": {}
+            },
+            "device": []
+          },
+          {
+            "property": "autofocus",
+            "label": {
+              "text": {
+                "zh_CN": "autofocus"
+              }
+            },
+            "description": {
+              "zh_CN": "自动获取焦点"
+            },
+            "required": false,
+            "readOnly": false,
+            "disabled": false,
+            "cols": 12,
+            "labelPosition": "top",
+            "type": "boolean",
+            "defaultValue": false,
+            "widget": {
+              "component": "MetaSwitch",
+              "props": {}
+            },
+            "device": []
+          },
+          {
+            "property": "bordered",
+            "label": {
+              "text": {
+                "zh_CN": "bordered"
+              }
+            },
+            "description": {
+              "zh_CN": "是否有边框"
+            },
+            "required": false,
+            "readOnly": false,
+            "disabled": false,
+            "cols": 12,
+            "labelPosition": "top",
+            "type": "boolean",
+            "defaultValue": true,
+            "widget": {
+              "component": "MetaSwitch",
+              "props": {}
+            },
+            "device": []
+          },
+          {
+            "property": "disabled",
+            "label": {
+              "text": {
+                "zh_CN": "disabled"
+              }
+            },
+            "description": {
+              "zh_CN": "禁用"
+            },
+            "required": false,
+            "readOnly": false,
+            "disabled": false,
+            "cols": 12,
+            "labelPosition": "top",
+            "type": "boolean",
+            "defaultValue": false,
+            "widget": {
+              "component": "MetaSwitch",
+              "props": {}
+            },
+            "device": []
+          },
+          {
+            "property": "disabledDate",
+            "label": {
+              "text": {
+                "zh_CN": "disabledDate"
+              }
+            },
+            "description": {
+              "zh_CN": "不可选择的日期"
+            },
+            "required": false,
+            "readOnly": false,
+            "disabled": false,
+            "cols": 12,
+            "labelPosition": "top",
+            "type": "(currentdate: dayjs) => boolean",
+            "device": []
+          },
+          {
+            "property": "dropdownClassName",
+            "label": {
+              "text": {
+                "zh_CN": "dropdownClassName"
+              }
+            },
+            "description": {
+              "zh_CN": "额外的弹出日历 className"
+            },
+            "required": false,
+            "readOnly": false,
+            "disabled": false,
+            "cols": 12,
+            "labelPosition": "top",
+            "type": "string",
+            "widget": {
+              "component": "MetaInput",
+              "props": {}
+            },
+            "device": []
+          },
+          {
+            "property": "getPopupContainer",
+            "label": {
+              "text": {
+                "zh_CN": "getPopupContainer"
+              }
+            },
+            "description": {
+              "zh_CN": "定义浮层的容器，默认为 body 上新建 div"
+            },
+            "required": false,
+            "readOnly": false,
+            "disabled": false,
+            "cols": 12,
+            "labelPosition": "top",
+            "type": "function",
+            "widget": {
+              "component": "MetaCodeEditor",
+              "props": {}
+            },
+            "device": []
+          },
+          {
+            "property": "inputReadOnly",
+            "label": {
+              "text": {
+                "zh_CN": "inputReadOnly"
+              }
+            },
+            "description": {
+              "zh_CN": "设置输入框为只读（避免在移动设备上打开虚拟键盘）"
+            },
+            "required": false,
+            "readOnly": false,
+            "disabled": false,
+            "cols": 12,
+            "labelPosition": "top",
+            "type": "boolean",
+            "defaultValue": false,
+            "widget": {
+              "component": "MetaSwitch",
+              "props": {}
+            },
+            "device": []
+          },
+          {
+            "property": "locale",
+            "label": {
+              "text": {
+                "zh_CN": "locale"
+              }
+            },
+            "description": {
+              "zh_CN": "国际化配置"
+            },
+            "required": false,
+            "readOnly": false,
+            "disabled": false,
+            "cols": 12,
+            "labelPosition": "top",
+            "type": "object",
+            "widget": {
+              "component": "MetaCodeEditor",
+              "props": {
+                "language": "json"
+              }
+            },
+            "device": []
+          },
+          {
+            "property": "mode",
+            "label": {
+              "text": {
+                "zh_CN": "mode"
+              }
+            },
+            "description": {
+              "zh_CN": "日期面板的状态"
+            },
+            "required": false,
+            "readOnly": false,
+            "disabled": false,
+            "cols": 12,
+            "labelPosition": "top",
+            "type": "string",
+            "widget": {
+              "component": "MetaSelect",
+              "props": {
+                "options": [
+                  {
+                    "label": "time",
+                    "value": "time"
+                  },
+                  {
+                    "label": "date",
+                    "value": "date"
+                  },
+                  {
+                    "label": "month",
+                    "value": "month"
+                  },
+                  {
+                    "label": "year",
+                    "value": "year"
+                  },
+                  {
+                    "label": "decade",
+                    "value": "decade"
+                  }
+                ]
+              }
+            },
+            "device": []
+          },
+          {
+            "property": "open",
+            "label": {
+              "text": {
+                "zh_CN": "open"
+              }
+            },
+            "description": {
+              "zh_CN": "控制弹层是否展开"
+            },
+            "required": false,
+            "readOnly": false,
+            "disabled": false,
+            "cols": 12,
+            "labelPosition": "top",
+            "type": "boolean",
+            "widget": {
+              "component": "MetaSwitch",
+              "props": {}
+            },
+            "device": []
+          },
+          {
+            "property": "picker",
+            "label": {
+              "text": {
+                "zh_CN": "picker"
+              }
+            },
+            "description": {
+              "zh_CN": "设置选择器类型"
+            },
+            "required": false,
+            "readOnly": false,
+            "disabled": false,
+            "cols": 12,
+            "labelPosition": "top",
+            "type": "string",
+            "defaultValue": "`date`",
+            "widget": {
+              "component": "MetaSelect",
+              "props": {
+                "options": [
+                  {
+                    "label": "date",
+                    "value": "date"
+                  },
+                  {
+                    "label": "week",
+                    "value": "week"
+                  },
+                  {
+                    "label": "month",
+                    "value": "month"
+                  },
+                  {
+                    "label": "quarter",
+                    "value": "quarter"
+                  },
+                  {
+                    "label": "year",
+                    "value": "year"
+                  }
+                ]
+              }
+            },
+            "device": []
+          },
+          {
+            "property": "placeholder",
+            "label": {
+              "text": {
+                "zh_CN": "placeholder"
+              }
+            },
+            "description": {
+              "zh_CN": "输入框提示文字"
+            },
+            "required": false,
+            "readOnly": false,
+            "disabled": false,
+            "cols": 12,
+            "labelPosition": "top",
+            "type": "string",
+            "widget": {
+              "component": "MetaInput",
+              "props": {}
+            },
+            "device": []
+          },
+          {
+            "property": "size",
+            "label": {
+              "text": {
+                "zh_CN": "size"
+              }
+            },
+            "description": {
+              "zh_CN": "输入框大小，`large` 高度为 40px，`small` 为 24px，默认是 32px"
+            },
+            "required": false,
+            "readOnly": false,
+            "disabled": false,
+            "cols": 12,
+            "labelPosition": "top",
+            "type": "string",
+            "widget": {
+              "component": "MetaSelect",
+              "props": {
+                "options": [
+                  {
+                    "label": "large",
+                    "value": "large"
+                  },
+                  {
+                    "label": "middle",
+                    "value": "middle"
+                  },
+                  {
+                    "label": "small",
+                    "value": "small"
+                  }
+                ]
+              }
+            },
+            "device": []
+          },
+          {
+            "property": "status",
+            "label": {
+              "text": {
+                "zh_CN": "status"
+              }
+            },
+            "description": {
+              "zh_CN": "设置校验状态"
+            },
+            "required": false,
+            "readOnly": false,
+            "disabled": false,
+            "cols": 12,
+            "labelPosition": "top",
+            "type": "string",
+            "widget": {
+              "component": "MetaSelect",
+              "props": {
+                "options": [
+                  {
+                    "label": "error",
+                    "value": "error"
+                  },
+                  {
+                    "label": "warning",
+                    "value": "warning"
+                  }
+                ]
+              }
+            },
+            "device": []
+          },
+          {
+            "property": "valueFormat",
+            "label": {
+              "text": {
+                "zh_CN": "valueFormat"
+              }
+            },
+            "description": {
+              "zh_CN": "可选，绑定值的格式，对 value、defaultValue、defaultPickerValue 起作用。不指定则绑定值为 dayjs 对象"
+            },
+            "required": false,
+            "readOnly": false,
+            "disabled": false,
+            "cols": 12,
+            "labelPosition": "top",
+            "type": "string, [date formats](https://day.js.org/docs/en/display/format)",
+            "device": []
+          }
+        ],
+        "description": {
+          "zh_CN": ""
+        }
+      }
+    ],
+    "events": {},
+    "slots": {
+      "dateRender": {
+        "label": {
+          "zh_CN": "dateRender"
+        },
+        "description": {
+          "zh_CN": "自定义日期单元格的内容"
+        }
+      },
+      "nextIcon": {
+        "label": {
+          "zh_CN": "nextIcon"
+        },
+        "description": {
+          "zh_CN": "自定义下一个图标"
+        }
+      },
+      "presets": {
+        "label": {
+          "zh_CN": "presets"
+        },
+        "description": {
+          "zh_CN": "预设时间范围快捷选择"
+        }
+      },
+      "prevIcon": {
+        "label": {
+          "zh_CN": "prevIcon"
+        },
+        "description": {
+          "zh_CN": "自定义上一个图标"
+        }
+      },
+      "suffixIcon": {
+        "label": {
+          "zh_CN": "suffixIcon"
+        },
+        "description": {
+          "zh_CN": "自定义的选择框后缀图标"
+        }
+      },
+      "superNextIcon": {
+        "label": {
+          "zh_CN": "superNextIcon"
+        },
+        "description": {
+          "zh_CN": "自定义 `<<` 切换图标"
+        }
+      },
+      "superPrevIcon": {
+        "label": {
+          "zh_CN": "superPrevIcon"
+        },
+        "description": {
+          "zh_CN": "自定义 `>>` 切换图标"
+        }
+      }
+    }
+  },
+  "snippets": [{}]
+}

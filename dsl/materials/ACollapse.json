@@ -1,0 +1,303 @@
+{
+  "id": 1,
+  "version": "4.1.2",
+  "name": {
+    "zh_CN": "折叠面板"
+  },
+  "component": "ACollapse",
+  "icon": "collapse",
+  "description": "可以折叠/展开的内容区域。",
+  "doc_url": "",
+  "screenshot": "https://mdn.alipayobjects.com/huamei_7uahnr/afts/img/A*sir-TK0HkWcAAAAAAAAAAAAADrJ8AQ/original",
+  "tags": "",
+  "keywords": "",
+  "dev_mode": "proCode",
+  "npm": {
+    "package": "ant-design-vue",
+    "version": "2.4.2",
+    "script": "https://unpkg.com/browse/ant-design-vue@4.1.2/dist/antd.esm.min.js",
+    "css": "https://unpkg.com/browse/ant-design-vue@4.1.2/dist/reset.css",
+    "dependencies": null,
+    "exportName": "Collapse"
+  },
+  "group": "component",
+  "category": "数据展示",
+  "configure": {
+    "loop": true,
+    "condition": true,
+    "styles": true,
+    "isContainer": false,
+    "isModal": false,
+    "isPopper": false,
+    "nestingRule": {
+      "childWhitelist": "",
+      "parentWhitelist": "",
+      "descendantBlacklist": "",
+      "ancestorWhitelist": ""
+    },
+    "isNullNode": false,
+    "isLayout": false,
+    "rootSelector": "",
+    "shortcuts": {
+      "properties": []
+    },
+    "contextMenu": {
+      "actions": ["copy", "remove", "insert", "updateAttr", "bindEevent", "createBlock"],
+      "disable": []
+    },
+    "invalidity": [""],
+    "clickCapture": true,
+    "framework": "Vue"
+  },
+  "schema": {
+    "properties": [
+      {
+        "name": "0",
+        "label": {
+          "zh_CN": "基础属性"
+        },
+        "content": [
+          {
+            "property": "accordion",
+            "label": {
+              "text": {
+                "zh_CN": "accordion"
+              }
+            },
+            "description": {
+              "zh_CN": "手风琴模式"
+            },
+            "required": false,
+            "readOnly": false,
+            "disabled": false,
+            "cols": 12,
+            "labelPosition": "top",
+            "type": "boolean",
+            "defaultValue": false,
+            "widget": {
+              "component": "MetaSwitch",
+              "props": {}
+            },
+            "device": []
+          },
+          {
+            "property": "activeKey",
+            "label": {
+              "text": {
+                "zh_CN": "activeKey(v-model)"
+              }
+            },
+            "description": {
+              "zh_CN": "当前激活 tab 面板的 key"
+            },
+            "required": false,
+            "readOnly": false,
+            "disabled": false,
+            "cols": 12,
+            "labelPosition": "top",
+            "type": "object",
+            "widget": {
+              "component": "MetaCodeEditor",
+              "props": {
+                "language": "json"
+              }
+            },
+            "device": []
+          },
+          {
+            "property": "bordered",
+            "label": {
+              "text": {
+                "zh_CN": "bordered"
+              }
+            },
+            "description": {
+              "zh_CN": "带边框风格的折叠面板"
+            },
+            "required": false,
+            "readOnly": false,
+            "disabled": false,
+            "cols": 12,
+            "labelPosition": "top",
+            "type": "boolean",
+            "defaultValue": true,
+            "widget": {
+              "component": "MetaSwitch",
+              "props": {}
+            },
+            "device": []
+          },
+          {
+            "property": "collapsible",
+            "label": {
+              "text": {
+                "zh_CN": "collapsible"
+              }
+            },
+            "description": {
+              "zh_CN": "所有子面板是否可折叠或指定可折叠触发区域"
+            },
+            "required": false,
+            "readOnly": false,
+            "disabled": false,
+            "cols": 12,
+            "labelPosition": "top",
+            "type": "string",
+            "widget": {
+              "component": "MetaSelect",
+              "props": {
+                "options": [
+                  {
+                    "label": "header",
+                    "value": "header"
+                  },
+                  {
+                    "label": "icon",
+                    "value": "icon"
+                  },
+                  {
+                    "label": "disabled",
+                    "value": "disabled"
+                  }
+                ]
+              }
+            },
+            "device": []
+          },
+          {
+            "property": "destroyInactivePanel",
+            "label": {
+              "text": {
+                "zh_CN": "destroyInactivePanel"
+              }
+            },
+            "description": {
+              "zh_CN": "销毁折叠隐藏的面板"
+            },
+            "required": false,
+            "readOnly": false,
+            "disabled": false,
+            "cols": 12,
+            "labelPosition": "top",
+            "type": "boolean",
+            "defaultValue": false,
+            "widget": {
+              "component": "MetaSwitch",
+              "props": {}
+            },
+            "device": []
+          },
+          {
+            "property": "expandIcon",
+            "label": {
+              "text": {
+                "zh_CN": "expandIcon"
+              }
+            },
+            "description": {
+              "zh_CN": "自定义切换图标"
+            },
+            "required": false,
+            "readOnly": false,
+            "disabled": false,
+            "cols": 12,
+            "labelPosition": "top",
+            "type": "function",
+            "defaultValue": "",
+            "widget": {
+              "component": "MetaCodeEditor",
+              "props": {}
+            },
+            "device": []
+          },
+          {
+            "property": "expandIconPosition",
+            "label": {
+              "text": {
+                "zh_CN": "expandIconPosition"
+              }
+            },
+            "description": {
+              "zh_CN": "设置图标位置"
+            },
+            "required": false,
+            "readOnly": false,
+            "disabled": false,
+            "cols": 12,
+            "labelPosition": "top",
+            "type": "string",
+            "widget": {
+              "component": "MetaSelect",
+              "props": {
+                "options": [
+                  {
+                    "label": "start",
+                    "value": "start"
+                  },
+                  {
+                    "label": "end",
+                    "value": "end"
+                  }
+                ]
+              }
+            },
+            "device": []
+          },
+          {
+            "property": "ghost",
+            "label": {
+              "text": {
+                "zh_CN": "ghost"
+              }
+            },
+            "description": {
+              "zh_CN": "使折叠面板透明且无边框"
+            },
+            "required": false,
+            "readOnly": false,
+            "disabled": false,
+            "cols": 12,
+            "labelPosition": "top",
+            "type": "boolean",
+            "defaultValue": false,
+            "widget": {
+              "component": "MetaSwitch",
+              "props": {}
+            },
+            "device": []
+          }
+        ],
+        "description": {
+          "zh_CN": ""
+        }
+      }
+    ],
+    "events": {
+      "onChange": {
+        "label": {
+          "zh_CN": "change"
+        },
+        "description": {
+          "zh_CN": "Callback function executed when active panel is changed"
+        },
+        "type": "event",
+        "functionInfo": {
+          "params": [],
+          "returns": {}
+        },
+        "defaultValue": ""
+      }
+    },
+    "slots": {
+      "expandIcon": {
+        "label": {
+          "zh_CN": "expandIcon"
+        },
+        "description": {
+          "zh_CN": "自定义切换图标"
+        }
+      }
+    }
+  },
+  "snippets": [{}]
+}

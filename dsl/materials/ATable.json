@@ -1,0 +1,885 @@
+{
+  "id": 1,
+  "version": "4.1.2",
+  "name": {
+    "zh_CN": "表格"
+  },
+  "component": "ATable",
+  "icon": "table",
+  "description": "展示行列数据。",
+  "doc_url": "",
+  "screenshot": "https://mdn.alipayobjects.com/huamei_7uahnr/afts/img/A*Sv8XQ50NB40AAAAAAAAAAAAADrJ8AQ/original",
+  "tags": "",
+  "keywords": "",
+  "dev_mode": "proCode",
+  "npm": {
+    "package": "ant-design-vue",
+    "version": "2.4.2",
+    "script": "https://unpkg.com/browse/ant-design-vue@4.1.2/dist/antd.esm.min.js",
+    "css": "https://unpkg.com/browse/ant-design-vue@4.1.2/dist/reset.css",
+    "dependencies": null,
+    "exportName": "Table"
+  },
+  "group": "component",
+  "category": "数据展示",
+  "configure": {
+    "loop": true,
+    "condition": true,
+    "styles": true,
+    "isContainer": false,
+    "isModal": false,
+    "isPopper": false,
+    "nestingRule": {
+      "childWhitelist": "",
+      "parentWhitelist": "",
+      "descendantBlacklist": "",
+      "ancestorWhitelist": ""
+    },
+    "isNullNode": false,
+    "isLayout": false,
+    "rootSelector": "",
+    "shortcuts": {
+      "properties": []
+    },
+    "contextMenu": {
+      "actions": ["copy", "remove", "insert", "updateAttr", "bindEevent", "createBlock"],
+      "disable": []
+    },
+    "invalidity": [""],
+    "clickCapture": true,
+    "framework": "Vue"
+  },
+  "schema": {
+    "properties": [
+      {
+        "name": "0",
+        "label": {
+          "zh_CN": "基础属性"
+        },
+        "content": [
+          {
+            "property": "bordered",
+            "label": {
+              "text": {
+                "zh_CN": "bordered"
+              }
+            },
+            "description": {
+              "zh_CN": "是否展示外边框和列边框"
+            },
+            "required": false,
+            "readOnly": false,
+            "disabled": false,
+            "cols": 12,
+            "labelPosition": "top",
+            "type": "boolean",
+            "defaultValue": false,
+            "widget": {
+              "component": "MetaSwitch",
+              "props": {}
+            },
+            "device": []
+          },
+          {
+            "property": "childrenColumnName",
+            "label": {
+              "text": {
+                "zh_CN": "childrenColumnName"
+              }
+            },
+            "description": {
+              "zh_CN": "指定树形结构的列名"
+            },
+            "required": false,
+            "readOnly": false,
+            "disabled": false,
+            "cols": 12,
+            "labelPosition": "top",
+            "type": "string",
+            "defaultValue": "`children`",
+            "widget": {
+              "component": "MetaInput",
+              "props": {}
+            },
+            "device": []
+          },
+          {
+            "property": "columns",
+            "label": {
+              "text": {
+                "zh_CN": "columns"
+              }
+            },
+            "description": {
+              "zh_CN": "表格列的配置描述，具体项见[下表](#column)"
+            },
+            "required": false,
+            "readOnly": false,
+            "disabled": false,
+            "cols": 12,
+            "labelPosition": "top",
+            "type": "object",
+            "widget": {
+              "component": "MetaCodeEditor",
+              "props": {
+                "language": "json"
+              }
+            },
+            "device": []
+          },
+          {
+            "property": "components",
+            "label": {
+              "text": {
+                "zh_CN": "components"
+              }
+            },
+            "description": {
+              "zh_CN": "覆盖默认的 table 元素"
+            },
+            "required": false,
+            "readOnly": false,
+            "disabled": false,
+            "cols": 12,
+            "labelPosition": "top",
+            "type": "object",
+            "widget": {
+              "component": "MetaCodeEditor",
+              "props": {
+                "language": "json"
+              }
+            },
+            "device": []
+          },
+          {
+            "property": "customHeaderRow",
+            "label": {
+              "text": {
+                "zh_CN": "customHeaderRow"
+              }
+            },
+            "description": {
+              "zh_CN": "设置头部行属性"
+            },
+            "required": false,
+            "readOnly": false,
+            "disabled": false,
+            "cols": 12,
+            "labelPosition": "top",
+            "type": "function",
+            "widget": {
+              "component": "MetaCodeEditor",
+              "props": {}
+            },
+            "device": []
+          },
+          {
+            "property": "customRow",
+            "label": {
+              "text": {
+                "zh_CN": "customRow"
+              }
+            },
+            "description": {
+              "zh_CN": "设置行属性"
+            },
+            "required": false,
+            "readOnly": false,
+            "disabled": false,
+            "cols": 12,
+            "labelPosition": "top",
+            "type": "function",
+            "widget": {
+              "component": "MetaCodeEditor",
+              "props": {}
+            },
+            "device": []
+          },
+          {
+            "property": "defaultExpandAllRows",
+            "label": {
+              "text": {
+                "zh_CN": "defaultExpandAllRows"
+              }
+            },
+            "description": {
+              "zh_CN": "初始时，是否展开所有行"
+            },
+            "required": false,
+            "readOnly": false,
+            "disabled": false,
+            "cols": 12,
+            "labelPosition": "top",
+            "type": "boolean",
+            "defaultValue": false,
+            "widget": {
+              "component": "MetaSwitch",
+              "props": {}
+            },
+            "device": []
+          },
+          {
+            "property": "defaultExpandedRowKeys",
+            "label": {
+              "text": {
+                "zh_CN": "defaultExpandedRowKeys"
+              }
+            },
+            "description": {
+              "zh_CN": "默认展开的行"
+            },
+            "required": false,
+            "readOnly": false,
+            "disabled": false,
+            "cols": 12,
+            "labelPosition": "top",
+            "type": "object",
+            "widget": {
+              "component": "MetaCodeEditor",
+              "props": {
+                "language": "json"
+              }
+            },
+            "device": []
+          },
+          {
+            "property": "expandedRowKeys",
+            "label": {
+              "text": {
+                "zh_CN": "expandedRowKeys(v-model)"
+              }
+            },
+            "description": {
+              "zh_CN": "展开的行，控制属性"
+            },
+            "required": false,
+            "readOnly": false,
+            "disabled": false,
+            "cols": 12,
+            "labelPosition": "top",
+            "type": "object",
+            "widget": {
+              "component": "MetaCodeEditor",
+              "props": {
+                "language": "json"
+              }
+            },
+            "device": []
+          },
+          {
+            "property": "expandedRowRender",
+            "label": {
+              "text": {
+                "zh_CN": "expandedRowRender"
+              }
+            },
+            "description": {
+              "zh_CN": "额外的展开行"
+            },
+            "required": false,
+            "readOnly": false,
+            "disabled": false,
+            "cols": 12,
+            "labelPosition": "top",
+            "type": "function",
+            "widget": {
+              "component": "MetaCodeEditor",
+              "props": {}
+            },
+            "device": []
+          },
+          {
+            "property": "expandFixed",
+            "label": {
+              "text": {
+                "zh_CN": "expandFixed"
+              }
+            },
+            "description": {
+              "zh_CN": "控制展开图标是否固定，可选 true `left` `right`"
+            },
+            "required": false,
+            "readOnly": false,
+            "disabled": false,
+            "cols": 12,
+            "labelPosition": "top",
+            "type": "boolean",
+            "defaultValue": false,
+            "widget": {
+              "component": "MetaSwitch",
+              "props": {}
+            },
+            "device": []
+          },
+          {
+            "property": "expandIcon",
+            "label": {
+              "text": {
+                "zh_CN": "expandIcon"
+              }
+            },
+            "description": {
+              "zh_CN": "自定义展开图标"
+            },
+            "required": false,
+            "readOnly": false,
+            "disabled": false,
+            "cols": 12,
+            "labelPosition": "top",
+            "type": "function",
+            "widget": {
+              "component": "MetaCodeEditor",
+              "props": {}
+            },
+            "device": []
+          },
+          {
+            "property": "expandRowByClick",
+            "label": {
+              "text": {
+                "zh_CN": "expandRowByClick"
+              }
+            },
+            "description": {
+              "zh_CN": "通过点击行来展开子行"
+            },
+            "required": false,
+            "readOnly": false,
+            "disabled": false,
+            "cols": 12,
+            "labelPosition": "top",
+            "type": "boolean",
+            "defaultValue": false,
+            "widget": {
+              "component": "MetaSwitch",
+              "props": {}
+            },
+            "device": []
+          },
+          {
+            "property": "footer",
+            "label": {
+              "text": {
+                "zh_CN": "footer"
+              }
+            },
+            "description": {
+              "zh_CN": "表格尾部"
+            },
+            "required": false,
+            "readOnly": false,
+            "disabled": false,
+            "cols": 12,
+            "labelPosition": "top",
+            "type": "function",
+            "defaultValue": "",
+            "widget": {
+              "component": "MetaCodeEditor",
+              "props": {}
+            },
+            "device": []
+          },
+          {
+            "property": "indentSize",
+            "label": {
+              "text": {
+                "zh_CN": "indentSize"
+              }
+            },
+            "description": {
+              "zh_CN": "展示树形数据时，每层缩进的宽度，以 px 为单位"
+            },
+            "required": false,
+            "readOnly": false,
+            "disabled": false,
+            "cols": 12,
+            "labelPosition": "top",
+            "type": "number",
+            "defaultValue": 15,
+            "widget": {
+              "component": "MetaNumber",
+              "props": {}
+            },
+            "device": []
+          },
+          {
+            "property": "loading",
+            "label": {
+              "text": {
+                "zh_CN": "loading"
+              }
+            },
+            "description": {
+              "zh_CN": "页面是否加载中"
+            },
+            "required": false,
+            "readOnly": false,
+            "disabled": false,
+            "cols": 12,
+            "labelPosition": "top",
+            "type": "boolean",
+            "defaultValue": false,
+            "widget": {
+              "component": "MetaSwitch",
+              "props": {}
+            },
+            "device": []
+          },
+          {
+            "property": "locale",
+            "label": {
+              "text": {
+                "zh_CN": "locale"
+              }
+            },
+            "description": {
+              "zh_CN": "默认文案设置，目前包括排序、过滤、空数据文案"
+            },
+            "required": false,
+            "readOnly": false,
+            "disabled": false,
+            "cols": 12,
+            "labelPosition": "top",
+            "type": "object",
+            "widget": {
+              "component": "MetaCodeEditor",
+              "props": {
+                "language": "json"
+              }
+            },
+            "device": []
+          },
+          {
+            "property": "pagination",
+            "label": {
+              "text": {
+                "zh_CN": "pagination"
+              }
+            },
+            "description": {
+              "zh_CN": "分页器，参考[配置项](#pagination)或 [pagination](/components/pagination-cn/)文档，设为 false 时不展示和进行分页"
+            },
+            "required": false,
+            "readOnly": false,
+            "disabled": false,
+            "cols": 12,
+            "labelPosition": "top",
+            "type": "object",
+            "widget": {
+              "component": "MetaCodeEditor",
+              "props": {
+                "language": "json"
+              }
+            },
+            "device": []
+          },
+          {
+            "property": "rowClassName",
+            "label": {
+              "text": {
+                "zh_CN": "rowClassName"
+              }
+            },
+            "description": {
+              "zh_CN": "表格行的类名"
+            },
+            "required": false,
+            "readOnly": false,
+            "disabled": false,
+            "cols": 12,
+            "labelPosition": "top",
+            "type": "function",
+            "widget": {
+              "component": "MetaCodeEditor",
+              "props": {}
+            },
+            "device": []
+          },
+          {
+            "property": "rowExpandable",
+            "label": {
+              "text": {
+                "zh_CN": "rowExpandable"
+              }
+            },
+            "description": {
+              "zh_CN": "设置是否允许行展开"
+            },
+            "required": false,
+            "readOnly": false,
+            "disabled": false,
+            "cols": 12,
+            "labelPosition": "top",
+            "type": "(record) => boolean",
+            "device": []
+          },
+          {
+            "property": "rowKey",
+            "label": {
+              "text": {
+                "zh_CN": "rowKey"
+              }
+            },
+            "description": {
+              "zh_CN": "表格行 key 的取值，可以是字符串或一个函数"
+            },
+            "required": false,
+            "readOnly": false,
+            "disabled": false,
+            "cols": 12,
+            "labelPosition": "top",
+            "type": "string",
+            "defaultValue": "`key`",
+            "widget": {
+              "component": "MetaInput",
+              "props": {}
+            },
+            "device": []
+          },
+          {
+            "property": "rowSelection",
+            "label": {
+              "text": {
+                "zh_CN": "rowSelection"
+              }
+            },
+            "description": {
+              "zh_CN": "列表项是否可选择，[配置项](#rowselection)"
+            },
+            "required": false,
+            "readOnly": false,
+            "disabled": false,
+            "cols": 12,
+            "labelPosition": "top",
+            "type": "object",
+            "defaultValue": null,
+            "widget": {
+              "component": "MetaCodeEditor",
+              "props": {
+                "language": "json"
+              }
+            },
+            "device": []
+          },
+          {
+            "property": "scroll",
+            "label": {
+              "text": {
+                "zh_CN": "scroll"
+              }
+            },
+            "description": {
+              "zh_CN": "表格是否可滚动，也可以指定滚动区域的宽、高，[配置项](#scroll)"
+            },
+            "required": false,
+            "readOnly": false,
+            "disabled": false,
+            "cols": 12,
+            "labelPosition": "top",
+            "type": "object",
+            "widget": {
+              "component": "MetaCodeEditor",
+              "props": {
+                "language": "json"
+              }
+            },
+            "device": []
+          },
+          {
+            "property": "showExpandColumn",
+            "label": {
+              "text": {
+                "zh_CN": "showExpandColumn"
+              }
+            },
+            "description": {
+              "zh_CN": "设置是否展示行展开列"
+            },
+            "required": false,
+            "readOnly": false,
+            "disabled": false,
+            "cols": 12,
+            "labelPosition": "top",
+            "type": "boolean",
+            "defaultValue": true,
+            "widget": {
+              "component": "MetaSwitch",
+              "props": {}
+            },
+            "device": []
+          },
+          {
+            "property": "showHeader",
+            "label": {
+              "text": {
+                "zh_CN": "showHeader"
+              }
+            },
+            "description": {
+              "zh_CN": "是否显示表头"
+            },
+            "required": false,
+            "readOnly": false,
+            "disabled": false,
+            "cols": 12,
+            "labelPosition": "top",
+            "type": "boolean",
+            "defaultValue": true,
+            "widget": {
+              "component": "MetaSwitch",
+              "props": {}
+            },
+            "device": []
+          },
+          {
+            "property": "showSorterTooltip",
+            "label": {
+              "text": {
+                "zh_CN": "showSorterTooltip"
+              }
+            },
+            "description": {
+              "zh_CN": "表头是否显示下一次排序的 tooltip 提示。当参数类型为对象时，将被设置为 Tooltip 的属性"
+            },
+            "required": false,
+            "readOnly": false,
+            "disabled": false,
+            "cols": 12,
+            "labelPosition": "top",
+            "type": "boolean",
+            "defaultValue": true,
+            "widget": {
+              "component": "MetaSwitch",
+              "props": {}
+            },
+            "device": []
+          },
+          {
+            "property": "size",
+            "label": {
+              "text": {
+                "zh_CN": "size"
+              }
+            },
+            "description": {
+              "zh_CN": "表格大小"
+            },
+            "required": false,
+            "readOnly": false,
+            "disabled": false,
+            "cols": 12,
+            "labelPosition": "top",
+            "type": "string",
+            "defaultValue": "`large`",
+            "widget": {
+              "component": "MetaSelect",
+              "props": {
+                "options": [
+                  {
+                    "label": "middle",
+                    "value": "middle"
+                  },
+                  {
+                    "label": "small",
+                    "value": "small"
+                  },
+                  {
+                    "label": "large",
+                    "value": "large"
+                  }
+                ]
+              }
+            },
+            "device": []
+          },
+          {
+            "property": "sortDirections",
+            "label": {
+              "text": {
+                "zh_CN": "sortDirections"
+              }
+            },
+            "description": {
+              "zh_CN": "支持的排序方式，取值为 `ascend` `descend`"
+            },
+            "required": false,
+            "readOnly": false,
+            "disabled": false,
+            "cols": 12,
+            "labelPosition": "top",
+            "type": "object",
+            "widget": {
+              "component": "MetaCodeEditor",
+              "props": {
+                "language": "json"
+              }
+            },
+            "device": []
+          },
+          {
+            "property": "sticky",
+            "label": {
+              "text": {
+                "zh_CN": "sticky"
+              }
+            },
+            "description": {
+              "zh_CN": "设置粘性头部和滚动条"
+            },
+            "required": false,
+            "readOnly": false,
+            "disabled": false,
+            "cols": 12,
+            "labelPosition": "top",
+            "type": "boolean",
+            "widget": {
+              "component": "MetaSwitch",
+              "props": {}
+            },
+            "device": []
+          },
+          {
+            "property": "title",
+            "label": {
+              "text": {
+                "zh_CN": "title"
+              }
+            },
+            "description": {
+              "zh_CN": "表格标题"
+            },
+            "required": false,
+            "readOnly": false,
+            "disabled": false,
+            "cols": 12,
+            "labelPosition": "top",
+            "type": "function",
+            "defaultValue": "",
+            "widget": {
+              "component": "MetaCodeEditor",
+              "props": {}
+            },
+            "device": []
+          },
+          {
+            "property": "transformCellText",
+            "label": {
+              "text": {
+                "zh_CN": "transformCellText"
+              }
+            },
+            "description": {
+              "zh_CN": "数据渲染前可以再次改变，一般用于空数据的默认配置，可以通过 [ConfigProvider](/components/config-provider-cn/) 全局统一配置"
+            },
+            "required": false,
+            "readOnly": false,
+            "disabled": false,
+            "cols": 12,
+            "labelPosition": "top",
+            "type": "function",
+            "widget": {
+              "component": "MetaCodeEditor",
+              "props": {}
+            },
+            "device": []
+          }
+        ],
+        "description": {
+          "zh_CN": ""
+        }
+      }
+    ],
+    "events": {},
+    "slots": {
+      "bodyCell": {
+        "label": {
+          "zh_CN": "bodyCell"
+        },
+        "description": {
+          "zh_CN": "个性化单元格"
+        }
+      },
+      "customFilterDropdown": {
+        "label": {
+          "zh_CN": "customFilterDropdown"
+        },
+        "description": {
+          "zh_CN": "自定义筛选菜单，需要配合 `column.customFilterDropdown` 使用"
+        }
+      },
+      "customFilterIcon": {
+        "label": {
+          "zh_CN": "customFilterIcon"
+        },
+        "description": {
+          "zh_CN": "自定义筛选图标"
+        }
+      },
+      "emptyText": {
+        "label": {
+          "zh_CN": "emptyText"
+        },
+        "description": {
+          "zh_CN": "自定义空数据时的显示内容"
+        }
+      },
+      "expandedRowRender": {
+        "label": {
+          "zh_CN": "expandedRowRender"
+        },
+        "description": {
+          "zh_CN": "额外的展开行"
+        }
+      },
+      "expandColumnTitle": {
+        "label": {
+          "zh_CN": "expandColumnTitle"
+        },
+        "description": {
+          "zh_CN": "自定义展开列表头"
+        }
+      },
+      "expandIcon": {
+        "label": {
+          "zh_CN": "expandIcon"
+        },
+        "description": {
+          "zh_CN": "自定义展开图标"
+        }
+      },
+      "footer": {
+        "label": {
+          "zh_CN": "footer"
+        },
+        "description": {
+          "zh_CN": "表格尾部"
+        }
+      },
+      "headerCell": {
+        "label": {
+          "zh_CN": "headerCell"
+        },
+        "description": {
+          "zh_CN": "个性化头部单元格"
+        }
+      },
+      "summary": {
+        "label": {
+          "zh_CN": "summary"
+        },
+        "description": {
+          "zh_CN": "总结栏"
+        }
+      },
+      "title": {
+        "label": {
+          "zh_CN": "title"
+        },
+        "description": {
+          "zh_CN": "表格标题"
+        }
+      }
+    }
+  },
+  "snippets": [{}]
+}

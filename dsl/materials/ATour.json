@@ -1,0 +1,269 @@
+{
+  "id": 1,
+  "version": "4.1.2",
+  "name": {
+    "zh_CN": "漫游式引导"
+  },
+  "component": "ATour",
+  "icon": "tour",
+  "description": "用于分步引导用户了解产品功能的气泡组件。自 `4.0.0` 版本开始提供该组件。",
+  "doc_url": "",
+  "screenshot": "https://mdn.alipayobjects.com/huamei_7uahnr/afts/img/A*nF6hQpM0XtEAAAAAAAAAAAAADrJ8AQ/original",
+  "tags": "",
+  "keywords": "",
+  "dev_mode": "proCode",
+  "npm": {
+    "package": "ant-design-vue",
+    "version": "2.4.2",
+    "script": "https://unpkg.com/browse/ant-design-vue@4.1.2/dist/antd.esm.min.js",
+    "css": "https://unpkg.com/browse/ant-design-vue@4.1.2/dist/reset.css",
+    "dependencies": null,
+    "exportName": "Tour"
+  },
+  "group": "component",
+  "category": "数据展示",
+  "configure": {
+    "loop": true,
+    "condition": true,
+    "styles": true,
+    "isContainer": false,
+    "isModal": false,
+    "isPopper": false,
+    "nestingRule": {
+      "childWhitelist": "",
+      "parentWhitelist": "",
+      "descendantBlacklist": "",
+      "ancestorWhitelist": ""
+    },
+    "isNullNode": false,
+    "isLayout": false,
+    "rootSelector": "",
+    "shortcuts": {
+      "properties": []
+    },
+    "contextMenu": {
+      "actions": ["copy", "remove", "insert", "updateAttr", "bindEevent", "createBlock"],
+      "disable": []
+    },
+    "invalidity": [""],
+    "clickCapture": true,
+    "framework": "Vue"
+  },
+  "schema": {
+    "properties": [
+      {
+        "name": "0",
+        "label": {
+          "zh_CN": "基础属性"
+        },
+        "content": [
+          {
+            "property": "arrow",
+            "label": {
+              "text": {
+                "zh_CN": "arrow"
+              }
+            },
+            "description": {
+              "zh_CN": "是否显示箭头，包含是否指向元素中心的配置"
+            },
+            "required": false,
+            "readOnly": false,
+            "disabled": false,
+            "cols": 12,
+            "labelPosition": "top",
+            "type": "string",
+            "defaultValue": "`true`",
+            "widget": {
+              "component": "MetaInput",
+              "props": {}
+            },
+            "device": []
+          },
+          {
+            "property": "mask",
+            "label": {
+              "text": {
+                "zh_CN": "mask"
+              }
+            },
+            "description": {
+              "zh_CN": "是否启用蒙层，也可传入配置改变蒙层样式和填充色"
+            },
+            "required": false,
+            "readOnly": false,
+            "disabled": false,
+            "cols": 12,
+            "labelPosition": "top",
+            "type": "string",
+            "defaultValue": "`true`",
+            "widget": {
+              "component": "MetaInput",
+              "props": {}
+            },
+            "device": []
+          },
+          {
+            "property": "open",
+            "label": {
+              "text": {
+                "zh_CN": "open"
+              }
+            },
+            "description": {
+              "zh_CN": "打开引导"
+            },
+            "required": false,
+            "readOnly": false,
+            "disabled": false,
+            "cols": 12,
+            "labelPosition": "top",
+            "type": "string",
+            "widget": {
+              "component": "MetaInput",
+              "props": {}
+            },
+            "device": []
+          },
+          {
+            "property": "current",
+            "label": {
+              "text": {
+                "zh_CN": "current(v-model)"
+              }
+            },
+            "description": {
+              "zh_CN": "当前处于哪一步"
+            },
+            "required": false,
+            "readOnly": false,
+            "disabled": false,
+            "cols": 12,
+            "labelPosition": "top",
+            "type": "string",
+            "widget": {
+              "component": "MetaInput",
+              "props": {}
+            },
+            "device": []
+          },
+          {
+            "property": "scrollIntoViewOptions",
+            "label": {
+              "text": {
+                "zh_CN": "scrollIntoViewOptions"
+              }
+            },
+            "description": {
+              "zh_CN": "是否支持当前元素滚动到视窗内，也可传入配置指定滚动视窗的相关参数"
+            },
+            "required": false,
+            "readOnly": false,
+            "disabled": false,
+            "cols": 12,
+            "labelPosition": "top",
+            "type": "string",
+            "defaultValue": "`true`",
+            "widget": {
+              "component": "MetaSelect",
+              "props": {
+                "options": [
+                  {
+                    "label": "boolean",
+                    "value": "boolean"
+                  },
+                  {
+                    "label": "ScrollIntoViewOptions",
+                    "value": "ScrollIntoViewOptions"
+                  }
+                ]
+              }
+            },
+            "device": []
+          },
+          {
+            "property": "zIndex",
+            "label": {
+              "text": {
+                "zh_CN": "zIndex"
+              }
+            },
+            "description": {
+              "zh_CN": "Tour 的层级"
+            },
+            "required": false,
+            "readOnly": false,
+            "disabled": false,
+            "cols": 12,
+            "labelPosition": "top",
+            "type": "string",
+            "defaultValue": "`1001`",
+            "widget": {
+              "component": "MetaInput",
+              "props": {}
+            },
+            "device": []
+          }
+        ],
+        "description": {
+          "zh_CN": ""
+        }
+      }
+    ],
+    "events": {
+      "onClose": {
+        "label": {
+          "zh_CN": "close"
+        },
+        "description": {
+          "zh_CN": "Callback function on shutdown"
+        },
+        "type": "event",
+        "functionInfo": {
+          "params": [],
+          "returns": {}
+        },
+        "defaultValue": ""
+      },
+      "onFinish": {
+        "label": {
+          "zh_CN": "finish"
+        },
+        "description": {
+          "zh_CN": "Callback function on finished"
+        },
+        "type": "event",
+        "functionInfo": {
+          "params": [],
+          "returns": {}
+        },
+        "defaultValue": ""
+      },
+      "onChange": {
+        "label": {
+          "zh_CN": "change"
+        },
+        "description": {
+          "zh_CN": "Callback when the step changes. Current is the previous step"
+        },
+        "type": "event",
+        "functionInfo": {
+          "params": [],
+          "returns": {}
+        },
+        "defaultValue": ""
+      }
+    },
+    "slots": {
+      "indicatorsRender": {
+        "label": {
+          "zh_CN": "indicatorsRender"
+        },
+        "description": {
+          "zh_CN": "自定义指示器"
+        }
+      }
+    }
+  },
+  "snippets": [{}]
+}
