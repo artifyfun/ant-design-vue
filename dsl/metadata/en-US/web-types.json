@@ -182,181 +182,25 @@
           ]
         },
         {
-          "name": "anchor",
-          "slots": [
-            {
-              "name": "customTitle",
-              "description": "custom option title by slot"
-            }
-          ],
-          "events": [],
-          "attributes": [
-            {
-              "name": "affix",
-              "default": "true",
-              "description": "Fixed mode of Anchor",
-              "value": {
-                "type": "boolean",
-                "kind": "expression"
-              }
-            },
-            {
-              "name": "bounds",
-              "default": "5(px)",
-              "description": "Bounding distance of anchor area",
-              "value": {
-                "type": "number",
-                "kind": "expression"
-              }
-            },
-            {
-              "name": "getContainer",
-              "default": "() => window",
-              "description": "Scrolling container",
-              "value": {
-                "type": "() => HTMLElement",
-                "kind": "expression"
-              }
-            },
-            {
-              "name": "getCurrentAnchor",
-              "default": "-",
-              "description": "Customize the anchor highlight",
-              "value": {
-                "type": "(activeLink: string) => string",
-                "kind": "expression"
-              }
-            },
-            {
-              "name": "offsetBottom",
-              "default": "-",
-              "description": "Pixels to offset from bottom when calculating position of scroll",
-              "value": {
-                "type": "number",
-                "kind": "expression"
-              }
-            },
-            {
-              "name": "offsetTop",
-              "default": "0",
-              "description": "Pixels to offset from top when calculating position of scroll",
-              "value": {
-                "type": "number",
-                "kind": "expression"
-              }
-            },
-            {
-              "name": "showInkInFixed",
-              "default": "false",
-              "description": "Whether show ink-square when `：affix=\"false\"`",
-              "value": {
-                "type": "boolean",
-                "kind": "expression"
-              }
-            },
-            {
-              "name": "targetOffset",
-              "default": "`offsetTop`",
-              "description": "Anchor scroll offset, default as `offsetTop`, [example](#components-anchor-demo-targetoffset)",
-              "value": {
-                "type": "number",
-                "kind": "expression"
-              }
-            },
-            {
-              "name": "wrapperClass",
-              "default": "-",
-              "description": "The class name of the container",
-              "value": {
-                "type": "string",
-                "kind": "expression"
-              }
-            },
-            {
-              "name": "wrapperStyle",
-              "default": "-",
-              "description": "The style of the container",
-              "value": {
-                "type": "object",
-                "kind": "expression"
-              }
-            },
-            {
-              "name": "items",
-              "default": "-",
-              "description": "Data configuration option content, support nesting through children",
-              "value": {
-                "type": "{ key, href, title, target, children }[] [see](#anchoritem)",
-                "kind": "expression"
-              }
-            },
-            {
-              "name": "direction",
-              "default": "`vertical`",
-              "description": "Set Anchor direction",
-              "value": {
-                "type": "`vertical` | `horizontal`",
-                "kind": "expression"
-              }
-            },
-            {
-              "name": "customTitle",
-              "default": "-",
-              "description": "custom option title by slot",
-              "value": {
-                "type": "v-slot=\"AnchorItem\"",
-                "kind": "expression"
-              }
-            }
-          ]
-        },
-        {
-          "name": "anchor-item",
+          "name": "app",
           "slots": [],
           "events": [],
           "attributes": [
             {
-              "name": "key",
+              "name": "message",
               "default": "-",
-              "description": "The unique identifier of the Anchor Link",
+              "description": "Global config for Message",
               "value": {
-                "type": "string | number",
+                "type": "[MessageConfig](/components/message/#messageconfig)",
                 "kind": "expression"
               }
             },
             {
-              "name": "href",
-              "default": "",
-              "description": "The target of hyperlink",
-              "value": {
-                "type": "string",
-                "kind": "expression"
-              }
-            },
-            {
-              "name": "target",
-              "default": "",
-              "description": "Specifies where to display the linked URL",
-              "value": {
-                "type": "string",
-                "kind": "expression"
-              }
-            },
-            {
-              "name": "title",
-              "default": "",
-              "description": "The content of hyperlink",
-              "value": {
-                "type": "VueNode | (item: AnchorItem) => VueNode",
-                "kind": "expression"
-              }
-            },
-            {
-              "name": "children",
+              "name": "notification",
               "default": "-",
-              "description": "Nested Anchor Link, `Attention: This attribute does not support horizontal orientation`",
+              "description": "Global config for Notification",
               "value": {
-                "type": "[AnchorItem](#anchoritem)[]",
+                "type": "[NotificationConfig](/components/notification/#notificationconfig)",
                 "kind": "expression"
               }
             }
@@ -583,25 +427,181 @@
           ]
         },
         {
-          "name": "app",
-          "slots": [],
+          "name": "anchor",
+          "slots": [
+            {
+              "name": "customTitle",
+              "description": "custom option title by slot"
+            }
+          ],
           "events": [],
           "attributes": [
             {
-              "name": "message",
-              "default": "-",
-              "description": "Global config for Message",
+              "name": "affix",
+              "default": "true",
+              "description": "Fixed mode of Anchor",
               "value": {
-                "type": "[MessageConfig](/components/message/#messageconfig)",
+                "type": "boolean",
                 "kind": "expression"
               }
             },
             {
-              "name": "notification",
-              "default": "-",
-              "description": "Global config for Notification",
+              "name": "bounds",
+              "default": "5(px)",
+              "description": "Bounding distance of anchor area",
               "value": {
-                "type": "[NotificationConfig](/components/notification/#notificationconfig)",
+                "type": "number",
+                "kind": "expression"
+              }
+            },
+            {
+              "name": "getContainer",
+              "default": "() => window",
+              "description": "Scrolling container",
+              "value": {
+                "type": "() => HTMLElement",
+                "kind": "expression"
+              }
+            },
+            {
+              "name": "getCurrentAnchor",
+              "default": "-",
+              "description": "Customize the anchor highlight",
+              "value": {
+                "type": "(activeLink: string) => string",
+                "kind": "expression"
+              }
+            },
+            {
+              "name": "offsetBottom",
+              "default": "-",
+              "description": "Pixels to offset from bottom when calculating position of scroll",
+              "value": {
+                "type": "number",
+                "kind": "expression"
+              }
+            },
+            {
+              "name": "offsetTop",
+              "default": "0",
+              "description": "Pixels to offset from top when calculating position of scroll",
+              "value": {
+                "type": "number",
+                "kind": "expression"
+              }
+            },
+            {
+              "name": "showInkInFixed",
+              "default": "false",
+              "description": "Whether show ink-square when `：affix=\"false\"`",
+              "value": {
+                "type": "boolean",
+                "kind": "expression"
+              }
+            },
+            {
+              "name": "targetOffset",
+              "default": "`offsetTop`",
+              "description": "Anchor scroll offset, default as `offsetTop`, [example](#components-anchor-demo-targetoffset)",
+              "value": {
+                "type": "number",
+                "kind": "expression"
+              }
+            },
+            {
+              "name": "wrapperClass",
+              "default": "-",
+              "description": "The class name of the container",
+              "value": {
+                "type": "string",
+                "kind": "expression"
+              }
+            },
+            {
+              "name": "wrapperStyle",
+              "default": "-",
+              "description": "The style of the container",
+              "value": {
+                "type": "object",
+                "kind": "expression"
+              }
+            },
+            {
+              "name": "items",
+              "default": "-",
+              "description": "Data configuration option content, support nesting through children",
+              "value": {
+                "type": "{ key, href, title, target, children }[] [see](#anchoritem)",
+                "kind": "expression"
+              }
+            },
+            {
+              "name": "direction",
+              "default": "`vertical`",
+              "description": "Set Anchor direction",
+              "value": {
+                "type": "`vertical` | `horizontal`",
+                "kind": "expression"
+              }
+            },
+            {
+              "name": "customTitle",
+              "default": "-",
+              "description": "custom option title by slot",
+              "value": {
+                "type": "v-slot=\"AnchorItem\"",
+                "kind": "expression"
+              }
+            }
+          ]
+        },
+        {
+          "name": "anchor-item",
+          "slots": [],
+          "events": [],
+          "attributes": [
+            {
+              "name": "key",
+              "default": "-",
+              "description": "The unique identifier of the Anchor Link",
+              "value": {
+                "type": "string | number",
+                "kind": "expression"
+              }
+            },
+            {
+              "name": "href",
+              "default": "",
+              "description": "The target of hyperlink",
+              "value": {
+                "type": "string",
+                "kind": "expression"
+              }
+            },
+            {
+              "name": "target",
+              "default": "",
+              "description": "Specifies where to display the linked URL",
+              "value": {
+                "type": "string",
+                "kind": "expression"
+              }
+            },
+            {
+              "name": "title",
+              "default": "",
+              "description": "The content of hyperlink",
+              "value": {
+                "type": "VueNode | (item: AnchorItem) => VueNode",
+                "kind": "expression"
+              }
+            },
+            {
+              "name": "children",
+              "default": "-",
+              "description": "Nested Anchor Link, `Attention: This attribute does not support horizontal orientation`",
+              "value": {
+                "type": "[AnchorItem](#anchoritem)[]",
                 "kind": "expression"
               }
             }
@@ -2984,49 +2984,6 @@
           ]
         },
         {
-          "name": "empty",
-          "slots": [
-            {
-              "name": "description",
-              "description": "Customize description"
-            },
-            {
-              "name": "image",
-              "description": "Customize image. Will tread as image url when string provided"
-            }
-          ],
-          "events": [],
-          "attributes": [
-            {
-              "name": "description",
-              "default": "-",
-              "description": "Customize description",
-              "value": {
-                "type": "string | v-slot",
-                "kind": "expression"
-              }
-            },
-            {
-              "name": "image",
-              "default": "false",
-              "description": "Customize image. Will tread as image url when string provided",
-              "value": {
-                "type": "string | v-slot",
-                "kind": "expression"
-              }
-            },
-            {
-              "name": "imageStyle",
-              "default": "-",
-              "description": "style of image",
-              "value": {
-                "type": "CSSProperties",
-                "kind": "expression"
-              }
-            }
-          ]
-        },
-        {
           "name": "dropdown",
           "slots": [],
           "events": [
@@ -3234,6 +3191,49 @@
               "description": "whether the dropdown menu is open",
               "value": {
                 "type": "boolean",
+                "kind": "expression"
+              }
+            }
+          ]
+        },
+        {
+          "name": "empty",
+          "slots": [
+            {
+              "name": "description",
+              "description": "Customize description"
+            },
+            {
+              "name": "image",
+              "description": "Customize image. Will tread as image url when string provided"
+            }
+          ],
+          "events": [],
+          "attributes": [
+            {
+              "name": "description",
+              "default": "-",
+              "description": "Customize description",
+              "value": {
+                "type": "string | v-slot",
+                "kind": "expression"
+              }
+            },
+            {
+              "name": "image",
+              "default": "false",
+              "description": "Customize image. Will tread as image url when string provided",
+              "value": {
+                "type": "string | v-slot",
+                "kind": "expression"
+              }
+            },
+            {
+              "name": "imageStyle",
+              "default": "-",
+              "description": "style of image",
+              "value": {
+                "type": "CSSProperties",
                 "kind": "expression"
               }
             }
@@ -4512,160 +4512,6 @@
           ]
         },
         {
-          "name": "layout",
-          "slots": [],
-          "events": [],
-          "attributes": [
-            {
-              "name": "class",
-              "default": "-",
-              "description": "container className",
-              "value": {
-                "type": "string",
-                "kind": "expression"
-              }
-            },
-            {
-              "name": "hasSider",
-              "default": "-",
-              "description": "whether contain Sider in children, don't have to assign it normally. Useful in ssr avoid style flickering",
-              "value": {
-                "type": "boolean",
-                "kind": "expression"
-              }
-            },
-            {
-              "name": "style",
-              "default": "-",
-              "description": "to customize the styles",
-              "value": {
-                "type": "object|string",
-                "kind": "expression"
-              }
-            }
-          ]
-        },
-        {
-          "name": "layout-sider",
-          "slots": [
-            {
-              "name": "trigger",
-              "description": "specify the customized trigger, set to null to hide the trigger"
-            }
-          ],
-          "events": [],
-          "attributes": [
-            {
-              "name": "breakpoint",
-              "default": "-",
-              "description": "[breakpoints](/components/grid#api) of the responsive layout",
-              "value": {
-                "type": "`xs` | `sm` | `md` | `lg` | `xl` | `xxl`",
-                "kind": "expression"
-              }
-            },
-            {
-              "name": "class",
-              "default": "-",
-              "description": "container className",
-              "value": {
-                "type": "string",
-                "kind": "expression"
-              }
-            },
-            {
-              "name": "collapsed(v-model)",
-              "default": "-",
-              "description": "to set the current status",
-              "value": {
-                "type": "boolean",
-                "kind": "expression"
-              }
-            },
-            {
-              "name": "collapsedWidth",
-              "default": "80",
-              "description": "width of the collapsed sidebar, by setting to `0` a special trigger will appear",
-              "value": {
-                "type": "number",
-                "kind": "expression"
-              }
-            },
-            {
-              "name": "collapsible",
-              "default": "false",
-              "description": "whether can be collapsed",
-              "value": {
-                "type": "boolean",
-                "kind": "expression"
-              }
-            },
-            {
-              "name": "defaultCollapsed",
-              "default": "false",
-              "description": "to set the initial status",
-              "value": {
-                "type": "boolean",
-                "kind": "expression"
-              }
-            },
-            {
-              "name": "reverseArrow",
-              "default": "false",
-              "description": "reverse direction of arrow, for a sider that expands from the right",
-              "value": {
-                "type": "boolean",
-                "kind": "expression"
-              }
-            },
-            {
-              "name": "style",
-              "default": "-",
-              "description": "to customize the styles",
-              "value": {
-                "type": "object|string",
-                "kind": "expression"
-              }
-            },
-            {
-              "name": "theme",
-              "default": "`dark`",
-              "description": "color theme of the sidebar",
-              "value": {
-                "type": "`light` | `dark`",
-                "kind": "expression"
-              }
-            },
-            {
-              "name": "trigger",
-              "default": "-",
-              "description": "specify the customized trigger, set to null to hide the trigger",
-              "value": {
-                "type": "string|slot",
-                "kind": "expression"
-              }
-            },
-            {
-              "name": "width",
-              "default": "200",
-              "description": "width of the sidebar",
-              "value": {
-                "type": "number|string",
-                "kind": "expression"
-              }
-            },
-            {
-              "name": "zeroWidthTriggerStyle",
-              "default": "-",
-              "description": "to customize the styles of the special trigger that appears when `collapsedWidth` is 0",
-              "value": {
-                "type": "object",
-                "kind": "expression"
-              }
-            }
-          ]
-        },
-        {
           "name": "list",
           "slots": [
             {
@@ -4968,6 +4814,160 @@
               "description": "The title of list item",
               "value": {
                 "type": "string|slot",
+                "kind": "expression"
+              }
+            }
+          ]
+        },
+        {
+          "name": "layout",
+          "slots": [],
+          "events": [],
+          "attributes": [
+            {
+              "name": "class",
+              "default": "-",
+              "description": "container className",
+              "value": {
+                "type": "string",
+                "kind": "expression"
+              }
+            },
+            {
+              "name": "hasSider",
+              "default": "-",
+              "description": "whether contain Sider in children, don't have to assign it normally. Useful in ssr avoid style flickering",
+              "value": {
+                "type": "boolean",
+                "kind": "expression"
+              }
+            },
+            {
+              "name": "style",
+              "default": "-",
+              "description": "to customize the styles",
+              "value": {
+                "type": "object|string",
+                "kind": "expression"
+              }
+            }
+          ]
+        },
+        {
+          "name": "layout-sider",
+          "slots": [
+            {
+              "name": "trigger",
+              "description": "specify the customized trigger, set to null to hide the trigger"
+            }
+          ],
+          "events": [],
+          "attributes": [
+            {
+              "name": "breakpoint",
+              "default": "-",
+              "description": "[breakpoints](/components/grid#api) of the responsive layout",
+              "value": {
+                "type": "`xs` | `sm` | `md` | `lg` | `xl` | `xxl`",
+                "kind": "expression"
+              }
+            },
+            {
+              "name": "class",
+              "default": "-",
+              "description": "container className",
+              "value": {
+                "type": "string",
+                "kind": "expression"
+              }
+            },
+            {
+              "name": "collapsed(v-model)",
+              "default": "-",
+              "description": "to set the current status",
+              "value": {
+                "type": "boolean",
+                "kind": "expression"
+              }
+            },
+            {
+              "name": "collapsedWidth",
+              "default": "80",
+              "description": "width of the collapsed sidebar, by setting to `0` a special trigger will appear",
+              "value": {
+                "type": "number",
+                "kind": "expression"
+              }
+            },
+            {
+              "name": "collapsible",
+              "default": "false",
+              "description": "whether can be collapsed",
+              "value": {
+                "type": "boolean",
+                "kind": "expression"
+              }
+            },
+            {
+              "name": "defaultCollapsed",
+              "default": "false",
+              "description": "to set the initial status",
+              "value": {
+                "type": "boolean",
+                "kind": "expression"
+              }
+            },
+            {
+              "name": "reverseArrow",
+              "default": "false",
+              "description": "reverse direction of arrow, for a sider that expands from the right",
+              "value": {
+                "type": "boolean",
+                "kind": "expression"
+              }
+            },
+            {
+              "name": "style",
+              "default": "-",
+              "description": "to customize the styles",
+              "value": {
+                "type": "object|string",
+                "kind": "expression"
+              }
+            },
+            {
+              "name": "theme",
+              "default": "`dark`",
+              "description": "color theme of the sidebar",
+              "value": {
+                "type": "`light` | `dark`",
+                "kind": "expression"
+              }
+            },
+            {
+              "name": "trigger",
+              "default": "-",
+              "description": "specify the customized trigger, set to null to hide the trigger",
+              "value": {
+                "type": "string|slot",
+                "kind": "expression"
+              }
+            },
+            {
+              "name": "width",
+              "default": "200",
+              "description": "width of the sidebar",
+              "value": {
+                "type": "number|string",
+                "kind": "expression"
+              }
+            },
+            {
+              "name": "zeroWidthTriggerStyle",
+              "default": "-",
+              "description": "to customize the styles of the special trigger that appears when `collapsedWidth` is 0",
+              "value": {
+                "type": "object",
                 "kind": "expression"
               }
             }

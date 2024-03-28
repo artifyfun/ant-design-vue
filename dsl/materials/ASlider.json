@@ -434,7 +434,7 @@
     "events": {
       "onChange": {
         "label": {
-          "zh_CN": "change"
+          "zh_CN": "onChange"
         },
         "description": {
           "zh_CN": "Callback function that is fired when the user changes the slider's value."
@@ -448,7 +448,7 @@
       },
       "onAfterChange": {
         "label": {
-          "zh_CN": "afterChange"
+          "zh_CN": "onAfterChange"
         },
         "description": {
           "zh_CN": "Fire when `mouseup` is fired."

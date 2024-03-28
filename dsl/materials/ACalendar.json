@@ -147,7 +147,7 @@
     "events": {
       "onChange": {
         "label": {
-          "zh_CN": "change"
+          "zh_CN": "onChange"
         },
         "description": {
           "zh_CN": "Callback for when value change"
@@ -161,7 +161,7 @@
       },
       "onPanelChange": {
         "label": {
-          "zh_CN": "panelChange"
+          "zh_CN": "onPanelChange"
         },
         "description": {
           "zh_CN": "Callback for when panel changes"
@@ -175,7 +175,7 @@
       },
       "onSelect": {
         "label": {
-          "zh_CN": "select"
+          "zh_CN": "onSelect"
         },
         "description": {
           "zh_CN": "Callback for when a date is selected, include source info"

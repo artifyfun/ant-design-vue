@@ -462,7 +462,7 @@
     "events": {
       "onChange": {
         "label": {
-          "zh_CN": "change"
+          "zh_CN": "onChange"
         },
         "description": {
           "zh_CN": "The callback triggered when the value is changed."
@@ -476,7 +476,7 @@
       },
       "onPressEnter": {
         "label": {
-          "zh_CN": "pressEnter"
+          "zh_CN": "onPressEnter"
         },
         "description": {
           "zh_CN": "The callback function that is triggered when Enter key is pressed."

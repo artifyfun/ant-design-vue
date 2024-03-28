@@ -275,7 +275,7 @@
     "events": {
       "onChange": {
         "label": {
-          "zh_CN": "change"
+          "zh_CN": "onChange"
         },
         "description": {
           "zh_CN": "Callback function executed when active panel is changed"

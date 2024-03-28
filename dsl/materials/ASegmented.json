@@ -208,7 +208,7 @@
     "events": {
       "onChange": {
         "label": {
-          "zh_CN": "change"
+          "zh_CN": "onChange"
         },
         "description": {
           "zh_CN": "The callback function that is triggered when the state changes"

@@ -626,7 +626,7 @@
     "events": {
       "onChange": {
         "label": {
-          "zh_CN": "change"
+          "zh_CN": "onChange"
         },
         "description": {
           "zh_CN": "callback when finishing cascader select"
@@ -640,7 +640,7 @@
       },
       "onDropdownVisibleChange": {
         "label": {
-          "zh_CN": "dropdownVisibleChange"
+          "zh_CN": "onDropdownVisibleChange"
         },
         "description": {
           "zh_CN": "callback when popup shown or hidden"
@@ -654,7 +654,7 @@
       },
       "onSearch": {
         "label": {
-          "zh_CN": "search"
+          "zh_CN": "onSearch"
         },
         "description": {
           "zh_CN": "callback when input value change"

@@ -418,7 +418,7 @@
     "events": {
       "onOpenChange": {
         "label": {
-          "zh_CN": "openChange"
+          "zh_CN": "onOpenChange"
         },
         "description": {
           "zh_CN": "Callback executed when visibility of the tooltip card is changed"

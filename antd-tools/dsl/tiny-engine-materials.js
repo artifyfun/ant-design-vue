@@ -162,11 +162,12 @@ function getPropertiesContent(attributes) {
 function getEvents(events) {
   return Object.fromEntries(
     events.map(event => {
+      const name = `on${event.name.replace(/(^[a-z])/, char => char.toUpperCase())}`;
       return [
-        `on${event.name.replace(/(^[a-z])/, char => char.toUpperCase())}`,
+        name,
         {
           label: {
-            zh_CN: event.name,
+            zh_CN: name,
           },
           description: {
             zh_CN: event.description,

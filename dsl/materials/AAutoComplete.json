@@ -417,7 +417,7 @@
     "events": {
       "onBlur": {
         "label": {
-          "zh_CN": "blur"
+          "zh_CN": "onBlur"
         },
         "description": {
           "zh_CN": "Called when leaving the component."
@@ -431,7 +431,7 @@
       },
       "onChange": {
         "label": {
-          "zh_CN": "change"
+          "zh_CN": "onChange"
         },
         "description": {
           "zh_CN": "Called when select an option or input value change, or value of input is changed"
@@ -445,7 +445,7 @@
       },
       "onDropdownVisibleChange": {
         "label": {
-          "zh_CN": "dropdownVisibleChange"
+          "zh_CN": "onDropdownVisibleChange"
         },
         "description": {
           "zh_CN": "Call when dropdown open"
@@ -459,7 +459,7 @@
       },
       "onFocus": {
         "label": {
-          "zh_CN": "focus"
+          "zh_CN": "onFocus"
         },
         "description": {
           "zh_CN": "Called when entering the component"
@@ -473,7 +473,7 @@
       },
       "onSearch": {
         "label": {
-          "zh_CN": "search"
+          "zh_CN": "onSearch"
         },
         "description": {
           "zh_CN": "Called when searching items."
@@ -487,7 +487,7 @@
       },
       "onSelect": {
         "label": {
-          "zh_CN": "select"
+          "zh_CN": "onSelect"
         },
         "description": {
           "zh_CN": "Called when a option is selected. param is option's value and option instance."
@@ -501,7 +501,7 @@
       },
       "onClear": {
         "label": {
-          "zh_CN": "clear"
+          "zh_CN": "onClear"
         },
         "description": {
           "zh_CN": "Called when clear"

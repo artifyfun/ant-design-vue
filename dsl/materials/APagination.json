@@ -428,7 +428,7 @@
     "events": {
       "onChange": {
         "label": {
-          "zh_CN": "change"
+          "zh_CN": "onChange"
         },
         "description": {
           "zh_CN": "Called when the page number or `pageSize` is changed, and it takes the resulting page number and pageSize as its arguments"
@@ -442,7 +442,7 @@
       },
       "onShowSizeChange": {
         "label": {
-          "zh_CN": "showSizeChange"
+          "zh_CN": "onShowSizeChange"
         },
         "description": {
           "zh_CN": "a callback function, executed when `pageSize` is changed"

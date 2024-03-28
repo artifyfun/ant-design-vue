@@ -349,7 +349,7 @@
     "events": {
       "onTabChange": {
         "label": {
-          "zh_CN": "tabChange"
+          "zh_CN": "onTabChange"
         },
         "description": {
           "zh_CN": "Callback when tab is switched"

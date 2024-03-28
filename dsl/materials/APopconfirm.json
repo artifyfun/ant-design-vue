@@ -291,7 +291,7 @@
     "events": {
       "onCancel": {
         "label": {
-          "zh_CN": "cancel"
+          "zh_CN": "onCancel"
         },
         "description": {
           "zh_CN": "callback of cancel"
@@ -305,7 +305,7 @@
       },
       "onConfirm": {
         "label": {
-          "zh_CN": "confirm"
+          "zh_CN": "onConfirm"
         },
         "description": {
           "zh_CN": "callback of confirmation"
@@ -319,7 +319,7 @@
       },
       "onOpenChange": {
         "label": {
-          "zh_CN": "openChange"
+          "zh_CN": "onOpenChange"
         },
         "description": {
           "zh_CN": "Callback executed when visibility of the tooltip card is changed"

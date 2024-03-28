@@ -885,7 +885,7 @@
     "events": {
       "onBlur": {
         "label": {
-          "zh_CN": "blur"
+          "zh_CN": "onBlur"
         },
         "description": {
           "zh_CN": "Called when blur"
@@ -899,7 +899,7 @@
       },
       "onChange": {
         "label": {
-          "zh_CN": "change"
+          "zh_CN": "onChange"
         },
         "description": {
           "zh_CN": "Called when select an option or input value change, or value of input is changed in combobox mode"
@@ -913,7 +913,7 @@
       },
       "onDeselect": {
         "label": {
-          "zh_CN": "deselect"
+          "zh_CN": "onDeselect"
         },
         "description": {
           "zh_CN": "Called when a option is deselected, the params are option's value (or key) . only called for multiple or tags, effective in multiple or tags mode only."
@@ -927,7 +927,7 @@
       },
       "onDropdownVisibleChange": {
         "label": {
-          "zh_CN": "dropdownVisibleChange"
+          "zh_CN": "onDropdownVisibleChange"
         },
         "description": {
           "zh_CN": "Call when dropdown open"
@@ -941,7 +941,7 @@
       },
       "onFocus": {
         "label": {
-          "zh_CN": "focus"
+          "zh_CN": "onFocus"
         },
         "description": {
           "zh_CN": "Called when focus"
@@ -955,7 +955,7 @@
       },
       "onInputKeyDown": {
         "label": {
-          "zh_CN": "inputKeyDown"
+          "zh_CN": "onInputKeyDown"
         },
         "description": {
           "zh_CN": "Called when key pressed"
@@ -969,7 +969,7 @@
       },
       "onMouseenter": {
         "label": {
-          "zh_CN": "mouseenter"
+          "zh_CN": "onMouseenter"
         },
         "description": {
           "zh_CN": "Called when mouse enter"
@@ -983,7 +983,7 @@
       },
       "onMouseleave": {
         "label": {
-          "zh_CN": "mouseleave"
+          "zh_CN": "onMouseleave"
         },
         "description": {
           "zh_CN": "Called when mouse leave"
@@ -997,7 +997,7 @@
       },
       "onPopupScroll": {
         "label": {
-          "zh_CN": "popupScroll"
+          "zh_CN": "onPopupScroll"
         },
         "description": {
           "zh_CN": "Called when dropdown scrolls"
@@ -1011,7 +1011,7 @@
       },
       "onSearch": {
         "label": {
-          "zh_CN": "search"
+          "zh_CN": "onSearch"
         },
         "description": {
           "zh_CN": "Callback function that is fired when input changed."
@@ -1025,7 +1025,7 @@
       },
       "onSelect": {
         "label": {
-          "zh_CN": "select"
+          "zh_CN": "onSelect"
         },
         "description": {
           "zh_CN": "Called when a option is selected, the params are option's value (or key) and option instance."

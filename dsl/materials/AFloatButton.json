@@ -245,7 +245,7 @@
     "events": {
       "onClick": {
         "label": {
-          "zh_CN": "click"
+          "zh_CN": "onClick"
         },
         "description": {
           "zh_CN": "Set the handler to handle `click` event"

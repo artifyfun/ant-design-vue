@@ -261,7 +261,7 @@
     "events": {
       "onBlur": {
         "label": {
-          "zh_CN": "blur"
+          "zh_CN": "onBlur"
         },
         "description": {
           "zh_CN": "callback when component lose focus"
@@ -275,7 +275,7 @@
       },
       "onChange": {
         "label": {
-          "zh_CN": "change"
+          "zh_CN": "onChange"
         },
         "description": {
           "zh_CN": "callback when select value"
@@ -289,7 +289,7 @@
       },
       "onFocus": {
         "label": {
-          "zh_CN": "focus"
+          "zh_CN": "onFocus"
         },
         "description": {
           "zh_CN": "callback when component get focus"
@@ -303,7 +303,7 @@
       },
       "onHoverChange": {
         "label": {
-          "zh_CN": "hoverChange"
+          "zh_CN": "onHoverChange"
         },
         "description": {
           "zh_CN": "callback when hover item"
@@ -317,7 +317,7 @@
       },
       "onKeydown": {
         "label": {
-          "zh_CN": "keydown"
+          "zh_CN": "onKeydown"
         },
         "description": {
           "zh_CN": "callback when keydown on component"

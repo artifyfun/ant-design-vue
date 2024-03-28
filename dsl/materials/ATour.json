@@ -213,7 +213,7 @@
     "events": {
       "onClose": {
         "label": {
-          "zh_CN": "close"
+          "zh_CN": "onClose"
         },
         "description": {
           "zh_CN": "Callback function on shutdown"
@@ -227,7 +227,7 @@
       },
       "onFinish": {
         "label": {
-          "zh_CN": "finish"
+          "zh_CN": "onFinish"
         },
         "description": {
           "zh_CN": "Callback function on finished"
@@ -241,7 +241,7 @@
       },
       "onChange": {
         "label": {
-          "zh_CN": "change"
+          "zh_CN": "onChange"
         },
         "description": {
           "zh_CN": "Callback when the step changes. Current is the previous step"

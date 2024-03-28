@@ -272,7 +272,7 @@
     "events": {
       "onOpenChange": {
         "label": {
-          "zh_CN": "openChange"
+          "zh_CN": "onOpenChange"
         },
         "description": {
           "zh_CN": "a callback function takes an argument: `open`, is executed when the open state is changed. Not trigger when hidden by click item"

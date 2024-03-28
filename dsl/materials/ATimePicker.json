@@ -454,7 +454,7 @@
     "events": {
       "onChange": {
         "label": {
-          "zh_CN": "change"
+          "zh_CN": "onChange"
         },
         "description": {
           "zh_CN": "a callback function, can be executed when the selected time is changing"
@@ -468,7 +468,7 @@
       },
       "onOpenChange": {
         "label": {
-          "zh_CN": "openChange"
+          "zh_CN": "onOpenChange"
         },
         "description": {
           "zh_CN": "a callback function which will be called while panel opening/closing"

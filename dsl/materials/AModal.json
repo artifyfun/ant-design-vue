@@ -559,7 +559,7 @@
     "events": {
       "onCancel": {
         "label": {
-          "zh_CN": "cancel"
+          "zh_CN": "onCancel"
         },
         "description": {
           "zh_CN": "Specify a function that will be called when a user clicks mask, close button on top right or Cancel button"
@@ -573,7 +573,7 @@
       },
       "onOk": {
         "label": {
-          "zh_CN": "ok"
+          "zh_CN": "onOk"
         },
         "description": {
           "zh_CN": "Specify a function that will be called when a user clicks the OK button"
