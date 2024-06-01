@@ -13,6 +13,8 @@ const tagPrefix = '';
 
 const CDN = '/assets/lib';
 
+const category = 'Ant Design Vue';
+
 function parseAndWriteByType(type = 'zh-CN') {
   const reg = new RegExp(`${type}.md`);
   return parseAndWrite({
@@ -86,7 +88,7 @@ function getPropertiesContent(attributes) {
           }
         }
         return attr.default && typeof attr.default === 'string'
-          ? attr.default.replaceAll('`', '').trim()
+          ? attr.default.replaceAll('`', '').replaceAll('"', '').trim()
           : attr.default;
       })();
 
@@ -626,9 +628,10 @@ async function generateMaterials(type = 'zh-CN') {
             'https://unpkg.com/dayjs/plugin/quarterOfYear.js',
           ],
           exportName: component.title,
+          destructuring: true,
         },
-        group: 'component',
-        category: component.type,
+        group: component.type,
+        category,
         configure: {
           loop: true,
           condition: true,
@@ -707,7 +710,6 @@ async function generateMaterials(type = 'zh-CN') {
             zh_CN: component.subtitle,
           },
           description: formatDescription(component.description),
-          category: component.type,
           schema: {
             properties: [
               {

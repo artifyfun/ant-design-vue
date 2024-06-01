@@ -27,10 +27,11 @@
       "https://unpkg.com/dayjs/plugin/advancedFormat.js",
       "https://unpkg.com/dayjs/plugin/quarterOfYear.js"
     ],
-    "exportName": "Pagination"
+    "exportName": "Pagination",
+    "destructuring": true
   },
-  "group": "component",
-  "category": "导航",
+  "group": "Navigation",
+  "category": "Ant Design Vue",
   "configure": {
     "loop": true,
     "condition": true,
@@ -398,7 +399,7 @@
             "cols": 12,
             "labelPosition": "top",
             "type": "string",
-            "defaultValue": "\"\"",
+            "defaultValue": "",
             "widget": {
               "component": "MetaInput",
               "props": {}

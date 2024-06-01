@@ -113,6 +113,22 @@
   "breadcrumb-separator": {
     "attributes": []
   },
+  "calendar": {
+    "attributes": [
+      "dateCellRender",
+      "dateFullCellRender",
+      "disabledDate",
+      "fullscreen",
+      "headerRender",
+      "locale",
+      "mode",
+      "monthCellRender",
+      "monthFullCellRender",
+      "validRange",
+      "value(v-model)",
+      "valueFormat"
+    ]
+  },
   "button": {
     "attributes": [
       "block",
@@ -129,22 +145,6 @@
       "type",
       "blur()",
       "focus()"
-    ]
-  },
-  "calendar": {
-    "attributes": [
-      "dateCellRender",
-      "dateFullCellRender",
-      "disabledDate",
-      "fullscreen",
-      "headerRender",
-      "locale",
-      "mode",
-      "monthCellRender",
-      "monthFullCellRender",
-      "validRange",
-      "value(v-model)",
-      "valueFormat"
     ]
   },
   "card": {
@@ -657,9 +657,6 @@
   "menu-divider": {
     "attributes": ["dashed"]
   },
-  "message": {
-    "attributes": ["content", "duration", "onClose"]
-  },
   "modal": {
     "attributes": [
       "afterClose",
@@ -687,6 +684,9 @@
       "wrapClassName",
       "zIndex"
     ]
+  },
+  "message": {
+    "attributes": ["content", "duration", "onClose"]
   },
   "notification": {
     "attributes": [
@@ -739,6 +739,9 @@
       "total"
     ]
   },
+  "popover": {
+    "attributes": ["content", "title"]
+  },
   "popconfirm": {
     "attributes": [
       "cancelButton",
@@ -756,23 +759,6 @@
       "open (v-model)"
     ]
   },
-  "popover": {
-    "attributes": ["content", "title"]
-  },
-  "qrcode": {
-    "attributes": [
-      "value",
-      "type",
-      "icon",
-      "size",
-      "iconSize",
-      "color",
-      "bgColor",
-      "bordered",
-      "errorLevel",
-      "status"
-    ]
-  },
   "progress": {
     "attributes": [
       "format",
@@ -786,6 +772,20 @@
       "trailColor",
       "type",
       "size"
+    ]
+  },
+  "qrcode": {
+    "attributes": [
+      "value",
+      "type",
+      "icon",
+      "size",
+      "iconSize",
+      "color",
+      "bgColor",
+      "bordered",
+      "errorLevel",
+      "status"
     ]
   },
   "radio": {
@@ -919,6 +919,9 @@
   "space-compact": {
     "attributes": ["block", "direction", "size"]
   },
+  "spin": {
+    "attributes": ["delay", "indicator", "size", "spinning", "tip", "wrapperClassName"]
+  },
   "statistic": {
     "attributes": [
       "decimalSeparator",
@@ -934,9 +937,6 @@
   },
   "statistic-countdown": {
     "attributes": ["format", "prefix", "suffix", "title", "value", "valueStyle", "finish"]
-  },
-  "spin": {
-    "attributes": ["delay", "indicator", "size", "spinning", "tip", "wrapperClassName"]
   },
   "steps": {
     "attributes": [
@@ -1152,9 +1152,6 @@
       "titles"
     ]
   },
-  "tree-select": {
-    "attributes": []
-  },
   "tree": {
     "attributes": [
       "allowDrop",
@@ -1200,6 +1197,9 @@
   },
   "directory-tree": {
     "attributes": ["expandAction"]
+  },
+  "tree-select": {
+    "attributes": []
   },
   "typography": {
     "attributes": []

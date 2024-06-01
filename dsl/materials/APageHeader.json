@@ -26,10 +26,11 @@
       "https://unpkg.com/dayjs/plugin/advancedFormat.js",
       "https://unpkg.com/dayjs/plugin/quarterOfYear.js"
     ],
-    "exportName": "PageHeader"
+    "exportName": "PageHeader",
+    "destructuring": true
   },
-  "group": "component",
-  "category": "导航",
+  "group": "Navigation",
+  "category": "Ant Design Vue",
   "configure": {
     "loop": true,
     "condition": true,

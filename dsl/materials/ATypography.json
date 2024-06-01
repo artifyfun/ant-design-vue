@@ -27,10 +27,11 @@
       "https://unpkg.com/dayjs/plugin/advancedFormat.js",
       "https://unpkg.com/dayjs/plugin/quarterOfYear.js"
     ],
-    "exportName": "Typography"
+    "exportName": "Typography",
+    "destructuring": true
   },
-  "group": "component",
-  "category": "通用",
+  "group": "General",
+  "category": "Ant Design Vue",
   "configure": {
     "loop": true,
     "condition": true,

@@ -27,10 +27,11 @@
       "https://unpkg.com/dayjs/plugin/advancedFormat.js",
       "https://unpkg.com/dayjs/plugin/quarterOfYear.js"
     ],
-    "exportName": "Cascader"
+    "exportName": "Cascader",
+    "destructuring": true
   },
-  "group": "component",
-  "category": "数据录入",
+  "group": "Data Entry",
+  "category": "Ant Design Vue",
   "configure": {
     "loop": true,
     "condition": true,

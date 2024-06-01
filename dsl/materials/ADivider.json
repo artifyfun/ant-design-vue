@@ -27,10 +27,11 @@
       "https://unpkg.com/dayjs/plugin/advancedFormat.js",
       "https://unpkg.com/dayjs/plugin/quarterOfYear.js"
     ],
-    "exportName": "Divider"
+    "exportName": "Divider",
+    "destructuring": true
   },
-  "group": "component",
-  "category": "布局",
+  "group": "Layout",
+  "category": "Ant Design Vue",
   "configure": {
     "loop": true,
     "condition": true,

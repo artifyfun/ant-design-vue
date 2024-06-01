@@ -351,6 +351,54 @@
     "type": "[Menu](/components/menu) | () => Menu",
     "description": "下拉菜单的内容, Default: -"
   },
+  "calendar/dateCellRender": {
+    "type": "v-slot:dateCellRender=\"{current: dayjs}\"",
+    "description": "作用域插槽，用来自定义渲染日期单元格，返回内容会被追加到单元格,, Default: 无"
+  },
+  "calendar/dateFullCellRender": {
+    "type": "v-slot:dateFullCellRender=\"{current: dayjs}\"",
+    "description": "作用域插槽，自定义渲染日期单元格，返回内容覆盖单元格, Default: 无"
+  },
+  "calendar/disabledDate": {
+    "type": "(currentDate: dayjs) => boolean",
+    "description": "不可选择的日期, Default: 无"
+  },
+  "calendar/fullscreen": {
+    "type": "boolean",
+    "description": "是否全屏显示, Default: true"
+  },
+  "calendar/headerRender": {
+    "type": "v-slot:headerRender=\"{value: dayjs, type: string, onChange: f(), onTypeChange: f()}\"",
+    "description": "自定义头部内容, Default: -"
+  },
+  "calendar/locale": {
+    "type": "object",
+    "description": "国际化配置, Default: [默认配置](https://github.com/vueComponent/ant-design-vue/blob/main/components/date-picker/locale/example.json)"
+  },
+  "calendar/mode": {
+    "type": "string",
+    "description": "初始模式，`month/year`, Default: month"
+  },
+  "calendar/monthCellRender": {
+    "type": "v-slot:monthCellRender=\"{current: dayjs}\"",
+    "description": "作用域插槽，自定义渲染月单元格，返回内容会被追加到单元格, Default: 无"
+  },
+  "calendar/monthFullCellRender": {
+    "type": "v-slot:monthFullCellRender=\"{current: dayjs}\"",
+    "description": "作用域插槽，自定义渲染月单元格，返回内容覆盖单元格, Default: 无"
+  },
+  "calendar/validRange": {
+    "type": "[[dayjs](https://day.js.org/), [dayjs](https://day.js.org/)]",
+    "description": "设置可以显示的日期, Default: 无"
+  },
+  "calendar/value(v-model)": {
+    "type": "[dayjs](https://day.js.org/)",
+    "description": "展示日期, Default: 当前日期"
+  },
+  "calendar/valueFormat": {
+    "type": "string，[具体格式](https://day.js.org/docs/zh-CN/display/format)",
+    "description": "可选，绑定值的格式，对 value、defaultValue 起作用。不指定则绑定值为 dayjs 对象, Default: -"
+  },
   "button/block": {
     "type": "boolean",
     "description": "将按钮宽度调整为其父宽度的选项, Default: `false`"
@@ -406,54 +454,6 @@
   "button/focus()": {
     "type": "",
     "description": "获取焦点, Default: undefined"
-  },
-  "calendar/dateCellRender": {
-    "type": "v-slot:dateCellRender=\"{current: dayjs}\"",
-    "description": "作用域插槽，用来自定义渲染日期单元格，返回内容会被追加到单元格,, Default: 无"
-  },
-  "calendar/dateFullCellRender": {
-    "type": "v-slot:dateFullCellRender=\"{current: dayjs}\"",
-    "description": "作用域插槽，自定义渲染日期单元格，返回内容覆盖单元格, Default: 无"
-  },
-  "calendar/disabledDate": {
-    "type": "(currentDate: dayjs) => boolean",
-    "description": "不可选择的日期, Default: 无"
-  },
-  "calendar/fullscreen": {
-    "type": "boolean",
-    "description": "是否全屏显示, Default: true"
-  },
-  "calendar/headerRender": {
-    "type": "v-slot:headerRender=\"{value: dayjs, type: string, onChange: f(), onTypeChange: f()}\"",
-    "description": "自定义头部内容, Default: -"
-  },
-  "calendar/locale": {
-    "type": "object",
-    "description": "国际化配置, Default: [默认配置](https://github.com/vueComponent/ant-design-vue/blob/main/components/date-picker/locale/example.json)"
-  },
-  "calendar/mode": {
-    "type": "string",
-    "description": "初始模式，`month/year`, Default: month"
-  },
-  "calendar/monthCellRender": {
-    "type": "v-slot:monthCellRender=\"{current: dayjs}\"",
-    "description": "作用域插槽，自定义渲染月单元格，返回内容会被追加到单元格, Default: 无"
-  },
-  "calendar/monthFullCellRender": {
-    "type": "v-slot:monthFullCellRender=\"{current: dayjs}\"",
-    "description": "作用域插槽，自定义渲染月单元格，返回内容覆盖单元格, Default: 无"
-  },
-  "calendar/validRange": {
-    "type": "[[dayjs](https://day.js.org/), [dayjs](https://day.js.org/)]",
-    "description": "设置可以显示的日期, Default: 无"
-  },
-  "calendar/value(v-model)": {
-    "type": "[dayjs](https://day.js.org/)",
-    "description": "展示日期, Default: 当前日期"
-  },
-  "calendar/valueFormat": {
-    "type": "string，[具体格式](https://day.js.org/docs/zh-CN/display/format)",
-    "description": "可选，绑定值的格式，对 value、defaultValue 起作用。不指定则绑定值为 dayjs 对象, Default: -"
   },
   "card/activeTabKey": {
     "type": "string",
@@ -2111,18 +2111,6 @@
     "type": "boolean",
     "description": "是否虚线, Default: false"
   },
-  "message/content": {
-    "type": "string| VNode | () => VNode",
-    "description": "提示内容, Default: -"
-  },
-  "message/duration": {
-    "type": "number",
-    "description": "自动关闭的延时，单位秒。设为 0 时不自动关闭。, Default: 3"
-  },
-  "message/onClose": {
-    "type": "function",
-    "description": "关闭时触发的回调函数, Default: -"
-  },
   "modal/afterClose": {
     "type": "function",
     "description": "Modal 完全关闭后的回调, Default: 无"
@@ -2218,6 +2206,18 @@
   "modal/zIndex": {
     "type": "number",
     "description": "设置 Modal 的 `z-index`, Default: 1000"
+  },
+  "message/content": {
+    "type": "string| VNode | () => VNode",
+    "description": "提示内容, Default: -"
+  },
+  "message/duration": {
+    "type": "number",
+    "description": "自动关闭的延时，单位秒。设为 0 时不自动关闭。, Default: 3"
+  },
+  "message/onClose": {
+    "type": "function",
+    "description": "关闭时触发的回调函数, Default: -"
   },
   "notification/bottom": {
     "type": "string",
@@ -2375,6 +2375,14 @@
     "type": "number",
     "description": "数据总数, Default: 0"
   },
+  "popover/content": {
+    "type": "string|slot|VNode",
+    "description": "卡片内容, Default: -"
+  },
+  "popover/title": {
+    "type": "string|slot|VNode",
+    "description": "卡片标题, Default: -"
+  },
   "popconfirm/cancelButton": {
     "type": "slot",
     "description": "完全自定义取消按钮, Default: -"
@@ -2427,54 +2435,6 @@
     "type": "boolean",
     "description": "是否显示, Default: -"
   },
-  "popover/content": {
-    "type": "string|slot|VNode",
-    "description": "卡片内容, Default: -"
-  },
-  "popover/title": {
-    "type": "string|slot|VNode",
-    "description": "卡片标题, Default: -"
-  },
-  "qrcode/value": {
-    "type": "string",
-    "description": "扫描后的地址, Default: -"
-  },
-  "qrcode/type": {
-    "type": "`'canvas'` | `'svg'`",
-    "description": "渲染类型, Default: `canvas`"
-  },
-  "qrcode/icon": {
-    "type": "string",
-    "description": "二维码中图片的地址（目前只支持图片地址）, Default: -"
-  },
-  "qrcode/size": {
-    "type": "number",
-    "description": "二维码大小, Default: 160"
-  },
-  "qrcode/iconSize": {
-    "type": "number",
-    "description": "二维码中图片的大小, Default: 40"
-  },
-  "qrcode/color": {
-    "type": "string",
-    "description": "二维码颜色, Default: `#000`"
-  },
-  "qrcode/bgColor": {
-    "type": "string",
-    "description": "二维码背景颜色, Default: `transparent`"
-  },
-  "qrcode/bordered": {
-    "type": "boolean",
-    "description": "是否有边框, Default: `true`"
-  },
-  "qrcode/errorLevel": {
-    "type": "`'L'` | `'M'` | `'Q'` | `'H'`",
-    "description": "二维码纠错等级, Default: `'M'`"
-  },
-  "qrcode/status": {
-    "type": "`active` | `expired` | `loading` | `scanned`",
-    "description": "二维码状态, Default: `active`"
-  },
   "progress/format": {
     "type": "function(percent, successPercent)",
     "description": "内容的模板函数, Default: (percent) => percent + `%`"
@@ -2518,6 +2478,46 @@
   "progress/size": {
     "type": "number | [number, number] | \"small\" | \"default\"",
     "description": "进度条的尺寸, Default: \"default\""
+  },
+  "qrcode/value": {
+    "type": "string",
+    "description": "扫描后的地址, Default: -"
+  },
+  "qrcode/type": {
+    "type": "`'canvas'` | `'svg'`",
+    "description": "渲染类型, Default: `canvas`"
+  },
+  "qrcode/icon": {
+    "type": "string",
+    "description": "二维码中图片的地址（目前只支持图片地址）, Default: -"
+  },
+  "qrcode/size": {
+    "type": "number",
+    "description": "二维码大小, Default: 160"
+  },
+  "qrcode/iconSize": {
+    "type": "number",
+    "description": "二维码中图片的大小, Default: 40"
+  },
+  "qrcode/color": {
+    "type": "string",
+    "description": "二维码颜色, Default: `#000`"
+  },
+  "qrcode/bgColor": {
+    "type": "string",
+    "description": "二维码背景颜色, Default: `transparent`"
+  },
+  "qrcode/bordered": {
+    "type": "boolean",
+    "description": "是否有边框, Default: `true`"
+  },
+  "qrcode/errorLevel": {
+    "type": "`'L'` | `'M'` | `'Q'` | `'H'`",
+    "description": "二维码纠错等级, Default: `'M'`"
+  },
+  "qrcode/status": {
+    "type": "`active` | `expired` | `loading` | `scanned`",
+    "description": "二维码状态, Default: `active`"
   },
   "radio/blur()": {
     "type": "",
@@ -2999,6 +2999,30 @@
     "type": "`large` | `middle` | `small`",
     "description": "子组件大小, Default: `middle`"
   },
+  "spin/delay": {
+    "type": "number (毫秒)",
+    "description": "延迟显示加载效果的时间（防止闪烁）, Default: -"
+  },
+  "spin/indicator": {
+    "type": "vNode | slot",
+    "description": "加载指示符, Default: -"
+  },
+  "spin/size": {
+    "type": "string",
+    "description": "组件大小，可选值为 `small` `default` `large`, Default: `default`"
+  },
+  "spin/spinning": {
+    "type": "boolean",
+    "description": "是否为加载中状态, Default: true"
+  },
+  "spin/tip": {
+    "type": "string | slot",
+    "description": "当作为包裹元素时，可以自定义描述文案, Default: -"
+  },
+  "spin/wrapperClassName": {
+    "type": "string",
+    "description": "包装器的类属性, Default: -"
+  },
   "statistic/decimalSeparator": {
     "type": "string",
     "description": "设置小数点, Default: ."
@@ -3062,30 +3086,6 @@
   "statistic-countdown/finish": {
     "type": "() => void",
     "description": "倒计时完成时触发, Default: undefined"
-  },
-  "spin/delay": {
-    "type": "number (毫秒)",
-    "description": "延迟显示加载效果的时间（防止闪烁）, Default: -"
-  },
-  "spin/indicator": {
-    "type": "vNode | slot",
-    "description": "加载指示符, Default: -"
-  },
-  "spin/size": {
-    "type": "string",
-    "description": "组件大小，可选值为 `small` `default` `large`, Default: `default`"
-  },
-  "spin/spinning": {
-    "type": "boolean",
-    "description": "是否为加载中状态, Default: true"
-  },
-  "spin/tip": {
-    "type": "string | slot",
-    "description": "当作为包裹元素时，可以自定义描述文案, Default: -"
-  },
-  "spin/wrapperClassName": {
-    "type": "string",
-    "description": "包装器的类属性, Default: -"
   },
   "steps/current (v-model)": {
     "type": "number",

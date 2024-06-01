@@ -27,10 +27,11 @@
       "https://unpkg.com/dayjs/plugin/advancedFormat.js",
       "https://unpkg.com/dayjs/plugin/quarterOfYear.js"
     ],
-    "exportName": "Message"
+    "exportName": "Message",
+    "destructuring": true
   },
-  "group": "component",
-  "category": "反馈",
+  "group": "Feedback",
+  "category": "Ant Design Vue",
   "configure": {
     "loop": true,
     "condition": true,
