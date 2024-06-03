@@ -17,6 +17,9 @@
       "type"
     ]
   },
+  "app": {
+    "attributes": ["message", "notification"]
+  },
   "anchor": {
     "attributes": [
       "affix",
@@ -36,9 +39,6 @@
   },
   "anchor-item": {
     "attributes": ["key", "href", "target", "title", "children"]
-  },
-  "app": {
-    "attributes": ["message", "notification"]
   },
   "auto-complete": {
     "attributes": [
@@ -113,22 +113,6 @@
   "breadcrumb-separator": {
     "attributes": []
   },
-  "calendar": {
-    "attributes": [
-      "dateCellRender",
-      "dateFullCellRender",
-      "disabledDate",
-      "fullscreen",
-      "headerRender",
-      "locale",
-      "mode",
-      "monthCellRender",
-      "monthFullCellRender",
-      "validRange",
-      "value(v-model)",
-      "valueFormat"
-    ]
-  },
   "button": {
     "attributes": [
       "block",
@@ -171,6 +155,22 @@
   },
   "card-meta": {
     "attributes": ["avatar", "description", "title"]
+  },
+  "calendar": {
+    "attributes": [
+      "dateCellRender",
+      "dateFullCellRender",
+      "disabledDate",
+      "fullscreen",
+      "headerRender",
+      "locale",
+      "mode",
+      "monthCellRender",
+      "monthFullCellRender",
+      "validRange",
+      "value(v-model)",
+      "valueFormat"
+    ]
   },
   "carousel": {
     "attributes": [
@@ -385,9 +385,6 @@
   "empty": {
     "attributes": ["description", "image", "imageStyle"]
   },
-  "flex": {
-    "attributes": ["vertical", "wrap", "justify", "align", "flex", "gap", "component"]
-  },
   "float-button": {
     "attributes": [
       "icon",
@@ -441,14 +438,17 @@
       "wrapperCol"
     ]
   },
-  "grid": {
-    "attributes": []
+  "flex": {
+    "attributes": ["vertical", "wrap", "justify", "align", "flex", "gap", "component"]
   },
   "icon": {
     "attributes": []
   },
   "自定义": {
     "attributes": ["component", "rotate", "spin", "style"]
+  },
+  "grid": {
+    "attributes": []
   },
   "image": {
     "attributes": [
@@ -460,6 +460,51 @@
       "src",
       "previewMask",
       "width"
+    ]
+  },
+  "layout": {
+    "attributes": ["class", "hasSider", "style"]
+  },
+  "layout-sider": {
+    "attributes": [
+      "breakpoint",
+      "class",
+      "collapsed(v-model)",
+      "collapsedWidth",
+      "collapsible",
+      "defaultCollapsed",
+      "reverseArrow",
+      "style",
+      "theme",
+      "trigger",
+      "width",
+      "zeroWidthTriggerStyle"
+    ]
+  },
+  "input-number": {
+    "attributes": [
+      "addonAfter",
+      "addonBefore",
+      "autofocus",
+      "bordered",
+      "controls",
+      "decimalSeparator",
+      "defaultValue",
+      "disabled",
+      "formatter",
+      "keyboard",
+      "max",
+      "min",
+      "parser",
+      "precision",
+      "prefix",
+      "size",
+      "status",
+      "step",
+      "stringMode",
+      "upIcon",
+      "downIcon",
+      "value(v-model)"
     ]
   },
   "input": {
@@ -492,51 +537,6 @@
   },
   "input-password": {
     "attributes": ["visible(v-model)", "iconRender", "visibilityToggle"]
-  },
-  "input-number": {
-    "attributes": [
-      "addonAfter",
-      "addonBefore",
-      "autofocus",
-      "bordered",
-      "controls",
-      "decimalSeparator",
-      "defaultValue",
-      "disabled",
-      "formatter",
-      "keyboard",
-      "max",
-      "min",
-      "parser",
-      "precision",
-      "prefix",
-      "size",
-      "status",
-      "step",
-      "stringMode",
-      "upIcon",
-      "downIcon",
-      "value(v-model)"
-    ]
-  },
-  "layout": {
-    "attributes": ["class", "hasSider", "style"]
-  },
-  "layout-sider": {
-    "attributes": [
-      "breakpoint",
-      "class",
-      "collapsed(v-model)",
-      "collapsedWidth",
-      "collapsible",
-      "defaultCollapsed",
-      "reverseArrow",
-      "style",
-      "theme",
-      "trigger",
-      "width",
-      "zeroWidthTriggerStyle"
-    ]
   },
   "list": {
     "attributes": [
@@ -588,6 +588,37 @@
       "option",
       "blur()",
       "focus()"
+    ]
+  },
+  "message": {
+    "attributes": ["content", "duration", "onClose"]
+  },
+  "modal": {
+    "attributes": [
+      "afterClose",
+      "bodyStyle",
+      "cancelButtonProps",
+      "cancelText",
+      "centered",
+      "closable",
+      "closeIcon",
+      "confirmLoading",
+      "destroyOnClose",
+      "footer",
+      "forceRender",
+      "getContainer",
+      "keyboard",
+      "mask",
+      "maskClosable",
+      "maskStyle",
+      "okButtonProps",
+      "okText",
+      "okType",
+      "title",
+      "open(v-model)",
+      "width",
+      "wrapClassName",
+      "zIndex"
     ]
   },
   "menu": {
@@ -657,36 +688,18 @@
   "menu-divider": {
     "attributes": ["dashed"]
   },
-  "modal": {
+  "page-header": {
     "attributes": [
-      "afterClose",
-      "bodyStyle",
-      "cancelButtonProps",
-      "cancelText",
-      "centered",
-      "closable",
-      "closeIcon",
-      "confirmLoading",
-      "destroyOnClose",
+      "avatar",
+      "backIcon",
+      "breadcrumb",
+      "extra",
       "footer",
-      "forceRender",
-      "getContainer",
-      "keyboard",
-      "mask",
-      "maskClosable",
-      "maskStyle",
-      "okButtonProps",
-      "okText",
-      "okType",
-      "title",
-      "open(v-model)",
-      "width",
-      "wrapClassName",
-      "zIndex"
+      "ghost",
+      "subTitle",
+      "tags",
+      "title"
     ]
-  },
-  "message": {
-    "attributes": ["content", "duration", "onClose"]
   },
   "notification": {
     "attributes": [
@@ -707,41 +720,6 @@
       "onClose"
     ]
   },
-  "page-header": {
-    "attributes": [
-      "avatar",
-      "backIcon",
-      "breadcrumb",
-      "extra",
-      "footer",
-      "ghost",
-      "subTitle",
-      "tags",
-      "title"
-    ]
-  },
-  "pagination": {
-    "attributes": [
-      "current(v-model)",
-      "defaultPageSize",
-      "disabled",
-      "hideOnSinglePage",
-      "itemRender",
-      "pageSize(v-model)",
-      "pageSizeOptions",
-      "responsive",
-      "showLessItems",
-      "showQuickJumper",
-      "showSizeChanger",
-      "showTotal",
-      "simple",
-      "size",
-      "total"
-    ]
-  },
-  "popover": {
-    "attributes": ["content", "title"]
-  },
   "popconfirm": {
     "attributes": [
       "cancelButton",
@@ -758,6 +736,9 @@
       "description",
       "open (v-model)"
     ]
+  },
+  "popover": {
+    "attributes": ["content", "title"]
   },
   "progress": {
     "attributes": [
@@ -818,11 +799,27 @@
       "value(v-model)"
     ]
   },
+  "pagination": {
+    "attributes": [
+      "current(v-model)",
+      "defaultPageSize",
+      "disabled",
+      "hideOnSinglePage",
+      "itemRender",
+      "pageSize(v-model)",
+      "pageSizeOptions",
+      "responsive",
+      "showLessItems",
+      "showQuickJumper",
+      "showSizeChanger",
+      "showTotal",
+      "simple",
+      "size",
+      "total"
+    ]
+  },
   "result": {
     "attributes": ["extra", "icon", "status", "subTitle", "title"]
-  },
-  "segmented": {
-    "attributes": ["block", "disabled", "options", "size", "value", "label"]
   },
   "select": {
     "attributes": [
@@ -957,19 +954,6 @@
   "steps-step": {
     "attributes": ["description", "disabled", "icon", "status", "subTitle", "title"]
   },
-  "switch": {
-    "attributes": [
-      "autofocus",
-      "checked(v-model)",
-      "checkedChildren",
-      "checkedValue",
-      "disabled",
-      "loading",
-      "size",
-      "unCheckedChildren",
-      "unCheckedValue"
-    ]
-  },
   "table": {
     "attributes": [
       "bodyCell",
@@ -1014,6 +998,22 @@
       "title",
       "transformCellText"
     ]
+  },
+  "switch": {
+    "attributes": [
+      "autofocus",
+      "checked(v-model)",
+      "checkedChildren",
+      "checkedValue",
+      "disabled",
+      "loading",
+      "size",
+      "unCheckedChildren",
+      "unCheckedValue"
+    ]
+  },
+  "segmented": {
+    "attributes": ["block", "disabled", "options", "size", "value", "label"]
   },
   "tabs": {
     "attributes": [

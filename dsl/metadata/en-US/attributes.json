@@ -1,16 +1,4 @@
 {
-  "affix/offsetBottom": {
-    "type": "number",
-    "description": "Offset from the bottom of the viewport (in pixels), Default: -"
-  },
-  "affix/offsetTop": {
-    "type": "number",
-    "description": "Offset from the top of the viewport (in pixels), Default: 0"
-  },
-  "affix/target": {
-    "type": "() => HTMLElement",
-    "description": "Specifies the scrollable area DOM node, Default: () => window"
-  },
   "alert/action": {
     "type": "slot",
     "description": "The action of Alert, Default: -"
@@ -54,6 +42,18 @@
   "alert/type": {
     "type": "string",
     "description": "Type of Alert styles, options: `success`, `info`, `warning`, `error`, Default: `info`,in `banner` mode default is `warning`"
+  },
+  "affix/offsetBottom": {
+    "type": "number",
+    "description": "Offset from the bottom of the viewport (in pixels), Default: -"
+  },
+  "affix/offsetTop": {
+    "type": "number",
+    "description": "Offset from the top of the viewport (in pixels), Default: 0"
+  },
+  "affix/target": {
+    "type": "() => HTMLElement",
+    "description": "Specifies the scrollable area DOM node, Default: () => window"
   },
   "anchor/affix": {
     "type": "boolean",
@@ -126,14 +126,6 @@
   "anchor-item/children": {
     "type": "[AnchorItem](#anchoritem)[]",
     "description": "Nested Anchor Link, `Attention: This attribute does not support horizontal orientation`, Default: -"
-  },
-  "app/message": {
-    "type": "[MessageConfig](/components/message/#messageconfig)",
-    "description": "Global config for Message, Default: -"
-  },
-  "app/notification": {
-    "type": "[NotificationConfig](/components/notification/#notificationconfig)",
-    "description": "Global config for Notification, Default: -"
   },
   "auto-complete/allowClear": {
     "type": "boolean",
@@ -210,6 +202,14 @@
   "auto-complete/v-model:value": {
     "type": "string|string[]|{ key: string, label: string|vNodes }|Array&lt;{ key: string, label: string|vNodes }>",
     "description": "selected option, Default: -"
+  },
+  "app/message": {
+    "type": "[MessageConfig](/components/message/#messageconfig)",
+    "description": "Global config for Message, Default: -"
+  },
+  "app/notification": {
+    "type": "[NotificationConfig](/components/notification/#notificationconfig)",
+    "description": "Global config for Notification, Default: -"
   },
   "avatar/alt": {
     "type": "string",
@@ -2031,6 +2031,66 @@
     "type": "function",
     "description": "Specify a function that will be called when the message is closed, Default: -"
   },
+  "notification/bottom": {
+    "type": "string",
+    "description": "Distance from the bottom of the viewport, when `placement` is `bottomRight` or `bottomLeft` (unit: pixels)., Default: `24px`"
+  },
+  "notification/btn": {
+    "type": "VNode | () => VNode",
+    "description": "Customized close button, Default: -"
+  },
+  "notification/class": {
+    "type": "string",
+    "description": "Customized CSS class, Default: -"
+  },
+  "notification/closeIcon": {
+    "type": "VNode | () => VNode",
+    "description": "custom close icon, Default: -"
+  },
+  "notification/description": {
+    "type": "string| VNode | () => VNode",
+    "description": "The content of notification box (required), Default: -"
+  },
+  "notification/duration": {
+    "type": "number",
+    "description": "Time in seconds before Notification is closed. When set to 0 or null, it will never be closed automatically, Default: 4.5"
+  },
+  "notification/getContainer": {
+    "type": "() => HTMLNode",
+    "description": "Return the mount node for Notification, Default: () => document.body"
+  },
+  "notification/icon": {
+    "type": "VNode | () => VNode",
+    "description": "Customized icon, Default: -"
+  },
+  "notification/key": {
+    "type": "string",
+    "description": "The unique identifier of the Notification, Default: -"
+  },
+  "notification/message": {
+    "type": "string| VNode | () => VNode",
+    "description": "The title of notification box (required), Default: -"
+  },
+  "notification/placement": {
+    "type": "string",
+    "description": "Position of Notification, can be one of `top` `topLeft` `topRight` `bottom` `bottomLeft` `bottomRight`, Default: `topRight`"
+  },
+  "notification/style": {
+    "type": "Object | string",
+    "description": "Customized inline style, Default: -"
+  },
+  "notification/top": {
+    "type": "string",
+    "description": "Distance from the top of the viewport, when `placement` is `topRight` or `topLeft` (unit: pixels)., Default: `24px`"
+  },
+  "notification/onClick": {
+    "type": "Function",
+    "description": "Specify a function that will be called when the notification is clicked, Default: -"
+  },
+  "notification/onClose": {
+    "type": "Function",
+    "description": "Specify a function that will be called when the close button is clicked, Default: -"
+  },
   "modal/afterClose": {
     "type": "function",
     "description": "Specify a function that will be called when modal is closed completely., Default: -"
@@ -2122,66 +2182,6 @@
   "modal/zIndex": {
     "type": "number",
     "description": "The `z-index` of the Modal, Default: 1000"
-  },
-  "notification/bottom": {
-    "type": "string",
-    "description": "Distance from the bottom of the viewport, when `placement` is `bottomRight` or `bottomLeft` (unit: pixels)., Default: `24px`"
-  },
-  "notification/btn": {
-    "type": "VNode | () => VNode",
-    "description": "Customized close button, Default: -"
-  },
-  "notification/class": {
-    "type": "string",
-    "description": "Customized CSS class, Default: -"
-  },
-  "notification/closeIcon": {
-    "type": "VNode | () => VNode",
-    "description": "custom close icon, Default: -"
-  },
-  "notification/description": {
-    "type": "string| VNode | () => VNode",
-    "description": "The content of notification box (required), Default: -"
-  },
-  "notification/duration": {
-    "type": "number",
-    "description": "Time in seconds before Notification is closed. When set to 0 or null, it will never be closed automatically, Default: 4.5"
-  },
-  "notification/getContainer": {
-    "type": "() => HTMLNode",
-    "description": "Return the mount node for Notification, Default: () => document.body"
-  },
-  "notification/icon": {
-    "type": "VNode | () => VNode",
-    "description": "Customized icon, Default: -"
-  },
-  "notification/key": {
-    "type": "string",
-    "description": "The unique identifier of the Notification, Default: -"
-  },
-  "notification/message": {
-    "type": "string| VNode | () => VNode",
-    "description": "The title of notification box (required), Default: -"
-  },
-  "notification/placement": {
-    "type": "string",
-    "description": "Position of Notification, can be one of `top` `topLeft` `topRight` `bottom` `bottomLeft` `bottomRight`, Default: `topRight`"
-  },
-  "notification/style": {
-    "type": "Object | string",
-    "description": "Customized inline style, Default: -"
-  },
-  "notification/top": {
-    "type": "string",
-    "description": "Distance from the top of the viewport, when `placement` is `topRight` or `topLeft` (unit: pixels)., Default: `24px`"
-  },
-  "notification/onClick": {
-    "type": "Function",
-    "description": "Specify a function that will be called when the notification is clicked, Default: -"
-  },
-  "notification/onClose": {
-    "type": "Function",
-    "description": "Specify a function that will be called when the close button is clicked, Default: -"
   },
   "page-header/avatar": {
     "type": "[avatar props](/components/avatar/)",

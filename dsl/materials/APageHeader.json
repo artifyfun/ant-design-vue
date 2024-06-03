@@ -13,9 +13,7 @@
   "dev_mode": "proCode",
   "npm": {
     "package": "ant-design-vue",
-    "version": "4.1.2",
-    "script": "/assets/lib/ant-design-vue@4.1.2/dist/antd.esm.min.js",
-    "css": "/assets/lib/ant-design-vue@4.1.2/dist/reset.css",
+    "version": "",
     "dependencies": [
       "https://unpkg.com/dayjs/dayjs.min.js",
       "https://unpkg.com/dayjs/plugin/customParseFormat.js",

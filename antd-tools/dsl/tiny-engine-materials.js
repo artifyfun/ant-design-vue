@@ -614,9 +614,10 @@ async function generateMaterials(type = 'zh-CN') {
         dev_mode: 'proCode',
         npm: {
           package: pkg.name,
-          version: webTypes.version,
-          script: `${CDN}/${pkg.name}@${pkg.version}/dist/antd.esm.min.js`,
-          css: `${CDN}/${pkg.name}@${pkg.version}/dist/reset.css`,
+          version: '',
+          // version: webTypes.version,
+          // script: `${CDN}/${pkg.name}@${pkg.version}/dist/antd.esm.min.js`,
+          // css: `${CDN}/${pkg.name}@${pkg.version}/dist/reset.css`,
           dependencies: [
             'https://unpkg.com/dayjs/dayjs.min.js',
             'https://unpkg.com/dayjs/plugin/customParseFormat.js',

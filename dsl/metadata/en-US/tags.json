@@ -1,7 +1,4 @@
 {
-  "affix": {
-    "attributes": ["offsetBottom", "offsetTop", "target"]
-  },
   "alert": {
     "attributes": [
       "action",
@@ -16,6 +13,9 @@
       "showIcon",
       "type"
     ]
+  },
+  "affix": {
+    "attributes": ["offsetBottom", "offsetTop", "target"]
   },
   "anchor": {
     "attributes": [
@@ -36,9 +36,6 @@
   },
   "anchor-item": {
     "attributes": ["key", "href", "target", "title", "children"]
-  },
-  "app": {
-    "attributes": ["message", "notification"]
   },
   "auto-complete": {
     "attributes": [
@@ -62,6 +59,9 @@
       "status",
       "v-model:value"
     ]
+  },
+  "app": {
+    "attributes": ["message", "notification"]
   },
   "avatar": {
     "attributes": [
@@ -626,6 +626,25 @@
   "message": {
     "attributes": ["content", "duration", "onClose"]
   },
+  "notification": {
+    "attributes": [
+      "bottom",
+      "btn",
+      "class",
+      "closeIcon",
+      "description",
+      "duration",
+      "getContainer",
+      "icon",
+      "key",
+      "message",
+      "placement",
+      "style",
+      "top",
+      "onClick",
+      "onClose"
+    ]
+  },
   "modal": {
     "attributes": [
       "afterClose",
@@ -651,25 +670,6 @@
       "width",
       "wrapClassName",
       "zIndex"
-    ]
-  },
-  "notification": {
-    "attributes": [
-      "bottom",
-      "btn",
-      "class",
-      "closeIcon",
-      "description",
-      "duration",
-      "getContainer",
-      "icon",
-      "key",
-      "message",
-      "placement",
-      "style",
-      "top",
-      "onClick",
-      "onClose"
     ]
   },
   "page-header": {
