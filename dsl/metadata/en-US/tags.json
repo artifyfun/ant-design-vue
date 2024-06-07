@@ -1,4 +1,7 @@
 {
+  "affix": {
+    "attributes": ["offsetBottom", "offsetTop", "target"]
+  },
   "alert": {
     "attributes": [
       "action",
@@ -13,9 +16,6 @@
       "showIcon",
       "type"
     ]
-  },
-  "affix": {
-    "attributes": ["offsetBottom", "offsetTop", "target"]
   },
   "anchor": {
     "attributes": [
@@ -36,6 +36,9 @@
   },
   "anchor-item": {
     "attributes": ["key", "href", "target", "title", "children"]
+  },
+  "app": {
+    "attributes": ["message", "notification"]
   },
   "auto-complete": {
     "attributes": [
@@ -59,9 +62,6 @@
       "status",
       "v-model:value"
     ]
-  },
-  "app": {
-    "attributes": ["message", "notification"]
   },
   "avatar": {
     "attributes": [
@@ -626,25 +626,6 @@
   "message": {
     "attributes": ["content", "duration", "onClose"]
   },
-  "notification": {
-    "attributes": [
-      "bottom",
-      "btn",
-      "class",
-      "closeIcon",
-      "description",
-      "duration",
-      "getContainer",
-      "icon",
-      "key",
-      "message",
-      "placement",
-      "style",
-      "top",
-      "onClick",
-      "onClose"
-    ]
-  },
   "modal": {
     "attributes": [
       "afterClose",
@@ -670,6 +651,25 @@
       "width",
       "wrapClassName",
       "zIndex"
+    ]
+  },
+  "notification": {
+    "attributes": [
+      "bottom",
+      "btn",
+      "class",
+      "closeIcon",
+      "description",
+      "duration",
+      "getContainer",
+      "icon",
+      "key",
+      "message",
+      "placement",
+      "style",
+      "top",
+      "onClick",
+      "onClose"
     ]
   },
   "page-header": {
@@ -892,22 +892,6 @@
   "spin": {
     "attributes": ["delay", "indicator", "size", "spinning", "tip", "wrapperClassName"]
   },
-  "statistic": {
-    "attributes": [
-      "decimalSeparator",
-      "formatter",
-      "groupSeparator",
-      "precision",
-      "prefix",
-      "suffix",
-      "title",
-      "value",
-      "valueStyle"
-    ]
-  },
-  "statistic-countdown": {
-    "attributes": ["format", "prefix", "suffix", "title", "value", "valueStyle", "finish"]
-  },
   "steps": {
     "attributes": [
       "current(v-model)",
@@ -926,6 +910,22 @@
   },
   "steps-step": {
     "attributes": ["description", "disabled", "icon", "status", "subTitle", "title"]
+  },
+  "statistic": {
+    "attributes": [
+      "decimalSeparator",
+      "formatter",
+      "groupSeparator",
+      "precision",
+      "prefix",
+      "suffix",
+      "title",
+      "value",
+      "valueStyle"
+    ]
+  },
+  "statistic-countdown": {
+    "attributes": ["format", "prefix", "suffix", "title", "value", "valueStyle", "finish"]
   },
   "switch": {
     "attributes": [

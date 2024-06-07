@@ -7,11 +7,11 @@ function getComponents(type = 'zh-CN') {
     `**/grid/index.${type}.md*`,
     `**/layout/index.${type}.md*`,
     `**/space/index.${type}.md*`,
-    `**/app/index.${type}.md*`,
+    // `**/app/index.${type}.md*`,
     `**/icon/index.${type}.md*`,
-    `**/form/index.${type}.md*`,
-    `**/breadcrumb/index.${type}.md*`,
-    `**/menu/index.${type}.md*`,
+    // `**/form/index.${type}.md*`,
+    // `**/breadcrumb/index.${type}.md*`,
+    // `**/menu/index.${type}.md*`,
   ];
   // get components all zh-CN md files
   const mdFiles = glob.sync(`components/**/index.${type}.md*`, {

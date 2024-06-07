@@ -573,7 +573,7 @@ function getSnippets(component) {
   ];
 }
 
-function formatDescription(description) {
+function formatDescription(description = '') {
   return description
     .replaceAll('"', '')
     .replaceAll("'", '')
@@ -591,9 +591,12 @@ async function generateMaterials(type = 'zh-CN') {
 
   const materials = components
     .map(component => {
-      const tag = webTypes.contributions.html.tags.find(
+      let tag = webTypes.contributions.html.tags.find(
         tag => tag.name === toKebabCase(component.title),
       );
+      if (component.title === 'QRCode') {
+        tag = webTypes.contributions.html.tags.find(tag => tag.name === 'qrcode');
+      }
       if (!tag) {
         console.error(`component ${component.title} not found`);
         return;
@@ -694,9 +697,12 @@ async function generateMaterials(type = 'zh-CN') {
 
     const cnMaterials = cnComponents
       .map(component => {
-        const tag = cnWebTypes.contributions.html.tags.find(
+        let tag = cnWebTypes.contributions.html.tags.find(
           tag => tag.name === toKebabCase(component.title),
         );
+        if (component.title === 'QRCode') {
+          tag = cnWebTypes.contributions.html.tags.find(tag => tag.name === 'qrcode');
+        }
         if (!tag) {
           console.error(`component ${component.title} not found`);
           return;

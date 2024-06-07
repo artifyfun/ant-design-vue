@@ -1,7 +1,4 @@
 {
-  "affix": {
-    "attributes": ["offsetBottom", "offsetTop", "target"]
-  },
   "alert": {
     "attributes": [
       "action",
@@ -17,8 +14,8 @@
       "type"
     ]
   },
-  "app": {
-    "attributes": ["message", "notification"]
+  "affix": {
+    "attributes": ["offsetBottom", "offsetTop", "target"]
   },
   "anchor": {
     "attributes": [
@@ -39,6 +36,9 @@
   },
   "anchor-item": {
     "attributes": ["key", "href", "target", "title", "children"]
+  },
+  "app": {
+    "attributes": ["message", "notification"]
   },
   "auto-complete": {
     "attributes": [
@@ -104,15 +104,6 @@
   "badge-ribbon": {
     "attributes": ["color", "placement", "text"]
   },
-  "breadcrumb": {
-    "attributes": ["itemRender", "params", "routes", "separator"]
-  },
-  "breadcrumb-item": {
-    "attributes": ["href", "overlay"]
-  },
-  "breadcrumb-separator": {
-    "attributes": []
-  },
   "button": {
     "attributes": [
       "block",
@@ -131,30 +122,14 @@
       "focus()"
     ]
   },
-  "card": {
-    "attributes": [
-      "activeTabKey",
-      "bodyStyle",
-      "bordered",
-      "defaultActiveTabKey",
-      "extra",
-      "headStyle",
-      "hoverable",
-      "loading",
-      "size",
-      "tabList",
-      "title",
-      "type",
-      "actions",
-      "cover",
-      "customTab",
-      "extra",
-      "tabBarExtraContent",
-      "title"
-    ]
+  "breadcrumb": {
+    "attributes": ["itemRender", "params", "routes", "separator"]
   },
-  "card-meta": {
-    "attributes": ["avatar", "description", "title"]
+  "breadcrumb-item": {
+    "attributes": ["href", "overlay"]
+  },
+  "breadcrumb-separator": {
+    "attributes": []
   },
   "calendar": {
     "attributes": [
@@ -219,6 +194,31 @@
       "tagRender",
       "value(v-model)"
     ]
+  },
+  "card": {
+    "attributes": [
+      "activeTabKey",
+      "bodyStyle",
+      "bordered",
+      "defaultActiveTabKey",
+      "extra",
+      "headStyle",
+      "hoverable",
+      "loading",
+      "size",
+      "tabList",
+      "title",
+      "type",
+      "actions",
+      "cover",
+      "customTab",
+      "extra",
+      "tabBarExtraContent",
+      "title"
+    ]
+  },
+  "card-meta": {
+    "attributes": ["avatar", "description", "title"]
   },
   "checkbox": {
     "attributes": [
@@ -385,18 +385,8 @@
   "empty": {
     "attributes": ["description", "image", "imageStyle"]
   },
-  "float-button": {
-    "attributes": [
-      "icon",
-      "description",
-      "tooltip",
-      "type",
-      "shape",
-      "onClick",
-      "href",
-      "target",
-      "badge"
-    ]
+  "flex": {
+    "attributes": ["vertical", "wrap", "justify", "align", "flex", "gap", "component"]
   },
   "form": {
     "attributes": [
@@ -438,74 +428,27 @@
       "wrapperCol"
     ]
   },
-  "flex": {
-    "attributes": ["vertical", "wrap", "justify", "align", "flex", "gap", "component"]
-  },
   "icon": {
     "attributes": []
   },
   "自定义": {
     "attributes": ["component", "rotate", "spin", "style"]
   },
+  "float-button": {
+    "attributes": [
+      "icon",
+      "description",
+      "tooltip",
+      "type",
+      "shape",
+      "onClick",
+      "href",
+      "target",
+      "badge"
+    ]
+  },
   "grid": {
     "attributes": []
-  },
-  "image": {
-    "attributes": [
-      "alt",
-      "fallback",
-      "height",
-      "placeholder",
-      "preview",
-      "src",
-      "previewMask",
-      "width"
-    ]
-  },
-  "layout": {
-    "attributes": ["class", "hasSider", "style"]
-  },
-  "layout-sider": {
-    "attributes": [
-      "breakpoint",
-      "class",
-      "collapsed(v-model)",
-      "collapsedWidth",
-      "collapsible",
-      "defaultCollapsed",
-      "reverseArrow",
-      "style",
-      "theme",
-      "trigger",
-      "width",
-      "zeroWidthTriggerStyle"
-    ]
-  },
-  "input-number": {
-    "attributes": [
-      "addonAfter",
-      "addonBefore",
-      "autofocus",
-      "bordered",
-      "controls",
-      "decimalSeparator",
-      "defaultValue",
-      "disabled",
-      "formatter",
-      "keyboard",
-      "max",
-      "min",
-      "parser",
-      "precision",
-      "prefix",
-      "size",
-      "status",
-      "step",
-      "stringMode",
-      "upIcon",
-      "downIcon",
-      "value(v-model)"
-    ]
   },
   "input": {
     "attributes": [
@@ -537,6 +480,63 @@
   },
   "input-password": {
     "attributes": ["visible(v-model)", "iconRender", "visibilityToggle"]
+  },
+  "image": {
+    "attributes": [
+      "alt",
+      "fallback",
+      "height",
+      "placeholder",
+      "preview",
+      "src",
+      "previewMask",
+      "width"
+    ]
+  },
+  "input-number": {
+    "attributes": [
+      "addonAfter",
+      "addonBefore",
+      "autofocus",
+      "bordered",
+      "controls",
+      "decimalSeparator",
+      "defaultValue",
+      "disabled",
+      "formatter",
+      "keyboard",
+      "max",
+      "min",
+      "parser",
+      "precision",
+      "prefix",
+      "size",
+      "status",
+      "step",
+      "stringMode",
+      "upIcon",
+      "downIcon",
+      "value(v-model)"
+    ]
+  },
+  "layout": {
+    "attributes": ["class", "hasSider", "style"]
+  },
+  "layout-sider": {
+    "attributes": [
+      "breakpoint",
+      "class",
+      "collapsed(v-model)",
+      "collapsedWidth",
+      "collapsible",
+      "defaultCollapsed",
+      "reverseArrow",
+      "style",
+      "theme",
+      "trigger",
+      "width",
+      "zeroWidthTriggerStyle"
+    ]
   },
   "list": {
     "attributes": [
@@ -588,37 +588,6 @@
       "option",
       "blur()",
       "focus()"
-    ]
-  },
-  "message": {
-    "attributes": ["content", "duration", "onClose"]
-  },
-  "modal": {
-    "attributes": [
-      "afterClose",
-      "bodyStyle",
-      "cancelButtonProps",
-      "cancelText",
-      "centered",
-      "closable",
-      "closeIcon",
-      "confirmLoading",
-      "destroyOnClose",
-      "footer",
-      "forceRender",
-      "getContainer",
-      "keyboard",
-      "mask",
-      "maskClosable",
-      "maskStyle",
-      "okButtonProps",
-      "okText",
-      "okType",
-      "title",
-      "open(v-model)",
-      "width",
-      "wrapClassName",
-      "zIndex"
     ]
   },
   "menu": {
@@ -688,17 +657,35 @@
   "menu-divider": {
     "attributes": ["dashed"]
   },
-  "page-header": {
+  "message": {
+    "attributes": ["content", "duration", "onClose"]
+  },
+  "modal": {
     "attributes": [
-      "avatar",
-      "backIcon",
-      "breadcrumb",
-      "extra",
+      "afterClose",
+      "bodyStyle",
+      "cancelButtonProps",
+      "cancelText",
+      "centered",
+      "closable",
+      "closeIcon",
+      "confirmLoading",
+      "destroyOnClose",
       "footer",
-      "ghost",
-      "subTitle",
-      "tags",
-      "title"
+      "forceRender",
+      "getContainer",
+      "keyboard",
+      "mask",
+      "maskClosable",
+      "maskStyle",
+      "okButtonProps",
+      "okText",
+      "okType",
+      "title",
+      "open(v-model)",
+      "width",
+      "wrapClassName",
+      "zIndex"
     ]
   },
   "notification": {
@@ -718,6 +705,38 @@
       "top",
       "onClick",
       "onClose"
+    ]
+  },
+  "page-header": {
+    "attributes": [
+      "avatar",
+      "backIcon",
+      "breadcrumb",
+      "extra",
+      "footer",
+      "ghost",
+      "subTitle",
+      "tags",
+      "title"
+    ]
+  },
+  "pagination": {
+    "attributes": [
+      "current(v-model)",
+      "defaultPageSize",
+      "disabled",
+      "hideOnSinglePage",
+      "itemRender",
+      "pageSize(v-model)",
+      "pageSizeOptions",
+      "responsive",
+      "showLessItems",
+      "showQuickJumper",
+      "showSizeChanger",
+      "showTotal",
+      "simple",
+      "size",
+      "total"
     ]
   },
   "popconfirm": {
@@ -799,25 +818,6 @@
       "value(v-model)"
     ]
   },
-  "pagination": {
-    "attributes": [
-      "current(v-model)",
-      "defaultPageSize",
-      "disabled",
-      "hideOnSinglePage",
-      "itemRender",
-      "pageSize(v-model)",
-      "pageSizeOptions",
-      "responsive",
-      "showLessItems",
-      "showQuickJumper",
-      "showSizeChanger",
-      "showTotal",
-      "simple",
-      "size",
-      "total"
-    ]
-  },
   "result": {
     "attributes": ["extra", "icon", "status", "subTitle", "title"]
   },
@@ -870,6 +870,9 @@
       "blur()",
       "focus()"
     ]
+  },
+  "segmented": {
+    "attributes": ["block", "disabled", "options", "size", "value", "label"]
   },
   "skeleton": {
     "attributes": ["active", "avatar", "loading", "paragraph", "title"]
@@ -954,6 +957,19 @@
   "steps-step": {
     "attributes": ["description", "disabled", "icon", "status", "subTitle", "title"]
   },
+  "switch": {
+    "attributes": [
+      "autofocus",
+      "checked(v-model)",
+      "checkedChildren",
+      "checkedValue",
+      "disabled",
+      "loading",
+      "size",
+      "unCheckedChildren",
+      "unCheckedValue"
+    ]
+  },
   "table": {
     "attributes": [
       "bodyCell",
@@ -998,22 +1014,6 @@
       "title",
       "transformCellText"
     ]
-  },
-  "switch": {
-    "attributes": [
-      "autofocus",
-      "checked(v-model)",
-      "checkedChildren",
-      "checkedValue",
-      "disabled",
-      "loading",
-      "size",
-      "unCheckedChildren",
-      "unCheckedValue"
-    ]
-  },
-  "segmented": {
-    "attributes": ["block", "disabled", "options", "size", "value", "label"]
   },
   "tabs": {
     "attributes": [
@@ -1198,8 +1198,38 @@
   "directory-tree": {
     "attributes": ["expandAction"]
   },
-  "tree-select": {
-    "attributes": []
+  "upload": {
+    "attributes": [
+      "accept",
+      "action",
+      "beforeUpload",
+      "customRequest",
+      "data",
+      "directory",
+      "disabled",
+      "downloadIcon",
+      "fileList",
+      "headers",
+      "iconRender",
+      "isImageUrl",
+      "itemRender",
+      "listType",
+      "maxCount",
+      "method",
+      "multiple",
+      "name",
+      "openFileDialogOnClick",
+      "previewFile",
+      "previewIcon",
+      "progress",
+      "removeIcon",
+      "showUploadList",
+      "supportServerRender",
+      "withCredentials"
+    ]
+  },
+  "upload-file": {
+    "attributes": ["crossOrigin", "name", "percent", "status", "thumbUrl", "uid", "url"]
   },
   "typography": {
     "attributes": []
@@ -1250,38 +1280,8 @@
       "underline"
     ]
   },
-  "upload": {
-    "attributes": [
-      "accept",
-      "action",
-      "beforeUpload",
-      "customRequest",
-      "data",
-      "directory",
-      "disabled",
-      "downloadIcon",
-      "fileList",
-      "headers",
-      "iconRender",
-      "isImageUrl",
-      "itemRender",
-      "listType",
-      "maxCount",
-      "method",
-      "multiple",
-      "name",
-      "openFileDialogOnClick",
-      "previewFile",
-      "previewIcon",
-      "progress",
-      "removeIcon",
-      "showUploadList",
-      "supportServerRender",
-      "withCredentials"
-    ]
-  },
-  "upload-file": {
-    "attributes": ["crossOrigin", "name", "percent", "status", "thumbUrl", "uid", "url"]
+  "tree-select": {
+    "attributes": []
   },
   "watermark": {
     "attributes": [

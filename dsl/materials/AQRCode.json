@@ -1,0 +1,380 @@
+{
+  "id": 1,
+  "version": "4.1.2",
+  "name": {
+    "zh_CN": "二维码"
+  },
+  "component": "AQRCode",
+  "icon": "qr-code",
+  "description": "二维码",
+  "doc_url": "",
+  "screenshot": "https://mdn.alipayobjects.com/huamei_7uahnr/afts/img/A*M4PBTZ_n9OgAAAAAAAAAAAAADrJ8AQ/original",
+  "tags": "",
+  "keywords": "",
+  "dev_mode": "proCode",
+  "npm": {
+    "package": "ant-design-vue",
+    "version": "",
+    "dependencies": [
+      "https://unpkg.com/dayjs/dayjs.min.js",
+      "https://unpkg.com/dayjs/plugin/customParseFormat.js",
+      "https://unpkg.com/dayjs/plugin/weekday.js",
+      "https://unpkg.com/dayjs/plugin/localeData.js",
+      "https://unpkg.com/dayjs/plugin/weekOfYear.js",
+      "https://unpkg.com/dayjs/plugin/weekYear.js",
+      "https://unpkg.com/dayjs/plugin/advancedFormat.js",
+      "https://unpkg.com/dayjs/plugin/quarterOfYear.js"
+    ],
+    "exportName": "QRCode",
+    "destructuring": true
+  },
+  "group": "Data Display",
+  "category": "Ant Design Vue",
+  "configure": {
+    "loop": true,
+    "condition": true,
+    "styles": true,
+    "isContainer": false,
+    "isModal": false,
+    "isPopper": false,
+    "nestingRule": {
+      "childWhitelist": "",
+      "parentWhitelist": "",
+      "descendantBlacklist": "",
+      "ancestorWhitelist": ""
+    },
+    "isNullNode": false,
+    "isLayout": false,
+    "rootSelector": "",
+    "shortcuts": {
+      "properties": []
+    },
+    "contextMenu": {
+      "actions": ["copy", "remove", "insert", "updateAttr", "bindEevent", "createBlock"],
+      "disable": []
+    },
+    "invalidity": [""],
+    "clickCapture": true,
+    "framework": "Vue"
+  },
+  "schema": {
+    "properties": [
+      {
+        "name": "0",
+        "label": {
+          "zh_CN": "基础属性"
+        },
+        "content": [
+          {
+            "property": "value",
+            "label": {
+              "text": {
+                "zh_CN": "value"
+              }
+            },
+            "description": {
+              "zh_CN": "扫描后的地址"
+            },
+            "required": false,
+            "readOnly": false,
+            "disabled": false,
+            "cols": 12,
+            "labelPosition": "top",
+            "type": "string",
+            "widget": {
+              "component": "MetaInput",
+              "props": {}
+            },
+            "device": []
+          },
+          {
+            "property": "type",
+            "label": {
+              "text": {
+                "zh_CN": "type"
+              }
+            },
+            "description": {
+              "zh_CN": "渲染类型"
+            },
+            "required": false,
+            "readOnly": false,
+            "disabled": false,
+            "cols": 12,
+            "labelPosition": "top",
+            "type": "string",
+            "defaultValue": "canvas",
+            "widget": {
+              "component": "MetaSelect",
+              "props": {
+                "options": [
+                  {
+                    "label": "canvas",
+                    "value": "canvas"
+                  },
+                  {
+                    "label": "svg",
+                    "value": "svg"
+                  }
+                ]
+              }
+            },
+            "device": []
+          },
+          {
+            "property": "icon",
+            "label": {
+              "text": {
+                "zh_CN": "icon"
+              }
+            },
+            "description": {
+              "zh_CN": "二维码中图片的地址（目前只支持图片地址）"
+            },
+            "required": false,
+            "readOnly": false,
+            "disabled": false,
+            "cols": 12,
+            "labelPosition": "top",
+            "type": "string",
+            "widget": {
+              "component": "MetaInput",
+              "props": {}
+            },
+            "device": []
+          },
+          {
+            "property": "size",
+            "label": {
+              "text": {
+                "zh_CN": "size"
+              }
+            },
+            "description": {
+              "zh_CN": "二维码大小"
+            },
+            "required": false,
+            "readOnly": false,
+            "disabled": false,
+            "cols": 12,
+            "labelPosition": "top",
+            "type": "number",
+            "defaultValue": 128,
+            "widget": {
+              "component": "MetaNumber",
+              "props": {}
+            },
+            "device": []
+          },
+          {
+            "property": "iconSize",
+            "label": {
+              "text": {
+                "zh_CN": "iconSize"
+              }
+            },
+            "description": {
+              "zh_CN": "二维码中图片的大小"
+            },
+            "required": false,
+            "readOnly": false,
+            "disabled": false,
+            "cols": 12,
+            "labelPosition": "top",
+            "type": "number",
+            "defaultValue": 32,
+            "widget": {
+              "component": "MetaNumber",
+              "props": {}
+            },
+            "device": []
+          },
+          {
+            "property": "color",
+            "label": {
+              "text": {
+                "zh_CN": "color"
+              }
+            },
+            "description": {
+              "zh_CN": "二维码颜色"
+            },
+            "required": false,
+            "readOnly": false,
+            "disabled": false,
+            "cols": 12,
+            "labelPosition": "top",
+            "type": "string",
+            "defaultValue": "#000",
+            "widget": {
+              "component": "MetaInput",
+              "props": {}
+            },
+            "device": []
+          },
+          {
+            "property": "bgColor",
+            "label": {
+              "text": {
+                "zh_CN": "bgColor"
+              }
+            },
+            "description": {
+              "zh_CN": "二维码背景颜色"
+            },
+            "required": false,
+            "readOnly": false,
+            "disabled": false,
+            "cols": 12,
+            "labelPosition": "top",
+            "type": "string",
+            "defaultValue": "transparent",
+            "widget": {
+              "component": "MetaInput",
+              "props": {}
+            },
+            "device": []
+          },
+          {
+            "property": "bordered",
+            "label": {
+              "text": {
+                "zh_CN": "bordered"
+              }
+            },
+            "description": {
+              "zh_CN": "是否有边框"
+            },
+            "required": false,
+            "readOnly": false,
+            "disabled": false,
+            "cols": 12,
+            "labelPosition": "top",
+            "type": "boolean",
+            "defaultValue": true,
+            "widget": {
+              "component": "MetaSwitch",
+              "props": {}
+            },
+            "device": []
+          },
+          {
+            "property": "errorLevel",
+            "label": {
+              "text": {
+                "zh_CN": "errorLevel"
+              }
+            },
+            "description": {
+              "zh_CN": "二维码纠错等级"
+            },
+            "required": false,
+            "readOnly": false,
+            "disabled": false,
+            "cols": 12,
+            "labelPosition": "top",
+            "type": "string",
+            "defaultValue": "'M'",
+            "widget": {
+              "component": "MetaSelect",
+              "props": {
+                "options": [
+                  {
+                    "label": "L",
+                    "value": "L"
+                  },
+                  {
+                    "label": "M",
+                    "value": "M"
+                  },
+                  {
+                    "label": "Q",
+                    "value": "Q"
+                  },
+                  {
+                    "label": "H",
+                    "value": "H"
+                  }
+                ]
+              }
+            },
+            "device": []
+          },
+          {
+            "property": "status",
+            "label": {
+              "text": {
+                "zh_CN": "status"
+              }
+            },
+            "description": {
+              "zh_CN": "二维码状态"
+            },
+            "required": false,
+            "readOnly": false,
+            "disabled": false,
+            "cols": 12,
+            "labelPosition": "top",
+            "type": "string",
+            "defaultValue": "active",
+            "widget": {
+              "component": "MetaSelect",
+              "props": {
+                "options": [
+                  {
+                    "label": "active",
+                    "value": "active"
+                  },
+                  {
+                    "label": "expired",
+                    "value": "expired"
+                  },
+                  {
+                    "label": "loading",
+                    "value": "loading"
+                  },
+                  {
+                    "label": "scanned",
+                    "value": "scanned"
+                  }
+                ]
+              }
+            },
+            "device": []
+          }
+        ],
+        "description": {
+          "zh_CN": ""
+        }
+      }
+    ],
+    "events": {
+      "onRefresh": {
+        "label": {
+          "zh_CN": "onRefresh"
+        },
+        "description": {
+          "zh_CN": "callback"
+        },
+        "type": "event",
+        "functionInfo": {
+          "params": [],
+          "returns": {}
+        },
+        "defaultValue": ""
+      }
+    },
+    "slots": {}
+  },
+  "snippets": [
+    {
+      "name": {
+        "zh_CN": "二维码"
+      },
+      "icon": "qr-code",
+      "screenshot": "",
+      "snippetName": "AQRCode",
+      "schema": {}
+    }
+  ]
+}
