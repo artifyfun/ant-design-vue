@@ -28,7 +28,7 @@
     "exportName": "Radio",
     "destructuring": true
   },
-  "group": "Data Entry",
+  "group": "数据录入",
   "category": "Ant Design Vue",
   "configure": {
     "loop": true,

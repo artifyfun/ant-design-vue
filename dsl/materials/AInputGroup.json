@@ -1,0 +1,134 @@
+{
+  "id": 1,
+  "version": "4.1.2",
+  "name": {
+    "zh_CN": "输入框"
+  },
+  "component": "AInputGroup",
+  "icon": "input-group",
+  "description": "通过鼠标或键盘输入内容，是最基础的表单域的包装。",
+  "doc_url": "",
+  "screenshot": "https://mdn.alipayobjects.com/huamei_7uahnr/afts/img/A*sBqqTatJ-AkAAAAAAAAAAAAADrJ8AQ/original",
+  "tags": "",
+  "keywords": "",
+  "dev_mode": "proCode",
+  "npm": {
+    "package": "ant-design-vue",
+    "version": "",
+    "dependencies": [
+      "https://unpkg.com/dayjs/dayjs.min.js",
+      "https://unpkg.com/dayjs/plugin/customParseFormat.js",
+      "https://unpkg.com/dayjs/plugin/weekday.js",
+      "https://unpkg.com/dayjs/plugin/localeData.js",
+      "https://unpkg.com/dayjs/plugin/weekOfYear.js",
+      "https://unpkg.com/dayjs/plugin/weekYear.js",
+      "https://unpkg.com/dayjs/plugin/advancedFormat.js",
+      "https://unpkg.com/dayjs/plugin/quarterOfYear.js"
+    ],
+    "exportName": "InputGroup",
+    "destructuring": true
+  },
+  "group": "数据录入",
+  "category": "Ant Design Vue",
+  "configure": {
+    "loop": true,
+    "condition": true,
+    "styles": true,
+    "isContainer": false,
+    "isModal": false,
+    "isPopper": false,
+    "nestingRule": {
+      "childWhitelist": "",
+      "parentWhitelist": "",
+      "descendantBlacklist": "",
+      "ancestorWhitelist": ""
+    },
+    "isNullNode": false,
+    "isLayout": false,
+    "rootSelector": "",
+    "shortcuts": {
+      "properties": []
+    },
+    "contextMenu": {
+      "actions": ["copy", "remove", "insert", "updateAttr", "bindEevent", "createBlock"],
+      "disable": []
+    },
+    "invalidity": [""],
+    "clickCapture": true,
+    "framework": "Vue"
+  },
+  "schema": {
+    "properties": [
+      {
+        "name": "0",
+        "label": {
+          "zh_CN": "基础属性"
+        },
+        "content": [
+          {
+            "property": "compact",
+            "label": {
+              "text": {
+                "zh_CN": "compact"
+              }
+            },
+            "description": {
+              "zh_CN": "是否用紧凑模式"
+            },
+            "required": false,
+            "readOnly": false,
+            "disabled": false,
+            "cols": 12,
+            "labelPosition": "top",
+            "type": "boolean",
+            "defaultValue": false,
+            "widget": {
+              "component": "MetaSwitch",
+              "props": {}
+            },
+            "device": []
+          },
+          {
+            "property": "size",
+            "label": {
+              "text": {
+                "zh_CN": "size"
+              }
+            },
+            "description": {
+              "zh_CN": "Input.Group 中所有的 Input 的大小，可选 large default small"
+            },
+            "required": false,
+            "readOnly": false,
+            "disabled": false,
+            "cols": 12,
+            "labelPosition": "top",
+            "type": "string",
+            "defaultValue": "default",
+            "widget": {
+              "component": "MetaInput",
+              "props": {}
+            },
+            "device": []
+          }
+        ],
+        "description": {
+          "zh_CN": ""
+        }
+      }
+    ],
+    "events": {},
+    "slots": {}
+  },
+  "snippets": [
+    {
+      "name": {
+        "zh_CN": "输入框"
+      },
+      "icon": "input-group",
+      "screenshot": "",
+      "snippetName": "AInputGroup",
+      "schema": {}
+    }
+  ]
+}

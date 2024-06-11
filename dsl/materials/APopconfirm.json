@@ -28,7 +28,7 @@
     "exportName": "Popconfirm",
     "destructuring": true
   },
-  "group": "Feedback",
+  "group": "反馈",
   "category": "Ant Design Vue",
   "configure": {
     "loop": true,
@@ -81,7 +81,7 @@
             "cols": 12,
             "labelPosition": "top",
             "type": "string",
-            "defaultValue": "Cancel",
+            "defaultValue": "取消",
             "widget": {
               "component": "MetaSelect",
               "props": {
@@ -138,7 +138,7 @@
             "cols": 12,
             "labelPosition": "top",
             "type": "string",
-            "defaultValue": "Confirm",
+            "defaultValue": "确定",
             "widget": {
               "component": "MetaSelect",
               "props": {
@@ -269,14 +269,14 @@
             "device": []
           },
           {
-            "property": "visible",
+            "property": "open",
             "label": {
               "text": {
-                "zh_CN": "visible (v-model)"
+                "zh_CN": "open (v-model)"
               }
             },
             "description": {
-              "zh_CN": "hide or show"
+              "zh_CN": "是否显示"
             },
             "required": false,
             "readOnly": false,
@@ -296,50 +296,7 @@
         }
       }
     ],
-    "events": {
-      "onCancel": {
-        "label": {
-          "zh_CN": "onCancel"
-        },
-        "description": {
-          "zh_CN": "callback of cancel"
-        },
-        "type": "event",
-        "functionInfo": {
-          "params": [],
-          "returns": {}
-        },
-        "defaultValue": ""
-      },
-      "onConfirm": {
-        "label": {
-          "zh_CN": "onConfirm"
-        },
-        "description": {
-          "zh_CN": "callback of confirmation"
-        },
-        "type": "event",
-        "functionInfo": {
-          "params": [],
-          "returns": {}
-        },
-        "defaultValue": ""
-      },
-      "onOpenChange": {
-        "label": {
-          "zh_CN": "onOpenChange"
-        },
-        "description": {
-          "zh_CN": "Callback executed when visibility of the tooltip card is changed"
-        },
-        "type": "event",
-        "functionInfo": {
-          "params": [],
-          "returns": {}
-        },
-        "defaultValue": ""
-      }
-    },
+    "events": {},
     "slots": {
       "cancelButton": {
         "label": {
@@ -355,14 +312,6 @@
         },
         "description": {
           "zh_CN": "取消按钮文字"
-        }
-      },
-      "icon": {
-        "label": {
-          "zh_CN": "icon"
-        },
-        "description": {
-          "zh_CN": "customize icon of confirmation"
         }
       },
       "okButton": {

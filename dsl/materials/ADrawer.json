@@ -28,7 +28,7 @@
     "exportName": "Drawer",
     "destructuring": true
   },
-  "group": "Feedback",
+  "group": "反馈",
   "category": "Ant Design Vue",
   "configure": {
     "loop": true,
@@ -175,6 +175,29 @@
             "defaultValue": false,
             "widget": {
               "component": "MetaSwitch",
+              "props": {}
+            },
+            "device": []
+          },
+          {
+            "property": "getContainer",
+            "label": {
+              "text": {
+                "zh_CN": "getContainer"
+              }
+            },
+            "description": {
+              "zh_CN": "指定 Drawer 挂载的节点，**并在容器内展现** | () => HTMLElement | Selectors"
+            },
+            "required": false,
+            "readOnly": false,
+            "disabled": false,
+            "cols": 12,
+            "labelPosition": "top",
+            "type": "string",
+            "defaultValue": "",
+            "widget": {
+              "component": "MetaInput",
               "props": {}
             },
             "device": []

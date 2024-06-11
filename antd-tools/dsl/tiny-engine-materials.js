@@ -618,11 +618,10 @@ const defaultSlotComponents = {
 };
 
 async function generateMaterials(type = 'zh-CN') {
-  // 先取英文文档才能获取events，slots 等信息
-  await parseAndWriteByType('en-US');
-  const webTypes = require(path.resolve(rootPath, `./dsl/metadata/en-US/web-types.json`));
+  await parseAndWriteByType(type);
+  const webTypes = require(path.resolve(rootPath, `./dsl/metadata/${type}/web-types.json`));
 
-  const components = getComponents('en-US');
+  const components = getComponents(type);
 
   const materials = webTypes.contributions.html.tags
     .filter(
@@ -650,7 +649,6 @@ async function generateMaterials(type = 'zh-CN') {
           'button',
           'search',
           'password',
-          'sub-menu',
           'item-group',
           'group',
           'divider',
@@ -659,6 +657,7 @@ async function generateMaterials(type = 'zh-CN') {
           'title',
           'paragraph',
           'file',
+          'ribbon',
         ];
         const subfix = componentSubfix.find(subfix => tag.name.endsWith(`-${subfix}`));
         if (subfix) {
@@ -765,187 +764,12 @@ async function generateMaterials(type = 'zh-CN') {
       };
     });
 
-  if (type === 'zh-CN') {
-    await parseAndWriteByType('zh-CN');
-    const cnWebTypes = require(path.resolve(rootPath, './dsl/metadata/zh-CN/web-types.json'));
-
-    const cnComponents = getComponents('zh-CN');
-
-    const cnMaterials = cnWebTypes.contributions.html.tags
-      .filter(
-        tag =>
-          !ignoreTags.includes(tag.name) &&
-          !['props'].some(subfix => tag.name.endsWith(subfix)) &&
-          !['a-', 'aqr-'].some(prefix => tag.name.startsWith(prefix)),
-      )
-      .map(tag => {
-        let component = cnComponents.find(
-          component =>
-            toKebabCase(component.title) === tag.name ||
-            (tag.name === 'qrcode' && component.title === 'QRCode'),
-        );
-        if (!component) {
-          const componentSubfix = [
-            'step',
-            'countdown',
-            'item',
-            'separator',
-            'meta',
-            'tab-pane',
-            'panel',
-            'radio-button',
-            'button',
-            'search',
-            'password',
-            'sub-menu',
-            'item-group',
-            'group',
-            'divider',
-            'node',
-            'text',
-            'title',
-            'paragraph',
-            'file',
-          ];
-          const subfix = componentSubfix.find(subfix => tag.name.endsWith(`-${subfix}`));
-          if (subfix) {
-            const parentTagName = tag.name.replace(`-${subfix}`, '');
-            const parentComponent = components.find(
-              component => toKebabCase(component.title) === parentTagName,
-            );
-            if (parentComponent) {
-              component = {
-                ...parentComponent,
-                title: formatConversion(tag.name),
-              };
-            }
-          } else {
-            console.log(tag);
-          }
-        }
-        if (!component) {
-          console.log(tag);
-        }
-        const material = materials.find(item => item.component === `A${component.title}`);
-        if (!material) {
-          console.log(component);
-          return;
-        }
-        return {
-          ...material,
-          name: {
-            zh_CN: component.subtitle,
-          },
-          description: formatDescription(component.description),
-          schema: {
-            properties: [
-              {
-                name: '0',
-                label: {
-                  zh_CN: '基础属性',
-                },
-                content: material.schema.properties[0].content.map(item => {
-                  let cnContent = getPropertiesContent(tag.attributes).find(
-                    attr => attr.property === item.property,
-                  );
-                  if (!cnContent) {
-                    return item;
-                  }
-                  return {
-                    ...item,
-                    label: cnContent.label,
-                    description: {
-                      zh_CN: formatDescription(cnContent.description.zh_CN),
-                    },
-                  };
-                }),
-                description: {
-                  zh_CN: '',
-                },
-              },
-            ],
-            events: Object.fromEntries(
-              Object.keys(material.schema.events).map(eventName => {
-                const event = material.schema.events[eventName];
-                const name = eventName
-                  .replace('on', '')
-                  .replace(/(^[A-Z])/, char => char.toLowerCase());
-                let cnEvent = getEvents(tag.events)[name];
-                if (!cnEvent) {
-                  cnEvent = getPropertiesContent(tag.attributes).find(
-                    attr => attr.property === name,
-                  );
-                  if (cnEvent) {
-                    cnEvent = {
-                      label: cnEvent.label.text,
-                      description: cnEvent.description,
-                    };
-                  }
-                }
-                if (!cnEvent) {
-                  return [eventName, event];
-                }
-                return [
-                  eventName,
-                  {
-                    ...event,
-                    label: cnEvent.label,
-                    description: {
-                      zh_CN: formatDescription(cnEvent.description.zh_CN),
-                    },
-                  },
-                ];
-              }),
-            ),
-            slots: Object.fromEntries(
-              Object.keys(material.schema.slots).map(slotName => {
-                const slot = material.schema.slots[slotName];
-                let cnSlot = getSlots(tag.slots)[slotName];
-                if (!cnSlot) {
-                  cnSlot = getPropertiesContent(tag.attributes).find(
-                    attr => attr.property === slotName,
-                  );
-                  if (cnSlot) {
-                    cnSlot = {
-                      label: cnSlot.label.text,
-                      description: cnSlot.description,
-                    };
-                  }
-                }
-                if (!cnSlot) {
-                  return [slotName, slot];
-                }
-                return [
-                  slotName,
-                  {
-                    ...slot,
-                    label: cnSlot.label,
-                    description: {
-                      zh_CN: formatDescription(cnSlot.description.zh_CN),
-                    },
-                  },
-                ];
-              }),
-            ),
-          },
-          snippets: [
-            {
-              ...material.snippets[0],
-              name: {
-                zh_CN: component.subtitle,
-              },
-            },
-          ],
-        };
-      });
-
-    cnMaterials.forEach(material => {
-      outputFileSync(
-        path.resolve(rootPath, `./dsl/materials/${material.component}.json`),
-        JSON.stringify(material, null, 2),
-      );
-    });
-  }
+  materials.forEach(material => {
+    outputFileSync(
+      path.resolve(rootPath, `./dsl/materials/${material.component}.json`),
+      JSON.stringify(material, null, 2),
+    );
+  });
 }
 
 generateMaterials('zh-CN');

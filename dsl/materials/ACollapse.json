@@ -28,7 +28,7 @@
     "exportName": "Collapse",
     "destructuring": true
   },
-  "group": "Data Display",
+  "group": "数据展示",
   "category": "Ant Design Vue",
   "configure": {
     "loop": true,
@@ -280,22 +280,7 @@
         }
       }
     ],
-    "events": {
-      "onChange": {
-        "label": {
-          "zh_CN": "onChange"
-        },
-        "description": {
-          "zh_CN": "Callback function executed when active panel is changed"
-        },
-        "type": "event",
-        "functionInfo": {
-          "params": [],
-          "returns": {}
-        },
-        "defaultValue": ""
-      }
-    },
+    "events": {},
     "slots": {
       "expandIcon": {
         "label": {

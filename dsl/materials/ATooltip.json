@@ -28,7 +28,7 @@
     "exportName": "Tooltip",
     "destructuring": true
   },
-  "group": "Data Display",
+  "group": "数据展示",
   "category": "Ant Design Vue",
   "configure": {
     "loop": true,
@@ -370,27 +370,8 @@
             "type": "string",
             "defaultValue": "hover",
             "widget": {
-              "component": "MetaSelect",
-              "props": {
-                "options": [
-                  {
-                    "label": "hover",
-                    "value": "hover"
-                  },
-                  {
-                    "label": "focus",
-                    "value": "focus"
-                  },
-                  {
-                    "label": "click",
-                    "value": "click"
-                  },
-                  {
-                    "label": "contextmenu",
-                    "value": "contextmenu"
-                  }
-                ]
-              }
+              "component": "MetaInput",
+              "props": {}
             },
             "device": []
           },
@@ -423,22 +404,7 @@
         }
       }
     ],
-    "events": {
-      "onOpenChange": {
-        "label": {
-          "zh_CN": "onOpenChange"
-        },
-        "description": {
-          "zh_CN": "Callback executed when visibility of the tooltip card is changed"
-        },
-        "type": "event",
-        "functionInfo": {
-          "params": [],
-          "returns": {}
-        },
-        "defaultValue": ""
-      }
-    },
+    "events": {},
     "slots": {
       "title": {
         "label": {

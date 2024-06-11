@@ -1,0 +1,239 @@
+{
+  "id": 1,
+  "version": "4.1.2",
+  "name": {
+    "zh_CN": "头像"
+  },
+  "component": "AAvatarGroup",
+  "icon": "avatar-group",
+  "description": "用来代表用户或事物，支持图片、图标或字符展示。",
+  "doc_url": "",
+  "screenshot": "https://mdn.alipayobjects.com/huamei_7uahnr/afts/img/A*YbgyQaRGz-UAAAAAAAAAAAAADrJ8AQ/original",
+  "tags": "",
+  "keywords": "",
+  "dev_mode": "proCode",
+  "npm": {
+    "package": "ant-design-vue",
+    "version": "",
+    "dependencies": [
+      "https://unpkg.com/dayjs/dayjs.min.js",
+      "https://unpkg.com/dayjs/plugin/customParseFormat.js",
+      "https://unpkg.com/dayjs/plugin/weekday.js",
+      "https://unpkg.com/dayjs/plugin/localeData.js",
+      "https://unpkg.com/dayjs/plugin/weekOfYear.js",
+      "https://unpkg.com/dayjs/plugin/weekYear.js",
+      "https://unpkg.com/dayjs/plugin/advancedFormat.js",
+      "https://unpkg.com/dayjs/plugin/quarterOfYear.js"
+    ],
+    "exportName": "AvatarGroup",
+    "destructuring": true
+  },
+  "group": "数据展示",
+  "category": "Ant Design Vue",
+  "configure": {
+    "loop": true,
+    "condition": true,
+    "styles": true,
+    "isContainer": false,
+    "isModal": false,
+    "isPopper": false,
+    "nestingRule": {
+      "childWhitelist": "",
+      "parentWhitelist": "",
+      "descendantBlacklist": "",
+      "ancestorWhitelist": ""
+    },
+    "isNullNode": false,
+    "isLayout": false,
+    "rootSelector": "",
+    "shortcuts": {
+      "properties": []
+    },
+    "contextMenu": {
+      "actions": ["copy", "remove", "insert", "updateAttr", "bindEevent", "createBlock"],
+      "disable": []
+    },
+    "invalidity": [""],
+    "clickCapture": true,
+    "framework": "Vue"
+  },
+  "schema": {
+    "properties": [
+      {
+        "name": "0",
+        "label": {
+          "zh_CN": "基础属性"
+        },
+        "content": [
+          {
+            "property": "maxCount",
+            "label": {
+              "text": {
+                "zh_CN": "maxCount"
+              }
+            },
+            "description": {
+              "zh_CN": "显示的最大头像个数"
+            },
+            "required": false,
+            "readOnly": false,
+            "disabled": false,
+            "cols": 12,
+            "labelPosition": "top",
+            "type": "number",
+            "widget": {
+              "component": "MetaNumber",
+              "props": {}
+            },
+            "device": []
+          },
+          {
+            "property": "maxPopoverPlacement",
+            "label": {
+              "text": {
+                "zh_CN": "maxPopoverPlacement"
+              }
+            },
+            "description": {
+              "zh_CN": "多余头像气泡弹出位置"
+            },
+            "required": false,
+            "readOnly": false,
+            "disabled": false,
+            "cols": 12,
+            "labelPosition": "top",
+            "type": "string",
+            "defaultValue": "top",
+            "widget": {
+              "component": "MetaSelect",
+              "props": {
+                "options": [
+                  {
+                    "label": "top",
+                    "value": "top"
+                  },
+                  {
+                    "label": "bottom",
+                    "value": "bottom"
+                  }
+                ]
+              }
+            },
+            "device": []
+          },
+          {
+            "property": "maxPopoverTrigger",
+            "label": {
+              "text": {
+                "zh_CN": "maxPopoverTrigger"
+              }
+            },
+            "description": {
+              "zh_CN": "设置多余头像 Popover 的触发方式"
+            },
+            "required": false,
+            "readOnly": false,
+            "disabled": false,
+            "cols": 12,
+            "labelPosition": "top",
+            "type": "string",
+            "defaultValue": "hover",
+            "widget": {
+              "component": "MetaSelect",
+              "props": {
+                "options": [
+                  {
+                    "label": "hover",
+                    "value": "hover"
+                  },
+                  {
+                    "label": "focus",
+                    "value": "focus"
+                  },
+                  {
+                    "label": "click",
+                    "value": "click"
+                  }
+                ]
+              }
+            },
+            "device": []
+          },
+          {
+            "property": "size",
+            "label": {
+              "text": {
+                "zh_CN": "size"
+              }
+            },
+            "description": {
+              "zh_CN": "设置头像的大小"
+            },
+            "required": false,
+            "readOnly": false,
+            "disabled": false,
+            "cols": 12,
+            "labelPosition": "top",
+            "type": "number",
+            "defaultValue": null,
+            "widget": {
+              "component": "MetaNumber",
+              "props": {}
+            },
+            "device": []
+          },
+          {
+            "property": "shape",
+            "label": {
+              "text": {
+                "zh_CN": "shape"
+              }
+            },
+            "description": {
+              "zh_CN": "设置头像的形状"
+            },
+            "required": false,
+            "readOnly": false,
+            "disabled": false,
+            "cols": 12,
+            "labelPosition": "top",
+            "type": "string",
+            "defaultValue": "circle",
+            "widget": {
+              "component": "MetaSelect",
+              "props": {
+                "options": [
+                  {
+                    "label": "circle",
+                    "value": "circle"
+                  },
+                  {
+                    "label": "square",
+                    "value": "square"
+                  }
+                ]
+              }
+            },
+            "device": []
+          }
+        ],
+        "description": {
+          "zh_CN": ""
+        }
+      }
+    ],
+    "events": {},
+    "slots": {}
+  },
+  "snippets": [
+    {
+      "name": {
+        "zh_CN": "头像"
+      },
+      "icon": "avatar-group",
+      "screenshot": "",
+      "snippetName": "AAvatarGroup",
+      "schema": {}
+    }
+  ]
+}

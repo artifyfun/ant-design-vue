@@ -28,7 +28,7 @@
     "exportName": "Cascader",
     "destructuring": true
   },
-  "group": "Data Entry",
+  "group": "数据录入",
   "category": "Ant Design Vue",
   "configure": {
     "loop": true,
@@ -154,6 +154,30 @@
             "widget": {
               "component": "MetaSwitch",
               "props": {}
+            },
+            "device": []
+          },
+          {
+            "property": "defaultValue",
+            "label": {
+              "text": {
+                "zh_CN": "defaultValue"
+              }
+            },
+            "description": {
+              "zh_CN": "默认的选中项"
+            },
+            "required": false,
+            "readOnly": false,
+            "disabled": false,
+            "cols": 12,
+            "labelPosition": "top",
+            "type": "object",
+            "widget": {
+              "component": "MetaCodeEditor",
+              "props": {
+                "language": "json"
+              }
             },
             "device": []
           },
@@ -399,7 +423,7 @@
             "cols": 12,
             "labelPosition": "top",
             "type": "string",
-            "defaultValue": "'Please select'",
+            "defaultValue": "'请选择'",
             "widget": {
               "component": "MetaInput",
               "props": {}
@@ -494,6 +518,39 @@
             "device": []
           },
           {
+            "property": "status",
+            "label": {
+              "text": {
+                "zh_CN": "status"
+              }
+            },
+            "description": {
+              "zh_CN": "设置校验状态"
+            },
+            "required": false,
+            "readOnly": false,
+            "disabled": false,
+            "cols": 12,
+            "labelPosition": "top",
+            "type": "string",
+            "widget": {
+              "component": "MetaSelect",
+              "props": {
+                "options": [
+                  {
+                    "label": "error",
+                    "value": "error"
+                  },
+                  {
+                    "label": "warning",
+                    "value": "warning"
+                  }
+                ]
+              }
+            },
+            "device": []
+          },
+          {
             "property": "size",
             "label": {
               "text": {
@@ -525,39 +582,6 @@
                   {
                     "label": "small",
                     "value": "small"
-                  }
-                ]
-              }
-            },
-            "device": []
-          },
-          {
-            "property": "status",
-            "label": {
-              "text": {
-                "zh_CN": "status"
-              }
-            },
-            "description": {
-              "zh_CN": "设置校验状态"
-            },
-            "required": false,
-            "readOnly": false,
-            "disabled": false,
-            "cols": 12,
-            "labelPosition": "top",
-            "type": "string",
-            "widget": {
-              "component": "MetaSelect",
-              "props": {
-                "options": [
-                  {
-                    "label": "error",
-                    "value": "error"
-                  },
-                  {
-                    "label": "warning",
-                    "value": "warning"
                   }
                 ]
               }
@@ -631,50 +655,7 @@
         }
       }
     ],
-    "events": {
-      "onChange": {
-        "label": {
-          "zh_CN": "onChange"
-        },
-        "description": {
-          "zh_CN": "callback when finishing cascader select"
-        },
-        "type": "event",
-        "functionInfo": {
-          "params": [],
-          "returns": {}
-        },
-        "defaultValue": ""
-      },
-      "onDropdownVisibleChange": {
-        "label": {
-          "zh_CN": "onDropdownVisibleChange"
-        },
-        "description": {
-          "zh_CN": "callback when popup shown or hidden"
-        },
-        "type": "event",
-        "functionInfo": {
-          "params": [],
-          "returns": {}
-        },
-        "defaultValue": ""
-      },
-      "onSearch": {
-        "label": {
-          "zh_CN": "onSearch"
-        },
-        "description": {
-          "zh_CN": "callback when input value change"
-        },
-        "type": "event",
-        "functionInfo": {
-          "params": [],
-          "returns": {}
-        },
-        "defaultValue": ""
-      }
-    },
+    "events": {},
     "slots": {
       "clearIcon": {
         "label": {

@@ -28,7 +28,7 @@
     "exportName": "Upload",
     "destructuring": true
   },
-  "group": "Data Entry",
+  "group": "数据录入",
   "category": "Ant Design Vue",
   "configure": {
     "loop": true,
@@ -458,92 +458,7 @@
         }
       }
     ],
-    "events": {
-      "onChange": {
-        "label": {
-          "zh_CN": "onChange"
-        },
-        "description": {
-          "zh_CN": "A callback function, can be executed when uploading state is changing. See [change](#change)"
-        },
-        "type": "event",
-        "functionInfo": {
-          "params": [],
-          "returns": {}
-        },
-        "defaultValue": ""
-      },
-      "onDownload": {
-        "label": {
-          "zh_CN": "onDownload"
-        },
-        "description": {
-          "zh_CN": "Click the method to download the file, pass the method to perform the method logic, do not pass the default jump to the new TAB."
-        },
-        "type": "event",
-        "functionInfo": {
-          "params": [],
-          "returns": {}
-        },
-        "defaultValue": ""
-      },
-      "onDrop": {
-        "label": {
-          "zh_CN": "onDrop"
-        },
-        "description": {
-          "zh_CN": "A callback function executed when files are dragged and dropped into upload area"
-        },
-        "type": "event",
-        "functionInfo": {
-          "params": [],
-          "returns": {}
-        },
-        "defaultValue": ""
-      },
-      "onPreview": {
-        "label": {
-          "zh_CN": "onPreview"
-        },
-        "description": {
-          "zh_CN": "A callback function, will be executed when file link or preview icon is clicked."
-        },
-        "type": "event",
-        "functionInfo": {
-          "params": [],
-          "returns": {}
-        },
-        "defaultValue": ""
-      },
-      "onReject": {
-        "label": {
-          "zh_CN": "onReject"
-        },
-        "description": {
-          "zh_CN": "A callback function, will be executed when drop files is not accept."
-        },
-        "type": "event",
-        "functionInfo": {
-          "params": [],
-          "returns": {}
-        },
-        "defaultValue": ""
-      },
-      "onRemove": {
-        "label": {
-          "zh_CN": "onRemove"
-        },
-        "description": {
-          "zh_CN": "A callback function, will be executed when removing file button is clicked, remove event will be prevented when return value is false or a Promise which resolve(false) or reject"
-        },
-        "type": "event",
-        "functionInfo": {
-          "params": [],
-          "returns": {}
-        },
-        "defaultValue": ""
-      }
-    },
+    "events": {},
     "slots": {
       "downloadIcon": {
         "label": {

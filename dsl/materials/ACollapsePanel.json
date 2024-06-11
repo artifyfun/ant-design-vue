@@ -1,0 +1,250 @@
+{
+  "id": 1,
+  "version": "4.1.2",
+  "name": {
+    "zh_CN": "折叠面板"
+  },
+  "component": "ACollapsePanel",
+  "icon": "collapse-panel",
+  "description": "可以折叠/展开的内容区域。",
+  "doc_url": "",
+  "screenshot": "https://mdn.alipayobjects.com/huamei_7uahnr/afts/img/A*sir-TK0HkWcAAAAAAAAAAAAADrJ8AQ/original",
+  "tags": "",
+  "keywords": "",
+  "dev_mode": "proCode",
+  "npm": {
+    "package": "ant-design-vue",
+    "version": "",
+    "dependencies": [
+      "https://unpkg.com/dayjs/dayjs.min.js",
+      "https://unpkg.com/dayjs/plugin/customParseFormat.js",
+      "https://unpkg.com/dayjs/plugin/weekday.js",
+      "https://unpkg.com/dayjs/plugin/localeData.js",
+      "https://unpkg.com/dayjs/plugin/weekOfYear.js",
+      "https://unpkg.com/dayjs/plugin/weekYear.js",
+      "https://unpkg.com/dayjs/plugin/advancedFormat.js",
+      "https://unpkg.com/dayjs/plugin/quarterOfYear.js"
+    ],
+    "exportName": "CollapsePanel",
+    "destructuring": true
+  },
+  "group": "数据展示",
+  "category": "Ant Design Vue",
+  "configure": {
+    "loop": true,
+    "condition": true,
+    "styles": true,
+    "isContainer": false,
+    "isModal": false,
+    "isPopper": false,
+    "nestingRule": {
+      "childWhitelist": "",
+      "parentWhitelist": "",
+      "descendantBlacklist": "",
+      "ancestorWhitelist": ""
+    },
+    "isNullNode": false,
+    "isLayout": false,
+    "rootSelector": "",
+    "shortcuts": {
+      "properties": []
+    },
+    "contextMenu": {
+      "actions": ["copy", "remove", "insert", "updateAttr", "bindEevent", "createBlock"],
+      "disable": []
+    },
+    "invalidity": [""],
+    "clickCapture": true,
+    "framework": "Vue"
+  },
+  "schema": {
+    "properties": [
+      {
+        "name": "0",
+        "label": {
+          "zh_CN": "基础属性"
+        },
+        "content": [
+          {
+            "property": "collapsible",
+            "label": {
+              "text": {
+                "zh_CN": "collapsible"
+              }
+            },
+            "description": {
+              "zh_CN": "是否可折叠或指定可折叠触发区域"
+            },
+            "required": false,
+            "readOnly": false,
+            "disabled": false,
+            "cols": 12,
+            "labelPosition": "top",
+            "type": "string",
+            "widget": {
+              "component": "MetaSelect",
+              "props": {
+                "options": [
+                  {
+                    "label": "header",
+                    "value": "header"
+                  },
+                  {
+                    "label": "disabled",
+                    "value": "disabled"
+                  }
+                ]
+              }
+            },
+            "device": []
+          },
+          {
+            "property": "forceRender",
+            "label": {
+              "text": {
+                "zh_CN": "forceRender"
+              }
+            },
+            "description": {
+              "zh_CN": "被隐藏时是否渲染 DOM 结构"
+            },
+            "required": false,
+            "readOnly": false,
+            "disabled": false,
+            "cols": 12,
+            "labelPosition": "top",
+            "type": "boolean",
+            "defaultValue": false,
+            "widget": {
+              "component": "MetaSwitch",
+              "props": {}
+            },
+            "device": []
+          },
+          {
+            "property": "header",
+            "label": {
+              "text": {
+                "zh_CN": "header"
+              }
+            },
+            "description": {
+              "zh_CN": "面板头内容"
+            },
+            "required": false,
+            "readOnly": false,
+            "disabled": false,
+            "cols": 12,
+            "labelPosition": "top",
+            "type": "string",
+            "widget": {
+              "component": "MetaSelect",
+              "props": {
+                "options": [
+                  {
+                    "label": "string",
+                    "value": "string"
+                  },
+                  {
+                    "label": "slot",
+                    "value": "slot"
+                  }
+                ]
+              }
+            },
+            "device": []
+          },
+          {
+            "property": "key",
+            "label": {
+              "text": {
+                "zh_CN": "key"
+              }
+            },
+            "description": {
+              "zh_CN": "对应 activeKey"
+            },
+            "required": false,
+            "readOnly": false,
+            "disabled": false,
+            "cols": 12,
+            "labelPosition": "top",
+            "type": "string",
+            "widget": {
+              "component": "MetaSelect",
+              "props": {
+                "options": [
+                  {
+                    "label": "string",
+                    "value": "string"
+                  },
+                  {
+                    "label": "number",
+                    "value": "number"
+                  }
+                ]
+              }
+            },
+            "device": []
+          },
+          {
+            "property": "showArrow",
+            "label": {
+              "text": {
+                "zh_CN": "showArrow"
+              }
+            },
+            "description": {
+              "zh_CN": "是否展示当前面板上的箭头"
+            },
+            "required": false,
+            "readOnly": false,
+            "disabled": false,
+            "cols": 12,
+            "labelPosition": "top",
+            "type": "boolean",
+            "defaultValue": true,
+            "widget": {
+              "component": "MetaSwitch",
+              "props": {}
+            },
+            "device": []
+          }
+        ],
+        "description": {
+          "zh_CN": ""
+        }
+      }
+    ],
+    "events": {},
+    "slots": {
+      "extra": {
+        "label": {
+          "zh_CN": "extra"
+        },
+        "description": {
+          "zh_CN": "自定义渲染每个面板右上角的内容"
+        }
+      },
+      "header": {
+        "label": {
+          "zh_CN": "header"
+        },
+        "description": {
+          "zh_CN": "面板头内容"
+        }
+      }
+    }
+  },
+  "snippets": [
+    {
+      "name": {
+        "zh_CN": "折叠面板"
+      },
+      "icon": "collapse-panel",
+      "screenshot": "",
+      "snippetName": "ACollapsePanel",
+      "schema": {}
+    }
+  ]
+}

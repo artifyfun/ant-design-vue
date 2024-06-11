@@ -28,7 +28,7 @@
     "exportName": "Message",
     "destructuring": true
   },
-  "group": "Feedback",
+  "group": "反馈",
   "category": "Ant Design Vue",
   "configure": {
     "loop": true,
@@ -103,7 +103,7 @@
             "cols": 12,
             "labelPosition": "top",
             "type": "number",
-            "defaultValue": 1.5,
+            "defaultValue": 3,
             "widget": {
               "component": "MetaNumber",
               "props": {}

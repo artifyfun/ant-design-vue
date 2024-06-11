@@ -1,0 +1,265 @@
+{
+  "id": 1,
+  "version": "4.1.2",
+  "name": {
+    "zh_CN": "上传"
+  },
+  "component": "AUploadFile",
+  "icon": "upload-file",
+  "description": "文件选择上传和拖拽上传控件。",
+  "doc_url": "",
+  "screenshot": "https://mdn.alipayobjects.com/huamei_7uahnr/afts/img/A*l1nlSryXib8AAAAAAAAAAAAADrJ8AQ/original",
+  "tags": "",
+  "keywords": "",
+  "dev_mode": "proCode",
+  "npm": {
+    "package": "ant-design-vue",
+    "version": "",
+    "dependencies": [
+      "https://unpkg.com/dayjs/dayjs.min.js",
+      "https://unpkg.com/dayjs/plugin/customParseFormat.js",
+      "https://unpkg.com/dayjs/plugin/weekday.js",
+      "https://unpkg.com/dayjs/plugin/localeData.js",
+      "https://unpkg.com/dayjs/plugin/weekOfYear.js",
+      "https://unpkg.com/dayjs/plugin/weekYear.js",
+      "https://unpkg.com/dayjs/plugin/advancedFormat.js",
+      "https://unpkg.com/dayjs/plugin/quarterOfYear.js"
+    ],
+    "exportName": "UploadFile",
+    "destructuring": true
+  },
+  "group": "数据录入",
+  "category": "Ant Design Vue",
+  "configure": {
+    "loop": true,
+    "condition": true,
+    "styles": true,
+    "isContainer": false,
+    "isModal": false,
+    "isPopper": false,
+    "nestingRule": {
+      "childWhitelist": "",
+      "parentWhitelist": "",
+      "descendantBlacklist": "",
+      "ancestorWhitelist": ""
+    },
+    "isNullNode": false,
+    "isLayout": false,
+    "rootSelector": "",
+    "shortcuts": {
+      "properties": []
+    },
+    "contextMenu": {
+      "actions": ["copy", "remove", "insert", "updateAttr", "bindEevent", "createBlock"],
+      "disable": []
+    },
+    "invalidity": [""],
+    "clickCapture": true,
+    "framework": "Vue"
+  },
+  "schema": {
+    "properties": [
+      {
+        "name": "0",
+        "label": {
+          "zh_CN": "基础属性"
+        },
+        "content": [
+          {
+            "property": "crossOrigin",
+            "label": {
+              "text": {
+                "zh_CN": "crossOrigin"
+              }
+            },
+            "description": {
+              "zh_CN": "CORS 属性设置"
+            },
+            "required": false,
+            "readOnly": false,
+            "disabled": false,
+            "cols": 12,
+            "labelPosition": "top",
+            "type": "string",
+            "widget": {
+              "component": "MetaInput",
+              "props": {}
+            },
+            "device": []
+          },
+          {
+            "property": "name",
+            "label": {
+              "text": {
+                "zh_CN": "name"
+              }
+            },
+            "description": {
+              "zh_CN": "文件名"
+            },
+            "required": false,
+            "readOnly": false,
+            "disabled": false,
+            "cols": 12,
+            "labelPosition": "top",
+            "type": "string",
+            "widget": {
+              "component": "MetaInput",
+              "props": {}
+            },
+            "device": []
+          },
+          {
+            "property": "percent",
+            "label": {
+              "text": {
+                "zh_CN": "percent"
+              }
+            },
+            "description": {
+              "zh_CN": "上传进度"
+            },
+            "required": false,
+            "readOnly": false,
+            "disabled": false,
+            "cols": 12,
+            "labelPosition": "top",
+            "type": "number",
+            "widget": {
+              "component": "MetaNumber",
+              "props": {}
+            },
+            "device": []
+          },
+          {
+            "property": "status",
+            "label": {
+              "text": {
+                "zh_CN": "status"
+              }
+            },
+            "description": {
+              "zh_CN": "上传状态，不同状态展示颜色也会有所不同"
+            },
+            "required": false,
+            "readOnly": false,
+            "disabled": false,
+            "cols": 12,
+            "labelPosition": "top",
+            "type": "string",
+            "widget": {
+              "component": "MetaSelect",
+              "props": {
+                "options": [
+                  {
+                    "label": "error",
+                    "value": "error"
+                  },
+                  {
+                    "label": "success",
+                    "value": "success"
+                  },
+                  {
+                    "label": "done",
+                    "value": "done"
+                  },
+                  {
+                    "label": "uploading",
+                    "value": "uploading"
+                  },
+                  {
+                    "label": "removed",
+                    "value": "removed"
+                  }
+                ]
+              }
+            },
+            "device": []
+          },
+          {
+            "property": "thumbUrl",
+            "label": {
+              "text": {
+                "zh_CN": "thumbUrl"
+              }
+            },
+            "description": {
+              "zh_CN": "缩略图地址"
+            },
+            "required": false,
+            "readOnly": false,
+            "disabled": false,
+            "cols": 12,
+            "labelPosition": "top",
+            "type": "string",
+            "widget": {
+              "component": "MetaInput",
+              "props": {}
+            },
+            "device": []
+          },
+          {
+            "property": "uid",
+            "label": {
+              "text": {
+                "zh_CN": "uid"
+              }
+            },
+            "description": {
+              "zh_CN": "唯一标识符，不设置时会自动生成"
+            },
+            "required": false,
+            "readOnly": false,
+            "disabled": false,
+            "cols": 12,
+            "labelPosition": "top",
+            "type": "string",
+            "widget": {
+              "component": "MetaInput",
+              "props": {}
+            },
+            "device": []
+          },
+          {
+            "property": "url",
+            "label": {
+              "text": {
+                "zh_CN": "url"
+              }
+            },
+            "description": {
+              "zh_CN": "下载地址"
+            },
+            "required": false,
+            "readOnly": false,
+            "disabled": false,
+            "cols": 12,
+            "labelPosition": "top",
+            "type": "string",
+            "widget": {
+              "component": "MetaInput",
+              "props": {}
+            },
+            "device": []
+          }
+        ],
+        "description": {
+          "zh_CN": ""
+        }
+      }
+    ],
+    "events": {},
+    "slots": {}
+  },
+  "snippets": [
+    {
+      "name": {
+        "zh_CN": "上传"
+      },
+      "icon": "upload-file",
+      "screenshot": "",
+      "snippetName": "AUploadFile",
+      "schema": {}
+    }
+  ]
+}

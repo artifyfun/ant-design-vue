@@ -28,7 +28,7 @@
     "exportName": "Anchor",
     "destructuring": true
   },
-  "group": "Navigation",
+  "group": "导航",
   "category": "Ant Design Vue",
   "configure": {
     "loop": true,
@@ -127,6 +127,7 @@
             "cols": 12,
             "labelPosition": "top",
             "type": "number",
+            "defaultValue": "",
             "widget": {
               "component": "MetaNumber",
               "props": {}
@@ -149,7 +150,7 @@
             "cols": 12,
             "labelPosition": "top",
             "type": "number",
-            "defaultValue": 0,
+            "defaultValue": "",
             "widget": {
               "component": "MetaNumber",
               "props": {}

@@ -28,7 +28,7 @@
     "exportName": "Affix",
     "destructuring": true
   },
-  "group": "Other",
+  "group": "其他",
   "category": "Ant Design Vue",
   "configure": {
     "loop": true,
@@ -81,6 +81,7 @@
             "cols": 12,
             "labelPosition": "top",
             "type": "number",
+            "defaultValue": "",
             "widget": {
               "component": "MetaNumber",
               "props": {}
@@ -116,22 +117,7 @@
         }
       }
     ],
-    "events": {
-      "onChange": {
-        "label": {
-          "zh_CN": "onChange"
-        },
-        "description": {
-          "zh_CN": "Callback for when Affix state is changed"
-        },
-        "type": "event",
-        "functionInfo": {
-          "params": [],
-          "returns": {}
-        },
-        "defaultValue": ""
-      }
-    },
+    "events": {},
     "slots": {}
   },
   "snippets": [

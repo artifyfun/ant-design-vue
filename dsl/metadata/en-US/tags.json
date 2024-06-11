@@ -1,4 +1,22 @@
 {
+  "affix": {
+    "attributes": ["offsetBottom", "offsetTop", "target"]
+  },
+  "alert": {
+    "attributes": [
+      "action",
+      "afterClose",
+      "banner",
+      "closable",
+      "closeIcon",
+      "closeText",
+      "description",
+      "icon",
+      "message",
+      "showIcon",
+      "type"
+    ]
+  },
   "anchor": {
     "attributes": [
       "affix",
@@ -18,24 +36,6 @@
   },
   "anchor-item": {
     "attributes": ["key", "href", "target", "title", "children"]
-  },
-  "affix": {
-    "attributes": ["offsetBottom", "offsetTop", "target"]
-  },
-  "alert": {
-    "attributes": [
-      "action",
-      "afterClose",
-      "banner",
-      "closable",
-      "closeIcon",
-      "closeText",
-      "description",
-      "icon",
-      "message",
-      "showIcon",
-      "type"
-    ]
   },
   "app": {
     "attributes": ["message", "notification"]

@@ -28,7 +28,7 @@
     "exportName": "List",
     "destructuring": true
   },
-  "group": "Data Display",
+  "group": "数据展示",
   "category": "Ant Design Vue",
   "configure": {
     "loop": true,
@@ -304,14 +304,14 @@
             "device": []
           },
           {
-            "property": "rowKey",
+            "property": "size",
             "label": {
               "text": {
-                "zh_CN": "rowKey"
+                "zh_CN": "size"
               }
             },
             "description": {
-              "zh_CN": "Items unique key, could be a string or function that returns a string"
+              "zh_CN": "list 的尺寸"
             },
             "required": false,
             "readOnly": false,
@@ -319,10 +319,25 @@
             "cols": 12,
             "labelPosition": "top",
             "type": "string",
-            "defaultValue": "key",
+            "defaultValue": "default",
             "widget": {
-              "component": "MetaInput",
-              "props": {}
+              "component": "MetaSelect",
+              "props": {
+                "options": [
+                  {
+                    "label": "default",
+                    "value": "default"
+                  },
+                  {
+                    "label": "middle",
+                    "value": "middle"
+                  },
+                  {
+                    "label": "small",
+                    "value": "small"
+                  }
+                ]
+              }
             },
             "device": []
           },
@@ -369,44 +384,6 @@
             "widget": {
               "component": "MetaNumber",
               "props": {}
-            },
-            "device": []
-          },
-          {
-            "property": "size",
-            "label": {
-              "text": {
-                "zh_CN": "size"
-              }
-            },
-            "description": {
-              "zh_CN": "list 的尺寸"
-            },
-            "required": false,
-            "readOnly": false,
-            "disabled": false,
-            "cols": 12,
-            "labelPosition": "top",
-            "type": "string",
-            "defaultValue": "default",
-            "widget": {
-              "component": "MetaSelect",
-              "props": {
-                "options": [
-                  {
-                    "label": "default",
-                    "value": "default"
-                  },
-                  {
-                    "label": "middle",
-                    "value": "middle"
-                  },
-                  {
-                    "label": "small",
-                    "value": "small"
-                  }
-                ]
-              }
             },
             "device": []
           },

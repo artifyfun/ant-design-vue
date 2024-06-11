@@ -28,7 +28,7 @@
     "exportName": "Rate",
     "destructuring": true
   },
-  "group": "Data Entry",
+  "group": "数据录入",
   "category": "Ant Design Vue",
   "configure": {
     "loop": true,
@@ -266,78 +266,7 @@
         }
       }
     ],
-    "events": {
-      "onBlur": {
-        "label": {
-          "zh_CN": "onBlur"
-        },
-        "description": {
-          "zh_CN": "callback when component lose focus"
-        },
-        "type": "event",
-        "functionInfo": {
-          "params": [],
-          "returns": {}
-        },
-        "defaultValue": ""
-      },
-      "onChange": {
-        "label": {
-          "zh_CN": "onChange"
-        },
-        "description": {
-          "zh_CN": "callback when select value"
-        },
-        "type": "event",
-        "functionInfo": {
-          "params": [],
-          "returns": {}
-        },
-        "defaultValue": ""
-      },
-      "onFocus": {
-        "label": {
-          "zh_CN": "onFocus"
-        },
-        "description": {
-          "zh_CN": "callback when component get focus"
-        },
-        "type": "event",
-        "functionInfo": {
-          "params": [],
-          "returns": {}
-        },
-        "defaultValue": ""
-      },
-      "onHoverChange": {
-        "label": {
-          "zh_CN": "onHoverChange"
-        },
-        "description": {
-          "zh_CN": "callback when hover item"
-        },
-        "type": "event",
-        "functionInfo": {
-          "params": [],
-          "returns": {}
-        },
-        "defaultValue": ""
-      },
-      "onKeydown": {
-        "label": {
-          "zh_CN": "onKeydown"
-        },
-        "description": {
-          "zh_CN": "callback when keydown on component"
-        },
-        "type": "event",
-        "functionInfo": {
-          "params": [],
-          "returns": {}
-        },
-        "defaultValue": ""
-      }
-    },
+    "events": {},
     "slots": {
       "character": {
         "label": {

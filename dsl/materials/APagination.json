@@ -28,7 +28,7 @@
     "exportName": "Pagination",
     "destructuring": true
   },
-  "group": "Navigation",
+  "group": "导航",
   "category": "Ant Design Vue",
   "configure": {
     "loop": true,
@@ -81,29 +81,6 @@
             "cols": 12,
             "labelPosition": "top",
             "type": "number",
-            "widget": {
-              "component": "MetaNumber",
-              "props": {}
-            },
-            "device": []
-          },
-          {
-            "property": "defaultCurrent",
-            "label": {
-              "text": {
-                "zh_CN": "defaultCurrent"
-              }
-            },
-            "description": {
-              "zh_CN": "default initial page number"
-            },
-            "required": false,
-            "readOnly": false,
-            "disabled": false,
-            "cols": 12,
-            "labelPosition": "top",
-            "type": "number",
-            "defaultValue": 1,
             "widget": {
               "component": "MetaNumber",
               "props": {}
@@ -315,29 +292,6 @@
             "device": []
           },
           {
-            "property": "showTitle",
-            "label": {
-              "text": {
-                "zh_CN": "showTitle"
-              }
-            },
-            "description": {
-              "zh_CN": "Show page items title"
-            },
-            "required": false,
-            "readOnly": false,
-            "disabled": false,
-            "cols": 12,
-            "labelPosition": "top",
-            "type": "boolean",
-            "defaultValue": true,
-            "widget": {
-              "component": "MetaSwitch",
-              "props": {}
-            },
-            "device": []
-          },
-          {
             "property": "showTotal",
             "label": {
               "text": {
@@ -433,36 +387,7 @@
         }
       }
     ],
-    "events": {
-      "onChange": {
-        "label": {
-          "zh_CN": "onChange"
-        },
-        "description": {
-          "zh_CN": "Called when the page number or pageSize is changed, and it takes the resulting page number and pageSize as its arguments"
-        },
-        "type": "event",
-        "functionInfo": {
-          "params": [],
-          "returns": {}
-        },
-        "defaultValue": ""
-      },
-      "onShowSizeChange": {
-        "label": {
-          "zh_CN": "onShowSizeChange"
-        },
-        "description": {
-          "zh_CN": "a callback function, executed when pageSize is changed"
-        },
-        "type": "event",
-        "functionInfo": {
-          "params": [],
-          "returns": {}
-        },
-        "defaultValue": ""
-      }
-    },
+    "events": {},
     "slots": {
       "itemRender": {
         "label": {

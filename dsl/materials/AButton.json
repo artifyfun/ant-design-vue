@@ -28,7 +28,7 @@
     "exportName": "Button",
     "destructuring": true
   },
-  "group": "General",
+  "group": "通用",
   "category": "Ant Design Vue",
   "configure": {
     "loop": true,
@@ -379,22 +379,7 @@
         }
       }
     ],
-    "events": {
-      "onClick": {
-        "label": {
-          "zh_CN": "onClick"
-        },
-        "description": {
-          "zh_CN": "set the handler to handle click event"
-        },
-        "type": "event",
-        "functionInfo": {
-          "params": [],
-          "returns": {}
-        },
-        "defaultValue": ""
-      }
-    },
+    "events": {},
     "slots": {
       "icon": {
         "label": {

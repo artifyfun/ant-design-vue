@@ -28,7 +28,7 @@
     "exportName": "App",
     "destructuring": true
   },
-  "group": "Other",
+  "group": "其它",
   "category": "Ant Design Vue",
   "configure": {
     "loop": true,

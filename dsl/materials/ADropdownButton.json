@@ -1,0 +1,305 @@
+{
+  "id": 1,
+  "version": "4.1.2",
+  "name": {
+    "zh_CN": "下拉菜单"
+  },
+  "component": "ADropdownButton",
+  "icon": "dropdown-button",
+  "description": "向下弹出的列表。",
+  "doc_url": "",
+  "screenshot": "https://mdn.alipayobjects.com/huamei_7uahnr/afts/img/A*5qm4S4Zgh2QAAAAAAAAAAAAADrJ8AQ/original",
+  "tags": "",
+  "keywords": "",
+  "dev_mode": "proCode",
+  "npm": {
+    "package": "ant-design-vue",
+    "version": "",
+    "dependencies": [
+      "https://unpkg.com/dayjs/dayjs.min.js",
+      "https://unpkg.com/dayjs/plugin/customParseFormat.js",
+      "https://unpkg.com/dayjs/plugin/weekday.js",
+      "https://unpkg.com/dayjs/plugin/localeData.js",
+      "https://unpkg.com/dayjs/plugin/weekOfYear.js",
+      "https://unpkg.com/dayjs/plugin/weekYear.js",
+      "https://unpkg.com/dayjs/plugin/advancedFormat.js",
+      "https://unpkg.com/dayjs/plugin/quarterOfYear.js"
+    ],
+    "exportName": "DropdownButton",
+    "destructuring": true
+  },
+  "group": "导航",
+  "category": "Ant Design Vue",
+  "configure": {
+    "loop": true,
+    "condition": true,
+    "styles": true,
+    "isContainer": false,
+    "isModal": false,
+    "isPopper": false,
+    "nestingRule": {
+      "childWhitelist": "",
+      "parentWhitelist": "",
+      "descendantBlacklist": "",
+      "ancestorWhitelist": ""
+    },
+    "isNullNode": false,
+    "isLayout": false,
+    "rootSelector": "",
+    "shortcuts": {
+      "properties": []
+    },
+    "contextMenu": {
+      "actions": ["copy", "remove", "insert", "updateAttr", "bindEevent", "createBlock"],
+      "disable": []
+    },
+    "invalidity": [""],
+    "clickCapture": true,
+    "framework": "Vue"
+  },
+  "schema": {
+    "properties": [
+      {
+        "name": "0",
+        "label": {
+          "zh_CN": "基础属性"
+        },
+        "content": [
+          {
+            "property": "disabled",
+            "label": {
+              "text": {
+                "zh_CN": "disabled"
+              }
+            },
+            "description": {
+              "zh_CN": "菜单是否禁用"
+            },
+            "required": false,
+            "readOnly": false,
+            "disabled": false,
+            "cols": 12,
+            "labelPosition": "top",
+            "type": "boolean",
+            "widget": {
+              "component": "MetaSwitch",
+              "props": {}
+            },
+            "device": []
+          },
+          {
+            "property": "loading",
+            "label": {
+              "text": {
+                "zh_CN": "loading"
+              }
+            },
+            "description": {
+              "zh_CN": "设置按钮载入状态"
+            },
+            "required": false,
+            "readOnly": false,
+            "disabled": false,
+            "cols": 12,
+            "labelPosition": "top",
+            "type": "boolean",
+            "defaultValue": false,
+            "widget": {
+              "component": "MetaSwitch",
+              "props": {}
+            },
+            "device": []
+          },
+          {
+            "property": "placement",
+            "label": {
+              "text": {
+                "zh_CN": "placement"
+              }
+            },
+            "description": {
+              "zh_CN": "菜单弹出位置"
+            },
+            "required": false,
+            "readOnly": false,
+            "disabled": false,
+            "cols": 12,
+            "labelPosition": "top",
+            "type": "string",
+            "defaultValue": "bottomLeft",
+            "widget": {
+              "component": "MetaSelect",
+              "props": {
+                "options": [
+                  {
+                    "label": "bottomLeft",
+                    "value": "bottomLeft"
+                  },
+                  {
+                    "label": "bottom",
+                    "value": "bottom"
+                  },
+                  {
+                    "label": "bottomRight",
+                    "value": "bottomRight"
+                  },
+                  {
+                    "label": "topLeft",
+                    "value": "topLeft"
+                  },
+                  {
+                    "label": "top",
+                    "value": "top"
+                  },
+                  {
+                    "label": "topRight",
+                    "value": "topRight"
+                  }
+                ]
+              }
+            },
+            "device": []
+          },
+          {
+            "property": "size",
+            "label": {
+              "text": {
+                "zh_CN": "size"
+              }
+            },
+            "description": {
+              "zh_CN": "按钮大小，和 [Button](/components/button-cn/) 一致"
+            },
+            "required": false,
+            "readOnly": false,
+            "disabled": false,
+            "cols": 12,
+            "labelPosition": "top",
+            "type": "string",
+            "defaultValue": "'default'",
+            "widget": {
+              "component": "MetaInput",
+              "props": {}
+            },
+            "device": []
+          },
+          {
+            "property": "type",
+            "label": {
+              "text": {
+                "zh_CN": "type"
+              }
+            },
+            "description": {
+              "zh_CN": "按钮类型，和 [Button](/components/button-cn/) 一致"
+            },
+            "required": false,
+            "readOnly": false,
+            "disabled": false,
+            "cols": 12,
+            "labelPosition": "top",
+            "type": "string",
+            "defaultValue": "'default'",
+            "widget": {
+              "component": "MetaInput",
+              "props": {}
+            },
+            "device": []
+          },
+          {
+            "property": "open",
+            "label": {
+              "text": {
+                "zh_CN": "open(v-model)"
+              }
+            },
+            "description": {
+              "zh_CN": "菜单是否显示"
+            },
+            "required": false,
+            "readOnly": false,
+            "disabled": false,
+            "cols": 12,
+            "labelPosition": "top",
+            "type": "boolean",
+            "widget": {
+              "component": "MetaSwitch",
+              "props": {}
+            },
+            "device": []
+          },
+          {
+            "property": "click",
+            "label": {
+              "text": {
+                "zh_CN": "click"
+              }
+            },
+            "description": {
+              "zh_CN": "点击左侧按钮的回调，和 [Button](/components/button-cn/) 一致"
+            },
+            "required": false,
+            "readOnly": false,
+            "disabled": false,
+            "cols": 12,
+            "labelPosition": "top",
+            "type": "function",
+            "widget": {
+              "component": "MetaCodeEditor",
+              "props": {}
+            },
+            "device": []
+          },
+          {
+            "property": "openChange",
+            "label": {
+              "text": {
+                "zh_CN": "openChange"
+              }
+            },
+            "description": {
+              "zh_CN": "菜单显示状态改变时调用，参数为 visible。点击菜单按钮导致的消失不会触发"
+            },
+            "required": false,
+            "readOnly": false,
+            "disabled": false,
+            "cols": 12,
+            "labelPosition": "top",
+            "type": "function",
+            "defaultValue": "4.0",
+            "widget": {
+              "component": "MetaCodeEditor",
+              "props": {}
+            },
+            "device": []
+          }
+        ],
+        "description": {
+          "zh_CN": ""
+        }
+      }
+    ],
+    "events": {},
+    "slots": {
+      "icon": {
+        "label": {
+          "zh_CN": "icon"
+        },
+        "description": {
+          "zh_CN": "右侧的 icon"
+        }
+      }
+    }
+  },
+  "snippets": [
+    {
+      "name": {
+        "zh_CN": "下拉菜单"
+      },
+      "icon": "dropdown-button",
+      "screenshot": "",
+      "snippetName": "ADropdownButton",
+      "schema": {}
+    }
+  ]
+}

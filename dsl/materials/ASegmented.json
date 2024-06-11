@@ -28,7 +28,7 @@
     "exportName": "Segmented",
     "destructuring": true
   },
-  "group": "Data Display",
+  "group": "数据展示",
   "category": "Ant Design Vue",
   "configure": {
     "loop": true,
@@ -81,7 +81,6 @@
             "cols": 12,
             "labelPosition": "top",
             "type": "boolean",
-            "defaultValue": false,
             "widget": {
               "component": "MetaSwitch",
               "props": {}
@@ -213,22 +212,7 @@
         }
       }
     ],
-    "events": {
-      "onChange": {
-        "label": {
-          "zh_CN": "onChange"
-        },
-        "description": {
-          "zh_CN": "The callback function that is triggered when the state changes"
-        },
-        "type": "event",
-        "functionInfo": {
-          "params": [],
-          "returns": {}
-        },
-        "defaultValue": ""
-      }
-    },
+    "events": {},
     "slots": {
       "label": {
         "label": {

@@ -28,7 +28,7 @@
     "exportName": "Typography",
     "destructuring": true
   },
-  "group": "General",
+  "group": "通用",
   "category": "Ant Design Vue",
   "configure": {
     "loop": true,

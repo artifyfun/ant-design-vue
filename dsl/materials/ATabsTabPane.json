@@ -1,0 +1,175 @@
+{
+  "id": 1,
+  "version": "4.1.2",
+  "name": {
+    "zh_CN": "标签页"
+  },
+  "component": "ATabsTabPane",
+  "icon": "tabs-tab-pane",
+  "description": "选项卡切换组件。",
+  "doc_url": "",
+  "screenshot": "https://mdn.alipayobjects.com/huamei_7uahnr/afts/img/A*8HMoTZUoSGoAAAAAAAAAAAAADrJ8AQ/original",
+  "tags": "",
+  "keywords": "",
+  "dev_mode": "proCode",
+  "npm": {
+    "package": "ant-design-vue",
+    "version": "",
+    "dependencies": [
+      "https://unpkg.com/dayjs/dayjs.min.js",
+      "https://unpkg.com/dayjs/plugin/customParseFormat.js",
+      "https://unpkg.com/dayjs/plugin/weekday.js",
+      "https://unpkg.com/dayjs/plugin/localeData.js",
+      "https://unpkg.com/dayjs/plugin/weekOfYear.js",
+      "https://unpkg.com/dayjs/plugin/weekYear.js",
+      "https://unpkg.com/dayjs/plugin/advancedFormat.js",
+      "https://unpkg.com/dayjs/plugin/quarterOfYear.js"
+    ],
+    "exportName": "TabsTabPane",
+    "destructuring": true
+  },
+  "group": "数据展示",
+  "category": "Ant Design Vue",
+  "configure": {
+    "loop": true,
+    "condition": true,
+    "styles": true,
+    "isContainer": false,
+    "isModal": false,
+    "isPopper": false,
+    "nestingRule": {
+      "childWhitelist": "",
+      "parentWhitelist": "",
+      "descendantBlacklist": "",
+      "ancestorWhitelist": ""
+    },
+    "isNullNode": false,
+    "isLayout": false,
+    "rootSelector": "",
+    "shortcuts": {
+      "properties": []
+    },
+    "contextMenu": {
+      "actions": ["copy", "remove", "insert", "updateAttr", "bindEevent", "createBlock"],
+      "disable": []
+    },
+    "invalidity": [""],
+    "clickCapture": true,
+    "framework": "Vue"
+  },
+  "schema": {
+    "properties": [
+      {
+        "name": "0",
+        "label": {
+          "zh_CN": "基础属性"
+        },
+        "content": [
+          {
+            "property": "forceRender",
+            "label": {
+              "text": {
+                "zh_CN": "forceRender"
+              }
+            },
+            "description": {
+              "zh_CN": "被隐藏时是否渲染 DOM 结构"
+            },
+            "required": false,
+            "readOnly": false,
+            "disabled": false,
+            "cols": 12,
+            "labelPosition": "top",
+            "type": "boolean",
+            "defaultValue": false,
+            "widget": {
+              "component": "MetaSwitch",
+              "props": {}
+            },
+            "device": []
+          },
+          {
+            "property": "key",
+            "label": {
+              "text": {
+                "zh_CN": "key"
+              }
+            },
+            "description": {
+              "zh_CN": "对应 activeKey"
+            },
+            "required": false,
+            "readOnly": false,
+            "disabled": false,
+            "cols": 12,
+            "labelPosition": "top",
+            "type": "string",
+            "widget": {
+              "component": "MetaInput",
+              "props": {}
+            },
+            "device": []
+          },
+          {
+            "property": "tab",
+            "label": {
+              "text": {
+                "zh_CN": "tab"
+              }
+            },
+            "description": {
+              "zh_CN": "选项卡头显示文字"
+            },
+            "required": false,
+            "readOnly": false,
+            "disabled": false,
+            "cols": 12,
+            "labelPosition": "top",
+            "type": "string",
+            "widget": {
+              "component": "MetaSelect",
+              "props": {
+                "options": [
+                  {
+                    "label": "string",
+                    "value": "string"
+                  },
+                  {
+                    "label": "slot",
+                    "value": "slot"
+                  }
+                ]
+              }
+            },
+            "device": []
+          }
+        ],
+        "description": {
+          "zh_CN": ""
+        }
+      }
+    ],
+    "events": {},
+    "slots": {
+      "tab": {
+        "label": {
+          "zh_CN": "tab"
+        },
+        "description": {
+          "zh_CN": "选项卡头显示文字"
+        }
+      }
+    }
+  },
+  "snippets": [
+    {
+      "name": {
+        "zh_CN": "标签页"
+      },
+      "icon": "tabs-tab-pane",
+      "screenshot": "",
+      "snippetName": "ATabsTabPane",
+      "schema": {}
+    }
+  ]
+}

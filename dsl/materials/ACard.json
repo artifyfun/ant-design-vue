@@ -28,7 +28,7 @@
     "exportName": "Card",
     "destructuring": true
   },
-  "group": "Data Display",
+  "group": "数据展示",
   "category": "Ant Design Vue",
   "configure": {
     "loop": true,
@@ -150,6 +150,7 @@
             "cols": 12,
             "labelPosition": "top",
             "type": "string",
+            "defaultValue": "第一个页签",
             "widget": {
               "component": "MetaInput",
               "props": {}
@@ -354,22 +355,7 @@
         }
       }
     ],
-    "events": {
-      "onTabChange": {
-        "label": {
-          "zh_CN": "onTabChange"
-        },
-        "description": {
-          "zh_CN": "Callback when tab is switched"
-        },
-        "type": "event",
-        "functionInfo": {
-          "params": [],
-          "returns": {}
-        },
-        "defaultValue": ""
-      }
-    },
+    "events": {},
     "slots": {
       "extra": {
         "label": {

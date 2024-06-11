@@ -28,7 +28,7 @@
     "exportName": "Dropdown",
     "destructuring": true
   },
-  "group": "Navigation",
+  "group": "导航",
   "category": "Ant Design Vue",
   "configure": {
     "loop": true,
@@ -244,8 +244,35 @@
             "type": "string",
             "defaultValue": "bottomLeft",
             "widget": {
-              "component": "MetaInput",
-              "props": {}
+              "component": "MetaSelect",
+              "props": {
+                "options": [
+                  {
+                    "label": "bottomLeft",
+                    "value": "bottomLeft"
+                  },
+                  {
+                    "label": "bottom",
+                    "value": "bottom"
+                  },
+                  {
+                    "label": "bottomRight",
+                    "value": "bottomRight"
+                  },
+                  {
+                    "label": "topLeft",
+                    "value": "topLeft"
+                  },
+                  {
+                    "label": "top",
+                    "value": "top"
+                  },
+                  {
+                    "label": "topRight",
+                    "value": "topRight"
+                  }
+                ]
+              }
             },
             "device": []
           },
@@ -277,22 +304,7 @@
         }
       }
     ],
-    "events": {
-      "onOpenChange": {
-        "label": {
-          "zh_CN": "onOpenChange"
-        },
-        "description": {
-          "zh_CN": "a callback function takes an argument: open, is executed when the open state is changed. Not trigger when hidden by click item"
-        },
-        "type": "event",
-        "functionInfo": {
-          "params": [],
-          "returns": {}
-        },
-        "defaultValue": ""
-      }
-    },
+    "events": {},
     "slots": {}
   },
   "snippets": [

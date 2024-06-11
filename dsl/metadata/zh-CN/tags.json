@@ -1,4 +1,7 @@
 {
+  "affix": {
+    "attributes": ["offsetBottom", "offsetTop", "target"]
+  },
   "alert": {
     "attributes": [
       "action",
@@ -36,9 +39,6 @@
   },
   "app": {
     "attributes": ["message", "notification"]
-  },
-  "affix": {
-    "attributes": ["offsetBottom", "offsetTop", "target"]
   },
   "auto-complete": {
     "attributes": [
@@ -113,22 +113,6 @@
   "breadcrumb-separator": {
     "attributes": []
   },
-  "calendar": {
-    "attributes": [
-      "dateCellRender",
-      "dateFullCellRender",
-      "disabledDate",
-      "fullscreen",
-      "headerRender",
-      "locale",
-      "mode",
-      "monthCellRender",
-      "monthFullCellRender",
-      "validRange",
-      "value(v-model)",
-      "valueFormat"
-    ]
-  },
   "button": {
     "attributes": [
       "block",
@@ -145,6 +129,22 @@
       "type",
       "blur()",
       "focus()"
+    ]
+  },
+  "calendar": {
+    "attributes": [
+      "dateCellRender",
+      "dateFullCellRender",
+      "disabledDate",
+      "fullscreen",
+      "headerRender",
+      "locale",
+      "mode",
+      "monthCellRender",
+      "monthFullCellRender",
+      "validRange",
+      "value(v-model)",
+      "valueFormat"
     ]
   },
   "card": {
@@ -250,6 +250,9 @@
   "collapse-panel": {
     "attributes": ["collapsible", "extra", "forceRender", "header", "key", "showArrow"]
   },
+  "comment": {
+    "attributes": ["actions", "author", "avatar", "content", "datetime"]
+  },
   "config-provider": {
     "attributes": [
       "autoInsertSpaceInButton",
@@ -349,9 +352,6 @@
       "zIndex"
     ]
   },
-  "comment": {
-    "attributes": ["actions", "author", "avatar", "content", "datetime"]
-  },
   "dropdown": {
     "attributes": [
       "align",
@@ -401,21 +401,6 @@
       "badge"
     ]
   },
-  "grid": {
-    "attributes": []
-  },
-  "image": {
-    "attributes": [
-      "alt",
-      "fallback",
-      "height",
-      "placeholder",
-      "preview",
-      "src",
-      "previewMask",
-      "width"
-    ]
-  },
   "form": {
     "attributes": [
       "colon",
@@ -456,11 +441,57 @@
       "wrapperCol"
     ]
   },
+  "grid": {
+    "attributes": []
+  },
   "icon": {
     "attributes": []
   },
   "自定义": {
     "attributes": ["component", "rotate", "spin", "style"]
+  },
+  "image": {
+    "attributes": [
+      "alt",
+      "fallback",
+      "height",
+      "placeholder",
+      "preview",
+      "src",
+      "previewMask",
+      "width"
+    ]
+  },
+  "input": {
+    "attributes": [
+      "addonAfter",
+      "addonBefore",
+      "allowClear",
+      "bordered",
+      "clearIcon",
+      "defaultValue",
+      "disabled",
+      "id",
+      "maxlength",
+      "prefix",
+      "showCount",
+      "status",
+      "size",
+      "suffix",
+      "type",
+      "value(v-model)",
+      "change",
+      "pressEnter"
+    ]
+  },
+  "input-search": {
+    "attributes": ["enterButton", "loading", "search"]
+  },
+  "input-group": {
+    "attributes": ["compact", "size"]
+  },
+  "input-password": {
+    "attributes": ["visible(v-model)", "iconRender", "visibilityToggle"]
   },
   "input-number": {
     "attributes": [
@@ -506,37 +537,6 @@
       "width",
       "zeroWidthTriggerStyle"
     ]
-  },
-  "input": {
-    "attributes": [
-      "addonAfter",
-      "addonBefore",
-      "allowClear",
-      "bordered",
-      "clearIcon",
-      "defaultValue",
-      "disabled",
-      "id",
-      "maxlength",
-      "prefix",
-      "showCount",
-      "status",
-      "size",
-      "suffix",
-      "type",
-      "value(v-model)",
-      "change",
-      "pressEnter"
-    ]
-  },
-  "input-search": {
-    "attributes": ["enterButton", "loading", "search"]
-  },
-  "input-group": {
-    "attributes": ["compact", "size"]
-  },
-  "input-password": {
-    "attributes": ["visible(v-model)", "iconRender", "visibilityToggle"]
   },
   "list": {
     "attributes": [
@@ -756,6 +756,9 @@
       "open (v-model)"
     ]
   },
+  "popover": {
+    "attributes": ["content", "title"]
+  },
   "progress": {
     "attributes": [
       "format",
@@ -770,9 +773,6 @@
       "type",
       "size"
     ]
-  },
-  "popover": {
-    "attributes": ["content", "title"]
   },
   "qrcode": {
     "attributes": [
@@ -892,12 +892,6 @@
   "skeleton-input-props": {
     "attributes": ["active", "size"]
   },
-  "space": {
-    "attributes": ["align", "direction", "size", "split", "wrap"]
-  },
-  "space-compact": {
-    "attributes": ["block", "direction", "size"]
-  },
   "slider": {
     "attributes": [
       "autofocus",
@@ -918,6 +912,12 @@
       "tooltipOpen",
       "getTooltipPopupContainer"
     ]
+  },
+  "space": {
+    "attributes": ["align", "direction", "size", "split", "wrap"]
+  },
+  "space-compact": {
+    "attributes": ["block", "direction", "size"]
   },
   "spin": {
     "attributes": ["delay", "indicator", "size", "spinning", "tip", "wrapperClassName"]
@@ -956,6 +956,19 @@
   },
   "steps-step": {
     "attributes": ["description", "disabled", "icon", "status", "subTitle", "title"]
+  },
+  "switch": {
+    "attributes": [
+      "autofocus",
+      "checked(v-model)",
+      "checkedChildren",
+      "checkedValue",
+      "disabled",
+      "loading",
+      "size",
+      "unCheckedChildren",
+      "unCheckedValue"
+    ]
   },
   "table": {
     "attributes": [
@@ -1002,25 +1015,6 @@
       "transformCellText"
     ]
   },
-  "switch": {
-    "attributes": [
-      "autofocus",
-      "checked(v-model)",
-      "checkedChildren",
-      "checkedValue",
-      "disabled",
-      "loading",
-      "size",
-      "unCheckedChildren",
-      "unCheckedValue"
-    ]
-  },
-  "tag": {
-    "attributes": ["closable", "closeIcon", "color", "icon", "bordered"]
-  },
-  "tag-checkable-tag": {
-    "attributes": ["checked(v-model)"]
-  },
   "tabs": {
     "attributes": [
       "activeKey(v-model)",
@@ -1046,6 +1040,12 @@
   },
   "tabs-tab-pane": {
     "attributes": ["forceRender", "key", "tab", "closeIcon", "tab"]
+  },
+  "tag": {
+    "attributes": ["closable", "closeIcon", "color", "icon", "bordered"]
+  },
+  "tag-checkable-tag": {
+    "attributes": ["checked(v-model)"]
   },
   "time-picker": {
     "attributes": [

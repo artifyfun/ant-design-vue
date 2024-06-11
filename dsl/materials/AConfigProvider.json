@@ -28,7 +28,7 @@
     "exportName": "ConfigProvider",
     "destructuring": true
   },
-  "group": "Other",
+  "group": "其他",
   "category": "Ant Design Vue",
   "configure": {
     "loop": true,
@@ -289,7 +289,6 @@
             "cols": 12,
             "labelPosition": "top",
             "type": "boolean",
-            "defaultValue": true,
             "widget": {
               "component": "MetaSwitch",
               "props": {}

@@ -28,7 +28,7 @@
     "exportName": "Checkbox",
     "destructuring": true
   },
-  "group": "Data Entry",
+  "group": "数据录入",
   "category": "Ant Design Vue",
   "configure": {
     "loop": true,
@@ -187,7 +187,7 @@
               }
             },
             "description": {
-              "zh_CN": "失效状态"
+              "zh_CN": "整组失效"
             },
             "required": false,
             "readOnly": false,
@@ -254,22 +254,7 @@
         }
       }
     ],
-    "events": {
-      "onChange": {
-        "label": {
-          "zh_CN": "onChange"
-        },
-        "description": {
-          "zh_CN": "The callback function that is triggered when the state changes."
-        },
-        "type": "event",
-        "functionInfo": {
-          "params": [],
-          "returns": {}
-        },
-        "defaultValue": ""
-      }
-    },
+    "events": {},
     "slots": {}
   },
   "snippets": [

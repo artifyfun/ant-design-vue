@@ -1,0 +1,179 @@
+{
+  "id": 1,
+  "version": "4.1.2",
+  "name": {
+    "zh_CN": "卡片"
+  },
+  "component": "ACardMeta",
+  "icon": "card-meta",
+  "description": "通用卡片容器",
+  "doc_url": "",
+  "screenshot": "https://mdn.alipayobjects.com/huamei_7uahnr/afts/img/A*a-8zR6rrupgAAAAAAAAAAAAADrJ8AQ/original",
+  "tags": "",
+  "keywords": "",
+  "dev_mode": "proCode",
+  "npm": {
+    "package": "ant-design-vue",
+    "version": "",
+    "dependencies": [
+      "https://unpkg.com/dayjs/dayjs.min.js",
+      "https://unpkg.com/dayjs/plugin/customParseFormat.js",
+      "https://unpkg.com/dayjs/plugin/weekday.js",
+      "https://unpkg.com/dayjs/plugin/localeData.js",
+      "https://unpkg.com/dayjs/plugin/weekOfYear.js",
+      "https://unpkg.com/dayjs/plugin/weekYear.js",
+      "https://unpkg.com/dayjs/plugin/advancedFormat.js",
+      "https://unpkg.com/dayjs/plugin/quarterOfYear.js"
+    ],
+    "exportName": "CardMeta",
+    "destructuring": true
+  },
+  "group": "数据展示",
+  "category": "Ant Design Vue",
+  "configure": {
+    "loop": true,
+    "condition": true,
+    "styles": true,
+    "isContainer": false,
+    "isModal": false,
+    "isPopper": false,
+    "nestingRule": {
+      "childWhitelist": "",
+      "parentWhitelist": "",
+      "descendantBlacklist": "",
+      "ancestorWhitelist": ""
+    },
+    "isNullNode": false,
+    "isLayout": false,
+    "rootSelector": "",
+    "shortcuts": {
+      "properties": []
+    },
+    "contextMenu": {
+      "actions": ["copy", "remove", "insert", "updateAttr", "bindEevent", "createBlock"],
+      "disable": []
+    },
+    "invalidity": [""],
+    "clickCapture": true,
+    "framework": "Vue"
+  },
+  "schema": {
+    "properties": [
+      {
+        "name": "0",
+        "label": {
+          "zh_CN": "基础属性"
+        },
+        "content": [
+          {
+            "property": "description",
+            "label": {
+              "text": {
+                "zh_CN": "description"
+              }
+            },
+            "description": {
+              "zh_CN": "描述内容"
+            },
+            "required": false,
+            "readOnly": false,
+            "disabled": false,
+            "cols": 12,
+            "labelPosition": "top",
+            "type": "string",
+            "widget": {
+              "component": "MetaSelect",
+              "props": {
+                "options": [
+                  {
+                    "label": "string",
+                    "value": "string"
+                  },
+                  {
+                    "label": "slot",
+                    "value": "slot"
+                  }
+                ]
+              }
+            },
+            "device": []
+          },
+          {
+            "property": "title",
+            "label": {
+              "text": {
+                "zh_CN": "title"
+              }
+            },
+            "description": {
+              "zh_CN": "标题内容"
+            },
+            "required": false,
+            "readOnly": false,
+            "disabled": false,
+            "cols": 12,
+            "labelPosition": "top",
+            "type": "string",
+            "widget": {
+              "component": "MetaSelect",
+              "props": {
+                "options": [
+                  {
+                    "label": "string",
+                    "value": "string"
+                  },
+                  {
+                    "label": "slot",
+                    "value": "slot"
+                  }
+                ]
+              }
+            },
+            "device": []
+          }
+        ],
+        "description": {
+          "zh_CN": ""
+        }
+      }
+    ],
+    "events": {},
+    "slots": {
+      "avatar": {
+        "label": {
+          "zh_CN": "avatar"
+        },
+        "description": {
+          "zh_CN": "头像/图标"
+        }
+      },
+      "description": {
+        "label": {
+          "zh_CN": "description"
+        },
+        "description": {
+          "zh_CN": "描述内容"
+        }
+      },
+      "title": {
+        "label": {
+          "zh_CN": "title"
+        },
+        "description": {
+          "zh_CN": "标题内容"
+        }
+      }
+    }
+  },
+  "snippets": [
+    {
+      "name": {
+        "zh_CN": "卡片"
+      },
+      "icon": "card-meta",
+      "screenshot": "",
+      "snippetName": "ACardMeta",
+      "schema": {}
+    }
+  ]
+}

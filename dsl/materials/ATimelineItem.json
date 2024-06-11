@@ -1,0 +1,227 @@
+{
+  "id": 1,
+  "version": "4.1.2",
+  "name": {
+    "zh_CN": "时间轴"
+  },
+  "component": "ATimelineItem",
+  "icon": "timeline-item",
+  "description": "垂直展示的时间流信息。",
+  "doc_url": "",
+  "screenshot": "https://mdn.alipayobjects.com/huamei_7uahnr/afts/img/A*yIl9S4hAIBcAAAAAAAAAAAAADrJ8AQ/original",
+  "tags": "",
+  "keywords": "",
+  "dev_mode": "proCode",
+  "npm": {
+    "package": "ant-design-vue",
+    "version": "",
+    "dependencies": [
+      "https://unpkg.com/dayjs/dayjs.min.js",
+      "https://unpkg.com/dayjs/plugin/customParseFormat.js",
+      "https://unpkg.com/dayjs/plugin/weekday.js",
+      "https://unpkg.com/dayjs/plugin/localeData.js",
+      "https://unpkg.com/dayjs/plugin/weekOfYear.js",
+      "https://unpkg.com/dayjs/plugin/weekYear.js",
+      "https://unpkg.com/dayjs/plugin/advancedFormat.js",
+      "https://unpkg.com/dayjs/plugin/quarterOfYear.js"
+    ],
+    "exportName": "TimelineItem",
+    "destructuring": true
+  },
+  "group": "数据展示",
+  "category": "Ant Design Vue",
+  "configure": {
+    "loop": true,
+    "condition": true,
+    "styles": true,
+    "isContainer": false,
+    "isModal": false,
+    "isPopper": false,
+    "nestingRule": {
+      "childWhitelist": "",
+      "parentWhitelist": "",
+      "descendantBlacklist": "",
+      "ancestorWhitelist": ""
+    },
+    "isNullNode": false,
+    "isLayout": false,
+    "rootSelector": "",
+    "shortcuts": {
+      "properties": []
+    },
+    "contextMenu": {
+      "actions": ["copy", "remove", "insert", "updateAttr", "bindEevent", "createBlock"],
+      "disable": []
+    },
+    "invalidity": [""],
+    "clickCapture": true,
+    "framework": "Vue"
+  },
+  "schema": {
+    "properties": [
+      {
+        "name": "0",
+        "label": {
+          "zh_CN": "基础属性"
+        },
+        "content": [
+          {
+            "property": "color",
+            "label": {
+              "text": {
+                "zh_CN": "color"
+              }
+            },
+            "description": {
+              "zh_CN": "指定圆圈颜色 blue, red, green，或自定义的色值"
+            },
+            "required": false,
+            "readOnly": false,
+            "disabled": false,
+            "cols": 12,
+            "labelPosition": "top",
+            "type": "string",
+            "defaultValue": "blue",
+            "widget": {
+              "component": "MetaInput",
+              "props": {}
+            },
+            "device": []
+          },
+          {
+            "property": "dot",
+            "label": {
+              "text": {
+                "zh_CN": "dot"
+              }
+            },
+            "description": {
+              "zh_CN": "自定义时间轴点"
+            },
+            "required": false,
+            "readOnly": false,
+            "disabled": false,
+            "cols": 12,
+            "labelPosition": "top",
+            "type": "string",
+            "widget": {
+              "component": "MetaSelect",
+              "props": {
+                "options": [
+                  {
+                    "label": "string",
+                    "value": "string"
+                  },
+                  {
+                    "label": "slot",
+                    "value": "slot"
+                  }
+                ]
+              }
+            },
+            "device": []
+          },
+          {
+            "property": "label",
+            "label": {
+              "text": {
+                "zh_CN": "label"
+              }
+            },
+            "description": {
+              "zh_CN": "设置标签"
+            },
+            "required": false,
+            "readOnly": false,
+            "disabled": false,
+            "cols": 12,
+            "labelPosition": "top",
+            "type": "string",
+            "widget": {
+              "component": "MetaSelect",
+              "props": {
+                "options": [
+                  {
+                    "label": "string",
+                    "value": "string"
+                  },
+                  {
+                    "label": "slot",
+                    "value": "slot"
+                  }
+                ]
+              }
+            },
+            "device": []
+          },
+          {
+            "property": "position",
+            "label": {
+              "text": {
+                "zh_CN": "position"
+              }
+            },
+            "description": {
+              "zh_CN": "自定义节点位置"
+            },
+            "required": false,
+            "readOnly": false,
+            "disabled": false,
+            "cols": 12,
+            "labelPosition": "top",
+            "type": "string",
+            "widget": {
+              "component": "MetaSelect",
+              "props": {
+                "options": [
+                  {
+                    "label": "left",
+                    "value": "left"
+                  },
+                  {
+                    "label": "right",
+                    "value": "right"
+                  }
+                ]
+              }
+            },
+            "device": []
+          }
+        ],
+        "description": {
+          "zh_CN": ""
+        }
+      }
+    ],
+    "events": {},
+    "slots": {
+      "dot": {
+        "label": {
+          "zh_CN": "dot"
+        },
+        "description": {
+          "zh_CN": "自定义时间轴点"
+        }
+      },
+      "label": {
+        "label": {
+          "zh_CN": "label"
+        },
+        "description": {
+          "zh_CN": "设置标签"
+        }
+      }
+    }
+  },
+  "snippets": [
+    {
+      "name": {
+        "zh_CN": "时间轴"
+      },
+      "icon": "timeline-item",
+      "screenshot": "",
+      "snippetName": "ATimelineItem",
+      "schema": {}
+    }
+  ]
+}

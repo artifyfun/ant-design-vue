@@ -1,4 +1,16 @@
 {
+  "affix/offsetBottom": {
+    "type": "number",
+    "description": "距离窗口底部达到指定偏移量后触发, Default: "
+  },
+  "affix/offsetTop": {
+    "type": "number",
+    "description": "距离窗口顶部达到指定偏移量后触发, Default: 0"
+  },
+  "affix/target": {
+    "type": "() => HTMLElement",
+    "description": "设置 `Affix` 需要监听其滚动事件的元素，值为一个返回对应 DOM 元素的函数, Default: () => window"
+  },
   "alert/action": {
     "type": "slot",
     "description": "自定义操作项, Default: -"
@@ -122,18 +134,6 @@
   "app/notification": {
     "type": "[NotificationConfig](/components/notification-cn/#notificationconfig)",
     "description": "App 内 Notification 的全局配置, Default: -"
-  },
-  "affix/offsetBottom": {
-    "type": "number",
-    "description": "距离窗口底部达到指定偏移量后触发, Default: "
-  },
-  "affix/offsetTop": {
-    "type": "number",
-    "description": "距离窗口顶部达到指定偏移量后触发, Default: 0"
-  },
-  "affix/target": {
-    "type": "() => HTMLElement",
-    "description": "设置 `Affix` 需要监听其滚动事件的元素，值为一个返回对应 DOM 元素的函数, Default: () => window"
   },
   "auto-complete/allowClear": {
     "type": "boolean",
@@ -351,54 +351,6 @@
     "type": "[Menu](/components/menu) | () => Menu",
     "description": "下拉菜单的内容, Default: -"
   },
-  "calendar/dateCellRender": {
-    "type": "v-slot:dateCellRender=\"{current: dayjs}\"",
-    "description": "作用域插槽，用来自定义渲染日期单元格，返回内容会被追加到单元格,, Default: 无"
-  },
-  "calendar/dateFullCellRender": {
-    "type": "v-slot:dateFullCellRender=\"{current: dayjs}\"",
-    "description": "作用域插槽，自定义渲染日期单元格，返回内容覆盖单元格, Default: 无"
-  },
-  "calendar/disabledDate": {
-    "type": "(currentDate: dayjs) => boolean",
-    "description": "不可选择的日期, Default: 无"
-  },
-  "calendar/fullscreen": {
-    "type": "boolean",
-    "description": "是否全屏显示, Default: true"
-  },
-  "calendar/headerRender": {
-    "type": "v-slot:headerRender=\"{value: dayjs, type: string, onChange: f(), onTypeChange: f()}\"",
-    "description": "自定义头部内容, Default: -"
-  },
-  "calendar/locale": {
-    "type": "object",
-    "description": "国际化配置, Default: [默认配置](https://github.com/vueComponent/ant-design-vue/blob/main/components/date-picker/locale/example.json)"
-  },
-  "calendar/mode": {
-    "type": "string",
-    "description": "初始模式，`month/year`, Default: month"
-  },
-  "calendar/monthCellRender": {
-    "type": "v-slot:monthCellRender=\"{current: dayjs}\"",
-    "description": "作用域插槽，自定义渲染月单元格，返回内容会被追加到单元格, Default: 无"
-  },
-  "calendar/monthFullCellRender": {
-    "type": "v-slot:monthFullCellRender=\"{current: dayjs}\"",
-    "description": "作用域插槽，自定义渲染月单元格，返回内容覆盖单元格, Default: 无"
-  },
-  "calendar/validRange": {
-    "type": "[[dayjs](https://day.js.org/), [dayjs](https://day.js.org/)]",
-    "description": "设置可以显示的日期, Default: 无"
-  },
-  "calendar/value(v-model)": {
-    "type": "[dayjs](https://day.js.org/)",
-    "description": "展示日期, Default: 当前日期"
-  },
-  "calendar/valueFormat": {
-    "type": "string，[具体格式](https://day.js.org/docs/zh-CN/display/format)",
-    "description": "可选，绑定值的格式，对 value、defaultValue 起作用。不指定则绑定值为 dayjs 对象, Default: -"
-  },
   "button/block": {
     "type": "boolean",
     "description": "将按钮宽度调整为其父宽度的选项, Default: `false`"
@@ -454,6 +406,54 @@
   "button/focus()": {
     "type": "",
     "description": "获取焦点, Default: undefined"
+  },
+  "calendar/dateCellRender": {
+    "type": "v-slot:dateCellRender=\"{current: dayjs}\"",
+    "description": "作用域插槽，用来自定义渲染日期单元格，返回内容会被追加到单元格,, Default: 无"
+  },
+  "calendar/dateFullCellRender": {
+    "type": "v-slot:dateFullCellRender=\"{current: dayjs}\"",
+    "description": "作用域插槽，自定义渲染日期单元格，返回内容覆盖单元格, Default: 无"
+  },
+  "calendar/disabledDate": {
+    "type": "(currentDate: dayjs) => boolean",
+    "description": "不可选择的日期, Default: 无"
+  },
+  "calendar/fullscreen": {
+    "type": "boolean",
+    "description": "是否全屏显示, Default: true"
+  },
+  "calendar/headerRender": {
+    "type": "v-slot:headerRender=\"{value: dayjs, type: string, onChange: f(), onTypeChange: f()}\"",
+    "description": "自定义头部内容, Default: -"
+  },
+  "calendar/locale": {
+    "type": "object",
+    "description": "国际化配置, Default: [默认配置](https://github.com/vueComponent/ant-design-vue/blob/main/components/date-picker/locale/example.json)"
+  },
+  "calendar/mode": {
+    "type": "string",
+    "description": "初始模式，`month/year`, Default: month"
+  },
+  "calendar/monthCellRender": {
+    "type": "v-slot:monthCellRender=\"{current: dayjs}\"",
+    "description": "作用域插槽，自定义渲染月单元格，返回内容会被追加到单元格, Default: 无"
+  },
+  "calendar/monthFullCellRender": {
+    "type": "v-slot:monthFullCellRender=\"{current: dayjs}\"",
+    "description": "作用域插槽，自定义渲染月单元格，返回内容覆盖单元格, Default: 无"
+  },
+  "calendar/validRange": {
+    "type": "[[dayjs](https://day.js.org/), [dayjs](https://day.js.org/)]",
+    "description": "设置可以显示的日期, Default: 无"
+  },
+  "calendar/value(v-model)": {
+    "type": "[dayjs](https://day.js.org/)",
+    "description": "展示日期, Default: 当前日期"
+  },
+  "calendar/valueFormat": {
+    "type": "string，[具体格式](https://day.js.org/docs/zh-CN/display/format)",
+    "description": "可选，绑定值的格式，对 value、defaultValue 起作用。不指定则绑定值为 dayjs 对象, Default: -"
   },
   "card/activeTabKey": {
     "type": "string",
@@ -786,6 +786,26 @@
   "collapse-panel/showArrow": {
     "type": "boolean",
     "description": "是否展示当前面板上的箭头, Default: `true`"
+  },
+  "comment/actions": {
+    "type": "Array|slot",
+    "description": "在评论内容下面呈现的操作项列表, Default: -"
+  },
+  "comment/author": {
+    "type": "string|slot",
+    "description": "要显示为注释作者的元素, Default: -"
+  },
+  "comment/avatar": {
+    "type": "string|slot",
+    "description": "要显示为评论头像的元素 - 通常是 antd `Avatar` 或者 src, Default: -"
+  },
+  "comment/content": {
+    "type": "string|slot",
+    "description": "评论的主要内容, Default: -"
+  },
+  "comment/datetime": {
+    "type": "string|slot",
+    "description": "展示时间描述, Default: -"
   },
   "config-provider/autoInsertSpaceInButton": {
     "type": "boolean",
@@ -1127,26 +1147,6 @@
     "type": "Number",
     "description": "设置 Drawer 的 `z-index`, Default: 1000"
   },
-  "comment/actions": {
-    "type": "Array|slot",
-    "description": "在评论内容下面呈现的操作项列表, Default: -"
-  },
-  "comment/author": {
-    "type": "string|slot",
-    "description": "要显示为注释作者的元素, Default: -"
-  },
-  "comment/avatar": {
-    "type": "string|slot",
-    "description": "要显示为评论头像的元素 - 通常是 antd `Avatar` 或者 src, Default: -"
-  },
-  "comment/content": {
-    "type": "string|slot",
-    "description": "评论的主要内容, Default: -"
-  },
-  "comment/datetime": {
-    "type": "string|slot",
-    "description": "展示时间描述, Default: -"
-  },
   "dropdown/align": {
     "type": "Object",
     "description": "该值将合并到 placement 的配置中，设置参考 [dom-align](https://github.com/yiminghe/dom-align), Default: 无"
@@ -1311,38 +1311,6 @@
     "type": "[BadgeProps](/components/badge-cn#api)",
     "description": "带徽标数字的悬浮按钮（不支持 status 以及相关属性）, Default: -"
   },
-  "image/alt": {
-    "type": "string",
-    "description": "图像描述, Default: -"
-  },
-  "image/fallback": {
-    "type": "string",
-    "description": "加载失败容错地址, Default: -"
-  },
-  "image/height": {
-    "type": "string | number",
-    "description": "图像高度, Default: -"
-  },
-  "image/placeholder": {
-    "type": "boolean | slot",
-    "description": "加载占位, 为 `true` 时使用默认占位, Default: -"
-  },
-  "image/preview": {
-    "type": "boolean | [previewType](#previewtype)",
-    "description": "预览参数，为 `false` 时禁用, Default: true"
-  },
-  "image/src": {
-    "type": "string",
-    "description": "图片地址, Default: -"
-  },
-  "image/previewMask": {
-    "type": "false | function | slot",
-    "description": "自定义 mask, Default: -"
-  },
-  "image/width": {
-    "type": "string | number",
-    "description": "图像宽度, Default: -"
-  },
   "form/colon": {
     "type": "boolean",
     "description": "配置 Form.Item 的 colon 的默认值 (只有在属性 layout 为 horizontal 时有效), Default: true"
@@ -1486,6 +1454,142 @@
   "自定义/style": {
     "type": "CSSProperties",
     "description": "设置图标的样式，例如 `fontSize` 和 `color`, Default: -"
+  },
+  "image/alt": {
+    "type": "string",
+    "description": "图像描述, Default: -"
+  },
+  "image/fallback": {
+    "type": "string",
+    "description": "加载失败容错地址, Default: -"
+  },
+  "image/height": {
+    "type": "string | number",
+    "description": "图像高度, Default: -"
+  },
+  "image/placeholder": {
+    "type": "boolean | slot",
+    "description": "加载占位, 为 `true` 时使用默认占位, Default: -"
+  },
+  "image/preview": {
+    "type": "boolean | [previewType](#previewtype)",
+    "description": "预览参数，为 `false` 时禁用, Default: true"
+  },
+  "image/src": {
+    "type": "string",
+    "description": "图片地址, Default: -"
+  },
+  "image/previewMask": {
+    "type": "false | function | slot",
+    "description": "自定义 mask, Default: -"
+  },
+  "image/width": {
+    "type": "string | number",
+    "description": "图像宽度, Default: -"
+  },
+  "input/addonAfter": {
+    "type": "string|slot",
+    "description": "带标签的 input，设置后置标签, Default: "
+  },
+  "input/addonBefore": {
+    "type": "string|slot",
+    "description": "带标签的 input，设置前置标签, Default: "
+  },
+  "input/allowClear": {
+    "type": "boolean",
+    "description": "可以点击清除图标删除内容, Default: "
+  },
+  "input/bordered": {
+    "type": "boolean",
+    "description": "是否有边框, Default: true"
+  },
+  "input/clearIcon": {
+    "type": "slot",
+    "description": "自定义清除图标 （allowClear 为 true 时生效）, Default: `<CloseCircleFilled />`"
+  },
+  "input/defaultValue": {
+    "type": "string",
+    "description": "输入框默认内容, Default: "
+  },
+  "input/disabled": {
+    "type": "boolean",
+    "description": "是否禁用状态，默认为 false, Default: false"
+  },
+  "input/id": {
+    "type": "string",
+    "description": "输入框的 id, Default: "
+  },
+  "input/maxlength": {
+    "type": "number",
+    "description": "最大长度, Default: "
+  },
+  "input/prefix": {
+    "type": "string|slot",
+    "description": "带有前缀图标的 input, Default: "
+  },
+  "input/showCount": {
+    "type": "boolean",
+    "description": "是否展示字数, Default: false"
+  },
+  "input/status": {
+    "type": "'error' | 'warning'",
+    "description": "设置校验状态, Default: -"
+  },
+  "input/size": {
+    "type": "string",
+    "description": "控件大小。注：标准表单内的输入框大小限制为 `middle`。可选 `large` `middle` `small`, Default: -"
+  },
+  "input/suffix": {
+    "type": "string|slot",
+    "description": "带有后缀图标的 input, Default: "
+  },
+  "input/type": {
+    "type": "string",
+    "description": "声明 input 类型，同原生 input 标签的 type 属性，见：[MDN](https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/input#属性)(请直接使用 `<a-textarea />` 代替 `type=\"textarea\"`)。, Default: `text`"
+  },
+  "input/value(v-model)": {
+    "type": "string",
+    "description": "输入框内容, Default: "
+  },
+  "input/change": {
+    "type": "function(e)",
+    "description": "输入框内容变化时的回调, Default: "
+  },
+  "input/pressEnter": {
+    "type": "function(e)",
+    "description": "按下回车的回调, Default: "
+  },
+  "input-search/enterButton": {
+    "type": "boolean|slot",
+    "description": "是否有确认按钮，可设为按钮文字。该属性会与 addon 冲突。, Default: false"
+  },
+  "input-search/loading": {
+    "type": "boolean",
+    "description": "搜索 loading, Default: "
+  },
+  "input-search/search": {
+    "type": "function(value, event)",
+    "description": "点击搜索或按下回车键时的回调, Default: undefined"
+  },
+  "input-group/compact": {
+    "type": "boolean",
+    "description": "是否用紧凑模式, Default: false"
+  },
+  "input-group/size": {
+    "type": "string",
+    "description": "`Input.Group` 中所有的 `Input` 的大小，可选 `large` `default` `small`, Default: `default`"
+  },
+  "input-password/visible(v-model)": {
+    "type": "boolean",
+    "description": "密码是否可见, Default: false"
+  },
+  "input-password/iconRender": {
+    "type": "slot",
+    "description": "自定义切换按钮, Default: -"
+  },
+  "input-password/visibilityToggle": {
+    "type": "boolean",
+    "description": "是否显示切换按钮或者控制密码显隐, Default: true"
   },
   "input-number/addonAfter": {
     "type": "slot",
@@ -1634,110 +1738,6 @@
   "layout-sider/zeroWidthTriggerStyle": {
     "type": "object",
     "description": "指定当 `collapsedWidth` 为 0 时出现的特殊 trigger 的样式, Default: -"
-  },
-  "input/addonAfter": {
-    "type": "string|slot",
-    "description": "带标签的 input，设置后置标签, Default: "
-  },
-  "input/addonBefore": {
-    "type": "string|slot",
-    "description": "带标签的 input，设置前置标签, Default: "
-  },
-  "input/allowClear": {
-    "type": "boolean",
-    "description": "可以点击清除图标删除内容, Default: "
-  },
-  "input/bordered": {
-    "type": "boolean",
-    "description": "是否有边框, Default: true"
-  },
-  "input/clearIcon": {
-    "type": "slot",
-    "description": "自定义清除图标 （allowClear 为 true 时生效）, Default: `<CloseCircleFilled />`"
-  },
-  "input/defaultValue": {
-    "type": "string",
-    "description": "输入框默认内容, Default: "
-  },
-  "input/disabled": {
-    "type": "boolean",
-    "description": "是否禁用状态，默认为 false, Default: false"
-  },
-  "input/id": {
-    "type": "string",
-    "description": "输入框的 id, Default: "
-  },
-  "input/maxlength": {
-    "type": "number",
-    "description": "最大长度, Default: "
-  },
-  "input/prefix": {
-    "type": "string|slot",
-    "description": "带有前缀图标的 input, Default: "
-  },
-  "input/showCount": {
-    "type": "boolean",
-    "description": "是否展示字数, Default: false"
-  },
-  "input/status": {
-    "type": "'error' | 'warning'",
-    "description": "设置校验状态, Default: -"
-  },
-  "input/size": {
-    "type": "string",
-    "description": "控件大小。注：标准表单内的输入框大小限制为 `middle`。可选 `large` `middle` `small`, Default: -"
-  },
-  "input/suffix": {
-    "type": "string|slot",
-    "description": "带有后缀图标的 input, Default: "
-  },
-  "input/type": {
-    "type": "string",
-    "description": "声明 input 类型，同原生 input 标签的 type 属性，见：[MDN](https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/input#属性)(请直接使用 `<a-textarea />` 代替 `type=\"textarea\"`)。, Default: `text`"
-  },
-  "input/value(v-model)": {
-    "type": "string",
-    "description": "输入框内容, Default: "
-  },
-  "input/change": {
-    "type": "function(e)",
-    "description": "输入框内容变化时的回调, Default: "
-  },
-  "input/pressEnter": {
-    "type": "function(e)",
-    "description": "按下回车的回调, Default: "
-  },
-  "input-search/enterButton": {
-    "type": "boolean|slot",
-    "description": "是否有确认按钮，可设为按钮文字。该属性会与 addon 冲突。, Default: false"
-  },
-  "input-search/loading": {
-    "type": "boolean",
-    "description": "搜索 loading, Default: "
-  },
-  "input-search/search": {
-    "type": "function(value, event)",
-    "description": "点击搜索或按下回车键时的回调, Default: undefined"
-  },
-  "input-group/compact": {
-    "type": "boolean",
-    "description": "是否用紧凑模式, Default: false"
-  },
-  "input-group/size": {
-    "type": "string",
-    "description": "`Input.Group` 中所有的 `Input` 的大小，可选 `large` `default` `small`, Default: `default`"
-  },
-  "input-password/visible(v-model)": {
-    "type": "boolean",
-    "description": "密码是否可见, Default: false"
-  },
-  "input-password/iconRender": {
-    "type": "slot",
-    "description": "自定义切换按钮, Default: -"
-  },
-  "input-password/visibilityToggle": {
-    "type": "boolean",
-    "description": "是否显示切换按钮或者控制密码显隐, Default: true"
   },
   "list/bordered": {
     "type": "boolean",
@@ -2427,6 +2427,14 @@
     "type": "boolean",
     "description": "是否显示, Default: -"
   },
+  "popover/content": {
+    "type": "string|slot|VNode",
+    "description": "卡片内容, Default: -"
+  },
+  "popover/title": {
+    "type": "string|slot|VNode",
+    "description": "卡片标题, Default: -"
+  },
   "progress/format": {
     "type": "function(percent, successPercent)",
     "description": "内容的模板函数, Default: (percent) => percent + `%`"
@@ -2470,14 +2478,6 @@
   "progress/size": {
     "type": "number | [number, number] | \"small\" | \"default\"",
     "description": "进度条的尺寸, Default: \"default\""
-  },
-  "popover/content": {
-    "type": "string|slot|VNode",
-    "description": "卡片内容, Default: -"
-  },
-  "popover/title": {
-    "type": "string|slot|VNode",
-    "description": "卡片标题, Default: -"
   },
   "qrcode/value": {
     "type": "string",
@@ -2899,38 +2899,6 @@
     "type": "`large` | `small` | `default`",
     "description": "设置输入框的大小, Default: -"
   },
-  "space/align": {
-    "type": "`start` | `end` |`center` |`baseline`",
-    "description": "对齐方式, Default: -"
-  },
-  "space/direction": {
-    "type": "`vertical` | `horizontal`",
-    "description": "间距方向, Default: `horizontal`"
-  },
-  "space/size": {
-    "type": "`small` | `middle` | `large` | `number`",
-    "description": "间距大小, Default: `small`"
-  },
-  "space/split": {
-    "type": "VueNode | v-slot",
-    "description": "设置拆分, Default: -"
-  },
-  "space/wrap": {
-    "type": "boolean",
-    "description": "是否自动换行，仅在 `horizontal` 时有效, Default: false"
-  },
-  "space-compact/block": {
-    "type": "boolean",
-    "description": "将宽度调整为父元素宽度的选项, Default: false"
-  },
-  "space-compact/direction": {
-    "type": "`vertical` | `horizontal`",
-    "description": "指定排列方向, Default: `horizontal`"
-  },
-  "space-compact/size": {
-    "type": "`large` | `middle` | `small`",
-    "description": "子组件大小, Default: `middle`"
-  },
   "slider/autofocus": {
     "type": "boolean",
     "description": "自动获取焦点, Default: false"
@@ -2998,6 +2966,38 @@
   "slider/getTooltipPopupContainer": {
     "type": "Function",
     "description": "Tooltip 渲染父节点，默认渲染到 body 上。, Default: () => document.body"
+  },
+  "space/align": {
+    "type": "`start` | `end` |`center` |`baseline`",
+    "description": "对齐方式, Default: -"
+  },
+  "space/direction": {
+    "type": "`vertical` | `horizontal`",
+    "description": "间距方向, Default: `horizontal`"
+  },
+  "space/size": {
+    "type": "`small` | `middle` | `large` | `number`",
+    "description": "间距大小, Default: `small`"
+  },
+  "space/split": {
+    "type": "VueNode | v-slot",
+    "description": "设置拆分, Default: -"
+  },
+  "space/wrap": {
+    "type": "boolean",
+    "description": "是否自动换行，仅在 `horizontal` 时有效, Default: false"
+  },
+  "space-compact/block": {
+    "type": "boolean",
+    "description": "将宽度调整为父元素宽度的选项, Default: false"
+  },
+  "space-compact/direction": {
+    "type": "`vertical` | `horizontal`",
+    "description": "指定排列方向, Default: `horizontal`"
+  },
+  "space-compact/size": {
+    "type": "`large` | `middle` | `small`",
+    "description": "子组件大小, Default: `middle`"
   },
   "spin/delay": {
     "type": "number (毫秒)",
@@ -3158,6 +3158,42 @@
   "steps-step/title": {
     "type": "string | slot",
     "description": "标题, Default: -"
+  },
+  "switch/autofocus": {
+    "type": "boolean",
+    "description": "组件自动获取焦点, Default: false"
+  },
+  "switch/checked(v-model)": {
+    "type": "checkedValue | unCheckedValue",
+    "description": "指定当前是否选中, Default: false"
+  },
+  "switch/checkedChildren": {
+    "type": "string|slot",
+    "description": "选中时的内容, Default: "
+  },
+  "switch/checkedValue": {
+    "type": "boolean | string | number",
+    "description": "选中时的值, Default: true"
+  },
+  "switch/disabled": {
+    "type": "boolean",
+    "description": "是否禁用, Default: false"
+  },
+  "switch/loading": {
+    "type": "boolean",
+    "description": "加载中的开关, Default: false"
+  },
+  "switch/size": {
+    "type": "string",
+    "description": "开关大小，可选值：`default` `small`, Default: default"
+  },
+  "switch/unCheckedChildren": {
+    "type": "string|slot",
+    "description": "非选中时的内容, Default: "
+  },
+  "switch/unCheckedValue": {
+    "type": "boolean | string | number",
+    "description": "非选中时的值, Default: false"
   },
   "table/bodyCell": {
     "type": "v-slot:bodyCell=\"{text, record, index, column}\"",
@@ -3323,66 +3359,6 @@
     "type": "Function({ text, column, record, index }) => any，此处的 text 是经过其它定义单元格 api 处理后的数据，有可能是 VNode | string | number 类型",
     "description": "数据渲染前可以再次改变，一般用于空数据的默认配置，可以通过 [ConfigProvider](/components/config-provider-cn/) 全局统一配置, Default: -"
   },
-  "switch/autofocus": {
-    "type": "boolean",
-    "description": "组件自动获取焦点, Default: false"
-  },
-  "switch/checked(v-model)": {
-    "type": "checkedValue | unCheckedValue",
-    "description": "指定当前是否选中, Default: false"
-  },
-  "switch/checkedChildren": {
-    "type": "string|slot",
-    "description": "选中时的内容, Default: "
-  },
-  "switch/checkedValue": {
-    "type": "boolean | string | number",
-    "description": "选中时的值, Default: true"
-  },
-  "switch/disabled": {
-    "type": "boolean",
-    "description": "是否禁用, Default: false"
-  },
-  "switch/loading": {
-    "type": "boolean",
-    "description": "加载中的开关, Default: false"
-  },
-  "switch/size": {
-    "type": "string",
-    "description": "开关大小，可选值：`default` `small`, Default: default"
-  },
-  "switch/unCheckedChildren": {
-    "type": "string|slot",
-    "description": "非选中时的内容, Default: "
-  },
-  "switch/unCheckedValue": {
-    "type": "boolean | string | number",
-    "description": "非选中时的值, Default: false"
-  },
-  "tag/closable": {
-    "type": "boolean",
-    "description": "标签是否可以关闭, Default: false"
-  },
-  "tag/closeIcon": {
-    "type": "VNode | slot",
-    "description": "自定义关闭按钮, Default: -"
-  },
-  "tag/color": {
-    "type": "string",
-    "description": "标签色, Default: -"
-  },
-  "tag/icon": {
-    "type": "VNode | slot",
-    "description": "设置图标, Default: -"
-  },
-  "tag/bordered": {
-    "type": "boolean",
-    "description": "是否有边框, Default: `true`"
-  },
-  "tag-checkable-tag/checked(v-model)": {
-    "type": "boolean",
-    "description": "设置标签的选中状态, Default: false"
-  },
   "tabs/activeKey(v-model)": {
     "type": "string",
     "description": "当前激活 tab 面板的 key, Default: 无"
@@ -3474,6 +3450,30 @@
   "tabs-tab-pane/closeIcon": {
     "type": "-",
     "description": "自定义关闭图标，`在 type=\"editable-card\"`时有效, Default: undefined"
+  },
+  "tag/closable": {
+    "type": "boolean",
+    "description": "标签是否可以关闭, Default: false"
+  },
+  "tag/closeIcon": {
+    "type": "VNode | slot",
+    "description": "自定义关闭按钮, Default: -"
+  },
+  "tag/color": {
+    "type": "string",
+    "description": "标签色, Default: -"
+  },
+  "tag/icon": {
+    "type": "VNode | slot",
+    "description": "设置图标, Default: -"
+  },
+  "tag/bordered": {
+    "type": "boolean",
+    "description": "是否有边框, Default: `true`"
+  },
+  "tag-checkable-tag/checked(v-model)": {
+    "type": "boolean",
+    "description": "设置标签的选中状态, Default: false"
   },
   "time-picker/allowClear": {
     "type": "boolean",

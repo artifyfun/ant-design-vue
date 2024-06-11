@@ -28,7 +28,7 @@
     "exportName": "Tabs",
     "destructuring": true
   },
-  "group": "Data Display",
+  "group": "数据展示",
   "category": "Ant Design Vue",
   "configure": {
     "loop": true,
@@ -111,6 +111,29 @@
             "device": []
           },
           {
+            "property": "centered",
+            "label": {
+              "text": {
+                "zh_CN": "centered"
+              }
+            },
+            "description": {
+              "zh_CN": "标签居中展示"
+            },
+            "required": false,
+            "readOnly": false,
+            "disabled": false,
+            "cols": 12,
+            "labelPosition": "top",
+            "type": "boolean",
+            "defaultValue": false,
+            "widget": {
+              "component": "MetaSwitch",
+              "props": {}
+            },
+            "device": []
+          },
+          {
             "property": "destroyInactiveTabPane",
             "label": {
               "text": {
@@ -174,23 +197,8 @@
             "type": "string",
             "defaultValue": "middle",
             "widget": {
-              "component": "MetaSelect",
-              "props": {
-                "options": [
-                  {
-                    "label": "large",
-                    "value": "large"
-                  },
-                  {
-                    "label": "middle",
-                    "value": "middle"
-                  },
-                  {
-                    "label": "small",
-                    "value": "small"
-                  }
-                ]
-              }
+              "component": "MetaInput",
+              "props": {}
             },
             "device": []
           },
@@ -234,27 +242,8 @@
             "type": "string",
             "defaultValue": "top",
             "widget": {
-              "component": "MetaSelect",
-              "props": {
-                "options": [
-                  {
-                    "label": "top",
-                    "value": "top"
-                  },
-                  {
-                    "label": "right",
-                    "value": "right"
-                  },
-                  {
-                    "label": "bottom",
-                    "value": "bottom"
-                  },
-                  {
-                    "label": "left",
-                    "value": "left"
-                  }
-                ]
-              }
+              "component": "MetaInput",
+              "props": {}
             },
             "device": []
           },
@@ -290,50 +279,6 @@
             },
             "description": {
               "zh_CN": "切换面板的回调"
-            },
-            "required": false,
-            "readOnly": false,
-            "disabled": false,
-            "cols": 12,
-            "labelPosition": "top",
-            "type": "function",
-            "widget": {
-              "component": "MetaCodeEditor",
-              "props": {}
-            },
-            "device": []
-          },
-          {
-            "property": "nextClick",
-            "label": {
-              "text": {
-                "zh_CN": "nextClick"
-              }
-            },
-            "description": {
-              "zh_CN": "Callback executed when next button is clicked"
-            },
-            "required": false,
-            "readOnly": false,
-            "disabled": false,
-            "cols": 12,
-            "labelPosition": "top",
-            "type": "function",
-            "widget": {
-              "component": "MetaCodeEditor",
-              "props": {}
-            },
-            "device": []
-          },
-          {
-            "property": "prevClick",
-            "label": {
-              "text": {
-                "zh_CN": "prevClick"
-              }
-            },
-            "description": {
-              "zh_CN": "Callback executed when prev button is clicked"
             },
             "required": false,
             "readOnly": false,

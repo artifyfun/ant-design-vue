@@ -1,0 +1,224 @@
+{
+  "id": 1,
+  "version": "4.1.2",
+  "name": {
+    "zh_CN": "统计数值"
+  },
+  "component": "AStatisticCountdown",
+  "icon": "statistic-countdown",
+  "description": "展示统计数值。",
+  "doc_url": "",
+  "screenshot": "https://mdn.alipayobjects.com/huamei_7uahnr/afts/img/A*BPWDRbSYxJ4AAAAAAAAAAAAADrJ8AQ/original",
+  "tags": "",
+  "keywords": "",
+  "dev_mode": "proCode",
+  "npm": {
+    "package": "ant-design-vue",
+    "version": "",
+    "dependencies": [
+      "https://unpkg.com/dayjs/dayjs.min.js",
+      "https://unpkg.com/dayjs/plugin/customParseFormat.js",
+      "https://unpkg.com/dayjs/plugin/weekday.js",
+      "https://unpkg.com/dayjs/plugin/localeData.js",
+      "https://unpkg.com/dayjs/plugin/weekOfYear.js",
+      "https://unpkg.com/dayjs/plugin/weekYear.js",
+      "https://unpkg.com/dayjs/plugin/advancedFormat.js",
+      "https://unpkg.com/dayjs/plugin/quarterOfYear.js"
+    ],
+    "exportName": "StatisticCountdown",
+    "destructuring": true
+  },
+  "group": "数据展示",
+  "category": "Ant Design Vue",
+  "configure": {
+    "loop": true,
+    "condition": true,
+    "styles": true,
+    "isContainer": false,
+    "isModal": false,
+    "isPopper": false,
+    "nestingRule": {
+      "childWhitelist": "",
+      "parentWhitelist": "",
+      "descendantBlacklist": "",
+      "ancestorWhitelist": ""
+    },
+    "isNullNode": false,
+    "isLayout": false,
+    "rootSelector": "",
+    "shortcuts": {
+      "properties": []
+    },
+    "contextMenu": {
+      "actions": ["copy", "remove", "insert", "updateAttr", "bindEevent", "createBlock"],
+      "disable": []
+    },
+    "invalidity": [""],
+    "clickCapture": true,
+    "framework": "Vue"
+  },
+  "schema": {
+    "properties": [
+      {
+        "name": "0",
+        "label": {
+          "zh_CN": "基础属性"
+        },
+        "content": [
+          {
+            "property": "format",
+            "label": {
+              "text": {
+                "zh_CN": "format"
+              }
+            },
+            "description": {
+              "zh_CN": "格式化倒计时展示，参考 [dayjs](https://day.js.org/)"
+            },
+            "required": false,
+            "readOnly": false,
+            "disabled": false,
+            "cols": 12,
+            "labelPosition": "top",
+            "type": "string",
+            "defaultValue": "'HH:mm:ss'",
+            "widget": {
+              "component": "MetaInput",
+              "props": {}
+            },
+            "device": []
+          },
+          {
+            "property": "prefix",
+            "label": {
+              "text": {
+                "zh_CN": "prefix"
+              }
+            },
+            "description": {
+              "zh_CN": "设置数值的前缀"
+            },
+            "required": false,
+            "readOnly": false,
+            "disabled": false,
+            "cols": 12,
+            "labelPosition": "top",
+            "type": "string",
+            "widget": {
+              "component": "MetaInput",
+              "props": {}
+            },
+            "device": []
+          },
+          {
+            "property": "suffix",
+            "label": {
+              "text": {
+                "zh_CN": "suffix"
+              }
+            },
+            "description": {
+              "zh_CN": "设置数值的后缀"
+            },
+            "required": false,
+            "readOnly": false,
+            "disabled": false,
+            "cols": 12,
+            "labelPosition": "top",
+            "type": "string",
+            "widget": {
+              "component": "MetaInput",
+              "props": {}
+            },
+            "device": []
+          },
+          {
+            "property": "title",
+            "label": {
+              "text": {
+                "zh_CN": "title"
+              }
+            },
+            "description": {
+              "zh_CN": "数值的标题"
+            },
+            "required": false,
+            "readOnly": false,
+            "disabled": false,
+            "cols": 12,
+            "labelPosition": "top",
+            "type": "string",
+            "widget": {
+              "component": "MetaInput",
+              "props": {}
+            },
+            "device": []
+          },
+          {
+            "property": "value",
+            "label": {
+              "text": {
+                "zh_CN": "value"
+              }
+            },
+            "description": {
+              "zh_CN": "数值内容"
+            },
+            "required": false,
+            "readOnly": false,
+            "disabled": false,
+            "cols": 12,
+            "labelPosition": "top",
+            "type": "number",
+            "widget": {
+              "component": "MetaNumber",
+              "props": {}
+            },
+            "device": []
+          }
+        ],
+        "description": {
+          "zh_CN": ""
+        }
+      }
+    ],
+    "events": {},
+    "slots": {
+      "prefix": {
+        "label": {
+          "zh_CN": "prefix"
+        },
+        "description": {
+          "zh_CN": "设置数值的前缀"
+        }
+      },
+      "suffix": {
+        "label": {
+          "zh_CN": "suffix"
+        },
+        "description": {
+          "zh_CN": "设置数值的后缀"
+        }
+      },
+      "title": {
+        "label": {
+          "zh_CN": "title"
+        },
+        "description": {
+          "zh_CN": "数值的标题"
+        }
+      }
+    }
+  },
+  "snippets": [
+    {
+      "name": {
+        "zh_CN": "统计数值"
+      },
+      "icon": "statistic-countdown",
+      "screenshot": "",
+      "snippetName": "AStatisticCountdown",
+      "schema": {}
+    }
+  ]
+}

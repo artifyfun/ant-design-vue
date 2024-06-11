@@ -28,7 +28,7 @@
     "exportName": "Menu",
     "destructuring": true
   },
-  "group": "Navigation",
+  "group": "导航",
   "category": "Ant Design Vue",
   "configure": {
     "loop": true,
@@ -214,30 +214,6 @@
             "widget": {
               "component": "MetaSwitch",
               "props": {}
-            },
-            "device": []
-          },
-          {
-            "property": "style",
-            "label": {
-              "text": {
-                "zh_CN": "style"
-              }
-            },
-            "description": {
-              "zh_CN": "style of the root node"
-            },
-            "required": false,
-            "readOnly": false,
-            "disabled": false,
-            "cols": 12,
-            "labelPosition": "top",
-            "type": "object",
-            "widget": {
-              "component": "MetaCodeEditor",
-              "props": {
-                "language": "json"
-              }
             },
             "device": []
           },

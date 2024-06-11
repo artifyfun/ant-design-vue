@@ -28,7 +28,7 @@
     "exportName": "Transfer",
     "destructuring": true
   },
-  "group": "Data Entry",
+  "group": "数据录入",
   "category": "Ant Design Vue",
   "configure": {
     "loop": true,
@@ -175,7 +175,6 @@
             "cols": 12,
             "labelPosition": "top",
             "type": "boolean",
-            "defaultValue": false,
             "widget": {
               "component": "MetaSwitch",
               "props": {}
@@ -362,64 +361,7 @@
         }
       }
     ],
-    "events": {
-      "onChange": {
-        "label": {
-          "zh_CN": "onChange"
-        },
-        "description": {
-          "zh_CN": "A callback function that is executed when the transfer between columns is complete."
-        },
-        "type": "event",
-        "functionInfo": {
-          "params": [],
-          "returns": {}
-        },
-        "defaultValue": ""
-      },
-      "onScroll": {
-        "label": {
-          "zh_CN": "onScroll"
-        },
-        "description": {
-          "zh_CN": "A callback function which is executed when scroll options list"
-        },
-        "type": "event",
-        "functionInfo": {
-          "params": [],
-          "returns": {}
-        },
-        "defaultValue": ""
-      },
-      "onSearch": {
-        "label": {
-          "zh_CN": "onSearch"
-        },
-        "description": {
-          "zh_CN": "A callback function which is executed when search field are changed"
-        },
-        "type": "event",
-        "functionInfo": {
-          "params": [],
-          "returns": {}
-        },
-        "defaultValue": ""
-      },
-      "onSelectChange": {
-        "label": {
-          "zh_CN": "onSelectChange"
-        },
-        "description": {
-          "zh_CN": "A callback function which is executed when selected items are changed."
-        },
-        "type": "event",
-        "functionInfo": {
-          "params": [],
-          "returns": {}
-        },
-        "defaultValue": ""
-      }
-    },
+    "events": {},
     "slots": {
       "footer": {
         "label": {

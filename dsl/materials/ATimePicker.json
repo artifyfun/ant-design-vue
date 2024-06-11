@@ -28,7 +28,7 @@
     "exportName": "TimePicker",
     "destructuring": true
   },
-  "group": "Data Entry",
+  "group": "数据录入",
   "category": "Ant Design Vue",
   "configure": {
     "loop": true,
@@ -356,7 +356,7 @@
             "cols": 12,
             "labelPosition": "top",
             "type": "string",
-            "defaultValue": "Select a time",
+            "defaultValue": "请选择时间",
             "widget": {
               "component": "MetaInput",
               "props": {}
@@ -382,6 +382,30 @@
             "widget": {
               "component": "MetaInput",
               "props": {}
+            },
+            "device": []
+          },
+          {
+            "property": "popupStyle",
+            "label": {
+              "text": {
+                "zh_CN": "popupStyle"
+              }
+            },
+            "description": {
+              "zh_CN": "弹出层样式对象"
+            },
+            "required": false,
+            "readOnly": false,
+            "disabled": false,
+            "cols": 12,
+            "labelPosition": "top",
+            "type": "object",
+            "widget": {
+              "component": "MetaCodeEditor",
+              "props": {
+                "language": "json"
+              }
             },
             "device": []
           },
@@ -431,6 +455,39 @@
             "device": []
           },
           {
+            "property": "status",
+            "label": {
+              "text": {
+                "zh_CN": "status"
+              }
+            },
+            "description": {
+              "zh_CN": "设置校验状态"
+            },
+            "required": false,
+            "readOnly": false,
+            "disabled": false,
+            "cols": 12,
+            "labelPosition": "top",
+            "type": "string",
+            "widget": {
+              "component": "MetaSelect",
+              "props": {
+                "options": [
+                  {
+                    "label": "error",
+                    "value": "error"
+                  },
+                  {
+                    "label": "warning",
+                    "value": "warning"
+                  }
+                ]
+              }
+            },
+            "device": []
+          },
+          {
             "property": "use12Hours",
             "label": {
               "text": {
@@ -459,36 +516,7 @@
         }
       }
     ],
-    "events": {
-      "onChange": {
-        "label": {
-          "zh_CN": "onChange"
-        },
-        "description": {
-          "zh_CN": "a callback function, can be executed when the selected time is changing"
-        },
-        "type": "event",
-        "functionInfo": {
-          "params": [],
-          "returns": {}
-        },
-        "defaultValue": ""
-      },
-      "onOpenChange": {
-        "label": {
-          "zh_CN": "onOpenChange"
-        },
-        "description": {
-          "zh_CN": "a callback function which will be called while panel opening/closing"
-        },
-        "type": "event",
-        "functionInfo": {
-          "params": [],
-          "returns": {}
-        },
-        "defaultValue": ""
-      }
-    },
+    "events": {},
     "slots": {
       "clearIcon": {
         "label": {

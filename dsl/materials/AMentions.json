@@ -28,7 +28,7 @@
     "exportName": "Mentions",
     "destructuring": true
   },
-  "group": "Data Entry",
+  "group": "数据录入",
   "category": "Ant Design Vue",
   "configure": {
     "loop": true,
@@ -64,14 +64,248 @@
         "label": {
           "zh_CN": "基础属性"
         },
-        "content": [],
+        "content": [
+          {
+            "property": "autofocus",
+            "label": {
+              "text": {
+                "zh_CN": "autofocus"
+              }
+            },
+            "description": {
+              "zh_CN": "自动获得焦点"
+            },
+            "required": false,
+            "readOnly": false,
+            "disabled": false,
+            "cols": 12,
+            "labelPosition": "top",
+            "type": "boolean",
+            "defaultValue": false,
+            "widget": {
+              "component": "MetaSwitch",
+              "props": {}
+            },
+            "device": []
+          },
+          {
+            "property": "defaultValue",
+            "label": {
+              "text": {
+                "zh_CN": "defaultValue"
+              }
+            },
+            "description": {
+              "zh_CN": "默认值"
+            },
+            "required": false,
+            "readOnly": false,
+            "disabled": false,
+            "cols": 12,
+            "labelPosition": "top",
+            "type": "string",
+            "defaultValue": "",
+            "widget": {
+              "component": "MetaInput",
+              "props": {}
+            },
+            "device": []
+          },
+          {
+            "property": "notFoundContent",
+            "label": {
+              "text": {
+                "zh_CN": "notFoundContent"
+              }
+            },
+            "description": {
+              "zh_CN": "当下拉列表为空时显示的内容"
+            },
+            "required": false,
+            "readOnly": false,
+            "disabled": false,
+            "cols": 12,
+            "labelPosition": "top",
+            "type": "string",
+            "defaultValue": "'Not Found'",
+            "widget": {
+              "component": "MetaSelect",
+              "props": {
+                "options": [
+                  {
+                    "label": "string",
+                    "value": "string"
+                  },
+                  {
+                    "label": "slot",
+                    "value": "slot"
+                  }
+                ]
+              }
+            },
+            "device": []
+          },
+          {
+            "property": "placement",
+            "label": {
+              "text": {
+                "zh_CN": "placement"
+              }
+            },
+            "description": {
+              "zh_CN": "弹出层展示位置"
+            },
+            "required": false,
+            "readOnly": false,
+            "disabled": false,
+            "cols": 12,
+            "labelPosition": "top",
+            "type": "string",
+            "defaultValue": "bottom",
+            "widget": {
+              "component": "MetaSelect",
+              "props": {
+                "options": [
+                  {
+                    "label": "top",
+                    "value": "top"
+                  },
+                  {
+                    "label": "bottom",
+                    "value": "bottom"
+                  }
+                ]
+              }
+            },
+            "device": []
+          },
+          {
+            "property": "prefix",
+            "label": {
+              "text": {
+                "zh_CN": "prefix"
+              }
+            },
+            "description": {
+              "zh_CN": "设置触发关键字"
+            },
+            "required": false,
+            "readOnly": false,
+            "disabled": false,
+            "cols": 12,
+            "labelPosition": "top",
+            "type": "string",
+            "defaultValue": "'@'",
+            "widget": {
+              "component": "MetaInput",
+              "props": {}
+            },
+            "device": []
+          },
+          {
+            "property": "split",
+            "label": {
+              "text": {
+                "zh_CN": "split"
+              }
+            },
+            "description": {
+              "zh_CN": "设置选中项前后分隔符"
+            },
+            "required": false,
+            "readOnly": false,
+            "disabled": false,
+            "cols": 12,
+            "labelPosition": "top",
+            "type": "string",
+            "defaultValue": "' '",
+            "widget": {
+              "component": "MetaInput",
+              "props": {}
+            },
+            "device": []
+          },
+          {
+            "property": "status",
+            "label": {
+              "text": {
+                "zh_CN": "status"
+              }
+            },
+            "description": {
+              "zh_CN": "设置校验状态"
+            },
+            "required": false,
+            "readOnly": false,
+            "disabled": false,
+            "cols": 12,
+            "labelPosition": "top",
+            "type": "string",
+            "widget": {
+              "component": "MetaSelect",
+              "props": {
+                "options": [
+                  {
+                    "label": "error",
+                    "value": "error"
+                  },
+                  {
+                    "label": "warning",
+                    "value": "warning"
+                  }
+                ]
+              }
+            },
+            "device": []
+          },
+          {
+            "property": "value",
+            "label": {
+              "text": {
+                "zh_CN": "value(v-model)"
+              }
+            },
+            "description": {
+              "zh_CN": "设置值"
+            },
+            "required": false,
+            "readOnly": false,
+            "disabled": false,
+            "cols": 12,
+            "labelPosition": "top",
+            "type": "string",
+            "defaultValue": "",
+            "widget": {
+              "component": "MetaInput",
+              "props": {}
+            },
+            "device": []
+          }
+        ],
         "description": {
           "zh_CN": ""
         }
       }
     ],
     "events": {},
-    "slots": {}
+    "slots": {
+      "notFoundContent": {
+        "label": {
+          "zh_CN": "notFoundContent"
+        },
+        "description": {
+          "zh_CN": "当下拉列表为空时显示的内容"
+        }
+      },
+      "option": {
+        "label": {
+          "zh_CN": "option"
+        },
+        "description": {
+          "zh_CN": "通过 option 插槽，自定义节点"
+        }
+      }
+    }
   },
   "snippets": [
     {

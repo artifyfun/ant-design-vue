@@ -28,7 +28,7 @@
     "exportName": "InputNumber",
     "destructuring": true
   },
-  "group": "Data Entry",
+  "group": "数据录入",
   "category": "Ant Design Vue",
   "configure": {
     "loop": true,
@@ -467,50 +467,7 @@
         }
       }
     ],
-    "events": {
-      "onChange": {
-        "label": {
-          "zh_CN": "onChange"
-        },
-        "description": {
-          "zh_CN": "The callback triggered when the value is changed."
-        },
-        "type": "event",
-        "functionInfo": {
-          "params": [],
-          "returns": {}
-        },
-        "defaultValue": ""
-      },
-      "onPressEnter": {
-        "label": {
-          "zh_CN": "onPressEnter"
-        },
-        "description": {
-          "zh_CN": "The callback function that is triggered when Enter key is pressed."
-        },
-        "type": "event",
-        "functionInfo": {
-          "params": [],
-          "returns": {}
-        },
-        "defaultValue": ""
-      },
-      "onStep": {
-        "label": {
-          "zh_CN": "step"
-        },
-        "description": {
-          "zh_CN": "每次改变步数，可以为小数"
-        },
-        "type": "event",
-        "functionInfo": {
-          "params": [],
-          "returns": {}
-        },
-        "defaultValue": ""
-      }
-    },
+    "events": {},
     "slots": {
       "addonAfter": {
         "label": {

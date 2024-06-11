@@ -22,6 +22,9 @@ const ignoreTags = [
   'a-auto-complete-opt-group',
   'a-auto-complete-option',
   'a-avatar-group',
+  '自定义',
+  'sub-menu',
+  'menu-sub-menu',
 ];
 
 function getComponents(type = 'zh-CN') {

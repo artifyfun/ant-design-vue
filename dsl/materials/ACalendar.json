@@ -28,7 +28,7 @@
     "exportName": "Calendar",
     "destructuring": true
   },
-  "group": "Data Display",
+  "group": "数据展示",
   "category": "Ant Design Vue",
   "configure": {
     "loop": true,
@@ -130,19 +130,8 @@
             "type": "string",
             "defaultValue": "month",
             "widget": {
-              "component": "MetaSelect",
-              "props": {
-                "options": [
-                  {
-                    "label": "month",
-                    "value": "month"
-                  },
-                  {
-                    "label": "year",
-                    "value": "year"
-                  }
-                ]
-              }
+              "component": "MetaInput",
+              "props": {}
             },
             "device": []
           }
@@ -152,50 +141,7 @@
         }
       }
     ],
-    "events": {
-      "onChange": {
-        "label": {
-          "zh_CN": "onChange"
-        },
-        "description": {
-          "zh_CN": "Callback for when value change"
-        },
-        "type": "event",
-        "functionInfo": {
-          "params": [],
-          "returns": {}
-        },
-        "defaultValue": ""
-      },
-      "onPanelChange": {
-        "label": {
-          "zh_CN": "onPanelChange"
-        },
-        "description": {
-          "zh_CN": "Callback for when panel changes"
-        },
-        "type": "event",
-        "functionInfo": {
-          "params": [],
-          "returns": {}
-        },
-        "defaultValue": ""
-      },
-      "onSelect": {
-        "label": {
-          "zh_CN": "onSelect"
-        },
-        "description": {
-          "zh_CN": "Callback for when a date is selected, include source info"
-        },
-        "type": "event",
-        "functionInfo": {
-          "params": [],
-          "returns": {}
-        },
-        "defaultValue": ""
-      }
-    },
+    "events": {},
     "slots": {
       "dateCellRender": {
         "label": {

@@ -28,7 +28,7 @@
     "exportName": "Timeline",
     "destructuring": true
   },
-  "group": "Data Display",
+  "group": "数据展示",
   "category": "Ant Design Vue",
   "configure": {
     "loop": true,
@@ -81,7 +81,7 @@
             "cols": 12,
             "labelPosition": "top",
             "type": "string",
-            "defaultValue": "left",
+            "defaultValue": "",
             "widget": {
               "component": "MetaSelect",
               "props": {

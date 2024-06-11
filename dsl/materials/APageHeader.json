@@ -27,7 +27,7 @@
     "exportName": "PageHeader",
     "destructuring": true
   },
-  "group": "Navigation",
+  "group": "导航",
   "category": "Ant Design Vue",
   "configure": {
     "loop": true,

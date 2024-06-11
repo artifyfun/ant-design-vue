@@ -28,7 +28,7 @@
     "exportName": "Image",
     "destructuring": true
   },
-  "group": "Data Display",
+  "group": "数据展示",
   "category": "Ant Design Vue",
   "configure": {
     "loop": true,
@@ -248,22 +248,7 @@
         }
       }
     ],
-    "events": {
-      "onError": {
-        "label": {
-          "zh_CN": "onError"
-        },
-        "description": {
-          "zh_CN": "Load failed callback"
-        },
-        "type": "event",
-        "functionInfo": {
-          "params": [],
-          "returns": {}
-        },
-        "defaultValue": ""
-      }
-    },
+    "events": {},
     "slots": {
       "placeholder": {
         "label": {

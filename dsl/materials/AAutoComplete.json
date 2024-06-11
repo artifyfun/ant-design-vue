@@ -28,7 +28,7 @@
     "exportName": "AutoComplete",
     "destructuring": true
   },
-  "group": "Data Entry",
+  "group": "数据录入",
   "category": "Ant Design Vue",
   "configure": {
     "loop": true,
@@ -356,8 +356,19 @@
             "labelPosition": "top",
             "type": "string",
             "widget": {
-              "component": "MetaInput",
-              "props": {}
+              "component": "MetaSelect",
+              "props": {
+                "options": [
+                  {
+                    "label": "string",
+                    "value": "string"
+                  },
+                  {
+                    "label": "slot",
+                    "value": "slot"
+                  }
+                ]
+              }
             },
             "device": []
           },
@@ -422,106 +433,7 @@
         }
       }
     ],
-    "events": {
-      "onBlur": {
-        "label": {
-          "zh_CN": "onBlur"
-        },
-        "description": {
-          "zh_CN": "Called when leaving the component."
-        },
-        "type": "event",
-        "functionInfo": {
-          "params": [],
-          "returns": {}
-        },
-        "defaultValue": ""
-      },
-      "onChange": {
-        "label": {
-          "zh_CN": "onChange"
-        },
-        "description": {
-          "zh_CN": "Called when select an option or input value change, or value of input is changed"
-        },
-        "type": "event",
-        "functionInfo": {
-          "params": [],
-          "returns": {}
-        },
-        "defaultValue": ""
-      },
-      "onDropdownVisibleChange": {
-        "label": {
-          "zh_CN": "onDropdownVisibleChange"
-        },
-        "description": {
-          "zh_CN": "Call when dropdown open"
-        },
-        "type": "event",
-        "functionInfo": {
-          "params": [],
-          "returns": {}
-        },
-        "defaultValue": ""
-      },
-      "onFocus": {
-        "label": {
-          "zh_CN": "onFocus"
-        },
-        "description": {
-          "zh_CN": "Called when entering the component"
-        },
-        "type": "event",
-        "functionInfo": {
-          "params": [],
-          "returns": {}
-        },
-        "defaultValue": ""
-      },
-      "onSearch": {
-        "label": {
-          "zh_CN": "onSearch"
-        },
-        "description": {
-          "zh_CN": "Called when searching items."
-        },
-        "type": "event",
-        "functionInfo": {
-          "params": [],
-          "returns": {}
-        },
-        "defaultValue": ""
-      },
-      "onSelect": {
-        "label": {
-          "zh_CN": "onSelect"
-        },
-        "description": {
-          "zh_CN": "Called when a option is selected. param is options value and option instance."
-        },
-        "type": "event",
-        "functionInfo": {
-          "params": [],
-          "returns": {}
-        },
-        "defaultValue": ""
-      },
-      "onClear": {
-        "label": {
-          "zh_CN": "onClear"
-        },
-        "description": {
-          "zh_CN": "Called when clear"
-        },
-        "type": "event",
-        "functionInfo": {
-          "params": [],
-          "returns": {}
-        },
-        "defaultValue": ""
-      }
-    },
+    "events": {},
     "slots": {
       "clearIcon": {
         "label": {
@@ -531,12 +443,12 @@
           "zh_CN": "使用插槽自定义清除按钮"
         }
       },
-      "default (for customize input element)": {
+      "default (自定义输入框)": {
         "label": {
-          "zh_CN": "default (for customize input element)"
+          "zh_CN": "default (自定义输入框)"
         },
         "description": {
-          "zh_CN": "customize input element"
+          "zh_CN": "自定义输入框"
         }
       },
       "option": {
@@ -545,6 +457,14 @@
         },
         "description": {
           "zh_CN": "通过 option 插槽，自定义节点"
+        }
+      },
+      "placeholder": {
+        "label": {
+          "zh_CN": "placeholder"
+        },
+        "description": {
+          "zh_CN": "输入框提示"
         }
       }
     }

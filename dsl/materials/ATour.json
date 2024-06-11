@@ -28,7 +28,7 @@
     "exportName": "Tour",
     "destructuring": true
   },
-  "group": "Data Display",
+  "group": "数据展示",
   "category": "Ant Design Vue",
   "configure": {
     "loop": true,
@@ -108,6 +108,40 @@
             "widget": {
               "component": "MetaInput",
               "props": {}
+            },
+            "device": []
+          },
+          {
+            "property": "type",
+            "label": {
+              "text": {
+                "zh_CN": "type"
+              }
+            },
+            "description": {
+              "zh_CN": "类型，影响底色与文字颜色"
+            },
+            "required": false,
+            "readOnly": false,
+            "disabled": false,
+            "cols": 12,
+            "labelPosition": "top",
+            "type": "string",
+            "defaultValue": "default",
+            "widget": {
+              "component": "MetaSelect",
+              "props": {
+                "options": [
+                  {
+                    "label": "default",
+                    "value": "default"
+                  },
+                  {
+                    "label": "primary",
+                    "value": "primary"
+                  }
+                ]
+              }
             },
             "device": []
           },
@@ -224,7 +258,7 @@
           "zh_CN": "onClose"
         },
         "description": {
-          "zh_CN": "Callback function on shutdown"
+          "zh_CN": "关闭引导时的回调函数"
         },
         "type": "event",
         "functionInfo": {
@@ -238,7 +272,7 @@
           "zh_CN": "onFinish"
         },
         "description": {
-          "zh_CN": "Callback function on finished"
+          "zh_CN": "引导完成时的回调"
         },
         "type": "event",
         "functionInfo": {
@@ -252,7 +286,7 @@
           "zh_CN": "onChange"
         },
         "description": {
-          "zh_CN": "Callback when the step changes. Current is the previous step"
+          "zh_CN": "步骤改变时的回调，current 为当前前的步骤"
         },
         "type": "event",
         "functionInfo": {

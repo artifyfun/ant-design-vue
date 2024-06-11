@@ -28,7 +28,7 @@
     "exportName": "DatePicker",
     "destructuring": true
   },
-  "group": "Data Entry",
+  "group": "数据录入",
   "category": "Ant Design Vue",
   "configure": {
     "loop": true,
@@ -477,20 +477,20 @@
           "zh_CN": "自定义下一个图标"
         }
       },
-      "presets": {
-        "label": {
-          "zh_CN": "presets"
-        },
-        "description": {
-          "zh_CN": "预设时间范围快捷选择"
-        }
-      },
       "prevIcon": {
         "label": {
           "zh_CN": "prevIcon"
         },
         "description": {
           "zh_CN": "自定义上一个图标"
+        }
+      },
+      "presets": {
+        "label": {
+          "zh_CN": "presets"
+        },
+        "description": {
+          "zh_CN": "预设时间范围快捷选择"
         }
       },
       "suffixIcon": {

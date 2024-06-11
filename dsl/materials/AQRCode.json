@@ -28,7 +28,7 @@
     "exportName": "QRCode",
     "destructuring": true
   },
-  "group": "Data Display",
+  "group": "数据展示",
   "category": "Ant Design Vue",
   "configure": {
     "loop": true,
@@ -159,7 +159,7 @@
             "cols": 12,
             "labelPosition": "top",
             "type": "number",
-            "defaultValue": 128,
+            "defaultValue": 160,
             "widget": {
               "component": "MetaNumber",
               "props": {}
@@ -182,7 +182,7 @@
             "cols": 12,
             "labelPosition": "top",
             "type": "number",
-            "defaultValue": 32,
+            "defaultValue": 40,
             "widget": {
               "component": "MetaNumber",
               "props": {}
@@ -348,22 +348,7 @@
         }
       }
     ],
-    "events": {
-      "onRefresh": {
-        "label": {
-          "zh_CN": "onRefresh"
-        },
-        "description": {
-          "zh_CN": "callback"
-        },
-        "type": "event",
-        "functionInfo": {
-          "params": [],
-          "returns": {}
-        },
-        "defaultValue": ""
-      }
-    },
+    "events": {},
     "slots": {}
   },
   "snippets": [

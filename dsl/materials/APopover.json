@@ -28,7 +28,7 @@
     "exportName": "Popover",
     "destructuring": true
   },
-  "group": "Data Display",
+  "group": "数据展示",
   "category": "Ant Design Vue",
   "configure": {
     "loop": true,
@@ -94,8 +94,8 @@
                     "value": "slot"
                   },
                   {
-                    "label": "vNode",
-                    "value": "vNode"
+                    "label": "VNode",
+                    "value": "VNode"
                   }
                 ]
               }
