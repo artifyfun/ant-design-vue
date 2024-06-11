@@ -1,18 +1,31 @@
 const glob = require('glob');
 const fs = require('fs');
 
+const ignoreTags = [
+  'flex',
+  'grid',
+  'layout',
+  'layout-sider',
+  'space',
+  'space-compact',
+  'icon',
+  'common',
+  'custom',
+  'list-item-meta',
+  'menu-item-type',
+  'sub-menu-type',
+  'menu-item-group-type',
+  'menu-divider-type',
+  'tag-checkable-tag',
+  'directory-tree',
+  'a-anchor-link',
+  'a-auto-complete-opt-group',
+  'a-auto-complete-option',
+  'a-avatar-group',
+];
+
 function getComponents(type = 'zh-CN') {
-  const ignoreFiles = [
-    `**/flex/index.${type}.md*`,
-    `**/grid/index.${type}.md*`,
-    `**/layout/index.${type}.md*`,
-    `**/space/index.${type}.md*`,
-    // `**/app/index.${type}.md*`,
-    `**/icon/index.${type}.md*`,
-    // `**/form/index.${type}.md*`,
-    // `**/breadcrumb/index.${type}.md*`,
-    // `**/menu/index.${type}.md*`,
-  ];
+  const ignoreFiles = ignoreTags.map(tag => `**/${tag}/index.${type}.md*`);
   // get components all zh-CN md files
   const mdFiles = glob.sync(`components/**/index.${type}.md*`, {
     ignore: ignoreFiles,
@@ -43,4 +56,7 @@ function getComponents(type = 'zh-CN') {
   return components;
 }
 
-module.exports = getComponents;
+module.exports = {
+  ignoreTags,
+  getComponents,
+};

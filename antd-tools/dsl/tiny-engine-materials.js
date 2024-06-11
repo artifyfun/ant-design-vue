@@ -2,9 +2,22 @@ const path = require('path');
 const pkg = require('../../package.json');
 const { parseAndWrite } = require('../generator-types/lib/index.js');
 const rootPath = path.resolve(__dirname, '../../');
+const { getComponents, ignoreTags } = require('./components.js');
 
 function toKebabCase(camel) {
   return camel.replace(/((?<=[a-z\d])[A-Z]|(?<=[A-Z\d])[A-Z](?=[a-z]))/g, '-$1').toLowerCase();
+}
+
+function formatConversion(str, num = 0) {
+  const arr = str.split('-');
+  for (let i = 0; i < arr.length; i += 1) {
+    if (i === 0 && num === 1) {
+      arr[i] = arr[i].charAt(0).toLowerCase() + arr[i].substring(1).toLowerCase();
+    } else {
+      arr[i] = arr[i].charAt(0).toUpperCase() + arr[i].substring(1).toLowerCase();
+    }
+  }
+  return arr.join('');
 }
 
 const { outputFileSync, readFileSync } = require('fs-extra');
@@ -581,25 +594,90 @@ function formatDescription(description = '') {
     .replaceAll('\\', '');
 }
 
+const defaultSlotComponents = {
+  Affix: {
+    default: {
+      label: {
+        zh_CN: 'default',
+      },
+      description: {
+        zh_CN: '自定义默认内容',
+      },
+    },
+  },
+  Button: {
+    default: {
+      label: {
+        zh_CN: 'default',
+      },
+      description: {
+        zh_CN: '自定义默认内容',
+      },
+    },
+  },
+};
+
 async function generateMaterials(type = 'zh-CN') {
   // 先取英文文档才能获取events，slots 等信息
   await parseAndWriteByType('en-US');
   const webTypes = require(path.resolve(rootPath, `./dsl/metadata/en-US/web-types.json`));
 
-  const getComponents = require('./components.js');
   const components = getComponents('en-US');
 
-  const materials = components
-    .map(component => {
-      let tag = webTypes.contributions.html.tags.find(
-        tag => tag.name === toKebabCase(component.title),
+  const materials = webTypes.contributions.html.tags
+    .filter(
+      tag =>
+        !ignoreTags.includes(tag.name) &&
+        !['props'].some(subfix => tag.name.endsWith(subfix)) &&
+        !['a-', 'aqr-'].some(prefix => tag.name.startsWith(prefix)),
+    )
+    .map(tag => {
+      let component = components.find(
+        component =>
+          toKebabCase(component.title) === tag.name ||
+          (tag.name === 'qrcode' && component.title === 'QRCode'),
       );
-      if (component.title === 'QRCode') {
-        tag = webTypes.contributions.html.tags.find(tag => tag.name === 'qrcode');
+      if (!component) {
+        const componentSubfix = [
+          'step',
+          'countdown',
+          'item',
+          'separator',
+          'meta',
+          'tab-pane',
+          'panel',
+          'radio-button',
+          'button',
+          'search',
+          'password',
+          'sub-menu',
+          'item-group',
+          'group',
+          'divider',
+          'node',
+          'text',
+          'title',
+          'paragraph',
+          'file',
+        ];
+        const subfix = componentSubfix.find(subfix => tag.name.endsWith(`-${subfix}`));
+        if (subfix) {
+          const parentTagName = tag.name.replace(`-${subfix}`, '');
+          const parentComponent = components.find(
+            component => toKebabCase(component.title) === parentTagName,
+          );
+          if (parentComponent) {
+            component = {
+              ...parentComponent,
+              title: formatConversion(tag.name),
+            };
+          }
+        } else {
+          console.log(tag);
+        }
       }
-      if (!tag) {
-        console.error(`component ${component.title} not found`);
-        return;
+      if (!component) {
+        console.log(tag);
       }
       return {
         id: 1,
@@ -685,30 +763,72 @@ async function generateMaterials(type = 'zh-CN') {
         },
         snippets: getSnippets(component),
       };
-    })
-    .filter(Boolean);
+    });
 
   if (type === 'zh-CN') {
     await parseAndWriteByType('zh-CN');
     const cnWebTypes = require(path.resolve(rootPath, './dsl/metadata/zh-CN/web-types.json'));
 
-    const getComponents = require('./components.js');
     const cnComponents = getComponents('zh-CN');
 
-    const cnMaterials = cnComponents
-      .map(component => {
-        let tag = cnWebTypes.contributions.html.tags.find(
-          tag => tag.name === toKebabCase(component.title),
+    const cnMaterials = cnWebTypes.contributions.html.tags
+      .filter(
+        tag =>
+          !ignoreTags.includes(tag.name) &&
+          !['props'].some(subfix => tag.name.endsWith(subfix)) &&
+          !['a-', 'aqr-'].some(prefix => tag.name.startsWith(prefix)),
+      )
+      .map(tag => {
+        let component = cnComponents.find(
+          component =>
+            toKebabCase(component.title) === tag.name ||
+            (tag.name === 'qrcode' && component.title === 'QRCode'),
         );
-        if (component.title === 'QRCode') {
-          tag = cnWebTypes.contributions.html.tags.find(tag => tag.name === 'qrcode');
+        if (!component) {
+          const componentSubfix = [
+            'step',
+            'countdown',
+            'item',
+            'separator',
+            'meta',
+            'tab-pane',
+            'panel',
+            'radio-button',
+            'button',
+            'search',
+            'password',
+            'sub-menu',
+            'item-group',
+            'group',
+            'divider',
+            'node',
+            'text',
+            'title',
+            'paragraph',
+            'file',
+          ];
+          const subfix = componentSubfix.find(subfix => tag.name.endsWith(`-${subfix}`));
+          if (subfix) {
+            const parentTagName = tag.name.replace(`-${subfix}`, '');
+            const parentComponent = components.find(
+              component => toKebabCase(component.title) === parentTagName,
+            );
+            if (parentComponent) {
+              component = {
+                ...parentComponent,
+                title: formatConversion(tag.name),
+              };
+            }
+          } else {
+            console.log(tag);
+          }
         }
-        if (!tag) {
-          console.error(`component ${component.title} not found`);
-          return;
+        if (!component) {
+          console.log(tag);
         }
         const material = materials.find(item => item.component === `A${component.title}`);
         if (!material) {
+          console.log(component);
           return;
         }
         return {
@@ -817,8 +937,7 @@ async function generateMaterials(type = 'zh-CN') {
             },
           ],
         };
-      })
-      .filter(Boolean);
+      });
 
     cnMaterials.forEach(material => {
       outputFileSync(

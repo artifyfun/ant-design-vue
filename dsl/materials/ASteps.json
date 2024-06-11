@@ -50,10 +50,19 @@
       "properties": []
     },
     "contextMenu": {
-      "actions": ["copy", "remove", "insert", "updateAttr", "bindEevent", "createBlock"],
+      "actions": [
+        "copy",
+        "remove",
+        "insert",
+        "updateAttr",
+        "bindEevent",
+        "createBlock"
+      ],
       "disable": []
     },
-    "invalidity": [""],
+    "invalidity": [
+      ""
+    ],
     "clickCapture": true,
     "framework": "Vue"
   },

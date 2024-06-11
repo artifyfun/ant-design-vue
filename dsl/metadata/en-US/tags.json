@@ -1,22 +1,4 @@
 {
-  "affix": {
-    "attributes": ["offsetBottom", "offsetTop", "target"]
-  },
-  "alert": {
-    "attributes": [
-      "action",
-      "afterClose",
-      "banner",
-      "closable",
-      "closeIcon",
-      "closeText",
-      "description",
-      "icon",
-      "message",
-      "showIcon",
-      "type"
-    ]
-  },
   "anchor": {
     "attributes": [
       "affix",
@@ -36,6 +18,24 @@
   },
   "anchor-item": {
     "attributes": ["key", "href", "target", "title", "children"]
+  },
+  "affix": {
+    "attributes": ["offsetBottom", "offsetTop", "target"]
+  },
+  "alert": {
+    "attributes": [
+      "action",
+      "afterClose",
+      "banner",
+      "closable",
+      "closeIcon",
+      "closeText",
+      "description",
+      "icon",
+      "message",
+      "showIcon",
+      "type"
+    ]
   },
   "app": {
     "attributes": ["message", "notification"]
@@ -892,6 +892,22 @@
   "spin": {
     "attributes": ["delay", "indicator", "size", "spinning", "tip", "wrapperClassName"]
   },
+  "statistic": {
+    "attributes": [
+      "decimalSeparator",
+      "formatter",
+      "groupSeparator",
+      "precision",
+      "prefix",
+      "suffix",
+      "title",
+      "value",
+      "valueStyle"
+    ]
+  },
+  "statistic-countdown": {
+    "attributes": ["format", "prefix", "suffix", "title", "value", "valueStyle", "finish"]
+  },
   "steps": {
     "attributes": [
       "current(v-model)",
@@ -910,22 +926,6 @@
   },
   "steps-step": {
     "attributes": ["description", "disabled", "icon", "status", "subTitle", "title"]
-  },
-  "statistic": {
-    "attributes": [
-      "decimalSeparator",
-      "formatter",
-      "groupSeparator",
-      "precision",
-      "prefix",
-      "suffix",
-      "title",
-      "value",
-      "valueStyle"
-    ]
-  },
-  "statistic-countdown": {
-    "attributes": ["format", "prefix", "suffix", "title", "value", "valueStyle", "finish"]
   },
   "switch": {
     "attributes": [

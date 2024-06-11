@@ -1,60 +1,4 @@
 {
-  "affix/offsetBottom": {
-    "type": "number",
-    "description": "Offset from the bottom of the viewport (in pixels), Default: -"
-  },
-  "affix/offsetTop": {
-    "type": "number",
-    "description": "Offset from the top of the viewport (in pixels), Default: 0"
-  },
-  "affix/target": {
-    "type": "() => HTMLElement",
-    "description": "Specifies the scrollable area DOM node, Default: () => window"
-  },
-  "alert/action": {
-    "type": "slot",
-    "description": "The action of Alert, Default: -"
-  },
-  "alert/afterClose": {
-    "type": "() => void",
-    "description": "Called when close animation is finished, Default: -"
-  },
-  "alert/banner": {
-    "type": "boolean",
-    "description": "Whether to show as banner, Default: false"
-  },
-  "alert/closable": {
-    "type": "boolean",
-    "description": "Whether Alert can be closed, Default: "
-  },
-  "alert/closeIcon": {
-    "type": "slot",
-    "description": "Custom close icon, Default: `<CloseOutlined />`"
-  },
-  "alert/closeText": {
-    "type": "string|slot",
-    "description": "Close text to show, Default: -"
-  },
-  "alert/description": {
-    "type": "string|slot",
-    "description": "Additional content of Alert, Default: -"
-  },
-  "alert/icon": {
-    "type": "vnode | slot",
-    "description": "Custom icon, effective when `showIcon` is `true`, Default: -"
-  },
-  "alert/message": {
-    "type": "string|slot",
-    "description": "Content of Alert, Default: -"
-  },
-  "alert/showIcon": {
-    "type": "boolean",
-    "description": "Whether to show icon, Default: false,in `banner` mode default is true"
-  },
-  "alert/type": {
-    "type": "string",
-    "description": "Type of Alert styles, options: `success`, `info`, `warning`, `error`, Default: `info`,in `banner` mode default is `warning`"
-  },
   "anchor/affix": {
     "type": "boolean",
     "description": "Fixed mode of Anchor, Default: true"
@@ -126,6 +70,62 @@
   "anchor-item/children": {
     "type": "[AnchorItem](#anchoritem)[]",
     "description": "Nested Anchor Link, `Attention: This attribute does not support horizontal orientation`, Default: -"
+  },
+  "affix/offsetBottom": {
+    "type": "number",
+    "description": "Offset from the bottom of the viewport (in pixels), Default: -"
+  },
+  "affix/offsetTop": {
+    "type": "number",
+    "description": "Offset from the top of the viewport (in pixels), Default: 0"
+  },
+  "affix/target": {
+    "type": "() => HTMLElement",
+    "description": "Specifies the scrollable area DOM node, Default: () => window"
+  },
+  "alert/action": {
+    "type": "slot",
+    "description": "The action of Alert, Default: -"
+  },
+  "alert/afterClose": {
+    "type": "() => void",
+    "description": "Called when close animation is finished, Default: -"
+  },
+  "alert/banner": {
+    "type": "boolean",
+    "description": "Whether to show as banner, Default: false"
+  },
+  "alert/closable": {
+    "type": "boolean",
+    "description": "Whether Alert can be closed, Default: "
+  },
+  "alert/closeIcon": {
+    "type": "slot",
+    "description": "Custom close icon, Default: `<CloseOutlined />`"
+  },
+  "alert/closeText": {
+    "type": "string|slot",
+    "description": "Close text to show, Default: -"
+  },
+  "alert/description": {
+    "type": "string|slot",
+    "description": "Additional content of Alert, Default: -"
+  },
+  "alert/icon": {
+    "type": "vnode | slot",
+    "description": "Custom icon, effective when `showIcon` is `true`, Default: -"
+  },
+  "alert/message": {
+    "type": "string|slot",
+    "description": "Content of Alert, Default: -"
+  },
+  "alert/showIcon": {
+    "type": "boolean",
+    "description": "Whether to show icon, Default: false,in `banner` mode default is true"
+  },
+  "alert/type": {
+    "type": "string",
+    "description": "Type of Alert styles, options: `success`, `info`, `warning`, `error`, Default: `info`,in `banner` mode default is `warning`"
   },
   "app/message": {
     "type": "[MessageConfig](/components/message/#messageconfig)",
@@ -2947,6 +2947,70 @@
     "type": "string",
     "description": "className of wrapper when Spin has children, Default: -"
   },
+  "statistic/decimalSeparator": {
+    "type": "string",
+    "description": "decimal separator, Default: ."
+  },
+  "statistic/formatter": {
+    "type": "v-slot |({value}) => VNode",
+    "description": "customize value display logic, Default: -"
+  },
+  "statistic/groupSeparator": {
+    "type": "string",
+    "description": "group separator, Default: ,"
+  },
+  "statistic/precision": {
+    "type": "number",
+    "description": "precision of input value, Default: -"
+  },
+  "statistic/prefix": {
+    "type": "string | v-slot",
+    "description": "prefix node of value, Default: -"
+  },
+  "statistic/suffix": {
+    "type": "string | v-slot",
+    "description": "suffix node of value, Default: -"
+  },
+  "statistic/title": {
+    "type": "string | v-slot",
+    "description": "Display title, Default: -"
+  },
+  "statistic/value": {
+    "type": "string | number",
+    "description": "Display value, Default: -"
+  },
+  "statistic/valueStyle": {
+    "type": "style",
+    "description": "Set value css style, Default: -"
+  },
+  "statistic-countdown/format": {
+    "type": "string",
+    "description": "Format as [dayjs](https://day.js.org/), Default: 'HH:mm:ss'"
+  },
+  "statistic-countdown/prefix": {
+    "type": "string | v-slot",
+    "description": "prefix node of value, Default: -"
+  },
+  "statistic-countdown/suffix": {
+    "type": "string | v-slot",
+    "description": "suffix node of value, Default: -"
+  },
+  "statistic-countdown/title": {
+    "type": "string | v-slot",
+    "description": "Display title, Default: -"
+  },
+  "statistic-countdown/value": {
+    "type": "number | dayjs",
+    "description": "Set target countdown time, Default: -"
+  },
+  "statistic-countdown/valueStyle": {
+    "type": "style",
+    "description": "Set value css style, Default: -"
+  },
+  "statistic-countdown/finish": {
+    "type": "() => void",
+    "description": "Trigger when time's up, Default: -"
+  },
   "steps/current(v-model)": {
     "type": "number",
     "description": "to set the current step, counting from 0. You can overwrite this state by using `status` of `Step`, support v-model after 1.5.0, Default: 0"
@@ -3018,70 +3082,6 @@
   "steps-step/title": {
     "type": "string|slot",
     "description": "title of the step, Default: -"
-  },
-  "statistic/decimalSeparator": {
-    "type": "string",
-    "description": "decimal separator, Default: ."
-  },
-  "statistic/formatter": {
-    "type": "v-slot |({value}) => VNode",
-    "description": "customize value display logic, Default: -"
-  },
-  "statistic/groupSeparator": {
-    "type": "string",
-    "description": "group separator, Default: ,"
-  },
-  "statistic/precision": {
-    "type": "number",
-    "description": "precision of input value, Default: -"
-  },
-  "statistic/prefix": {
-    "type": "string | v-slot",
-    "description": "prefix node of value, Default: -"
-  },
-  "statistic/suffix": {
-    "type": "string | v-slot",
-    "description": "suffix node of value, Default: -"
-  },
-  "statistic/title": {
-    "type": "string | v-slot",
-    "description": "Display title, Default: -"
-  },
-  "statistic/value": {
-    "type": "string | number",
-    "description": "Display value, Default: -"
-  },
-  "statistic/valueStyle": {
-    "type": "style",
-    "description": "Set value css style, Default: -"
-  },
-  "statistic-countdown/format": {
-    "type": "string",
-    "description": "Format as [dayjs](https://day.js.org/), Default: 'HH:mm:ss'"
-  },
-  "statistic-countdown/prefix": {
-    "type": "string | v-slot",
-    "description": "prefix node of value, Default: -"
-  },
-  "statistic-countdown/suffix": {
-    "type": "string | v-slot",
-    "description": "suffix node of value, Default: -"
-  },
-  "statistic-countdown/title": {
-    "type": "string | v-slot",
-    "description": "Display title, Default: -"
-  },
-  "statistic-countdown/value": {
-    "type": "number | dayjs",
-    "description": "Set target countdown time, Default: -"
-  },
-  "statistic-countdown/valueStyle": {
-    "type": "style",
-    "description": "Set value css style, Default: -"
-  },
-  "statistic-countdown/finish": {
-    "type": "() => void",
-    "description": "Trigger when time's up, Default: -"
   },
   "switch/autofocus": {
     "type": "boolean",

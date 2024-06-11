@@ -7,181 +7,6 @@
     "html": {
       "tags": [
         {
-          "name": "affix",
-          "slots": [],
-          "events": [
-            {
-              "name": "change",
-              "description": "Callback for when Affix state is changed"
-            }
-          ],
-          "attributes": [
-            {
-              "name": "offsetBottom",
-              "default": "-",
-              "description": "Offset from the bottom of the viewport (in pixels)",
-              "value": {
-                "type": "number",
-                "kind": "expression"
-              }
-            },
-            {
-              "name": "offsetTop",
-              "default": "0",
-              "description": "Offset from the top of the viewport (in pixels)",
-              "value": {
-                "type": "number",
-                "kind": "expression"
-              }
-            },
-            {
-              "name": "target",
-              "default": "() => window",
-              "description": "Specifies the scrollable area DOM node",
-              "value": {
-                "type": "() => HTMLElement",
-                "kind": "expression"
-              }
-            }
-          ]
-        },
-        {
-          "name": "alert",
-          "slots": [
-            {
-              "name": "action",
-              "description": "The action of Alert"
-            },
-            {
-              "name": "closeIcon",
-              "description": "Custom close icon"
-            },
-            {
-              "name": "closeText",
-              "description": "Close text to show"
-            },
-            {
-              "name": "description",
-              "description": "Additional content of Alert"
-            },
-            {
-              "name": "icon",
-              "description": "Custom icon, effective when `showIcon` is `true`"
-            },
-            {
-              "name": "message",
-              "description": "Content of Alert"
-            }
-          ],
-          "events": [
-            {
-              "name": "close",
-              "description": "Callback when Alert is closed"
-            }
-          ],
-          "attributes": [
-            {
-              "name": "action",
-              "default": "-",
-              "description": "The action of Alert",
-              "value": {
-                "type": "slot",
-                "kind": "expression"
-              }
-            },
-            {
-              "name": "afterClose",
-              "default": "-",
-              "description": "Called when close animation is finished",
-              "value": {
-                "type": "() => void",
-                "kind": "expression"
-              }
-            },
-            {
-              "name": "banner",
-              "default": "false",
-              "description": "Whether to show as banner",
-              "value": {
-                "type": "boolean",
-                "kind": "expression"
-              }
-            },
-            {
-              "name": "closable",
-              "default": "",
-              "description": "Whether Alert can be closed",
-              "value": {
-                "type": "boolean",
-                "kind": "expression"
-              }
-            },
-            {
-              "name": "closeIcon",
-              "default": "`<CloseOutlined />`",
-              "description": "Custom close icon",
-              "value": {
-                "type": "slot",
-                "kind": "expression"
-              }
-            },
-            {
-              "name": "closeText",
-              "default": "-",
-              "description": "Close text to show",
-              "value": {
-                "type": "string|slot",
-                "kind": "expression"
-              }
-            },
-            {
-              "name": "description",
-              "default": "-",
-              "description": "Additional content of Alert",
-              "value": {
-                "type": "string|slot",
-                "kind": "expression"
-              }
-            },
-            {
-              "name": "icon",
-              "default": "-",
-              "description": "Custom icon, effective when `showIcon` is `true`",
-              "value": {
-                "type": "vnode | slot",
-                "kind": "expression"
-              }
-            },
-            {
-              "name": "message",
-              "default": "-",
-              "description": "Content of Alert",
-              "value": {
-                "type": "string|slot",
-                "kind": "expression"
-              }
-            },
-            {
-              "name": "showIcon",
-              "default": "false,in `banner` mode default is true",
-              "description": "Whether to show icon",
-              "value": {
-                "type": "boolean",
-                "kind": "expression"
-              }
-            },
-            {
-              "name": "type",
-              "default": "`info`,in `banner` mode default is `warning`",
-              "description": "Type of Alert styles, options: `success`, `info`, `warning`, `error`",
-              "value": {
-                "type": "string",
-                "kind": "expression"
-              }
-            }
-          ]
-        },
-        {
           "name": "anchor",
           "slots": [
             {
@@ -357,6 +182,181 @@
               "description": "Nested Anchor Link, `Attention: This attribute does not support horizontal orientation`",
               "value": {
                 "type": "[AnchorItem](#anchoritem)[]",
+                "kind": "expression"
+              }
+            }
+          ]
+        },
+        {
+          "name": "affix",
+          "slots": [],
+          "events": [
+            {
+              "name": "change",
+              "description": "Callback for when Affix state is changed"
+            }
+          ],
+          "attributes": [
+            {
+              "name": "offsetBottom",
+              "default": "-",
+              "description": "Offset from the bottom of the viewport (in pixels)",
+              "value": {
+                "type": "number",
+                "kind": "expression"
+              }
+            },
+            {
+              "name": "offsetTop",
+              "default": "0",
+              "description": "Offset from the top of the viewport (in pixels)",
+              "value": {
+                "type": "number",
+                "kind": "expression"
+              }
+            },
+            {
+              "name": "target",
+              "default": "() => window",
+              "description": "Specifies the scrollable area DOM node",
+              "value": {
+                "type": "() => HTMLElement",
+                "kind": "expression"
+              }
+            }
+          ]
+        },
+        {
+          "name": "alert",
+          "slots": [
+            {
+              "name": "action",
+              "description": "The action of Alert"
+            },
+            {
+              "name": "closeIcon",
+              "description": "Custom close icon"
+            },
+            {
+              "name": "closeText",
+              "description": "Close text to show"
+            },
+            {
+              "name": "description",
+              "description": "Additional content of Alert"
+            },
+            {
+              "name": "icon",
+              "description": "Custom icon, effective when `showIcon` is `true`"
+            },
+            {
+              "name": "message",
+              "description": "Content of Alert"
+            }
+          ],
+          "events": [
+            {
+              "name": "close",
+              "description": "Callback when Alert is closed"
+            }
+          ],
+          "attributes": [
+            {
+              "name": "action",
+              "default": "-",
+              "description": "The action of Alert",
+              "value": {
+                "type": "slot",
+                "kind": "expression"
+              }
+            },
+            {
+              "name": "afterClose",
+              "default": "-",
+              "description": "Called when close animation is finished",
+              "value": {
+                "type": "() => void",
+                "kind": "expression"
+              }
+            },
+            {
+              "name": "banner",
+              "default": "false",
+              "description": "Whether to show as banner",
+              "value": {
+                "type": "boolean",
+                "kind": "expression"
+              }
+            },
+            {
+              "name": "closable",
+              "default": "",
+              "description": "Whether Alert can be closed",
+              "value": {
+                "type": "boolean",
+                "kind": "expression"
+              }
+            },
+            {
+              "name": "closeIcon",
+              "default": "`<CloseOutlined />`",
+              "description": "Custom close icon",
+              "value": {
+                "type": "slot",
+                "kind": "expression"
+              }
+            },
+            {
+              "name": "closeText",
+              "default": "-",
+              "description": "Close text to show",
+              "value": {
+                "type": "string|slot",
+                "kind": "expression"
+              }
+            },
+            {
+              "name": "description",
+              "default": "-",
+              "description": "Additional content of Alert",
+              "value": {
+                "type": "string|slot",
+                "kind": "expression"
+              }
+            },
+            {
+              "name": "icon",
+              "default": "-",
+              "description": "Custom icon, effective when `showIcon` is `true`",
+              "value": {
+                "type": "vnode | slot",
+                "kind": "expression"
+              }
+            },
+            {
+              "name": "message",
+              "default": "-",
+              "description": "Content of Alert",
+              "value": {
+                "type": "string|slot",
+                "kind": "expression"
+              }
+            },
+            {
+              "name": "showIcon",
+              "default": "false,in `banner` mode default is true",
+              "description": "Whether to show icon",
+              "value": {
+                "type": "boolean",
+                "kind": "expression"
+              }
+            },
+            {
+              "name": "type",
+              "default": "`info`,in `banner` mode default is `warning`",
+              "description": "Type of Alert styles, options: `success`, `info`, `warning`, `error`",
+              "value": {
+                "type": "string",
                 "kind": "expression"
               }
             }
@@ -8065,6 +8065,194 @@
           ]
         },
         {
+          "name": "statistic",
+          "slots": [
+            {
+              "name": "formatter",
+              "description": "customize value display logic"
+            },
+            {
+              "name": "prefix",
+              "description": "prefix node of value"
+            },
+            {
+              "name": "suffix",
+              "description": "suffix node of value"
+            },
+            {
+              "name": "title",
+              "description": "Display title"
+            }
+          ],
+          "events": [],
+          "attributes": [
+            {
+              "name": "decimalSeparator",
+              "default": ".",
+              "description": "decimal separator",
+              "value": {
+                "type": "string",
+                "kind": "expression"
+              }
+            },
+            {
+              "name": "formatter",
+              "default": "-",
+              "description": "customize value display logic",
+              "value": {
+                "type": "v-slot |({value}) => VNode",
+                "kind": "expression"
+              }
+            },
+            {
+              "name": "groupSeparator",
+              "default": ",",
+              "description": "group separator",
+              "value": {
+                "type": "string",
+                "kind": "expression"
+              }
+            },
+            {
+              "name": "precision",
+              "default": "-",
+              "description": "precision of input value",
+              "value": {
+                "type": "number",
+                "kind": "expression"
+              }
+            },
+            {
+              "name": "prefix",
+              "default": "-",
+              "description": "prefix node of value",
+              "value": {
+                "type": "string | v-slot",
+                "kind": "expression"
+              }
+            },
+            {
+              "name": "suffix",
+              "default": "-",
+              "description": "suffix node of value",
+              "value": {
+                "type": "string | v-slot",
+                "kind": "expression"
+              }
+            },
+            {
+              "name": "title",
+              "default": "-",
+              "description": "Display title",
+              "value": {
+                "type": "string | v-slot",
+                "kind": "expression"
+              }
+            },
+            {
+              "name": "value",
+              "default": "-",
+              "description": "Display value",
+              "value": {
+                "type": "string | number",
+                "kind": "expression"
+              }
+            },
+            {
+              "name": "valueStyle",
+              "default": "-",
+              "description": "Set value css style",
+              "value": {
+                "type": "style",
+                "kind": "expression"
+              }
+            }
+          ]
+        },
+        {
+          "name": "statistic-countdown",
+          "slots": [
+            {
+              "name": "prefix",
+              "description": "prefix node of value"
+            },
+            {
+              "name": "suffix",
+              "description": "suffix node of value"
+            },
+            {
+              "name": "title",
+              "description": "Display title"
+            }
+          ],
+          "events": [],
+          "attributes": [
+            {
+              "name": "format",
+              "default": "'HH:mm:ss'",
+              "description": "Format as [dayjs](https://day.js.org/)",
+              "value": {
+                "type": "string",
+                "kind": "expression"
+              }
+            },
+            {
+              "name": "prefix",
+              "default": "-",
+              "description": "prefix node of value",
+              "value": {
+                "type": "string | v-slot",
+                "kind": "expression"
+              }
+            },
+            {
+              "name": "suffix",
+              "default": "-",
+              "description": "suffix node of value",
+              "value": {
+                "type": "string | v-slot",
+                "kind": "expression"
+              }
+            },
+            {
+              "name": "title",
+              "default": "-",
+              "description": "Display title",
+              "value": {
+                "type": "string | v-slot",
+                "kind": "expression"
+              }
+            },
+            {
+              "name": "value",
+              "default": "-",
+              "description": "Set target countdown time",
+              "value": {
+                "type": "number | dayjs",
+                "kind": "expression"
+              }
+            },
+            {
+              "name": "valueStyle",
+              "default": "-",
+              "description": "Set value css style",
+              "value": {
+                "type": "style",
+                "kind": "expression"
+              }
+            },
+            {
+              "name": "finish",
+              "default": "-",
+              "description": "Trigger when time's up",
+              "value": {
+                "type": "() => void",
+                "kind": "expression"
+              }
+            }
+          ]
+        },
+        {
           "name": "steps",
           "slots": [
             {
@@ -8257,194 +8445,6 @@
               "description": "title of the step",
               "value": {
                 "type": "string|slot",
-                "kind": "expression"
-              }
-            }
-          ]
-        },
-        {
-          "name": "statistic",
-          "slots": [
-            {
-              "name": "formatter",
-              "description": "customize value display logic"
-            },
-            {
-              "name": "prefix",
-              "description": "prefix node of value"
-            },
-            {
-              "name": "suffix",
-              "description": "suffix node of value"
-            },
-            {
-              "name": "title",
-              "description": "Display title"
-            }
-          ],
-          "events": [],
-          "attributes": [
-            {
-              "name": "decimalSeparator",
-              "default": ".",
-              "description": "decimal separator",
-              "value": {
-                "type": "string",
-                "kind": "expression"
-              }
-            },
-            {
-              "name": "formatter",
-              "default": "-",
-              "description": "customize value display logic",
-              "value": {
-                "type": "v-slot |({value}) => VNode",
-                "kind": "expression"
-              }
-            },
-            {
-              "name": "groupSeparator",
-              "default": ",",
-              "description": "group separator",
-              "value": {
-                "type": "string",
-                "kind": "expression"
-              }
-            },
-            {
-              "name": "precision",
-              "default": "-",
-              "description": "precision of input value",
-              "value": {
-                "type": "number",
-                "kind": "expression"
-              }
-            },
-            {
-              "name": "prefix",
-              "default": "-",
-              "description": "prefix node of value",
-              "value": {
-                "type": "string | v-slot",
-                "kind": "expression"
-              }
-            },
-            {
-              "name": "suffix",
-              "default": "-",
-              "description": "suffix node of value",
-              "value": {
-                "type": "string | v-slot",
-                "kind": "expression"
-              }
-            },
-            {
-              "name": "title",
-              "default": "-",
-              "description": "Display title",
-              "value": {
-                "type": "string | v-slot",
-                "kind": "expression"
-              }
-            },
-            {
-              "name": "value",
-              "default": "-",
-              "description": "Display value",
-              "value": {
-                "type": "string | number",
-                "kind": "expression"
-              }
-            },
-            {
-              "name": "valueStyle",
-              "default": "-",
-              "description": "Set value css style",
-              "value": {
-                "type": "style",
-                "kind": "expression"
-              }
-            }
-          ]
-        },
-        {
-          "name": "statistic-countdown",
-          "slots": [
-            {
-              "name": "prefix",
-              "description": "prefix node of value"
-            },
-            {
-              "name": "suffix",
-              "description": "suffix node of value"
-            },
-            {
-              "name": "title",
-              "description": "Display title"
-            }
-          ],
-          "events": [],
-          "attributes": [
-            {
-              "name": "format",
-              "default": "'HH:mm:ss'",
-              "description": "Format as [dayjs](https://day.js.org/)",
-              "value": {
-                "type": "string",
-                "kind": "expression"
-              }
-            },
-            {
-              "name": "prefix",
-              "default": "-",
-              "description": "prefix node of value",
-              "value": {
-                "type": "string | v-slot",
-                "kind": "expression"
-              }
-            },
-            {
-              "name": "suffix",
-              "default": "-",
-              "description": "suffix node of value",
-              "value": {
-                "type": "string | v-slot",
-                "kind": "expression"
-              }
-            },
-            {
-              "name": "title",
-              "default": "-",
-              "description": "Display title",
-              "value": {
-                "type": "string | v-slot",
-                "kind": "expression"
-              }
-            },
-            {
-              "name": "value",
-              "default": "-",
-              "description": "Set target countdown time",
-              "value": {
-                "type": "number | dayjs",
-                "kind": "expression"
-              }
-            },
-            {
-              "name": "valueStyle",
-              "default": "-",
-              "description": "Set value css style",
-              "value": {
-                "type": "style",
-                "kind": "expression"
-              }
-            },
-            {
-              "name": "finish",
-              "default": "-",
-              "description": "Trigger when time's up",
-              "value": {
-                "type": "() => void",
                 "kind": "expression"
               }
             }
