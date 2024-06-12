@@ -2,13 +2,13 @@
   "id": 1,
   "version": "4.1.2",
   "name": {
-    "zh_CN": "单选框"
+    "zh_CN": "树形控件"
   },
-  "component": "ARadioRadioButton",
-  "icon": "radio-radio-button",
-  "description": "单选框。",
+  "component": "ADirectoryTree",
+  "icon": "directory-tree",
+  "description": "多层次的结构列表。",
   "doc_url": "",
-  "screenshot": "https://mdn.alipayobjects.com/huamei_7uahnr/afts/img/A*a9roS6DHFIcAAAAAAAAAAAAADrJ8AQ/original",
+  "screenshot": "https://mdn.alipayobjects.com/huamei_7uahnr/afts/img/A*1GeUQJPTGUYAAAAAAAAAAAAADrJ8AQ/original",
   "tags": "",
   "keywords": "",
   "dev_mode": "proCode",
@@ -25,10 +25,10 @@
       "https://unpkg.com/dayjs/plugin/advancedFormat.js",
       "https://unpkg.com/dayjs/plugin/quarterOfYear.js"
     ],
-    "exportName": "RadioRadioButton",
+    "exportName": "DirectoryTree",
     "destructuring": true
   },
-  "group": "数据录入",
+  "group": "数据展示",
   "category": "Ant Design Vue",
   "configure": {
     "loop": true,
@@ -66,70 +66,24 @@
         },
         "content": [
           {
-            "property": "autofocus",
+            "property": "expandAction",
             "label": {
               "text": {
-                "zh_CN": "autofocus"
+                "zh_CN": "expandAction"
               }
             },
             "description": {
-              "zh_CN": "自动获取焦点"
+              "zh_CN": "目录展开逻辑，可选 false click dblclick"
             },
             "required": false,
             "readOnly": false,
             "disabled": false,
             "cols": 12,
             "labelPosition": "top",
-            "type": "boolean",
-            "defaultValue": false,
+            "type": "string",
+            "defaultValue": "click",
             "widget": {
-              "component": "MetaSwitch",
-              "props": {}
-            },
-            "device": []
-          },
-          {
-            "property": "checked",
-            "label": {
-              "text": {
-                "zh_CN": "checked(v-model)"
-              }
-            },
-            "description": {
-              "zh_CN": "指定当前是否选中"
-            },
-            "required": false,
-            "readOnly": false,
-            "disabled": false,
-            "cols": 12,
-            "labelPosition": "top",
-            "type": "boolean",
-            "defaultValue": false,
-            "widget": {
-              "component": "MetaSwitch",
-              "props": {}
-            },
-            "device": []
-          },
-          {
-            "property": "disabled",
-            "label": {
-              "text": {
-                "zh_CN": "disabled"
-              }
-            },
-            "description": {
-              "zh_CN": "禁用 Radio"
-            },
-            "required": false,
-            "readOnly": false,
-            "disabled": false,
-            "cols": 12,
-            "labelPosition": "top",
-            "type": "boolean",
-            "defaultValue": false,
-            "widget": {
-              "component": "MetaSwitch",
+              "component": "MetaInput",
               "props": {}
             },
             "device": []
@@ -146,11 +100,11 @@
   "snippets": [
     {
       "name": {
-        "zh_CN": "单选框"
+        "zh_CN": "树形控件"
       },
-      "icon": "radio-radio-button",
+      "icon": "directory-tree",
       "screenshot": "",
-      "snippetName": "ARadioRadioButton",
+      "snippetName": "ADirectoryTree",
       "schema": {}
     }
   ]

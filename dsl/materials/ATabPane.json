@@ -2,13 +2,13 @@
   "id": 1,
   "version": "4.1.2",
   "name": {
-    "zh_CN": "锚点"
+    "zh_CN": "标签页"
   },
-  "component": "AAnchorItem",
-  "icon": "anchor-item",
-  "description": "用于跳转到页面指定位置。",
+  "component": "ATabPane",
+  "icon": "tab-pane",
+  "description": "选项卡切换组件。",
   "doc_url": "",
-  "screenshot": "https://mdn.alipayobjects.com/huamei_7uahnr/afts/img/A*JGb3RIzyOCkAAAAAAAAAAAAADrJ8AQ/original",
+  "screenshot": "https://mdn.alipayobjects.com/huamei_7uahnr/afts/img/A*8HMoTZUoSGoAAAAAAAAAAAAADrJ8AQ/original",
   "tags": "",
   "keywords": "",
   "dev_mode": "proCode",
@@ -25,10 +25,10 @@
       "https://unpkg.com/dayjs/plugin/advancedFormat.js",
       "https://unpkg.com/dayjs/plugin/quarterOfYear.js"
     ],
-    "exportName": "AnchorItem",
+    "exportName": "TabPane",
     "destructuring": true
   },
-  "group": "导航",
+  "group": "数据展示",
   "category": "Ant Design Vue",
   "configure": {
     "loop": true,
@@ -66,6 +66,29 @@
         },
         "content": [
           {
+            "property": "forceRender",
+            "label": {
+              "text": {
+                "zh_CN": "forceRender"
+              }
+            },
+            "description": {
+              "zh_CN": "被隐藏时是否渲染 DOM 结构"
+            },
+            "required": false,
+            "readOnly": false,
+            "disabled": false,
+            "cols": 12,
+            "labelPosition": "top",
+            "type": "boolean",
+            "defaultValue": false,
+            "widget": {
+              "component": "MetaSwitch",
+              "props": {}
+            },
+            "device": []
+          },
+          {
             "property": "key",
             "label": {
               "text": {
@@ -73,7 +96,29 @@
               }
             },
             "description": {
-              "zh_CN": "唯一标志"
+              "zh_CN": "对应 activeKey"
+            },
+            "required": false,
+            "readOnly": false,
+            "disabled": false,
+            "cols": 12,
+            "labelPosition": "top",
+            "type": "string",
+            "widget": {
+              "component": "MetaInput",
+              "props": {}
+            },
+            "device": []
+          },
+          {
+            "property": "tab",
+            "label": {
+              "text": {
+                "zh_CN": "tab"
+              }
+            },
+            "description": {
+              "zh_CN": "选项卡头显示文字"
             },
             "required": false,
             "readOnly": false,
@@ -90,55 +135,11 @@
                     "value": "string"
                   },
                   {
-                    "label": "number",
-                    "value": "number"
+                    "label": "slot",
+                    "value": "slot"
                   }
                 ]
               }
-            },
-            "device": []
-          },
-          {
-            "property": "href",
-            "label": {
-              "text": {
-                "zh_CN": "href"
-              }
-            },
-            "description": {
-              "zh_CN": "锚点链接"
-            },
-            "required": false,
-            "readOnly": false,
-            "disabled": false,
-            "cols": 12,
-            "labelPosition": "top",
-            "type": "string",
-            "widget": {
-              "component": "MetaInput",
-              "props": {}
-            },
-            "device": []
-          },
-          {
-            "property": "target",
-            "label": {
-              "text": {
-                "zh_CN": "target"
-              }
-            },
-            "description": {
-              "zh_CN": "该属性指定在何处显示链接的资源"
-            },
-            "required": false,
-            "readOnly": false,
-            "disabled": false,
-            "cols": 12,
-            "labelPosition": "top",
-            "type": "string",
-            "widget": {
-              "component": "MetaInput",
-              "props": {}
             },
             "device": []
           }
@@ -149,16 +150,25 @@
       }
     ],
     "events": {},
-    "slots": {}
+    "slots": {
+      "tab": {
+        "label": {
+          "zh_CN": "tab"
+        },
+        "description": {
+          "zh_CN": "选项卡头显示文字"
+        }
+      }
+    }
   },
   "snippets": [
     {
       "name": {
-        "zh_CN": "锚点"
+        "zh_CN": "标签页"
       },
-      "icon": "anchor-item",
+      "icon": "tab-pane",
       "screenshot": "",
-      "snippetName": "AAnchorItem",
+      "snippetName": "ATabPane",
       "schema": {}
     }
   ]

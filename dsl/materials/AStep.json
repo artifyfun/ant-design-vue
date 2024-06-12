@@ -2,13 +2,13 @@
   "id": 1,
   "version": "4.1.2",
   "name": {
-    "zh_CN": "漫游式引导"
+    "zh_CN": "步骤条"
   },
-  "component": "ATourStep",
-  "icon": "tour-step",
-  "description": "用于分步引导用户了解产品功能的气泡组件。自 4.0.0 版本开始提供该组件。",
+  "component": "AStep",
+  "icon": "step",
+  "description": "引导用户按照流程完成任务的导航条。",
   "doc_url": "",
-  "screenshot": "https://mdn.alipayobjects.com/huamei_7uahnr/afts/img/A*nF6hQpM0XtEAAAAAAAAAAAAADrJ8AQ/original",
+  "screenshot": "https://mdn.alipayobjects.com/huamei_7uahnr/afts/img/A*cFsBQLA0b7UAAAAAAAAAAAAADrJ8AQ/original",
   "tags": "",
   "keywords": "",
   "dev_mode": "proCode",
@@ -25,10 +25,10 @@
       "https://unpkg.com/dayjs/plugin/advancedFormat.js",
       "https://unpkg.com/dayjs/plugin/quarterOfYear.js"
     ],
-    "exportName": "TourStep",
+    "exportName": "Step",
     "destructuring": true
   },
-  "group": "数据展示",
+  "group": "导航",
   "category": "Ant Design Vue",
   "configure": {
     "loop": true,
@@ -66,14 +66,14 @@
         },
         "content": [
           {
-            "property": "arrow",
+            "property": "description",
             "label": {
               "text": {
-                "zh_CN": "arrow"
+                "zh_CN": "description"
               }
             },
             "description": {
-              "zh_CN": "是否显示箭头，包含是否指向元素中心的配置"
+              "zh_CN": "步骤的详情描述，可选"
             },
             "required": false,
             "readOnly": false,
@@ -81,7 +81,96 @@
             "cols": 12,
             "labelPosition": "top",
             "type": "string",
-            "defaultValue": "true",
+            "widget": {
+              "component": "MetaSelect",
+              "props": {
+                "options": [
+                  {
+                    "label": "string",
+                    "value": "string"
+                  },
+                  {
+                    "label": "slot",
+                    "value": "slot"
+                  }
+                ]
+              }
+            },
+            "device": []
+          },
+          {
+            "property": "disabled",
+            "label": {
+              "text": {
+                "zh_CN": "disabled"
+              }
+            },
+            "description": {
+              "zh_CN": "禁用点击"
+            },
+            "required": false,
+            "readOnly": false,
+            "disabled": false,
+            "cols": 12,
+            "labelPosition": "top",
+            "type": "boolean",
+            "defaultValue": false,
+            "widget": {
+              "component": "MetaSwitch",
+              "props": {}
+            },
+            "device": []
+          },
+          {
+            "property": "icon",
+            "label": {
+              "text": {
+                "zh_CN": "icon"
+              }
+            },
+            "description": {
+              "zh_CN": "步骤图标的类型，可选"
+            },
+            "required": false,
+            "readOnly": false,
+            "disabled": false,
+            "cols": 12,
+            "labelPosition": "top",
+            "type": "string",
+            "widget": {
+              "component": "MetaSelect",
+              "props": {
+                "options": [
+                  {
+                    "label": "string",
+                    "value": "string"
+                  },
+                  {
+                    "label": "slot",
+                    "value": "slot"
+                  }
+                ]
+              }
+            },
+            "device": []
+          },
+          {
+            "property": "status",
+            "label": {
+              "text": {
+                "zh_CN": "status"
+              }
+            },
+            "description": {
+              "zh_CN": "指定状态。当不配置该属性时，会使用 Steps 的 current 来自动指定状态。可选：wait process finish error"
+            },
+            "required": false,
+            "readOnly": false,
+            "disabled": false,
+            "cols": 12,
+            "labelPosition": "top",
+            "type": "string",
+            "defaultValue": "wait",
             "widget": {
               "component": "MetaInput",
               "props": {}
@@ -89,14 +178,14 @@
             "device": []
           },
           {
-            "property": "cover",
+            "property": "subTitle",
             "label": {
               "text": {
-                "zh_CN": "cover"
+                "zh_CN": "subTitle"
               }
             },
             "description": {
-              "zh_CN": "展示的图片或者视频"
+              "zh_CN": "子标题"
             },
             "required": false,
             "readOnly": false,
@@ -105,8 +194,19 @@
             "labelPosition": "top",
             "type": "string",
             "widget": {
-              "component": "MetaInput",
-              "props": {}
+              "component": "MetaSelect",
+              "props": {
+                "options": [
+                  {
+                    "label": "string",
+                    "value": "string"
+                  },
+                  {
+                    "label": "slot",
+                    "value": "slot"
+                  }
+                ]
+              }
             },
             "device": []
           },
@@ -127,162 +227,16 @@
             "labelPosition": "top",
             "type": "string",
             "widget": {
-              "component": "MetaInput",
-              "props": {}
-            },
-            "device": []
-          },
-          {
-            "property": "description",
-            "label": {
-              "text": {
-                "zh_CN": "description"
-              }
-            },
-            "description": {
-              "zh_CN": "主要描述部分"
-            },
-            "required": false,
-            "readOnly": false,
-            "disabled": false,
-            "cols": 12,
-            "labelPosition": "top",
-            "type": "string",
-            "widget": {
-              "component": "MetaInput",
-              "props": {}
-            },
-            "device": []
-          },
-          {
-            "property": "mask",
-            "label": {
-              "text": {
-                "zh_CN": "mask"
-              }
-            },
-            "description": {
-              "zh_CN": "是否启用蒙层，也可传入配置改变蒙层样式和填充色，默认跟随 Tour 的 mask 属性"
-            },
-            "required": false,
-            "readOnly": false,
-            "disabled": false,
-            "cols": 12,
-            "labelPosition": "top",
-            "type": "string",
-            "defaultValue": "true",
-            "widget": {
-              "component": "MetaInput",
-              "props": {}
-            },
-            "device": []
-          },
-          {
-            "property": "type",
-            "label": {
-              "text": {
-                "zh_CN": "type"
-              }
-            },
-            "description": {
-              "zh_CN": "类型，影响底色与文字颜色"
-            },
-            "required": false,
-            "readOnly": false,
-            "disabled": false,
-            "cols": 12,
-            "labelPosition": "top",
-            "type": "string",
-            "defaultValue": "default",
-            "widget": {
               "component": "MetaSelect",
               "props": {
                 "options": [
                   {
-                    "label": "default",
-                    "value": "default"
+                    "label": "string",
+                    "value": "string"
                   },
                   {
-                    "label": "primary",
-                    "value": "primary"
-                  }
-                ]
-              }
-            },
-            "device": []
-          },
-          {
-            "property": "nextButtonProps",
-            "label": {
-              "text": {
-                "zh_CN": "nextButtonProps"
-              }
-            },
-            "description": {
-              "zh_CN": "下一步按钮的属性"
-            },
-            "required": false,
-            "readOnly": false,
-            "disabled": false,
-            "cols": 12,
-            "labelPosition": "top",
-            "type": "function",
-            "widget": {
-              "component": "MetaCodeEditor",
-              "props": {}
-            },
-            "device": []
-          },
-          {
-            "property": "prevButtonProps",
-            "label": {
-              "text": {
-                "zh_CN": "prevButtonProps"
-              }
-            },
-            "description": {
-              "zh_CN": "上一步按钮的属性"
-            },
-            "required": false,
-            "readOnly": false,
-            "disabled": false,
-            "cols": 12,
-            "labelPosition": "top",
-            "type": "function",
-            "widget": {
-              "component": "MetaCodeEditor",
-              "props": {}
-            },
-            "device": []
-          },
-          {
-            "property": "scrollIntoViewOptions",
-            "label": {
-              "text": {
-                "zh_CN": "scrollIntoViewOptions"
-              }
-            },
-            "description": {
-              "zh_CN": "是否支持当前元素滚动到视窗内，也可传入配置指定滚动视窗的相关参数，默认跟随 Tour 的 scrollIntoViewOptions 属性"
-            },
-            "required": false,
-            "readOnly": false,
-            "disabled": false,
-            "cols": 12,
-            "labelPosition": "top",
-            "type": "string",
-            "defaultValue": "true",
-            "widget": {
-              "component": "MetaSelect",
-              "props": {
-                "options": [
-                  {
-                    "label": "boolean",
-                    "value": "boolean"
-                  },
-                  {
-                    "label": "ScrollIntoViewOptions",
-                    "value": "ScrollIntoViewOptions"
+                    "label": "slot",
+                    "value": "slot"
                   }
                 ]
               }
@@ -295,32 +249,50 @@
         }
       }
     ],
-    "events": {
-      "onClose": {
+    "events": {},
+    "slots": {
+      "description": {
         "label": {
-          "zh_CN": "onClose"
+          "zh_CN": "description"
         },
         "description": {
-          "zh_CN": "关闭引导时的回调函数"
+          "zh_CN": "步骤的详情描述，可选"
+        }
+      },
+      "icon": {
+        "label": {
+          "zh_CN": "icon"
         },
-        "type": "event",
-        "functionInfo": {
-          "params": [],
-          "returns": {}
+        "description": {
+          "zh_CN": "步骤图标的类型，可选"
+        }
+      },
+      "subTitle": {
+        "label": {
+          "zh_CN": "subTitle"
         },
-        "defaultValue": ""
+        "description": {
+          "zh_CN": "子标题"
+        }
+      },
+      "title": {
+        "label": {
+          "zh_CN": "title"
+        },
+        "description": {
+          "zh_CN": "标题"
+        }
       }
-    },
-    "slots": {}
+    }
   },
   "snippets": [
     {
       "name": {
-        "zh_CN": "漫游式引导"
+        "zh_CN": "步骤条"
       },
-      "icon": "tour-step",
+      "icon": "step",
       "screenshot": "",
-      "snippetName": "ATourStep",
+      "snippetName": "AStep",
       "schema": {}
     }
   ]

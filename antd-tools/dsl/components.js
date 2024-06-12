@@ -17,14 +17,13 @@ const ignoreTags = [
   'menu-item-group-type',
   'menu-divider-type',
   'tag-checkable-tag',
-  'directory-tree',
-  'a-anchor-link',
-  'a-auto-complete-opt-group',
-  'a-auto-complete-option',
-  'a-avatar-group',
+  'anchor-link',
+  'auto-complete-opt-group',
+  'auto-complete-option',
+  'avatar-group',
   '自定义',
   'sub-menu',
-  'menu-sub-menu',
+  'tour-step',
 ];
 
 function getComponents(type = 'zh-CN') {

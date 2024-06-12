@@ -2427,6 +2427,14 @@
     "type": "boolean",
     "description": "是否显示, Default: -"
   },
+  "popover/content": {
+    "type": "string|slot|VNode",
+    "description": "卡片内容, Default: -"
+  },
+  "popover/title": {
+    "type": "string|slot|VNode",
+    "description": "卡片标题, Default: -"
+  },
   "progress/format": {
     "type": "function(percent, successPercent)",
     "description": "内容的模板函数, Default: (percent) => percent + `%`"
@@ -2511,14 +2519,6 @@
     "type": "`active` | `expired` | `loading` | `scanned`",
     "description": "二维码状态, Default: `active`"
   },
-  "popover/content": {
-    "type": "string|slot|VNode",
-    "description": "卡片内容, Default: -"
-  },
-  "popover/title": {
-    "type": "string|slot|VNode",
-    "description": "卡片标题, Default: -"
-  },
   "radio/blur()": {
     "type": "",
     "description": "移除焦点, Default: undefined"
@@ -2575,26 +2575,6 @@
     "type": "Function(e:Event)",
     "description": "选项变化时的回调函数, Default: undefined"
   },
-  "result/extra": {
-    "type": "slot",
-    "description": "操作区, Default: -"
-  },
-  "result/icon": {
-    "type": "slot",
-    "description": "自定义 icon, Default: -"
-  },
-  "result/status": {
-    "type": "`success` | `error` | `info` | `warning` | `404` | `403` | `500`",
-    "description": "结果的状态,决定图标和颜色, Default: 'info'"
-  },
-  "result/subTitle": {
-    "type": "string | VNode | slot",
-    "description": "subTitle 文字, Default: -"
-  },
-  "result/title": {
-    "type": "string | VNode | slot",
-    "description": "title 文字, Default: -"
-  },
   "rate/allowClear": {
     "type": "boolean",
     "description": "是否允许再次点击后清除, Default: true"
@@ -2626,6 +2606,26 @@
   "rate/value(v-model)": {
     "type": "number",
     "description": "当前数，受控值, Default: -"
+  },
+  "result/extra": {
+    "type": "slot",
+    "description": "操作区, Default: -"
+  },
+  "result/icon": {
+    "type": "slot",
+    "description": "自定义 icon, Default: -"
+  },
+  "result/status": {
+    "type": "`success` | `error` | `info` | `warning` | `404` | `403` | `500`",
+    "description": "结果的状态,决定图标和颜色, Default: 'info'"
+  },
+  "result/subTitle": {
+    "type": "string | VNode | slot",
+    "description": "subTitle 文字, Default: -"
+  },
+  "result/title": {
+    "type": "string | VNode | slot",
+    "description": "title 文字, Default: -"
   },
   "segmented/block": {
     "type": "boolean",
@@ -2967,30 +2967,6 @@
     "type": "Function",
     "description": "Tooltip 渲染父节点，默认渲染到 body 上。, Default: () => document.body"
   },
-  "spin/delay": {
-    "type": "number (毫秒)",
-    "description": "延迟显示加载效果的时间（防止闪烁）, Default: -"
-  },
-  "spin/indicator": {
-    "type": "vNode | slot",
-    "description": "加载指示符, Default: -"
-  },
-  "spin/size": {
-    "type": "string",
-    "description": "组件大小，可选值为 `small` `default` `large`, Default: `default`"
-  },
-  "spin/spinning": {
-    "type": "boolean",
-    "description": "是否为加载中状态, Default: true"
-  },
-  "spin/tip": {
-    "type": "string | slot",
-    "description": "当作为包裹元素时，可以自定义描述文案, Default: -"
-  },
-  "spin/wrapperClassName": {
-    "type": "string",
-    "description": "包装器的类属性, Default: -"
-  },
   "space/align": {
     "type": "`start` | `end` |`center` |`baseline`",
     "description": "对齐方式, Default: -"
@@ -3022,6 +2998,94 @@
   "space-compact/size": {
     "type": "`large` | `middle` | `small`",
     "description": "子组件大小, Default: `middle`"
+  },
+  "spin/delay": {
+    "type": "number (毫秒)",
+    "description": "延迟显示加载效果的时间（防止闪烁）, Default: -"
+  },
+  "spin/indicator": {
+    "type": "vNode | slot",
+    "description": "加载指示符, Default: -"
+  },
+  "spin/size": {
+    "type": "string",
+    "description": "组件大小，可选值为 `small` `default` `large`, Default: `default`"
+  },
+  "spin/spinning": {
+    "type": "boolean",
+    "description": "是否为加载中状态, Default: true"
+  },
+  "spin/tip": {
+    "type": "string | slot",
+    "description": "当作为包裹元素时，可以自定义描述文案, Default: -"
+  },
+  "spin/wrapperClassName": {
+    "type": "string",
+    "description": "包装器的类属性, Default: -"
+  },
+  "statistic/decimalSeparator": {
+    "type": "string",
+    "description": "设置小数点, Default: ."
+  },
+  "statistic/formatter": {
+    "type": "v-slot | ({value}) => VNode",
+    "description": "自定义数值展示, Default: -"
+  },
+  "statistic/groupSeparator": {
+    "type": "string",
+    "description": "设置千分位标识符, Default: ,"
+  },
+  "statistic/precision": {
+    "type": "number",
+    "description": "数值精度, Default: -"
+  },
+  "statistic/prefix": {
+    "type": "string | v-slot",
+    "description": "设置数值的前缀, Default: -"
+  },
+  "statistic/suffix": {
+    "type": "string | v-slot",
+    "description": "设置数值的后缀, Default: -"
+  },
+  "statistic/title": {
+    "type": "string | v-slot",
+    "description": "数值的标题, Default: -"
+  },
+  "statistic/value": {
+    "type": "string | number",
+    "description": "数值内容, Default: -"
+  },
+  "statistic/valueStyle": {
+    "type": "style",
+    "description": "设置数值的样式, Default: -"
+  },
+  "statistic-countdown/format": {
+    "type": "string",
+    "description": "格式化倒计时展示，参考 [dayjs](https://day.js.org/), Default: 'HH:mm:ss'"
+  },
+  "statistic-countdown/prefix": {
+    "type": "string | v-slot",
+    "description": "设置数值的前缀, Default: -"
+  },
+  "statistic-countdown/suffix": {
+    "type": "string | v-slot",
+    "description": "设置数值的后缀, Default: -"
+  },
+  "statistic-countdown/title": {
+    "type": "string | v-slot",
+    "description": "数值的标题, Default: -"
+  },
+  "statistic-countdown/value": {
+    "type": "number | dayjs",
+    "description": "数值内容, Default: -"
+  },
+  "statistic-countdown/valueStyle": {
+    "type": "style",
+    "description": "设置数值的样式, Default: -"
+  },
+  "statistic-countdown/finish": {
+    "type": "() => void",
+    "description": "倒计时完成时触发, Default: undefined"
   },
   "steps/current (v-model)": {
     "type": "number",
@@ -3094,70 +3158,6 @@
   "steps-step/title": {
     "type": "string | slot",
     "description": "标题, Default: -"
-  },
-  "statistic/decimalSeparator": {
-    "type": "string",
-    "description": "设置小数点, Default: ."
-  },
-  "statistic/formatter": {
-    "type": "v-slot | ({value}) => VNode",
-    "description": "自定义数值展示, Default: -"
-  },
-  "statistic/groupSeparator": {
-    "type": "string",
-    "description": "设置千分位标识符, Default: ,"
-  },
-  "statistic/precision": {
-    "type": "number",
-    "description": "数值精度, Default: -"
-  },
-  "statistic/prefix": {
-    "type": "string | v-slot",
-    "description": "设置数值的前缀, Default: -"
-  },
-  "statistic/suffix": {
-    "type": "string | v-slot",
-    "description": "设置数值的后缀, Default: -"
-  },
-  "statistic/title": {
-    "type": "string | v-slot",
-    "description": "数值的标题, Default: -"
-  },
-  "statistic/value": {
-    "type": "string | number",
-    "description": "数值内容, Default: -"
-  },
-  "statistic/valueStyle": {
-    "type": "style",
-    "description": "设置数值的样式, Default: -"
-  },
-  "statistic-countdown/format": {
-    "type": "string",
-    "description": "格式化倒计时展示，参考 [dayjs](https://day.js.org/), Default: 'HH:mm:ss'"
-  },
-  "statistic-countdown/prefix": {
-    "type": "string | v-slot",
-    "description": "设置数值的前缀, Default: -"
-  },
-  "statistic-countdown/suffix": {
-    "type": "string | v-slot",
-    "description": "设置数值的后缀, Default: -"
-  },
-  "statistic-countdown/title": {
-    "type": "string | v-slot",
-    "description": "数值的标题, Default: -"
-  },
-  "statistic-countdown/value": {
-    "type": "number | dayjs",
-    "description": "数值内容, Default: -"
-  },
-  "statistic-countdown/valueStyle": {
-    "type": "style",
-    "description": "设置数值的样式, Default: -"
-  },
-  "statistic-countdown/finish": {
-    "type": "() => void",
-    "description": "倒计时完成时触发, Default: undefined"
   },
   "switch/autofocus": {
     "type": "boolean",
@@ -3611,66 +3611,6 @@
     "type": "`left` | `right`",
     "description": "自定义节点位置, Default: -"
   },
-  "tooltip/title": {
-    "type": "string|slot",
-    "description": "提示文字, Default: 无"
-  },
-  "tooltip/align": {
-    "type": "Object",
-    "description": "该值将合并到 placement 的配置中，设置参考 [dom-align](https://github.com/yiminghe/dom-align), Default: 无"
-  },
-  "tooltip/arrowPointAtCenter": {
-    "type": "boolean",
-    "description": "箭头是否指向目标元素中心, Default: `false`"
-  },
-  "tooltip/autoAdjustOverflow": {
-    "type": "boolean",
-    "description": "气泡被遮挡时自动调整位置, Default: `true`"
-  },
-  "tooltip/color": {
-    "type": "string",
-    "description": "背景颜色, Default: 无"
-  },
-  "tooltip/destroyTooltipOnHide": {
-    "type": "boolean",
-    "description": "隐藏后是否销毁 tooltip, Default: false"
-  },
-  "tooltip/getPopupContainer": {
-    "type": "(triggerNode: HTMLElement) => HTMLElement",
-    "description": "浮层渲染父节点，默认渲染到 body 上, Default: () => document.body"
-  },
-  "tooltip/mouseEnterDelay": {
-    "type": "number",
-    "description": "鼠标移入后延时多少才显示 Tooltip，单位：秒, Default: 0.1"
-  },
-  "tooltip/mouseLeaveDelay": {
-    "type": "number",
-    "description": "鼠标移出后延时多少才隐藏 Tooltip，单位：秒, Default: 0.1"
-  },
-  "tooltip/overlayClassName": {
-    "type": "string",
-    "description": "卡片类名, Default: 无"
-  },
-  "tooltip/overlayStyle": {
-    "type": "object",
-    "description": "卡片样式, Default: 无"
-  },
-  "tooltip/overlayInnerStyle": {
-    "type": "object",
-    "description": "卡片内容区域样式, Default: 无"
-  },
-  "tooltip/placement": {
-    "type": "string",
-    "description": "气泡框位置，可选 `top` `left` `right` `bottom` `topLeft` `topRight` `bottomLeft` `bottomRight` `leftTop` `leftBottom` `rightTop` `rightBottom`, Default: top"
-  },
-  "tooltip/trigger": {
-    "type": "string",
-    "description": "触发行为，可选 `hover/focus/click/contextmenu`, Default: hover"
-  },
-  "tooltip/open(v-model)": {
-    "type": "boolean",
-    "description": "用于手动控制浮层显隐, 小于 4.0.0 使用 `visible`, Default: false"
-  },
   "tour/arrow": {
     "type": "`boolean` | `{ pointAtCenter: boolean}`",
     "description": "是否显示箭头，包含是否指向元素中心的配置, Default: `true`"
@@ -3750,6 +3690,66 @@
   "tour-step/scrollIntoViewOptions": {
     "type": "`boolean` | `ScrollIntoViewOptions`",
     "description": "是否支持当前元素滚动到视窗内，也可传入配置指定滚动视窗的相关参数，默认跟随 Tour 的 `scrollIntoViewOptions` 属性, Default: `true`"
+  },
+  "tooltip/title": {
+    "type": "string|slot",
+    "description": "提示文字, Default: 无"
+  },
+  "tooltip/align": {
+    "type": "Object",
+    "description": "该值将合并到 placement 的配置中，设置参考 [dom-align](https://github.com/yiminghe/dom-align), Default: 无"
+  },
+  "tooltip/arrowPointAtCenter": {
+    "type": "boolean",
+    "description": "箭头是否指向目标元素中心, Default: `false`"
+  },
+  "tooltip/autoAdjustOverflow": {
+    "type": "boolean",
+    "description": "气泡被遮挡时自动调整位置, Default: `true`"
+  },
+  "tooltip/color": {
+    "type": "string",
+    "description": "背景颜色, Default: 无"
+  },
+  "tooltip/destroyTooltipOnHide": {
+    "type": "boolean",
+    "description": "隐藏后是否销毁 tooltip, Default: false"
+  },
+  "tooltip/getPopupContainer": {
+    "type": "(triggerNode: HTMLElement) => HTMLElement",
+    "description": "浮层渲染父节点，默认渲染到 body 上, Default: () => document.body"
+  },
+  "tooltip/mouseEnterDelay": {
+    "type": "number",
+    "description": "鼠标移入后延时多少才显示 Tooltip，单位：秒, Default: 0.1"
+  },
+  "tooltip/mouseLeaveDelay": {
+    "type": "number",
+    "description": "鼠标移出后延时多少才隐藏 Tooltip，单位：秒, Default: 0.1"
+  },
+  "tooltip/overlayClassName": {
+    "type": "string",
+    "description": "卡片类名, Default: 无"
+  },
+  "tooltip/overlayStyle": {
+    "type": "object",
+    "description": "卡片样式, Default: 无"
+  },
+  "tooltip/overlayInnerStyle": {
+    "type": "object",
+    "description": "卡片内容区域样式, Default: 无"
+  },
+  "tooltip/placement": {
+    "type": "string",
+    "description": "气泡框位置，可选 `top` `left` `right` `bottom` `topLeft` `topRight` `bottomLeft` `bottomRight` `leftTop` `leftBottom` `rightTop` `rightBottom`, Default: top"
+  },
+  "tooltip/trigger": {
+    "type": "string",
+    "description": "触发行为，可选 `hover/focus/click/contextmenu`, Default: hover"
+  },
+  "tooltip/open(v-model)": {
+    "type": "boolean",
+    "description": "用于手动控制浮层显隐, 小于 4.0.0 使用 `visible`, Default: false"
   },
   "transfer/dataSource": {
     "type": "[{key: string.isRequired,title: string.isRequired,description: string,disabled: bool}][]",

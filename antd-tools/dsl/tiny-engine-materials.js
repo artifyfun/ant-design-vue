@@ -641,6 +641,25 @@ function mergeWebTypes(cn, en) {
   return cn;
 }
 
+const tagNameMap = {
+  'steps-step': 'step',
+  'anchor-item': 'anchor-link',
+  'menu-sub-menu': 'sub-menu',
+  'tabs-tab-pane': 'tab-pane',
+  'radio-radio-button': 'radio-button',
+};
+
+function getTagName(tagName) {
+  return tagNameMap[tagName] || tagName;
+}
+
+function getParentTagName(tagName) {
+  return {
+    'menu-sub-menu': 'menu',
+    'directory-tree': 'tree',
+  }[tagName];
+}
+
 async function generateMaterials(type = 'zh-CN') {
   await parseAndWriteByType(type);
   const cnWebTypes = require(path.resolve(rootPath, `./dsl/metadata/zh-CN/web-types.json`));
@@ -685,21 +704,33 @@ async function generateMaterials(type = 'zh-CN') {
           'paragraph',
           'file',
           'ribbon',
+          'sub-menu',
         ];
         const subfix = componentSubfix.find(subfix => tag.name.endsWith(`-${subfix}`));
         if (subfix) {
-          const parentTagName = tag.name.replace(`-${subfix}`, '');
+          const parentTagName = getParentTagName(tag.name) || tag.name.replace(`-${subfix}`, '');
           const parentComponent = components.find(
             component => toKebabCase(component.title) === parentTagName,
           );
           if (parentComponent) {
             component = {
               ...parentComponent,
-              title: formatConversion(tag.name),
+              title: formatConversion(getTagName(tag.name)),
             };
           }
         } else {
-          console.log(tag);
+          const parentTagName = getParentTagName(tag.name);
+          const parentComponent = components.find(
+            component => toKebabCase(component.title) === parentTagName,
+          );
+          if (parentComponent) {
+            component = {
+              ...parentComponent,
+              title: formatConversion(getTagName(tag.name)),
+            };
+          } else {
+            console.log(tag);
+          }
         }
       }
       if (!component) {

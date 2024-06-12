@@ -2,13 +2,13 @@
   "id": 1,
   "version": "4.1.2",
   "name": {
-    "zh_CN": "标签页"
+    "zh_CN": "导航菜单"
   },
-  "component": "ATabsTabPane",
-  "icon": "tabs-tab-pane",
-  "description": "选项卡切换组件。",
+  "component": "ASubMenu",
+  "icon": "sub-menu",
+  "description": "为页面和功能提供导航的菜单列表。",
   "doc_url": "",
-  "screenshot": "https://mdn.alipayobjects.com/huamei_7uahnr/afts/img/A*8HMoTZUoSGoAAAAAAAAAAAAADrJ8AQ/original",
+  "screenshot": "https://mdn.alipayobjects.com/huamei_7uahnr/afts/img/A*Vn4XSqJFAxcAAAAAAAAAAAAADrJ8AQ/original",
   "tags": "",
   "keywords": "",
   "dev_mode": "proCode",
@@ -25,10 +25,10 @@
       "https://unpkg.com/dayjs/plugin/advancedFormat.js",
       "https://unpkg.com/dayjs/plugin/quarterOfYear.js"
     ],
-    "exportName": "TabsTabPane",
+    "exportName": "SubMenu",
     "destructuring": true
   },
-  "group": "数据展示",
+  "group": "导航",
   "category": "Ant Design Vue",
   "configure": {
     "loop": true,
@@ -66,14 +66,14 @@
         },
         "content": [
           {
-            "property": "forceRender",
+            "property": "disabled",
             "label": {
               "text": {
-                "zh_CN": "forceRender"
+                "zh_CN": "disabled"
               }
             },
             "description": {
-              "zh_CN": "被隐藏时是否渲染 DOM 结构"
+              "zh_CN": "是否禁用"
             },
             "required": false,
             "readOnly": false,
@@ -96,7 +96,7 @@
               }
             },
             "description": {
-              "zh_CN": "对应 activeKey"
+              "zh_CN": "唯一标志, 必填"
             },
             "required": false,
             "readOnly": false,
@@ -104,6 +104,41 @@
             "cols": 12,
             "labelPosition": "top",
             "type": "string",
+            "defaultValue": "",
+            "widget": {
+              "component": "MetaSelect",
+              "props": {
+                "options": [
+                  {
+                    "label": "string",
+                    "value": "string"
+                  },
+                  {
+                    "label": "number",
+                    "value": "number"
+                  }
+                ]
+              }
+            },
+            "device": []
+          },
+          {
+            "property": "popupClassName",
+            "label": {
+              "text": {
+                "zh_CN": "popupClassName"
+              }
+            },
+            "description": {
+              "zh_CN": "子菜单样式"
+            },
+            "required": false,
+            "readOnly": false,
+            "disabled": false,
+            "cols": 12,
+            "labelPosition": "top",
+            "type": "string",
+            "defaultValue": "",
             "widget": {
               "component": "MetaInput",
               "props": {}
@@ -111,14 +146,14 @@
             "device": []
           },
           {
-            "property": "tab",
+            "property": "title",
             "label": {
               "text": {
-                "zh_CN": "tab"
+                "zh_CN": "title"
               }
             },
             "description": {
-              "zh_CN": "选项卡头显示文字"
+              "zh_CN": "子菜单项值"
             },
             "required": false,
             "readOnly": false,
@@ -126,6 +161,7 @@
             "cols": 12,
             "labelPosition": "top",
             "type": "string",
+            "defaultValue": "",
             "widget": {
               "component": "MetaSelect",
               "props": {
@@ -142,6 +178,28 @@
               }
             },
             "device": []
+          },
+          {
+            "property": "titleClick",
+            "label": {
+              "text": {
+                "zh_CN": "titleClick"
+              }
+            },
+            "description": {
+              "zh_CN": "callback executed when the sub menu title is clicked"
+            },
+            "required": false,
+            "readOnly": false,
+            "disabled": false,
+            "cols": 12,
+            "labelPosition": "top",
+            "type": "function",
+            "widget": {
+              "component": "MetaCodeEditor",
+              "props": {}
+            },
+            "device": []
           }
         ],
         "description": {
@@ -151,12 +209,28 @@
     ],
     "events": {},
     "slots": {
-      "tab": {
+      "expandIcon": {
         "label": {
-          "zh_CN": "tab"
+          "zh_CN": "expandIcon"
         },
         "description": {
-          "zh_CN": "选项卡头显示文字"
+          "zh_CN": "自定义 Menu 展开收起图标"
+        }
+      },
+      "icon": {
+        "label": {
+          "zh_CN": "icon"
+        },
+        "description": {
+          "zh_CN": "菜单图标"
+        }
+      },
+      "title": {
+        "label": {
+          "zh_CN": "title"
+        },
+        "description": {
+          "zh_CN": "子菜单项值"
         }
       }
     }
@@ -164,11 +238,11 @@
   "snippets": [
     {
       "name": {
-        "zh_CN": "标签页"
+        "zh_CN": "导航菜单"
       },
-      "icon": "tabs-tab-pane",
+      "icon": "sub-menu",
       "screenshot": "",
-      "snippetName": "ATabsTabPane",
+      "snippetName": "ASubMenu",
       "schema": {}
     }
   ]
