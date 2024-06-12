@@ -34,7 +34,7 @@
     "loop": true,
     "condition": true,
     "styles": true,
-    "isContainer": true,
+    "isContainer": false,
     "isModal": false,
     "isPopper": false,
     "nestingRule": {
@@ -118,14 +118,6 @@
     ],
     "events": {},
     "slots": {
-      "default": {
-        "label": {
-          "zh_CN": "default"
-        },
-        "description": {
-          "zh_CN": "自定义内容"
-        }
-      },
       "description": {
         "label": {
           "zh_CN": "description"

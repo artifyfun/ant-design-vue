@@ -256,14 +256,6 @@
     ],
     "events": {},
     "slots": {
-      "default": {
-        "label": {
-          "zh_CN": "default"
-        },
-        "description": {
-          "zh_CN": "自定义内容"
-        }
-      },
       "count": {
         "label": {
           "zh_CN": "count"

@@ -879,260 +879,10 @@ function formatDescription(description = '') {
 }
 
 const defaultSlotComponents = {
-  AAffix: {
-    default: {
-      label: {
-        zh_CN: 'default',
-      },
-      description: {
-        zh_CN: '自定义内容',
-      },
-    },
-  },
-  AButton: {
-    default: {
-      label: {
-        zh_CN: 'default',
-      },
-      description: {
-        zh_CN: '自定义内容',
-      },
-    },
-  },
-  ABadge: {
-    default: {
-      label: {
-        zh_CN: 'default',
-      },
-      description: {
-        zh_CN: '自定义内容',
-      },
-    },
-  },
-  ABadgeRibbon: {
-    default: {
-      label: {
-        zh_CN: 'default',
-      },
-      description: {
-        zh_CN: '自定义内容',
-      },
-    },
-  },
-  ACard: {
-    default: {
-      label: {
-        zh_CN: 'default',
-      },
-      description: {
-        zh_CN: '卡片内容',
-      },
-    },
-  },
-  ACollapsePanel: {
-    default: {
-      label: {
-        zh_CN: 'default',
-      },
-      description: {
-        zh_CN: '自定义内容',
-      },
-    },
-  },
-  ADrawer: {
-    default: {
-      label: {
-        zh_CN: 'default',
-      },
-      description: {
-        zh_CN: '自定义内容',
-      },
-    },
-  },
-  ADropdown: {
-    default: {
-      label: {
-        zh_CN: 'default',
-      },
-      description: {
-        zh_CN: '自定义内容',
-      },
-    },
-  },
-  ADropdownButton: {
-    default: {
-      label: {
-        zh_CN: 'default',
-      },
-      description: {
-        zh_CN: '自定义内容',
-      },
-    },
-  },
-  AEmpty: {
-    default: {
-      label: {
-        zh_CN: 'default',
-      },
-      description: {
-        zh_CN: '自定义内容',
-      },
-    },
-  },
-  AForm: {
-    default: {
-      label: {
-        zh_CN: 'default',
-      },
-      description: {
-        zh_CN: '自定义内容',
-      },
-    },
-  },
-  AFormItem: {
-    default: {
-      label: {
-        zh_CN: 'default',
-      },
-      description: {
-        zh_CN: '自定义内容',
-      },
-    },
-  },
   AList: {
     renderItem: {
       label: {
         zh_CN: 'renderItem',
-      },
-      description: {
-        zh_CN: '自定义内容',
-      },
-    },
-  },
-  AListItem: {
-    default: {
-      label: {
-        zh_CN: 'default',
-      },
-      description: {
-        zh_CN: '自定义内容',
-      },
-    },
-  },
-  AModal: {
-    default: {
-      label: {
-        zh_CN: 'default',
-      },
-      description: {
-        zh_CN: '自定义内容',
-      },
-    },
-  },
-  APopconfirm: {
-    default: {
-      label: {
-        zh_CN: 'default',
-      },
-      description: {
-        zh_CN: '自定义内容',
-      },
-    },
-  },
-  APopover: {
-    default: {
-      label: {
-        zh_CN: 'default',
-      },
-      description: {
-        zh_CN: '自定义内容',
-      },
-    },
-  },
-  ARadioButton: {
-    default: {
-      label: {
-        zh_CN: 'default',
-      },
-      description: {
-        zh_CN: '自定义内容',
-      },
-    },
-  },
-  ARadioGroup: {
-    default: {
-      label: {
-        zh_CN: 'default',
-      },
-      description: {
-        zh_CN: '自定义内容',
-      },
-    },
-  },
-  ATabs: {
-    default: {
-      label: {
-        zh_CN: 'default',
-      },
-      description: {
-        zh_CN: '自定义内容',
-      },
-    },
-  },
-  ATabPane: {
-    default: {
-      label: {
-        zh_CN: 'default',
-      },
-      description: {
-        zh_CN: '自定义内容',
-      },
-    },
-  },
-  ATag: {
-    default: {
-      label: {
-        zh_CN: 'default',
-      },
-      description: {
-        zh_CN: '自定义内容',
-      },
-    },
-  },
-  ATimeline: {
-    default: {
-      label: {
-        zh_CN: 'default',
-      },
-      description: {
-        zh_CN: '自定义内容',
-      },
-    },
-  },
-  ATimelineItem: {
-    default: {
-      label: {
-        zh_CN: 'default',
-      },
-      description: {
-        zh_CN: '自定义内容',
-      },
-    },
-  },
-  ATooltip: {
-    default: {
-      label: {
-        zh_CN: 'default',
-      },
-      description: {
-        zh_CN: '自定义内容',
-      },
-    },
-  },
-  AUpload: {
-    default: {
-      label: {
-        zh_CN: 'default',
       },
       description: {
         zh_CN: '自定义内容',
@@ -1394,8 +1144,34 @@ async function generateMaterials(type = 'zh-CN') {
   });
 
   // 容器属性设置
+  const containerComponents = [
+    'AAffix',
+    'AButton',
+    'ABadge',
+    'ABadgeRibbon',
+    'ACard',
+    'ACollapsePanel',
+    'ADrawer',
+    'ADropdown',
+    'ADropdownButton',
+    'AForm',
+    'AFormItem',
+    'AList',
+    'AListItem',
+    'AModal',
+    'APopconfirm',
+    'APopover',
+    'ARadioButton',
+    'ARadioGroup',
+    'ATabs',
+    'ATabPane',
+    'ATag',
+    'ATimeline',
+    'ATimelineItem',
+    'ATooltip',
+    'AUpload',
+  ];
   materials.forEach(material => {
-    const containerComponents = [...Object.keys(defaultSlotComponents)];
     if (containerComponents.includes(material.component)) {
       material.configure.isContainer = true;
     }
