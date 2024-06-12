@@ -263,7 +263,6 @@
             "cols": 12,
             "labelPosition": "top",
             "type": "number",
-            "defaultValue": "",
             "widget": {
               "component": "MetaNumber",
               "props": {}

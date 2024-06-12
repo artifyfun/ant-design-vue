@@ -519,7 +519,7 @@
             "cols": 12,
             "labelPosition": "top",
             "type": "string",
-            "defaultValue": "'key'",
+            "defaultValue": "key",
             "widget": {
               "component": "MetaInput",
               "props": {}

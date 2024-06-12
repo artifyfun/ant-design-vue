@@ -355,7 +355,22 @@
         }
       }
     ],
-    "events": {},
+    "events": {
+      "onTabChange": {
+        "label": {
+          "zh_CN": "onTabChange"
+        },
+        "description": {
+          "zh_CN": "Callback when tab is switched"
+        },
+        "type": "event",
+        "functionInfo": {
+          "params": [],
+          "returns": {}
+        },
+        "defaultValue": ""
+      }
+    },
     "slots": {
       "extra": {
         "label": {

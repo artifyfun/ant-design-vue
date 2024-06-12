@@ -81,7 +81,7 @@
             "cols": 12,
             "labelPosition": "top",
             "type": "string",
-            "defaultValue": "'HH:mm:ss'",
+            "defaultValue": "HH:mm:ss",
             "widget": {
               "component": "MetaInput",
               "props": {}

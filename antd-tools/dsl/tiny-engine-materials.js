@@ -3,6 +3,7 @@ const pkg = require('../../package.json');
 const { parseAndWrite } = require('../generator-types/lib/index.js');
 const rootPath = path.resolve(__dirname, '../../');
 const { getComponents, ignoreTags } = require('./components.js');
+const _ = require('lodash');
 
 function toKebabCase(camel) {
   return camel.replace(/((?<=[a-z\d])[A-Z]|(?<=[A-Z\d])[A-Z](?=[a-z]))/g, '-$1').toLowerCase();
@@ -89,6 +90,9 @@ function getPropertiesContent(attributes) {
             : undefined;
         }
         if (['number'].includes(type)) {
+          if (attr.default === '') {
+            return undefined;
+          }
           return attr.default && typeof attr.default === 'string'
             ? Number(attr.default)
             : attr.default;
@@ -101,7 +105,7 @@ function getPropertiesContent(attributes) {
           }
         }
         return attr.default && typeof attr.default === 'string'
-          ? attr.default.replaceAll('`', '').replaceAll('"', '').trim()
+          ? attr.default.replaceAll('`', '').replaceAll('"', '').replaceAll("'", '').trim()
           : attr.default;
       })();
 
@@ -209,11 +213,12 @@ function getEvents(events) {
 function getSlots(slots) {
   return Object.fromEntries(
     slots.map(slot => {
+      const slotName = slot.name.startsWith('default') ? 'default' : slot.name;
       return [
-        slot.name,
+        slotName,
         {
           label: {
-            zh_CN: slot.name,
+            zh_CN: slotName,
           },
           description: {
             zh_CN: formatDescription(slot.description),
@@ -617,9 +622,31 @@ const defaultSlotComponents = {
   },
 };
 
+function mergeWebTypes(cn, en) {
+  cn.contributions.html.tags = cn.contributions.html.tags.map(tag => {
+    const enTag = en.contributions.html.tags.find(item => item.name === tag.name);
+    if (!enTag) {
+      return tag;
+    }
+    const slots = _.uniqBy([...tag.slots, ...enTag.slots], 'name');
+    const events = _.uniqBy([...tag.events, ...enTag.events], 'name');
+    const attributes = _.uniqBy([...tag.attributes, ...enTag.attributes], 'name');
+    return {
+      ...tag,
+      slots,
+      events,
+      attributes,
+    };
+  });
+  return cn;
+}
+
 async function generateMaterials(type = 'zh-CN') {
   await parseAndWriteByType(type);
-  const webTypes = require(path.resolve(rootPath, `./dsl/metadata/${type}/web-types.json`));
+  const cnWebTypes = require(path.resolve(rootPath, `./dsl/metadata/zh-CN/web-types.json`));
+  const enWebTypes = require(path.resolve(rootPath, `./dsl/metadata/en-US/web-types.json`));
+
+  const webTypes = type === 'zh-CN' ? mergeWebTypes(cnWebTypes, enWebTypes) : enWebTypes;
 
   const components = getComponents(type);
 
@@ -763,6 +790,17 @@ async function generateMaterials(type = 'zh-CN') {
         snippets: getSnippets(component),
       };
     });
+
+  // 属性去重
+  materials.forEach(material => {
+    material.schema.properties = material.schema.properties.map(item => {
+      item.content = item.content.filter(p => {
+        const eventName = `on${p.property.replace(/(^[a-z])/, char => char.toUpperCase())}`;
+        return !(Object.keys(material.schema.events).includes(eventName) && p.type === 'function');
+      });
+      return item;
+    });
+  });
 
   materials.forEach(material => {
     outputFileSync(

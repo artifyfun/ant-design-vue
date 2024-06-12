@@ -7,40 +7,6 @@
     "html": {
       "tags": [
         {
-          "name": "affix",
-          "slots": [],
-          "events": [],
-          "attributes": [
-            {
-              "name": "offsetBottom",
-              "default": "",
-              "description": "距离窗口底部达到指定偏移量后触发",
-              "value": {
-                "type": "number",
-                "kind": "expression"
-              }
-            },
-            {
-              "name": "offsetTop",
-              "default": "0",
-              "description": "距离窗口顶部达到指定偏移量后触发",
-              "value": {
-                "type": "number",
-                "kind": "expression"
-              }
-            },
-            {
-              "name": "target",
-              "default": "() => window",
-              "description": "设置 `Affix` 需要监听其滚动事件的元素，值为一个返回对应 DOM 元素的函数",
-              "value": {
-                "type": "() => HTMLElement",
-                "kind": "expression"
-              }
-            }
-          ]
-        },
-        {
           "name": "alert",
           "slots": [
             {
@@ -166,6 +132,40 @@
               "description": "指定警告提示的样式，有四种选择 `success`、`info`、`warning`、`error`",
               "value": {
                 "type": "string",
+                "kind": "expression"
+              }
+            }
+          ]
+        },
+        {
+          "name": "affix",
+          "slots": [],
+          "events": [],
+          "attributes": [
+            {
+              "name": "offsetBottom",
+              "default": "",
+              "description": "距离窗口底部达到指定偏移量后触发",
+              "value": {
+                "type": "number",
+                "kind": "expression"
+              }
+            },
+            {
+              "name": "offsetTop",
+              "default": "0",
+              "description": "距离窗口顶部达到指定偏移量后触发",
+              "value": {
+                "type": "number",
+                "kind": "expression"
+              }
+            },
+            {
+              "name": "target",
+              "default": "() => window",
+              "description": "设置 `Affix` 需要监听其滚动事件的元素，值为一个返回对应 DOM 元素的函数",
+              "value": {
+                "type": "() => HTMLElement",
                 "kind": "expression"
               }
             }
@@ -6445,40 +6445,6 @@
           ]
         },
         {
-          "name": "popover",
-          "slots": [
-            {
-              "name": "content",
-              "description": "卡片内容"
-            },
-            {
-              "name": "title",
-              "description": "卡片标题"
-            }
-          ],
-          "events": [],
-          "attributes": [
-            {
-              "name": "content",
-              "default": "-",
-              "description": "卡片内容",
-              "value": {
-                "type": "string|slot|VNode",
-                "kind": "expression"
-              }
-            },
-            {
-              "name": "title",
-              "default": "-",
-              "description": "卡片标题",
-              "value": {
-                "type": "string|slot|VNode",
-                "kind": "expression"
-              }
-            }
-          ]
-        },
-        {
           "name": "progress",
           "slots": [],
           "events": [],
@@ -6682,6 +6648,40 @@
           ]
         },
         {
+          "name": "popover",
+          "slots": [
+            {
+              "name": "content",
+              "description": "卡片内容"
+            },
+            {
+              "name": "title",
+              "description": "卡片标题"
+            }
+          ],
+          "events": [],
+          "attributes": [
+            {
+              "name": "content",
+              "default": "-",
+              "description": "卡片内容",
+              "value": {
+                "type": "string|slot|VNode",
+                "kind": "expression"
+              }
+            },
+            {
+              "name": "title",
+              "default": "-",
+              "description": "卡片标题",
+              "value": {
+                "type": "string|slot|VNode",
+                "kind": "expression"
+              }
+            }
+          ]
+        },
+        {
           "name": "radio",
           "slots": [],
           "events": [],
@@ -6826,6 +6826,75 @@
           ]
         },
         {
+          "name": "result",
+          "slots": [
+            {
+              "name": "extra",
+              "description": "操作区"
+            },
+            {
+              "name": "icon",
+              "description": "自定义 icon"
+            },
+            {
+              "name": "subTitle",
+              "description": "subTitle 文字"
+            },
+            {
+              "name": "title",
+              "description": "title 文字"
+            }
+          ],
+          "events": [],
+          "attributes": [
+            {
+              "name": "extra",
+              "default": "-",
+              "description": "操作区",
+              "value": {
+                "type": "slot",
+                "kind": "expression"
+              }
+            },
+            {
+              "name": "icon",
+              "default": "-",
+              "description": "自定义 icon",
+              "value": {
+                "type": "slot",
+                "kind": "expression"
+              }
+            },
+            {
+              "name": "status",
+              "default": "'info'",
+              "description": "结果的状态,决定图标和颜色",
+              "value": {
+                "type": "`success` | `error` | `info` | `warning` | `404` | `403` | `500`",
+                "kind": "expression"
+              }
+            },
+            {
+              "name": "subTitle",
+              "default": "-",
+              "description": "subTitle 文字",
+              "value": {
+                "type": "string | VNode | slot",
+                "kind": "expression"
+              }
+            },
+            {
+              "name": "title",
+              "default": "-",
+              "description": "title 文字",
+              "value": {
+                "type": "string | VNode | slot",
+                "kind": "expression"
+              }
+            }
+          ]
+        },
+        {
           "name": "rate",
           "slots": [
             {
@@ -6904,75 +6973,6 @@
               "description": "当前数，受控值",
               "value": {
                 "type": "number",
-                "kind": "expression"
-              }
-            }
-          ]
-        },
-        {
-          "name": "result",
-          "slots": [
-            {
-              "name": "extra",
-              "description": "操作区"
-            },
-            {
-              "name": "icon",
-              "description": "自定义 icon"
-            },
-            {
-              "name": "subTitle",
-              "description": "subTitle 文字"
-            },
-            {
-              "name": "title",
-              "description": "title 文字"
-            }
-          ],
-          "events": [],
-          "attributes": [
-            {
-              "name": "extra",
-              "default": "-",
-              "description": "操作区",
-              "value": {
-                "type": "slot",
-                "kind": "expression"
-              }
-            },
-            {
-              "name": "icon",
-              "default": "-",
-              "description": "自定义 icon",
-              "value": {
-                "type": "slot",
-                "kind": "expression"
-              }
-            },
-            {
-              "name": "status",
-              "default": "'info'",
-              "description": "结果的状态,决定图标和颜色",
-              "value": {
-                "type": "`success` | `error` | `info` | `warning` | `404` | `403` | `500`",
-                "kind": "expression"
-              }
-            },
-            {
-              "name": "subTitle",
-              "default": "-",
-              "description": "subTitle 文字",
-              "value": {
-                "type": "string | VNode | slot",
-                "kind": "expression"
-              }
-            },
-            {
-              "name": "title",
-              "default": "-",
-              "description": "title 文字",
-              "value": {
-                "type": "string | VNode | slot",
                 "kind": "expression"
               }
             }
@@ -7856,6 +7856,76 @@
           ]
         },
         {
+          "name": "spin",
+          "slots": [
+            {
+              "name": "indicator",
+              "description": "加载指示符"
+            },
+            {
+              "name": "tip",
+              "description": "当作为包裹元素时，可以自定义描述文案"
+            }
+          ],
+          "events": [],
+          "attributes": [
+            {
+              "name": "delay",
+              "default": "-",
+              "description": "延迟显示加载效果的时间（防止闪烁）",
+              "value": {
+                "type": "number (毫秒)",
+                "kind": "expression"
+              }
+            },
+            {
+              "name": "indicator",
+              "default": "-",
+              "description": "加载指示符",
+              "value": {
+                "type": "vNode | slot",
+                "kind": "expression"
+              }
+            },
+            {
+              "name": "size",
+              "default": "`default`",
+              "description": "组件大小，可选值为 `small` `default` `large`",
+              "value": {
+                "type": "string",
+                "kind": "expression"
+              }
+            },
+            {
+              "name": "spinning",
+              "default": "true",
+              "description": "是否为加载中状态",
+              "value": {
+                "type": "boolean",
+                "kind": "expression"
+              }
+            },
+            {
+              "name": "tip",
+              "default": "-",
+              "description": "当作为包裹元素时，可以自定义描述文案",
+              "value": {
+                "type": "string | slot",
+                "kind": "expression"
+              }
+            },
+            {
+              "name": "wrapperClassName",
+              "default": "-",
+              "description": "包装器的类属性",
+              "value": {
+                "type": "string",
+                "kind": "expression"
+              }
+            }
+          ]
+        },
+        {
           "name": "space",
           "slots": [
             {
@@ -7941,263 +8011,6 @@
               "description": "子组件大小",
               "value": {
                 "type": "`large` | `middle` | `small`",
-                "kind": "expression"
-              }
-            }
-          ]
-        },
-        {
-          "name": "spin",
-          "slots": [
-            {
-              "name": "indicator",
-              "description": "加载指示符"
-            },
-            {
-              "name": "tip",
-              "description": "当作为包裹元素时，可以自定义描述文案"
-            }
-          ],
-          "events": [],
-          "attributes": [
-            {
-              "name": "delay",
-              "default": "-",
-              "description": "延迟显示加载效果的时间（防止闪烁）",
-              "value": {
-                "type": "number (毫秒)",
-                "kind": "expression"
-              }
-            },
-            {
-              "name": "indicator",
-              "default": "-",
-              "description": "加载指示符",
-              "value": {
-                "type": "vNode | slot",
-                "kind": "expression"
-              }
-            },
-            {
-              "name": "size",
-              "default": "`default`",
-              "description": "组件大小，可选值为 `small` `default` `large`",
-              "value": {
-                "type": "string",
-                "kind": "expression"
-              }
-            },
-            {
-              "name": "spinning",
-              "default": "true",
-              "description": "是否为加载中状态",
-              "value": {
-                "type": "boolean",
-                "kind": "expression"
-              }
-            },
-            {
-              "name": "tip",
-              "default": "-",
-              "description": "当作为包裹元素时，可以自定义描述文案",
-              "value": {
-                "type": "string | slot",
-                "kind": "expression"
-              }
-            },
-            {
-              "name": "wrapperClassName",
-              "default": "-",
-              "description": "包装器的类属性",
-              "value": {
-                "type": "string",
-                "kind": "expression"
-              }
-            }
-          ]
-        },
-        {
-          "name": "statistic",
-          "slots": [
-            {
-              "name": "formatter",
-              "description": "自定义数值展示"
-            },
-            {
-              "name": "prefix",
-              "description": "设置数值的前缀"
-            },
-            {
-              "name": "suffix",
-              "description": "设置数值的后缀"
-            },
-            {
-              "name": "title",
-              "description": "数值的标题"
-            }
-          ],
-          "events": [],
-          "attributes": [
-            {
-              "name": "decimalSeparator",
-              "default": ".",
-              "description": "设置小数点",
-              "value": {
-                "type": "string",
-                "kind": "expression"
-              }
-            },
-            {
-              "name": "formatter",
-              "default": "-",
-              "description": "自定义数值展示",
-              "value": {
-                "type": "v-slot | ({value}) => VNode",
-                "kind": "expression"
-              }
-            },
-            {
-              "name": "groupSeparator",
-              "default": ",",
-              "description": "设置千分位标识符",
-              "value": {
-                "type": "string",
-                "kind": "expression"
-              }
-            },
-            {
-              "name": "precision",
-              "default": "-",
-              "description": "数值精度",
-              "value": {
-                "type": "number",
-                "kind": "expression"
-              }
-            },
-            {
-              "name": "prefix",
-              "default": "-",
-              "description": "设置数值的前缀",
-              "value": {
-                "type": "string | v-slot",
-                "kind": "expression"
-              }
-            },
-            {
-              "name": "suffix",
-              "default": "-",
-              "description": "设置数值的后缀",
-              "value": {
-                "type": "string | v-slot",
-                "kind": "expression"
-              }
-            },
-            {
-              "name": "title",
-              "default": "-",
-              "description": "数值的标题",
-              "value": {
-                "type": "string | v-slot",
-                "kind": "expression"
-              }
-            },
-            {
-              "name": "value",
-              "default": "-",
-              "description": "数值内容",
-              "value": {
-                "type": "string | number",
-                "kind": "expression"
-              }
-            },
-            {
-              "name": "valueStyle",
-              "default": "-",
-              "description": "设置数值的样式",
-              "value": {
-                "type": "style",
-                "kind": "expression"
-              }
-            }
-          ]
-        },
-        {
-          "name": "statistic-countdown",
-          "slots": [
-            {
-              "name": "prefix",
-              "description": "设置数值的前缀"
-            },
-            {
-              "name": "suffix",
-              "description": "设置数值的后缀"
-            },
-            {
-              "name": "title",
-              "description": "数值的标题"
-            }
-          ],
-          "events": [],
-          "attributes": [
-            {
-              "name": "format",
-              "default": "'HH:mm:ss'",
-              "description": "格式化倒计时展示，参考 [dayjs](https://day.js.org/)",
-              "value": {
-                "type": "string",
-                "kind": "expression"
-              }
-            },
-            {
-              "name": "prefix",
-              "default": "-",
-              "description": "设置数值的前缀",
-              "value": {
-                "type": "string | v-slot",
-                "kind": "expression"
-              }
-            },
-            {
-              "name": "suffix",
-              "default": "-",
-              "description": "设置数值的后缀",
-              "value": {
-                "type": "string | v-slot",
-                "kind": "expression"
-              }
-            },
-            {
-              "name": "title",
-              "default": "-",
-              "description": "数值的标题",
-              "value": {
-                "type": "string | v-slot",
-                "kind": "expression"
-              }
-            },
-            {
-              "name": "value",
-              "default": "-",
-              "description": "数值内容",
-              "value": {
-                "type": "number | dayjs",
-                "kind": "expression"
-              }
-            },
-            {
-              "name": "valueStyle",
-              "default": "-",
-              "description": "设置数值的样式",
-              "value": {
-                "type": "style",
-                "kind": "expression"
-              }
-            },
-            {
-              "name": "finish",
-              "description": "倒计时完成时触发",
-              "value": {
-                "type": "() => void",
                 "kind": "expression"
               }
             }
@@ -8396,6 +8209,193 @@
               "description": "标题",
               "value": {
                 "type": "string | slot",
+                "kind": "expression"
+              }
+            }
+          ]
+        },
+        {
+          "name": "statistic",
+          "slots": [
+            {
+              "name": "formatter",
+              "description": "自定义数值展示"
+            },
+            {
+              "name": "prefix",
+              "description": "设置数值的前缀"
+            },
+            {
+              "name": "suffix",
+              "description": "设置数值的后缀"
+            },
+            {
+              "name": "title",
+              "description": "数值的标题"
+            }
+          ],
+          "events": [],
+          "attributes": [
+            {
+              "name": "decimalSeparator",
+              "default": ".",
+              "description": "设置小数点",
+              "value": {
+                "type": "string",
+                "kind": "expression"
+              }
+            },
+            {
+              "name": "formatter",
+              "default": "-",
+              "description": "自定义数值展示",
+              "value": {
+                "type": "v-slot | ({value}) => VNode",
+                "kind": "expression"
+              }
+            },
+            {
+              "name": "groupSeparator",
+              "default": ",",
+              "description": "设置千分位标识符",
+              "value": {
+                "type": "string",
+                "kind": "expression"
+              }
+            },
+            {
+              "name": "precision",
+              "default": "-",
+              "description": "数值精度",
+              "value": {
+                "type": "number",
+                "kind": "expression"
+              }
+            },
+            {
+              "name": "prefix",
+              "default": "-",
+              "description": "设置数值的前缀",
+              "value": {
+                "type": "string | v-slot",
+                "kind": "expression"
+              }
+            },
+            {
+              "name": "suffix",
+              "default": "-",
+              "description": "设置数值的后缀",
+              "value": {
+                "type": "string | v-slot",
+                "kind": "expression"
+              }
+            },
+            {
+              "name": "title",
+              "default": "-",
+              "description": "数值的标题",
+              "value": {
+                "type": "string | v-slot",
+                "kind": "expression"
+              }
+            },
+            {
+              "name": "value",
+              "default": "-",
+              "description": "数值内容",
+              "value": {
+                "type": "string | number",
+                "kind": "expression"
+              }
+            },
+            {
+              "name": "valueStyle",
+              "default": "-",
+              "description": "设置数值的样式",
+              "value": {
+                "type": "style",
+                "kind": "expression"
+              }
+            }
+          ]
+        },
+        {
+          "name": "statistic-countdown",
+          "slots": [
+            {
+              "name": "prefix",
+              "description": "设置数值的前缀"
+            },
+            {
+              "name": "suffix",
+              "description": "设置数值的后缀"
+            },
+            {
+              "name": "title",
+              "description": "数值的标题"
+            }
+          ],
+          "events": [],
+          "attributes": [
+            {
+              "name": "format",
+              "default": "'HH:mm:ss'",
+              "description": "格式化倒计时展示，参考 [dayjs](https://day.js.org/)",
+              "value": {
+                "type": "string",
+                "kind": "expression"
+              }
+            },
+            {
+              "name": "prefix",
+              "default": "-",
+              "description": "设置数值的前缀",
+              "value": {
+                "type": "string | v-slot",
+                "kind": "expression"
+              }
+            },
+            {
+              "name": "suffix",
+              "default": "-",
+              "description": "设置数值的后缀",
+              "value": {
+                "type": "string | v-slot",
+                "kind": "expression"
+              }
+            },
+            {
+              "name": "title",
+              "default": "-",
+              "description": "数值的标题",
+              "value": {
+                "type": "string | v-slot",
+                "kind": "expression"
+              }
+            },
+            {
+              "name": "value",
+              "default": "-",
+              "description": "数值内容",
+              "value": {
+                "type": "number | dayjs",
+                "kind": "expression"
+              }
+            },
+            {
+              "name": "valueStyle",
+              "default": "-",
+              "description": "设置数值的样式",
+              "value": {
+                "type": "style",
+                "kind": "expression"
+              }
+            },
+            {
+              "name": "finish",
+              "description": "倒计时完成时触发",
+              "value": {
+                "type": "() => void",
                 "kind": "expression"
               }
             }

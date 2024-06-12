@@ -212,7 +212,22 @@
         }
       }
     ],
-    "events": {},
+    "events": {
+      "onChange": {
+        "label": {
+          "zh_CN": "onChange"
+        },
+        "description": {
+          "zh_CN": "The callback function that is triggered when the state changes"
+        },
+        "type": "event",
+        "functionInfo": {
+          "params": [],
+          "returns": {}
+        },
+        "defaultValue": ""
+      }
+    },
     "slots": {
       "label": {
         "label": {

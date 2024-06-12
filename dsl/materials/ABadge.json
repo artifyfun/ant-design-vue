@@ -103,7 +103,6 @@
             "cols": 12,
             "labelPosition": "top",
             "type": "number",
-            "defaultValue": "",
             "widget": {
               "component": "MetaNumber",
               "props": {}
@@ -219,7 +218,7 @@
             "cols": 12,
             "labelPosition": "top",
             "type": "string",
-            "defaultValue": "''",
+            "defaultValue": "",
             "widget": {
               "component": "MetaInput",
               "props": {}

@@ -81,7 +81,6 @@
             "cols": 12,
             "labelPosition": "top",
             "type": "number",
-            "defaultValue": "",
             "widget": {
               "component": "MetaNumber",
               "props": {}
@@ -117,7 +116,22 @@
         }
       }
     ],
-    "events": {},
+    "events": {
+      "onChange": {
+        "label": {
+          "zh_CN": "onChange"
+        },
+        "description": {
+          "zh_CN": "Callback for when Affix state is changed"
+        },
+        "type": "event",
+        "functionInfo": {
+          "params": [],
+          "returns": {}
+        },
+        "defaultValue": ""
+      }
+    },
     "slots": {}
   },
   "snippets": [

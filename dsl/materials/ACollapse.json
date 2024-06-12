@@ -280,7 +280,22 @@
         }
       }
     ],
-    "events": {},
+    "events": {
+      "onChange": {
+        "label": {
+          "zh_CN": "onChange"
+        },
+        "description": {
+          "zh_CN": "Callback function executed when active panel is changed"
+        },
+        "type": "event",
+        "functionInfo": {
+          "params": [],
+          "returns": {}
+        },
+        "defaultValue": ""
+      }
+    },
     "slots": {
       "expandIcon": {
         "label": {

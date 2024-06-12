@@ -585,7 +585,36 @@
         }
       }
     ],
-    "events": {},
+    "events": {
+      "onCancel": {
+        "label": {
+          "zh_CN": "onCancel"
+        },
+        "description": {
+          "zh_CN": "Specify a function that will be called when a user clicks mask, close button on top right or Cancel button"
+        },
+        "type": "event",
+        "functionInfo": {
+          "params": [],
+          "returns": {}
+        },
+        "defaultValue": ""
+      },
+      "onOk": {
+        "label": {
+          "zh_CN": "onOk"
+        },
+        "description": {
+          "zh_CN": "Specify a function that will be called when a user clicks the OK button"
+        },
+        "type": "event",
+        "functionInfo": {
+          "params": [],
+          "returns": {}
+        },
+        "defaultValue": ""
+      }
+    },
     "slots": {
       "cancelText": {
         "label": {

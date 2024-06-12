@@ -313,6 +313,50 @@
               "props": {}
             },
             "device": []
+          },
+          {
+            "property": "nextClick",
+            "label": {
+              "text": {
+                "zh_CN": "nextClick"
+              }
+            },
+            "description": {
+              "zh_CN": "Callback executed when next button is clicked"
+            },
+            "required": false,
+            "readOnly": false,
+            "disabled": false,
+            "cols": 12,
+            "labelPosition": "top",
+            "type": "function",
+            "widget": {
+              "component": "MetaCodeEditor",
+              "props": {}
+            },
+            "device": []
+          },
+          {
+            "property": "prevClick",
+            "label": {
+              "text": {
+                "zh_CN": "prevClick"
+              }
+            },
+            "description": {
+              "zh_CN": "Callback executed when prev button is clicked"
+            },
+            "required": false,
+            "readOnly": false,
+            "disabled": false,
+            "cols": 12,
+            "labelPosition": "top",
+            "type": "function",
+            "widget": {
+              "component": "MetaCodeEditor",
+              "props": {}
+            },
+            "device": []
           }
         ],
         "description": {

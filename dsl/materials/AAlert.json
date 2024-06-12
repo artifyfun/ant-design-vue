@@ -261,7 +261,22 @@
         }
       }
     ],
-    "events": {},
+    "events": {
+      "onClose": {
+        "label": {
+          "zh_CN": "onClose"
+        },
+        "description": {
+          "zh_CN": "Callback when Alert is closed"
+        },
+        "type": "event",
+        "functionInfo": {
+          "params": [],
+          "returns": {}
+        },
+        "defaultValue": ""
+      }
+    },
     "slots": {
       "action": {
         "label": {

@@ -150,7 +150,7 @@
             "cols": 12,
             "labelPosition": "top",
             "type": "string",
-            "defaultValue": "'right'",
+            "defaultValue": "right",
             "widget": {
               "component": "MetaSelect",
               "props": {
@@ -207,7 +207,7 @@
             "cols": 12,
             "labelPosition": "top",
             "type": "string",
-            "defaultValue": "'horizontal'",
+            "defaultValue": "horizontal",
             "widget": {
               "component": "MetaSelect",
               "props": {

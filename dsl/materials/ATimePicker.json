@@ -516,7 +516,36 @@
         }
       }
     ],
-    "events": {},
+    "events": {
+      "onChange": {
+        "label": {
+          "zh_CN": "onChange"
+        },
+        "description": {
+          "zh_CN": "a callback function, can be executed when the selected time is changing"
+        },
+        "type": "event",
+        "functionInfo": {
+          "params": [],
+          "returns": {}
+        },
+        "defaultValue": ""
+      },
+      "onOpenChange": {
+        "label": {
+          "zh_CN": "onOpenChange"
+        },
+        "description": {
+          "zh_CN": "a callback function which will be called while panel opening/closing"
+        },
+        "type": "event",
+        "functionInfo": {
+          "params": [],
+          "returns": {}
+        },
+        "defaultValue": ""
+      }
+    },
     "slots": {
       "clearIcon": {
         "label": {

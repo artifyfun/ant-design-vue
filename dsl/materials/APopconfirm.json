@@ -289,6 +289,28 @@
               "props": {}
             },
             "device": []
+          },
+          {
+            "property": "visible",
+            "label": {
+              "text": {
+                "zh_CN": "visible (v-model)"
+              }
+            },
+            "description": {
+              "zh_CN": "hide or show"
+            },
+            "required": false,
+            "readOnly": false,
+            "disabled": false,
+            "cols": 12,
+            "labelPosition": "top",
+            "type": "boolean",
+            "widget": {
+              "component": "MetaSwitch",
+              "props": {}
+            },
+            "device": []
           }
         ],
         "description": {
@@ -296,7 +318,50 @@
         }
       }
     ],
-    "events": {},
+    "events": {
+      "onCancel": {
+        "label": {
+          "zh_CN": "onCancel"
+        },
+        "description": {
+          "zh_CN": "callback of cancel"
+        },
+        "type": "event",
+        "functionInfo": {
+          "params": [],
+          "returns": {}
+        },
+        "defaultValue": ""
+      },
+      "onConfirm": {
+        "label": {
+          "zh_CN": "onConfirm"
+        },
+        "description": {
+          "zh_CN": "callback of confirmation"
+        },
+        "type": "event",
+        "functionInfo": {
+          "params": [],
+          "returns": {}
+        },
+        "defaultValue": ""
+      },
+      "onOpenChange": {
+        "label": {
+          "zh_CN": "onOpenChange"
+        },
+        "description": {
+          "zh_CN": "Callback executed when visibility of the tooltip card is changed"
+        },
+        "type": "event",
+        "functionInfo": {
+          "params": [],
+          "returns": {}
+        },
+        "defaultValue": ""
+      }
+    },
     "slots": {
       "cancelButton": {
         "label": {
@@ -344,6 +409,14 @@
         },
         "description": {
           "zh_CN": "确认内容的详细描述"
+        }
+      },
+      "icon": {
+        "label": {
+          "zh_CN": "icon"
+        },
+        "description": {
+          "zh_CN": "customize icon of confirmation"
         }
       }
     }

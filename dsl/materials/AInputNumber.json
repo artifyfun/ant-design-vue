@@ -172,7 +172,6 @@
             "cols": 12,
             "labelPosition": "top",
             "type": "number",
-            "defaultValue": "",
             "widget": {
               "component": "MetaNumber",
               "props": {}
@@ -454,7 +453,6 @@
             "cols": 12,
             "labelPosition": "top",
             "type": "number",
-            "defaultValue": "",
             "widget": {
               "component": "MetaNumber",
               "props": {}
@@ -467,7 +465,50 @@
         }
       }
     ],
-    "events": {},
+    "events": {
+      "onChange": {
+        "label": {
+          "zh_CN": "onChange"
+        },
+        "description": {
+          "zh_CN": "The callback triggered when the value is changed."
+        },
+        "type": "event",
+        "functionInfo": {
+          "params": [],
+          "returns": {}
+        },
+        "defaultValue": ""
+      },
+      "onPressEnter": {
+        "label": {
+          "zh_CN": "onPressEnter"
+        },
+        "description": {
+          "zh_CN": "The callback function that is triggered when Enter key is pressed."
+        },
+        "type": "event",
+        "functionInfo": {
+          "params": [],
+          "returns": {}
+        },
+        "defaultValue": ""
+      },
+      "onStep": {
+        "label": {
+          "zh_CN": "onStep"
+        },
+        "description": {
+          "zh_CN": "The callback function that is triggered when click up or down buttons"
+        },
+        "type": "event",
+        "functionInfo": {
+          "params": [],
+          "returns": {}
+        },
+        "defaultValue": ""
+      }
+    },
     "slots": {
       "addonAfter": {
         "label": {

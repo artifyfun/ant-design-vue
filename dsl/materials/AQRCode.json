@@ -274,7 +274,7 @@
             "cols": 12,
             "labelPosition": "top",
             "type": "string",
-            "defaultValue": "'M'",
+            "defaultValue": "M",
             "widget": {
               "component": "MetaSelect",
               "props": {
@@ -348,7 +348,22 @@
         }
       }
     ],
-    "events": {},
+    "events": {
+      "onRefresh": {
+        "label": {
+          "zh_CN": "onRefresh"
+        },
+        "description": {
+          "zh_CN": "callback"
+        },
+        "type": "event",
+        "functionInfo": {
+          "params": [],
+          "returns": {}
+        },
+        "defaultValue": ""
+      }
+    },
     "slots": {}
   },
   "snippets": [

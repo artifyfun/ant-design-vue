@@ -242,7 +242,7 @@
             "cols": 12,
             "labelPosition": "top",
             "type": "string",
-            "defaultValue": "'click'",
+            "defaultValue": "click",
             "widget": {
               "component": "MetaSelect",
               "props": {
@@ -367,7 +367,7 @@
             "cols": 12,
             "labelPosition": "top",
             "type": "string",
-            "defaultValue": "'Not Found'",
+            "defaultValue": "Not Found",
             "widget": {
               "component": "MetaSelect",
               "props": {
@@ -423,7 +423,7 @@
             "cols": 12,
             "labelPosition": "top",
             "type": "string",
-            "defaultValue": "'请选择'",
+            "defaultValue": "请选择",
             "widget": {
               "component": "MetaInput",
               "props": {}
@@ -655,7 +655,50 @@
         }
       }
     ],
-    "events": {},
+    "events": {
+      "onChange": {
+        "label": {
+          "zh_CN": "onChange"
+        },
+        "description": {
+          "zh_CN": "callback when finishing cascader select"
+        },
+        "type": "event",
+        "functionInfo": {
+          "params": [],
+          "returns": {}
+        },
+        "defaultValue": ""
+      },
+      "onDropdownVisibleChange": {
+        "label": {
+          "zh_CN": "onDropdownVisibleChange"
+        },
+        "description": {
+          "zh_CN": "callback when popup shown or hidden"
+        },
+        "type": "event",
+        "functionInfo": {
+          "params": [],
+          "returns": {}
+        },
+        "defaultValue": ""
+      },
+      "onSearch": {
+        "label": {
+          "zh_CN": "onSearch"
+        },
+        "description": {
+          "zh_CN": "callback when input value change"
+        },
+        "type": "event",
+        "functionInfo": {
+          "params": [],
+          "returns": {}
+        },
+        "defaultValue": ""
+      }
+    },
     "slots": {
       "clearIcon": {
         "label": {

@@ -379,7 +379,22 @@
         }
       }
     ],
-    "events": {},
+    "events": {
+      "onClick": {
+        "label": {
+          "zh_CN": "onClick"
+        },
+        "description": {
+          "zh_CN": "set the handler to handle click event"
+        },
+        "type": "event",
+        "functionInfo": {
+          "params": [],
+          "returns": {}
+        },
+        "defaultValue": ""
+      }
+    },
     "slots": {
       "icon": {
         "label": {

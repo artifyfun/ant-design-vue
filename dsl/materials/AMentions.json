@@ -127,7 +127,7 @@
             "cols": 12,
             "labelPosition": "top",
             "type": "string",
-            "defaultValue": "'Not Found'",
+            "defaultValue": "Not Found",
             "widget": {
               "component": "MetaSelect",
               "props": {
@@ -195,7 +195,7 @@
             "cols": 12,
             "labelPosition": "top",
             "type": "string",
-            "defaultValue": "'@'",
+            "defaultValue": "@",
             "widget": {
               "component": "MetaInput",
               "props": {}
@@ -218,7 +218,7 @@
             "cols": 12,
             "labelPosition": "top",
             "type": "string",
-            "defaultValue": "' '",
+            "defaultValue": "",
             "widget": {
               "component": "MetaInput",
               "props": {}

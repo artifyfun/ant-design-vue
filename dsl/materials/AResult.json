@@ -81,7 +81,7 @@
             "cols": 12,
             "labelPosition": "top",
             "type": "string",
-            "defaultValue": "'info'",
+            "defaultValue": "info",
             "widget": {
               "component": "MetaInput",
               "props": {}

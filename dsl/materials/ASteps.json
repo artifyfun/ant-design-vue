@@ -270,6 +270,29 @@
               "props": {}
             },
             "device": []
+          },
+          {
+            "property": "current",
+            "label": {
+              "text": {
+                "zh_CN": "current(v-model)"
+              }
+            },
+            "description": {
+              "zh_CN": "to set the current step, counting from 0. You can overwrite this state by using status of Step, support v-model after 1.5.0"
+            },
+            "required": false,
+            "readOnly": false,
+            "disabled": false,
+            "cols": 12,
+            "labelPosition": "top",
+            "type": "number",
+            "defaultValue": 0,
+            "widget": {
+              "component": "MetaNumber",
+              "props": {}
+            },
+            "device": []
           }
         ],
         "description": {

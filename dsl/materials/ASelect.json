@@ -864,6 +864,29 @@
               "props": {}
             },
             "device": []
+          },
+          {
+            "property": "loading",
+            "label": {
+              "text": {
+                "zh_CN": "loading"
+              }
+            },
+            "description": {
+              "zh_CN": "indicate loading state"
+            },
+            "required": false,
+            "readOnly": false,
+            "disabled": false,
+            "cols": 12,
+            "labelPosition": "top",
+            "type": "boolean",
+            "defaultValue": false,
+            "widget": {
+              "component": "MetaSwitch",
+              "props": {}
+            },
+            "device": []
           }
         ],
         "description": {
@@ -871,7 +894,162 @@
         }
       }
     ],
-    "events": {},
+    "events": {
+      "onBlur": {
+        "label": {
+          "zh_CN": "onBlur"
+        },
+        "description": {
+          "zh_CN": "Called when blur"
+        },
+        "type": "event",
+        "functionInfo": {
+          "params": [],
+          "returns": {}
+        },
+        "defaultValue": ""
+      },
+      "onChange": {
+        "label": {
+          "zh_CN": "onChange"
+        },
+        "description": {
+          "zh_CN": "Called when select an option or input value change, or value of input is changed in combobox mode"
+        },
+        "type": "event",
+        "functionInfo": {
+          "params": [],
+          "returns": {}
+        },
+        "defaultValue": ""
+      },
+      "onDeselect": {
+        "label": {
+          "zh_CN": "onDeselect"
+        },
+        "description": {
+          "zh_CN": "Called when a option is deselected, the params are options value (or key) . only called for multiple or tags, effective in multiple or tags mode only."
+        },
+        "type": "event",
+        "functionInfo": {
+          "params": [],
+          "returns": {}
+        },
+        "defaultValue": ""
+      },
+      "onDropdownVisibleChange": {
+        "label": {
+          "zh_CN": "onDropdownVisibleChange"
+        },
+        "description": {
+          "zh_CN": "Call when dropdown open"
+        },
+        "type": "event",
+        "functionInfo": {
+          "params": [],
+          "returns": {}
+        },
+        "defaultValue": ""
+      },
+      "onFocus": {
+        "label": {
+          "zh_CN": "onFocus"
+        },
+        "description": {
+          "zh_CN": "Called when focus"
+        },
+        "type": "event",
+        "functionInfo": {
+          "params": [],
+          "returns": {}
+        },
+        "defaultValue": ""
+      },
+      "onInputKeyDown": {
+        "label": {
+          "zh_CN": "onInputKeyDown"
+        },
+        "description": {
+          "zh_CN": "Called when key pressed"
+        },
+        "type": "event",
+        "functionInfo": {
+          "params": [],
+          "returns": {}
+        },
+        "defaultValue": ""
+      },
+      "onMouseenter": {
+        "label": {
+          "zh_CN": "onMouseenter"
+        },
+        "description": {
+          "zh_CN": "Called when mouse enter"
+        },
+        "type": "event",
+        "functionInfo": {
+          "params": [],
+          "returns": {}
+        },
+        "defaultValue": ""
+      },
+      "onMouseleave": {
+        "label": {
+          "zh_CN": "onMouseleave"
+        },
+        "description": {
+          "zh_CN": "Called when mouse leave"
+        },
+        "type": "event",
+        "functionInfo": {
+          "params": [],
+          "returns": {}
+        },
+        "defaultValue": ""
+      },
+      "onPopupScroll": {
+        "label": {
+          "zh_CN": "onPopupScroll"
+        },
+        "description": {
+          "zh_CN": "Called when dropdown scrolls"
+        },
+        "type": "event",
+        "functionInfo": {
+          "params": [],
+          "returns": {}
+        },
+        "defaultValue": ""
+      },
+      "onSearch": {
+        "label": {
+          "zh_CN": "onSearch"
+        },
+        "description": {
+          "zh_CN": "Callback function that is fired when input changed."
+        },
+        "type": "event",
+        "functionInfo": {
+          "params": [],
+          "returns": {}
+        },
+        "defaultValue": ""
+      },
+      "onSelect": {
+        "label": {
+          "zh_CN": "onSelect"
+        },
+        "description": {
+          "zh_CN": "Called when a option is selected, the params are options value (or key) and option instance."
+        },
+        "type": "event",
+        "functionInfo": {
+          "params": [],
+          "returns": {}
+        },
+        "defaultValue": ""
+      }
+    },
     "slots": {
       "clearIcon": {
         "label": {

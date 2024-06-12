@@ -180,29 +180,6 @@
             "device": []
           },
           {
-            "property": "disabled",
-            "label": {
-              "text": {
-                "zh_CN": "disabled"
-              }
-            },
-            "description": {
-              "zh_CN": "整组失效"
-            },
-            "required": false,
-            "readOnly": false,
-            "disabled": false,
-            "cols": 12,
-            "labelPosition": "top",
-            "type": "boolean",
-            "defaultValue": false,
-            "widget": {
-              "component": "MetaSwitch",
-              "props": {}
-            },
-            "device": []
-          },
-          {
             "property": "name",
             "label": {
               "text": {
@@ -254,7 +231,22 @@
         }
       }
     ],
-    "events": {},
+    "events": {
+      "onChange": {
+        "label": {
+          "zh_CN": "onChange"
+        },
+        "description": {
+          "zh_CN": "The callback function that is triggered when the state changes."
+        },
+        "type": "event",
+        "functionInfo": {
+          "params": [],
+          "returns": {}
+        },
+        "defaultValue": ""
+      }
+    },
     "slots": {}
   },
   "snippets": [

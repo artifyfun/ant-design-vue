@@ -284,7 +284,7 @@
             "cols": 12,
             "labelPosition": "top",
             "type": "string",
-            "defaultValue": "'---'",
+            "defaultValue": "---",
             "widget": {
               "component": "MetaInput",
               "props": {}

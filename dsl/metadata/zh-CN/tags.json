@@ -1,7 +1,4 @@
 {
-  "affix": {
-    "attributes": ["offsetBottom", "offsetTop", "target"]
-  },
   "alert": {
     "attributes": [
       "action",
@@ -16,6 +13,9 @@
       "showIcon",
       "type"
     ]
+  },
+  "affix": {
+    "attributes": ["offsetBottom", "offsetTop", "target"]
   },
   "anchor": {
     "attributes": [
@@ -756,9 +756,6 @@
       "open (v-model)"
     ]
   },
-  "popover": {
-    "attributes": ["content", "title"]
-  },
   "progress": {
     "attributes": [
       "format",
@@ -788,6 +785,9 @@
       "status"
     ]
   },
+  "popover": {
+    "attributes": ["content", "title"]
+  },
   "radio": {
     "attributes": ["blur()", "focus()"]
   },
@@ -806,6 +806,9 @@
       "change"
     ]
   },
+  "result": {
+    "attributes": ["extra", "icon", "status", "subTitle", "title"]
+  },
   "rate": {
     "attributes": [
       "allowClear",
@@ -817,9 +820,6 @@
       "tooltips",
       "value(v-model)"
     ]
-  },
-  "result": {
-    "attributes": ["extra", "icon", "status", "subTitle", "title"]
   },
   "segmented": {
     "attributes": ["block", "disabled", "options", "size", "value", "label"]
@@ -913,30 +913,14 @@
       "getTooltipPopupContainer"
     ]
   },
+  "spin": {
+    "attributes": ["delay", "indicator", "size", "spinning", "tip", "wrapperClassName"]
+  },
   "space": {
     "attributes": ["align", "direction", "size", "split", "wrap"]
   },
   "space-compact": {
     "attributes": ["block", "direction", "size"]
-  },
-  "spin": {
-    "attributes": ["delay", "indicator", "size", "spinning", "tip", "wrapperClassName"]
-  },
-  "statistic": {
-    "attributes": [
-      "decimalSeparator",
-      "formatter",
-      "groupSeparator",
-      "precision",
-      "prefix",
-      "suffix",
-      "title",
-      "value",
-      "valueStyle"
-    ]
-  },
-  "statistic-countdown": {
-    "attributes": ["format", "prefix", "suffix", "title", "value", "valueStyle", "finish"]
   },
   "steps": {
     "attributes": [
@@ -956,6 +940,22 @@
   },
   "steps-step": {
     "attributes": ["description", "disabled", "icon", "status", "subTitle", "title"]
+  },
+  "statistic": {
+    "attributes": [
+      "decimalSeparator",
+      "formatter",
+      "groupSeparator",
+      "precision",
+      "prefix",
+      "suffix",
+      "title",
+      "value",
+      "valueStyle"
+    ]
+  },
+  "statistic-countdown": {
+    "attributes": ["format", "prefix", "suffix", "title", "value", "valueStyle", "finish"]
   },
   "switch": {
     "attributes": [

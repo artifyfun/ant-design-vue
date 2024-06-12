@@ -404,7 +404,22 @@
         }
       }
     ],
-    "events": {},
+    "events": {
+      "onOpenChange": {
+        "label": {
+          "zh_CN": "onOpenChange"
+        },
+        "description": {
+          "zh_CN": "Callback executed when visibility of the tooltip card is changed"
+        },
+        "type": "event",
+        "functionInfo": {
+          "params": [],
+          "returns": {}
+        },
+        "defaultValue": ""
+      }
+    },
     "slots": {
       "title": {
         "label": {

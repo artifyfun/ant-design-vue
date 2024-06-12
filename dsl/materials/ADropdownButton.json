@@ -176,7 +176,7 @@
             "cols": 12,
             "labelPosition": "top",
             "type": "string",
-            "defaultValue": "'default'",
+            "defaultValue": "default",
             "widget": {
               "component": "MetaInput",
               "props": {}
@@ -199,7 +199,7 @@
             "cols": 12,
             "labelPosition": "top",
             "type": "string",
-            "defaultValue": "'default'",
+            "defaultValue": "default",
             "widget": {
               "component": "MetaInput",
               "props": {}
@@ -227,51 +227,6 @@
               "props": {}
             },
             "device": []
-          },
-          {
-            "property": "click",
-            "label": {
-              "text": {
-                "zh_CN": "click"
-              }
-            },
-            "description": {
-              "zh_CN": "点击左侧按钮的回调，和 [Button](/components/button-cn/) 一致"
-            },
-            "required": false,
-            "readOnly": false,
-            "disabled": false,
-            "cols": 12,
-            "labelPosition": "top",
-            "type": "function",
-            "widget": {
-              "component": "MetaCodeEditor",
-              "props": {}
-            },
-            "device": []
-          },
-          {
-            "property": "openChange",
-            "label": {
-              "text": {
-                "zh_CN": "openChange"
-              }
-            },
-            "description": {
-              "zh_CN": "菜单显示状态改变时调用，参数为 visible。点击菜单按钮导致的消失不会触发"
-            },
-            "required": false,
-            "readOnly": false,
-            "disabled": false,
-            "cols": 12,
-            "labelPosition": "top",
-            "type": "function",
-            "defaultValue": "4.0",
-            "widget": {
-              "component": "MetaCodeEditor",
-              "props": {}
-            },
-            "device": []
           }
         ],
         "description": {
@@ -279,7 +234,36 @@
         }
       }
     ],
-    "events": {},
+    "events": {
+      "onClick": {
+        "label": {
+          "zh_CN": "onClick"
+        },
+        "description": {
+          "zh_CN": "a callback function, the same as [Button](/components/button), which will be executed when you click the button on the left"
+        },
+        "type": "event",
+        "functionInfo": {
+          "params": [],
+          "returns": {}
+        },
+        "defaultValue": ""
+      },
+      "onOpenChange": {
+        "label": {
+          "zh_CN": "onOpenChange"
+        },
+        "description": {
+          "zh_CN": "a callback function takes an argument: open, is executed when the open state is changed. Not trigger when hidden by click item"
+        },
+        "type": "event",
+        "functionInfo": {
+          "params": [],
+          "returns": {}
+        },
+        "defaultValue": ""
+      }
+    },
     "slots": {
       "icon": {
         "label": {
