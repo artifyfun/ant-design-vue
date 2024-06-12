@@ -34,7 +34,7 @@
     "loop": true,
     "condition": true,
     "styles": true,
-    "isContainer": false,
+    "isContainer": true,
     "isModal": false,
     "isPopper": false,
     "nestingRule": {
@@ -365,7 +365,16 @@
       }
     ],
     "events": {},
-    "slots": {}
+    "slots": {
+      "default": {
+        "label": {
+          "zh_CN": "default"
+        },
+        "description": {
+          "zh_CN": "自定义内容"
+        }
+      }
+    }
   },
   "snippets": [
     {
@@ -375,7 +384,41 @@
       "icon": "tabs",
       "screenshot": "",
       "snippetName": "ATabs",
-      "schema": {}
+      "schema": {
+        "componentName": "ATabs",
+        "children": [
+          {
+            "componentName": "ATabPane",
+            "props": {
+              "tab": "tab 1",
+              "key": "1"
+            },
+            "children": [
+              {
+                "componentName": "Text",
+                "props": {
+                  "text": "tab 1"
+                }
+              }
+            ]
+          },
+          {
+            "componentName": "ATabPane",
+            "props": {
+              "tab": "tab 2",
+              "key": "2"
+            },
+            "children": [
+              {
+                "componentName": "Text",
+                "props": {
+                  "text": "tab 2"
+                }
+              }
+            ]
+          }
+        ]
+      }
     }
   ]
 }

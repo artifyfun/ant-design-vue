@@ -767,6 +767,7 @@
       "screenshot": "",
       "snippetName": "ACascader",
       "schema": {
+        "componentName": "ACascader",
         "props": {
           "options": [
             {

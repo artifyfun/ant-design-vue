@@ -34,7 +34,7 @@
     "loop": true,
     "condition": true,
     "styles": true,
-    "isContainer": false,
+    "isContainer": true,
     "isModal": false,
     "isPopper": false,
     "nestingRule": {
@@ -421,6 +421,14 @@
       }
     },
     "slots": {
+      "default": {
+        "label": {
+          "zh_CN": "default"
+        },
+        "description": {
+          "zh_CN": "自定义内容"
+        }
+      },
       "title": {
         "label": {
           "zh_CN": "title"
@@ -439,7 +447,31 @@
       "icon": "tooltip",
       "screenshot": "",
       "snippetName": "ATooltip",
-      "schema": {}
+      "schema": {
+        "componentName": "ATooltip",
+        "children": [
+          {
+            "componentName": "Template",
+            "props": {
+              "slot": "title"
+            },
+            "children": [
+              {
+                "componentName": "Text",
+                "props": {
+                  "text": "title content"
+                }
+              }
+            ]
+          },
+          {
+            "componentName": "Text",
+            "props": {
+              "text": "文本内容"
+            }
+          }
+        ]
+      }
     }
   ]
 }

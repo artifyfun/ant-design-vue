@@ -276,6 +276,7 @@
       "screenshot": "",
       "snippetName": "ACarousel",
       "schema": {
+        "componentName": "ACarousel",
         "children": [
           {
             "componentName": "div",

@@ -34,9 +34,8 @@
     "loop": true,
     "condition": true,
     "styles": true,
-    "isContainer": false,
-    "isModal": false,
-    "isPopper": false,
+    "isContainer": true,
+    "isModal": true,
     "nestingRule": {
       "childWhitelist": "",
       "parentWhitelist": "",
@@ -47,15 +46,12 @@
     "isLayout": false,
     "rootSelector": "",
     "shortcuts": {
-      "properties": []
+      "properties": ["visible", "width"]
     },
     "contextMenu": {
-      "actions": ["copy", "remove", "insert", "updateAttr", "bindEevent", "createBlock"],
-      "disable": []
-    },
-    "invalidity": [""],
-    "clickCapture": true,
-    "framework": "Vue"
+      "actions": ["create symbol"],
+      "disable": ["copy", "remove"]
+    }
   },
   "schema": {
     "properties": [
@@ -616,6 +612,14 @@
       }
     },
     "slots": {
+      "default": {
+        "label": {
+          "zh_CN": "default"
+        },
+        "description": {
+          "zh_CN": "自定义内容"
+        }
+      },
       "cancelText": {
         "label": {
           "zh_CN": "cancelText"
@@ -666,7 +670,18 @@
       "icon": "modal",
       "screenshot": "",
       "snippetName": "AModal",
-      "schema": {}
+      "schema": {
+        "componentName": "AModal",
+        "props": {
+          "open": true,
+          "title": "Modal title"
+        },
+        "children": [
+          {
+            "componentName": "div"
+          }
+        ]
+      }
     }
   ]
 }

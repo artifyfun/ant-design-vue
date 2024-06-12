@@ -282,6 +282,7 @@
       "screenshot": "",
       "snippetName": "AAvatar",
       "schema": {
+        "componentName": "AAvatar",
         "children": [
           {
             "componentName": "Text",

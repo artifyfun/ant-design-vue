@@ -34,7 +34,7 @@
     "loop": true,
     "condition": true,
     "styles": true,
-    "isContainer": false,
+    "isContainer": true,
     "isModal": false,
     "isPopper": false,
     "nestingRule": {
@@ -265,6 +265,14 @@
       }
     },
     "slots": {
+      "default": {
+        "label": {
+          "zh_CN": "default"
+        },
+        "description": {
+          "zh_CN": "自定义内容"
+        }
+      },
       "icon": {
         "label": {
           "zh_CN": "icon"
@@ -283,7 +291,52 @@
       "icon": "dropdown-button",
       "screenshot": "",
       "snippetName": "ADropdownButton",
-      "schema": {}
+      "schema": {
+        "componentName": "ADropdownButton",
+        "children": [
+          {
+            "componentName": "Text",
+            "props": {
+              "text": "下拉菜单"
+            }
+          },
+          {
+            "componentName": "Template",
+            "props": {
+              "slot": "overlay"
+            },
+            "children": [
+              {
+                "componentName": "AMenu",
+                "children": [
+                  {
+                    "componentName": "AMenuItem",
+                    "children": [
+                      {
+                        "componentName": "Text",
+                        "props": {
+                          "text": "选项一"
+                        }
+                      }
+                    ]
+                  },
+                  {
+                    "componentName": "AMenuItem",
+                    "children": [
+                      {
+                        "componentName": "Text",
+                        "props": {
+                          "text": "选项二"
+                        }
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
     }
   ]
 }

@@ -34,7 +34,7 @@
     "loop": true,
     "condition": true,
     "styles": true,
-    "isContainer": false,
+    "isContainer": true,
     "isModal": false,
     "isPopper": false,
     "nestingRule": {
@@ -256,6 +256,14 @@
     ],
     "events": {},
     "slots": {
+      "default": {
+        "label": {
+          "zh_CN": "default"
+        },
+        "description": {
+          "zh_CN": "自定义内容"
+        }
+      },
       "count": {
         "label": {
           "zh_CN": "count"
@@ -275,12 +283,13 @@
       "screenshot": "",
       "snippetName": "ABadge",
       "schema": {
+        "componentName": "ABadge",
         "props": {
           "count": "5"
         },
         "children": [
           {
-            "componentName": "Avatar",
+            "componentName": "AAvatar",
             "children": [
               {
                 "componentName": "Text",

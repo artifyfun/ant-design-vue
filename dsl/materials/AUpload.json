@@ -34,7 +34,7 @@
     "loop": true,
     "condition": true,
     "styles": true,
-    "isContainer": false,
+    "isContainer": true,
     "isModal": false,
     "isPopper": false,
     "nestingRule": {
@@ -545,6 +545,14 @@
       }
     },
     "slots": {
+      "default": {
+        "label": {
+          "zh_CN": "default"
+        },
+        "description": {
+          "zh_CN": "自定义内容"
+        }
+      },
       "downloadIcon": {
         "label": {
           "zh_CN": "downloadIcon"
@@ -596,6 +604,7 @@
       "screenshot": "",
       "snippetName": "AUpload",
       "schema": {
+        "componentName": "AUpload",
         "children": [
           {
             "componentName": "AButton",

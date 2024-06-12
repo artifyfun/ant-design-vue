@@ -315,7 +315,43 @@
       "icon": "collapse",
       "screenshot": "",
       "snippetName": "ACollapse",
-      "schema": {}
+      "schema": {
+        "componentName": "ACollapse",
+        "children": [
+          {
+            "componentName": "ACollapsePanel",
+            "children": [
+              {
+                "componentName": "div",
+                "children": [
+                  {
+                    "componentName": "Text",
+                    "props": {
+                      "text": "1"
+                    }
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "componentName": "ACollapsePanel",
+            "children": [
+              {
+                "componentName": "div",
+                "children": [
+                  {
+                    "componentName": "Text",
+                    "props": {
+                      "text": "2"
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
     }
   ]
 }

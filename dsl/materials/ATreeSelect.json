@@ -82,6 +82,7 @@
       "screenshot": "",
       "snippetName": "ATreeSelect",
       "schema": {
+        "componentName": "ATreeSelect",
         "props": {
           "tree-data": [
             {

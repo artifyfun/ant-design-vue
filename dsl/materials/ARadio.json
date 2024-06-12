@@ -82,6 +82,7 @@
       "screenshot": "",
       "snippetName": "ARadio",
       "schema": {
+        "componentName": "ARadio",
         "children": [
           {
             "componentName": "Text",

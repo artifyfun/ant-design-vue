@@ -34,7 +34,7 @@
     "loop": true,
     "condition": true,
     "styles": true,
-    "isContainer": false,
+    "isContainer": true,
     "isModal": false,
     "isPopper": false,
     "nestingRule": {
@@ -372,6 +372,14 @@
       }
     },
     "slots": {
+      "default": {
+        "label": {
+          "zh_CN": "default"
+        },
+        "description": {
+          "zh_CN": "卡片内容"
+        }
+      },
       "extra": {
         "label": {
           "zh_CN": "extra"
@@ -399,6 +407,7 @@
       "screenshot": "",
       "snippetName": "ACard",
       "schema": {
+        "componentName": "ACard",
         "children": [
           {
             "componentName": "Template",

@@ -150,6 +150,7 @@
       "screenshot": "",
       "snippetName": "ABreadcrumb",
       "schema": {
+        "componentName": "ABreadcrumb",
         "children": [
           {
             "componentName": "ABreadcrumbItem",

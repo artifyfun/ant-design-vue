@@ -470,6 +470,7 @@
       "screenshot": "",
       "snippetName": "AMenu",
       "schema": {
+        "componentName": "AMenu",
         "props": {
           "items": [
             {

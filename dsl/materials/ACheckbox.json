@@ -258,6 +258,7 @@
       "screenshot": "",
       "snippetName": "ACheckbox",
       "schema": {
+        "componentName": "ACheckbox",
         "children": [
           {
             "componentName": "Text",

@@ -34,7 +34,7 @@
     "loop": true,
     "condition": true,
     "styles": true,
-    "isContainer": false,
+    "isContainer": true,
     "isModal": false,
     "isPopper": false,
     "nestingRule": {
@@ -549,6 +549,14 @@
     ],
     "events": {},
     "slots": {
+      "renderItem": {
+        "label": {
+          "zh_CN": "renderItem"
+        },
+        "description": {
+          "zh_CN": "自定义内容"
+        }
+      },
       "footer": {
         "label": {
           "zh_CN": "footer"
@@ -583,7 +591,40 @@
       "icon": "list",
       "screenshot": "",
       "snippetName": "AList",
-      "schema": {}
+      "schema": {
+        "componentName": "AList",
+        "props": {
+          "dataSource": [
+            {
+              "title": "Ant Design List Title 1"
+            },
+            {
+              "title": "Ant Design List Title 2"
+            }
+          ]
+        },
+        "children": [
+          {
+            "componentName": "Template",
+            "props": {
+              "slot": "renderItem"
+            },
+            "children": [
+              {
+                "componentName": "AListItem",
+                "children": [
+                  {
+                    "componentName": "Text",
+                    "props": {
+                      "text": "item"
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
     }
   ]
 }

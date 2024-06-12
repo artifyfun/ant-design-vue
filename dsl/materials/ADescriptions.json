@@ -314,7 +314,42 @@
       "icon": "descriptions",
       "screenshot": "",
       "snippetName": "ADescriptions",
-      "schema": {}
+      "schema": {
+        "componentName": "ADescriptions",
+        "props": {
+          "title": "UserInfo"
+        },
+        "children": [
+          {
+            "componentName": "ADescriptionsItem",
+            "props": {
+              "label": "UserName"
+            },
+            "children": [
+              {
+                "componentName": "Text",
+                "props": {
+                  "text": "Artifyfun"
+                }
+              }
+            ]
+          },
+          {
+            "componentName": "ADescriptionsItem",
+            "props": {
+              "label": "Telephone"
+            },
+            "children": [
+              {
+                "componentName": "Text",
+                "props": {
+                  "text": "133xxxxxxxxx"
+                }
+              }
+            ]
+          }
+        ]
+      }
     }
   ]
 }

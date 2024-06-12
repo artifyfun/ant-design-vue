@@ -232,6 +232,7 @@ function getSlots(slots) {
 function getSnippets(component) {
   const schemaMap = {
     Button: {
+      componentName: 'AButton',
       children: [
         {
           componentName: 'Text',
@@ -242,6 +243,7 @@ function getSnippets(component) {
       ],
     },
     Breadcrumb: {
+      componentName: 'ABreadcrumb',
       children: [
         {
           componentName: 'ABreadcrumbItem',
@@ -258,6 +260,7 @@ function getSnippets(component) {
       ],
     },
     Dropdown: {
+      componentName: 'ADropdown',
       children: [
         {
           componentName: 'AButton',
@@ -307,7 +310,54 @@ function getSnippets(component) {
         },
       ],
     },
+    DropdownButton: {
+      componentName: 'ADropdownButton',
+      children: [
+        {
+          componentName: 'Text',
+          props: {
+            text: '下拉菜单',
+          },
+        },
+        {
+          componentName: 'Template',
+          props: {
+            slot: 'overlay',
+          },
+          children: [
+            {
+              componentName: 'AMenu',
+              children: [
+                {
+                  componentName: 'AMenuItem',
+                  children: [
+                    {
+                      componentName: 'Text',
+                      props: {
+                        text: '选项一',
+                      },
+                    },
+                  ],
+                },
+                {
+                  componentName: 'AMenuItem',
+                  children: [
+                    {
+                      componentName: 'Text',
+                      props: {
+                        text: '选项二',
+                      },
+                    },
+                  ],
+                },
+              ],
+            },
+          ],
+        },
+      ],
+    },
     Menu: {
+      componentName: 'AMenu',
       props: {
         items: [
           {
@@ -324,6 +374,7 @@ function getSnippets(component) {
       },
     },
     Steps: {
+      componentName: 'ASteps',
       props: {
         items: [
           {
@@ -343,6 +394,7 @@ function getSnippets(component) {
       },
     },
     Cascader: {
+      componentName: 'ACascader',
       props: {
         options: [
           {
@@ -381,6 +433,7 @@ function getSnippets(component) {
       },
     },
     Checkbox: {
+      componentName: 'ACheckbox',
       children: [
         {
           componentName: 'Text',
@@ -391,6 +444,7 @@ function getSnippets(component) {
       ],
     },
     Form: {
+      componentName: 'AForm',
       children: [
         {
           componentName: 'AFormItem',
@@ -403,6 +457,7 @@ function getSnippets(component) {
       ],
     },
     Radio: {
+      componentName: 'ARadio',
       children: [
         {
           componentName: 'Text',
@@ -413,6 +468,7 @@ function getSnippets(component) {
       ],
     },
     Select: {
+      componentName: 'ASelect',
       children: [
         {
           componentName: 'ASelectOption',
@@ -439,6 +495,7 @@ function getSnippets(component) {
       ],
     },
     TreeSelect: {
+      componentName: 'ATreeSelect',
       props: {
         'tree-data': [
           {
@@ -479,6 +536,7 @@ function getSnippets(component) {
       },
     },
     Upload: {
+      componentName: 'AUpload',
       children: [
         {
           componentName: 'AButton',
@@ -494,6 +552,7 @@ function getSnippets(component) {
       ],
     },
     Avatar: {
+      componentName: 'AAvatar',
       children: [
         {
           componentName: 'Text',
@@ -504,12 +563,13 @@ function getSnippets(component) {
       ],
     },
     Badge: {
+      componentName: 'ABadge',
       props: {
         count: '5',
       },
       children: [
         {
-          componentName: 'Avatar',
+          componentName: 'AAvatar',
           children: [
             {
               componentName: 'Text',
@@ -522,6 +582,7 @@ function getSnippets(component) {
       ],
     },
     Card: {
+      componentName: 'ACard',
       children: [
         {
           componentName: 'Template',
@@ -551,6 +612,7 @@ function getSnippets(component) {
       ],
     },
     Carousel: {
+      componentName: 'ACarousel',
       children: [
         {
           componentName: 'div',
@@ -573,6 +635,223 @@ function getSnippets(component) {
               },
             },
           ],
+        },
+      ],
+    },
+    Collapse: {
+      componentName: 'ACollapse',
+      children: [
+        {
+          componentName: 'ACollapsePanel',
+          children: [
+            {
+              componentName: 'div',
+              children: [
+                {
+                  componentName: 'Text',
+                  props: {
+                    text: '1',
+                  },
+                },
+              ],
+            },
+          ],
+        },
+        {
+          componentName: 'ACollapsePanel',
+          children: [
+            {
+              componentName: 'div',
+              children: [
+                {
+                  componentName: 'Text',
+                  props: {
+                    text: '2',
+                  },
+                },
+              ],
+            },
+          ],
+        },
+      ],
+    },
+    Descriptions: {
+      componentName: 'ADescriptions',
+      props: {
+        title: 'UserInfo',
+      },
+      children: [
+        {
+          componentName: 'ADescriptionsItem',
+          props: {
+            label: 'UserName',
+          },
+          children: [
+            {
+              componentName: 'Text',
+              props: {
+                text: 'Artifyfun',
+              },
+            },
+          ],
+        },
+        {
+          componentName: 'ADescriptionsItem',
+          props: {
+            label: 'Telephone',
+          },
+          children: [
+            {
+              componentName: 'Text',
+              props: {
+                text: '133xxxxxxxxx',
+              },
+            },
+          ],
+        },
+      ],
+    },
+    List: {
+      componentName: 'AList',
+      props: {
+        dataSource: [
+          {
+            title: 'Ant Design List Title 1',
+          },
+          {
+            title: 'Ant Design List Title 2',
+          },
+        ],
+      },
+      children: [
+        {
+          componentName: 'Template',
+          props: {
+            slot: 'renderItem',
+          },
+          children: [
+            {
+              componentName: 'AListItem',
+              children: [
+                {
+                  componentName: 'Text',
+                  props: {
+                    text: 'item',
+                  },
+                },
+              ],
+            },
+          ],
+        },
+      ],
+    },
+    Modal: {
+      componentName: 'AModal',
+      props: {
+        open: true,
+        title: 'Modal title',
+      },
+      children: [
+        {
+          componentName: 'div',
+        },
+      ],
+    },
+    Tabs: {
+      componentName: 'ATabs',
+      children: [
+        {
+          componentName: 'ATabPane',
+          props: {
+            tab: 'tab 1',
+            key: '1',
+          },
+          children: [
+            {
+              componentName: 'Text',
+              props: {
+                text: 'tab 1',
+              },
+            },
+          ],
+        },
+        {
+          componentName: 'ATabPane',
+          props: {
+            tab: 'tab 2',
+            key: '2',
+          },
+          children: [
+            {
+              componentName: 'Text',
+              props: {
+                text: 'tab 2',
+              },
+            },
+          ],
+        },
+      ],
+    },
+    Tag: {
+      componentName: 'ATag',
+      children: [
+        {
+          componentName: 'Text',
+          props: {
+            text: '文本',
+          },
+        },
+      ],
+    },
+    Timeline: {
+      componentName: 'ATimeline',
+      children: [
+        {
+          componentName: 'ATimelineItem',
+          children: [
+            {
+              componentName: 'Text',
+              props: {
+                text: 'timeline 1',
+              },
+            },
+          ],
+        },
+        {
+          componentName: 'ATimelineItem',
+          children: [
+            {
+              componentName: 'Text',
+              props: {
+                text: 'timeline 2',
+              },
+            },
+          ],
+        },
+      ],
+    },
+    Tooltip: {
+      componentName: 'ATooltip',
+      children: [
+        {
+          componentName: 'Template',
+          props: {
+            slot: 'title',
+          },
+          children: [
+            {
+              componentName: 'Text',
+              props: {
+                text: 'title content',
+              },
+            },
+          ],
+        },
+        {
+          componentName: 'Text',
+          props: {
+            text: '文本内容',
+          },
         },
       ],
     },
@@ -600,23 +879,263 @@ function formatDescription(description = '') {
 }
 
 const defaultSlotComponents = {
-  Affix: {
+  AAffix: {
     default: {
       label: {
         zh_CN: 'default',
       },
       description: {
-        zh_CN: '自定义默认内容',
+        zh_CN: '自定义内容',
       },
     },
   },
-  Button: {
+  AButton: {
     default: {
       label: {
         zh_CN: 'default',
       },
       description: {
-        zh_CN: '自定义默认内容',
+        zh_CN: '自定义内容',
+      },
+    },
+  },
+  ABadge: {
+    default: {
+      label: {
+        zh_CN: 'default',
+      },
+      description: {
+        zh_CN: '自定义内容',
+      },
+    },
+  },
+  ABadgeRibbon: {
+    default: {
+      label: {
+        zh_CN: 'default',
+      },
+      description: {
+        zh_CN: '自定义内容',
+      },
+    },
+  },
+  ACard: {
+    default: {
+      label: {
+        zh_CN: 'default',
+      },
+      description: {
+        zh_CN: '卡片内容',
+      },
+    },
+  },
+  ACollapsePanel: {
+    default: {
+      label: {
+        zh_CN: 'default',
+      },
+      description: {
+        zh_CN: '自定义内容',
+      },
+    },
+  },
+  ADrawer: {
+    default: {
+      label: {
+        zh_CN: 'default',
+      },
+      description: {
+        zh_CN: '自定义内容',
+      },
+    },
+  },
+  ADropdown: {
+    default: {
+      label: {
+        zh_CN: 'default',
+      },
+      description: {
+        zh_CN: '自定义内容',
+      },
+    },
+  },
+  ADropdownButton: {
+    default: {
+      label: {
+        zh_CN: 'default',
+      },
+      description: {
+        zh_CN: '自定义内容',
+      },
+    },
+  },
+  AEmpty: {
+    default: {
+      label: {
+        zh_CN: 'default',
+      },
+      description: {
+        zh_CN: '自定义内容',
+      },
+    },
+  },
+  AForm: {
+    default: {
+      label: {
+        zh_CN: 'default',
+      },
+      description: {
+        zh_CN: '自定义内容',
+      },
+    },
+  },
+  AFormItem: {
+    default: {
+      label: {
+        zh_CN: 'default',
+      },
+      description: {
+        zh_CN: '自定义内容',
+      },
+    },
+  },
+  AList: {
+    renderItem: {
+      label: {
+        zh_CN: 'renderItem',
+      },
+      description: {
+        zh_CN: '自定义内容',
+      },
+    },
+  },
+  AListItem: {
+    default: {
+      label: {
+        zh_CN: 'default',
+      },
+      description: {
+        zh_CN: '自定义内容',
+      },
+    },
+  },
+  AModal: {
+    default: {
+      label: {
+        zh_CN: 'default',
+      },
+      description: {
+        zh_CN: '自定义内容',
+      },
+    },
+  },
+  APopconfirm: {
+    default: {
+      label: {
+        zh_CN: 'default',
+      },
+      description: {
+        zh_CN: '自定义内容',
+      },
+    },
+  },
+  APopover: {
+    default: {
+      label: {
+        zh_CN: 'default',
+      },
+      description: {
+        zh_CN: '自定义内容',
+      },
+    },
+  },
+  ARadioButton: {
+    default: {
+      label: {
+        zh_CN: 'default',
+      },
+      description: {
+        zh_CN: '自定义内容',
+      },
+    },
+  },
+  ARadioGroup: {
+    default: {
+      label: {
+        zh_CN: 'default',
+      },
+      description: {
+        zh_CN: '自定义内容',
+      },
+    },
+  },
+  ATabs: {
+    default: {
+      label: {
+        zh_CN: 'default',
+      },
+      description: {
+        zh_CN: '自定义内容',
+      },
+    },
+  },
+  ATabPane: {
+    default: {
+      label: {
+        zh_CN: 'default',
+      },
+      description: {
+        zh_CN: '自定义内容',
+      },
+    },
+  },
+  ATag: {
+    default: {
+      label: {
+        zh_CN: 'default',
+      },
+      description: {
+        zh_CN: '自定义内容',
+      },
+    },
+  },
+  ATimeline: {
+    default: {
+      label: {
+        zh_CN: 'default',
+      },
+      description: {
+        zh_CN: '自定义内容',
+      },
+    },
+  },
+  ATimelineItem: {
+    default: {
+      label: {
+        zh_CN: 'default',
+      },
+      description: {
+        zh_CN: '自定义内容',
+      },
+    },
+  },
+  ATooltip: {
+    default: {
+      label: {
+        zh_CN: 'default',
+      },
+      description: {
+        zh_CN: '自定义内容',
+      },
+    },
+  },
+  AUpload: {
+    default: {
+      label: {
+        zh_CN: 'default',
+      },
+      description: {
+        zh_CN: '自定义内容',
       },
     },
   },
@@ -831,6 +1350,55 @@ async function generateMaterials(type = 'zh-CN') {
       });
       return item;
     });
+  });
+
+  // 添加默认slot
+  materials.forEach(material => {
+    const defaultSlot = defaultSlotComponents[material.component];
+    if (defaultSlot) {
+      material.schema.slots = {
+        ...defaultSlot,
+        ...material.schema.slots,
+      };
+    }
+  });
+
+  // 弹窗属性设置
+  materials.forEach(material => {
+    const modalComponents = ['ADrawer', 'AModal'];
+    if (modalComponents.includes(material.component)) {
+      material.configure = {
+        loop: true,
+        condition: true,
+        styles: true,
+        isContainer: false,
+        isModal: true,
+        nestingRule: {
+          childWhitelist: '',
+          parentWhitelist: '',
+          descendantBlacklist: '',
+          ancestorWhitelist: '',
+        },
+        isNullNode: false,
+        isLayout: false,
+        rootSelector: '',
+        shortcuts: {
+          properties: ['visible', 'width'],
+        },
+        contextMenu: {
+          actions: ['create symbol'],
+          disable: ['copy', 'remove'],
+        },
+      };
+    }
+  });
+
+  // 容器属性设置
+  materials.forEach(material => {
+    const containerComponents = [...Object.keys(defaultSlotComponents)];
+    if (containerComponents.includes(material.component)) {
+      material.configure.isContainer = true;
+    }
   });
 
   materials.forEach(material => {

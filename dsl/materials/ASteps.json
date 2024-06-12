@@ -321,6 +321,7 @@
       "screenshot": "",
       "snippetName": "ASteps",
       "schema": {
+        "componentName": "ASteps",
         "props": {
           "items": [
             {

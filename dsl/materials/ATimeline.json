@@ -34,7 +34,7 @@
     "loop": true,
     "condition": true,
     "styles": true,
-    "isContainer": false,
+    "isContainer": true,
     "isModal": false,
     "isPopper": false,
     "nestingRule": {
@@ -191,6 +191,14 @@
     ],
     "events": {},
     "slots": {
+      "default": {
+        "label": {
+          "zh_CN": "default"
+        },
+        "description": {
+          "zh_CN": "自定义内容"
+        }
+      },
       "pending": {
         "label": {
           "zh_CN": "pending"
@@ -217,7 +225,33 @@
       "icon": "timeline",
       "screenshot": "",
       "snippetName": "ATimeline",
-      "schema": {}
+      "schema": {
+        "componentName": "ATimeline",
+        "children": [
+          {
+            "componentName": "ATimelineItem",
+            "children": [
+              {
+                "componentName": "Text",
+                "props": {
+                  "text": "timeline 1"
+                }
+              }
+            ]
+          },
+          {
+            "componentName": "ATimelineItem",
+            "children": [
+              {
+                "componentName": "Text",
+                "props": {
+                  "text": "timeline 2"
+                }
+              }
+            ]
+          }
+        ]
+      }
     }
   ]
 }

@@ -1142,6 +1142,7 @@
       "screenshot": "",
       "snippetName": "ASelect",
       "schema": {
+        "componentName": "ASelect",
         "children": [
           {
             "componentName": "ASelectOption",

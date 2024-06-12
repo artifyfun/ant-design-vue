@@ -34,7 +34,7 @@
     "loop": true,
     "condition": true,
     "styles": true,
-    "isContainer": false,
+    "isContainer": true,
     "isModal": false,
     "isPopper": false,
     "nestingRule": {
@@ -141,6 +141,14 @@
     ],
     "events": {},
     "slots": {
+      "default": {
+        "label": {
+          "zh_CN": "default"
+        },
+        "description": {
+          "zh_CN": "自定义内容"
+        }
+      },
       "closeIcon": {
         "label": {
           "zh_CN": "closeIcon"
@@ -167,7 +175,17 @@
       "icon": "tag",
       "screenshot": "",
       "snippetName": "ATag",
-      "schema": {}
+      "schema": {
+        "componentName": "ATag",
+        "children": [
+          {
+            "componentName": "Text",
+            "props": {
+              "text": "文本"
+            }
+          }
+        ]
+      }
     }
   ]
 }
