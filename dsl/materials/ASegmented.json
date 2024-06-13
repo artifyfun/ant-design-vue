@@ -190,19 +190,8 @@
             "type": "string",
             "defaultValue": "",
             "widget": {
-              "component": "MetaSelect",
-              "props": {
-                "options": [
-                  {
-                    "label": "string",
-                    "value": "string"
-                  },
-                  {
-                    "label": "number",
-                    "value": "number"
-                  }
-                ]
-              }
+              "component": "MetaInput",
+              "props": {}
             },
             "device": []
           }

@@ -82,19 +82,8 @@
             "type": "string",
             "defaultValue": "<ArrowLeft />",
             "widget": {
-              "component": "MetaSelect",
-              "props": {
-                "options": [
-                  {
-                    "label": "string",
-                    "value": "string"
-                  },
-                  {
-                    "label": "slot",
-                    "value": "slot"
-                  }
-                ]
-              }
+              "component": "MetaInput",
+              "props": {}
             },
             "device": []
           },
@@ -115,19 +104,8 @@
             "labelPosition": "top",
             "type": "string",
             "widget": {
-              "component": "MetaSelect",
-              "props": {
-                "options": [
-                  {
-                    "label": "string",
-                    "value": "string"
-                  },
-                  {
-                    "label": "slot",
-                    "value": "slot"
-                  }
-                ]
-              }
+              "component": "MetaInput",
+              "props": {}
             },
             "device": []
           },
@@ -148,19 +126,8 @@
             "labelPosition": "top",
             "type": "string",
             "widget": {
-              "component": "MetaSelect",
-              "props": {
-                "options": [
-                  {
-                    "label": "string",
-                    "value": "string"
-                  },
-                  {
-                    "label": "slot",
-                    "value": "slot"
-                  }
-                ]
-              }
+              "component": "MetaInput",
+              "props": {}
             },
             "device": []
           },
@@ -204,19 +171,8 @@
             "labelPosition": "top",
             "type": "string",
             "widget": {
-              "component": "MetaSelect",
-              "props": {
-                "options": [
-                  {
-                    "label": "string",
-                    "value": "string"
-                  },
-                  {
-                    "label": "slot",
-                    "value": "slot"
-                  }
-                ]
-              }
+              "component": "MetaInput",
+              "props": {}
             },
             "device": []
           },
@@ -237,19 +193,8 @@
             "labelPosition": "top",
             "type": "string",
             "widget": {
-              "component": "MetaSelect",
-              "props": {
-                "options": [
-                  {
-                    "label": "string",
-                    "value": "string"
-                  },
-                  {
-                    "label": "slot",
-                    "value": "slot"
-                  }
-                ]
-              }
+              "component": "MetaInput",
+              "props": {}
             },
             "device": []
           }

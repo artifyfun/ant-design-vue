@@ -41,137 +41,6 @@
           ]
         },
         {
-          "name": "alert",
-          "slots": [
-            {
-              "name": "action",
-              "description": "自定义操作项"
-            },
-            {
-              "name": "closeIcon",
-              "description": "自定义关闭 Icon"
-            },
-            {
-              "name": "closeText",
-              "description": "自定义关闭按钮"
-            },
-            {
-              "name": "description",
-              "description": "警告提示的辅助性文字介绍"
-            },
-            {
-              "name": "icon",
-              "description": "自定义图标，`showIcon` 为 `true` 时有效"
-            },
-            {
-              "name": "message",
-              "description": "警告提示内容"
-            }
-          ],
-          "events": [],
-          "attributes": [
-            {
-              "name": "action",
-              "default": "-",
-              "description": "自定义操作项",
-              "value": {
-                "type": "slot",
-                "kind": "expression"
-              }
-            },
-            {
-              "name": "afterClose",
-              "default": "-",
-              "description": "关闭动画结束后触发的回调函数",
-              "value": {
-                "type": "() => void",
-                "kind": "expression"
-              }
-            },
-            {
-              "name": "banner",
-              "default": "false",
-              "description": "是否用作顶部公告",
-              "value": {
-                "type": "boolean",
-                "kind": "expression"
-              }
-            },
-            {
-              "name": "closable",
-              "default": "无",
-              "description": "默认不显示关闭按钮",
-              "value": {
-                "type": "boolean",
-                "kind": "expression"
-              }
-            },
-            {
-              "name": "closeIcon",
-              "default": "`<CloseOutlined />`",
-              "description": "自定义关闭 Icon",
-              "value": {
-                "type": "slot",
-                "kind": "expression"
-              }
-            },
-            {
-              "name": "closeText",
-              "default": "无",
-              "description": "自定义关闭按钮",
-              "value": {
-                "type": "string|slot",
-                "kind": "expression"
-              }
-            },
-            {
-              "name": "description",
-              "default": "无",
-              "description": "警告提示的辅助性文字介绍",
-              "value": {
-                "type": "string|slot",
-                "kind": "expression"
-              }
-            },
-            {
-              "name": "icon",
-              "default": "-",
-              "description": "自定义图标，`showIcon` 为 `true` 时有效",
-              "value": {
-                "type": "vnode|slot",
-                "kind": "expression"
-              }
-            },
-            {
-              "name": "message",
-              "default": "无",
-              "description": "警告提示内容",
-              "value": {
-                "type": "string|slot",
-                "kind": "expression"
-              }
-            },
-            {
-              "name": "showIcon",
-              "default": "false,`banner` 模式下默认值为 true",
-              "description": "是否显示辅助图标",
-              "value": {
-                "type": "boolean",
-                "kind": "expression"
-              }
-            },
-            {
-              "name": "type",
-              "default": "`info`,`banner` 模式下默认值为 `warning`",
-              "description": "指定警告提示的样式，有四种选择 `success`、`info`、`warning`、`error`",
-              "value": {
-                "type": "string",
-                "kind": "expression"
-              }
-            }
-          ]
-        },
-        {
           "name": "anchor",
           "slots": [
             {
@@ -347,6 +216,137 @@
               "description": "嵌套的 Anchor Link，`注意：水平方向该属性不支持`",
               "value": {
                 "type": "[AnchorItem](#anchoritem)[]",
+                "kind": "expression"
+              }
+            }
+          ]
+        },
+        {
+          "name": "alert",
+          "slots": [
+            {
+              "name": "action",
+              "description": "自定义操作项"
+            },
+            {
+              "name": "closeIcon",
+              "description": "自定义关闭 Icon"
+            },
+            {
+              "name": "closeText",
+              "description": "自定义关闭按钮"
+            },
+            {
+              "name": "description",
+              "description": "警告提示的辅助性文字介绍"
+            },
+            {
+              "name": "icon",
+              "description": "自定义图标，`showIcon` 为 `true` 时有效"
+            },
+            {
+              "name": "message",
+              "description": "警告提示内容"
+            }
+          ],
+          "events": [],
+          "attributes": [
+            {
+              "name": "action",
+              "default": "-",
+              "description": "自定义操作项",
+              "value": {
+                "type": "slot",
+                "kind": "expression"
+              }
+            },
+            {
+              "name": "afterClose",
+              "default": "-",
+              "description": "关闭动画结束后触发的回调函数",
+              "value": {
+                "type": "() => void",
+                "kind": "expression"
+              }
+            },
+            {
+              "name": "banner",
+              "default": "false",
+              "description": "是否用作顶部公告",
+              "value": {
+                "type": "boolean",
+                "kind": "expression"
+              }
+            },
+            {
+              "name": "closable",
+              "default": "无",
+              "description": "默认不显示关闭按钮",
+              "value": {
+                "type": "boolean",
+                "kind": "expression"
+              }
+            },
+            {
+              "name": "closeIcon",
+              "default": "`<CloseOutlined />`",
+              "description": "自定义关闭 Icon",
+              "value": {
+                "type": "slot",
+                "kind": "expression"
+              }
+            },
+            {
+              "name": "closeText",
+              "default": "无",
+              "description": "自定义关闭按钮",
+              "value": {
+                "type": "string|slot",
+                "kind": "expression"
+              }
+            },
+            {
+              "name": "description",
+              "default": "无",
+              "description": "警告提示的辅助性文字介绍",
+              "value": {
+                "type": "string|slot",
+                "kind": "expression"
+              }
+            },
+            {
+              "name": "icon",
+              "default": "-",
+              "description": "自定义图标，`showIcon` 为 `true` 时有效",
+              "value": {
+                "type": "vnode|slot",
+                "kind": "expression"
+              }
+            },
+            {
+              "name": "message",
+              "default": "无",
+              "description": "警告提示内容",
+              "value": {
+                "type": "string|slot",
+                "kind": "expression"
+              }
+            },
+            {
+              "name": "showIcon",
+              "default": "false,`banner` 模式下默认值为 true",
+              "description": "是否显示辅助图标",
+              "value": {
+                "type": "boolean",
+                "kind": "expression"
+              }
+            },
+            {
+              "name": "type",
+              "default": "`info`,`banner` 模式下默认值为 `warning`",
+              "description": "指定警告提示的样式，有四种选择 `success`、`info`、`warning`、`error`",
+              "value": {
+                "type": "string",
                 "kind": "expression"
               }
             }
@@ -2622,58 +2622,6 @@
           ]
         },
         {
-          "name": "divider",
-          "slots": [],
-          "events": [],
-          "attributes": [
-            {
-              "name": "dashed",
-              "default": "false",
-              "description": "是否虚线",
-              "value": {
-                "type": "boolean",
-                "kind": "expression"
-              }
-            },
-            {
-              "name": "orientation",
-              "default": "`center`",
-              "description": "分割线标题的位置",
-              "value": {
-                "type": "`left` | `right` | `center`",
-                "kind": "expression"
-              }
-            },
-            {
-              "name": "orientationMargin",
-              "default": "-",
-              "description": "标题和最近 left/right 边框之间的距离，去除了分割线，同时 `orientation` 必须为 `left` 或 `right`",
-              "value": {
-                "type": "string | number",
-                "kind": "expression"
-              }
-            },
-            {
-              "name": "plain",
-              "default": "false",
-              "description": "文字是否显示为普通正文样式",
-              "value": {
-                "type": "boolean",
-                "kind": "expression"
-              }
-            },
-            {
-              "name": "type",
-              "default": "`horizontal`",
-              "description": "水平还是垂直类型",
-              "value": {
-                "type": "`horizontal` | `vertical`",
-                "kind": "expression"
-              }
-            }
-          ]
-        },
-        {
           "name": "descriptions",
           "slots": [
             {
@@ -2765,6 +2713,58 @@
               "description": "描述列表的标题，显示在最顶部",
               "value": {
                 "type": "string | VNode | slot",
+                "kind": "expression"
+              }
+            }
+          ]
+        },
+        {
+          "name": "divider",
+          "slots": [],
+          "events": [],
+          "attributes": [
+            {
+              "name": "dashed",
+              "default": "false",
+              "description": "是否虚线",
+              "value": {
+                "type": "boolean",
+                "kind": "expression"
+              }
+            },
+            {
+              "name": "orientation",
+              "default": "`center`",
+              "description": "分割线标题的位置",
+              "value": {
+                "type": "`left` | `right` | `center`",
+                "kind": "expression"
+              }
+            },
+            {
+              "name": "orientationMargin",
+              "default": "-",
+              "description": "标题和最近 left/right 边框之间的距离，去除了分割线，同时 `orientation` 必须为 `left` 或 `right`",
+              "value": {
+                "type": "string | number",
+                "kind": "expression"
+              }
+            },
+            {
+              "name": "plain",
+              "default": "false",
+              "description": "文字是否显示为普通正文样式",
+              "value": {
+                "type": "boolean",
+                "kind": "expression"
+              }
+            },
+            {
+              "name": "type",
+              "default": "`horizontal`",
+              "description": "水平还是垂直类型",
+              "value": {
+                "type": "`horizontal` | `vertical`",
                 "kind": "expression"
               }
             }

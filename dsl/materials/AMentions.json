@@ -129,19 +129,8 @@
             "type": "string",
             "defaultValue": "Not Found",
             "widget": {
-              "component": "MetaSelect",
-              "props": {
-                "options": [
-                  {
-                    "label": "string",
-                    "value": "string"
-                  },
-                  {
-                    "label": "slot",
-                    "value": "slot"
-                  }
-                ]
-              }
+              "component": "MetaInput",
+              "props": {}
             },
             "device": []
           },

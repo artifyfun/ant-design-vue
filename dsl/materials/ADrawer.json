@@ -216,19 +216,8 @@
             "type": "string",
             "defaultValue": "378",
             "widget": {
-              "component": "MetaSelect",
-              "props": {
-                "options": [
-                  {
-                    "label": "string",
-                    "value": "string"
-                  },
-                  {
-                    "label": "number",
-                    "value": "number"
-                  }
-                ]
-              }
+              "component": "MetaInput",
+              "props": {}
             },
             "device": []
           },
@@ -438,19 +427,8 @@
             "labelPosition": "top",
             "type": "string",
             "widget": {
-              "component": "MetaSelect",
-              "props": {
-                "options": [
-                  {
-                    "label": "string",
-                    "value": "string"
-                  },
-                  {
-                    "label": "slot",
-                    "value": "slot"
-                  }
-                ]
-              }
+              "component": "MetaInput",
+              "props": {}
             },
             "device": []
           },
@@ -494,19 +472,8 @@
             "type": "string",
             "defaultValue": "378",
             "widget": {
-              "component": "MetaSelect",
-              "props": {
-                "options": [
-                  {
-                    "label": "string",
-                    "value": "string"
-                  },
-                  {
-                    "label": "number",
-                    "value": "number"
-                  }
-                ]
-              }
+              "component": "MetaInput",
+              "props": {}
             },
             "device": []
           },

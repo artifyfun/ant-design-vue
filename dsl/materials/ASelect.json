@@ -343,29 +343,6 @@
             "device": []
           },
           {
-            "property": "filterOption",
-            "label": {
-              "text": {
-                "zh_CN": "filterOption"
-              }
-            },
-            "description": {
-              "zh_CN": "是否根据输入项进行筛选。当其为一个函数时，会接收 inputValue option 两个参数，当 option 符合筛选条件时，应返回 true，反之则返回 false。"
-            },
-            "required": false,
-            "readOnly": false,
-            "disabled": false,
-            "cols": 12,
-            "labelPosition": "top",
-            "type": "string",
-            "defaultValue": "true",
-            "widget": {
-              "component": "MetaInput",
-              "props": {}
-            },
-            "device": []
-          },
-          {
             "property": "firstActiveValue",
             "label": {
               "text": {
@@ -555,19 +532,8 @@
             "type": "string",
             "defaultValue": "Not Found",
             "widget": {
-              "component": "MetaSelect",
-              "props": {
-                "options": [
-                  {
-                    "label": "string",
-                    "value": "string"
-                  },
-                  {
-                    "label": "slot",
-                    "value": "slot"
-                  }
-                ]
-              }
+              "component": "MetaInput",
+              "props": {}
             },
             "device": []
           },
@@ -656,19 +622,8 @@
             "labelPosition": "top",
             "type": "string",
             "widget": {
-              "component": "MetaSelect",
-              "props": {
-                "options": [
-                  {
-                    "label": "string",
-                    "value": "string"
-                  },
-                  {
-                    "label": "slot",
-                    "value": "slot"
-                  }
-                ]
-              }
+              "component": "MetaInput",
+              "props": {}
             },
             "device": []
           },

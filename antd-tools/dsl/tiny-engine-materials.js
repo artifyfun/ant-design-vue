@@ -54,7 +54,10 @@ function getPropertiesContent(attributes) {
         return res.trim();
       };
       const isValidVariable = word =>
-        /^([^\x00-\xff]|[a-zA-Z_$])([^\x00-\xff]|[a-zA-Z0-9_$])*$/.test(formatVariable(word));
+        /^([^\x00-\xff]|[a-zA-Z_$])([^\x00-\xff]|[a-zA-Z0-9_$])*$/.test(formatVariable(word)) &&
+        !['string', 'number', 'boolean', 'object', 'slot', 'function', 'VNode'].some(key =>
+          word.toLowerCase().includes(key.toLowerCase()),
+        );
 
       let type = attr.value.type.includes('|')
         ? attr.value.type
@@ -104,9 +107,11 @@ function getPropertiesContent(attributes) {
             return undefined;
           }
         }
-        return attr.default && typeof attr.default === 'string'
-          ? attr.default.replaceAll('`', '').replaceAll('"', '').replaceAll("'", '').trim()
-          : attr.default;
+        const value =
+          attr.default && typeof attr.default === 'string'
+            ? attr.default.replaceAll('`', '').replaceAll('"', '').replaceAll("'", '').trim()
+            : attr.default;
+        return value === '-' ? undefined : value;
       })();
 
       const widget = (() => {
