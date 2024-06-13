@@ -316,6 +316,52 @@
           "returns": {}
         },
         "defaultValue": ""
+      },
+      "onUpdate:open": {
+        "label": {
+          "zh_CN": "onUpdate:open"
+        },
+        "description": {
+          "zh_CN": "update:open event"
+        },
+        "type": "event",
+        "functionInfo": {
+          "params": [
+            {
+              "name": "open",
+              "type": "boolean",
+              "defaultValue": "",
+              "description": {
+                "zh_CN": "双向绑定的值"
+              }
+            }
+          ],
+          "returns": {}
+        },
+        "defaultValue": ""
+      },
+      "onUpdate:visible": {
+        "label": {
+          "zh_CN": "onUpdate:visible"
+        },
+        "description": {
+          "zh_CN": "update:visible event"
+        },
+        "type": "event",
+        "functionInfo": {
+          "params": [
+            {
+              "name": "visible",
+              "type": "boolean",
+              "defaultValue": "",
+              "description": {
+                "zh_CN": "双向绑定的值"
+              }
+            }
+          ],
+          "returns": {}
+        },
+        "defaultValue": ""
       }
     },
     "slots": {

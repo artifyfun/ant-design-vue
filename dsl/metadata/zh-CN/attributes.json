@@ -11,6 +11,50 @@
     "type": "() => HTMLElement",
     "description": "设置 `Affix` 需要监听其滚动事件的元素，值为一个返回对应 DOM 元素的函数, Default: () => window"
   },
+  "alert/action": {
+    "type": "slot",
+    "description": "自定义操作项, Default: -"
+  },
+  "alert/afterClose": {
+    "type": "() => void",
+    "description": "关闭动画结束后触发的回调函数, Default: -"
+  },
+  "alert/banner": {
+    "type": "boolean",
+    "description": "是否用作顶部公告, Default: false"
+  },
+  "alert/closable": {
+    "type": "boolean",
+    "description": "默认不显示关闭按钮, Default: 无"
+  },
+  "alert/closeIcon": {
+    "type": "slot",
+    "description": "自定义关闭 Icon, Default: `<CloseOutlined />`"
+  },
+  "alert/closeText": {
+    "type": "string|slot",
+    "description": "自定义关闭按钮, Default: 无"
+  },
+  "alert/description": {
+    "type": "string|slot",
+    "description": "警告提示的辅助性文字介绍, Default: 无"
+  },
+  "alert/icon": {
+    "type": "vnode|slot",
+    "description": "自定义图标，`showIcon` 为 `true` 时有效, Default: -"
+  },
+  "alert/message": {
+    "type": "string|slot",
+    "description": "警告提示内容, Default: 无"
+  },
+  "alert/showIcon": {
+    "type": "boolean",
+    "description": "是否显示辅助图标, Default: false,`banner` 模式下默认值为 true"
+  },
+  "alert/type": {
+    "type": "string",
+    "description": "指定警告提示的样式，有四种选择 `success`、`info`、`warning`、`error`, Default: `info`,`banner` 模式下默认值为 `warning`"
+  },
   "anchor/affix": {
     "type": "boolean",
     "description": "固定模式, Default: true"
@@ -82,50 +126,6 @@
   "anchor-item/children": {
     "type": "[AnchorItem](#anchoritem)[]",
     "description": "嵌套的 Anchor Link，`注意：水平方向该属性不支持`, Default: -"
-  },
-  "alert/action": {
-    "type": "slot",
-    "description": "自定义操作项, Default: -"
-  },
-  "alert/afterClose": {
-    "type": "() => void",
-    "description": "关闭动画结束后触发的回调函数, Default: -"
-  },
-  "alert/banner": {
-    "type": "boolean",
-    "description": "是否用作顶部公告, Default: false"
-  },
-  "alert/closable": {
-    "type": "boolean",
-    "description": "默认不显示关闭按钮, Default: 无"
-  },
-  "alert/closeIcon": {
-    "type": "slot",
-    "description": "自定义关闭 Icon, Default: `<CloseOutlined />`"
-  },
-  "alert/closeText": {
-    "type": "string|slot",
-    "description": "自定义关闭按钮, Default: 无"
-  },
-  "alert/description": {
-    "type": "string|slot",
-    "description": "警告提示的辅助性文字介绍, Default: 无"
-  },
-  "alert/icon": {
-    "type": "vnode|slot",
-    "description": "自定义图标，`showIcon` 为 `true` 时有效, Default: -"
-  },
-  "alert/message": {
-    "type": "string|slot",
-    "description": "警告提示内容, Default: 无"
-  },
-  "alert/showIcon": {
-    "type": "boolean",
-    "description": "是否显示辅助图标, Default: false,`banner` 模式下默认值为 true"
-  },
-  "alert/type": {
-    "type": "string",
-    "description": "指定警告提示的样式，有四种选择 `success`、`info`、`warning`、`error`, Default: `info`,`banner` 模式下默认值为 `warning`"
   },
   "app/message": {
     "type": "[MessageConfig](/components/message-cn/#messageconfig)",

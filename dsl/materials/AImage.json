@@ -269,7 +269,14 @@
       "icon": "image",
       "screenshot": "",
       "snippetName": "AImage",
-      "schema": {}
+      "schema": {
+        "componentName": "AImage",
+        "props": {
+          "width": "300",
+          "height": "300",
+          "placeholder": true
+        }
+      }
     }
   ]
 }

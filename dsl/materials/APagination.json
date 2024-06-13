@@ -461,6 +461,52 @@
           "returns": {}
         },
         "defaultValue": ""
+      },
+      "onUpdate:current": {
+        "label": {
+          "zh_CN": "onUpdate:current"
+        },
+        "description": {
+          "zh_CN": "update:current event"
+        },
+        "type": "event",
+        "functionInfo": {
+          "params": [
+            {
+              "name": "current",
+              "type": "number",
+              "defaultValue": "",
+              "description": {
+                "zh_CN": "双向绑定的值"
+              }
+            }
+          ],
+          "returns": {}
+        },
+        "defaultValue": ""
+      },
+      "onUpdate:pageSize": {
+        "label": {
+          "zh_CN": "onUpdate:pageSize"
+        },
+        "description": {
+          "zh_CN": "update:pageSize event"
+        },
+        "type": "event",
+        "functionInfo": {
+          "params": [
+            {
+              "name": "pageSize",
+              "type": "number",
+              "defaultValue": "",
+              "description": {
+                "zh_CN": "双向绑定的值"
+              }
+            }
+          ],
+          "returns": {}
+        },
+        "defaultValue": ""
       }
     },
     "slots": {

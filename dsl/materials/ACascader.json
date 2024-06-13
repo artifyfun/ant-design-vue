@@ -671,6 +671,29 @@
           "returns": {}
         },
         "defaultValue": ""
+      },
+      "onUpdate:value": {
+        "label": {
+          "zh_CN": "onUpdate:value"
+        },
+        "description": {
+          "zh_CN": "update:value event"
+        },
+        "type": "event",
+        "functionInfo": {
+          "params": [
+            {
+              "name": "value",
+              "type": "object",
+              "defaultValue": "",
+              "description": {
+                "zh_CN": "双向绑定的值"
+              }
+            }
+          ],
+          "returns": {}
+        },
+        "defaultValue": ""
       }
     },
     "slots": {

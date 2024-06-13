@@ -364,7 +364,31 @@
         }
       }
     ],
-    "events": {},
+    "events": {
+      "onUpdate:activeKey": {
+        "label": {
+          "zh_CN": "onUpdate:activeKey"
+        },
+        "description": {
+          "zh_CN": "update:activeKey event"
+        },
+        "type": "event",
+        "functionInfo": {
+          "params": [
+            {
+              "name": "activeKey",
+              "type": "string",
+              "defaultValue": "",
+              "description": {
+                "zh_CN": "双向绑定的值"
+              }
+            }
+          ],
+          "returns": {}
+        },
+        "defaultValue": ""
+      }
+    },
     "slots": {}
   },
   "snippets": [

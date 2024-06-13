@@ -245,6 +245,52 @@
           "returns": {}
         },
         "defaultValue": ""
+      },
+      "onUpdate:checked": {
+        "label": {
+          "zh_CN": "onUpdate:checked"
+        },
+        "description": {
+          "zh_CN": "update:checked event"
+        },
+        "type": "event",
+        "functionInfo": {
+          "params": [
+            {
+              "name": "checked",
+              "type": "boolean",
+              "defaultValue": "",
+              "description": {
+                "zh_CN": "双向绑定的值"
+              }
+            }
+          ],
+          "returns": {}
+        },
+        "defaultValue": ""
+      },
+      "onUpdate:value": {
+        "label": {
+          "zh_CN": "onUpdate:value"
+        },
+        "description": {
+          "zh_CN": "update:value event"
+        },
+        "type": "event",
+        "functionInfo": {
+          "params": [
+            {
+              "name": "value",
+              "type": "(boolean",
+              "defaultValue": "",
+              "description": {
+                "zh_CN": "双向绑定的值"
+              }
+            }
+          ],
+          "returns": {}
+        },
+        "defaultValue": ""
       }
     },
     "slots": {}

@@ -417,6 +417,52 @@
           "returns": {}
         },
         "defaultValue": ""
+      },
+      "onUpdate:selectedKeys": {
+        "label": {
+          "zh_CN": "onUpdate:selectedKeys"
+        },
+        "description": {
+          "zh_CN": "update:selectedKeys event"
+        },
+        "type": "event",
+        "functionInfo": {
+          "params": [
+            {
+              "name": "selectedKeys",
+              "type": "object",
+              "defaultValue": "",
+              "description": {
+                "zh_CN": "双向绑定的值"
+              }
+            }
+          ],
+          "returns": {}
+        },
+        "defaultValue": ""
+      },
+      "onUpdate:targetKeys": {
+        "label": {
+          "zh_CN": "onUpdate:targetKeys"
+        },
+        "description": {
+          "zh_CN": "update:targetKeys event"
+        },
+        "type": "event",
+        "functionInfo": {
+          "params": [
+            {
+              "name": "targetKeys",
+              "type": "object",
+              "defaultValue": "",
+              "description": {
+                "zh_CN": "双向绑定的值"
+              }
+            }
+          ],
+          "returns": {}
+        },
+        "defaultValue": ""
       }
     },
     "slots": {

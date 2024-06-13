@@ -779,7 +779,31 @@
         }
       }
     ],
-    "events": {},
+    "events": {
+      "onUpdate:expandedRowKeys": {
+        "label": {
+          "zh_CN": "onUpdate:expandedRowKeys"
+        },
+        "description": {
+          "zh_CN": "update:expandedRowKeys event"
+        },
+        "type": "event",
+        "functionInfo": {
+          "params": [
+            {
+              "name": "expandedRowKeys",
+              "type": "object",
+              "defaultValue": "",
+              "description": {
+                "zh_CN": "双向绑定的值"
+              }
+            }
+          ],
+          "returns": {}
+        },
+        "defaultValue": ""
+      }
+    },
     "slots": {
       "bodyCell": {
         "label": {

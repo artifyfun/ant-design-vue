@@ -510,7 +510,77 @@
         }
       }
     ],
-    "events": {},
+    "events": {
+      "onUpdate:checkedKeys": {
+        "label": {
+          "zh_CN": "onUpdate:checkedKeys"
+        },
+        "description": {
+          "zh_CN": "update:checkedKeys event"
+        },
+        "type": "event",
+        "functionInfo": {
+          "params": [
+            {
+              "name": "checkedKeys",
+              "type": "object",
+              "defaultValue": "",
+              "description": {
+                "zh_CN": "双向绑定的值"
+              }
+            }
+          ],
+          "returns": {}
+        },
+        "defaultValue": ""
+      },
+      "onUpdate:expandedKeys": {
+        "label": {
+          "zh_CN": "onUpdate:expandedKeys"
+        },
+        "description": {
+          "zh_CN": "update:expandedKeys event"
+        },
+        "type": "event",
+        "functionInfo": {
+          "params": [
+            {
+              "name": "expandedKeys",
+              "type": "object",
+              "defaultValue": "",
+              "description": {
+                "zh_CN": "双向绑定的值"
+              }
+            }
+          ],
+          "returns": {}
+        },
+        "defaultValue": ""
+      },
+      "onUpdate:selectedKeys": {
+        "label": {
+          "zh_CN": "onUpdate:selectedKeys"
+        },
+        "description": {
+          "zh_CN": "update:selectedKeys event"
+        },
+        "type": "event",
+        "functionInfo": {
+          "params": [
+            {
+              "name": "selectedKeys",
+              "type": "object",
+              "defaultValue": "",
+              "description": {
+                "zh_CN": "双向绑定的值"
+              }
+            }
+          ],
+          "returns": {}
+        },
+        "defaultValue": ""
+      }
+    },
     "slots": {
       "switcherIcon": {
         "label": {

@@ -449,7 +449,54 @@
         }
       }
     ],
-    "events": {},
+    "events": {
+      "onUpdate:openKeys": {
+        "label": {
+          "zh_CN": "onUpdate:openKeys"
+        },
+        "description": {
+          "zh_CN": "update:openKeys event"
+        },
+        "type": "event",
+        "functionInfo": {
+          "params": [
+            {
+              "name": "openKeys",
+              "type": "(string",
+              "defaultValue": "",
+              "description": {
+                "zh_CN": "双向绑定的值"
+              }
+            }
+          ],
+          "returns": {}
+        },
+        "defaultValue": ""
+      },
+      "onUpdate:selectedKeys": {
+        "label": {
+          "zh_CN": "onUpdate:selectedKeys"
+        },
+        "description": {
+          "zh_CN": "update:selectedKeys event"
+        },
+        "type": "event",
+        "functionInfo": {
+          "params": [
+            {
+              "name": "selectedKeys",
+              "type": "(string",
+              "defaultValue": "",
+              "description": {
+                "zh_CN": "双向绑定的值"
+              }
+            }
+          ],
+          "returns": {}
+        },
+        "defaultValue": ""
+      }
+    },
     "slots": {
       "overflowedIndicator": {
         "label": {

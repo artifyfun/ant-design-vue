@@ -44,75 +44,82 @@ function parseAndWriteByType(type = 'zh-CN') {
   });
 }
 
+const formatVariable = word => {
+  let res = word;
+  ["'", '"', '`'].forEach(item => (res = res.replaceAll(item, '')));
+  return res.trim();
+};
+
+const isValidVariable = word =>
+  /^([^\x00-\xff]|[a-zA-Z_$])([^\x00-\xff]|[a-zA-Z0-9_$])*$/.test(formatVariable(word)) &&
+  !['string', 'number', 'boolean', 'object', 'slot', 'function', 'VNode'].some(key =>
+    word.toLowerCase().includes(key.toLowerCase()),
+  );
+
+function getType(string) {
+  let type = string.includes('|')
+    ? string
+        .split('|')
+        .map(item => item.trim())[0]
+        .toLowerCase()
+    : string.toLowerCase();
+  if (["'", '"', '`'].some(item => type.includes(item)) && isValidVariable(type)) {
+    type = 'string';
+  }
+  if (['CSSProperties', 'array', 'string[]', 'number[]'].includes(type)) {
+    type = 'object';
+  }
+  if (type.toLowerCase().includes('function')) {
+    type = 'function';
+  }
+  return type;
+}
+
+function getDefaultValue(attr, type) {
+  if (['无', '-'].includes(attr.default)) {
+    return undefined;
+  }
+  if (['boolean'].includes(type)) {
+    return typeof attr.default === 'string'
+      ? attr.default.includes('true')
+        ? true
+        : attr.default.includes('false')
+        ? false
+        : undefined
+      : undefined;
+  }
+  if (['number'].includes(type)) {
+    if (attr.default === '') {
+      return undefined;
+    }
+    return attr.default && typeof attr.default === 'string' ? Number(attr.default) : attr.default;
+  }
+  if (['object'].includes(type)) {
+    try {
+      return JSON.parse(attr.default);
+    } catch (error) {
+      return undefined;
+    }
+  }
+  const value =
+    attr.default && typeof attr.default === 'string'
+      ? attr.default.replaceAll('`', '').replaceAll('"', '').replaceAll("'", '').trim()
+      : attr.default;
+  return value === '-' ? undefined : value;
+}
+
 function getPropertiesContent(attributes) {
   return attributes
     .map(attr => {
       const allowedTypes = ['string', 'number', 'boolean', 'object', 'function'];
-      const formatVariable = word => {
-        let res = word;
-        ["'", '"', '`'].forEach(item => (res = res.replaceAll(item, '')));
-        return res.trim();
-      };
-      const isValidVariable = word =>
-        /^([^\x00-\xff]|[a-zA-Z_$])([^\x00-\xff]|[a-zA-Z0-9_$])*$/.test(formatVariable(word)) &&
-        !['string', 'number', 'boolean', 'object', 'slot', 'function', 'VNode'].some(key =>
-          word.toLowerCase().includes(key.toLowerCase()),
-        );
 
-      let type = attr.value.type.includes('|')
-        ? attr.value.type
-            .split('|')
-            .map(item => item.trim())[0]
-            .toLowerCase()
-        : attr.value.type.toLowerCase();
-      if (["'", '"', '`'].some(item => type.includes(item)) && isValidVariable(type)) {
-        type = 'string';
-      }
-      if (['CSSProperties', 'array', 'string[]', 'number[]'].includes(type)) {
-        type = 'object';
-      }
-      if (type.toLowerCase().includes('function')) {
-        type = 'function';
-      }
+      const type = getType(attr.value.type);
 
       if (!allowedTypes.some(item => item === type)) {
         return null;
       }
 
-      const defaultValue = (() => {
-        if (['无', '-'].includes(attr.default)) {
-          return undefined;
-        }
-        if (['boolean'].includes(type)) {
-          return typeof attr.default === 'string'
-            ? attr.default.includes('true')
-              ? true
-              : attr.default.includes('false')
-              ? false
-              : undefined
-            : undefined;
-        }
-        if (['number'].includes(type)) {
-          if (attr.default === '') {
-            return undefined;
-          }
-          return attr.default && typeof attr.default === 'string'
-            ? Number(attr.default)
-            : attr.default;
-        }
-        if (['object'].includes(type)) {
-          try {
-            return JSON.parse(attr.default);
-          } catch (error) {
-            return undefined;
-          }
-        }
-        const value =
-          attr.default && typeof attr.default === 'string'
-            ? attr.default.replaceAll('`', '').replaceAll('"', '').replaceAll("'", '').trim()
-            : attr.default;
-        return value === '-' ? undefined : value;
-      })();
+      const defaultValue = getDefaultValue(attr, type);
 
       const widget = (() => {
         if (type === 'boolean') {
@@ -166,8 +173,19 @@ function getPropertiesContent(attributes) {
         }
       })();
 
+      let attrName = attr.name.trim();
+
+      if (attr.name.includes('v-model')) {
+        if (attr.name.startsWith('v-model:')) {
+          attrName = attr.name.replace('v-model:', '').trim();
+        }
+        if (attr.name.includes('(v-model)')) {
+          attrName = attr.name.replace('(v-model)', '').trim();
+        }
+      }
+
       return {
-        property: attr.name.replace('(v-model)', '').trim(),
+        property: attrName,
         label: {
           text: {
             zh_CN: attr.name,
@@ -190,7 +208,38 @@ function getPropertiesContent(attributes) {
     .filter(Boolean);
 }
 
-function getEvents(events) {
+function getEvents(events, attributes) {
+  attributes.forEach(attr => {
+    const type = getType(attr.value.type);
+
+    let attrName = attr.name.trim();
+
+    if (attr.name.includes('v-model')) {
+      if (attr.name.startsWith('v-model:')) {
+        attrName = attr.name.replace('v-model:', '').trim();
+      }
+      if (attr.name.includes('(v-model)')) {
+        attrName = attr.name.replace('(v-model)', '').trim();
+      }
+      events.push({
+        name: `update:${attrName}`,
+        description: `update:${attrName} event`,
+        functionInfo: {
+          params: [
+            {
+              name: attrName,
+              type: type,
+              defaultValue: '',
+              description: {
+                zh_CN: '双向绑定的值',
+              },
+            },
+          ],
+          returns: {},
+        },
+      });
+    }
+  });
   return Object.fromEntries(
     events.map(event => {
       const name = `on${event.name.replace(/(^[a-z])/, char => char.toUpperCase())}`;
@@ -204,7 +253,7 @@ function getEvents(events) {
             zh_CN: formatDescription(event.description),
           },
           type: 'event',
-          functionInfo: {
+          functionInfo: event.functionInfo || {
             params: [],
             returns: {},
           },
@@ -234,7 +283,7 @@ function getSlots(slots) {
   );
 }
 
-function getSnippets(component) {
+function getSnippets(component, attributes) {
   const schemaMap = {
     Button: {
       componentName: 'AButton',
@@ -860,7 +909,41 @@ function getSnippets(component) {
         },
       ],
     },
+    Image: {
+      componentName: 'AImage',
+      props: {
+        width: '300px',
+        height: '300px',
+        placeholder: true,
+      },
+    },
   };
+
+  const schema = schemaMap[component.title] || {};
+
+  // attributes.forEach(attr => {
+  //   const type = getType(attr.value.type)
+
+  //   let attrName = attr.name.trim()
+
+  //   if (attr.name.includes('v-model')) {
+  //     if (attr.name.startsWith('v-model:')) {
+  //       attrName = attr.name.replace('v-model:', '').trim()
+  //     }
+  //     if (attr.name.includes('(v-model)')) {
+  //       attrName = attr.name.replace('(v-model)', '').trim()
+  //     }
+
+  //     schema.props = {
+  //       ...schema.props,
+  //       [attrName]: {
+  //         type,
+  //         value: undefined,
+  //         model: { prop: attrName }
+  //       }
+  //     }
+  //   }
+  // })
 
   return [
     {
@@ -870,7 +953,7 @@ function getSnippets(component) {
       icon: component.icon || toKebabCase(component.title),
       screenshot: '',
       snippetName: `A${component.title}`,
-      schema: schemaMap[component.title] || {},
+      schema,
     },
   ];
 }
@@ -1089,10 +1172,10 @@ async function generateMaterials(type = 'zh-CN') {
               },
             },
           ],
-          events: getEvents(tag.events),
+          events: getEvents(tag.events, tag.attributes),
           slots: getSlots(tag.slots),
         },
-        snippets: getSnippets(component),
+        snippets: getSnippets(component, tag.attributes),
       };
     });
 
@@ -1181,6 +1264,8 @@ async function generateMaterials(type = 'zh-CN') {
       material.configure.isContainer = true;
     }
   });
+
+  // 补充v-model:xxx事件
 
   materials.forEach(material => {
     outputFileSync(

@@ -364,7 +364,31 @@
         }
       }
     ],
-    "events": {},
+    "events": {
+      "onUpdate:content": {
+        "label": {
+          "zh_CN": "onUpdate:content"
+        },
+        "description": {
+          "zh_CN": "update:content event"
+        },
+        "type": "event",
+        "functionInfo": {
+          "params": [
+            {
+              "name": "content",
+              "type": "string",
+              "defaultValue": "",
+              "description": {
+                "zh_CN": "双向绑定的值"
+              }
+            }
+          ],
+          "returns": {}
+        },
+        "defaultValue": ""
+      }
+    },
     "slots": {}
   },
   "snippets": [
