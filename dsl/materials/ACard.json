@@ -378,6 +378,9 @@
       "snippetName": "ACard",
       "schema": {
         "componentName": "ACard",
+        "props": {
+          "title": "Card Title"
+        },
         "children": [
           {
             "componentName": "Template",

@@ -2,7 +2,7 @@
   "id": 1,
   "version": "4.1.2",
   "name": {
-    "zh_CN": "头像"
+    "zh_CN": "头像组"
   },
   "component": "AAvatarGroup",
   "icon": "avatar-group",
@@ -228,12 +228,49 @@
   "snippets": [
     {
       "name": {
-        "zh_CN": "头像"
+        "zh_CN": "头像组"
       },
       "icon": "avatar-group",
       "screenshot": "",
       "snippetName": "AAvatarGroup",
-      "schema": {}
+      "schema": {
+        "componentName": "AAvatarGroup",
+        "children": [
+          {
+            "componentName": "AAvatar",
+            "children": [
+              {
+                "componentName": "Text",
+                "props": {
+                  "text": "A"
+                }
+              }
+            ]
+          },
+          {
+            "componentName": "AAvatar",
+            "children": [
+              {
+                "componentName": "Text",
+                "props": {
+                  "text": "B"
+                }
+              }
+            ]
+          },
+          {
+            "componentName": "AAvatar",
+            "children": [
+              {
+                "componentName": "Text",
+                "props": {
+                  "text": "C"
+                }
+              }
+            ]
+          }
+        ]
+      }
     }
   ]
 }

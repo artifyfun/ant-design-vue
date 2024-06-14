@@ -5,6 +5,8 @@ const rootPath = path.resolve(__dirname, '../../');
 const { getComponents, ignoreTags } = require('./components.js');
 const _ = require('lodash');
 
+const componentPrefix = 'A';
+
 function toKebabCase(camel) {
   return camel.replace(/((?<=[a-z\d])[A-Z]|(?<=[A-Z\d])[A-Z](?=[a-z]))/g, '-$1').toLowerCase();
 }
@@ -285,7 +287,163 @@ function getSlots(slots) {
 
 function getSnippets(component, attributes) {
   const schemaMap = {
-    Button: {
+    AAffix: {
+      componentName: 'AAffix',
+      children: [
+        {
+          componentName: 'AButton',
+          children: [
+            {
+              componentName: 'Text',
+              props: {
+                text: '固钉',
+              },
+            },
+          ],
+        },
+      ],
+    },
+    AAlert: {
+      componentName: 'AAlert',
+      props: {
+        message: '告警提示信息',
+        showIcon: true,
+      },
+    },
+    AAnchor: {
+      componentName: 'AAnchor',
+      props: {
+        affix: false,
+        items: [
+          {
+            key: '1',
+            href: '#components-anchor-demo-basic',
+            title: 'Basic demo',
+          },
+          {
+            key: '2',
+            href: '#components-anchor-demo-static',
+            title: 'Static demo',
+          },
+          {
+            key: '3',
+            href: '#api',
+            title: 'API',
+            children: [
+              {
+                key: '4',
+                href: '#anchor-props',
+                title: 'Anchor Props',
+              },
+              {
+                key: '5',
+                href: '#link-props',
+                title: 'Link Props',
+              },
+            ],
+          },
+        ],
+      },
+    },
+    AAutoComplete: {
+      componentName: 'AAutoComplete',
+      props: {
+        style: 'width: 200px',
+        options: [
+          { value: 'Burns Bay Road' },
+          { value: 'Downing Street' },
+          { value: 'Wall Street' },
+        ],
+      },
+    },
+    AAvatar: {
+      componentName: 'AAvatar',
+      children: [
+        {
+          componentName: 'Text',
+          props: {
+            text: 'U',
+          },
+        },
+      ],
+    },
+    AAvatarGroup: {
+      componentName: 'AAvatarGroup',
+      children: [
+        {
+          componentName: 'AAvatar',
+          children: [
+            {
+              componentName: 'Text',
+              props: {
+                text: 'A',
+              },
+            },
+          ],
+        },
+        {
+          componentName: 'AAvatar',
+          children: [
+            {
+              componentName: 'Text',
+              props: {
+                text: 'B',
+              },
+            },
+          ],
+        },
+        {
+          componentName: 'AAvatar',
+          children: [
+            {
+              componentName: 'Text',
+              props: {
+                text: 'C',
+              },
+            },
+          ],
+        },
+      ],
+    },
+    ABadge: {
+      componentName: 'ABadge',
+      props: {
+        count: '5',
+      },
+      children: [
+        {
+          componentName: 'AAvatar',
+          children: [
+            {
+              componentName: 'Text',
+              props: {
+                text: 'U',
+              },
+            },
+          ],
+        },
+      ],
+    },
+    ABadgeRibbon: {
+      componentName: 'ABadgeRibbon',
+      props: {
+        text: 'Hippies',
+      },
+      children: [
+        {
+          componentName: 'AButton',
+          children: [
+            {
+              componentName: 'Text',
+              props: {
+                text: '徽标缎带',
+              },
+            },
+          ],
+        },
+      ],
+    },
+    AButton: {
       componentName: 'AButton',
       children: [
         {
@@ -296,24 +454,200 @@ function getSnippets(component, attributes) {
         },
       ],
     },
-    Breadcrumb: {
+    ABreadcrumb: {
       componentName: 'ABreadcrumb',
       children: [
         {
           componentName: 'ABreadcrumbItem',
-          props: {
-            text: '一级',
-          },
+          children: [
+            {
+              componentName: 'Text',
+              props: {
+                text: '一级',
+              },
+            },
+          ],
         },
         {
           componentName: 'ABreadcrumbItem',
+          children: [
+            {
+              componentName: 'Text',
+              props: {
+                text: '二级',
+              },
+            },
+          ],
+        },
+      ],
+    },
+    ACard: {
+      componentName: 'ACard',
+      props: {
+        title: 'Card Title',
+      },
+      children: [
+        {
+          componentName: 'Template',
           props: {
-            text: '二级',
+            slot: 'extra',
+          },
+          children: [
+            {
+              componentName: 'a',
+              children: [
+                {
+                  componentName: 'Text',
+                  props: {
+                    text: 'more',
+                  },
+                },
+              ],
+            },
+          ],
+        },
+        {
+          componentName: 'Text',
+          props: {
+            text: 'Card Content',
           },
         },
       ],
     },
-    Dropdown: {
+    ACarousel: {
+      componentName: 'ACarousel',
+      children: [
+        {
+          componentName: 'AImage',
+          props: {
+            placeholder: true,
+            width: '100%',
+            height: '140px',
+          },
+        },
+        {
+          componentName: 'AImage',
+          props: {
+            placeholder: true,
+            width: '100%',
+            height: '140px',
+          },
+        },
+      ],
+    },
+    ACollapse: {
+      componentName: 'ACollapse',
+      props: {
+        activeKey: '1',
+      },
+      children: [
+        {
+          componentName: 'ACollapsePanel',
+          props: {
+            header: 'panel header 1',
+            key: '1',
+          },
+          children: [
+            {
+              componentName: 'div',
+              children: [
+                {
+                  componentName: 'Text',
+                  props: {
+                    text: 'panel content 1',
+                  },
+                },
+              ],
+            },
+          ],
+        },
+        {
+          componentName: 'ACollapsePanel',
+          props: {
+            header: 'panel header 2',
+            key: '2',
+          },
+          children: [
+            {
+              componentName: 'div',
+              children: [
+                {
+                  componentName: 'Text',
+                  props: {
+                    text: 'panel content 2',
+                  },
+                },
+              ],
+            },
+          ],
+        },
+      ],
+    },
+    AComment: {
+      componentName: 'AComment',
+      children: [
+        {
+          componentName: 'Template',
+          props: {
+            slot: 'content',
+          },
+          children: [
+            {
+              componentName: 'P',
+              children: [
+                {
+                  componentName: 'Text',
+                  props: {
+                    text: `We supply a series of design principles, practical patterns and high quality design
+        resources (Sketch and Axure), to help people create their product prototypes beautifully and
+        efficiently.`,
+                  },
+                },
+              ],
+            },
+          ],
+        },
+        {
+          componentName: 'Template',
+          props: {
+            slot: 'author',
+          },
+          children: [
+            {
+              componentName: 'A',
+              children: [
+                {
+                  componentName: 'Text',
+                  props: {
+                    text: `Artifyfun`,
+                  },
+                },
+              ],
+            },
+          ],
+        },
+        {
+          componentName: 'Template',
+          props: {
+            slot: 'avatar',
+          },
+          children: [
+            {
+              componentName: 'AAvatar',
+              children: [
+                {
+                  componentName: 'Text',
+                  props: {
+                    text: 'A',
+                  },
+                },
+              ],
+            },
+          ],
+        },
+      ],
+    },
+    ADropdown: {
       componentName: 'ADropdown',
       children: [
         {
@@ -364,7 +698,7 @@ function getSnippets(component, attributes) {
         },
       ],
     },
-    DropdownButton: {
+    ADropdownButton: {
       componentName: 'ADropdownButton',
       children: [
         {
@@ -410,7 +744,7 @@ function getSnippets(component, attributes) {
         },
       ],
     },
-    Menu: {
+    AMenu: {
       componentName: 'AMenu',
       props: {
         items: [
@@ -427,7 +761,7 @@ function getSnippets(component, attributes) {
         ],
       },
     },
-    Steps: {
+    ASteps: {
       componentName: 'ASteps',
       props: {
         items: [
@@ -447,7 +781,7 @@ function getSnippets(component, attributes) {
         ],
       },
     },
-    Cascader: {
+    ACascader: {
       componentName: 'ACascader',
       props: {
         options: [
@@ -486,7 +820,7 @@ function getSnippets(component, attributes) {
         ],
       },
     },
-    Checkbox: {
+    ACheckbox: {
       componentName: 'ACheckbox',
       children: [
         {
@@ -497,7 +831,7 @@ function getSnippets(component, attributes) {
         },
       ],
     },
-    Form: {
+    AForm: {
       componentName: 'AForm',
       children: [
         {
@@ -510,7 +844,7 @@ function getSnippets(component, attributes) {
         },
       ],
     },
-    Radio: {
+    ARadio: {
       componentName: 'ARadio',
       children: [
         {
@@ -521,7 +855,7 @@ function getSnippets(component, attributes) {
         },
       ],
     },
-    Select: {
+    ASelect: {
       componentName: 'ASelect',
       children: [
         {
@@ -548,7 +882,7 @@ function getSnippets(component, attributes) {
         },
       ],
     },
-    TreeSelect: {
+    ATreeSelect: {
       componentName: 'ATreeSelect',
       props: {
         'tree-data': [
@@ -589,7 +923,7 @@ function getSnippets(component, attributes) {
         ],
       },
     },
-    Upload: {
+    AUpload: {
       componentName: 'AUpload',
       children: [
         {
@@ -605,131 +939,8 @@ function getSnippets(component, attributes) {
         },
       ],
     },
-    Avatar: {
-      componentName: 'AAvatar',
-      children: [
-        {
-          componentName: 'Text',
-          props: {
-            text: 'U',
-          },
-        },
-      ],
-    },
-    Badge: {
-      componentName: 'ABadge',
-      props: {
-        count: '5',
-      },
-      children: [
-        {
-          componentName: 'AAvatar',
-          children: [
-            {
-              componentName: 'Text',
-              props: {
-                text: 'U',
-              },
-            },
-          ],
-        },
-      ],
-    },
-    Card: {
-      componentName: 'ACard',
-      children: [
-        {
-          componentName: 'Template',
-          props: {
-            slot: 'extra',
-          },
-          children: [
-            {
-              componentName: 'a',
-              children: [
-                {
-                  componentName: 'Text',
-                  props: {
-                    text: 'more',
-                  },
-                },
-              ],
-            },
-          ],
-        },
-        {
-          componentName: 'Text',
-          props: {
-            text: 'Card Content',
-          },
-        },
-      ],
-    },
-    Carousel: {
-      componentName: 'ACarousel',
-      children: [
-        {
-          componentName: 'div',
-          children: [
-            {
-              componentName: 'Text',
-              props: {
-                text: '1',
-              },
-            },
-          ],
-        },
-        {
-          componentName: 'div',
-          children: [
-            {
-              componentName: 'Text',
-              props: {
-                text: '2',
-              },
-            },
-          ],
-        },
-      ],
-    },
-    Collapse: {
-      componentName: 'ACollapse',
-      children: [
-        {
-          componentName: 'ACollapsePanel',
-          children: [
-            {
-              componentName: 'div',
-              children: [
-                {
-                  componentName: 'Text',
-                  props: {
-                    text: '1',
-                  },
-                },
-              ],
-            },
-          ],
-        },
-        {
-          componentName: 'ACollapsePanel',
-          children: [
-            {
-              componentName: 'div',
-              children: [
-                {
-                  componentName: 'Text',
-                  props: {
-                    text: '2',
-                  },
-                },
-              ],
-            },
-          ],
-        },
-      ],
-    },
-    Descriptions: {
+
+    ADescriptions: {
       componentName: 'ADescriptions',
       props: {
         title: 'UserInfo',
@@ -765,7 +976,7 @@ function getSnippets(component, attributes) {
         },
       ],
     },
-    List: {
+    AList: {
       componentName: 'AList',
       props: {
         dataSource: [
@@ -799,7 +1010,7 @@ function getSnippets(component, attributes) {
         },
       ],
     },
-    Modal: {
+    AModal: {
       componentName: 'AModal',
       props: {
         open: true,
@@ -811,7 +1022,7 @@ function getSnippets(component, attributes) {
         },
       ],
     },
-    Tabs: {
+    ATabs: {
       componentName: 'ATabs',
       children: [
         {
@@ -846,7 +1057,7 @@ function getSnippets(component, attributes) {
         },
       ],
     },
-    Tag: {
+    ATag: {
       componentName: 'ATag',
       children: [
         {
@@ -857,7 +1068,7 @@ function getSnippets(component, attributes) {
         },
       ],
     },
-    Timeline: {
+    ATimeline: {
       componentName: 'ATimeline',
       children: [
         {
@@ -884,7 +1095,7 @@ function getSnippets(component, attributes) {
         },
       ],
     },
-    Tooltip: {
+    ATooltip: {
       componentName: 'ATooltip',
       children: [
         {
@@ -909,7 +1120,7 @@ function getSnippets(component, attributes) {
         },
       ],
     },
-    Image: {
+    AImage: {
       componentName: 'AImage',
       props: {
         width: '300px',
@@ -919,7 +1130,7 @@ function getSnippets(component, attributes) {
     },
   };
 
-  const schema = schemaMap[component.title] || {};
+  const schema = schemaMap[`${componentPrefix}${component.title}`] || {};
 
   // attributes.forEach(attr => {
   //   const type = getType(attr.value.type)
@@ -948,11 +1159,11 @@ function getSnippets(component, attributes) {
   return [
     {
       name: {
-        zh_CN: component.subtitle,
+        zh_CN: getSubTitle(component),
       },
       icon: component.icon || toKebabCase(component.title),
       screenshot: '',
-      snippetName: `A${component.title}`,
+      snippetName: `${componentPrefix}${component.title}`,
       schema,
     },
   ];
@@ -1015,6 +1226,132 @@ function getParentTagName(tagName) {
     'menu-sub-menu': 'menu',
     'directory-tree': 'tree',
   }[tagName];
+}
+
+const subTitleMap = {
+  FormItem: {
+    'zh-CN': '表单子项',
+    'en-US': 'FormItem',
+  },
+  AnchorLink: {
+    'zh-CN': '锚点链接',
+    'en-US': 'AnchorLink',
+  },
+  AvatarGroup: {
+    'zh-CN': '头像组',
+    'en-US': 'AvatarGroup',
+  },
+  BadgeRibbon: {
+    'zh-CN': '徽标缎带',
+    'en-US': 'BadgeRibbon',
+  },
+  BreadcrumbItem: {
+    'zh-CN': '面包屑子项',
+    'en-US': 'BreadcrumbItem',
+  },
+  BreadcrumbSeparator: {
+    'zh-CN': '面包屑分隔',
+    'en-US': 'BreadcrumbSeparator',
+  },
+  CardMeta: {
+    'zh-CN': '卡片内容',
+    'en-US': 'CardMeta',
+  },
+  CollapsePanel: {
+    'zh-CN': '折叠面板子项',
+    'en-US': 'CollapsePanel',
+  },
+  DirectoryTree: {
+    'zh-CN': '目录树',
+    'en-US': 'DirectoryTree',
+  },
+  DropdownButton: {
+    'zh-CN': '下拉按钮',
+    'en-US': 'DropdownButton',
+  },
+  InputGroup: {
+    'zh-CN': '输入框组',
+    'en-US': 'InputGroup',
+  },
+  InputPassword: {
+    'zh-CN': '密码输入框',
+    'en-US': 'InputPassword',
+  },
+  InputSearch: {
+    'zh-CN': '搜索框',
+    'en-US': 'InputSearch',
+  },
+  ListItem: {
+    'zh-CN': '列表子项',
+    'en-US': 'ListItem',
+  },
+  MenuDivider: {
+    'zh-CN': '菜单分隔',
+    'en-US': 'MenuDivider',
+  },
+  MenuItem: {
+    'zh-CN': '菜单子项',
+    'en-US': 'MenuItem',
+  },
+  MenuItemGroup: {
+    'zh-CN': '菜单子项组',
+    'en-US': 'MenuItemGroup',
+  },
+  RadioButton: {
+    'zh-CN': '单选按钮',
+    'en-US': 'RadioButton',
+  },
+  RadioGroup: {
+    'zh-CN': '单选组',
+    'en-US': 'RadioGroup',
+  },
+  StatisticCountdown: {
+    'zh-CN': '数字倒计时',
+    'en-US': 'StatisticCountdown',
+  },
+  Step: {
+    'zh-CN': '步骤条子项',
+    'en-US': 'Step',
+  },
+  SubMenu: {
+    'zh-CN': '子菜单',
+    'en-US': 'SubMenu',
+  },
+  TabPane: {
+    'zh-CN': '标签页子项',
+    'en-US': 'TabPane',
+  },
+  Textarea: {
+    'zh-CN': '多行输入框',
+    'en-US': 'Textarea',
+  },
+  TimelineItem: {
+    'zh-CN': '时间线子项',
+    'en-US': 'TimelineItem',
+  },
+  Typography: {
+    'zh-CN': '排版容器',
+    'en-US': 'Typography',
+  },
+  TypographyText: {
+    'zh-CN': '排版文字',
+    'en-US': 'TypographyText',
+  },
+  TypographyTitle: {
+    'zh-CN': '排版标题',
+    'en-US': 'TypographyTitle',
+  },
+  TypographyParagraph: {
+    'zh-CN': '排版段落',
+    'en-US': 'TypographyParagraph',
+  },
+  UploadFile: {
+    'zh-CN': '文件上传',
+    'en-US': 'UploadFile',
+  },
+};
+function getSubTitle(component) {
+  return subTitleMap[component.title]?.['zh-CN'] || component.subtitle;
 }
 
 async function generateMaterials(type = 'zh-CN') {
@@ -1097,9 +1434,9 @@ async function generateMaterials(type = 'zh-CN') {
         id: 1,
         version: webTypes.version,
         name: {
-          zh_CN: component.subtitle,
+          zh_CN: getSubTitle(component),
         },
-        component: `A${component.title}`,
+        component: `${componentPrefix}${component.title}`,
         icon: component.icon || toKebabCase(component.title),
         description: formatDescription(component.description),
         doc_url: '',
@@ -1233,15 +1570,19 @@ async function generateMaterials(type = 'zh-CN') {
 
   // 容器属性设置
   const containerComponents = [
+    'AApp',
     'AAffix',
     'AButton',
     'ABadge',
     'ABadgeRibbon',
     'ACard',
     'ACollapsePanel',
+    'AConfigProvider',
     'ADrawer',
     'ADropdown',
     'ADropdownButton',
+    'ADescriptions',
+    'ADescriptionsItem',
     'AForm',
     'AFormItem',
     'AList',
@@ -1265,7 +1606,48 @@ async function generateMaterials(type = 'zh-CN') {
     }
   });
 
-  // 补充v-model:xxx事件
+  // 无法透传attrs的组件，需要包裹一层div
+  const wrapElementComponents = ['AImage'];
+  materials.forEach(material => {
+    if (wrapElementComponents.includes(material.component)) {
+      material.configure.renderConfig = {
+        wrapElement: 'div',
+        wrapProps: {
+          style: {
+            display: 'inline-block',
+          },
+        },
+      };
+    }
+  });
+
+  // 需要隐藏的组件
+  const hideComponents = [
+    'AFormItem',
+    'AApp',
+    'AAnchorLink',
+    'ABreadcrumbItem',
+    'ABreadcrumbSeparator',
+    'ACardMeta',
+    'ACollapsePanel',
+    'AConfigProvider',
+    'ADirectoryTree',
+    'ADescriptionsItem',
+    'AListItem',
+    'AMenuDivider',
+    'AMenuItem',
+    'AMenuItemGroup',
+    'AStep',
+    'ASubMenu',
+    'ATabPane',
+    'ATimelineItem',
+    'ATreeNode',
+  ];
+  materials.forEach(material => {
+    if (hideComponents.includes(material.component)) {
+      material.category = undefined;
+    }
+  });
 
   materials.forEach(material => {
     outputFileSync(

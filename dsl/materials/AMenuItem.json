@@ -2,7 +2,7 @@
   "id": 1,
   "version": "4.1.2",
   "name": {
-    "zh_CN": "导航菜单"
+    "zh_CN": "菜单子项"
   },
   "component": "AMenuItem",
   "icon": "menu-item",
@@ -29,7 +29,6 @@
     "destructuring": true
   },
   "group": "导航",
-  "category": "Ant Design Vue",
   "configure": {
     "loop": true,
     "condition": true,
@@ -163,7 +162,7 @@
   "snippets": [
     {
       "name": {
-        "zh_CN": "导航菜单"
+        "zh_CN": "菜单子项"
       },
       "icon": "menu-item",
       "screenshot": "",

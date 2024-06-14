@@ -20,7 +20,7 @@ const ignoreTags = [
   'anchor-link',
   'auto-complete-opt-group',
   'auto-complete-option',
-  'avatar-group',
+  // 'avatar-group',
   '自定义',
   'sub-menu',
   'tour-step',

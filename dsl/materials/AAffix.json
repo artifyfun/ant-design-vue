@@ -142,7 +142,22 @@
       "icon": "affix",
       "screenshot": "",
       "snippetName": "AAffix",
-      "schema": {}
+      "schema": {
+        "componentName": "AAffix",
+        "children": [
+          {
+            "componentName": "AButton",
+            "children": [
+              {
+                "componentName": "Text",
+                "props": {
+                  "text": "固钉"
+                }
+              }
+            ]
+          }
+        ]
+      }
     }
   ]
 }

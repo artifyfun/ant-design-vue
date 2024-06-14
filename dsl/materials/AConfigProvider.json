@@ -29,12 +29,11 @@
     "destructuring": true
   },
   "group": "其他",
-  "category": "Ant Design Vue",
   "configure": {
     "loop": true,
     "condition": true,
     "styles": true,
-    "isContainer": false,
+    "isContainer": true,
     "isModal": false,
     "isPopper": false,
     "nestingRule": {

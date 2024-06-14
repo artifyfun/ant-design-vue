@@ -2,7 +2,7 @@
   "id": 1,
   "version": "4.1.2",
   "name": {
-    "zh_CN": "表单"
+    "zh_CN": "表单子项"
   },
   "component": "AFormItem",
   "icon": "form-item",
@@ -29,7 +29,6 @@
     "destructuring": true
   },
   "group": "数据录入",
-  "category": "Ant Design Vue",
   "configure": {
     "loop": true,
     "condition": true,
@@ -444,7 +443,7 @@
   "snippets": [
     {
       "name": {
-        "zh_CN": "表单"
+        "zh_CN": "表单子项"
       },
       "icon": "form-item",
       "screenshot": "",

@@ -2,7 +2,7 @@
   "id": 1,
   "version": "4.1.2",
   "name": {
-    "zh_CN": "排版"
+    "zh_CN": "排版标题"
   },
   "component": "ATypographyTitle",
   "icon": "typography-title",
@@ -348,7 +348,7 @@
   "snippets": [
     {
       "name": {
-        "zh_CN": "排版"
+        "zh_CN": "排版标题"
       },
       "icon": "typography-title",
       "screenshot": "",

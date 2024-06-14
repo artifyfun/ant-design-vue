@@ -2,7 +2,7 @@
   "id": 1,
   "version": "4.1.2",
   "name": {
-    "zh_CN": "树形控件"
+    "zh_CN": "目录树"
   },
   "component": "ADirectoryTree",
   "icon": "directory-tree",
@@ -29,7 +29,6 @@
     "destructuring": true
   },
   "group": "数据展示",
-  "category": "Ant Design Vue",
   "configure": {
     "loop": true,
     "condition": true,
@@ -100,7 +99,7 @@
   "snippets": [
     {
       "name": {
-        "zh_CN": "树形控件"
+        "zh_CN": "目录树"
       },
       "icon": "directory-tree",
       "screenshot": "",

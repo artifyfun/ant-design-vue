@@ -2,7 +2,7 @@
   "id": 1,
   "version": "4.1.2",
   "name": {
-    "zh_CN": "单选框"
+    "zh_CN": "单选按钮"
   },
   "component": "ARadioButton",
   "icon": "radio-button",
@@ -170,7 +170,7 @@
   "snippets": [
     {
       "name": {
-        "zh_CN": "单选框"
+        "zh_CN": "单选按钮"
       },
       "icon": "radio-button",
       "screenshot": "",

@@ -55,7 +55,15 @@
     },
     "invalidity": [""],
     "clickCapture": true,
-    "framework": "Vue"
+    "framework": "Vue",
+    "renderConfig": {
+      "wrapElement": "div",
+      "wrapProps": {
+        "style": {
+          "display": "inline-block"
+        }
+      }
+    }
   },
   "schema": {
     "properties": [
@@ -272,8 +280,8 @@
       "schema": {
         "componentName": "AImage",
         "props": {
-          "width": "300",
-          "height": "300",
+          "width": "300px",
+          "height": "300px",
           "placeholder": true
         }
       }

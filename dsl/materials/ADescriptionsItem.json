@@ -2,13 +2,13 @@
   "id": 1,
   "version": "4.1.2",
   "name": {
-    "zh_CN": "菜单子项组"
+    "zh_CN": "描述列表子项"
   },
-  "component": "AMenuItemGroup",
-  "icon": "menu-item-group",
-  "description": "为页面和功能提供导航的菜单列表。",
+  "component": "ADescriptionsItem",
+  "icon": "descriptions",
+  "description": "成组展示多个只读字段。",
   "doc_url": "",
-  "screenshot": "https://mdn.alipayobjects.com/huamei_7uahnr/afts/img/A*Vn4XSqJFAxcAAAAAAAAAAAAADrJ8AQ/original",
+  "screenshot": "https://mdn.alipayobjects.com/huamei_7uahnr/afts/img/A*d27AQJrowGAAAAAAAAAAAAAADrJ8AQ/original",
   "tags": "",
   "keywords": "",
   "dev_mode": "proCode",
@@ -25,10 +25,11 @@
       "https://unpkg.com/dayjs/plugin/advancedFormat.js",
       "https://unpkg.com/dayjs/plugin/quarterOfYear.js"
     ],
-    "exportName": "MenuItemGroup",
+    "exportName": "Descriptions",
     "destructuring": true
   },
-  "group": "导航",
+  "group": "数据展示",
+  "category": "Ant Design Vue",
   "configure": {
     "loop": true,
     "condition": true,
@@ -65,14 +66,37 @@
         },
         "content": [
           {
-            "property": "title",
+            "property": "span",
             "label": {
               "text": {
-                "zh_CN": "title"
+                "zh_CN": "span"
               }
             },
             "description": {
-              "zh_CN": "分组标题"
+              "zh_CN": "包含列的数量"
+            },
+            "required": false,
+            "readOnly": false,
+            "disabled": false,
+            "cols": 12,
+            "labelPosition": "top",
+            "type": "number",
+            "defaultValue": 1,
+            "widget": {
+              "component": "MetaNumber",
+              "props": {}
+            },
+            "device": []
+          },
+          {
+            "property": "label",
+            "label": {
+              "text": {
+                "zh_CN": "label"
+              }
+            },
+            "description": {
+              "zh_CN": "内容的描述"
             },
             "required": false,
             "readOnly": false,
@@ -80,7 +104,6 @@
             "cols": 12,
             "labelPosition": "top",
             "type": "string",
-            "defaultValue": "",
             "widget": {
               "component": "MetaInput",
               "props": {}
@@ -94,26 +117,30 @@
       }
     ],
     "events": {},
-    "slots": {
-      "title": {
-        "label": {
-          "zh_CN": "title"
-        },
-        "description": {
-          "zh_CN": "分组标题"
-        }
-      }
-    }
+    "slots": {}
   },
   "snippets": [
     {
       "name": {
-        "zh_CN": "菜单子项组"
+        "zh_CN": "描述列表子项"
       },
-      "icon": "menu-item-group",
+      "icon": "descriptions",
       "screenshot": "",
-      "snippetName": "AMenuItemGroup",
-      "schema": {}
+      "snippetName": "ADescriptionsItem",
+      "schema": {
+        "componentName": "ADescriptionsItem",
+        "props": {
+          "label": "UserName"
+        },
+        "children": [
+          {
+            "componentName": "Text",
+            "props": {
+              "text": "Artifyfun"
+            }
+          }
+        ]
+      }
     }
   ]
 }

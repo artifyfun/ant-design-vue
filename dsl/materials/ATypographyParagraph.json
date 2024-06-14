@@ -2,7 +2,7 @@
   "id": 1,
   "version": "4.1.2",
   "name": {
-    "zh_CN": "排版"
+    "zh_CN": "排版段落"
   },
   "component": "ATypographyParagraph",
   "icon": "typography-paragraph",
@@ -371,7 +371,7 @@
   "snippets": [
     {
       "name": {
-        "zh_CN": "排版"
+        "zh_CN": "排版段落"
       },
       "icon": "typography-paragraph",
       "screenshot": "",

@@ -143,15 +143,25 @@
         "children": [
           {
             "componentName": "ABreadcrumbItem",
-            "props": {
-              "text": "一级"
-            }
+            "children": [
+              {
+                "componentName": "Text",
+                "props": {
+                  "text": "一级"
+                }
+              }
+            ]
           },
           {
             "componentName": "ABreadcrumbItem",
-            "props": {
-              "text": "二级"
-            }
+            "children": [
+              {
+                "componentName": "Text",
+                "props": {
+                  "text": "二级"
+                }
+              }
+            ]
           }
         ]
       }

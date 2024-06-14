@@ -2,7 +2,7 @@
   "id": 1,
   "version": "4.1.2",
   "name": {
-    "zh_CN": "面包屑"
+    "zh_CN": "面包屑分隔"
   },
   "component": "ABreadcrumbSeparator",
   "icon": "breadcrumb-separator",
@@ -29,7 +29,6 @@
     "destructuring": true
   },
   "group": "导航",
-  "category": "Ant Design Vue",
   "configure": {
     "loop": true,
     "condition": true,
@@ -76,7 +75,7 @@
   "snippets": [
     {
       "name": {
-        "zh_CN": "面包屑"
+        "zh_CN": "面包屑分隔"
       },
       "icon": "breadcrumb-separator",
       "screenshot": "",

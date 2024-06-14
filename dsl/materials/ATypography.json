@@ -2,7 +2,7 @@
   "id": 1,
   "version": "4.1.2",
   "name": {
-    "zh_CN": "排版"
+    "zh_CN": "排版容器"
   },
   "component": "ATypography",
   "icon": "typography",
@@ -76,7 +76,7 @@
   "snippets": [
     {
       "name": {
-        "zh_CN": "排版"
+        "zh_CN": "排版容器"
       },
       "icon": "typography",
       "screenshot": "",

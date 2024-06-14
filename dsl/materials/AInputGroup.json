@@ -2,7 +2,7 @@
   "id": 1,
   "version": "4.1.2",
   "name": {
-    "zh_CN": "输入框"
+    "zh_CN": "输入框组"
   },
   "component": "AInputGroup",
   "icon": "input-group",
@@ -123,7 +123,7 @@
   "snippets": [
     {
       "name": {
-        "zh_CN": "输入框"
+        "zh_CN": "输入框组"
       },
       "icon": "input-group",
       "screenshot": "",

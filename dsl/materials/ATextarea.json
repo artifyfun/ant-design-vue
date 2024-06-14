@@ -2,7 +2,7 @@
   "id": 1,
   "version": "4.1.2",
   "name": {
-    "zh_CN": "输入框"
+    "zh_CN": "多行输入框"
   },
   "component": "ATextarea",
   "icon": "input",
@@ -584,7 +584,7 @@
   "snippets": [
     {
       "name": {
-        "zh_CN": "输入框"
+        "zh_CN": "多行输入框"
       },
       "icon": "textarea",
       "screenshot": "",

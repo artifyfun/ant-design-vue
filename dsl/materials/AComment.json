@@ -234,7 +234,68 @@
       "icon": "comment",
       "screenshot": "",
       "snippetName": "AComment",
-      "schema": {}
+      "schema": {
+        "componentName": "AComment",
+        "children": [
+          {
+            "componentName": "Template",
+            "props": {
+              "slot": "content"
+            },
+            "children": [
+              {
+                "componentName": "P",
+                "children": [
+                  {
+                    "componentName": "Text",
+                    "props": {
+                      "text": "We supply a series of design principles, practical patterns and high quality design\n        resources (Sketch and Axure), to help people create their product prototypes beautifully and\n        efficiently."
+                    }
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "componentName": "Template",
+            "props": {
+              "slot": "author"
+            },
+            "children": [
+              {
+                "componentName": "A",
+                "children": [
+                  {
+                    "componentName": "Text",
+                    "props": {
+                      "text": "Artifyfun"
+                    }
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "componentName": "Template",
+            "props": {
+              "slot": "avatar"
+            },
+            "children": [
+              {
+                "componentName": "AAvatar",
+                "children": [
+                  {
+                    "componentName": "Text",
+                    "props": {
+                      "text": "A"
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
     }
   ]
 }

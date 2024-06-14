@@ -2,7 +2,7 @@
   "id": 1,
   "version": "4.1.2",
   "name": {
-    "zh_CN": "列表"
+    "zh_CN": "列表子项"
   },
   "component": "AListItem",
   "icon": "list-item",
@@ -29,7 +29,6 @@
     "destructuring": true
   },
   "group": "数据展示",
-  "category": "Ant Design Vue",
   "configure": {
     "loop": true,
     "condition": true,
@@ -116,7 +115,7 @@
   "snippets": [
     {
       "name": {
-        "zh_CN": "列表"
+        "zh_CN": "列表子项"
       },
       "icon": "list-item",
       "screenshot": "",

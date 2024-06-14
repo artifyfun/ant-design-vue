@@ -2,7 +2,7 @@
   "id": 1,
   "version": "4.1.2",
   "name": {
-    "zh_CN": "步骤条"
+    "zh_CN": "步骤条子项"
   },
   "component": "AStep",
   "icon": "step",
@@ -29,7 +29,6 @@
     "destructuring": true
   },
   "group": "导航",
-  "category": "Ant Design Vue",
   "configure": {
     "loop": true,
     "condition": true,
@@ -244,7 +243,7 @@
   "snippets": [
     {
       "name": {
-        "zh_CN": "步骤条"
+        "zh_CN": "步骤条子项"
       },
       "icon": "step",
       "screenshot": "",

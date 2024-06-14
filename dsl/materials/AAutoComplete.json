@@ -588,7 +588,23 @@
       "icon": "auto-complete",
       "screenshot": "",
       "snippetName": "AAutoComplete",
-      "schema": {}
+      "schema": {
+        "componentName": "AAutoComplete",
+        "props": {
+          "style": "width: 200px",
+          "options": [
+            {
+              "value": "Burns Bay Road"
+            },
+            {
+              "value": "Downing Street"
+            },
+            {
+              "value": "Wall Street"
+            }
+          ]
+        }
+      }
     }
   ]
 }

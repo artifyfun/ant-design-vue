@@ -2,7 +2,7 @@
   "id": 1,
   "version": "4.1.2",
   "name": {
-    "zh_CN": "标签页"
+    "zh_CN": "标签页子项"
   },
   "component": "ATabPane",
   "icon": "tab-pane",
@@ -29,7 +29,6 @@
     "destructuring": true
   },
   "group": "数据展示",
-  "category": "Ant Design Vue",
   "configure": {
     "loop": true,
     "condition": true,
@@ -153,7 +152,7 @@
   "snippets": [
     {
       "name": {
-        "zh_CN": "标签页"
+        "zh_CN": "标签页子项"
       },
       "icon": "tab-pane",
       "screenshot": "",

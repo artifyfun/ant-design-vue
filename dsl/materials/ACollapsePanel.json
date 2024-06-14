@@ -2,7 +2,7 @@
   "id": 1,
   "version": "4.1.2",
   "name": {
-    "zh_CN": "折叠面板"
+    "zh_CN": "折叠面板子项"
   },
   "component": "ACollapsePanel",
   "icon": "collapse-panel",
@@ -29,7 +29,6 @@
     "destructuring": true
   },
   "group": "数据展示",
-  "category": "Ant Design Vue",
   "configure": {
     "loop": true,
     "condition": true,
@@ -240,7 +239,7 @@
   "snippets": [
     {
       "name": {
-        "zh_CN": "折叠面板"
+        "zh_CN": "折叠面板子项"
       },
       "icon": "collapse-panel",
       "screenshot": "",

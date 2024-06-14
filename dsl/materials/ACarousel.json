@@ -279,26 +279,20 @@
         "componentName": "ACarousel",
         "children": [
           {
-            "componentName": "div",
-            "children": [
-              {
-                "componentName": "Text",
-                "props": {
-                  "text": "1"
-                }
-              }
-            ]
+            "componentName": "AImage",
+            "props": {
+              "placeholder": true,
+              "width": "100%",
+              "height": "140px"
+            }
           },
           {
-            "componentName": "div",
-            "children": [
-              {
-                "componentName": "Text",
-                "props": {
-                  "text": "2"
-                }
-              }
-            ]
+            "componentName": "AImage",
+            "props": {
+              "placeholder": true,
+              "width": "100%",
+              "height": "140px"
+            }
           }
         ]
       }

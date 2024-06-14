@@ -2,7 +2,7 @@
   "id": 1,
   "version": "4.1.2",
   "name": {
-    "zh_CN": "上传"
+    "zh_CN": "文件上传"
   },
   "component": "AUploadFile",
   "icon": "upload-file",
@@ -254,7 +254,7 @@
   "snippets": [
     {
       "name": {
-        "zh_CN": "上传"
+        "zh_CN": "文件上传"
       },
       "icon": "upload-file",
       "screenshot": "",

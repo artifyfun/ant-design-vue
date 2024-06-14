@@ -2,7 +2,7 @@
   "id": 1,
   "version": "4.1.2",
   "name": {
-    "zh_CN": "输入框"
+    "zh_CN": "搜索框"
   },
   "component": "AInputSearch",
   "icon": "input-search",
@@ -153,7 +153,7 @@
   "snippets": [
     {
       "name": {
-        "zh_CN": "输入框"
+        "zh_CN": "搜索框"
       },
       "icon": "input-search",
       "screenshot": "",
