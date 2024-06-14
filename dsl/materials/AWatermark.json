@@ -34,7 +34,7 @@
     "loop": true,
     "condition": true,
     "styles": true,
-    "isContainer": false,
+    "isContainer": true,
     "isModal": false,
     "isPopper": false,
     "nestingRule": {
@@ -218,7 +218,20 @@
       "icon": "watermark",
       "screenshot": "",
       "snippetName": "AWatermark",
-      "schema": {}
+      "schema": {
+        "componentName": "AWatermark",
+        "props": {
+          "content": "Artifyfun"
+        },
+        "children": [
+          {
+            "componentName": "div",
+            "props": {
+              "style": "height: 400px"
+            }
+          }
+        ]
+      }
     }
   ]
 }

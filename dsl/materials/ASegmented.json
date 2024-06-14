@@ -236,7 +236,13 @@
       "icon": "segmented",
       "screenshot": "",
       "snippetName": "ASegmented",
-      "schema": {}
+      "schema": {
+        "componentName": "ASegmented",
+        "props": {
+          "value": "Daily",
+          "options": ["Daily", "Weekly", "Monthly", "Quarterly", "Yearly"]
+        }
+      }
     }
   ]
 }

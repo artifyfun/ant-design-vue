@@ -1121,30 +1121,28 @@
       "snippetName": "ASelect",
       "schema": {
         "componentName": "ASelect",
-        "children": [
-          {
-            "componentName": "ASelectOption",
-            "children": [
-              {
-                "componentName": "Text",
-                "props": {
-                  "text": "选项一"
-                }
-              }
-            ]
-          },
-          {
-            "componentName": "ASelectOption",
-            "children": [
-              {
-                "componentName": "Text",
-                "props": {
-                  "text": "选项二"
-                }
-              }
-            ]
-          }
-        ]
+        "props": {
+          "style": "width: 180px",
+          "options": [
+            {
+              "value": "jack",
+              "label": "Jack"
+            },
+            {
+              "value": "lucy",
+              "label": "Lucy"
+            },
+            {
+              "value": "disabled",
+              "label": "Disabled",
+              "disabled": true
+            },
+            {
+              "value": "yiminghe",
+              "label": "Yiminghe"
+            }
+          ]
+        }
       }
     }
   ]

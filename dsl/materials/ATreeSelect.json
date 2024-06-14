@@ -84,6 +84,7 @@
       "schema": {
         "componentName": "ATreeSelect",
         "props": {
+          "style": "width: 180px",
           "tree-data": [
             {
               "label": "root 1",

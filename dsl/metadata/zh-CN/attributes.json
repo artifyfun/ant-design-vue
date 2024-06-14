@@ -1,4 +1,16 @@
 {
+  "affix/offsetBottom": {
+    "type": "number",
+    "description": "距离窗口底部达到指定偏移量后触发, Default: "
+  },
+  "affix/offsetTop": {
+    "type": "number",
+    "description": "距离窗口顶部达到指定偏移量后触发, Default: 0"
+  },
+  "affix/target": {
+    "type": "() => HTMLElement",
+    "description": "设置 `Affix` 需要监听其滚动事件的元素，值为一个返回对应 DOM 元素的函数, Default: () => window"
+  },
   "alert/action": {
     "type": "slot",
     "description": "自定义操作项, Default: -"
@@ -42,18 +54,6 @@
   "alert/type": {
     "type": "string",
     "description": "指定警告提示的样式，有四种选择 `success`、`info`、`warning`、`error`, Default: `info`,`banner` 模式下默认值为 `warning`"
-  },
-  "affix/offsetBottom": {
-    "type": "number",
-    "description": "距离窗口底部达到指定偏移量后触发, Default: "
-  },
-  "affix/offsetTop": {
-    "type": "number",
-    "description": "距离窗口顶部达到指定偏移量后触发, Default: 0"
-  },
-  "affix/target": {
-    "type": "() => HTMLElement",
-    "description": "设置 `Affix` 需要监听其滚动事件的元素，值为一个返回对应 DOM 元素的函数, Default: () => window"
   },
   "anchor/affix": {
     "type": "boolean",
@@ -211,6 +211,58 @@
     "type": "[NotificationConfig](/components/notification-cn/#notificationconfig)",
     "description": "App 内 Notification 的全局配置, Default: -"
   },
+  "badge/color": {
+    "type": "string",
+    "description": "自定义小圆点的颜色, Default: -"
+  },
+  "badge/count": {
+    "type": "number | string | slot",
+    "description": "展示的数字，大于 overflowCount 时显示为 `${overflowCount}+`，为 0 时隐藏, Default: "
+  },
+  "badge/dot": {
+    "type": "boolean",
+    "description": "不展示数字，只有一个小红点, Default: false"
+  },
+  "badge/numberStyle": {
+    "type": "object",
+    "description": "设置状态点的样式, Default: ''"
+  },
+  "badge/offset": {
+    "type": "[number|string, number|string]",
+    "description": "设置状态点的位置偏移，格式为 [x, y], Default: -"
+  },
+  "badge/overflowCount": {
+    "type": "number",
+    "description": "展示封顶的数字值, Default: 99"
+  },
+  "badge/showZero": {
+    "type": "boolean",
+    "description": "当数值为 0 时，是否展示 Badge, Default: false"
+  },
+  "badge/status": {
+    "type": "Enum{ 'success', 'processing, 'default', 'error', 'warning' }",
+    "description": "设置 Badge 为状态点, Default: ''"
+  },
+  "badge/text": {
+    "type": "string",
+    "description": "在设置了 `status` 的前提下有效，设置状态点的文本, Default: ''"
+  },
+  "badge/title": {
+    "type": "string",
+    "description": "设置鼠标放在状态点上时显示的文字, Default: `count`"
+  },
+  "badge-ribbon/color": {
+    "type": "string",
+    "description": "自定义缎带的颜色, Default: -"
+  },
+  "badge-ribbon/placement": {
+    "type": "`start` | `end`",
+    "description": "缎带的位置，`start` 和 `end` 随文字方向（RTL 或 LTR）变动, Default: `end`"
+  },
+  "badge-ribbon/text": {
+    "type": "string | VNode | slot",
+    "description": "缎带中填入的内容, Default: -"
+  },
   "avatar/alt": {
     "type": "string",
     "description": "图像无法显示时的替代文本, Default: -"
@@ -275,6 +327,30 @@
     "type": "`circle` | `square`",
     "description": "设置头像的形状, Default: `circle`"
   },
+  "breadcrumb/itemRender": {
+    "type": "({route, params, routes, paths}) => vNode",
+    "description": "自定义链接函数，和 vue-router 配置使用， 也可使用 #itemRender=\"props\", Default: "
+  },
+  "breadcrumb/params": {
+    "type": "object",
+    "description": "路由的参数, Default: "
+  },
+  "breadcrumb/routes": {
+    "type": "[routes[]](#routes)",
+    "description": "router 的路由栈信息, Default: "
+  },
+  "breadcrumb/separator": {
+    "type": "string|slot",
+    "description": "分隔符自定义, Default: "
+  },
+  "breadcrumb-item/href": {
+    "type": "string",
+    "description": "链接的目的地, Default: -"
+  },
+  "breadcrumb-item/overlay": {
+    "type": "[Menu](/components/menu) | () => Menu",
+    "description": "下拉菜单的内容, Default: -"
+  },
   "button/block": {
     "type": "boolean",
     "description": "将按钮宽度调整为其父宽度的选项, Default: `false`"
@@ -330,82 +406,6 @@
   "button/focus()": {
     "type": "",
     "description": "获取焦点, Default: undefined"
-  },
-  "breadcrumb/itemRender": {
-    "type": "({route, params, routes, paths}) => vNode",
-    "description": "自定义链接函数，和 vue-router 配置使用， 也可使用 #itemRender=\"props\", Default: "
-  },
-  "breadcrumb/params": {
-    "type": "object",
-    "description": "路由的参数, Default: "
-  },
-  "breadcrumb/routes": {
-    "type": "[routes[]](#routes)",
-    "description": "router 的路由栈信息, Default: "
-  },
-  "breadcrumb/separator": {
-    "type": "string|slot",
-    "description": "分隔符自定义, Default: "
-  },
-  "breadcrumb-item/href": {
-    "type": "string",
-    "description": "链接的目的地, Default: -"
-  },
-  "breadcrumb-item/overlay": {
-    "type": "[Menu](/components/menu) | () => Menu",
-    "description": "下拉菜单的内容, Default: -"
-  },
-  "badge/color": {
-    "type": "string",
-    "description": "自定义小圆点的颜色, Default: -"
-  },
-  "badge/count": {
-    "type": "number | string | slot",
-    "description": "展示的数字，大于 overflowCount 时显示为 `${overflowCount}+`，为 0 时隐藏, Default: "
-  },
-  "badge/dot": {
-    "type": "boolean",
-    "description": "不展示数字，只有一个小红点, Default: false"
-  },
-  "badge/numberStyle": {
-    "type": "object",
-    "description": "设置状态点的样式, Default: ''"
-  },
-  "badge/offset": {
-    "type": "[number|string, number|string]",
-    "description": "设置状态点的位置偏移，格式为 [x, y], Default: -"
-  },
-  "badge/overflowCount": {
-    "type": "number",
-    "description": "展示封顶的数字值, Default: 99"
-  },
-  "badge/showZero": {
-    "type": "boolean",
-    "description": "当数值为 0 时，是否展示 Badge, Default: false"
-  },
-  "badge/status": {
-    "type": "Enum{ 'success', 'processing, 'default', 'error', 'warning' }",
-    "description": "设置 Badge 为状态点, Default: ''"
-  },
-  "badge/text": {
-    "type": "string",
-    "description": "在设置了 `status` 的前提下有效，设置状态点的文本, Default: ''"
-  },
-  "badge/title": {
-    "type": "string",
-    "description": "设置鼠标放在状态点上时显示的文字, Default: `count`"
-  },
-  "badge-ribbon/color": {
-    "type": "string",
-    "description": "自定义缎带的颜色, Default: -"
-  },
-  "badge-ribbon/placement": {
-    "type": "`start` | `end`",
-    "description": "缎带的位置，`start` 和 `end` 随文字方向（RTL 或 LTR）变动, Default: `end`"
-  },
-  "badge-ribbon/text": {
-    "type": "string | VNode | slot",
-    "description": "缎带中填入的内容, Default: -"
   },
   "calendar/dateCellRender": {
     "type": "v-slot:dateCellRender=\"{current: dayjs}\"",
@@ -563,6 +563,46 @@
     "type": "function(from, to)",
     "description": "切换面板的回调, Default: -"
   },
+  "checkbox/autofocus": {
+    "type": "boolean",
+    "description": "自动获取焦点, Default: false"
+  },
+  "checkbox/checked(v-model)": {
+    "type": "boolean",
+    "description": "指定当前是否选中, Default: false"
+  },
+  "checkbox/disabled": {
+    "type": "boolean",
+    "description": "整组失效, Default: false"
+  },
+  "checkbox/indeterminate": {
+    "type": "boolean",
+    "description": "设置 indeterminate 状态，只负责样式控制, Default: false"
+  },
+  "checkbox/value": {
+    "type": "boolean | string | number",
+    "description": "与 CheckboxGroup 组合使用时的值, Default: -"
+  },
+  "checkbox/name": {
+    "type": "string",
+    "description": "CheckboxGroup 下所有 `input[type=\"checkbox\"]` 的 `name` 属性, Default: -"
+  },
+  "checkbox/options": {
+    "type": "string[] | Array&lt;{ label: string value: string disabled?: boolean, indeterminate?: boolean, onChange?: function }>",
+    "description": "指定可选项，可以通过 slot=\"label\" slot-scope=\"option\" 定制`label`, Default: \\[]"
+  },
+  "checkbox/value(v-model)": {
+    "type": "(boolean | string | number)[]",
+    "description": "指定选中的选项, Default: \\[]"
+  },
+  "checkbox/blur()": {
+    "type": "",
+    "description": "移除焦点, Default: undefined"
+  },
+  "checkbox/focus()": {
+    "type": "",
+    "description": "获取焦点, Default: undefined"
+  },
   "cascader/allowClear": {
     "type": "boolean",
     "description": "是否支持清除, Default: true"
@@ -691,46 +731,6 @@
     "type": "string[] | number[]",
     "description": "指定选中项, Default: -"
   },
-  "checkbox/autofocus": {
-    "type": "boolean",
-    "description": "自动获取焦点, Default: false"
-  },
-  "checkbox/checked(v-model)": {
-    "type": "boolean",
-    "description": "指定当前是否选中, Default: false"
-  },
-  "checkbox/disabled": {
-    "type": "boolean",
-    "description": "整组失效, Default: false"
-  },
-  "checkbox/indeterminate": {
-    "type": "boolean",
-    "description": "设置 indeterminate 状态，只负责样式控制, Default: false"
-  },
-  "checkbox/value": {
-    "type": "boolean | string | number",
-    "description": "与 CheckboxGroup 组合使用时的值, Default: -"
-  },
-  "checkbox/name": {
-    "type": "string",
-    "description": "CheckboxGroup 下所有 `input[type=\"checkbox\"]` 的 `name` 属性, Default: -"
-  },
-  "checkbox/options": {
-    "type": "string[] | Array&lt;{ label: string value: string disabled?: boolean, indeterminate?: boolean, onChange?: function }>",
-    "description": "指定可选项，可以通过 slot=\"label\" slot-scope=\"option\" 定制`label`, Default: \\[]"
-  },
-  "checkbox/value(v-model)": {
-    "type": "(boolean | string | number)[]",
-    "description": "指定选中的选项, Default: \\[]"
-  },
-  "checkbox/blur()": {
-    "type": "",
-    "description": "移除焦点, Default: undefined"
-  },
-  "checkbox/focus()": {
-    "type": "",
-    "description": "获取焦点, Default: undefined"
-  },
   "collapse/accordion": {
     "type": "boolean",
     "description": "手风琴模式, Default: `false`"
@@ -786,6 +786,94 @@
   "collapse-panel/showArrow": {
     "type": "boolean",
     "description": "是否展示当前面板上的箭头, Default: `true`"
+  },
+  "comment/actions": {
+    "type": "Array|slot",
+    "description": "在评论内容下面呈现的操作项列表, Default: -"
+  },
+  "comment/author": {
+    "type": "string|slot",
+    "description": "要显示为注释作者的元素, Default: -"
+  },
+  "comment/avatar": {
+    "type": "string|slot",
+    "description": "要显示为评论头像的元素 - 通常是 antd `Avatar` 或者 src, Default: -"
+  },
+  "comment/content": {
+    "type": "string|slot",
+    "description": "评论的主要内容, Default: -"
+  },
+  "comment/datetime": {
+    "type": "string|slot",
+    "description": "展示时间描述, Default: -"
+  },
+  "config-provider/autoInsertSpaceInButton": {
+    "type": "boolean",
+    "description": "设置为 `false` 时，移除按钮中 2 个汉字之间的空格, Default: true"
+  },
+  "config-provider/componentSize": {
+    "type": "`small` | `middle` | `large`",
+    "description": "设置 antd 组件大小, Default: -"
+  },
+  "config-provider/csp": {
+    "type": "{ nonce: string }",
+    "description": "设置 [Content Security Policy](https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP) 配置, Default: -"
+  },
+  "config-provider/direction": {
+    "type": "`ltr` | `rtl`",
+    "description": "设置文本展示方向。 [示例](#components-config-provider-demo-direction), Default: `ltr`"
+  },
+  "config-provider/dropdownMatchSelectWidth": {
+    "type": "boolean | number",
+    "description": "下拉菜单和选择器同宽。默认将设置 `min-width`，当值小于选择框宽度时会被忽略。`false` 时会关闭虚拟滚动, Default: -"
+  },
+  "config-provider/form": {
+    "type": "{ validateMessages?: [ValidateMessages](/components/form/#validatemessages), requiredMark?: boolean | `optional`, colon?: boolean}",
+    "description": "设置 Form 组件的通用属性, Default: -"
+  },
+  "config-provider/getPopupContainer": {
+    "type": "Function(triggerNode, dialogContext)",
+    "description": "弹出框（Select, Tooltip, Menu 等等）渲染父节点，默认渲染到 body 上。, Default: () => document.body"
+  },
+  "config-provider/getTargetContainer": {
+    "type": "() => HTMLElement",
+    "description": "配置 Affix、Anchor 滚动监听容器。, Default: () => window"
+  },
+  "config-provider/input": {
+    "type": "{ autocomplete?: string }",
+    "description": "设置 Input 组件的通用属性, Default: -"
+  },
+  "config-provider/locale": {
+    "type": "object",
+    "description": "语言包配置，语言包可到 [ant-design-vue/es/locale](http://unpkg.com/ant-design-vue/es/locale/) 目录下寻找, Default: -"
+  },
+  "config-provider/pageHeader": {
+    "type": "{ ghost: boolean }",
+    "description": "统一设置 pageHeader 的 ghost，参考 [pageHeader](<(/components/page-header)>), Default: 'true'"
+  },
+  "config-provider/prefixCls": {
+    "type": "string",
+    "description": "设置统一样式前缀。注意：需要配合 `less` 变量 `@ant-prefix` 使用, Default: `ant`"
+  },
+  "config-provider/renderEmpty": {
+    "type": "slot | Function(componentName: string): VNode",
+    "description": "自定义组件空状态。参考 [空状态](/components/empty/), Default: -"
+  },
+  "config-provider/space": {
+    "type": "{ size: `small` | `middle` | `large` | `number` }",
+    "description": "设置 Space 的 `size`，参考 [Space](/components/space), Default: -"
+  },
+  "config-provider/transformCellText": {
+    "type": "Function({ text, column, record, index }) => any",
+    "description": "Table 数据渲染前可以再次改变，一般用户空数据的默认配置, Default: -"
+  },
+  "config-provider/virtual": {
+    "type": "boolean",
+    "description": "设置 `false` 时关闭虚拟滚动, Default: -"
+  },
+  "config-provider/wave": {
+    "type": "{ disabled?: boolean }",
+    "description": "设置水波纹特效, Default: -"
   },
   "date-picker/allowClear": {
     "type": "boolean",
@@ -891,114 +979,6 @@
     "type": "string，[具体格式](https://day.js.org/docs/zh-CN/display/format)",
     "description": "可选，绑定值的格式，对 value、defaultValue、defaultPickerValue 起作用。不指定则绑定值为 dayjs 对象, Default: -"
   },
-  "config-provider/autoInsertSpaceInButton": {
-    "type": "boolean",
-    "description": "设置为 `false` 时，移除按钮中 2 个汉字之间的空格, Default: true"
-  },
-  "config-provider/componentSize": {
-    "type": "`small` | `middle` | `large`",
-    "description": "设置 antd 组件大小, Default: -"
-  },
-  "config-provider/csp": {
-    "type": "{ nonce: string }",
-    "description": "设置 [Content Security Policy](https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP) 配置, Default: -"
-  },
-  "config-provider/direction": {
-    "type": "`ltr` | `rtl`",
-    "description": "设置文本展示方向。 [示例](#components-config-provider-demo-direction), Default: `ltr`"
-  },
-  "config-provider/dropdownMatchSelectWidth": {
-    "type": "boolean | number",
-    "description": "下拉菜单和选择器同宽。默认将设置 `min-width`，当值小于选择框宽度时会被忽略。`false` 时会关闭虚拟滚动, Default: -"
-  },
-  "config-provider/form": {
-    "type": "{ validateMessages?: [ValidateMessages](/components/form/#validatemessages), requiredMark?: boolean | `optional`, colon?: boolean}",
-    "description": "设置 Form 组件的通用属性, Default: -"
-  },
-  "config-provider/getPopupContainer": {
-    "type": "Function(triggerNode, dialogContext)",
-    "description": "弹出框（Select, Tooltip, Menu 等等）渲染父节点，默认渲染到 body 上。, Default: () => document.body"
-  },
-  "config-provider/getTargetContainer": {
-    "type": "() => HTMLElement",
-    "description": "配置 Affix、Anchor 滚动监听容器。, Default: () => window"
-  },
-  "config-provider/input": {
-    "type": "{ autocomplete?: string }",
-    "description": "设置 Input 组件的通用属性, Default: -"
-  },
-  "config-provider/locale": {
-    "type": "object",
-    "description": "语言包配置，语言包可到 [ant-design-vue/es/locale](http://unpkg.com/ant-design-vue/es/locale/) 目录下寻找, Default: -"
-  },
-  "config-provider/pageHeader": {
-    "type": "{ ghost: boolean }",
-    "description": "统一设置 pageHeader 的 ghost，参考 [pageHeader](<(/components/page-header)>), Default: 'true'"
-  },
-  "config-provider/prefixCls": {
-    "type": "string",
-    "description": "设置统一样式前缀。注意：需要配合 `less` 变量 `@ant-prefix` 使用, Default: `ant`"
-  },
-  "config-provider/renderEmpty": {
-    "type": "slot | Function(componentName: string): VNode",
-    "description": "自定义组件空状态。参考 [空状态](/components/empty/), Default: -"
-  },
-  "config-provider/space": {
-    "type": "{ size: `small` | `middle` | `large` | `number` }",
-    "description": "设置 Space 的 `size`，参考 [Space](/components/space), Default: -"
-  },
-  "config-provider/transformCellText": {
-    "type": "Function({ text, column, record, index }) => any",
-    "description": "Table 数据渲染前可以再次改变，一般用户空数据的默认配置, Default: -"
-  },
-  "config-provider/virtual": {
-    "type": "boolean",
-    "description": "设置 `false` 时关闭虚拟滚动, Default: -"
-  },
-  "config-provider/wave": {
-    "type": "{ disabled?: boolean }",
-    "description": "设置水波纹特效, Default: -"
-  },
-  "comment/actions": {
-    "type": "Array|slot",
-    "description": "在评论内容下面呈现的操作项列表, Default: -"
-  },
-  "comment/author": {
-    "type": "string|slot",
-    "description": "要显示为注释作者的元素, Default: -"
-  },
-  "comment/avatar": {
-    "type": "string|slot",
-    "description": "要显示为评论头像的元素 - 通常是 antd `Avatar` 或者 src, Default: -"
-  },
-  "comment/content": {
-    "type": "string|slot",
-    "description": "评论的主要内容, Default: -"
-  },
-  "comment/datetime": {
-    "type": "string|slot",
-    "description": "展示时间描述, Default: -"
-  },
-  "divider/dashed": {
-    "type": "boolean",
-    "description": "是否虚线, Default: false"
-  },
-  "divider/orientation": {
-    "type": "`left` | `right` | `center`",
-    "description": "分割线标题的位置, Default: `center`"
-  },
-  "divider/orientationMargin": {
-    "type": "string | number",
-    "description": "标题和最近 left/right 边框之间的距离，去除了分割线，同时 `orientation` 必须为 `left` 或 `right`, Default: -"
-  },
-  "divider/plain": {
-    "type": "boolean",
-    "description": "文字是否显示为普通正文样式, Default: false"
-  },
-  "divider/type": {
-    "type": "`horizontal` | `vertical`",
-    "description": "水平还是垂直类型, Default: `horizontal`"
-  },
   "descriptions/bordered": {
     "type": "boolean",
     "description": "是否展示边框, Default: false"
@@ -1034,6 +1014,26 @@
   "descriptions/title": {
     "type": "string | VNode | slot",
     "description": "描述列表的标题，显示在最顶部, Default: -"
+  },
+  "divider/dashed": {
+    "type": "boolean",
+    "description": "是否虚线, Default: false"
+  },
+  "divider/orientation": {
+    "type": "`left` | `right` | `center`",
+    "description": "分割线标题的位置, Default: `center`"
+  },
+  "divider/orientationMargin": {
+    "type": "string | number",
+    "description": "标题和最近 left/right 边框之间的距离，去除了分割线，同时 `orientation` 必须为 `left` 或 `right`, Default: -"
+  },
+  "divider/plain": {
+    "type": "boolean",
+    "description": "文字是否显示为普通正文样式, Default: false"
+  },
+  "divider/type": {
+    "type": "`horizontal` | `vertical`",
+    "description": "水平还是垂直类型, Default: `horizontal`"
   },
   "drawer/autofocus": {
     "type": "boolean",
@@ -1235,6 +1235,18 @@
     "type": "function(open)",
     "description": "菜单显示状态改变时调用，参数为 visible。点击菜单按钮导致的消失不会触发, Default: 4.0"
   },
+  "empty/description": {
+    "type": "string | v-slot",
+    "description": "自定义描述内容, Default: -"
+  },
+  "empty/image": {
+    "type": "string | v-slot",
+    "description": "设置显示图片，为 string 时表示自定义图片地址, Default: false"
+  },
+  "empty/imageStyle": {
+    "type": "CSSProperties",
+    "description": "图片样式, Default: -"
+  },
   "flex/vertical": {
     "type": "boolean",
     "description": "flex 主轴的方向是否垂直，使用 `flex-direction: column`, Default: `false`"
@@ -1262,18 +1274,6 @@
   "flex/component": {
     "type": "Component",
     "description": "自定义元素类型, Default: `div`"
-  },
-  "empty/description": {
-    "type": "string | v-slot",
-    "description": "自定义描述内容, Default: -"
-  },
-  "empty/image": {
-    "type": "string | v-slot",
-    "description": "设置显示图片，为 string 时表示自定义图片地址, Default: false"
-  },
-  "empty/imageStyle": {
-    "type": "CSSProperties",
-    "description": "图片样式, Default: -"
   },
   "float-button/icon": {
     "type": "slot",
@@ -1439,6 +1439,22 @@
     "type": "[object](/components/grid-cn/#col)",
     "description": "需要为输入控件设置布局样式时，使用该属性，用法同 labelCol, Default: "
   },
+  "自定义/component": {
+    "type": "ComponentType&lt;CustomIconComponentProps>",
+    "description": "控制如何渲染图标，通常是一个渲染根标签为 `<svg>` 的 `Vue` 组件, Default: -"
+  },
+  "自定义/rotate": {
+    "type": "number",
+    "description": "图标旋转角度（IE9 无效）, Default: -"
+  },
+  "自定义/spin": {
+    "type": "boolean",
+    "description": "是否有旋转动画, Default: false"
+  },
+  "自定义/style": {
+    "type": "CSSProperties",
+    "description": "设置图标的样式，例如 `fontSize` 和 `color`, Default: -"
+  },
   "image/alt": {
     "type": "string",
     "description": "图像描述, Default: -"
@@ -1470,110 +1486,6 @@
   "image/width": {
     "type": "string | number",
     "description": "图像宽度, Default: -"
-  },
-  "自定义/component": {
-    "type": "ComponentType&lt;CustomIconComponentProps>",
-    "description": "控制如何渲染图标，通常是一个渲染根标签为 `<svg>` 的 `Vue` 组件, Default: -"
-  },
-  "自定义/rotate": {
-    "type": "number",
-    "description": "图标旋转角度（IE9 无效）, Default: -"
-  },
-  "自定义/spin": {
-    "type": "boolean",
-    "description": "是否有旋转动画, Default: false"
-  },
-  "自定义/style": {
-    "type": "CSSProperties",
-    "description": "设置图标的样式，例如 `fontSize` 和 `color`, Default: -"
-  },
-  "input-number/addonAfter": {
-    "type": "slot",
-    "description": "带标签的 input，设置后置标签, Default: -"
-  },
-  "input-number/addonBefore": {
-    "type": "slot",
-    "description": "带标签的 input，设置前置标签, Default: -"
-  },
-  "input-number/autofocus": {
-    "type": "boolean",
-    "description": "自动获取焦点, Default: false"
-  },
-  "input-number/bordered": {
-    "type": "boolean",
-    "description": "是否有边框, Default: true"
-  },
-  "input-number/controls": {
-    "type": "boolean",
-    "description": "是否显示增减按钮, Default: true"
-  },
-  "input-number/decimalSeparator": {
-    "type": "string",
-    "description": "小数点, Default: -"
-  },
-  "input-number/defaultValue": {
-    "type": "number",
-    "description": "初始值, Default: "
-  },
-  "input-number/disabled": {
-    "type": "boolean",
-    "description": "禁用, Default: false"
-  },
-  "input-number/formatter": {
-    "type": "function(value: number | string, info: { userTyping: boolean, input: string }): string",
-    "description": "指定输入框展示值的格式, Default: -"
-  },
-  "input-number/keyboard": {
-    "type": "boolean",
-    "description": "是否启用键盘快捷行为, Default: true"
-  },
-  "input-number/max": {
-    "type": "number",
-    "description": "最大值, Default: Infinity"
-  },
-  "input-number/min": {
-    "type": "number",
-    "description": "最小值, Default: -Infinity"
-  },
-  "input-number/parser": {
-    "type": "function( string): number",
-    "description": "指定从 formatter 里转换回数字的方式，和 formatter 搭配使用, Default: -"
-  },
-  "input-number/precision": {
-    "type": "number",
-    "description": "数值精度, Default: -"
-  },
-  "input-number/prefix": {
-    "type": "slot",
-    "description": "带有前缀图标的 input, Default: -"
-  },
-  "input-number/size": {
-    "type": "string",
-    "description": "输入框大小, Default: 无"
-  },
-  "input-number/status": {
-    "type": "'error' | 'warning'",
-    "description": "设置校验状态, Default: -"
-  },
-  "input-number/step": {
-    "type": "number|string",
-    "description": "每次改变步数，可以为小数, Default: 1"
-  },
-  "input-number/stringMode": {
-    "type": "boolean",
-    "description": "字符值模式，开启后支持高精度小数。同时 `change` 事件将返回 string 类型, Default: false"
-  },
-  "input-number/upIcon": {
-    "type": "slot",
-    "description": "自定义上箭头图标, Default: `<UpOutlined />`"
-  },
-  "input-number/downIcon": {
-    "type": "slot",
-    "description": "自定义下箭头图标, Default: `<DownOutlined />`"
-  },
-  "input-number/value(v-model)": {
-    "type": "number",
-    "description": "当前值, Default: "
   },
   "input/addonAfter": {
     "type": "string|slot",
@@ -1678,6 +1590,154 @@
   "input-password/visibilityToggle": {
     "type": "boolean",
     "description": "是否显示切换按钮或者控制密码显隐, Default: true"
+  },
+  "input-number/addonAfter": {
+    "type": "slot",
+    "description": "带标签的 input，设置后置标签, Default: -"
+  },
+  "input-number/addonBefore": {
+    "type": "slot",
+    "description": "带标签的 input，设置前置标签, Default: -"
+  },
+  "input-number/autofocus": {
+    "type": "boolean",
+    "description": "自动获取焦点, Default: false"
+  },
+  "input-number/bordered": {
+    "type": "boolean",
+    "description": "是否有边框, Default: true"
+  },
+  "input-number/controls": {
+    "type": "boolean",
+    "description": "是否显示增减按钮, Default: true"
+  },
+  "input-number/decimalSeparator": {
+    "type": "string",
+    "description": "小数点, Default: -"
+  },
+  "input-number/defaultValue": {
+    "type": "number",
+    "description": "初始值, Default: "
+  },
+  "input-number/disabled": {
+    "type": "boolean",
+    "description": "禁用, Default: false"
+  },
+  "input-number/formatter": {
+    "type": "function(value: number | string, info: { userTyping: boolean, input: string }): string",
+    "description": "指定输入框展示值的格式, Default: -"
+  },
+  "input-number/keyboard": {
+    "type": "boolean",
+    "description": "是否启用键盘快捷行为, Default: true"
+  },
+  "input-number/max": {
+    "type": "number",
+    "description": "最大值, Default: Infinity"
+  },
+  "input-number/min": {
+    "type": "number",
+    "description": "最小值, Default: -Infinity"
+  },
+  "input-number/parser": {
+    "type": "function( string): number",
+    "description": "指定从 formatter 里转换回数字的方式，和 formatter 搭配使用, Default: -"
+  },
+  "input-number/precision": {
+    "type": "number",
+    "description": "数值精度, Default: -"
+  },
+  "input-number/prefix": {
+    "type": "slot",
+    "description": "带有前缀图标的 input, Default: -"
+  },
+  "input-number/size": {
+    "type": "string",
+    "description": "输入框大小, Default: 无"
+  },
+  "input-number/status": {
+    "type": "'error' | 'warning'",
+    "description": "设置校验状态, Default: -"
+  },
+  "input-number/step": {
+    "type": "number|string",
+    "description": "每次改变步数，可以为小数, Default: 1"
+  },
+  "input-number/stringMode": {
+    "type": "boolean",
+    "description": "字符值模式，开启后支持高精度小数。同时 `change` 事件将返回 string 类型, Default: false"
+  },
+  "input-number/upIcon": {
+    "type": "slot",
+    "description": "自定义上箭头图标, Default: `<UpOutlined />`"
+  },
+  "input-number/downIcon": {
+    "type": "slot",
+    "description": "自定义下箭头图标, Default: `<DownOutlined />`"
+  },
+  "input-number/value(v-model)": {
+    "type": "number",
+    "description": "当前值, Default: "
+  },
+  "layout/class": {
+    "type": "string",
+    "description": "容器 class, Default: -"
+  },
+  "layout/hasSider": {
+    "type": "boolean",
+    "description": "表示子元素里有 Sider，一般不用指定。可用于服务端渲染时避免样式闪动, Default: -"
+  },
+  "layout/style": {
+    "type": "object",
+    "description": "指定样式, Default: -"
+  },
+  "layout-sider/breakpoint": {
+    "type": "`xs` | `sm` | `md` | `lg` | `xl` | `xxl`",
+    "description": "触发响应式布局的[断点](/components/grid#api), Default: -"
+  },
+  "layout-sider/class": {
+    "type": "string",
+    "description": "容器 class, Default: -"
+  },
+  "layout-sider/collapsed(v-model)": {
+    "type": "boolean",
+    "description": "当前收起状态, Default: -"
+  },
+  "layout-sider/collapsedWidth": {
+    "type": "number",
+    "description": "收缩宽度，设置为 0 会出现特殊 trigger, Default: 80"
+  },
+  "layout-sider/collapsible": {
+    "type": "boolean",
+    "description": "是否可收起, Default: false"
+  },
+  "layout-sider/defaultCollapsed": {
+    "type": "boolean",
+    "description": "是否默认收起, Default: false"
+  },
+  "layout-sider/reverseArrow": {
+    "type": "boolean",
+    "description": "翻转折叠提示箭头的方向，当 Sider 在右边时可以使用, Default: false"
+  },
+  "layout-sider/style": {
+    "type": "object|string",
+    "description": "指定样式, Default: -"
+  },
+  "layout-sider/theme": {
+    "type": "`light` | `dark`",
+    "description": "主题颜色, Default: `dark`"
+  },
+  "layout-sider/trigger": {
+    "type": "string|slot",
+    "description": "自定义 trigger，设置为 null 时隐藏 trigger, Default: -"
+  },
+  "layout-sider/width": {
+    "type": "number|string",
+    "description": "宽度, Default: 200"
+  },
+  "layout-sider/zeroWidthTriggerStyle": {
+    "type": "object",
+    "description": "指定当 `collapsedWidth` 为 0 时出现的特殊 trigger 的样式, Default: -"
   },
   "list/bordered": {
     "type": "boolean",
@@ -1791,65 +1851,65 @@
     "type": "string|slot",
     "description": "列表元素的标题, Default: -"
   },
-  "layout/class": {
+  "mentions/autofocus": {
+    "type": "boolean",
+    "description": "自动获得焦点, Default: `false`"
+  },
+  "mentions/defaultValue": {
     "type": "string",
-    "description": "容器 class, Default: -"
+    "description": "默认值, Default: "
   },
-  "layout/hasSider": {
-    "type": "boolean",
-    "description": "表示子元素里有 Sider，一般不用指定。可用于服务端渲染时避免样式闪动, Default: -"
+  "mentions/filterOption": {
+    "type": "false | (input: string, option: OptionProps) => boolean",
+    "description": "自定义过滤逻辑, Default: "
   },
-  "layout/style": {
-    "type": "object",
-    "description": "指定样式, Default: -"
+  "mentions/getPopupContainer": {
+    "type": "() => HTMLElement",
+    "description": "指定建议框挂载的 HTML 节点, Default: "
   },
-  "layout-sider/breakpoint": {
-    "type": "`xs` | `sm` | `md` | `lg` | `xl` | `xxl`",
-    "description": "触发响应式布局的[断点](/components/grid#api), Default: -"
+  "mentions/notFoundContent": {
+    "type": "string | slot",
+    "description": "当下拉列表为空时显示的内容, Default: 'Not Found'"
   },
-  "layout-sider/class": {
+  "mentions/placement": {
+    "type": "`top` | `bottom`",
+    "description": "弹出层展示位置, Default: `bottom`"
+  },
+  "mentions/prefix": {
+    "type": "string | string[]",
+    "description": "设置触发关键字, Default: '@'"
+  },
+  "mentions/split": {
     "type": "string",
-    "description": "容器 class, Default: -"
+    "description": "设置选中项前后分隔符, Default: ' '"
   },
-  "layout-sider/collapsed(v-model)": {
-    "type": "boolean",
-    "description": "当前收起状态, Default: -"
+  "mentions/status": {
+    "type": "'error' | 'warning'",
+    "description": "设置校验状态, Default: -"
   },
-  "layout-sider/collapsedWidth": {
-    "type": "number",
-    "description": "收缩宽度，设置为 0 会出现特殊 trigger, Default: 80"
+  "mentions/validateSearch": {
+    "type": "(text: string, props: MentionsProps) => void",
+    "description": "自定义触发验证逻辑, Default: "
   },
-  "layout-sider/collapsible": {
-    "type": "boolean",
-    "description": "是否可收起, Default: false"
+  "mentions/value(v-model)": {
+    "type": "string",
+    "description": "设置值, Default: "
   },
-  "layout-sider/defaultCollapsed": {
-    "type": "boolean",
-    "description": "是否默认收起, Default: false"
+  "mentions/options": {
+    "type": "[Options](#option)",
+    "description": "选项配置, Default: \\[]"
   },
-  "layout-sider/reverseArrow": {
-    "type": "boolean",
-    "description": "翻转折叠提示箭头的方向，当 Sider 在右边时可以使用, Default: false"
+  "mentions/option": {
+    "type": "v-slot:option=\"option\"",
+    "description": "通过 option 插槽，自定义节点, Default: -"
   },
-  "layout-sider/style": {
-    "type": "object|string",
-    "description": "指定样式, Default: -"
+  "mentions/blur()": {
+    "type": "",
+    "description": "移除焦点, Default: undefined"
   },
-  "layout-sider/theme": {
-    "type": "`light` | `dark`",
-    "description": "主题颜色, Default: `dark`"
-  },
-  "layout-sider/trigger": {
-    "type": "string|slot",
-    "description": "自定义 trigger，设置为 null 时隐藏 trigger, Default: -"
-  },
-  "layout-sider/width": {
-    "type": "number|string",
-    "description": "宽度, Default: 200"
-  },
-  "layout-sider/zeroWidthTriggerStyle": {
-    "type": "object",
-    "description": "指定当 `collapsedWidth` 为 0 时出现的特殊 trigger 的样式, Default: -"
+  "mentions/focus()": {
+    "type": "",
+    "description": "获取焦点, Default: undefined"
   },
   "menu/forceSubMenuRender": {
     "type": "boolean",
@@ -2051,66 +2111,6 @@
     "type": "boolean",
     "description": "是否虚线, Default: false"
   },
-  "mentions/autofocus": {
-    "type": "boolean",
-    "description": "自动获得焦点, Default: `false`"
-  },
-  "mentions/defaultValue": {
-    "type": "string",
-    "description": "默认值, Default: "
-  },
-  "mentions/filterOption": {
-    "type": "false | (input: string, option: OptionProps) => boolean",
-    "description": "自定义过滤逻辑, Default: "
-  },
-  "mentions/getPopupContainer": {
-    "type": "() => HTMLElement",
-    "description": "指定建议框挂载的 HTML 节点, Default: "
-  },
-  "mentions/notFoundContent": {
-    "type": "string | slot",
-    "description": "当下拉列表为空时显示的内容, Default: 'Not Found'"
-  },
-  "mentions/placement": {
-    "type": "`top` | `bottom`",
-    "description": "弹出层展示位置, Default: `bottom`"
-  },
-  "mentions/prefix": {
-    "type": "string | string[]",
-    "description": "设置触发关键字, Default: '@'"
-  },
-  "mentions/split": {
-    "type": "string",
-    "description": "设置选中项前后分隔符, Default: ' '"
-  },
-  "mentions/status": {
-    "type": "'error' | 'warning'",
-    "description": "设置校验状态, Default: -"
-  },
-  "mentions/validateSearch": {
-    "type": "(text: string, props: MentionsProps) => void",
-    "description": "自定义触发验证逻辑, Default: "
-  },
-  "mentions/value(v-model)": {
-    "type": "string",
-    "description": "设置值, Default: "
-  },
-  "mentions/options": {
-    "type": "[Options](#option)",
-    "description": "选项配置, Default: \\[]"
-  },
-  "mentions/option": {
-    "type": "v-slot:option=\"option\"",
-    "description": "通过 option 插槽，自定义节点, Default: -"
-  },
-  "mentions/blur()": {
-    "type": "",
-    "description": "移除焦点, Default: undefined"
-  },
-  "mentions/focus()": {
-    "type": "",
-    "description": "获取焦点, Default: undefined"
-  },
   "message/content": {
     "type": "string| VNode | () => VNode",
     "description": "提示内容, Default: -"
@@ -2279,6 +2279,42 @@
     "type": "Function",
     "description": "点击默认关闭按钮时触发的回调函数, Default: -"
   },
+  "page-header/avatar": {
+    "type": "[avatar props](/components/avatar-cn/)",
+    "description": "标题栏旁的头像, Default: -"
+  },
+  "page-header/backIcon": {
+    "type": "string|slot",
+    "description": "自定义 back icon ，如果为 false 不渲染 back icon, Default: `<ArrowLeft />`"
+  },
+  "page-header/breadcrumb": {
+    "type": "[breadcrumb](/components/breadcrumb-cn/)",
+    "description": "面包屑的配置, Default: -"
+  },
+  "page-header/extra": {
+    "type": "string|slot",
+    "description": "操作区，位于 title 行的行尾, Default: -"
+  },
+  "page-header/footer": {
+    "type": "string|slot",
+    "description": "PageHeader 的页脚，一般用于渲染 TabBar, Default: -"
+  },
+  "page-header/ghost": {
+    "type": "boolean",
+    "description": "pageHeader 的类型，将会改变背景颜色, Default: true"
+  },
+  "page-header/subTitle": {
+    "type": "string|slot",
+    "description": "自定义的二级标题文字, Default: -"
+  },
+  "page-header/tags": {
+    "type": "[Tag](/components/tag-cn/)[] | [Tag](/components/tag-cn/)",
+    "description": "title 旁的 tag 列表, Default: -"
+  },
+  "page-header/title": {
+    "type": "string|slot",
+    "description": "自定义标题文字, Default: -"
+  },
   "pagination/current(v-model)": {
     "type": "number",
     "description": "当前页数, Default: -"
@@ -2338,42 +2374,6 @@
   "pagination/total": {
     "type": "number",
     "description": "数据总数, Default: 0"
-  },
-  "page-header/avatar": {
-    "type": "[avatar props](/components/avatar-cn/)",
-    "description": "标题栏旁的头像, Default: -"
-  },
-  "page-header/backIcon": {
-    "type": "string|slot",
-    "description": "自定义 back icon ，如果为 false 不渲染 back icon, Default: `<ArrowLeft />`"
-  },
-  "page-header/breadcrumb": {
-    "type": "[breadcrumb](/components/breadcrumb-cn/)",
-    "description": "面包屑的配置, Default: -"
-  },
-  "page-header/extra": {
-    "type": "string|slot",
-    "description": "操作区，位于 title 行的行尾, Default: -"
-  },
-  "page-header/footer": {
-    "type": "string|slot",
-    "description": "PageHeader 的页脚，一般用于渲染 TabBar, Default: -"
-  },
-  "page-header/ghost": {
-    "type": "boolean",
-    "description": "pageHeader 的类型，将会改变背景颜色, Default: true"
-  },
-  "page-header/subTitle": {
-    "type": "string|slot",
-    "description": "自定义的二级标题文字, Default: -"
-  },
-  "page-header/tags": {
-    "type": "[Tag](/components/tag-cn/)[] | [Tag](/components/tag-cn/)",
-    "description": "title 旁的 tag 列表, Default: -"
-  },
-  "page-header/title": {
-    "type": "string|slot",
-    "description": "自定义标题文字, Default: -"
   },
   "popconfirm/cancelButton": {
     "type": "slot",
@@ -2575,26 +2575,6 @@
     "type": "Function(e:Event)",
     "description": "选项变化时的回调函数, Default: undefined"
   },
-  "result/extra": {
-    "type": "slot",
-    "description": "操作区, Default: -"
-  },
-  "result/icon": {
-    "type": "slot",
-    "description": "自定义 icon, Default: -"
-  },
-  "result/status": {
-    "type": "`success` | `error` | `info` | `warning` | `404` | `403` | `500`",
-    "description": "结果的状态,决定图标和颜色, Default: 'info'"
-  },
-  "result/subTitle": {
-    "type": "string | VNode | slot",
-    "description": "subTitle 文字, Default: -"
-  },
-  "result/title": {
-    "type": "string | VNode | slot",
-    "description": "title 文字, Default: -"
-  },
   "rate/allowClear": {
     "type": "boolean",
     "description": "是否允许再次点击后清除, Default: true"
@@ -2626,6 +2606,26 @@
   "rate/value(v-model)": {
     "type": "number",
     "description": "当前数，受控值, Default: -"
+  },
+  "result/extra": {
+    "type": "slot",
+    "description": "操作区, Default: -"
+  },
+  "result/icon": {
+    "type": "slot",
+    "description": "自定义 icon, Default: -"
+  },
+  "result/status": {
+    "type": "`success` | `error` | `info` | `warning` | `404` | `403` | `500`",
+    "description": "结果的状态,决定图标和颜色, Default: 'info'"
+  },
+  "result/subTitle": {
+    "type": "string | VNode | slot",
+    "description": "subTitle 文字, Default: -"
+  },
+  "result/title": {
+    "type": "string | VNode | slot",
+    "description": "title 文字, Default: -"
   },
   "segmented/block": {
     "type": "boolean",
@@ -2835,37 +2835,69 @@
     "type": "",
     "description": "获取焦点, Default: undefined"
   },
-  "space/align": {
-    "type": "`start` | `end` |`center` |`baseline`",
-    "description": "对齐方式, Default: -"
-  },
-  "space/direction": {
-    "type": "`vertical` | `horizontal`",
-    "description": "间距方向, Default: `horizontal`"
-  },
-  "space/size": {
-    "type": "`small` | `middle` | `large` | `number`",
-    "description": "间距大小, Default: `small`"
-  },
-  "space/split": {
-    "type": "VueNode | v-slot",
-    "description": "设置拆分, Default: -"
-  },
-  "space/wrap": {
+  "skeleton/active": {
     "type": "boolean",
-    "description": "是否自动换行，仅在 `horizontal` 时有效, Default: false"
+    "description": "是否展示动画效果, Default: false"
   },
-  "space-compact/block": {
+  "skeleton/avatar": {
+    "type": "boolean | [SkeletonAvatarProps](#skeletonavatarprops)",
+    "description": "是否显示头像占位图, Default: false"
+  },
+  "skeleton/loading": {
     "type": "boolean",
-    "description": "将宽度调整为父元素宽度的选项, Default: false"
+    "description": "为 `true` 时，显示占位图。反之则直接展示子组件, Default: -"
   },
-  "space-compact/direction": {
-    "type": "`vertical` | `horizontal`",
-    "description": "指定排列方向, Default: `horizontal`"
+  "skeleton/paragraph": {
+    "type": "boolean | [SkeletonParagraphProps](#skeletonparagraphprops)",
+    "description": "是否显示段落占位图, Default: true"
   },
-  "space-compact/size": {
-    "type": "`large` | `middle` | `small`",
-    "description": "子组件大小, Default: `middle`"
+  "skeleton/title": {
+    "type": "boolean | [SkeletonTitleProps](#skeletontitleprops)",
+    "description": "是否显示标题占位图, Default: true"
+  },
+  "skeleton-avatar-props/shape": {
+    "type": "`circle` | `square`",
+    "description": "指定头像的形状, Default: -"
+  },
+  "skeleton-avatar-props/size": {
+    "type": "number | `large` | `small` | `default`",
+    "description": "设置头像占位图的大小, Default: -"
+  },
+  "skeleton-title-props/width": {
+    "type": "number | string",
+    "description": "设置标题占位图的宽度, Default: -"
+  },
+  "skeleton-paragraph-props/rows": {
+    "type": "number",
+    "description": "设置段落占位图的行数, Default: -"
+  },
+  "skeleton-paragraph-props/width": {
+    "type": "number | string | Array&lt;number | string>",
+    "description": "设置段落占位图的宽度，若为数组时则为对应的每行宽度，反之则是最后一行的宽度, Default: -"
+  },
+  "skeleton-button-props/active": {
+    "type": "boolean",
+    "description": "是否展示动画效果, Default: false"
+  },
+  "skeleton-button-props/block": {
+    "type": "boolean",
+    "description": "将按钮宽度调整为其父宽度的选项, Default: false"
+  },
+  "skeleton-button-props/shape": {
+    "type": "`circle` | `round` | `default`",
+    "description": "指定按钮的形状, Default: -"
+  },
+  "skeleton-button-props/size": {
+    "type": "`large` | `small` | `default`",
+    "description": "设置按钮的大小, Default: -"
+  },
+  "skeleton-input-props/active": {
+    "type": "boolean",
+    "description": "是否展示动画效果, Default: false"
+  },
+  "skeleton-input-props/size": {
+    "type": "`large` | `small` | `default`",
+    "description": "设置输入框的大小, Default: -"
   },
   "slider/autofocus": {
     "type": "boolean",
@@ -2935,69 +2967,61 @@
     "type": "Function",
     "description": "Tooltip 渲染父节点，默认渲染到 body 上。, Default: () => document.body"
   },
-  "skeleton/active": {
+  "space/align": {
+    "type": "`start` | `end` |`center` |`baseline`",
+    "description": "对齐方式, Default: -"
+  },
+  "space/direction": {
+    "type": "`vertical` | `horizontal`",
+    "description": "间距方向, Default: `horizontal`"
+  },
+  "space/size": {
+    "type": "`small` | `middle` | `large` | `number`",
+    "description": "间距大小, Default: `small`"
+  },
+  "space/split": {
+    "type": "VueNode | v-slot",
+    "description": "设置拆分, Default: -"
+  },
+  "space/wrap": {
     "type": "boolean",
-    "description": "是否展示动画效果, Default: false"
+    "description": "是否自动换行，仅在 `horizontal` 时有效, Default: false"
   },
-  "skeleton/avatar": {
-    "type": "boolean | [SkeletonAvatarProps](#skeletonavatarprops)",
-    "description": "是否显示头像占位图, Default: false"
-  },
-  "skeleton/loading": {
+  "space-compact/block": {
     "type": "boolean",
-    "description": "为 `true` 时，显示占位图。反之则直接展示子组件, Default: -"
+    "description": "将宽度调整为父元素宽度的选项, Default: false"
   },
-  "skeleton/paragraph": {
-    "type": "boolean | [SkeletonParagraphProps](#skeletonparagraphprops)",
-    "description": "是否显示段落占位图, Default: true"
+  "space-compact/direction": {
+    "type": "`vertical` | `horizontal`",
+    "description": "指定排列方向, Default: `horizontal`"
   },
-  "skeleton/title": {
-    "type": "boolean | [SkeletonTitleProps](#skeletontitleprops)",
-    "description": "是否显示标题占位图, Default: true"
+  "space-compact/size": {
+    "type": "`large` | `middle` | `small`",
+    "description": "子组件大小, Default: `middle`"
   },
-  "skeleton-avatar-props/shape": {
-    "type": "`circle` | `square`",
-    "description": "指定头像的形状, Default: -"
+  "spin/delay": {
+    "type": "number (毫秒)",
+    "description": "延迟显示加载效果的时间（防止闪烁）, Default: -"
   },
-  "skeleton-avatar-props/size": {
-    "type": "number | `large` | `small` | `default`",
-    "description": "设置头像占位图的大小, Default: -"
+  "spin/indicator": {
+    "type": "vNode | slot",
+    "description": "加载指示符, Default: -"
   },
-  "skeleton-title-props/width": {
-    "type": "number | string",
-    "description": "设置标题占位图的宽度, Default: -"
+  "spin/size": {
+    "type": "string",
+    "description": "组件大小，可选值为 `small` `default` `large`, Default: `default`"
   },
-  "skeleton-paragraph-props/rows": {
-    "type": "number",
-    "description": "设置段落占位图的行数, Default: -"
-  },
-  "skeleton-paragraph-props/width": {
-    "type": "number | string | Array&lt;number | string>",
-    "description": "设置段落占位图的宽度，若为数组时则为对应的每行宽度，反之则是最后一行的宽度, Default: -"
-  },
-  "skeleton-button-props/active": {
+  "spin/spinning": {
     "type": "boolean",
-    "description": "是否展示动画效果, Default: false"
+    "description": "是否为加载中状态, Default: true"
   },
-  "skeleton-button-props/block": {
-    "type": "boolean",
-    "description": "将按钮宽度调整为其父宽度的选项, Default: false"
+  "spin/tip": {
+    "type": "string | slot",
+    "description": "当作为包裹元素时，可以自定义描述文案, Default: -"
   },
-  "skeleton-button-props/shape": {
-    "type": "`circle` | `round` | `default`",
-    "description": "指定按钮的形状, Default: -"
-  },
-  "skeleton-button-props/size": {
-    "type": "`large` | `small` | `default`",
-    "description": "设置按钮的大小, Default: -"
-  },
-  "skeleton-input-props/active": {
-    "type": "boolean",
-    "description": "是否展示动画效果, Default: false"
-  },
-  "skeleton-input-props/size": {
-    "type": "`large` | `small` | `default`",
-    "description": "设置输入框的大小, Default: -"
+  "spin/wrapperClassName": {
+    "type": "string",
+    "description": "包装器的类属性, Default: -"
   },
   "statistic/decimalSeparator": {
     "type": "string",
@@ -3062,30 +3086,6 @@
   "statistic-countdown/finish": {
     "type": "() => void",
     "description": "倒计时完成时触发, Default: undefined"
-  },
-  "spin/delay": {
-    "type": "number (毫秒)",
-    "description": "延迟显示加载效果的时间（防止闪烁）, Default: -"
-  },
-  "spin/indicator": {
-    "type": "vNode | slot",
-    "description": "加载指示符, Default: -"
-  },
-  "spin/size": {
-    "type": "string",
-    "description": "组件大小，可选值为 `small` `default` `large`, Default: `default`"
-  },
-  "spin/spinning": {
-    "type": "boolean",
-    "description": "是否为加载中状态, Default: true"
-  },
-  "spin/tip": {
-    "type": "string | slot",
-    "description": "当作为包裹元素时，可以自定义描述文案, Default: -"
-  },
-  "spin/wrapperClassName": {
-    "type": "string",
-    "description": "包装器的类属性, Default: -"
   },
   "steps/current (v-model)": {
     "type": "number",
@@ -3579,6 +3579,38 @@
     "type": "string，[具体格式](https://day.js.org/docs/zh-CN/display/format)",
     "description": "可选，绑定值的格式，对 value、defaultValue 起作用。不指定则绑定值为 dayjs 对象, Default: -"
   },
+  "timeline/mode": {
+    "type": "`left` | `alternate` | `right`",
+    "description": "通过设置 `mode` 可以改变时间轴和内容的相对位置, Default: "
+  },
+  "timeline/pending": {
+    "type": "boolean|string|slot",
+    "description": "指定最后一个幽灵节点是否存在或内容, Default: false"
+  },
+  "timeline/pendingDot": {
+    "type": "string|slot",
+    "description": "当最后一个幽灵节点存在時，指定其时间图点, Default: `<LoadingOutlined />`"
+  },
+  "timeline/reverse": {
+    "type": "boolean",
+    "description": "节点排序, Default: false"
+  },
+  "timeline-item/color": {
+    "type": "string",
+    "description": "指定圆圈颜色 `blue, red, green`，或自定义的色值, Default: blue"
+  },
+  "timeline-item/dot": {
+    "type": "string|slot",
+    "description": "自定义时间轴点, Default: -"
+  },
+  "timeline-item/label": {
+    "type": "string | slot",
+    "description": "设置标签, Default: -"
+  },
+  "timeline-item/position": {
+    "type": "`left` | `right`",
+    "description": "自定义节点位置, Default: -"
+  },
   "tooltip/title": {
     "type": "string|slot",
     "description": "提示文字, Default: 无"
@@ -3639,37 +3671,157 @@
     "type": "boolean",
     "description": "用于手动控制浮层显隐, 小于 4.0.0 使用 `visible`, Default: false"
   },
-  "timeline/mode": {
-    "type": "`left` | `alternate` | `right`",
-    "description": "通过设置 `mode` 可以改变时间轴和内容的相对位置, Default: "
+  "tour/arrow": {
+    "type": "`boolean` | `{ pointAtCenter: boolean}`",
+    "description": "是否显示箭头，包含是否指向元素中心的配置, Default: `true`"
   },
-  "timeline/pending": {
-    "type": "boolean|string|slot",
-    "description": "指定最后一个幽灵节点是否存在或内容, Default: false"
+  "tour/placement": {
+    "type": "`left` `leftTop` `leftBottom` `right` `rightTop` `rightBottom` `top` `topLeft` `topRight` `bottom` `bottomLeft` `bottomRight`",
+    "description": "引导卡片相对于目标元素的位置, Default: `bottom`"
   },
-  "timeline/pendingDot": {
-    "type": "string|slot",
-    "description": "当最后一个幽灵节点存在時，指定其时间图点, Default: `<LoadingOutlined />`"
+  "tour/mask": {
+    "type": "`boolean` | `{ style?: CSSProperties; color?: string; }`",
+    "description": "是否启用蒙层，也可传入配置改变蒙层样式和填充色, Default: `true`"
   },
-  "timeline/reverse": {
+  "tour/type": {
+    "type": "`default` | `primary`",
+    "description": "类型，影响底色与文字颜色, Default: `default`"
+  },
+  "tour/open": {
+    "type": "`boolean`",
+    "description": "打开引导, Default: -"
+  },
+  "tour/current(v-model)": {
+    "type": "`number`",
+    "description": "当前处于哪一步, Default: -"
+  },
+  "tour/scrollIntoViewOptions": {
+    "type": "`boolean` | `ScrollIntoViewOptions`",
+    "description": "是否支持当前元素滚动到视窗内，也可传入配置指定滚动视窗的相关参数, Default: `true`"
+  },
+  "tour/indicatorsRender": {
+    "type": "`v-slot:indicatorsRender=\"{current, total}\"`",
+    "description": "自定义指示器, Default: -"
+  },
+  "tour/zIndex": {
+    "type": "`number`",
+    "description": "Tour 的层级, Default: `1001`"
+  },
+  "tour-step/target": {
+    "type": "`() => HTMLElement` | `HTMLElement`",
+    "description": "获取引导卡片指向的元素，为空时居中于屏幕, Default: -"
+  },
+  "tour-step/arrow": {
+    "type": "`boolean` | `{ pointAtCenter: boolean}`",
+    "description": "是否显示箭头，包含是否指向元素中心的配置, Default: `true`"
+  },
+  "tour-step/cover": {
+    "type": "`VueNode`",
+    "description": "展示的图片或者视频, Default: -"
+  },
+  "tour-step/title": {
+    "type": "`VueNode`",
+    "description": "标题, Default: -"
+  },
+  "tour-step/description": {
+    "type": "`VueNode`",
+    "description": "主要描述部分, Default: -"
+  },
+  "tour-step/placement": {
+    "type": "`left` `leftTop` `leftBottom` `right` `rightTop` `rightBottom` `top` `topLeft` `topRight` `bottom` `bottomLeft` `bottomRight` `bottom`",
+    "description": "引导卡片相对于目标元素的位置, Default: "
+  },
+  "tour-step/mask": {
+    "type": "`boolean` | `{ style?: CSSProperties; color?: string; }`",
+    "description": "是否启用蒙层，也可传入配置改变蒙层样式和填充色，默认跟随 Tour 的 `mask` 属性, Default: `true`"
+  },
+  "tour-step/type": {
+    "type": "`default` | `primary`",
+    "description": "类型，影响底色与文字颜色, Default: `default`"
+  },
+  "tour-step/nextButtonProps": {
+    "type": "`{ children: VueNode; onClick: Function }`",
+    "description": "下一步按钮的属性, Default: -"
+  },
+  "tour-step/prevButtonProps": {
+    "type": "`{ children: VueNode; onClick: Function }`",
+    "description": "上一步按钮的属性, Default: -"
+  },
+  "tour-step/scrollIntoViewOptions": {
+    "type": "`boolean` | `ScrollIntoViewOptions`",
+    "description": "是否支持当前元素滚动到视窗内，也可传入配置指定滚动视窗的相关参数，默认跟随 Tour 的 `scrollIntoViewOptions` 属性, Default: `true`"
+  },
+  "transfer/dataSource": {
+    "type": "[{key: string.isRequired,title: string.isRequired,description: string,disabled: bool}][]",
+    "description": "数据源，其中的数据将会被渲染到左边一栏中，`targetKeys` 中指定的除外。, Default: \\[]"
+  },
+  "transfer/disabled": {
     "type": "boolean",
-    "description": "节点排序, Default: false"
+    "description": "是否禁用, Default: false"
   },
-  "timeline-item/color": {
-    "type": "string",
-    "description": "指定圆圈颜色 `blue, red, green`，或自定义的色值, Default: blue"
+  "transfer/filterOption": {
+    "type": "(inputValue, option): boolean",
+    "description": "接收 `inputValue` `option` 两个参数，当 `option` 符合筛选条件时，应返回 `true`，反之则返回 `false`。, Default: "
   },
-  "timeline-item/dot": {
-    "type": "string|slot",
-    "description": "自定义时间轴点, Default: -"
+  "transfer/footer": {
+    "type": "slot=\"footer\" slot-scope=\"props\"",
+    "description": "可以设置为一个 作用域插槽, Default: "
   },
-  "timeline-item/label": {
-    "type": "string | slot",
-    "description": "设置标签, Default: -"
+  "transfer/listStyle": {
+    "type": "CSSProperties",
+    "description": "两个穿梭框的自定义样式, Default: "
   },
-  "timeline-item/position": {
-    "type": "`left` | `right`",
-    "description": "自定义节点位置, Default: -"
+  "transfer/locale": {
+    "type": "object",
+    "description": "各种语言, Default: `{ itemUnit: '项', itemsUnit: '项', notFoundContent: '列表为空', searchPlaceholder: '请输入搜索内容' }`"
+  },
+  "transfer/oneWay": {
+    "type": "boolean",
+    "description": "展示为单向样式, Default: false"
+  },
+  "transfer/operations": {
+    "type": "string[]",
+    "description": "操作文案集合，顺序从上至下, Default: \\['>', '&lt;']"
+  },
+  "transfer/operationStyle": {
+    "type": "CSSProperties",
+    "description": "操作栏的自定义样式, Default: -"
+  },
+  "transfer/pagination": {
+    "type": "boolean | { pageSize: number, simple: boolean, showSizeChanger?: boolean, showLessItems?: boolean }",
+    "description": "使用分页样式，自定义渲染列表下无效, Default: flase"
+  },
+  "transfer/render": {
+    "type": "Function(record)| slot",
+    "description": "每行数据渲染函数，该函数的入参为 `dataSource` 中的项，返回值为 element。或者返回一个普通对象，其中 `label` 字段为 element，`value` 字段为 title, Default: "
+  },
+  "transfer/selectAllLabels": {
+    "type": "VueNode | ((info: { selectedCount: number; totalCount: number }) => VueNode);",
+    "description": "自定义顶部多选框标题的集合, Default: -"
+  },
+  "transfer/selectedKeys(v-model)": {
+    "type": "string[]",
+    "description": "设置哪些项应该被选中, Default: \\[]"
+  },
+  "transfer/showSearch": {
+    "type": "boolean",
+    "description": "是否显示搜索框, Default: false"
+  },
+  "transfer/showSelectAll": {
+    "type": "boolean",
+    "description": "是否展示全选勾选框, Default: true"
+  },
+  "transfer/status": {
+    "type": "'error' | 'warning'",
+    "description": "设置校验状态, Default: -"
+  },
+  "transfer/targetKeys(v-model)": {
+    "type": "string[]",
+    "description": "显示在右侧框数据的 key 集合, Default: \\[]"
+  },
+  "transfer/titles": {
+    "type": "string[]",
+    "description": "标题集合，顺序从左至右, Default: \\['', '']"
   },
   "tree/allowDrop": {
     "type": "({ dropNode, dropPosition }) => boolean",
@@ -3815,290 +3967,6 @@
     "type": "string",
     "description": "目录展开逻辑，可选 `false` `'click'` `'dblclick'`, Default: click"
   },
-  "transfer/dataSource": {
-    "type": "[{key: string.isRequired,title: string.isRequired,description: string,disabled: bool}][]",
-    "description": "数据源，其中的数据将会被渲染到左边一栏中，`targetKeys` 中指定的除外。, Default: \\[]"
-  },
-  "transfer/disabled": {
-    "type": "boolean",
-    "description": "是否禁用, Default: false"
-  },
-  "transfer/filterOption": {
-    "type": "(inputValue, option): boolean",
-    "description": "接收 `inputValue` `option` 两个参数，当 `option` 符合筛选条件时，应返回 `true`，反之则返回 `false`。, Default: "
-  },
-  "transfer/footer": {
-    "type": "slot=\"footer\" slot-scope=\"props\"",
-    "description": "可以设置为一个 作用域插槽, Default: "
-  },
-  "transfer/listStyle": {
-    "type": "CSSProperties",
-    "description": "两个穿梭框的自定义样式, Default: "
-  },
-  "transfer/locale": {
-    "type": "object",
-    "description": "各种语言, Default: `{ itemUnit: '项', itemsUnit: '项', notFoundContent: '列表为空', searchPlaceholder: '请输入搜索内容' }`"
-  },
-  "transfer/oneWay": {
-    "type": "boolean",
-    "description": "展示为单向样式, Default: false"
-  },
-  "transfer/operations": {
-    "type": "string[]",
-    "description": "操作文案集合，顺序从上至下, Default: \\['>', '&lt;']"
-  },
-  "transfer/operationStyle": {
-    "type": "CSSProperties",
-    "description": "操作栏的自定义样式, Default: -"
-  },
-  "transfer/pagination": {
-    "type": "boolean | { pageSize: number, simple: boolean, showSizeChanger?: boolean, showLessItems?: boolean }",
-    "description": "使用分页样式，自定义渲染列表下无效, Default: flase"
-  },
-  "transfer/render": {
-    "type": "Function(record)| slot",
-    "description": "每行数据渲染函数，该函数的入参为 `dataSource` 中的项，返回值为 element。或者返回一个普通对象，其中 `label` 字段为 element，`value` 字段为 title, Default: "
-  },
-  "transfer/selectAllLabels": {
-    "type": "VueNode | ((info: { selectedCount: number; totalCount: number }) => VueNode);",
-    "description": "自定义顶部多选框标题的集合, Default: -"
-  },
-  "transfer/selectedKeys(v-model)": {
-    "type": "string[]",
-    "description": "设置哪些项应该被选中, Default: \\[]"
-  },
-  "transfer/showSearch": {
-    "type": "boolean",
-    "description": "是否显示搜索框, Default: false"
-  },
-  "transfer/showSelectAll": {
-    "type": "boolean",
-    "description": "是否展示全选勾选框, Default: true"
-  },
-  "transfer/status": {
-    "type": "'error' | 'warning'",
-    "description": "设置校验状态, Default: -"
-  },
-  "transfer/targetKeys(v-model)": {
-    "type": "string[]",
-    "description": "显示在右侧框数据的 key 集合, Default: \\[]"
-  },
-  "transfer/titles": {
-    "type": "string[]",
-    "description": "标题集合，顺序从左至右, Default: \\['', '']"
-  },
-  "tour/arrow": {
-    "type": "`boolean` | `{ pointAtCenter: boolean}`",
-    "description": "是否显示箭头，包含是否指向元素中心的配置, Default: `true`"
-  },
-  "tour/placement": {
-    "type": "`left` `leftTop` `leftBottom` `right` `rightTop` `rightBottom` `top` `topLeft` `topRight` `bottom` `bottomLeft` `bottomRight`",
-    "description": "引导卡片相对于目标元素的位置, Default: `bottom`"
-  },
-  "tour/mask": {
-    "type": "`boolean` | `{ style?: CSSProperties; color?: string; }`",
-    "description": "是否启用蒙层，也可传入配置改变蒙层样式和填充色, Default: `true`"
-  },
-  "tour/type": {
-    "type": "`default` | `primary`",
-    "description": "类型，影响底色与文字颜色, Default: `default`"
-  },
-  "tour/open": {
-    "type": "`boolean`",
-    "description": "打开引导, Default: -"
-  },
-  "tour/current(v-model)": {
-    "type": "`number`",
-    "description": "当前处于哪一步, Default: -"
-  },
-  "tour/scrollIntoViewOptions": {
-    "type": "`boolean` | `ScrollIntoViewOptions`",
-    "description": "是否支持当前元素滚动到视窗内，也可传入配置指定滚动视窗的相关参数, Default: `true`"
-  },
-  "tour/indicatorsRender": {
-    "type": "`v-slot:indicatorsRender=\"{current, total}\"`",
-    "description": "自定义指示器, Default: -"
-  },
-  "tour/zIndex": {
-    "type": "`number`",
-    "description": "Tour 的层级, Default: `1001`"
-  },
-  "tour-step/target": {
-    "type": "`() => HTMLElement` | `HTMLElement`",
-    "description": "获取引导卡片指向的元素，为空时居中于屏幕, Default: -"
-  },
-  "tour-step/arrow": {
-    "type": "`boolean` | `{ pointAtCenter: boolean}`",
-    "description": "是否显示箭头，包含是否指向元素中心的配置, Default: `true`"
-  },
-  "tour-step/cover": {
-    "type": "`VueNode`",
-    "description": "展示的图片或者视频, Default: -"
-  },
-  "tour-step/title": {
-    "type": "`VueNode`",
-    "description": "标题, Default: -"
-  },
-  "tour-step/description": {
-    "type": "`VueNode`",
-    "description": "主要描述部分, Default: -"
-  },
-  "tour-step/placement": {
-    "type": "`left` `leftTop` `leftBottom` `right` `rightTop` `rightBottom` `top` `topLeft` `topRight` `bottom` `bottomLeft` `bottomRight` `bottom`",
-    "description": "引导卡片相对于目标元素的位置, Default: "
-  },
-  "tour-step/mask": {
-    "type": "`boolean` | `{ style?: CSSProperties; color?: string; }`",
-    "description": "是否启用蒙层，也可传入配置改变蒙层样式和填充色，默认跟随 Tour 的 `mask` 属性, Default: `true`"
-  },
-  "tour-step/type": {
-    "type": "`default` | `primary`",
-    "description": "类型，影响底色与文字颜色, Default: `default`"
-  },
-  "tour-step/nextButtonProps": {
-    "type": "`{ children: VueNode; onClick: Function }`",
-    "description": "下一步按钮的属性, Default: -"
-  },
-  "tour-step/prevButtonProps": {
-    "type": "`{ children: VueNode; onClick: Function }`",
-    "description": "上一步按钮的属性, Default: -"
-  },
-  "tour-step/scrollIntoViewOptions": {
-    "type": "`boolean` | `ScrollIntoViewOptions`",
-    "description": "是否支持当前元素滚动到视窗内，也可传入配置指定滚动视窗的相关参数，默认跟随 Tour 的 `scrollIntoViewOptions` 属性, Default: `true`"
-  },
-  "upload/accept": {
-    "type": "string",
-    "description": "接受上传的文件类型, 详见 [input accept Attribute](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/file#accept), Default: 无"
-  },
-  "upload/action": {
-    "type": "string|(file) => `Promise`",
-    "description": "上传的地址, Default: 无"
-  },
-  "upload/beforeUpload": {
-    "type": "(file, fileList) => `boolean` | `Promise`",
-    "description": "上传文件之前的钩子，参数为上传的文件，若返回 `false` 则停止上传。支持返回一个 Promise 对象，Promise 对象 reject 时则停止上传，resolve 时开始上传（ resolve 传入 `File` 或 `Blob` 对象则上传 resolve 传入对象）。, Default: 无"
-  },
-  "upload/customRequest": {
-    "type": "function",
-    "description": "通过覆盖默认的上传行为，可以自定义自己的上传实现, Default: 无"
-  },
-  "upload/data": {
-    "type": "object|(file) => object",
-    "description": "上传所需参数或返回上传参数的方法, Default: 无"
-  },
-  "upload/directory": {
-    "type": "boolean",
-    "description": "支持上传文件夹（[caniuse](https://caniuse.com/#feat=input-file-directory)）, Default: false"
-  },
-  "upload/disabled": {
-    "type": "boolean",
-    "description": "是否禁用, Default: -"
-  },
-  "upload/downloadIcon": {
-    "type": "v-slot:iconRender=\"{file: UploadFile}\"",
-    "description": "自定义下载 icon, Default: -"
-  },
-  "upload/fileList": {
-    "type": "object[]",
-    "description": "已经上传的文件列表（受控）, Default: 无"
-  },
-  "upload/headers": {
-    "type": "object",
-    "description": "设置上传的请求头部，IE10 以上有效, Default: 无"
-  },
-  "upload/iconRender": {
-    "type": "v-slot:iconRender=\"{file: UploadFile, listType?: UploadListType}\"",
-    "description": "自定义显示 icon, Default: -"
-  },
-  "upload/isImageUrl": {
-    "type": "(file: UploadFile) => boolean",
-    "description": "自定义缩略图是否使用 &lt;img /> 标签进行显示, Default: -"
-  },
-  "upload/itemRender": {
-    "type": "v-slot:itemRender=\"{originNode: VNode, file: UploadFile, fileList: object[], actions: { download: function, preview: function, remove: function }\"",
-    "description": "自定义上传列表项, Default: -"
-  },
-  "upload/listType": {
-    "type": "string",
-    "description": "上传列表的内建样式，支持三种基本样式 `text`, `picture` 和 `picture-card`, Default: `text`"
-  },
-  "upload/maxCount": {
-    "type": "number",
-    "description": "限制上传数量。当为 1 时，始终用最新上传的文件代替当前文件, Default: -"
-  },
-  "upload/method": {
-    "type": "string",
-    "description": "上传请求的 http method, Default: `post`"
-  },
-  "upload/multiple": {
-    "type": "boolean",
-    "description": "是否支持多选文件，`ie10+` 支持。开启后按住 ctrl 可选择多个文件。, Default: false"
-  },
-  "upload/name": {
-    "type": "string",
-    "description": "发到后台的文件参数名, Default: `file`"
-  },
-  "upload/openFileDialogOnClick": {
-    "type": "boolean",
-    "description": "点击打开文件对话框, Default: true"
-  },
-  "upload/previewFile": {
-    "type": "(file: File | Blob) => Promise&lt;dataURL: string>",
-    "description": "自定义文件预览逻辑, Default: 无"
-  },
-  "upload/previewIcon": {
-    "type": "v-slot:iconRender=\"{file: UploadFile}\"",
-    "description": "自定义预览 icon, Default: -"
-  },
-  "upload/progress": {
-    "type": "[ProgressProps](/components/progress/#api)（仅支持 `type=\"line\"`）",
-    "description": "自定义进度条样式, Default: { strokeWidth: 2, showInfo: false }"
-  },
-  "upload/removeIcon": {
-    "type": "v-slot:iconRender=\"{file: UploadFile}\"",
-    "description": "自定义删除 icon, Default: -"
-  },
-  "upload/showUploadList": {
-    "type": "boolean | { showPreviewIcon?: boolean, showRemoveIcon?: boolean, showDownloadIcon?: boolean }",
-    "description": "是否展示 uploadList, 可设为一个对象，用于单独设定 showPreviewIcon, showRemoveIcon 和 showDownloadIcon, Default: true"
-  },
-  "upload/supportServerRender": {
-    "type": "boolean",
-    "description": "服务端渲染时需要打开这个, Default: false"
-  },
-  "upload/withCredentials": {
-    "type": "boolean",
-    "description": "上传请求时是否携带 cookie, Default: false"
-  },
-  "upload-file/crossOrigin": {
-    "type": "`'anonymous'` | `'use-credentials'` | `''`",
-    "description": "CORS 属性设置, Default: -"
-  },
-  "upload-file/name": {
-    "type": "string",
-    "description": "文件名, Default: -"
-  },
-  "upload-file/percent": {
-    "type": "number",
-    "description": "上传进度, Default: -"
-  },
-  "upload-file/status": {
-    "type": "`error` | `success` | `done` | `uploading` | `removed`",
-    "description": "上传状态，不同状态展示颜色也会有所不同, Default: -"
-  },
-  "upload-file/thumbUrl": {
-    "type": "string",
-    "description": "缩略图地址, Default: -"
-  },
-  "upload-file/uid": {
-    "type": "string",
-    "description": "唯一标识符，不设置时会自动生成, Default: -"
-  },
-  "upload-file/url": {
-    "type": "string",
-    "description": "下载地址, Default: -"
-  },
   "typography-text/code": {
     "type": "boolean",
     "description": "添加代码样式, Default: false"
@@ -4234,6 +4102,138 @@
   "typography-paragraph/underline": {
     "type": "boolean",
     "description": "添加下划线样式, Default: false"
+  },
+  "upload/accept": {
+    "type": "string",
+    "description": "接受上传的文件类型, 详见 [input accept Attribute](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/file#accept), Default: 无"
+  },
+  "upload/action": {
+    "type": "string|(file) => `Promise`",
+    "description": "上传的地址, Default: 无"
+  },
+  "upload/beforeUpload": {
+    "type": "(file, fileList) => `boolean` | `Promise`",
+    "description": "上传文件之前的钩子，参数为上传的文件，若返回 `false` 则停止上传。支持返回一个 Promise 对象，Promise 对象 reject 时则停止上传，resolve 时开始上传（ resolve 传入 `File` 或 `Blob` 对象则上传 resolve 传入对象）。, Default: 无"
+  },
+  "upload/customRequest": {
+    "type": "function",
+    "description": "通过覆盖默认的上传行为，可以自定义自己的上传实现, Default: 无"
+  },
+  "upload/data": {
+    "type": "object|(file) => object",
+    "description": "上传所需参数或返回上传参数的方法, Default: 无"
+  },
+  "upload/directory": {
+    "type": "boolean",
+    "description": "支持上传文件夹（[caniuse](https://caniuse.com/#feat=input-file-directory)）, Default: false"
+  },
+  "upload/disabled": {
+    "type": "boolean",
+    "description": "是否禁用, Default: -"
+  },
+  "upload/downloadIcon": {
+    "type": "v-slot:iconRender=\"{file: UploadFile}\"",
+    "description": "自定义下载 icon, Default: -"
+  },
+  "upload/fileList": {
+    "type": "object[]",
+    "description": "已经上传的文件列表（受控）, Default: 无"
+  },
+  "upload/headers": {
+    "type": "object",
+    "description": "设置上传的请求头部，IE10 以上有效, Default: 无"
+  },
+  "upload/iconRender": {
+    "type": "v-slot:iconRender=\"{file: UploadFile, listType?: UploadListType}\"",
+    "description": "自定义显示 icon, Default: -"
+  },
+  "upload/isImageUrl": {
+    "type": "(file: UploadFile) => boolean",
+    "description": "自定义缩略图是否使用 &lt;img /> 标签进行显示, Default: -"
+  },
+  "upload/itemRender": {
+    "type": "v-slot:itemRender=\"{originNode: VNode, file: UploadFile, fileList: object[], actions: { download: function, preview: function, remove: function }\"",
+    "description": "自定义上传列表项, Default: -"
+  },
+  "upload/listType": {
+    "type": "string",
+    "description": "上传列表的内建样式，支持三种基本样式 `text`, `picture` 和 `picture-card`, Default: `text`"
+  },
+  "upload/maxCount": {
+    "type": "number",
+    "description": "限制上传数量。当为 1 时，始终用最新上传的文件代替当前文件, Default: -"
+  },
+  "upload/method": {
+    "type": "string",
+    "description": "上传请求的 http method, Default: `post`"
+  },
+  "upload/multiple": {
+    "type": "boolean",
+    "description": "是否支持多选文件，`ie10+` 支持。开启后按住 ctrl 可选择多个文件。, Default: false"
+  },
+  "upload/name": {
+    "type": "string",
+    "description": "发到后台的文件参数名, Default: `file`"
+  },
+  "upload/openFileDialogOnClick": {
+    "type": "boolean",
+    "description": "点击打开文件对话框, Default: true"
+  },
+  "upload/previewFile": {
+    "type": "(file: File | Blob) => Promise&lt;dataURL: string>",
+    "description": "自定义文件预览逻辑, Default: 无"
+  },
+  "upload/previewIcon": {
+    "type": "v-slot:iconRender=\"{file: UploadFile}\"",
+    "description": "自定义预览 icon, Default: -"
+  },
+  "upload/progress": {
+    "type": "[ProgressProps](/components/progress/#api)（仅支持 `type=\"line\"`）",
+    "description": "自定义进度条样式, Default: { strokeWidth: 2, showInfo: false }"
+  },
+  "upload/removeIcon": {
+    "type": "v-slot:iconRender=\"{file: UploadFile}\"",
+    "description": "自定义删除 icon, Default: -"
+  },
+  "upload/showUploadList": {
+    "type": "boolean | { showPreviewIcon?: boolean, showRemoveIcon?: boolean, showDownloadIcon?: boolean }",
+    "description": "是否展示 uploadList, 可设为一个对象，用于单独设定 showPreviewIcon, showRemoveIcon 和 showDownloadIcon, Default: true"
+  },
+  "upload/supportServerRender": {
+    "type": "boolean",
+    "description": "服务端渲染时需要打开这个, Default: false"
+  },
+  "upload/withCredentials": {
+    "type": "boolean",
+    "description": "上传请求时是否携带 cookie, Default: false"
+  },
+  "upload-file/crossOrigin": {
+    "type": "`'anonymous'` | `'use-credentials'` | `''`",
+    "description": "CORS 属性设置, Default: -"
+  },
+  "upload-file/name": {
+    "type": "string",
+    "description": "文件名, Default: -"
+  },
+  "upload-file/percent": {
+    "type": "number",
+    "description": "上传进度, Default: -"
+  },
+  "upload-file/status": {
+    "type": "`error` | `success` | `done` | `uploading` | `removed`",
+    "description": "上传状态，不同状态展示颜色也会有所不同, Default: -"
+  },
+  "upload-file/thumbUrl": {
+    "type": "string",
+    "description": "缩略图地址, Default: -"
+  },
+  "upload-file/uid": {
+    "type": "string",
+    "description": "唯一标识符，不设置时会自动生成, Default: -"
+  },
+  "upload-file/url": {
+    "type": "string",
+    "description": "下载地址, Default: -"
   },
   "watermark/width": {
     "type": "number",

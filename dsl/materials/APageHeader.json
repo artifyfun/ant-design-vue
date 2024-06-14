@@ -256,7 +256,13 @@
       "icon": "page-header",
       "screenshot": "",
       "snippetName": "APageHeader",
-      "schema": {}
+      "schema": {
+        "componentName": "APageHeader",
+        "props": {
+          "title": "Page title",
+          "subTitle": "Page subTitle"
+        }
+      }
     }
   ]
 }

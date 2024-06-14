@@ -413,9 +413,23 @@
         "children": [
           {
             "componentName": "AFormItem",
+            "props": {
+              "label": "Username"
+            },
             "children": [
               {
                 "componentName": "AInput"
+              }
+            ]
+          },
+          {
+            "componentName": "AFormItem",
+            "props": {
+              "label": "Password"
+            },
+            "children": [
+              {
+                "componentName": "AInputPassword"
               }
             ]
           }

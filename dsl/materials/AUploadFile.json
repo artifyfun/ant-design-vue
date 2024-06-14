@@ -29,7 +29,6 @@
     "destructuring": true
   },
   "group": "数据录入",
-  "category": "Ant Design Vue",
   "configure": {
     "loop": true,
     "condition": true,

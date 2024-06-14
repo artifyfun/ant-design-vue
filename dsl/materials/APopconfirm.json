@@ -431,7 +431,25 @@
       "icon": "popconfirm",
       "screenshot": "",
       "snippetName": "APopconfirm",
-      "schema": {}
+      "schema": {
+        "componentName": "APopconfirm",
+        "props": {
+          "title": "Are you sure delete this task?"
+        },
+        "children": [
+          {
+            "componentName": "a",
+            "children": [
+              {
+                "componentName": "Text",
+                "props": {
+                  "text": "Delete"
+                }
+              }
+            ]
+          }
+        ]
+      }
     }
   ]
 }

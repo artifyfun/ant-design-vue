@@ -128,7 +128,23 @@
       "icon": "input-group",
       "screenshot": "",
       "snippetName": "AInputGroup",
-      "schema": {}
+      "schema": {
+        "componentName": "AInputGroup",
+        "children": [
+          {
+            "componentName": "AInput"
+          },
+          {
+            "componentName": "AInputPassword"
+          },
+          {
+            "componentName": "AInputSearch"
+          },
+          {
+            "componentName": "ATextarea"
+          }
+        ]
+      }
     }
   ]
 }

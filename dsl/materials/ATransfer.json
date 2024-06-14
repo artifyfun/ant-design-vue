@@ -492,7 +492,136 @@
       "icon": "transfer",
       "screenshot": "",
       "snippetName": "ATransfer",
-      "schema": {}
+      "schema": {
+        "componentName": "ATransfer",
+        "props": {
+          "dataSource": [
+            {
+              "key": "0",
+              "title": "content1",
+              "description": "description of content1",
+              "disabled": true
+            },
+            {
+              "key": "1",
+              "title": "content2",
+              "description": "description of content2",
+              "disabled": false
+            },
+            {
+              "key": "2",
+              "title": "content3",
+              "description": "description of content3",
+              "disabled": false
+            },
+            {
+              "key": "3",
+              "title": "content4",
+              "description": "description of content4",
+              "disabled": true
+            },
+            {
+              "key": "4",
+              "title": "content5",
+              "description": "description of content5",
+              "disabled": false
+            },
+            {
+              "key": "5",
+              "title": "content6",
+              "description": "description of content6",
+              "disabled": false
+            },
+            {
+              "key": "6",
+              "title": "content7",
+              "description": "description of content7",
+              "disabled": true
+            },
+            {
+              "key": "7",
+              "title": "content8",
+              "description": "description of content8",
+              "disabled": false
+            },
+            {
+              "key": "8",
+              "title": "content9",
+              "description": "description of content9",
+              "disabled": false
+            },
+            {
+              "key": "9",
+              "title": "content10",
+              "description": "description of content10",
+              "disabled": true
+            },
+            {
+              "key": "10",
+              "title": "content11",
+              "description": "description of content11",
+              "disabled": false
+            },
+            {
+              "key": "11",
+              "title": "content12",
+              "description": "description of content12",
+              "disabled": false
+            },
+            {
+              "key": "12",
+              "title": "content13",
+              "description": "description of content13",
+              "disabled": true
+            },
+            {
+              "key": "13",
+              "title": "content14",
+              "description": "description of content14",
+              "disabled": false
+            },
+            {
+              "key": "14",
+              "title": "content15",
+              "description": "description of content15",
+              "disabled": false
+            },
+            {
+              "key": "15",
+              "title": "content16",
+              "description": "description of content16",
+              "disabled": true
+            },
+            {
+              "key": "16",
+              "title": "content17",
+              "description": "description of content17",
+              "disabled": false
+            },
+            {
+              "key": "17",
+              "title": "content18",
+              "description": "description of content18",
+              "disabled": false
+            },
+            {
+              "key": "18",
+              "title": "content19",
+              "description": "description of content19",
+              "disabled": true
+            },
+            {
+              "key": "19",
+              "title": "content20",
+              "description": "description of content20",
+              "disabled": false
+            }
+          ],
+          "targetKeys": ["3", "4", "5"],
+          "selectedKeys": ["1", "2", "6"],
+          "titles": ["Source", "Target"]
+        }
+      }
     }
   ]
 }

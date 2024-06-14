@@ -2,7 +2,7 @@
   "id": 1,
   "version": "4.1.2",
   "name": {
-    "zh_CN": "排版容器"
+    "zh_CN": "排版"
   },
   "component": "ATypography",
   "icon": "typography",
@@ -76,12 +76,103 @@
   "snippets": [
     {
       "name": {
-        "zh_CN": "排版容器"
+        "zh_CN": "排版"
       },
       "icon": "typography",
       "screenshot": "",
       "snippetName": "ATypography",
-      "schema": {}
+      "schema": {
+        "componentName": "ATypography",
+        "children": [
+          {
+            "componentName": "ATypographyTitle",
+            "children": [
+              {
+                "componentName": "Text",
+                "props": {
+                  "text": "Introduction"
+                }
+              }
+            ]
+          },
+          {
+            "componentName": "ATypographyParagraph",
+            "children": [
+              {
+                "componentName": "Text",
+                "props": {
+                  "text": "In the process of internal desktop applications development, many different design specs and\n                implementations would be involved, which might cause designers and developers difficulties and\n                duplication and reduce the efficiency of development."
+                }
+              }
+            ]
+          },
+          {
+            "componentName": "ATypographyTitle",
+            "props": {
+              "level": 2
+            },
+            "children": [
+              {
+                "componentName": "Text",
+                "props": {
+                  "text": "Guidelines and Resources"
+                }
+              }
+            ]
+          },
+          {
+            "componentName": "ATypographyParagraph",
+            "children": [
+              {
+                "componentName": "Text",
+                "props": {
+                  "text": "We supply a series of design principles, practical patterns and high quality design resources\n                ("
+                }
+              },
+              {
+                "componentName": "ATypographyText",
+                "props": {
+                  "code": true
+                },
+                "children": [
+                  {
+                    "componentName": "Text",
+                    "props": {
+                      "text": "Sketch"
+                    }
+                  }
+                ]
+              },
+              {
+                "componentName": "Text",
+                "props": {
+                  "text": "and"
+                }
+              },
+              {
+                "componentName": "ATypographyText",
+                "props": {
+                  "code": true
+                },
+                "children": [
+                  {
+                    "componentName": "Text",
+                    "props": {
+                      "text": "Axure"
+                    }
+                  }
+                ]
+              },
+              {
+                "componentName": "Text",
+                "props": {
+                  "text": "), to help people create their product prototypes beautifully and efficiently."
+                }
+              }
+            ]
+          }
+        ]
+      }
     }
   ]
 }

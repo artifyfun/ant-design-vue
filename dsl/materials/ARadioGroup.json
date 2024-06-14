@@ -303,7 +303,39 @@
       "icon": "radio-group",
       "screenshot": "",
       "snippetName": "ARadioGroup",
-      "schema": {}
+      "schema": {
+        "componentName": "ARadioGroup",
+        "children": [
+          {
+            "componentName": "ARadioButton",
+            "props": {
+              "value": "a"
+            },
+            "children": [
+              {
+                "componentName": "Text",
+                "props": {
+                  "text": "Beijing"
+                }
+              }
+            ]
+          },
+          {
+            "componentName": "ARadioButton",
+            "props": {
+              "value": "b"
+            },
+            "children": [
+              {
+                "componentName": "Text",
+                "props": {
+                  "text": "Shanghai"
+                }
+              }
+            ]
+          }
+        ]
+      }
     }
   ]
 }

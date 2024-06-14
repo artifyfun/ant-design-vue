@@ -143,7 +143,30 @@
       "icon": "popover",
       "screenshot": "",
       "snippetName": "APopover",
-      "schema": {}
+      "schema": {
+        "componentName": "APopover",
+        "children": [
+          {
+            "componentName": "Template",
+            "props": {
+              "slot": "content"
+            },
+            "children": [
+              {
+                "componentName": "p",
+                "children": [
+                  {
+                    "componentName": "Text",
+                    "props": {
+                      "text": "We supply a series of design principles, practical patterns and high quality design\n        resources (Sketch and Axure), to help people create their product prototypes beautifully and\n        efficiently."
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
     }
   ]
 }

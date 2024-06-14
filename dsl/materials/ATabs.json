@@ -401,6 +401,9 @@
       "snippetName": "ATabs",
       "schema": {
         "componentName": "ATabs",
+        "props": {
+          "activeKey": "1"
+        },
         "children": [
           {
             "componentName": "ATabPane",

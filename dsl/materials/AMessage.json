@@ -29,7 +29,6 @@
     "destructuring": true
   },
   "group": "反馈",
-  "category": "Ant Design Vue",
   "configure": {
     "loop": true,
     "condition": true,

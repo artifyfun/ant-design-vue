@@ -521,16 +521,16 @@ function getSnippets(component, attributes) {
           componentName: 'AImage',
           props: {
             placeholder: true,
-            width: '100%',
-            height: '140px',
+            width: '300px',
+            height: '300px',
           },
         },
         {
           componentName: 'AImage',
           props: {
             placeholder: true,
-            width: '100%',
-            height: '140px',
+            width: '300px',
+            height: '300px',
           },
         },
       ],
@@ -593,7 +593,7 @@ function getSnippets(component, attributes) {
           },
           children: [
             {
-              componentName: 'P',
+              componentName: 'p',
               children: [
                 {
                   componentName: 'Text',
@@ -614,7 +614,7 @@ function getSnippets(component, attributes) {
           },
           children: [
             {
-              componentName: 'A',
+              componentName: 'a',
               children: [
                 {
                   componentName: 'Text',
@@ -744,6 +744,23 @@ function getSnippets(component, attributes) {
         },
       ],
     },
+    AInputGroup: {
+      componentName: 'AInputGroup',
+      children: [
+        {
+          componentName: 'AInput',
+        },
+        {
+          componentName: 'AInputPassword',
+        },
+        {
+          componentName: 'AInputSearch',
+        },
+        {
+          componentName: 'ATextarea',
+        },
+      ],
+    },
     AMenu: {
       componentName: 'AMenu',
       props: {
@@ -836,9 +853,23 @@ function getSnippets(component, attributes) {
       children: [
         {
           componentName: 'AFormItem',
+          props: {
+            label: 'Username',
+          },
           children: [
             {
               componentName: 'AInput',
+            },
+          ],
+        },
+        {
+          componentName: 'AFormItem',
+          props: {
+            label: 'Password',
+          },
+          children: [
+            {
+              componentName: 'AInputPassword',
             },
           ],
         },
@@ -857,34 +888,98 @@ function getSnippets(component, attributes) {
     },
     ASelect: {
       componentName: 'ASelect',
-      children: [
-        {
-          componentName: 'ASelectOption',
-          children: [
-            {
-              componentName: 'Text',
-              props: {
-                text: '选项一',
-              },
-            },
-          ],
-        },
-        {
-          componentName: 'ASelectOption',
-          children: [
-            {
-              componentName: 'Text',
-              props: {
-                text: '选项二',
-              },
-            },
-          ],
-        },
-      ],
+      props: {
+        style: 'width: 180px',
+        options: [
+          {
+            value: 'jack',
+            label: 'Jack',
+          },
+          {
+            value: 'lucy',
+            label: 'Lucy',
+          },
+          {
+            value: 'disabled',
+            label: 'Disabled',
+            disabled: true,
+          },
+          {
+            value: 'yiminghe',
+            label: 'Yiminghe',
+          },
+        ],
+      },
+    },
+    ATable: {
+      componentName: 'ATable',
+      props: {
+        columns: [
+          {
+            title: 'Name',
+            dataIndex: 'name',
+            key: 'name',
+          },
+          {
+            title: 'Age',
+            dataIndex: 'age',
+            key: 'age',
+            width: 80,
+          },
+          {
+            title: 'Address',
+            dataIndex: 'address',
+            key: 'address 1',
+            ellipsis: true,
+          },
+          {
+            title: 'Long Column Long Column Long Column',
+            dataIndex: 'address',
+            key: 'address 2',
+            ellipsis: true,
+          },
+          {
+            title: 'Long Column Long Column',
+            dataIndex: 'address',
+            key: 'address 3',
+            ellipsis: true,
+          },
+          {
+            title: 'Long Column',
+            dataIndex: 'address',
+            key: 'address 4',
+            ellipsis: true,
+          },
+        ],
+        dataSource: [
+          {
+            key: '1',
+            name: 'John Brown',
+            age: 32,
+            address: 'New York No. 1 Lake Park, New York No. 1 Lake Park',
+            tags: ['nice', 'developer'],
+          },
+          {
+            key: '2',
+            name: 'Jim Green',
+            age: 42,
+            address: 'London No. 2 Lake Park, London No. 2 Lake Park',
+            tags: ['loser'],
+          },
+          {
+            key: '3',
+            name: 'Joe Black',
+            age: 32,
+            address: 'Sidney No. 1 Lake Park, Sidney No. 1 Lake Park',
+            tags: ['cool', 'teacher'],
+          },
+        ],
+      },
     },
     ATreeSelect: {
       componentName: 'ATreeSelect',
       props: {
+        style: 'width: 180px',
         'tree-data': [
           {
             label: 'root 1',
@@ -1022,8 +1117,111 @@ function getSnippets(component, attributes) {
         },
       ],
     },
+    APageHeader: {
+      componentName: 'APageHeader',
+      props: {
+        title: 'Page title',
+        subTitle: 'Page subTitle',
+      },
+    },
+    APopconfirm: {
+      componentName: 'APopconfirm',
+      props: {
+        title: 'Are you sure delete this task?',
+      },
+      children: [
+        {
+          componentName: 'a',
+          children: [
+            {
+              componentName: 'Text',
+              props: {
+                text: 'Delete',
+              },
+            },
+          ],
+        },
+      ],
+    },
+    APopover: {
+      componentName: 'APopover',
+      children: [
+        {
+          componentName: 'Template',
+          props: {
+            slot: 'content',
+          },
+          children: [
+            {
+              componentName: 'p',
+              children: [
+                {
+                  componentName: 'Text',
+                  props: {
+                    text: `We supply a series of design principles, practical patterns and high quality design
+        resources (Sketch and Axure), to help people create their product prototypes beautifully and
+        efficiently.`,
+                  },
+                },
+              ],
+            },
+          ],
+        },
+      ],
+    },
+    AQRCode: {
+      componentName: 'AQRCode',
+      props: {
+        value: 'http://www.antdv.com',
+        color: '#1677ff',
+        bgColor: 'rgb(245, 245, 245)',
+      },
+    },
+    ARadioGroup: {
+      componentName: 'ARadioGroup',
+      children: [
+        {
+          componentName: 'ARadioButton',
+          props: {
+            value: 'a',
+          },
+          children: [
+            {
+              componentName: 'Text',
+              props: {
+                text: 'Beijing',
+              },
+            },
+          ],
+        },
+        {
+          componentName: 'ARadioButton',
+          props: {
+            value: 'b',
+          },
+          children: [
+            {
+              componentName: 'Text',
+              props: {
+                text: 'Shanghai',
+              },
+            },
+          ],
+        },
+      ],
+    },
+    ASegmented: {
+      componentName: 'ASegmented',
+      props: {
+        value: 'Daily',
+        options: ['Daily', 'Weekly', 'Monthly', 'Quarterly', 'Yearly'],
+      },
+    },
     ATabs: {
       componentName: 'ATabs',
+      props: {
+        activeKey: '1',
+      },
       children: [
         {
           componentName: 'ATabPane',
@@ -1115,7 +1313,7 @@ function getSnippets(component, attributes) {
         {
           componentName: 'Text',
           props: {
-            text: '文本内容',
+            text: '文字提示',
           },
         },
       ],
@@ -1127,6 +1325,301 @@ function getSnippets(component, attributes) {
         height: '300px',
         placeholder: true,
       },
+    },
+    ATransfer: {
+      componentName: 'ATransfer',
+      props: {
+        dataSource: [
+          {
+            key: '0',
+            title: 'content1',
+            description: 'description of content1',
+            disabled: true,
+          },
+          {
+            key: '1',
+            title: 'content2',
+            description: 'description of content2',
+            disabled: false,
+          },
+          {
+            key: '2',
+            title: 'content3',
+            description: 'description of content3',
+            disabled: false,
+          },
+          {
+            key: '3',
+            title: 'content4',
+            description: 'description of content4',
+            disabled: true,
+          },
+          {
+            key: '4',
+            title: 'content5',
+            description: 'description of content5',
+            disabled: false,
+          },
+          {
+            key: '5',
+            title: 'content6',
+            description: 'description of content6',
+            disabled: false,
+          },
+          {
+            key: '6',
+            title: 'content7',
+            description: 'description of content7',
+            disabled: true,
+          },
+          {
+            key: '7',
+            title: 'content8',
+            description: 'description of content8',
+            disabled: false,
+          },
+          {
+            key: '8',
+            title: 'content9',
+            description: 'description of content9',
+            disabled: false,
+          },
+          {
+            key: '9',
+            title: 'content10',
+            description: 'description of content10',
+            disabled: true,
+          },
+          {
+            key: '10',
+            title: 'content11',
+            description: 'description of content11',
+            disabled: false,
+          },
+          {
+            key: '11',
+            title: 'content12',
+            description: 'description of content12',
+            disabled: false,
+          },
+          {
+            key: '12',
+            title: 'content13',
+            description: 'description of content13',
+            disabled: true,
+          },
+          {
+            key: '13',
+            title: 'content14',
+            description: 'description of content14',
+            disabled: false,
+          },
+          {
+            key: '14',
+            title: 'content15',
+            description: 'description of content15',
+            disabled: false,
+          },
+          {
+            key: '15',
+            title: 'content16',
+            description: 'description of content16',
+            disabled: true,
+          },
+          {
+            key: '16',
+            title: 'content17',
+            description: 'description of content17',
+            disabled: false,
+          },
+          {
+            key: '17',
+            title: 'content18',
+            description: 'description of content18',
+            disabled: false,
+          },
+          {
+            key: '18',
+            title: 'content19',
+            description: 'description of content19',
+            disabled: true,
+          },
+          {
+            key: '19',
+            title: 'content20',
+            description: 'description of content20',
+            disabled: false,
+          },
+        ],
+        targetKeys: ['3', '4', '5'],
+        selectedKeys: ['1', '2', '6'],
+        titles: ['Source', 'Target'],
+      },
+    },
+    Atree: {
+      componentName: 'Atree',
+      props: {
+        expandedKeys: ['0-0-0'],
+        treeData: [
+          {
+            title: 'parent 1',
+            key: '0-0',
+            children: [
+              {
+                title: 'parent 1-0',
+                key: '0-0-0',
+                children: [
+                  {
+                    title: 'leaf',
+                    key: '0-0-0-0',
+                  },
+                  {
+                    title: 'leaf',
+                    key: '0-0-0-1',
+                  },
+                  {
+                    title: 'leaf',
+                    key: '0-0-0-2',
+                  },
+                ],
+              },
+              {
+                title: 'parent 1-1',
+                key: '0-0-1',
+                children: [
+                  {
+                    title: 'leaf',
+                    key: '0-0-1-0',
+                  },
+                ],
+              },
+              {
+                title: 'parent 1-2',
+                key: '0-0-2',
+                children: [
+                  {
+                    title: 'leaf',
+                    key: '0-0-2-0',
+                  },
+                  {
+                    title: 'leaf',
+                    key: '0-0-2-1',
+                  },
+                ],
+              },
+            ],
+          },
+        ],
+      },
+    },
+    ATypography: {
+      componentName: 'ATypography',
+      children: [
+        {
+          componentName: 'ATypographyTitle',
+          children: [
+            {
+              componentName: 'Text',
+              props: {
+                text: 'Introduction',
+              },
+            },
+          ],
+        },
+        {
+          componentName: 'ATypographyParagraph',
+          children: [
+            {
+              componentName: 'Text',
+              props: {
+                text: `In the process of internal desktop applications development, many different design specs and
+                implementations would be involved, which might cause designers and developers difficulties and
+                duplication and reduce the efficiency of development.`,
+              },
+            },
+          ],
+        },
+        {
+          componentName: 'ATypographyTitle',
+          props: {
+            level: 2,
+          },
+          children: [
+            {
+              componentName: 'Text',
+              props: {
+                text: 'Guidelines and Resources',
+              },
+            },
+          ],
+        },
+        {
+          componentName: 'ATypographyParagraph',
+          children: [
+            {
+              componentName: 'Text',
+              props: {
+                text: `We supply a series of design principles, practical patterns and high quality design resources
+                (`,
+              },
+            },
+            {
+              componentName: 'ATypographyText',
+              props: {
+                code: true,
+              },
+              children: [
+                {
+                  componentName: 'Text',
+                  props: {
+                    text: 'Sketch',
+                  },
+                },
+              ],
+            },
+            {
+              componentName: 'Text',
+              props: {
+                text: 'and',
+              },
+            },
+            {
+              componentName: 'ATypographyText',
+              props: {
+                code: true,
+              },
+              children: [
+                {
+                  componentName: 'Text',
+                  props: {
+                    text: 'Axure',
+                  },
+                },
+              ],
+            },
+            {
+              componentName: 'Text',
+              props: {
+                text: `), to help people create their product prototypes beautifully and efficiently.`,
+              },
+            },
+          ],
+        },
+      ],
+    },
+    AWatermark: {
+      componentName: 'AWatermark',
+      props: {
+        content: 'Artifyfun',
+      },
+      children: [
+        {
+          componentName: 'div',
+          props: {
+            style: 'height: 400px',
+          },
+        },
+      ],
     },
   };
 
@@ -1330,7 +1823,7 @@ const subTitleMap = {
     'en-US': 'TimelineItem',
   },
   Typography: {
-    'zh-CN': '排版容器',
+    'zh-CN': '排版',
     'en-US': 'Typography',
   },
   TypographyText: {
@@ -1599,6 +2092,7 @@ async function generateMaterials(type = 'zh-CN') {
     'ATimelineItem',
     'ATooltip',
     'AUpload',
+    'AWatermark',
   ];
   materials.forEach(material => {
     if (containerComponents.includes(material.component)) {
@@ -1607,7 +2101,7 @@ async function generateMaterials(type = 'zh-CN') {
   });
 
   // 无法透传attrs的组件，需要包裹一层div
-  const wrapElementComponents = ['AImage'];
+  const wrapElementComponents = ['AImage', 'ACarousel'];
   materials.forEach(material => {
     if (wrapElementComponents.includes(material.component)) {
       material.configure.renderConfig = {
@@ -1637,15 +2131,33 @@ async function generateMaterials(type = 'zh-CN') {
     'AMenuDivider',
     'AMenuItem',
     'AMenuItemGroup',
+    'ARadioButton',
     'AStep',
     'ASubMenu',
     'ATabPane',
     'ATimelineItem',
     'ATreeNode',
+    'AMessage',
+    'AModal',
+    'ANotification',
+    'ATour',
+    'ATypographyParagraph',
+    'ATypographyText',
+    'ATypographyTitle',
+    'AUploadFile',
   ];
   materials.forEach(material => {
     if (hideComponents.includes(material.component)) {
       material.category = undefined;
+    }
+  });
+
+  // 修复tag
+  materials.forEach(material => {
+    if (['AQRCode'].includes(material.component)) {
+      material.component = 'AQrcode';
+      material.npm.exportName = 'Qrcode';
+      material.snippets[0].snippetName = 'AQrcode';
     }
   });
 

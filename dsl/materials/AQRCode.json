@@ -4,7 +4,7 @@
   "name": {
     "zh_CN": "二维码"
   },
-  "component": "AQRCode",
+  "component": "AQrcode",
   "icon": "qr-code",
   "description": "二维码",
   "doc_url": "",
@@ -25,7 +25,7 @@
       "https://unpkg.com/dayjs/plugin/advancedFormat.js",
       "https://unpkg.com/dayjs/plugin/quarterOfYear.js"
     ],
-    "exportName": "QRCode",
+    "exportName": "Qrcode",
     "destructuring": true
   },
   "group": "数据展示",
@@ -373,8 +373,15 @@
       },
       "icon": "qr-code",
       "screenshot": "",
-      "snippetName": "AQRCode",
-      "schema": {}
+      "snippetName": "AQrcode",
+      "schema": {
+        "componentName": "AQRCode",
+        "props": {
+          "value": "http://www.antdv.com",
+          "color": "#1677ff",
+          "bgColor": "rgb(245, 245, 245)"
+        }
+      }
     }
   ]
 }
