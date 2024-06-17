@@ -598,9 +598,7 @@ function getSnippets(component, attributes) {
                 {
                   componentName: 'Text',
                   props: {
-                    text: `We supply a series of design principles, practical patterns and high quality design
-        resources (Sketch and Axure), to help people create their product prototypes beautifully and
-        efficiently.`,
+                    text: 'We supply a series of design principles, practical patterns and high quality design resources (Sketch and Axure), to help people create their product prototypes beautifully and efficiently.',
                   },
                 },
               ],
@@ -1158,9 +1156,7 @@ function getSnippets(component, attributes) {
                 {
                   componentName: 'Text',
                   props: {
-                    text: `We supply a series of design principles, practical patterns and high quality design
-        resources (Sketch and Axure), to help people create their product prototypes beautifully and
-        efficiently.`,
+                    text: 'We supply a series of design principles, practical patterns and high quality design resources (Sketch and Axure), to help people create their product prototypes beautifully and efficiently.',
                   },
                 },
               ],
@@ -1532,9 +1528,7 @@ function getSnippets(component, attributes) {
             {
               componentName: 'Text',
               props: {
-                text: `In the process of internal desktop applications development, many different design specs and
-                implementations would be involved, which might cause designers and developers difficulties and
-                duplication and reduce the efficiency of development.`,
+                text: 'In the process of internal desktop applications development, many different design specs and implementations would be involved, which might cause designers and developers difficulties and duplication and reduce the efficiency of development.',
               },
             },
           ],
@@ -1559,8 +1553,7 @@ function getSnippets(component, attributes) {
             {
               componentName: 'Text',
               props: {
-                text: `We supply a series of design principles, practical patterns and high quality design resources
-                (`,
+                text: 'We supply a series of design principles, practical patterns and high quality design resources (',
               },
             },
             {
@@ -1600,7 +1593,7 @@ function getSnippets(component, attributes) {
             {
               componentName: 'Text',
               props: {
-                text: `), to help people create their product prototypes beautifully and efficiently.`,
+                text: '), to help people create their product prototypes beautifully and efficiently.',
               },
             },
           ],

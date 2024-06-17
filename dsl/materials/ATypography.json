@@ -101,7 +101,7 @@
               {
                 "componentName": "Text",
                 "props": {
-                  "text": "In the process of internal desktop applications development, many different design specs and\n                implementations would be involved, which might cause designers and developers difficulties and\n                duplication and reduce the efficiency of development."
+                  "text": "In the process of internal desktop applications development, many different design specs and implementations would be involved, which might cause designers and developers difficulties and duplication and reduce the efficiency of development."
                 }
               }
             ]
@@ -126,7 +126,7 @@
               {
                 "componentName": "Text",
                 "props": {
-                  "text": "We supply a series of design principles, practical patterns and high quality design resources\n                ("
+                  "text": "We supply a series of design principles, practical patterns and high quality design resources ("
                 }
               },
               {
