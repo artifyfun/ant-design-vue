@@ -375,7 +375,7 @@
       "screenshot": "",
       "snippetName": "AQrcode",
       "schema": {
-        "componentName": "AQRCode",
+        "componentName": "AQrcode",
         "props": {
           "value": "http://www.antdv.com",
           "color": "#1677ff",

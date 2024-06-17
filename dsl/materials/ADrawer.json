@@ -46,7 +46,7 @@
     "isLayout": false,
     "rootSelector": "",
     "shortcuts": {
-      "properties": ["visible", "width"]
+      "properties": ["open", "width"]
     },
     "contextMenu": {
       "actions": ["create symbol"],
@@ -574,7 +574,18 @@
       "icon": "drawer",
       "screenshot": "",
       "snippetName": "ADrawer",
-      "schema": {}
+      "schema": {
+        "componentName": "ADrawer",
+        "props": {
+          "open": true,
+          "title": "Drawer title"
+        },
+        "children": [
+          {
+            "componentName": "div"
+          }
+        ]
+      }
     }
   ]
 }

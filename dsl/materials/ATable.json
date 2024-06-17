@@ -66,6 +66,30 @@
         },
         "content": [
           {
+            "property": "dataSource",
+            "label": {
+              "text": {
+                "zh_CN": "dataSource"
+              }
+            },
+            "description": {
+              "zh_CN": "数据源"
+            },
+            "required": false,
+            "readOnly": false,
+            "disabled": false,
+            "cols": 12,
+            "labelPosition": "top",
+            "type": "object",
+            "widget": {
+              "component": "MetaCodeEditor",
+              "props": {
+                "language": "json"
+              }
+            },
+            "device": []
+          },
+          {
             "property": "bordered",
             "label": {
               "text": {

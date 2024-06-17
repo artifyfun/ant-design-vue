@@ -1,4 +1,10 @@
 {
+  "affix": {
+    "attributes": ["offsetBottom", "offsetTop", "target"]
+  },
+  "app": {
+    "attributes": ["message", "notification"]
+  },
   "alert": {
     "attributes": [
       "action",
@@ -13,32 +19,6 @@
       "showIcon",
       "type"
     ]
-  },
-  "anchor": {
-    "attributes": [
-      "affix",
-      "bounds",
-      "getContainer",
-      "getCurrentAnchor",
-      "offsetBottom",
-      "offsetTop",
-      "showInkInFixed",
-      "targetOffset",
-      "wrapperClass",
-      "wrapperStyle",
-      "items",
-      "direction",
-      "customTitle"
-    ]
-  },
-  "anchor-item": {
-    "attributes": ["key", "href", "target", "title", "children"]
-  },
-  "affix": {
-    "attributes": ["offsetBottom", "offsetTop", "target"]
-  },
-  "app": {
-    "attributes": ["message", "notification"]
   },
   "auto-complete": {
     "attributes": [
@@ -62,6 +42,26 @@
       "status",
       "v-model:value"
     ]
+  },
+  "anchor": {
+    "attributes": [
+      "affix",
+      "bounds",
+      "getContainer",
+      "getCurrentAnchor",
+      "offsetBottom",
+      "offsetTop",
+      "showInkInFixed",
+      "targetOffset",
+      "wrapperClass",
+      "wrapperStyle",
+      "items",
+      "direction",
+      "customTitle"
+    ]
+  },
+  "anchor-item": {
+    "attributes": ["key", "href", "target", "title", "children"]
   },
   "avatar": {
     "attributes": [
@@ -147,6 +147,43 @@
       "valueFormat"
     ]
   },
+  "card": {
+    "attributes": [
+      "activeTabKey",
+      "bodyStyle",
+      "bordered",
+      "defaultActiveTabKey",
+      "extra",
+      "headStyle",
+      "hoverable",
+      "loading",
+      "size",
+      "tabList",
+      "title",
+      "type",
+      "actions",
+      "cover",
+      "customTab",
+      "extra",
+      "tabBarExtraContent",
+      "title"
+    ]
+  },
+  "card-meta": {
+    "attributes": ["avatar", "description", "title"]
+  },
+  "carousel": {
+    "attributes": [
+      "autoplay",
+      "dotPosition",
+      "dots",
+      "dotsClass",
+      "easing",
+      "effect",
+      "afterChange",
+      "beforeChange"
+    ]
+  },
   "cascader": {
     "attributes": [
       "allowClear",
@@ -182,43 +219,6 @@
       "tagRender",
       "value(v-model)"
     ]
-  },
-  "carousel": {
-    "attributes": [
-      "autoplay",
-      "dotPosition",
-      "dots",
-      "dotsClass",
-      "easing",
-      "effect",
-      "afterChange",
-      "beforeChange"
-    ]
-  },
-  "card": {
-    "attributes": [
-      "activeTabKey",
-      "bodyStyle",
-      "bordered",
-      "defaultActiveTabKey",
-      "extra",
-      "headStyle",
-      "hoverable",
-      "loading",
-      "size",
-      "tabList",
-      "title",
-      "type",
-      "actions",
-      "cover",
-      "customTab",
-      "extra",
-      "tabBarExtraContent",
-      "title"
-    ]
-  },
-  "card-meta": {
-    "attributes": ["avatar", "description", "title"]
   },
   "checkbox": {
     "attributes": [
@@ -304,6 +304,9 @@
       "valueFormat"
     ]
   },
+  "divider": {
+    "attributes": ["dashed", "orientation", "orientationMargin", "plain", "type"]
+  },
   "descriptions": {
     "attributes": [
       "bordered",
@@ -316,9 +319,6 @@
       "size",
       "title"
     ]
-  },
-  "divider": {
-    "attributes": ["dashed", "orientation", "orientationMargin", "plain", "type"]
   },
   "drawer": {
     "attributes": [
@@ -351,22 +351,6 @@
       "width",
       "zIndex"
     ]
-  },
-  "float-button": {
-    "attributes": [
-      "icon",
-      "description",
-      "tooltip",
-      "type",
-      "shape",
-      "onClick",
-      "href",
-      "target",
-      "badge"
-    ]
-  },
-  "flex": {
-    "attributes": ["vertical", "wrap", "justify", "align", "flex", "gap", "component"]
   },
   "dropdown": {
     "attributes": [
@@ -401,11 +385,21 @@
   "empty": {
     "attributes": ["description", "image", "imageStyle"]
   },
-  "icon": {
-    "attributes": []
+  "flex": {
+    "attributes": ["vertical", "wrap", "justify", "align", "flex", "gap", "component"]
   },
-  "自定义": {
-    "attributes": ["component", "rotate", "spin", "style"]
+  "float-button": {
+    "attributes": [
+      "icon",
+      "description",
+      "tooltip",
+      "type",
+      "shape",
+      "onClick",
+      "href",
+      "target",
+      "badge"
+    ]
   },
   "form": {
     "attributes": [
@@ -447,6 +441,15 @@
       "wrapperCol"
     ]
   },
+  "grid": {
+    "attributes": []
+  },
+  "icon": {
+    "attributes": []
+  },
+  "自定义": {
+    "attributes": ["component", "rotate", "spin", "style"]
+  },
   "image": {
     "attributes": [
       "alt",
@@ -458,6 +461,37 @@
       "previewMask",
       "width"
     ]
+  },
+  "input": {
+    "attributes": [
+      "addonAfter",
+      "addonBefore",
+      "allowClear",
+      "bordered",
+      "clearIcon",
+      "defaultValue",
+      "disabled",
+      "id",
+      "maxlength",
+      "prefix",
+      "showCount",
+      "status",
+      "size",
+      "suffix",
+      "type",
+      "value(v-model)",
+      "change",
+      "pressEnter"
+    ]
+  },
+  "input-search": {
+    "attributes": ["enterButton", "loading", "search"]
+  },
+  "input-group": {
+    "attributes": ["compact", "size"]
+  },
+  "input-password": {
+    "attributes": ["visible(v-model)", "iconRender", "visibilityToggle"]
   },
   "input-number": {
     "attributes": [
@@ -485,8 +519,24 @@
       "value(v-model)"
     ]
   },
-  "grid": {
-    "attributes": []
+  "layout": {
+    "attributes": ["class", "hasSider", "style"]
+  },
+  "layout-sider": {
+    "attributes": [
+      "breakpoint",
+      "class",
+      "collapsed(v-model)",
+      "collapsedWidth",
+      "collapsible",
+      "defaultCollapsed",
+      "reverseArrow",
+      "style",
+      "theme",
+      "trigger",
+      "width",
+      "zeroWidthTriggerStyle"
+    ]
   },
   "list": {
     "attributes": [
@@ -520,37 +570,6 @@
   },
   "list-item-meta": {
     "attributes": ["avatar", "description", "title"]
-  },
-  "input": {
-    "attributes": [
-      "addonAfter",
-      "addonBefore",
-      "allowClear",
-      "bordered",
-      "clearIcon",
-      "defaultValue",
-      "disabled",
-      "id",
-      "maxlength",
-      "prefix",
-      "showCount",
-      "status",
-      "size",
-      "suffix",
-      "type",
-      "value(v-model)",
-      "change",
-      "pressEnter"
-    ]
-  },
-  "input-search": {
-    "attributes": ["enterButton", "loading", "search"]
-  },
-  "input-group": {
-    "attributes": ["compact", "size"]
-  },
-  "input-password": {
-    "attributes": ["visible(v-model)", "iconRender", "visibilityToggle"]
   },
   "mentions": {
     "attributes": [
@@ -638,24 +657,8 @@
   "menu-divider": {
     "attributes": ["dashed"]
   },
-  "layout": {
-    "attributes": ["class", "hasSider", "style"]
-  },
-  "layout-sider": {
-    "attributes": [
-      "breakpoint",
-      "class",
-      "collapsed(v-model)",
-      "collapsedWidth",
-      "collapsible",
-      "defaultCollapsed",
-      "reverseArrow",
-      "style",
-      "theme",
-      "trigger",
-      "width",
-      "zeroWidthTriggerStyle"
-    ]
+  "message": {
+    "attributes": ["content", "duration", "onClose"]
   },
   "modal": {
     "attributes": [
@@ -685,9 +688,6 @@
       "zIndex"
     ]
   },
-  "message": {
-    "attributes": ["content", "duration", "onClose"]
-  },
   "notification": {
     "attributes": [
       "bottom",
@@ -705,6 +705,19 @@
       "top",
       "onClick",
       "onClose"
+    ]
+  },
+  "page-header": {
+    "attributes": [
+      "avatar",
+      "backIcon",
+      "breadcrumb",
+      "extra",
+      "footer",
+      "ghost",
+      "subTitle",
+      "tags",
+      "title"
     ]
   },
   "pagination": {
@@ -726,22 +739,6 @@
       "total"
     ]
   },
-  "popover": {
-    "attributes": ["content", "title"]
-  },
-  "page-header": {
-    "attributes": [
-      "avatar",
-      "backIcon",
-      "breadcrumb",
-      "extra",
-      "footer",
-      "ghost",
-      "subTitle",
-      "tags",
-      "title"
-    ]
-  },
   "popconfirm": {
     "attributes": [
       "cancelButton",
@@ -759,19 +756,8 @@
       "open (v-model)"
     ]
   },
-  "qrcode": {
-    "attributes": [
-      "value",
-      "type",
-      "icon",
-      "size",
-      "iconSize",
-      "color",
-      "bgColor",
-      "bordered",
-      "errorLevel",
-      "status"
-    ]
+  "popover": {
+    "attributes": ["content", "title"]
   },
   "progress": {
     "attributes": [
@@ -786,6 +772,20 @@
       "trailColor",
       "type",
       "size"
+    ]
+  },
+  "qrcode": {
+    "attributes": [
+      "value",
+      "type",
+      "icon",
+      "size",
+      "iconSize",
+      "color",
+      "bgColor",
+      "bordered",
+      "errorLevel",
+      "status"
     ]
   },
   "radio": {
@@ -806,9 +806,6 @@
       "change"
     ]
   },
-  "result": {
-    "attributes": ["extra", "icon", "status", "subTitle", "title"]
-  },
   "rate": {
     "attributes": [
       "allowClear",
@@ -820,6 +817,12 @@
       "tooltips",
       "value(v-model)"
     ]
+  },
+  "result": {
+    "attributes": ["extra", "icon", "status", "subTitle", "title"]
+  },
+  "segmented": {
+    "attributes": ["block", "disabled", "options", "size", "value", "label"]
   },
   "select": {
     "attributes": [
@@ -954,9 +957,6 @@
   "steps-step": {
     "attributes": ["description", "disabled", "icon", "status", "subTitle", "title"]
   },
-  "segmented": {
-    "attributes": ["block", "disabled", "options", "size", "value", "label"]
-  },
   "switch": {
     "attributes": [
       "autofocus",
@@ -1015,18 +1015,6 @@
       "transformCellText"
     ]
   },
-  "timeline": {
-    "attributes": ["mode", "pending", "pendingDot", "reverse"]
-  },
-  "timeline-item": {
-    "attributes": ["color", "dot", "label", "position"]
-  },
-  "tag": {
-    "attributes": ["closable", "closeIcon", "color", "icon", "bordered"]
-  },
-  "tag-checkable-tag": {
-    "attributes": ["checked(v-model)"]
-  },
   "tabs": {
     "attributes": [
       "activeKey(v-model)",
@@ -1052,6 +1040,12 @@
   },
   "tabs-tab-pane": {
     "attributes": ["forceRender", "key", "tab", "closeIcon", "tab"]
+  },
+  "tag": {
+    "attributes": ["closable", "closeIcon", "color", "icon", "bordered"]
+  },
+  "tag-checkable-tag": {
+    "attributes": ["checked(v-model)"]
   },
   "time-picker": {
     "attributes": [
@@ -1083,6 +1077,12 @@
       "valueFormat"
     ]
   },
+  "timeline": {
+    "attributes": ["mode", "pending", "pendingDot", "reverse"]
+  },
+  "timeline-item": {
+    "attributes": ["color", "dot", "label", "position"]
+  },
   "tooltip": {
     "attributes": [
       "title",
@@ -1100,6 +1100,34 @@
       "placement",
       "trigger",
       "open(v-model)"
+    ]
+  },
+  "tour": {
+    "attributes": [
+      "arrow",
+      "placement",
+      "mask",
+      "type",
+      "open",
+      "current(v-model)",
+      "scrollIntoViewOptions",
+      "indicatorsRender",
+      "zIndex"
+    ]
+  },
+  "tour-step": {
+    "attributes": [
+      "target",
+      "arrow",
+      "cover",
+      "title",
+      "description",
+      "placement",
+      "mask",
+      "type",
+      "nextButtonProps",
+      "prevButtonProps",
+      "scrollIntoViewOptions"
     ]
   },
   "transfer": {
@@ -1170,67 +1198,6 @@
   "directory-tree": {
     "attributes": ["expandAction"]
   },
-  "tour": {
-    "attributes": [
-      "arrow",
-      "placement",
-      "mask",
-      "type",
-      "open",
-      "current(v-model)",
-      "scrollIntoViewOptions",
-      "indicatorsRender",
-      "zIndex"
-    ]
-  },
-  "tour-step": {
-    "attributes": [
-      "target",
-      "arrow",
-      "cover",
-      "title",
-      "description",
-      "placement",
-      "mask",
-      "type",
-      "nextButtonProps",
-      "prevButtonProps",
-      "scrollIntoViewOptions"
-    ]
-  },
-  "upload": {
-    "attributes": [
-      "accept",
-      "action",
-      "beforeUpload",
-      "customRequest",
-      "data",
-      "directory",
-      "disabled",
-      "downloadIcon",
-      "fileList",
-      "headers",
-      "iconRender",
-      "isImageUrl",
-      "itemRender",
-      "listType",
-      "maxCount",
-      "method",
-      "multiple",
-      "name",
-      "openFileDialogOnClick",
-      "previewFile",
-      "previewIcon",
-      "progress",
-      "removeIcon",
-      "showUploadList",
-      "supportServerRender",
-      "withCredentials"
-    ]
-  },
-  "upload-file": {
-    "attributes": ["crossOrigin", "name", "percent", "status", "thumbUrl", "uid", "url"]
-  },
   "tree-select": {
     "attributes": []
   },
@@ -1282,6 +1249,39 @@
       "type",
       "underline"
     ]
+  },
+  "upload": {
+    "attributes": [
+      "accept",
+      "action",
+      "beforeUpload",
+      "customRequest",
+      "data",
+      "directory",
+      "disabled",
+      "downloadIcon",
+      "fileList",
+      "headers",
+      "iconRender",
+      "isImageUrl",
+      "itemRender",
+      "listType",
+      "maxCount",
+      "method",
+      "multiple",
+      "name",
+      "openFileDialogOnClick",
+      "previewFile",
+      "previewIcon",
+      "progress",
+      "removeIcon",
+      "showUploadList",
+      "supportServerRender",
+      "withCredentials"
+    ]
+  },
+  "upload-file": {
+    "attributes": ["crossOrigin", "name", "percent", "status", "thumbUrl", "uid", "url"]
   },
   "watermark": {
     "attributes": [

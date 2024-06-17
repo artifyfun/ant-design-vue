@@ -45,7 +45,7 @@
     "isLayout": false,
     "rootSelector": "",
     "shortcuts": {
-      "properties": ["visible", "width"]
+      "properties": ["open", "width"]
     },
     "contextMenu": {
       "actions": ["create symbol"],

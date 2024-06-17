@@ -1115,6 +1115,18 @@ function getSnippets(component, attributes) {
         },
       ],
     },
+    ADrawer: {
+      componentName: 'ADrawer',
+      props: {
+        open: true,
+        title: 'Drawer title',
+      },
+      children: [
+        {
+          componentName: 'div',
+        },
+      ],
+    },
     APageHeader: {
       componentName: 'APageHeader',
       props: {
@@ -1452,8 +1464,8 @@ function getSnippets(component, attributes) {
         titles: ['Source', 'Target'],
       },
     },
-    Atree: {
-      componentName: 'Atree',
+    ATree: {
+      componentName: 'ATree',
       props: {
         expandedKeys: ['0-0-0'],
         treeData: [
@@ -2044,7 +2056,7 @@ async function generateMaterials(type = 'zh-CN') {
         isLayout: false,
         rootSelector: '',
         shortcuts: {
-          properties: ['visible', 'width'],
+          properties: ['open', 'width'],
         },
         contextMenu: {
           actions: ['create symbol'],
@@ -2094,7 +2106,7 @@ async function generateMaterials(type = 'zh-CN') {
   });
 
   // 无法透传attrs的组件，需要包裹一层div
-  const wrapElementComponents = ['AImage', 'ACarousel'];
+  const wrapElementComponents = ['AImage'];
   materials.forEach(material => {
     if (wrapElementComponents.includes(material.component)) {
       material.configure.renderConfig = {
@@ -2151,6 +2163,45 @@ async function generateMaterials(type = 'zh-CN') {
       material.component = 'AQrcode';
       material.npm.exportName = 'Qrcode';
       material.snippets[0].snippetName = 'AQrcode';
+      material.snippets[0].schema.componentName = 'AQrcode';
+    }
+  });
+
+  // 补充属性
+  materials.forEach(material => {
+    if (['ATable', 'ATransfer', 'AList'].includes(material.component)) {
+      material.schema.properties[0].content.unshift({
+        property: 'dataSource',
+        label: {
+          text: {
+            zh_CN: 'dataSource',
+          },
+        },
+        description: {
+          zh_CN: '数据源',
+        },
+        required: false,
+        readOnly: false,
+        disabled: false,
+        cols: 12,
+        labelPosition: 'top',
+        type: 'object',
+        widget: {
+          component: 'MetaCodeEditor',
+          props: {
+            language: 'json',
+          },
+        },
+        device: [],
+      });
+    }
+
+    // 修复属性
+    if (['ATransfer'].includes(material.component)) {
+      const renderProperty = material.schema.properties[0].content.find(
+        item => item.property === 'render',
+      );
+      renderProperty.defaultValue = 'item => item.title';
     }
   });
 
